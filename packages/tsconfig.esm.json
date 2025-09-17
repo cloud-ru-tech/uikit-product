@@ -1,0 +1,214 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./utils/tsconfig.esm.json"
+    },
+    {
+      "path": "./icons/tsconfig.esm.json"
+    },
+    {
+      "path": "./locale/tsconfig.esm.json"
+    },
+    {
+      "path": "./localization/tsconfig.esm.json"
+    },
+    {
+      "path": "./promo-tag-predefined/tsconfig.esm.json"
+    },
+    {
+      "path": "./card-predefined/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-carousel/tsconfig.esm.json"
+    },
+    {
+      "path": "./widget/tsconfig.esm.json"
+    },
+    {
+      "path": "./welcome-tour/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-tooltip/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-drawer/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-modal/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-dropdown/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-fields/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-rich-text/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-tag/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-cards/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-case-card/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-grid/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-layout/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-media/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-table/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-section/tsconfig.esm.json"
+    },
+    {
+      "path": "./button-predefined/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-navbar/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-hero/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-header/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-csat/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-case-card/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-banner/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-banner-predefined/tsconfig.esm.json"
+    },
+    {
+      "path": "./rating/tsconfig.esm.json"
+    },
+    {
+      "path": "./price-summary/tsconfig.esm.json"
+    },
+    {
+      "path": "./copy-line/tsconfig.esm.json"
+    },
+    {
+      "path": "./code-editor/tsconfig.esm.json"
+    },
+    {
+      "path": "./markdown/tsconfig.esm.json"
+    },
+    {
+      "path": "./switch-row/tsconfig.esm.json"
+    },
+    {
+      "path": "./toggles-predefined/tsconfig.esm.json"
+    },
+    {
+      "path": "./modal-predefined/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-toaster/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-chips/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-toolbar/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-table/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-stepper/tsconfig.esm.json"
+    },
+    {
+      "path": "./layout/tsconfig.esm.json"
+    },
+    {
+      "path": "./page-layout/tsconfig.esm.json"
+    },
+    {
+      "path": "./quota/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-layout/tsconfig.esm.json"
+    },
+    {
+      "path": "./info-row/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-info-row/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-alert/tsconfig.esm.json"
+    },
+    {
+      "path": "./load-status/tsconfig.esm.json"
+    },
+    {
+      "path": "./info-block-predefined/tsconfig.esm.json"
+    },
+    {
+      "path": "./title-clickable/tsconfig.esm.json"
+    },
+    {
+      "path": "./header/tsconfig.esm.json"
+    },
+    {
+      "path": "./fields-predefined/tsconfig.esm.json"
+    },
+    {
+      "path": "./error-pages/tsconfig.esm.json"
+    },
+    {
+      "path": "./config-selector/tsconfig.esm.json"
+    },
+    {
+      "path": "./charts/tsconfig.esm.json"
+    },
+    {
+      "path": "./mobile-accordion/tsconfig.esm.json"
+    },
+    {
+      "path": "./calculator/tsconfig.esm.json"
+    }
+  ],
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["es2017", "dom", "dom.iterable", "esnext"],
+    "module": "es6",
+    "strict": true,
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "composite": true,
+    "plugins": [
+      {
+        "transform": "../../scripts/scss-extension-transformer.ts"
+      },
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customRenderer": "../../scripts/compile/sass-custom-renderer.js"
+        }
+      }
+    ]
+  }
+}

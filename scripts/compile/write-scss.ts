@@ -6,9 +6,9 @@ import sass from 'sass';
 import { ensureDirectory } from '../utils/ensureDirectory';
 import { postProcessCss } from './post-process-css';
 
-export function writeScss({ src, distCJS, distESM }: { src: string; distCJS: string; distESM: string }) {
+export function writeScss({ src, distESM, distCJS }: { src: string; distCJS: string; distESM: string }) {
   return async (file: string) => {
-    console.log(`SCSS transforming: ${file}...`);
+    console.info(`SCSS transforming: ${file}...`);
 
     const { css } = await sass.compileAsync(file, {
       loadPaths: [path.resolve(__dirname, '../../node_modules')],

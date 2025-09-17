@@ -4,8 +4,7 @@ import { useState } from 'react';
 import { ModelInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { ToggleGroup } from '@snack-uikit/toggles';
 
-import { BADGE } from '#storybookConstants';
-
+import { BADGE } from '../../../storybook/constants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';

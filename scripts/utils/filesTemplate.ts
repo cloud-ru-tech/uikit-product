@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 
 import globConfig from '../../package.json';
+import globTSConfigCjs from '../../packages/tsconfig.cjs.json';
+import globTSConfigEsm from '../../packages/tsconfig.esm.json';
 import { DOCGEN_SECTION_PLACEHOLDER_END, DOCGEN_SECTION_PLACEHOLDER_START } from '../docgen/constants';
 
 const PackagesRootFolder = 'packages';
@@ -95,7 +97,7 @@ export const readme = ({
   const readmeContent = `# ${packageTitle}
 
 ## Installation
-\`npm i @sbercloud/${globConfig.name}-${packageName}\`
+\`pnpm add @sbercloud/${globConfig.name}-${packageName}\`
 
 [Changelog](./CHANGELOG.md)
 
@@ -115,6 +117,34 @@ export const npmrc = ({ packageRootFolderName }: { packageRootFolderName: string
 save-exact=true
 `;
   fs.writeFileSync(path.join(`./${PackagesRootFolder}/${packageRootFolderName}/.npmrc`), fileContent);
+};
+
+export const tsConfigCjs = ({ packageRootFolderName }: { packageRootFolderName: string }) => {
+  const fileContent = `{
+  "extends": "../tsconfig.cjs.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist/cjs"
+  },
+  "include": ["./src", "../../types"],
+  "exclude": ["./dist"]
+}`;
+
+  fs.writeFileSync(path.join(`./${PackagesRootFolder}/${packageRootFolderName}/tsconfig.cjs.json`), fileContent);
+};
+
+export const tsConfigEsm = ({ packageRootFolderName }: { packageRootFolderName: string }) => {
+  const fileContent = `{
+  "extends": "../tsconfig.esm.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist/esm"
+  },
+  "include": ["./src", "../../types"],
+  "exclude": ["./dist"]
+}`;
+
+  fs.writeFileSync(path.join(`./${PackagesRootFolder}/${packageRootFolderName}/tsconfig.esm.json`), fileContent);
 };
 
 export const componentEntry = ({
@@ -215,4 +245,17 @@ export const ${componentStoryName}: StoryObj<${componentName}Props> = {
 `;
 
   fs.writeFileSync(filePath, fileContent);
+};
+
+export const globalTsConfig = ({ packageRootFolderName }: { packageRootFolderName: string }) => {
+  const packagePath = `./${packageRootFolderName}`;
+
+  if (!globTSConfigEsm.references.find(({ path }) => path === packagePath)) {
+    globTSConfigEsm.references.push({ path: `${packagePath}/tsconfig.esm.json` });
+    fs.writeFileSync(`./${PackagesRootFolder}/tsconfig.esm.json`, JSON.stringify(globTSConfigEsm, null, 2));
+  }
+  if (!globTSConfigCjs.references.find(({ path }) => path === packagePath)) {
+    globTSConfigCjs.references.push({ path: `${packagePath}/tsconfig.cjs.json` });
+    fs.writeFileSync(`./${PackagesRootFolder}/tsconfig.cjs.json`, JSON.stringify(globTSConfigCjs, null, 2));
+  }
 };

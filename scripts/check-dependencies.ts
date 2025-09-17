@@ -1,17 +1,19 @@
 import path from 'path';
 
 import depCheck from 'depcheck';
-import { sync } from 'glob';
 
+import globConfig from '../package.json';
 import { logDebug, logError, logInfo } from './utils/console';
+import { getAllPackageFolders } from './utils/getAllPackageFolders';
 
 const options = {
   ignoreBinPackage: false,
   skipMissing: false,
-  ignorePatterns: ['stories', 'dist', '__tests__'],
+  ignorePatterns: ['stories', 'dist', '__tests__', '__e2e__'],
   ignoreMatches: [
     'react',
     'react-dom',
+    'react-docgen-typescript',
     '@sbercloud/figma-tokens-cloud-platform',
     '@sbercloud/figma-tokens-mlspace',
     '@sbercloud/figma-tokens-admin',
@@ -20,13 +22,14 @@ const options = {
   ],
 };
 
-const packages = `../packages/*`;
+const uikitPackageRegexp = new RegExp(`${globConfig.name}\\/`);
 
 const InternalPackages: Record<string, string> = {};
-const folders = sync(`${path.resolve(__dirname, packages)}`);
+const folders = getAllPackageFolders();
 
 for (const folder of folders) {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  // require требует литерал строки, а передается вычисляемое значение
+  // eslint-disable-next-line import/no-dynamic-require, @typescript-eslint/no-var-requires
   const pkg = require(path.resolve(folder, 'package.json'));
   InternalPackages[pkg.name] = pkg.version;
 }
@@ -37,9 +40,10 @@ const UnusedDeps: string[] = [];
 const Missing: Record<string, string[]>[] = [];
 
 for (const folder of folders) {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  // require требует литерал строки, а передается вычисляемое значение
+  // eslint-disable-next-line import/no-dynamic-require, @typescript-eslint/no-var-requires
   const pkg = require(path.resolve(folder, 'package.json'));
-  const usedInternal = Object.keys(pkg.dependencies || {}).filter(x => /@sbercloud\/uikit/.test(x));
+  const usedInternal = Object.keys(pkg.dependencies || {}).filter(x => uikitPackageRegexp.test(x));
   usedInternal.forEach(dep => {
     if (pkg.dependencies[dep] !== InternalPackages[dep]) {
       WrongVersions.push(
@@ -48,7 +52,7 @@ for (const folder of folders) {
     }
   });
 
-  const usedInternalDev = Object.keys(pkg.devDependencies || {}).filter(x => /@sbercloud\/uikit/.test(x));
+  const usedInternalDev = Object.keys(pkg.devDependencies || {}).filter(x => uikitPackageRegexp.test(x));
   usedInternalDev.forEach(dep => InternalAsDev.push(`Error in ${pkg.name}: ${dep}`));
 }
 

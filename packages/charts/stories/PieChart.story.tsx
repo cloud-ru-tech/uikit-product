@@ -1,8 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useMemo } from 'react';
 
-import { BADGE } from '#storybookConstants';
-
+import { BADGE } from '../../../storybook/constants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';

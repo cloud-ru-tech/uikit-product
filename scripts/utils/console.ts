@@ -16,6 +16,7 @@ const themes = {
 colors.setTheme(themes);
 
 const log = (message: string, theme: keyof typeof themes = 'warn'): void => {
+  // eslint-disable-next-line no-console
   console.log(colors[themes[theme]](`${message}\n`));
 };
 

@@ -39,6 +39,12 @@ export const bootstrapFiles = ({
   fileTemplates.npmrc({ packageRootFolderName });
   logInfo('Created .npmrc');
 
+  fileTemplates.tsConfigCjs({ packageRootFolderName });
+  logInfo('Created tsconfig.cjs.json');
+
+  fileTemplates.tsConfigEsm({ packageRootFolderName });
+  logInfo('Created tsconfig.esm.json');
+
   fileTemplates.packageJson({
     packageRootFolderName,
     user,
@@ -65,4 +71,7 @@ export const bootstrapFiles = ({
     packageRootFolderName,
   });
   logInfo('Created story entry');
+
+  fileTemplates.globalTsConfig({ packageRootFolderName });
+  logInfo('Update global tsconfig.cjs.json');
 };

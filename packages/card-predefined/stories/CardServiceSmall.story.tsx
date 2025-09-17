@@ -5,8 +5,7 @@ import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 import { PromoTagPredefinedProps } from '@sbercloud/uikit-product-promo-tag-predefined';
 import { PromoTagProps } from '@snack-uikit/promo-tag';
 
-import { BADGE } from '#storybookConstants';
-
+import { BADGE } from '../../../storybook/constants';
 import { VARIANTS } from '../../promo-tag-predefined/src/components/constants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

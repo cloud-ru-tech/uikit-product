@@ -1,10 +1,10 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { RICH_TEXT } from 'site-rich-text/stories/constants';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { RichText, RichTextProps } from '../src';
+import { RICH_TEXT } from './constants';
 
 const meta: Meta = {
   title: 'Site/Rich Text',

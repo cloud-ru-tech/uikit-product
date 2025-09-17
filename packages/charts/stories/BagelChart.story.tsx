@@ -2,8 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { QuestionTooltip } from '@snack-uikit/tooltip';
 
-import { BADGE } from '#storybookConstants';
-
+import { BADGE } from '../../../storybook/constants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';

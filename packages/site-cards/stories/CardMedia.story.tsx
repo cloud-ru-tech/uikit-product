@@ -1,11 +1,11 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { CardMedia, CardMediaProps } from 'site-cards/src/components/CardMedia';
 
 import { APPEARANCE, TagProps } from '@snack-uikit/tag';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
+import { CardMedia, CardMediaProps } from '../src';
 import img from './assets/CardMedia.webp';
 import styles from './styles.module.scss';
 

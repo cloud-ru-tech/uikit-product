@@ -1,5 +1,4 @@
 {
-  "extends": "ts-config-single-spa",
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
@@ -12,9 +11,9 @@
       "@sbercloud/uikit-product-*": [
         "./*/src"
       ],
-      "#storybookConstants": ["../storybook/constants"]
+      "#storybookConstants": ["./storybook/constants"]
     },
-    "target": "es6",
+    "target": "ES2018",
     "lib": ["es2017", "dom", "dom.iterable", "esnext"],
     "types": ["node"],
     "jsx": "react-jsx",
@@ -22,14 +21,12 @@
     "isolatedModules": true,
     "skipLibCheck": true,
     "noImplicitAny": true,
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules",
-        "options": {
-          "customRenderer": "../../scripts/compile/sass-custom-renderer.js"
-        }
-      }
-    ]
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true
   },
   "include": ["./"],
   "exclude": ["node_modules"]

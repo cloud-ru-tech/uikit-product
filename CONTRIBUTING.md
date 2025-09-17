@@ -27,15 +27,21 @@ footers other than BREAKING CHANGE: <description> may be provided and follow a c
 
 - `add-package` - создание нового пакета в рамках монорепозитория
 - `build:storybook` - сборка исходников сторибука для *CI/CD*
+- `build:packages:esm` - сборка ESM версии пакетов
+- `build:packages:cjs` - сборка CommonJS версии пакетов
+- `compile:packages` - компиляция пакетов через lerna
 - `build:packages` - пересборка пакетов вместе с установкой пакетных зависимостей, глобальные должны быть при этом установлены
+- `build:css` - сборка CSS файлов
 - `changelog` - генерация changelog в измененных пакетах (используется только локально, дает возможность проверить корректность содержания коммитов) 
-- `clean:all` - вызывает **clean:dist** и **clean:modules**
+- `clean:all` - вызывает **clean:empty**, **clean:dist**, **clean:modules** и **clean:buildinfo**
 - `clean:dist` - удаляет **dist** в пакетах
 - `clean:modules` - удаляет **node_modules** в пакетах
+- `clean:buildinfo` - удаляет **.tsbuildinfo** файлы
+- `clean:empty` - удаляет пустые пакеты
+- `docgen` - генерация документации для всех пакетов
 - `deps:all` - устанавливает зависимости
 - `deps:reinstall` - переустанавливает все зависимости начисто
 - `storybook:all` - запуск локальной версии сторибука со *всеми* пакетами
-- `storybook:ci` - запуск сторибука на *CI/CD*
 - `storybook:partial` - запуск локальной версии сторибука с *определенными* пакетами
 - `test:coverage-all` - генерит *cobertura* репорт для построчного покрытия тестами
 - `test:coverage-unstable` - считает покрытие тестов по компонентам с версией ниже *v1.0.0*
@@ -44,6 +50,7 @@ footers other than BREAKING CHANGE: <description> may be provided and follow a c
 - `test:testcafe:local` - запускает testcafe в watch режиме, перезапускает при изменении исходного кода теста
 - `test:testcafe:branch` - запускает testcafe против деплоя с текущей ветки (если деплой уже был). Требуется файл `.env`, в корне репозитория есть `.env.example`
 - `test:ci` - запуск сервера сторибук и тестов на нем для *CI/CD*
+- `test:unit` - запуск unit тестов
 
 ## Структура проекта
 
