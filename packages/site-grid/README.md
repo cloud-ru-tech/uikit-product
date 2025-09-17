@@ -12,7 +12,7 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | columnsConfig* | `ColumnsConfig` | - | Конфигурация настройки колонок для разных layoutType |
 | children* | `ReactNode` | - | Содержимое |
-| gap | "s" \| "m" \| "l" | m | Расстояние между колонками и рядами |
+| gap | "xs" \| "s" \| "m" \| "l" | m | Расстояние между колонками и рядами |
 | className | `string` | - | CSS-класс |
 
 

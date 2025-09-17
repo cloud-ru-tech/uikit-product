@@ -23,7 +23,7 @@ export type GridProps = WithSupportProps<
     /** Конфигурация настройки колонок для разных layoutType */
     columnsConfig: ColumnsConfig;
     /** Расстояние между колонками и рядами */
-    gap?: 's' | 'm' | 'l';
+    gap?: 'xs' | 's' | 'm' | 'l';
     className?: string;
   }>
 >;

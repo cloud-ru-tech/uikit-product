@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import { Grid } from '@sbercloud/uikit-product-site-grid';
+import { Grid, GridProps } from '@sbercloud/uikit-product-site-grid';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { CardSocial, CardSocialProps } from '../../helperComponents';
@@ -20,6 +20,9 @@ export type SectionSocialProps = WithSupportProps<
       backgroundColor?: SectionColor;
       /** Заголовок */
       title?: string;
+
+      /** Размер отступов сетки */
+      gap?: GridProps['gap'];
       cards: Omit<CardSocialProps, 'layoutType'>[];
     }
   >
@@ -33,6 +36,7 @@ export function SectionSocial({
   className,
   cards,
   titleAlign,
+  gap = 's',
   ...rest
 }: SectionSocialProps) {
   return (
@@ -45,7 +49,7 @@ export function SectionSocial({
       className={cn(className, styles.sectionSocial)}
       {...extractSupportProps(rest)}
     >
-      <Grid columnsConfig={GRID_CONFIG} layoutType={layoutType} gap='s'>
+      <Grid columnsConfig={GRID_CONFIG} layoutType={layoutType} gap={gap}>
         {cards.map((card, index) => (
           <CardSocial
             {...card}

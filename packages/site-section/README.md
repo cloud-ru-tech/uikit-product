@@ -272,6 +272,7 @@
 | id | `string` | - | id секции |
 | className | `string` | - | CSS-класс |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| gap | "s" \| "m" \| "l" | s | Размер отступов сетки |
 ## SectionTable
 ### Props
 | name | type | default value | description |

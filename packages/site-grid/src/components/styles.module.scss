@@ -11,7 +11,6 @@
   grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
   grid-gap: var(--grid-layout-gap);
 
-
   &[data-gap='l'] {
     --grid-layout-gap: #{var.$dimension-4m};
   }
@@ -22,6 +21,10 @@
 
   &[data-gap='s'] {
     --grid-layout-gap: #{var.$dimension-1m};
+  }
+
+  &[data-gap='xs'] {
+    --grid-layout-gap: #{var.$dimension-025m};
   }
 
   &[data-layout-type='tablet'],
