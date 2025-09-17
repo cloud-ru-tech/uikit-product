@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.2 (2025-09-17)
+
+
+### Bug Fixes
+
+* **SITE-9926:** fix packages for csat ([717d34b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/717d34bd4e773cb83d383f5887c0d71d09f6fef2))
+
+
+
+
+
 ## 0.1.1 (2025-09-17)
 
 ### Only dependencies have been changed
