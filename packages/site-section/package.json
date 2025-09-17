@@ -54,6 +54,9 @@
     "lodash.debounce": "4.0.8",
     "uncontrollable": "8.0.4"
   },
+  "devDependencies": {
+    "@sbercloud/figma-tokens-cloud-platform": "17.7.6"
+  },
   "peerDependencies": {
     "@sbercloud/uikit-product-locale": "*"
   }

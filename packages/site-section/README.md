@@ -49,6 +49,7 @@
 | title | `string` | - | Название секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | description | `string` | - | Описание секции |
+| note | `string` | - | Текст нижней сноски |
 | buttons | `{ label: string; href?: string; target?: HTMLAttributeAnchorTarget; onClick?: MouseEventHandler<HTMLElement>; }[]` | - |  |
 | tabBarItems | `TabBarItem[]` | - |  |
 | outline | `boolean` | - |  |

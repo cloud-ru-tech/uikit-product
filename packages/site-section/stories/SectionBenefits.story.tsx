@@ -9,17 +9,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { SectionBenefits, SectionBenefitsProps } from '../src';
 
-const meta: Meta = {
-  title: 'Site/Section/Benefits',
-  component: SectionBenefits,
-};
+const meta: Meta = { title: 'Site/Section/Benefits', component: SectionBenefits };
 
 export default meta;
 
-const TABS = Array.from({ length: 3 }, (_, i) => ({
-  value: i.toString(),
-  label: `Title ${i + 1}`,
-}));
+const TABS = Array.from({ length: 3 }, (_, i) => ({ value: i.toString(), label: `Title ${i + 1}` }));
 
 const CARD_BASIC_ITEMS = Array.from({ length: 8 }, (_, i) => ({
   title: `Title ${i + 1}`,
@@ -27,31 +21,19 @@ const CARD_BASIC_ITEMS = Array.from({ length: 8 }, (_, i) => ({
   icon: PlaceholderSVG,
 }));
 
-const CONTENT_BASIC = Array.from({ length: 3 }, (_, i) => ({
-  tabValue: i.toString(),
-  cards: CARD_BASIC_ITEMS,
-}));
+const CONTENT_BASIC = Array.from({ length: 3 }, (_, i) => ({ tabValue: i.toString(), cards: CARD_BASIC_ITEMS }));
 
 const CARD_INFO_ITEMS = Array.from({ length: 8 }, (_, i) => ({
   title: `Title ${i + 1}`,
   description: `description ${i + 1}`,
   icon: PlaceholderSVG,
   href: '#',
-  tag: {
-    text: 'free',
-    appearance: 'blue',
-  } as CardInfoProps['tag'],
+  tag: { text: 'free', appearance: 'blue' } as CardInfoProps['tag'],
 }));
 
-const CONTENT_INFO = Array.from({ length: 3 }, (_, i) => ({
-  tabValue: i.toString(),
-  cards: CARD_INFO_ITEMS,
-}));
+const CONTENT_INFO = Array.from({ length: 3 }, (_, i) => ({ tabValue: i.toString(), cards: CARD_INFO_ITEMS }));
 
-type StoryProps = SectionBenefitsProps & {
-  withTabs: boolean;
-  buttonsExample?: 'buttons' | 'links';
-};
+type StoryProps = SectionBenefitsProps & { withTabs: boolean; buttonsExample?: 'buttons' | 'links' };
 
 const Template: StoryFn<StoryProps> = ({
   id,
@@ -63,23 +45,14 @@ const Template: StoryFn<StoryProps> = ({
   columnsConfig,
   withTabs,
   buttonsExample,
+  note,
   ...rest
 }) => {
-  const contentBasicWithTabs = {
-    tabBarItems: TABS,
-    content: CONTENT_BASIC,
-  };
-  const contentBasicWithoutTabs = {
-    content: CARD_BASIC_ITEMS,
-  };
+  const contentBasicWithTabs = { tabBarItems: TABS, content: CONTENT_BASIC };
+  const contentBasicWithoutTabs = { content: CARD_BASIC_ITEMS };
 
-  const contentInfoWithTabs = {
-    tabBarItems: TABS,
-    content: CONTENT_INFO,
-  };
-  const contentInfoWithoutTabs = {
-    content: CARD_INFO_ITEMS,
-  };
+  const contentInfoWithTabs = { tabBarItems: TABS, content: CONTENT_INFO };
+  const contentInfoWithoutTabs = { content: CARD_INFO_ITEMS };
 
   const contentBasic = withTabs ? contentBasicWithTabs : contentBasicWithoutTabs;
   const contentInfo = withTabs ? contentInfoWithTabs : contentInfoWithoutTabs;
@@ -89,24 +62,11 @@ const Template: StoryFn<StoryProps> = ({
   const buttons: SectionBenefitsProps['buttons'] = useMemo(() => {
     switch (buttonsExample) {
       case 'buttons':
-        return [
-          {
-            label: 'Button example 1',
-          },
-          {
-            label: 'Button example 2',
-          },
-        ];
+        return [{ label: 'Button example 1' }, { label: 'Button example 2' }];
       case 'links': {
         return [
-          {
-            label: 'Link example 1',
-            href: '#',
-          },
-          {
-            label: 'Link example 2',
-            href: '#',
-          },
+          { label: 'Link example 1', href: '#' },
+          { label: 'Link example 2', href: '#' },
         ];
       }
       default:
@@ -126,6 +86,7 @@ const Template: StoryFn<StoryProps> = ({
         columnsConfig={columnsConfig}
         {...contentBasic}
         buttons={buttons}
+        note={note}
       />
     );
   }
@@ -142,6 +103,7 @@ const Template: StoryFn<StoryProps> = ({
       outline={propsForTypeInfo.outline}
       {...contentInfo}
       buttons={buttons}
+      note={note}
     />
   );
 };
@@ -161,31 +123,20 @@ export const benefits: StoryObj<StoryProps> = {
       mobile: { amount: 1, minWidth: 328 },
     },
     withTabs: true,
+    note: ' *iKS-Consulting, 2024; CNews Analytics, 2024<br/>**Из топ-200 мощнейших суперкомпьютеров в мире',
   },
   argTypes: {
-    outline: {
-      if: { arg: 'type', eq: 'info' },
-    },
-    withTabs: {
-      name: '[Story]: With tabs',
-    },
+    outline: { if: { arg: 'type', eq: 'info' } },
+    withTabs: { name: '[Story]: With tabs' },
     buttonsExample: {
       name: '[Story]: Footer button or link example',
       options: ['buttons', 'links', undefined],
-      control: {
-        type: 'select',
-      },
+      control: { type: 'select' },
     },
-    buttons: {
-      table: {
-        disable: true,
-      },
-    },
+    buttons: { table: { disable: true } },
   },
   parameters: {
-    readme: {
-      sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
-    },
+    readme: { sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog] },
     packageName: componentPackage.name,
     design: {
       name: 'Figma',

@@ -1,5 +1,11 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
+
 .buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.note {
+  color: ste.$sys-neutral-text-support;
 }

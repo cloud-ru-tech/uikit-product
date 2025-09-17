@@ -5,6 +5,7 @@ import { Grid, GridProps } from '@sbercloud/uikit-product-site-grid';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonFilledProps } from '@snack-uikit/button';
 import { Link } from '@snack-uikit/link';
+import { Typography } from '@snack-uikit/typography';
 
 import { SectionTitleProps } from '../../helperComponents';
 import { SectionBasic } from '../SectionBasic';
@@ -24,6 +25,8 @@ export type SectionBenefitsProps = WithSupportProps<
     description?: string;
     /** Конфигурация настройки колонок для разных layoutType */
     columnsConfig: GridProps['columnsConfig'];
+    /** Текст нижней сноски */
+    note?: string;
 
     buttons?: {
       label: string;
@@ -46,6 +49,7 @@ export function SectionBenefits({
   columnsConfig,
   layoutType,
   buttons,
+  note,
   ...rest
 }: SectionBenefitsProps) {
   const [activeTab, setActiveTab] = useState(tabBarItems && tabBarItems[0].value);
@@ -119,6 +123,12 @@ export function SectionBenefits({
                 cards.map((card, index) => <CardBasic key={index} layoutType={layoutType} {...card} />),
               )}
         </Grid>
+      )}
+
+      {note && (
+        <Typography.SansBodyM className={styles.note}>
+          <span dangerouslySetInnerHTML={{ __html: note }} />
+        </Typography.SansBodyM>
       )}
 
       {buttons && (
