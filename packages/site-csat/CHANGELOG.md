@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.3 (2025-09-17)
+
+
+### Bug Fixes
+
+* **SITE-9910:** fix SiteCsatPopover onCheckChips ([2c5114f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2c5114fc01c0c98e6372b401fd3bfb62ae1d1436))
+
+
+
+
+
 ## 0.1.2 (2025-09-17)
 
 
