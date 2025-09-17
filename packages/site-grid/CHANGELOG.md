@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2025-09-17)
+
+
+### Features
+
+* **SITE-9927:** add new value for grid gap ([3f1a8af](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3f1a8af9ababe2a2952cba6eafc1d56166002386))
+
+
+
+
+
 ## 0.0.12 (2025-09-17)
 
 ### Only dependencies have been changed
