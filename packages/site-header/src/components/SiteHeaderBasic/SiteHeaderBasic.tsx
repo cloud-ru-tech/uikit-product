@@ -30,6 +30,8 @@ export type HeaderProps = WithSupportProps<
     additionalLogoText?: AdditionalLogoText;
     /** className root блока */
     className?: string;
+    /** максимальная ширина контейнера */
+    maxWidth?: number;
     /** Флаг открытия мобильного меню */
     mobileMenuOpen: boolean;
     /** Настройки Логотипа */
@@ -55,6 +57,7 @@ const HEIGHT_SUBHEADER = 25;
 
 export function SiteHeaderBasic({
   className,
+  maxWidth,
   additionalLogoText,
   middleContent,
   rightContent,
@@ -85,7 +88,12 @@ export function SiteHeaderBasic({
     >
       {subHeader}
       <div ref={refHeader} className={cn(styles.headerMaster, styles.dividerHeader)} data-layout-type={layoutType}>
-        <div className={styles.headerPartsContainer}>
+        <div
+          className={styles.headerPartsContainer}
+          style={{
+            maxWidth,
+          }}
+        >
           {fullWidthContent ?? (
             <>
               <div className={styles.leftPart} data-layout-type={layoutType}>

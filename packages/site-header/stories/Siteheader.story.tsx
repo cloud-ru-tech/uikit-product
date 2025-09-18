@@ -5,7 +5,18 @@ import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { HeaderItemProps, HeaderItems, HeaderProps, LinkItem, SiteHeaderBasic, SubHeader } from '../src';
+import {
+  HeaderItemProps,
+  HeaderItems,
+  HeaderProps,
+  LinkItem,
+  SiteHeaderBasic,
+  SubHeader,
+  UserDetailsDropdown,
+  UserDetailsDropdownProps,
+  UserDetailsInline,
+  UserDetailsInlineProps,
+} from '../src';
 
 const meta: Meta = {
   title: 'Site/Header',
@@ -90,5 +101,30 @@ export const items: StoryObj<HeaderItemProps> = {
   render: TemplateHeaderItems,
   args: {
     linkItems: MENU_ITEMS,
+  },
+};
+
+const TemplateUserDetailsInline: StoryFn<UserDetailsInlineProps> = ({ ...args }) => <UserDetailsInline {...args} />;
+
+export const userDetailsInline: StoryObj<UserDetailsInlineProps> = {
+  render: TemplateUserDetailsInline,
+  args: {
+    userName: 'Иван',
+    lastName: 'Иванов',
+    onClickExit: () => {},
+  },
+};
+
+const TemplateUserDetailsDropdown: StoryFn<UserDetailsDropdownProps> = ({ ...args }) => (
+  <UserDetailsDropdown {...args} />
+);
+
+export const userDetailsDropdown: StoryObj<UserDetailsDropdownProps> = {
+  render: TemplateUserDetailsDropdown,
+  args: {
+    userName: 'Иван1',
+    lastName: 'Иванов1',
+    onClickExit: () => {},
+    onClickDropdownContent: () => {},
   },
 };

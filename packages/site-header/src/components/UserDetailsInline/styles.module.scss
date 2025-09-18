@@ -1,0 +1,9 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element'
+  as ste;
+
+.userAuthContent {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 8px;
+}

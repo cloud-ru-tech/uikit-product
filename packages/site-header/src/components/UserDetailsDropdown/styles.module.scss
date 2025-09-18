@@ -1,0 +1,14 @@
+.authAvatar {
+  cursor: pointer;
+}
+
+.wrapper {
+  min-width: 240px;
+  padding: 4px 8px;
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  z-index: 5;
+}
+
+.container {
+  gap: 4px;
+}

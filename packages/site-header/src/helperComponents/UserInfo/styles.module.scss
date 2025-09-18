@@ -1,0 +1,16 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element'
+  as ste;
+
+.root {
+  display: grid;
+  grid-template-columns: 24px 188px;
+  align-items: center;
+  gap: 8px;
+}
+
+.text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: ste.$sys-neutral-text-main;
+}
