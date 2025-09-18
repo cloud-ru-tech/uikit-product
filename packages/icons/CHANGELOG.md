@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 14.5.0 (2025-09-18)
+
+
+### Features
+
+* **SITE-9931:** add new icons ([02f6b5e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/02f6b5e2a1eb6150da202353d089d7fe2d0d9c80))
+
+
+
+
+
 # 14.4.0 (2025-09-17)
 
 
