@@ -250,7 +250,7 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     id: EVOLUTION_PRODUCT.EvolutionArtifactRegistry,
     platform: PLATFORM.Evolution,
     label: 'Evolution Artifact Registry',
-    caption: 'Реестр для хранения OCI-артефактов',
+    caption: 'Реестр для хранения и распространения артефактов',
     icon: ArtifactRegistrySVG,
     formConfig: EVOLUTION_ARTIFACT_REGISTRY,
     dataTestId: EVOLUTION_PRODUCT.EvolutionArtifactRegistry,

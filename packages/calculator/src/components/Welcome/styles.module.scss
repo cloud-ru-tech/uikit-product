@@ -105,12 +105,6 @@
   display: flex;
   flex-direction: column;
   gap: stv.$dimension-3m;
-
-  &Text {
-    gap: stv.$dimension-1m;
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .steps {

@@ -57,7 +57,7 @@ export function Welcome({ image }: WelcomeProps) {
       >
         <HeaderContainer dataTestId={parseKeyToDataTest('welcome', 'header')}>
           <div className={styles.left}>
-            <TitleComponent data-test-id={parseKeyToDataTest('product', 'title')}>Калькулятор</TitleComponent>
+            <TitleComponent data-test-id={parseKeyToDataTest('product', 'title')}>Конфигурация сервиса</TitleComponent>
           </div>
 
           <div className={styles.right} data-tablet={isTablet || undefined}>
@@ -86,17 +86,12 @@ export function Welcome({ image }: WelcomeProps) {
           data-test-id={parseKeyToDataTest('welcome', 'body')}
         >
           <div className={styles.headings}>
-            <div className={styles.headingsText}>
-              <Typography.SansTitleL data-test-id={parseKeyToDataTest('welcome', 'title')}>
-                Узнайте, сколько будет стоить облако
-              </Typography.SansTitleL>
-              <Typography.SansBodyM className={styles.desc} data-test-id={parseKeyToDataTest('welcome', 'desc')}>
-                Соберите свою конфигурацию ресурсов, узнайте ее стоимость
-                <br />и подключите. Калькулятор предложит бесплатные
-                <br />
-                конфигурации для экономии на старте
-              </Typography.SansBodyM>
-            </div>
+            <Typography.SansBodyM className={styles.desc} data-test-id={parseKeyToDataTest('welcome', 'desc')}>
+              Соберите свою конфигурацию ресурсов, узнайте ее стоимость
+              <br />и подключите. Калькулятор предложит бесплатные
+              <br />
+              конфигурации для экономии на старте
+            </Typography.SansBodyM>
             {(isTablet || isDesctopSmall) && (
               <ButtonFilled
                 onClick={handleCatalogOpen}

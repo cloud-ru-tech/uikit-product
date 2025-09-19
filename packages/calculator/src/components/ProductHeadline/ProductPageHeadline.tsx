@@ -45,7 +45,7 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
   const isProductType = calculatorType === CALCULATOR_TYPE.Product;
   const isMobile = layoutType !== LAYOUT_TYPE.Desktop && layoutType !== LAYOUT_TYPE.DesktopSmall;
   const hasCounter = enableChangeProductQuantity || freeTier;
-  const TitleComponent = isMobile ? Typography.SansTitleL : Typography.SansHeadlineS;
+  const TitleComponent = isMobile ? Typography.SansTitleM : Typography.SansTitleL;
   const headerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

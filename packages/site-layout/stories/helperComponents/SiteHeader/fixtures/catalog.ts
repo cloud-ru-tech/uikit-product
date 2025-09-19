@@ -1013,7 +1013,7 @@ export const catalogDataRaw = {
     {
       id: 'f605fd41-ed8f-48c3-b642-2927bd96dffd',
       title: 'Evolution Artifact Registry',
-      description: 'Реестр для хранения OCI-артефактов',
+      description: 'Реестр для хранения и распространения артефактов',
       customLink: '',
       slug: 'evolution-artifact-registry',
       available: true,
