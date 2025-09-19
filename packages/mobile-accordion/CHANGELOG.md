@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.12 (2025-09-19)
+
+
+### Bug Fixes
+
+* **PDS-2813:** add padding for accordion content ([2129af1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2129af1d27bcae795fc5936530f7d662ef9763cd))
+
+
+
+
+
 ## 0.4.11 (2025-09-18)
 
 ### Only dependencies have been changed

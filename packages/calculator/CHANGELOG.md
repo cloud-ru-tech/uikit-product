@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.27.3 (2025-09-19)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-mobile-accordion@0.4.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-accordion/CHANGELOG.md)
+
+
+
+
+
 ## 0.27.2 (2025-09-18)
 
 ### Only dependencies have been changed
