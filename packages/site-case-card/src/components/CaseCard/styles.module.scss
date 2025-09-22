@@ -56,4 +56,16 @@
     color: ste.$sys-primary-text-light;
     background-color: unset;
   }
+
+  span {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    &[data-layout-type='mobile'] {
+      -webkit-line-clamp: 5;
+    }
+  }
 }

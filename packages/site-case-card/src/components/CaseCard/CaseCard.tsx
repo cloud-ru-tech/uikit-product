@@ -54,7 +54,7 @@ export function CaseCard({
             </div>
           )}
           <Typography family='sans' purpose='title' size={descriptionTextSize} className={styles.description}>
-            <span dangerouslySetInnerHTML={{ __html: description }}></span>
+            <span dangerouslySetInnerHTML={{ __html: description }} data-layout-type={layoutType}></span>
           </Typography>
         </div>
       </div>
