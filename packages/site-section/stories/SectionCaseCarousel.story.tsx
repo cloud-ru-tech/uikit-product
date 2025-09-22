@@ -23,14 +23,12 @@ type StoryProps = SectionCaseCarouselProps & {
 };
 
 const createSamplePartner = (index: number): CaseItem => ({
-  logo: {
-    src: samplePartnerImage as unknown as string,
-    alt: 'dodo',
-  },
+  img: samplePartnerImage as unknown as string,
+  categories: ['Category'],
   description:
     index === 0
       ? 'Handgloves Description Sample'
-      : '<p>Handgloves Description Sample Description Sample Description Handgloves Sample Description Sample Handgloves Description Handgloves Description Sample Description Sample Description Handgloves Sample Description Sample Handgloves Description</p>',
+      : 'Handgloves Description Sample Description Sample Description Handgloves Sample Description Sample Handgloves Description Handgloves Description Sample Description Sample Description Handgloves Sample Description Sample Handgloves Description',
 });
 
 const generatePartners = (amount: number): CaseItem[] => {

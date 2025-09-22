@@ -1,12 +1,11 @@
 import { useMemo } from 'react';
 
-import { CardPartner, CardPartnerProps } from '@sbercloud/uikit-product-site-cards';
+import { CaseCard, CaseCardProps } from '@sbercloud/uikit-product-site-case-card';
 
 import { LimitedSectionCarouselProps, SectionCarousel } from '../../helperComponents';
-import styles from './styles.module.scss';
 import { getCarouselProps } from './utils';
 
-export type CaseItem = Omit<CardPartnerProps, 'layoutType'>;
+export type CaseItem = Omit<CaseCardProps, 'layoutType'>;
 
 export type SectionCaseCarouselProps = Omit<LimitedSectionCarouselProps<CaseItem>, 'description' | 'gap' | 'titleLink'>;
 
@@ -16,7 +15,7 @@ export function SectionCaseCarousel({ items, layoutType, ...props }: SectionCase
   return (
     <SectionCarousel {...props} {...carouselProps} layoutType={layoutType}>
       {items.map(item => (
-        <CardPartner key={item.description} {...item} layoutType={layoutType} className={styles.card} />
+        <CaseCard key={item.description} {...item} layoutType={layoutType} />
       ))}
     </SectionCarousel>
   );
