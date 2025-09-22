@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.28.0 (2025-09-22)
+
+
+### Features
+
+* **SITE-9111:** update title calculator ([99edca2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/99edca2e97a47a5442606d6ce8194c76be4c1480))
+
+
+
+
+
 ## 0.27.3 (2025-09-19)
 
 ### Only dependencies have been changed
