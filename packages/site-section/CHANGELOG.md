@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.19.0 (2025-09-22)
+
+
+### Features
+
+* **SITE-9945:** replace cards for section case carousel ([001338e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/001338ebe5cd61283b5830da206739e3fd60f9e2))
+
+
+
+
+
 ## 0.18.1 (2025-09-18)
 
 ### Only dependencies have been changed

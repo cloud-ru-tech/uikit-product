@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-09-22)
+
+
+### Features
+
+* **SITE-9945:** edit styles case card ([ad500cc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ad500ccfe4215b245308714a003b495a8721147d))
+
+
+
+
+
 ## 0.1.1 (2025-09-17)
 
 ### Only dependencies have been changed
