@@ -26,7 +26,7 @@ type ContentDislikeCsatProps = {
   onCheckChips?(titleChip: string): void;
 };
 
-const CHIPS = ['Нет нужного', 'Неудобный поиск', 'Тяжело найти ответ', 'Другое'];
+const CHIPS = ['Не нашел ответ', 'Неудобный поиск', 'Тяжело найти ответ', 'Другое'];
 
 const MAX_COMMENT_LENGTH = 1000;
 
