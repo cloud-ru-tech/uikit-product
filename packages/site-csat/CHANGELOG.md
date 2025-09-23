@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.5 (2025-09-23)
+
+
+### Bug Fixes
+
+* **SITE-9238:** update chips ([0cfc6fc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0cfc6fcac4205761d6a5beeb1b381535db16dd60))
+
+
+
+
+
 ## 0.1.4 (2025-09-18)
 
 ### Only dependencies have been changed
