@@ -45,7 +45,8 @@ export function SiteCsat({ isLoading, like, onSetLike, layoutType, label, dislik
       </div>
       {like === false && !isLoading && dislikeCommentForm && dislikeCommentForm.open && (
         <ContentDislikeCsat
-          classNameChipContainer={styles.classNameChipContainer}
+          classNameContentContainer={styles.classNameContentContainer}
+          classNameChipsContainer={styles.classNameChipsContainer}
           onCheckChips={dislikeCommentForm.onCheckChips}
           onClickForm={dislikeCommentForm.onClickForm}
           loadingButton={dislikeCommentForm.loadingButton}

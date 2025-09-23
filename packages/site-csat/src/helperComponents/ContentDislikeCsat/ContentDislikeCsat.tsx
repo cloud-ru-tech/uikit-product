@@ -21,11 +21,12 @@ type ContentDislikeCsatProps = {
   loadingButton?: boolean;
   onClickForm?: () => void;
   buttonSubmit?: ButtonSubmit;
-  classNameChipContainer?: string;
+  classNameContentContainer?: string;
+  classNameChipsContainer?: string;
   onCheckChips?(titleChip: string): void;
 };
 
-const CHIPS = ['Ошибка в статье', 'Что-то не работает', 'Сложно понять', 'Другое'];
+const CHIPS = ['Нет нужного', 'Неудобный поиск', 'Тяжело найти ответ', 'Другое'];
 
 const MAX_COMMENT_LENGTH = 1000;
 
@@ -36,7 +37,8 @@ export function ContentDislikeCsat({
   onClickForm,
   buttonSubmit,
   onCheckChips,
-  classNameChipContainer,
+  classNameContentContainer,
+  classNameChipsContainer,
 }: ContentDislikeCsatProps) {
   const [textAreaValue, setTextAreaValue] = useState('');
   const [checkAgree, setCheckAgree] = useState(false);
@@ -64,8 +66,8 @@ export function ContentDislikeCsat({
   };
 
   return (
-    <div className={styles.contentBlock} role='group'>
-      <div className={cn(styles.chipsContainer, classNameChipContainer)}>
+    <div className={cn(styles.contentBlock, classNameContentContainer)} role='group'>
+      <div className={cn(styles.chipsContainer, classNameChipsContainer)}>
         {CHIPS.map(item => (
           <ChipToggle
             key={item}
