@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.17 (2025-09-24)
+
+
+### Bug Fixes
+
+* **FF-7318:** bug with double animation in safari and ios ([dee5dbc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dee5dbccd02b809e49a8d02df13e395ed7c740df))
+
+
+
+
+
 ## 0.1.16 (2025-09-18)
 
 ### Only dependencies have been changed
