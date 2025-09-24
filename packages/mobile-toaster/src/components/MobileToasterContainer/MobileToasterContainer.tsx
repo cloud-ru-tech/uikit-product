@@ -1,7 +1,7 @@
 import './style.css';
 
 import cn from 'classnames';
-import { MouseEvent, useEffect, useState } from 'react';
+import { MouseEvent, useState } from 'react';
 import {
   DraggableDirection,
   toast,
@@ -11,6 +11,7 @@ import {
 } from 'react-toastify';
 
 import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLayoutEffect } from '@snack-uikit/utils';
 
 import { TOASTER_CONTAINER_PREFIX, TOASTER_TYPE } from '../../constants';
 import { useStackedToastsContext } from '../../contexts/StackedToastsContext';
@@ -67,7 +68,7 @@ export function MobileToasterContainer({
     }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const unsubscribe = toast.onChange(({ status, containerId }: ToastItem) => {
       if (containerId === `${TOASTER_CONTAINER_PREFIX}${TOASTER_TYPE.SystemEvent}`) {
         if (status === 'added') {

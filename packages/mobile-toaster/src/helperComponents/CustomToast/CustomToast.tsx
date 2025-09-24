@@ -1,4 +1,4 @@
-import cx from 'clsx';
+import cn from 'classnames';
 import { ReactNode } from 'react';
 import {
   DraggableDirection,
@@ -43,7 +43,7 @@ export function CustomToast(props: ToastProps) {
 
   const { transition: Transition } = props;
 
-  const defaultClassName = cx(
+  const defaultClassName = cn(
     `Toastify__toast-mobile`,
     `Toastify__toast-theme--${props.theme}`,
     `Toastify__toast--${props.type}`,
@@ -64,7 +64,7 @@ export function CustomToast(props: ToastProps) {
         type: props.type,
         defaultClassName,
       })
-    : cx(defaultClassName, props.className);
+    : cn(defaultClassName, props.className);
 
   return (
     <Transition
@@ -90,7 +90,7 @@ export function CustomToast(props: ToastProps) {
           className={
             isFn(props.bodyClassName) && props.bodyClassName
               ? props.bodyClassName({ type: props.type })
-              : cx(`Toastify__toast-mobile-body`, props.bodyClassName)
+              : cn(`Toastify__toast-mobile-body`, props.bodyClassName)
           }
           style={props.bodyStyle}
         >

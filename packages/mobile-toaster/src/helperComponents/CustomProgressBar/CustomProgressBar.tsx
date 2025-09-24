@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import cx from 'clsx';
+import cn from 'classnames';
 import { Theme, ToastClassName, TypeOptions } from 'react-toastify';
 
 import { isFn } from '../CustomToast/utils';
@@ -41,7 +41,7 @@ export function ProgressBar({
   };
 
   if (controlledProgress) style.transform = `scaleX(${progress})`;
-  const defaultClassName = cx(
+  const defaultClassName = cn(
     `Toastify__progress-bar`,
     controlledProgress ? `Toastify__progress-bar--controlled` : `Toastify__progress-bar--animated`,
     `Toastify__progress-bar-theme--${theme}`,
@@ -56,7 +56,7 @@ export function ProgressBar({
         type,
         defaultClassName,
       })
-    : cx(defaultClassName, className);
+    : cn(defaultClassName, className);
 
   // 🧐 controlledProgress is derived from progress
   // so if controlledProgress is set

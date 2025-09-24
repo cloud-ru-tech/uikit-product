@@ -1,12 +1,13 @@
-import cx from 'clsx';
-import { MouseEvent, useRef } from 'react';
+import cn from 'classnames';
+import { MouseEvent, useCallback, useRef } from 'react';
 import { toast, ToastContainerProps, ToastPosition, useToastContainer } from 'react-toastify';
+
+import { useLayoutEffect } from '@snack-uikit/utils';
 
 import { useStackedToastsContext } from '../../contexts';
 import { CustomToast } from '../CustomToast';
 import { isFn } from '../CustomToast/utils';
 import { defaultProps } from './constants';
-import { useIsomorphicLayoutEffect } from './hooks';
 import { parseClassName } from './utils';
 
 export function CustomToastContainer(props: ToastContainerProps) {
@@ -21,7 +22,7 @@ export function CustomToastContainer(props: ToastContainerProps) {
   const { className, style, rtl, containerId } = containerProps;
 
   function getClassName(position: ToastPosition) {
-    const defaultClassName = cx(`Toastify__toast-container-mobile`, `Toastify__toast-container--${position}`, {
+    const defaultClassName = cn(`Toastify__toast-container-mobile`, `Toastify__toast-container--${position}`, {
       [`Toastify__toast-container--rtl`]: rtl,
     });
     return isFn(className)
@@ -30,7 +31,7 @@ export function CustomToastContainer(props: ToastContainerProps) {
           rtl,
           defaultClassName,
         })
-      : cx(defaultClassName, parseClassName(className));
+      : cn(defaultClassName, parseClassName(className));
   }
 
   function collapseAll(e: MouseEvent) {
@@ -51,7 +52,7 @@ export function CustomToastContainer(props: ToastContainerProps) {
     }, 0);
   }
 
-  useIsomorphicLayoutEffect(() => {
+  const updateStackedLayout = useCallback(() => {
     if (stacked && containerRef.current) {
       const nodes = containerRef.current.querySelectorAll('[data-in="true"]');
       const gap = 4;
@@ -79,7 +80,14 @@ export function CustomToastContainer(props: ToastContainerProps) {
           prevS += 0.025;
         });
     }
-  }, [collapsed, count, stacked]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stacked, collapsed, count]);
+
+  useLayoutEffect(() => {
+    // Add small delay to prevent double execution in Safari
+    const timeoutId = setTimeout(updateStackedLayout, 0);
+    return () => clearTimeout(timeoutId);
+  }, [updateStackedLayout]);
 
   return (
     <div
@@ -97,7 +105,7 @@ export function CustomToastContainer(props: ToastContainerProps) {
         return (
           <div className={getClassName(position)} style={containerStyle} key={`container-${position}`}>
             <div
-              className={cx(
+              className={cn(
                 'Toastify__toast-container-mobile-scroll',
                 collapsed ? '' : 'Toastify__toast-container-mobile-scroll--active',
               )}
