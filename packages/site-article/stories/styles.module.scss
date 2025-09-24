@@ -1,0 +1,9 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.whiteWrapper {
+  max-width: 1216px;
+  height: auto;
+  padding: 1rem;
+
+  background-color: ste.$sys-neutral-background1-level;
+}

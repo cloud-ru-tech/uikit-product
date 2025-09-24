@@ -1,0 +1,35 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
+
+.products {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &[data-layout-type='tablet'] {
+    gap: 20px;
+  }
+
+  &[data-layout-type='mobile'] {
+    gap: 12px;
+  }
+}
+
+.label {
+  display: block;
+  color: var.$sys-neutral-text-main;
+  margin-bottom: 8px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  &[data-layout-type='mobile'] {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

@@ -44,6 +44,9 @@
       "path": "./mobile-fields/tsconfig.esm.json"
     },
     {
+      "path": "./site-article/tsconfig.esm.json"
+    },
+    {
       "path": "./site-rich-text/tsconfig.esm.json"
     },
     {

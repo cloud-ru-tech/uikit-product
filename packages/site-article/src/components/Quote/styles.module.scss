@@ -1,0 +1,62 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
+
+.quote {
+  box-sizing: border-box;
+
+  display: flex;
+  gap: 32px;
+
+  &[data-layout-type='mobile'] {
+    gap: 16px;
+  }
+}
+
+.iconWrapper {
+  &[data-layout-type='mobile'] {
+    width: 48px;
+  }
+}
+
+.icon {
+  width: inherit;
+  height: inherit;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  gap: 16px;
+}
+
+.text {
+  color: var.$sys-neutral-text-main;
+}
+
+.author {
+  display: flex;
+  gap: 12px;
+
+  &[data-layout-type='mobile'] {
+    flex-direction: column;
+  }
+
+  .authorImage {
+    border: var.$border-width-general-xs solid var.$sys-neutral-decor-default;
+    width: 48px;
+    height: 48px;
+  }
+
+  .authorNameWrapper {
+    display: flex;
+    flex-direction: column;
+
+    .authorName {
+      color: var.$sys-neutral-text-main;
+    }
+
+    .authorPosition {
+      color: var.$sys-neutral-text-light;
+    }
+  }
+}

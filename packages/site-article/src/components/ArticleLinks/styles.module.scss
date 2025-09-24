@@ -1,0 +1,36 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
+
+.articleLinks {
+  box-sizing: border-box;
+
+  padding: 24px;
+  border: var.$border-width-general-xs var.$border-styles-solid var.$sys-neutral-decor-default;
+}
+
+.title {
+  color: var.$sys-neutral-text-main;
+  margin-bottom: 16px;
+}
+
+.list {
+  margin: 0;
+  padding: 0 0 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.link {
+  color: var.$sys-primary-text-light;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+}

@@ -1,0 +1,9 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
+
+.highlight {
+  box-sizing: border-box;
+
+  background-color: var.$sys-neutral-background;
+  padding: 24px;
+  color: var.$sys-neutral-text-main;
+}

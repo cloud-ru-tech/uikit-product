@@ -1,0 +1,14 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
+
+.serviceLight {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 4px;
+
+  color: var.$sys-neutral-text-support;
+
+  &:hover {
+    color: var.$sys-primary-text-light;
+  }
+}

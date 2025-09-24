@@ -1,0 +1,13 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
+
+.footerArticle {
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.releaseDate {
+  color: var.$sys-neutral-text-support;
+}

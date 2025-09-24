@@ -44,6 +44,9 @@
       "path": "./mobile-fields/tsconfig.cjs.json"
     },
     {
+      "path": "./site-article/tsconfig.cjs.json"
+    },
+    {
       "path": "./site-rich-text/tsconfig.cjs.json"
     },
     {
