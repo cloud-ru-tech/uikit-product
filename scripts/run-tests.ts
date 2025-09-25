@@ -19,4 +19,7 @@ if (!shouldRunAllTests()) {
   changedPaths = paths.map(item => `${item}/__tests__/*.ts`).join(' ');
 }
 
-exec(`testcafe ${BROWSER ? `${BROWSER}:headless` : 'chrome'} --config-file testcafe.config.js ${changedPaths}`, exit);
+exec(
+  `testcafe ${BROWSER ? `"${BROWSER}:headless --no-sandbox"` : 'chrome'} --config-file testcafe.config.js ${changedPaths}`,
+  exit,
+);
