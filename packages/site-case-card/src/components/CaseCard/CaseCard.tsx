@@ -9,6 +9,8 @@ import styles from './styles.module.scss';
 export type CaseCardProps = WithLayoutType<{
   /** Ссылка на img логотип */
   img: string;
+  /** Ссылка переход по нажатию на карточку */
+  href?: string;
   /** Список категорий */
   categories?: Array<string>;
   /** Флаг показа или скрытия списка категорий */
@@ -31,6 +33,7 @@ export function CaseCard({
   img,
   description,
   categories,
+  href,
   visibleCategories = true,
   onClick,
 }: CaseCardProps) {
@@ -38,7 +41,7 @@ export function CaseCard({
   const descriptionTextSize = layoutType === 'mobile' ? 's' : 'm';
 
   return (
-    <Card onClick={onClick} size={SIZE_CARD_LAYOUT_TYPE[layoutType]}>
+    <Card href={href} onClick={onClick} size={SIZE_CARD_LAYOUT_TYPE[layoutType]}>
       <div className={styles.container} data-layout-type={layoutType}>
         <div>
           <img src={img} className={styles.image} alt='img' data-layout-type={layoutType} />

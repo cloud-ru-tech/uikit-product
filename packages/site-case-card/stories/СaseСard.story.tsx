@@ -30,6 +30,7 @@ export const caseCard: StoryObj<CaseCardProps> = {
     categories: ['IT-разработка', 'Услуги'],
     onClick: () => {},
     visibleCategories: true,
+    href: '/test',
   },
   argTypes: {},
   parameters: {
