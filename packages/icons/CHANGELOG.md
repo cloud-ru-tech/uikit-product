@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 15.0.0 (2025-09-26)
+
+
+### Features
+
+* **PDS-2783:** add new service icons: Anthropic, AppStage, CloudLogging, ConnectionHub, DeepSeek, HuggingFace, McpServer, Mistral, MlFlow, Ollama, OpenAi, Qwen, Vllm ([d597699](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d597699637da823cdf76dc81c95a1c203a626849))
+
+
+### BREAKING CHANGES
+
+
+* **PDS-2783:** icons renamed: DevToolsRepo -> EvolutionRepo, DevToolsPipelines -> EvolutionPipeline ([bdfa740](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bdfa740a8b0d5aa5e650900e795125336de2efea))
+
+
+
+
 # 14.6.0 (2025-09-25)
 
 
