@@ -2043,7 +2043,7 @@ importers:
         specifier: 0.10.30
         version: link:../site-cards
       '@sbercloud/uikit-product-site-case-card':
-        specifier: 0.2.0
+        specifier: 0.3.0
         version: link:../site-case-card
       '@sbercloud/uikit-product-site-grid':
         specifier: 0.1.0

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-09-26)
+
+
+### Features
+
+* **SITE-9975:** update href site-case-card ([e70ad89](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e70ad89e2eacaec632c9fb2feeaa3f20908fcc23))
+
+
+
+
+
 # 0.2.0 (2025-09-22)
 
 
