@@ -47,6 +47,7 @@
 | columnsConfig* | `ColumnsConfig` | - | Конфигурация настройки колонок для разных layoutType |
 | id | `string` | - | id секции |
 | title | `string` | - | Название секции |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | description | `string` | - | Описание секции |
 | note | `string` | - | Текст нижней сноски |

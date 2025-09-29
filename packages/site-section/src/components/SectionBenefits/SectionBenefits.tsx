@@ -8,6 +8,7 @@ import { Link } from '@snack-uikit/link';
 import { Typography } from '@snack-uikit/typography';
 
 import { SectionTitleProps } from '../../helperComponents';
+import { SectionColor } from '../../types';
 import { SectionBasic } from '../SectionBasic';
 import { CardNumeric } from './components';
 import styles from './styles.module.scss';
@@ -19,6 +20,8 @@ export type SectionBenefitsProps = WithSupportProps<
     id?: string;
     /** Название секции */
     title?: string;
+    /** Цвет фона секции */
+    backgroundColor?: SectionColor;
     /** Тег заголовка */
     titleTag?: SectionTitleProps['titleTag'];
     /** Описание секции */
@@ -50,6 +53,7 @@ export function SectionBenefits({
   layoutType,
   buttons,
   note,
+  backgroundColor,
   ...rest
 }: SectionBenefitsProps) {
   const [activeTab, setActiveTab] = useState(tabBarItems && tabBarItems[0].value);
@@ -68,7 +72,7 @@ export function SectionBenefits({
 
   const outline = (rest as ContentInfo).outline;
   const gap = type === 'basic' ? 'l' : 's';
-  const backgroundColor = type === 'basic' || outline ? 'neutral-background1-level' : 'neutral-background';
+  const backgroundColorSection = type === 'basic' || outline ? 'neutral-background1-level' : 'neutral-background';
 
   return (
     <SectionBasic
@@ -77,7 +81,7 @@ export function SectionBenefits({
       titleTag={titleTag}
       description={description}
       layoutType={layoutType}
-      backgroundColor={backgroundColor}
+      backgroundColor={backgroundColor || backgroundColorSection}
       tabBarItems={tabs}
       {...extractSupportProps(rest)}
     >

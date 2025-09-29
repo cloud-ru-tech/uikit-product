@@ -45,6 +45,7 @@ const Template: StoryFn<StoryProps> = ({
   columnsConfig,
   withTabs,
   buttonsExample,
+  backgroundColor,
   note,
   ...rest
 }) => {
@@ -84,6 +85,7 @@ const Template: StoryFn<StoryProps> = ({
         type={type}
         layoutType={layoutType}
         columnsConfig={columnsConfig}
+        backgroundColor={backgroundColor}
         {...contentBasic}
         buttons={buttons}
         note={note}
@@ -101,6 +103,7 @@ const Template: StoryFn<StoryProps> = ({
       layoutType={layoutType}
       columnsConfig={columnsConfig}
       outline={propsForTypeInfo.outline}
+      backgroundColor={backgroundColor}
       {...contentInfo}
       buttons={buttons}
       note={note}
@@ -116,6 +119,7 @@ export const benefits: StoryObj<StoryProps> = {
     description: 'description',
     type: 'basic',
     layoutType: 'desktop',
+    backgroundColor: 'neutral-background',
     columnsConfig: {
       desktop: { amount: 4, minWidth: 298 },
       desktopSmall: { amount: 3, minWidth: 298 },
