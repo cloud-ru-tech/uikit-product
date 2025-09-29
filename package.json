@@ -13,7 +13,7 @@
     "build:packages:esm": "tspc -b ./packages/tsconfig.esm.json",
     "build:packages:cjs": "tspc -b ./packages/tsconfig.cjs.json",
     "compile:packages": "lerna run compile",
-    "build:packages": "pnpm compile:packages && pnpm build:ts && pnpm build:css",
+    "build:packages": "ts-node scripts/build-packages",
     "build:css": "ts-node scripts/compileCSS",
     "changelog": "ts-node scripts/changelog",
     "clean:all": "pnpm clean:empty && pnpm clean:dist && pnpm clean:modules && pnpm clean:buildinfo",
