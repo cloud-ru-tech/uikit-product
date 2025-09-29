@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.21.0 (2025-09-29)
+
+
+### Features
+
+* **SITE-9986:** add subtitle for section basic ([ec8acc0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ec8acc0151575e1e31b16cb0240a01513a44bd67))
+
+
+
+
+
 # 0.20.0 (2025-09-29)
 
 
