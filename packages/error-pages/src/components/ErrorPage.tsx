@@ -19,6 +19,7 @@ export type ErrorPageProps = WithSupportProps<{
   onSupportCenterClick?(): void;
   logoVariant?: LogoVariant;
   errorType?: ErrorType;
+  showMainButton?: boolean;
 }>;
 
 export function ErrorPage({
@@ -27,6 +28,7 @@ export function ErrorPage({
   onSupportCenterClick,
   logoVariant = LogoVariant.None,
   errorType = ErrorType.FrontendError,
+  showMainButton = true,
   ...rest
 }: ErrorPageProps) {
   const { t } = useLocale('ErrorPage');
@@ -98,16 +100,17 @@ export function ErrorPage({
               icon={<MailInterfaceSVG />}
             />
           )}
-
-          <ButtonFilled
-            size='m'
-            className={styles.button}
-            label={button.text}
-            href={button.href}
-            target={button.href && '_self'}
-            onClick={button.onClick}
-            icon={button.icon}
-          />
+          {showMainButton && (
+            <ButtonFilled
+              size='m'
+              className={styles.button}
+              label={button.text}
+              href={button.href}
+              target={button.href && '_self'}
+              onClick={button.onClick}
+              icon={button.icon}
+            />
+          )}
         </div>
       </div>
       <div className={styles.rightSide}>
