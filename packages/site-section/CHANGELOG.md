@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.20.0 (2025-09-29)
+
+
+### Features
+
+* **SITE-9978:** add background props for benefits ([eca43a5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/eca43a53856c7832346e8eea60d236cc03c5dbd5))
+
+
+
+
+
 ## 0.19.3 (2025-09-26)
 
 ### Only dependencies have been changed
