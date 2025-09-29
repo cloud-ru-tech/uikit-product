@@ -12,6 +12,8 @@ import { getTitleTypographyProps } from './utils';
 export type SectionTitleProps = WithLayoutType<{
   /** Название секции */
   title?: string;
+  /** Подзаголовок секции */
+  subtitle?: string;
   /** Ссылка в названии */
   titleLink?: PickLinkProps<typeof Link, 'href' | 'onClick' | 'target' | 'appearance' | 'textMode'>;
   /** Описание секции */
@@ -20,16 +22,20 @@ export type SectionTitleProps = WithLayoutType<{
   titleSectionSize?: Size;
   /** Тег заголовка */
   titleTag?: SectionTag;
+  /** Тег подзаголовка */
+  subtitleTag?: SectionTag;
   /** Выравнивание текста */
   titleAlign?: 'left' | 'center';
 }>;
 
 export function SectionTitle({
   title,
+  subtitle,
   titleLink,
   description,
   titleSectionSize = 'm',
   titleTag = 'h2',
+  subtitleTag = 'h3',
   layoutType,
   titleAlign = 'left',
 }: SectionTitleProps) {
@@ -42,11 +48,18 @@ export function SectionTitle({
     <>
       {(title || description) && (
         <div className={styles.sectionTitle} data-align={titleAlign}>
-          {title && (
-            <Typography family='sans' {...titleProps} tag={titleTag} className={styles.title}>
-              {titleLink ? <Link {...titleLink} {...titleProps} text={title} /> : <RichText richText={title} />}
-            </Typography>
-          )}
+          <div className={styles.titlesWrapper} data-align={titleAlign}>
+            {title && (
+              <Typography family='sans' {...titleProps} tag={titleTag} className={styles.title}>
+                {titleLink ? <Link {...titleLink} {...titleProps} text={title} /> : <RichText richText={title} />}
+              </Typography>
+            )}
+            {subtitle && (
+              <Typography family='sans' purpose='label' size='l' tag={subtitleTag} className={styles.subtitle}>
+                <RichText richText={subtitle} />
+              </Typography>
+            )}
+          </div>
           {description && (
             <Typography.SansBodyL className={styles.description}>
               <RichText richText={description} />

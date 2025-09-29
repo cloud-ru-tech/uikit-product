@@ -26,9 +26,11 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | title | `string` | - | Название секции |
+| subtitle | `string` | - | Подзаголовок секции |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | m | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег подзаголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | tabBarItems | `TabBarItem[]` | - | Массив табов |
@@ -47,8 +49,10 @@
 | columnsConfig* | `ColumnsConfig` | - | Конфигурация настройки колонок для разных layoutType |
 | id | `string` | - | id секции |
 | title | `string` | - | Название секции |
+| subtitle | `string` | - | Название подзаголовка секции |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | description | `string` | - | Описание секции |
 | note | `string` | - | Текст нижней сноски |
 | buttons | `{ label: string; href?: string; target?: HTMLAttributeAnchorTarget; onClick?: MouseEventHandler<HTMLElement>; }[]` | - |  |
@@ -72,9 +76,11 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `BlogCarouselItem[]` | - | Массив айтемов |
 | title | `string` | - | Название секции |
+| subtitle | `string` | - | Подзаголовок секции |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег подзаголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
@@ -89,8 +95,10 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CaseItem[]` | - | Массив айтемов |
 | title | `string` | - | Название секции |
+| subtitle | `string` | - | Подзаголовок секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег подзаголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
@@ -118,8 +126,10 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CardClientProps[]` | - | Массив айтемов |
 | title | `string` | - | Название секции |
+| subtitle | `string` | - | Подзаголовок секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег подзаголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
@@ -182,8 +192,10 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `ExpertDetails[]` | - | Массив айтемов |
 | title | `string` | - | Название секции |
+| subtitle | `string` | - | Подзаголовок секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег подзаголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
@@ -213,9 +225,11 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CardMarketplaceProps[]` | - | Массив айтемов |
 | title | `string` | - | Название секции |
+| subtitle | `string` | - | Подзаголовок секции |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег подзаголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
@@ -269,6 +283,7 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | cards* | `Omit<CardSocialProps, "layoutType">[]` | - |  |
 | title | `string` | - | Название секции Заголовок |
+| subtitle | `string` | - | Подзаголовок секции |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS-класс |
@@ -295,10 +310,12 @@
 | children* | `ReactElement<any, string \| JSXElementConstructor<any>>[]` | - | Массив повторяющихся айтмов, из которых состоят слайды карусели |
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | title | `string` | - | Название секции |
+| subtitle | `string` | - | Подзаголовок секции |
 | titleLink | `PickLinkProps<(<T extends ElementType = "a">({ text, className, textMode, size, purpose, appearance, insideText, truncateVariant, as, ...rest }: LinkProps<T>) => Element), "onClick" \| "appearance" \| "href" \| "target" \| "textMode">` | - | Ссылка в названии |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег подзаголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |

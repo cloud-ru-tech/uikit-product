@@ -1,8 +1,8 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
 
-.sectionTitle {
+.sectionTitle,
+.titlesWrapper {
   display: flex;
-  flex-direction: column;
   gap: var.$dimension-1m;
   text-align: left;
 
@@ -11,9 +11,21 @@
   }
 }
 
+.sectionTitle {
+  flex-direction: column;
+}
+
+.titlesWrapper {
+  flex-direction: column-reverse;
+}
+
 .title {
   color: var.$sys-neutral-text-main;
   white-space: pre-line;
+}
+
+.subtitle {
+  color: var.$sys-neutral-text-light;
 }
 
 .description {

@@ -33,6 +33,7 @@ export const social: StoryObj<StoryProps> = {
     id: 'section-social',
     layoutType: 'desktop',
     title: 'Станьте частью сообщества',
+    subtitle: 'Сообщество',
     cards: [
       {
         title: 'Telegram-канал Cloud.ru',

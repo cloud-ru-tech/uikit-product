@@ -20,6 +20,7 @@ export default meta;
 
 type StoryProps = SectionBasicProps & {
   showTitle?: boolean;
+  showSubtitle?: boolean;
   showTabs?: boolean;
   showFilters?: boolean;
   showPagination?: boolean;
@@ -54,12 +55,14 @@ const handleShowMoreButtonClick = () => alert('Clicked!');
 
 const Template: StoryFn<StoryProps> = ({
   showTitle,
+  showSubtitle,
   showTabs,
   showFilters,
   showPagination,
   showLoadMoreButton,
   id,
   title,
+  subtitle,
   description,
   layoutType,
   titleSectionSize,
@@ -84,6 +87,7 @@ const Template: StoryFn<StoryProps> = ({
         {...args}
         id={id}
         title={showTitle ? title : undefined}
+        subtitle={showSubtitle ? subtitle : undefined}
         description={showTitle ? description : undefined}
         tabBarItems={showTabs ? tabsConfig : undefined}
         filterItems={showFilters ? filtersConfig : undefined}
@@ -106,9 +110,11 @@ export const basic: StoryObj<StoryProps> = {
     layoutType: LAYOUT_TYPE.Desktop,
     backgroundColor: SECTION_COLORS.NeutralBackground1Level,
     title: 'Заголовок',
+    subtitle: 'Подзаголовок',
     description: 'Описание',
     titleSectionSize: 'm',
     showTitle: true,
+    showSubtitle: true,
     showTabs: true,
     showFilters: true,
     showPagination: true,
@@ -125,6 +131,10 @@ export const basic: StoryObj<StoryProps> = {
     },
     showTitle: {
       name: '[Stories]: show title',
+      control: { type: 'boolean' },
+    },
+    showSubtitle: {
+      name: '[Stories]: show subtitle',
       control: { type: 'boolean' },
     },
     showTabs: {

@@ -41,6 +41,8 @@ const Template: StoryFn<StoryProps> = ({
   type = 'basic',
   title,
   titleTag,
+  subtitle,
+  subtitleTag,
   description,
   columnsConfig,
   withTabs,
@@ -80,7 +82,9 @@ const Template: StoryFn<StoryProps> = ({
       <SectionBenefits
         id={id}
         title={title}
+        subtitle={subtitle}
         titleTag={titleTag}
+        subtitleTag={subtitleTag}
         description={description}
         type={type}
         layoutType={layoutType}
@@ -116,6 +120,7 @@ export const benefits: StoryObj<StoryProps> = {
   args: {
     id: 'section-benefits',
     title: 'Section Title',
+    subtitle: 'Section Subtitle',
     description: 'description',
     type: 'basic',
     layoutType: 'desktop',

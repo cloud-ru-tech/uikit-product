@@ -41,7 +41,15 @@ const generatePartners = (amount: number): CaseItem[] => {
   return partners;
 };
 
-const Template: StoryFn<StoryProps> = ({ id, title, partnersAmount, layoutType, backgroundColor, showMoreButton }) => {
+const Template: StoryFn<StoryProps> = ({
+  id,
+  title,
+  subtitle,
+  partnersAmount,
+  layoutType,
+  backgroundColor,
+  showMoreButton,
+}) => {
   const sampleCases = useMemo(() => generatePartners(partnersAmount), [partnersAmount]);
 
   return (
@@ -49,6 +57,7 @@ const Template: StoryFn<StoryProps> = ({ id, title, partnersAmount, layoutType, 
       <SectionCaseCarousel
         id={id}
         title={title}
+        subtitle={subtitle}
         items={sampleCases}
         layoutType={layoutType}
         backgroundColor={backgroundColor}
@@ -69,6 +78,7 @@ export const caseCarousel: StoryObj<StoryProps> = {
   args: {
     id: 'section-case-carousel',
     title: 'Наши партнеры',
+    subtitle: 'Кейсы',
     partnersAmount: 5,
     backgroundColor: SECTION_COLORS.NeutralBackground,
     layoutType: 'desktop',

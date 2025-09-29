@@ -11,7 +11,7 @@ import styles from './styles.module.scss';
 
 export type SectionSocialProps = WithSupportProps<
   WithLayoutType<
-    Pick<SectionBasicProps, 'title' | 'titleAlign'> & {
+    Pick<SectionBasicProps, 'title' | 'subtitle' | 'titleAlign'> & {
       /** id секции */
       id?: string;
       /** CSS-класс */
@@ -32,6 +32,7 @@ export function SectionSocial({
   id,
   layoutType,
   title,
+  subtitle,
   backgroundColor,
   className,
   cards,
@@ -43,6 +44,7 @@ export function SectionSocial({
     <SectionBasic
       id={id}
       title={title}
+      subtitle={subtitle}
       titleAlign={titleAlign}
       backgroundColor={backgroundColor}
       layoutType={layoutType}

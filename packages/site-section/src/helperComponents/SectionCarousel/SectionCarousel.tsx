@@ -16,6 +16,8 @@ export function SectionCarousel({
   id,
   title,
   titleTag,
+  subtitle,
+  subtitleTag,
   titleSectionSize,
   description,
   children,
@@ -77,6 +79,8 @@ export function SectionCarousel({
       data-section-background={backgroundColor}
       title={title}
       titleTag={titleTag}
+      subtitle={subtitle}
+      subtitleTag={subtitleTag}
       titleSectionSize={titleSectionSize}
       description={description}
       backgroundColor={backgroundColor}

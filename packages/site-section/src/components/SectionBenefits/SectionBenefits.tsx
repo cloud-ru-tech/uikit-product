@@ -20,10 +20,14 @@ export type SectionBenefitsProps = WithSupportProps<
     id?: string;
     /** Название секции */
     title?: string;
+    /** Название подзаголовка секции */
+    subtitle?: string;
     /** Цвет фона секции */
     backgroundColor?: SectionColor;
     /** Тег заголовка */
     titleTag?: SectionTitleProps['titleTag'];
+    /** Тег заголовка */
+    subtitleTag?: SectionTitleProps['subtitleTag'];
     /** Описание секции */
     description?: string;
     /** Конфигурация настройки колонок для разных layoutType */
@@ -45,6 +49,8 @@ export function SectionBenefits({
   id,
   title,
   titleTag,
+  subtitle,
+  subtitleTag,
   description,
   type,
   content,
@@ -79,6 +85,8 @@ export function SectionBenefits({
       id={id}
       title={title}
       titleTag={titleTag}
+      subtitle={subtitle}
+      subtitleTag={subtitleTag}
       description={description}
       layoutType={layoutType}
       backgroundColor={backgroundColor || backgroundColorSection}
