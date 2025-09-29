@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.13.0 (2025-09-29)
+
+
+### Features
+
+* **PDS-2788:** add optional prop for hide main button ([d7f932d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d7f932d5db428188adba388d5005a75e3440f836))
+
+
+
+
+
 ## 0.12.56 (2025-09-26)
 
 ### Only dependencies have been changed
