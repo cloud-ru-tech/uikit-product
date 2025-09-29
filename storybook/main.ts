@@ -1,6 +1,7 @@
 import path from 'path';
 
 import { StorybookConfig } from '@storybook/react-webpack5';
+import { EsbuildPlugin } from 'esbuild-loader';
 import { globSync } from 'glob';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import { RuleSetRule } from 'webpack';
@@ -48,7 +49,6 @@ const mainConfig: StorybookConfig = {
     'storybook-dark-mode',
     '@cloud-ru/ft-storybook-deps-graph-addon',
     '@sbercloud/ft-storybook-deps-table-addon',
-    '@storybook/addon-webpack5-compiler-babel',
   ],
   staticDirs: [{ from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }],
   framework: '@storybook/react-webpack5',
@@ -60,10 +60,6 @@ const mainConfig: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
-  babel: (base: StorybookConfig['babel']) => ({
-    ...base,
-    plugins: [...(base.plugins || []), ...(isTestServer ? ['istanbul'] : [])],
-  }),
   env: config => ({
     ...config,
     PACKAGES_STATISTICS: PACKAGES_STATISTICS as unknown as string,
@@ -116,6 +112,52 @@ const mainConfig: StorybookConfig = {
       test: SVG_SPRITE_EXPRESSION,
       use: 'svg-inline-loader',
     });
+
+    // Настройка esbuild-loader для TypeScript и JavaScript файлов
+    if (config.module?.rules) {
+      const esbuildLoaderExclude = [/node_modules/, /storybook-config-entry\.js$/, /storybook-stories\.js$/];
+
+      config.module.rules.push(
+        {
+          test: /\.ts$/,
+          use: [
+            {
+              loader: 'esbuild-loader',
+              options: {
+                loader: 'ts',
+                target: 'es2018',
+                format: 'esm',
+              },
+            },
+          ],
+          exclude: esbuildLoaderExclude,
+        },
+        {
+          test: /\.tsx$/,
+          use: [
+            {
+              loader: 'esbuild-loader',
+              options: {
+                loader: 'tsx',
+                target: 'es2018',
+                jsx: 'automatic',
+                format: 'esm',
+              },
+            },
+          ],
+          exclude: esbuildLoaderExclude,
+        },
+      );
+    }
+
+    if (config.optimization) {
+      config.optimization.minimizer = [
+        new EsbuildPlugin({
+          target: 'es2018',
+          css: true,
+        }),
+      ];
+    }
 
     return config;
   },
