@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.31 (2025-09-30)
+
+
+### Bug Fixes
+
+* **FF-6758:** typescript issues ([520f8f0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/520f8f0c18ce3c5e74d6e05e6b7b72afa7a69771))
+
+
+
+
+
 ## 0.1.30 (2025-09-26)
 
 ### Only dependencies have been changed

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-switch-row",
   "title": "Switch Row",
-  "version": "0.6.7",
+  "version": "0.6.8",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "6.2.0",
+    "@sbercloud/uikit-product-utils": "6.2.1",
     "@snack-uikit/toggles": "0.13.5",
     "@snack-uikit/tooltip": "0.16.2",
     "@snack-uikit/truncate-string": "0.6.9",

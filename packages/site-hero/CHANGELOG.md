@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.32 (2025-09-30)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button-predefined@0.6.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button-predefined/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@15.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-layout@0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-layout/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-media@0.1.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-media/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-navbar@0.2.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-navbar/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-rich-text@0.2.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-rich-text/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-tag@0.3.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-tag/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@6.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## 0.5.31 (2025-09-26)
 
 ### Only dependencies have been changed
