@@ -1,11 +1,8 @@
 import path from 'path';
 
-import { sync } from 'glob';
-
+import { getAllPackageFolders } from '../utils/getAllPackageFolders';
 import { getChangedPackages } from '../utils/getChangedPackages';
 import { shouldRunAllTests } from '../utils/shouldRunAllTests';
-
-const packagesDir = path.join(__dirname, '../../packages');
 
 // need this file if a group of changed tests is empty
 const DEFAULT_ENTRY = 'storybook/preview.tsx';
@@ -21,13 +18,11 @@ function toPattern(basename: string) {
 function getPackageEntries() {
   const runAllTests = shouldRunAllTests();
 
-  const allPackages = sync(path.join(packagesDir, '*'));
-
-  const paths = runAllTests ? allPackages : getChangedPackages();
+  const paths = runAllTests ? getAllPackageFolders() : getChangedPackages();
 
   return paths.map(dirname => ({
     pattern: toPattern(path.basename(dirname)),
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    // eslint-disable-next-line @typescript-eslint/no-var-requires, import/no-dynamic-require
     version: require(path.join(dirname, 'package.json')).version,
   }));
 }
