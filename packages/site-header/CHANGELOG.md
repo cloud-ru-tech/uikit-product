@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2025-09-30)
+
+
+### Features
+
+* **SITE-9891:** add new components header ([2aba167](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2aba16764de9e519a3121b1660b34796b84d5596))
+
+
+
+
+
 ## 0.3.12 (2025-09-26)
 
 ### Only dependencies have been changed
