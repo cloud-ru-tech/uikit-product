@@ -1,8 +1,28 @@
 import { CONTROL, FormConfig, SegmentedControl, StepperControl } from '../../../../components';
-import { generateCpuItems, generateRamItems, getDisk, getEip, getObs } from '../../../utils';
+import { generateCpuItems, generateRamItems, getEip, getObs } from '../../../utils';
+import { getDisk } from '../../../utils/diskPostgreSqlMySQL';
+
+const BdEngineVersionItem = {
+  General_Purpose: 'General Purpose',
+  Dedicated: 'Dedicated',
+} as const;
+
+const bdEngineVersionItems = [
+  {
+    value: BdEngineVersionItem.Dedicated,
+    label: 'Dedicated',
+    description: `Инстансы имеют выделенные ресурсы процессора`,
+  },
+  {
+    value: BdEngineVersionItem.General_Purpose,
+    label: 'General Purpose',
+    description: `Инстансы используют ресурсы процессора совместно с другими инстансами того же класса, размещенными на одном физическом сервере`,
+  },
+];
 
 const BdInstanceTypeItem = {
   Single: 'Single',
+  Replica: 'Replica',
   PrimaryStandby: 'Primary/Standby',
 };
 
@@ -10,21 +30,73 @@ const bdInstanceTypeItems = [
   {
     value: BdInstanceTypeItem.Single,
     label: 'Single',
+    description: 'Одноузловая конфигурация',
   },
   {
     value: BdInstanceTypeItem.PrimaryStandby,
     label: 'Primary/Standby',
+    description: 'Отказоустойчивый кластер высокой доступности',
   },
 ];
 
-const CpuRamMap: Record<string, number[]> = {
-  '1': [2, 4],
-  '2': [4, 8, 16],
-  '4': [8, 16, 32],
-  '8': [16, 32, 64],
-  '16': [32, 64, 128],
-  '32': [64, 128],
-  '64': [128, 256, 512],
+const CpuRamByClassType: {
+  [instanceClass: string]: { [instanceType: string]: Record<string, number[]> };
+} = {
+  [BdEngineVersionItem.Dedicated]: {
+    [BdInstanceTypeItem.Single]: {
+      '2': [8],
+      '4': [16, 32],
+      '8': [32, 64],
+      '12': [96],
+      '16': [64, 128],
+      '24': [192],
+      '32': [128],
+      '48': [384],
+      '64': [256, 512],
+      '96': [768],
+    },
+    [BdInstanceTypeItem.PrimaryStandby]: {
+      '2': [8],
+      '4': [16, 32],
+      '8': [32, 64],
+      '12': [96],
+      '16': [64, 128],
+      '24': [192],
+      '32': [128],
+      '48': [384],
+      '64': [256, 512],
+      '96': [768],
+    },
+    [BdInstanceTypeItem.Replica]: {
+      '2': [8],
+      '4': [16, 32],
+      '8': [32, 64],
+      '12': [96],
+      '16': [64, 128],
+      '24': [192],
+      '32': [128],
+      '48': [384],
+      '64': [256, 512],
+      '96': [768],
+    },
+  },
+  [BdEngineVersionItem.General_Purpose]: {
+    [BdInstanceTypeItem.Single]: {
+      '2': [4, 8],
+      '4': [8, 16],
+      '8': [16, 32],
+    },
+    [BdInstanceTypeItem.PrimaryStandby]: {
+      '2': [4, 8],
+      '4': [8, 16],
+      '8': [16, 32],
+    },
+    [BdInstanceTypeItem.Replica]: {
+      '2': [4, 8],
+      '4': [8, 16],
+      '8': [16, 32],
+    },
+  },
 };
 
 type GetRdsControlsProps = {
@@ -41,39 +113,60 @@ const getRdsControls = ({
   cpu: {
     type: CONTROL.Segmented,
     accessorKey: `${prefix}.cpu`,
-    defaultValue: '1',
-    items: generateCpuItems([1, 2, 4, 8, 16, 32, 64]),
+    defaultValue: '2',
+    items: [],
     decoratorProps: {
       label: 'Количество vCPU',
       labelTooltip: 'Виртуальный процессор',
     },
+    watchedControls: {
+      rdsBdEngineVersion: 'rds.bdInstanceClass',
+      rdsBdInstanceType: 'rds.bdInstanceType',
+    },
+    relateFn: ({
+      rdsBdEngineVersion,
+      rdsBdInstanceType,
+    }: {
+      rdsBdEngineVersion: string;
+      rdsBdInstanceType: string;
+    }) => ({
+      items: generateCpuItems(
+        Object.entries(CpuRamByClassType[rdsBdEngineVersion][rdsBdInstanceType]).map(([key]) => Number(key)) ?? [],
+      ),
+    }),
   },
   ram: {
     type: CONTROL.Segmented,
     accessorKey: `${prefix}.ram`,
     defaultValue: '2',
-    items: generateRamItems(CpuRamMap['1']),
+    items: [],
     decoratorProps: {
       label: 'Объём RAM',
       labelTooltip: 'Оперативная память',
     },
     watchedControls: {
       cpu: `${prefix}.cpu`,
+      rdsBdEngineVersion: 'rds.bdInstanceClass',
+      rdsBdInstanceType: 'rds.bdInstanceType',
     },
-    relateFn: ({ cpu }: { cpu: string }) => {
-      const items: number[] = CpuRamMap[cpu] || [];
-
-      return {
-        items: generateRamItems(items),
-      };
-    },
+    relateFn: ({
+      cpu,
+      rdsBdEngineVersion,
+      rdsBdInstanceType,
+    }: {
+      cpu: string;
+      rdsBdEngineVersion: string;
+      rdsBdInstanceType: string;
+    }) => ({
+      items: generateRamItems(CpuRamByClassType[rdsBdEngineVersion][rdsBdInstanceType][cpu] ?? []),
+    }),
   },
   bdQuantity: {
     type: CONTROL.Stepper,
     accessorKey: `${prefix}.bdQuantity`,
     defaultValue: 1,
     decoratorProps: {
-      label: 'Количество RDS',
+      label: 'Количество баз данных',
     },
     uiProps: {
       min: 1,
@@ -88,17 +181,27 @@ const bdReplicaRds = getRdsControls({ prefix: 'bdReplica.rds' });
 
 export const MYSQL_DATA_BASE_FORM_CONFIG: FormConfig = {
   ui: [
-    ['rdsBdInstanceType'],
+    'rdsBdEngineVersion',
+    'rdsBdInstanceType',
     'bdInstanceAlert',
     ['rdsCpu', 'rdsRam'],
     ['evs', 'rdsBdQuantity'],
-    'eip',
     'bdReplica',
+    'eip',
     ['obs'],
   ],
   controls: {
+    rdsBdEngineVersion: {
+      type: CONTROL.Carousel,
+      accessorKey: 'rds.bdInstanceClass',
+      defaultValue: BdEngineVersionItem.Dedicated,
+      items: bdEngineVersionItems,
+      decoratorProps: {
+        label: 'Класс инстанса',
+      },
+    },
     rdsBdInstanceType: {
-      type: CONTROL.Segmented,
+      type: CONTROL.Carousel,
       accessorKey: 'rds.bdInstanceType',
       items: bdInstanceTypeItems,
       defaultValue: BdInstanceTypeItem.Single,
@@ -116,7 +219,7 @@ export const MYSQL_DATA_BASE_FORM_CONFIG: FormConfig = {
         visible: false,
       },
       accessorKey: 'instances',
-      watchedControls: { bdInstanceType: 'rds.bdInstanceType' },
+      watchedControls: { bdInstanceType: 'rds.bdInstanceClass' },
       relateFn: ({ bdInstanceType }) => {
         if (bdInstanceType === BdInstanceTypeItem.PrimaryStandby) {
           return {
@@ -189,7 +292,7 @@ export const MYSQL_DATA_BASE_FORM_CONFIG: FormConfig = {
                 },
                 specification: {
                   accessorKey: 'bdReplica.evs.systemDisk.specification',
-                  defaultValue: 'SAS',
+                  defaultValue: 'Cloud SSD',
                   uiProps: { disabled: true },
                 },
               }),
@@ -265,7 +368,7 @@ export const MYSQL_DATA_BASE_FORM_CONFIG: FormConfig = {
       },
       specification: {
         accessorKey: 'evs.systemDisk.specification',
-        defaultValue: 'SAS',
+        defaultValue: 'Cloud SSD',
         onChangeFn: (value, setValue) => {
           setValue([
             ['evs.systemDisk.specification', value],
