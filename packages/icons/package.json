@@ -32,7 +32,7 @@
   ],
   "license": "UNLICENSED",
   "scripts": {
-    "compile": "npm run build:svgs-inherit && npm run build:svgs-color && npm run build:sprite-icons",
+    "compile": "ts-node scripts/compile.ts",
     "import:icons-interface-system": "ts-node scripts/importInterfaceSystemIcons.ts",
     "import:icons-interface-product": "ts-node scripts/importInterfaceProductIcons.ts",
     "import:icons": "ts-node scripts/import.ts",
