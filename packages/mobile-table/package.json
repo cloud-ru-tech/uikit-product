@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-table",
   "title": "Mobile Table",
-  "version": "0.10.12",
+  "version": "0.10.13",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,10 +32,10 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "15.0.1",
-    "@sbercloud/uikit-product-mobile-chips": "0.8.30",
-    "@sbercloud/uikit-product-mobile-dropdown": "0.9.15",
-    "@sbercloud/uikit-product-mobile-toolbar": "0.3.12",
+    "@sbercloud/uikit-product-icons": "15.0.2",
+    "@sbercloud/uikit-product-mobile-chips": "0.8.31",
+    "@sbercloud/uikit-product-mobile-dropdown": "0.9.16",
+    "@sbercloud/uikit-product-mobile-toolbar": "0.3.13",
     "@sbercloud/uikit-product-utils": "6.2.1",
     "@snack-uikit/button": "0.19.15",
     "@snack-uikit/icon-predefined": "0.7.9",

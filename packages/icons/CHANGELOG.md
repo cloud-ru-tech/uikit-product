@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 15.0.2 (2025-10-03)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-icons
+
+
+
+
+
 ## 15.0.1 (2025-09-30)
 
 ### Only dependencies have been changed
