@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 15.0.4 (2025-10-06)
+
+
+### Bug Fixes
+
+* **PDS-2941:** trigger version release ([62614cf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/62614cf941b5d609fbf8a5c4fa8a680e18cf824e))
+
+
+
+
+
 ## 15.0.3 (2025-10-06)
 
 

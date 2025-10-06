@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.21.4 (2025-10-06)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@15.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-fields@0.11.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-cards@0.10.35](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-cards/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-media@0.1.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-media/CHANGELOG.md)
+
+
+
+
+
 ## 0.21.3 (2025-10-06)
 
 ### Only dependencies have been changed
