@@ -2,7 +2,7 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-product-icons`
+`pnpm add @sbercloud/uikit-product-icons`
 
 ## Components interface 
 ```typescript
