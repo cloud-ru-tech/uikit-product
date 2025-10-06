@@ -15,7 +15,7 @@
         "**/*.MD",
         "**/*.mdx",
         "**/*.MDX",
-        "./scripts/**/*",
+        "**/scripts/**/*",
         "packages/*/stories/**/*.*",
         "packages/*/__tests__/**/*.*"
       ]

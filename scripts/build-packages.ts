@@ -178,7 +178,7 @@ async function buildChangedPackages() {
   logInfo(`Found ${changedPackages.length} changed packages: ${packageNames.join(', ')}`);
 
   // Временно удаляем неизмененные пакеты
-  const restorePackages = await temporarilyRemoveUnchangedPackages(changedPackages);
+  const restorePackages = temporarilyRemoveUnchangedPackages(changedPackages);
 
   try {
     // Собираем только измененные пакеты
