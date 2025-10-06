@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-accordion",
   "title": "Mobile Accordion",
-  "version": "0.4.16",
+  "version": "0.4.17",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,8 +32,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "15.0.2",
-    "@sbercloud/uikit-product-mobile-tooltip": "0.4.60",
+    "@sbercloud/uikit-product-icons": "15.0.3",
+    "@sbercloud/uikit-product-mobile-tooltip": "0.4.61",
     "@sbercloud/uikit-product-utils": "6.2.1",
     "@snack-uikit/accordion": "0.11.11",
     "@snack-uikit/button": "0.19.15",

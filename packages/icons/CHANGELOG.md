@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 15.0.3 (2025-10-06)
+
+
+### Bug Fixes
+
+* **PDS-2941:** update snack-uikit/icons ([a1b4897](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a1b489758e34dd597c53ab3482b8441d97a45b7f))
+
+
+
+
+
 ## 15.0.2 (2025-10-03)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-icons

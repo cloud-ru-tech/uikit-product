@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-widget",
   "title": "Widget",
-  "version": "0.8.21",
+  "version": "0.8.22",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-card-predefined": "0.8.6",
+    "@sbercloud/uikit-product-card-predefined": "0.8.7",
     "@sbercloud/uikit-product-mobile-carousel": "0.1.9",
     "@sbercloud/uikit-product-utils": "6.2.1",
     "@snack-uikit/icon-predefined": "0.7.3",
