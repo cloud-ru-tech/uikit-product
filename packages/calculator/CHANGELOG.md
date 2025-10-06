@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.29.0 (2025-10-06)
+
+
+### Features
+
+* **SITE-9784:** update calculators ([09d8ead](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/09d8ead56a7d21b61c7274c294cede585c95c409))
+
+
+
+
+
 ## 0.28.6 (2025-10-06)
 
 ### Only dependencies have been changed
