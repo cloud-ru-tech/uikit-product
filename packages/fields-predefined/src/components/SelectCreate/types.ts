@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { FieldSelectMultipleProps, FieldSelectSingleProps } from '@sbercloud/uikit-product-mobile-fields';
 import { AdaptiveDrawerProps, AdaptiveModalProps } from '@sbercloud/uikit-product-mobile-modal';
 
-type CommonModalDrawerProps = 'open' | 'onClose' | 'approveButton' | 'cancelButton';
+type CommonModalDrawerProps = 'open' | 'onClose' | 'approveButton' | 'cancelButton' | 'layoutType';
 type CreateLayoutModalProps = Omit<AdaptiveModalProps, CommonModalDrawerProps> & { content: ReactNode };
 type CreateLayoutDrawerProps = Omit<AdaptiveDrawerProps, CommonModalDrawerProps>;
 

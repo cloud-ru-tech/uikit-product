@@ -43,6 +43,7 @@ function Template(args: SelectCreateProps) {
         onChange: (id: string) => setValue(id),
         label: 'Ключ шифрования',
       }}
+      layoutType={layoutType}
       submitHandler={() =>
         new Promise(resolve => {
           const newOption = { option: `Ключ ${count}`, value: `Ключ ${count}` };
@@ -51,7 +52,7 @@ function Template(args: SelectCreateProps) {
           resolve(newOption.value);
         })
       }
-      createLayoutProps={{ title: 'Создание ключа', content: 'Форма создания', layoutType }}
+      createLayoutProps={{ title: 'Создание ключа', content: 'Форма создания' }}
     />
   );
 }
