@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-10-07)
+
+
+### Features
+
+* **PDS-1899:** add hide price parameter ([fca7ad5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fca7ad555b9d46136ccbb2b8f1ab513b271e9cee))
+
+
+
+
+
 ## 0.1.34 (2025-10-06)
 
 ### Only dependencies have been changed
