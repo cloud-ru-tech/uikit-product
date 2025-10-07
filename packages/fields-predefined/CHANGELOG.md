@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.12.9 (2025-10-07)
+
+
+### Bug Fixes
+
+* **CSS-0000:** fix select create props ([ed171da](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ed171da225e5b2c17c9f637c94faf6f5b7a3cf27))
+
+
+
+
+
 ## 0.12.8 (2025-10-06)
 
 ### Only dependencies have been changed
