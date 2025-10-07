@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useMemo, useState } from 'react';
 
-import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { PlaceholderSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
 import { QuotaCard } from '@sbercloud/uikit-product-quota';
 import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
@@ -112,6 +112,51 @@ export const pageServices: StoryObj<PageServicesStoryProps> = {
         variant: 'droplist',
         button: {
           label: 'Documentation',
+        },
+        list: {
+          closeDroplistOnItemClick: true,
+          items: [
+            {
+              content: {
+                option: 'Link 1',
+              },
+            },
+            {
+              content: {
+                option: 'Link 2',
+              },
+            },
+          ],
+        },
+      },
+      {
+        variant: 'droplist',
+        button: {
+          label: 'Documentation',
+          buttonType: 'function',
+        },
+        list: {
+          closeDroplistOnItemClick: true,
+          items: [
+            {
+              content: {
+                option: 'Link 1',
+              },
+            },
+            {
+              content: {
+                option: 'Link 2',
+              },
+            },
+          ],
+        },
+      },
+      {
+        variant: 'droplist',
+        button: {
+          label: 'Filled Droplist',
+          buttonType: 'filled',
+          icon: <PlusSVG />,
         },
         list: {
           closeDroplistOnItemClick: true,
