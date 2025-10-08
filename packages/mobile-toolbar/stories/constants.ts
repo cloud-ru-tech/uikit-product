@@ -8,7 +8,7 @@ import { STORY_TEST_IDS, TEST_ID_TOASTER } from './testIds';
 
 export const OPTIONS_LENGTH = 3;
 
-export const OPTIONS = generateOptions(OPTIONS_LENGTH);
+export const OPTIONS = generateOptions(3);
 
 export const BULK_ACTIONS = [
   {

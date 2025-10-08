@@ -26,4 +26,6 @@ export type BulkActionsProps = {
   indeterminate?: boolean;
   /** Режим выбора @default 'multiple'*/
   selectionMode?: SelectionMode;
+  /** Количество выбранных элементов */
+  selectedCount?: number;
 };

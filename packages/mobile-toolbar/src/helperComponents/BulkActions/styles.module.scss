@@ -1,14 +1,35 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toolbar' as toolbar;
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as element;
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as vars;
+
+.bulkActionsContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 40px;
+  height: 40px;
+}
 
 .bulkActionsWrapper {
   @include toolbar.composite-var(toolbar.$toolbar-bulk-action-wrap);
 
+  width: 100%;
   scrollbar-width: none;  /* Firefox */
 
   display: flex;
+  flex-grow: 1;
   flex-shrink: 1;
-  justify-content: stretch;
+  justify-content: start;
+  align-items: center;
 
   min-width: 0;
 
@@ -24,31 +45,14 @@
   @include toolbar.composite-var(toolbar.$toolbar-bulk-action);
 
   display: flex;
-}
-
-.checkboxWrapper {
-  @include toolbar.composite-var(toolbar.$toolbar-checkbox);
-
-  cursor: pointer;
-
-  position: relative;
-
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-
-  box-sizing: border-box;
-
-  &:focus-visible {
-    @include element.outline-var(element.$container-focused-s);
-
-    outline-color: toolbar.$sys-available-complementary;
-  }
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding-left: 8px;
 }
 
 .moreActionButton {
   flex-shrink: 0;
+  padding-left: 4px;
 }
 
 .action {
@@ -58,4 +62,11 @@
     flex-shrink: 0;
     width: auto;
   }
+}
+
+.smallSeparator {
+  box-sizing: border-box;
+  width: toolbar.$border-width-toolbar-separator;
+  height: 16px;
+  background-color: toolbar.$sys-neutral-decor-default;
 }

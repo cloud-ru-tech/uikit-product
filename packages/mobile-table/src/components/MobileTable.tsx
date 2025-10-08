@@ -226,6 +226,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
             after={toolbarAfter}
             moreActions={moreActions}
             bulkActions={bulkActions}
+            selectedCount={table.getSelectedRowModel().rows.length}
             selectionMode={selectionMode}
             onCheck={enableSelection ? handleOnToolbarCheck : undefined}
             checked={table.getIsAllPageRowsSelected()}

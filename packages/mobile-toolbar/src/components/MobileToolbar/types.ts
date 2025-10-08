@@ -11,7 +11,7 @@ type OptionalProps = {
   /** Дополнительный слот в конце тулбара */
   after?: ReactNode;
   /** Элементы выпадающего списка кнопки с действиями */
-  moreActions?: MoreActionsProps['moreActions'];
+  moreActions?: MoreActionsProps['items'];
 };
 
 export type CommonToolbarProps = {

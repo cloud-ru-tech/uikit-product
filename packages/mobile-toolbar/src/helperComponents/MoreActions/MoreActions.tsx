@@ -13,10 +13,11 @@ type Action = {
 } & Pick<BaseItemProps, 'content' | 'disabled' | 'onClick'>;
 
 export type MoreActionsProps = {
-  moreActions: Action[];
+  items?: Action[];
+  pinTop?: Action[];
 };
 
-export function MoreActions({ moreActions }: MoreActionsProps) {
+export function MoreActions({ items = [], pinTop }: MoreActionsProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
@@ -28,7 +29,16 @@ export function MoreActions({ moreActions }: MoreActionsProps) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       size='l'
-      items={moreActions.map(item => ({
+      pinTop={pinTop?.map(item => ({
+        ...item,
+        beforeContent: item.icon,
+        onClick: e => {
+          item.onClick?.(e);
+          setIsOpen(false);
+          e.stopPropagation();
+        },
+      }))}
+      items={items.map(item => ({
         onClick: e => {
           item.onClick?.(e);
           setIsOpen(false);

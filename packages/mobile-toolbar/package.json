@@ -38,6 +38,7 @@
     "@sbercloud/uikit-product-mobile-tooltip": "0.4.62",
     "@sbercloud/uikit-product-utils": "6.2.1",
     "@snack-uikit/button": "0.19.15",
+    "@snack-uikit/counter": "0.8.9",
     "@snack-uikit/search-private": "0.4.29",
     "@snack-uikit/tag": "0.15.7",
     "@snack-uikit/toggles": "0.13.20",

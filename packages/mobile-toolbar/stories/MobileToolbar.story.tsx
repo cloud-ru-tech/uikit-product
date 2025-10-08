@@ -86,6 +86,7 @@ const Template: StoryFn<StoryProps> = ({
             onCheck: toggleChecked,
             bulkActions: showBulkActions ? bulkActions : undefined,
             indeterminate,
+            selectedCount: 5,
           }
         : {})}
       search={
