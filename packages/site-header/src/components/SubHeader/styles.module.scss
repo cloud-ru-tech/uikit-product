@@ -1,7 +1,7 @@
 @use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as ste;
 
 .root {
-  background: ste.$sys-neutral-background2-level;
+  background: ste.$sys-neutral-background1-level;
   padding: 0 16px;
 
   &[data-layout-type='mobile'] {

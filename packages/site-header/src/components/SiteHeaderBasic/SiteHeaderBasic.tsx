@@ -30,6 +30,8 @@ export type HeaderProps = WithSupportProps<
     additionalLogoText?: AdditionalLogoText;
     /** className root блока */
     className?: string;
+    /** className основного хедера */
+    mainHeaderClassName?: string;
     /** максимальная ширина контейнера */
     maxWidth?: number;
     /** Флаг открытия мобильного меню */
@@ -68,6 +70,7 @@ export function SiteHeaderBasic({
   mobileConsultationButton,
   mobileMenuOpen,
   onSetMobileMenuOpen,
+  mainHeaderClassName,
   logo,
   ...rest
 }: HeaderProps) {
@@ -87,7 +90,11 @@ export function SiteHeaderBasic({
       {...extractSupportProps(rest)}
     >
       {subHeader}
-      <div ref={refHeader} className={cn(styles.headerMaster, styles.dividerHeader)} data-layout-type={layoutType}>
+      <div
+        ref={refHeader}
+        className={cn(styles.headerMaster, styles.dividerHeader, mainHeaderClassName)}
+        data-layout-type={layoutType}
+      >
         <div
           className={styles.headerPartsContainer}
           style={{
