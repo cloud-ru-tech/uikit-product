@@ -24,7 +24,7 @@ async function compile() {
       console.error('Failed to build packages');
       rejectedResults.forEach(result => {
         if (result.status === 'rejected') {
-          console.error(result.reason);
+          console.error(result.reason.stderr || result.reason.stdout);
         }
       });
       process.exit(1);

@@ -6,7 +6,7 @@ export function execAsync(command: string): Promise<{ code: number; stdout: stri
       if (code === 0) {
         resolve({ code, stdout, stderr });
       } else {
-        reject(new Error(`Command failed with code ${code}: ${stderr}`));
+        reject({ code, stdout, stderr });
       }
     });
   });

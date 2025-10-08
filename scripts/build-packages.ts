@@ -23,7 +23,7 @@ async function buildAllPackages() {
 
   if (rejectedResults.length > 0) {
     console.info('Failed to build packages');
-    console.info(rejectedResults.map(result => result.reason).join('\n'));
+    console.info(rejectedResults.map(result => result.reason?.stdout).join('\n'));
     shell.exit(1);
   }
 
@@ -129,7 +129,7 @@ async function buildFormatWithFilter(
     return result;
   }
 
-  throw new Error(`Failed to build ${format} format:\n${result.stderr}`);
+  throw new Error(`Failed to build ${format} format:\n${result.stderr || result.stdout}`);
 }
 
 /**
@@ -152,7 +152,9 @@ async function buildPackageFormats(packageNames: string[]): Promise<boolean> {
 
   const rejectedResults = results.filter(result => result.status === 'rejected');
   if (rejectedResults.length > 0) {
-    logError(`Failed to build package formats:\n ${rejectedResults.map(result => result.reason).join('\n')}`);
+    logError(
+      `Failed to build package formats:\n ${rejectedResults.map(result => result.reason.stderr || result.reason.stdout).join('\n')}`,
+    );
     return false;
   }
 
