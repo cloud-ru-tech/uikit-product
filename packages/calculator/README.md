@@ -53,6 +53,7 @@ export function Calculator() {
 | config* | `CatalogConfig` | - | Конфигурация платформ/продуктов/каталога |
 | layoutType | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | desktop | Тип устройства |
 | calculatorType | enum CalculatorType: `"main"`, `"partners"`, `"product"`, `"additional"`, `"test"` | main | Тип калькулятора |
+| onAnalyticsClick | `(clickContent: string, uniqueId: string) => void` | - | Колбэк вызова при изменении любого контрола для аналитики |
 | bgImage | `string` | - | Изображение на заднем фоне в состоянии "пустой" корзины |
 | initialActiveProduct | `string` | - | Id продукта который будет "по умолчанию" в корзине |
 | iniState | `Record<string, ProductState[]>` | - | Начальное состояние корзины |

@@ -35,6 +35,8 @@ export type CalculatorProps = {
     /** Колбек клика на кнопку "Запросить консультацию" */
     onRequestConsultationClick?(state: State): void;
   };
+  /** Колбэк вызова при изменении любого контрола для аналитики */
+  onAnalyticsClick?(clickContent: string, uniqueId: string): void;
   /** Изображение на заднем фоне в состоянии "пустой" корзины */
   bgImage?: string;
   /** Id продукта который будет "по умолчанию" в корзине*/
@@ -56,6 +58,7 @@ export function Calculator({
   bgImage,
 
   actions,
+  onAnalyticsClick,
 }: CalculatorProps) {
   return (
     <CalculatorContextProvider
@@ -66,6 +69,7 @@ export function Calculator({
       iniState={iniState}
       initialActiveProduct={initialActiveProduct}
       actions={actions}
+      onAnalyticsClick={onAnalyticsClick}
     >
       <CalculatorContent bgImage={bgImage} />
 

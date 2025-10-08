@@ -39,6 +39,7 @@ type CalculatorContextType = {
   setProducts(products: FormValues): void;
 
   actions: CalculatorProps['actions'];
+  onAnalyticsClick: NonNullable<CalculatorProps['onAnalyticsClick']>;
 };
 
 const noop = () => {};
@@ -69,6 +70,7 @@ export const CalculatorContext = createContext<CalculatorContextType>({
   setProducts: noop,
 
   actions: {},
+  onAnalyticsClick: noop,
 });
 
 export const useCalculatorContext = () => useContext(CalculatorContext);
@@ -76,7 +78,14 @@ export const useCalculatorContext = () => useContext(CalculatorContext);
 type CalculatorContextProviderProps = PropsWithChildren<
   Pick<
     CalculatorProps,
-    'actions' | 'calculatorType' | 'fetcherFn' | 'iniState' | 'initialActiveProduct' | 'config' | 'layoutType'
+    | 'actions'
+    | 'calculatorType'
+    | 'fetcherFn'
+    | 'iniState'
+    | 'initialActiveProduct'
+    | 'config'
+    | 'layoutType'
+    | 'onAnalyticsClick'
   >
 >;
 
@@ -91,6 +100,7 @@ export function CalculatorContextProvider({
   initialActiveProduct,
 
   actions,
+  onAnalyticsClick,
 
   children,
 }: CalculatorContextProviderProps) {
@@ -140,6 +150,12 @@ export function CalculatorContextProvider({
     return {};
   });
 
+  const onAnalyticsClickCalculator = (value: string, control: string) => {
+    if (selectedProduct && onAnalyticsClick) {
+      onAnalyticsClick(value, `${control}-${selectedProduct.id}`);
+    }
+  };
+
   return (
     <CalculatorContext.Provider
       value={{
@@ -168,6 +184,7 @@ export function CalculatorContextProvider({
         setProducts,
 
         actions,
+        onAnalyticsClick: onAnalyticsClickCalculator,
       }}
     >
       {children}

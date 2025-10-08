@@ -28,18 +28,20 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
 
   const value = getValue(valueProp, 'productQuantity');
 
-  const onChange = (newValue: AnyType) => {
-    setValue(valueProp, 'productQuantity', newValue);
-    onChangeProp(valueProp);
-  };
-
   const {
     layoutType,
     pricePeriod,
     calculatorType,
     actions: { onConnectClick },
+    onAnalyticsClick,
     selectedProduct,
   } = useCalculatorContext();
+
+  const onChange = (newValue: AnyType) => {
+    setValue(valueProp, 'productQuantity', newValue);
+    onAnalyticsClick(String(newValue), `productQuantity`);
+    onChangeProp(valueProp);
+  };
 
   const isPartners = calculatorType === CALCULATOR_TYPE.Partners;
   const isProductType = calculatorType === CALCULATOR_TYPE.Product;

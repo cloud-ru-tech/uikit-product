@@ -4,7 +4,7 @@ import { MobileAccordionPrimary } from '@sbercloud/uikit-product-mobile-accordio
 import { Divider } from '@snack-uikit/divider';
 import { Switch } from '@snack-uikit/toggles';
 
-import { ProductContext, useProductContext } from '../../../contexts';
+import { ProductContext, useCalculatorContext, useProductContext } from '../../../contexts';
 import { FormValues } from '../../../types';
 import { getValue, setValue } from '../../../utils';
 import { CONTROL } from '../constants';
@@ -51,6 +51,7 @@ export function ToggleObjectControlUi({
   const [expanded, setExpanded] = useState<string | undefined>(undefined);
 
   const { value: valueProp, onChange: onChangeProp } = useProductContext();
+  const { onAnalyticsClick } = useCalculatorContext();
 
   const { decoratorProps: relatedDecoratorProps, uiProps: relatedUiProps } = useMemo(
     () => relateFn?.(watchedValues ?? {}) ?? {},
@@ -82,6 +83,7 @@ export function ToggleObjectControlUi({
               showIcon={false}
               checked={value}
               onChange={checked => {
+                onAnalyticsClick(String(checked), `toggle-object-control-ui`);
                 onChange(checked);
                 checked && setExpanded('key');
               }}

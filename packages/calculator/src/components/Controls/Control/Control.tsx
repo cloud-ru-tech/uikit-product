@@ -29,7 +29,7 @@ type ControlProps = {
 export function Control({ formControl }: ControlProps) {
   const { calculatorType } = useCalculatorContext();
   const { value: valueProp, onChange: onChangeProp, priceList: priceListProp } = useProductContext();
-  const { pricePeriod, setPricePeriod } = useCalculatorContext();
+  const { pricePeriod, setPricePeriod, onAnalyticsClick } = useCalculatorContext();
 
   const accessorKey = formControl?.accessorKey ?? '';
 
@@ -72,10 +72,11 @@ export function Control({ formControl }: ControlProps) {
 
   const value = getValue(valueProp, accessorKey);
   const priceList = getValue(priceListProp, accessorKey);
-  let onChange = (newValue: AnyType) => {
+  let onChange = (uiType: string) => (newValue: AnyType) => {
     if (formControl?.canChangeWholePricePeriod) {
       setPricePeriod(newValue);
     }
+    onAnalyticsClick(String(newValue), `${uiType}-${accessorKey}`);
     setValue(valueProp, accessorKey, newValue);
     onChangeProp(valueProp);
   };
@@ -89,44 +90,110 @@ export function Control({ formControl }: ControlProps) {
       onChangeProp(valueProp);
     };
 
-    onChange = (newValue: AnyType) => {
+    onChange = (uiType: string) => (newValue: AnyType) => {
+      onAnalyticsClick(String(newValue), `${uiType}-${accessorKey}`);
       formControl?.onChangeFn?.(newValue, setValueFn);
     };
   }
 
   switch (formControl.type) {
     case CONTROL.Table: {
-      return <TableControlUi {...formControl} value={value} onChange={onChange} priceList={priceList} />;
+      return (
+        <TableControlUi {...formControl} value={value} onChange={onChange('table-control-ui')} priceList={priceList} />
+      );
     }
     case CONTROL.Carousel: {
-      return <CarouselControlUi {...formControl} value={value} onChange={onChange} watchedValues={watchedValues} />;
+      return (
+        <CarouselControlUi
+          {...formControl}
+          value={value}
+          onChange={onChange('carousel-control-ui')}
+          watchedValues={watchedValues}
+        />
+      );
     }
     case CONTROL.ToggleCards: {
-      return <ToggleCardsControlUi {...formControl} value={value} onChange={onChange} watchedValues={watchedValues} />;
+      return (
+        <ToggleCardsControlUi
+          {...formControl}
+          value={value}
+          onChange={onChange('toggle-cards-control-ui')}
+          watchedValues={watchedValues}
+        />
+      );
     }
     case CONTROL.SelectSingle: {
-      return <SelectSingleUi {...formControl} value={value} onChange={onChange} watchedValues={watchedValues} />;
+      return (
+        <SelectSingleUi
+          {...formControl}
+          value={value}
+          onChange={onChange('select-single-ui')}
+          watchedValues={watchedValues}
+        />
+      );
     }
     case CONTROL.SelectMultiple: {
-      return <SelectMultipleUi {...formControl} value={value} onChange={onChange} watchedValues={watchedValues} />;
+      return (
+        <SelectMultipleUi
+          {...formControl}
+          value={value}
+          onChange={onChange('select-multiple-ui')}
+          watchedValues={watchedValues}
+        />
+      );
     }
     case CONTROL.Segmented: {
-      return <SegmentedControlUi {...formControl} value={value} onChange={onChange} watchedValues={watchedValues} />;
+      return (
+        <SegmentedControlUi
+          {...formControl}
+          value={value}
+          onChange={onChange('segment-control-ui')}
+          watchedValues={watchedValues}
+        />
+      );
     }
     case CONTROL.Toggle: {
-      return <ToggleControlUi {...formControl} value={value} onChange={onChange} watchedValues={watchedValues} />;
+      return (
+        <ToggleControlUi
+          {...formControl}
+          value={value}
+          onChange={onChange('toggle-control-ui')}
+          watchedValues={watchedValues}
+        />
+      );
     }
     case CONTROL.Stepper: {
-      return <StepperControlUi {...formControl} value={value} onChange={onChange} watchedValues={watchedValues} />;
+      return (
+        <StepperControlUi
+          {...formControl}
+          value={value}
+          onChange={onChange('stepper-control-ui')}
+          watchedValues={watchedValues}
+        />
+      );
     }
     case CONTROL.ToggleObject: {
-      return <ToggleObjectControlUi {...formControl} value={value} onChange={onChange} watchedValues={watchedValues} />;
+      return (
+        <ToggleObjectControlUi
+          {...formControl}
+          value={value}
+          onChange={onChange('toggle-object-ui')}
+          watchedValues={watchedValues}
+        />
+      );
     }
     case CONTROL.Alert: {
       return <AlertControlUi {...formControl} watchedValues={watchedValues} />;
     }
     case CONTROL.Slider: {
-      return <SliderControlUi {...formControl} value={value} onChange={onChange} watchedValues={watchedValues} />;
+      return (
+        <SliderControlUi
+          {...formControl}
+          value={value}
+          onChange={onChange('slider-control-ui')}
+          watchedValues={watchedValues}
+        />
+      );
     }
     default:
       throw new Error('not reachable');
