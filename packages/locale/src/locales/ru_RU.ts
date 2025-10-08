@@ -286,6 +286,10 @@ export const ru_RU: typeof en_GB = {
     showLess: 'Свернуть',
     showMore: 'Развернуть',
   },
+  MobileToolbar: {
+    more: 'Еще',
+    refresh: 'Обновить',
+  },
   ModalPredefined: {
     title: 'Удаление',
     recallTitle: 'Отзыв заявки',

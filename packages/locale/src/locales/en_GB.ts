@@ -285,6 +285,10 @@ export const en_GB = {
     showLess: 'Collapse',
     showMore: 'Expand',
   },
+  MobileToolbar: {
+    more: 'More',
+    refresh: 'Refresh',
+  },
   ModalPredefined: {
     title: 'Delete',
     recallTitle: 'Withdrawal of application',
