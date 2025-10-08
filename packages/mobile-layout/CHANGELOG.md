@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.18.0 (2025-10-08)
+
+
+### Features
+
+* **FF-7359:** add optional prop buttonType for droplist action in PageServices ([11fffe1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/11fffe16f3cebe35afb335f0817f3886fdfd58d6))
+
+
+
+
+
 ## 0.17.14 (2025-10-06)
 
 ### Only dependencies have been changed

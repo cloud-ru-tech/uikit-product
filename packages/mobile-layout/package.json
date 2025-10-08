@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-layout",
   "title": "Mobile Layout",
-  "version": "0.17.14",
+  "version": "0.18.0",
   "sideEffects": [
     "*.css",
     "*.woff",
