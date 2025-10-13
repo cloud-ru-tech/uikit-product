@@ -15,6 +15,7 @@
 | href | `string` | - | Ссылка переход по нажатию на карточку |
 | categories | `string[]` | - | Список категорий |
 | visibleCategories | `boolean` | true | Флаг показа или скрытия списка категорий |
+| loading | `boolean` | - | Состояние загрузки |
 | onClick | `(e: MouseEvent<HTMLDivElement \| HTMLAnchorElement, MouseEvent>) => void` | - | Событие клика на карточку |
 
 

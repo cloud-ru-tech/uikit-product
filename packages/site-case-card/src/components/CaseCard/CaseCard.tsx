@@ -2,8 +2,10 @@ import { MouseEvent } from 'react';
 
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { Card } from '@snack-uikit/card';
+import { Skeleton } from '@snack-uikit/skeleton';
 import { Typography } from '@snack-uikit/typography';
 
+import { SkeletonTextContainer } from '../../helperComponents';
 import styles from './styles.module.scss';
 
 export type CaseCardProps = WithLayoutType<{
@@ -17,6 +19,8 @@ export type CaseCardProps = WithLayoutType<{
   visibleCategories?: boolean;
   /** Описание, где выделенные слова помечаются тегом <mark></mark> */
   description: string;
+  /** Состояние загрузки */
+  loading?: boolean;
   /** Событие клика на карточку */
   onClick?(e: MouseEvent<HTMLDivElement | HTMLAnchorElement>): void;
 }>;
@@ -36,6 +40,7 @@ export function CaseCard({
   href,
   visibleCategories = true,
   onClick,
+  loading,
 }: CaseCardProps) {
   const categoryTextSize = layoutType === 'desktop' || layoutType === 'desktopSmall' ? 'm' : 's';
   const descriptionTextSize = layoutType === 'mobile' ? 's' : 'm';
@@ -43,23 +48,35 @@ export function CaseCard({
   return (
     <Card href={href} onClick={onClick} size={SIZE_CARD_LAYOUT_TYPE[layoutType]}>
       <div className={styles.container} data-layout-type={layoutType}>
-        <div>
-          <img src={img} className={styles.image} alt='img' data-layout-type={layoutType} />
-        </div>
-        <div className={styles.textContainer}>
-          {visibleCategories && categories && (
-            <div className={styles.categoryGroup}>
-              {categories.map(item => (
-                <Typography family='sans' purpose='body' size={categoryTextSize} key={item} className={styles.category}>
-                  {item}
-                </Typography>
-              ))}
-            </div>
-          )}
-          <Typography family='sans' purpose='title' size={descriptionTextSize} className={styles.description}>
-            <span dangerouslySetInnerHTML={{ __html: description }} data-layout-type={layoutType}></span>
-          </Typography>
-        </div>
+        <Skeleton loading={loading} className={styles.skeletonIcon}>
+          <div>
+            <img src={img} className={styles.image} alt='img' data-layout-type={layoutType} />
+          </div>
+        </Skeleton>
+        {loading ? (
+          <SkeletonTextContainer />
+        ) : (
+          <div className={styles.textContainer}>
+            {visibleCategories && categories && (
+              <div className={styles.categoryGroup}>
+                {categories.map(item => (
+                  <Typography
+                    family='sans'
+                    purpose='body'
+                    size={categoryTextSize}
+                    key={item}
+                    className={styles.category}
+                  >
+                    {item}
+                  </Typography>
+                ))}
+              </div>
+            )}
+            <Typography family='sans' purpose='title' size={descriptionTextSize} className={styles.description}>
+              <span dangerouslySetInnerHTML={{ __html: description }} data-layout-type={layoutType}></span>
+            </Typography>
+          </div>
+        )}
       </div>
     </Card>
   );
