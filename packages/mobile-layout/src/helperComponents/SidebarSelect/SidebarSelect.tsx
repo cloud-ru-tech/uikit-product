@@ -18,6 +18,7 @@ export type SidebarSelectProps = WithSupportProps<{
   onSelect?(id: string | number): void;
   className?: string;
   collapse?: MobileDroplistProps['collapse'];
+  hasSearch?: boolean;
 }>;
 
 export function SidebarSelect({
@@ -27,6 +28,7 @@ export function SidebarSelect({
   selected,
   onSelect,
   collapse,
+  hasSearch,
   ...otherProps
 }: SidebarSelectProps) {
   const [searchValue, setSearchValue] = useState('');
@@ -52,7 +54,7 @@ export function SidebarSelect({
 
   const allItems = useMemo(() => [...list, ...footerList], [list, footerList]);
 
-  const shouldShowSearch = allItems.length > 5 || searchValue;
+  const shouldShowSearch = hasSearch ?? (allItems.length > 5 || searchValue);
 
   return (
     <MobileDroplist
