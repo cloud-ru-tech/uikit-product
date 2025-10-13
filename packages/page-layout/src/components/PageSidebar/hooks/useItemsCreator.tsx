@@ -68,6 +68,7 @@ export function useItemsContent(items: SidebarItem[], onSelect?: (id: string | n
         }): ItemProps => {
           const href = 'href' in rest ? rest.href : undefined;
           const newItems = 'items' in rest ? rest.items : undefined;
+          const type = 'type' in rest ? rest.type : undefined;
 
           const clickHandler = (event: MouseEvent<HTMLElement>) => {
             if (href && (event?.metaKey || event?.button === 1)) {
@@ -78,6 +79,15 @@ export function useItemsContent(items: SidebarItem[], onSelect?: (id: string | n
             onClick?.(event);
             onSelect?.(id);
           };
+
+          if (type === 'group') {
+            return {
+              ...rest,
+              label,
+              type: 'group',
+              items: getItemsContent(newItems || [], onSelect),
+            };
+          }
 
           const newItem = {
             id,
@@ -115,7 +125,7 @@ export function useItemsContent(items: SidebarItem[], onSelect?: (id: string | n
             return {
               ...newItem,
               type: 'collapse',
-              items: getItemsContent(newItems, onSelect),
+              items: getItemsContent(newItems || [], onSelect),
             };
           }
 
