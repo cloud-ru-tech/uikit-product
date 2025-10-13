@@ -34,6 +34,58 @@ export const SIDEBAR_ITEMS: SidebarSelectProps['items'] = [
   { id: 14, label: 'Сеть', href: '#' },
   { id: 15, label: 'Сеть', href: '#' },
   {
+    id: 'divider1',
+    type: 'group',
+    label: '',
+    divider: true,
+  },
+  {
+    id: 'group1',
+    label: 'Основные сервисы',
+    type: 'group',
+    items: [
+      { id: 17, label: 'Виртуальные машины', href: '#' },
+      { id: 18, label: 'Контейнеры', href: '#' },
+      { id: 19, label: 'Базы данных', href: '#' },
+    ],
+  },
+  {
+    id: 'group2',
+    label: 'Администрирование',
+    type: 'group',
+    items: [
+      { id: 20, label: 'Пользователи', href: '#' },
+      { id: 21, label: 'Роли', href: '#' },
+      { id: 22, label: 'Права доступа', href: '#' },
+    ],
+  },
+  {
+    id: 'group3',
+    label: 'Мониторинг и аналитика',
+    type: 'group',
+    items: [
+      { id: 23, label: 'Метрики', href: '#' },
+      { id: 24, label: 'Логи', href: '#' },
+      { id: 25, label: 'Алерты', href: '#' },
+    ],
+  },
+  {
+    id: 'collapse1',
+    label: 'Дополнительные настройки',
+    type: 'collapse',
+    items: [
+      { id: 26, label: 'Конфигурация', href: '#' },
+      { id: 27, label: 'Резервное копирование', href: '#' },
+      { id: 28, label: 'Восстановление', href: '#' },
+    ],
+  },
+  {
+    id: 'divider2',
+    type: 'group',
+    label: '',
+    divider: true,
+  },
+  {
     id: '41',
     label: 'Инстансы',
     items: [
