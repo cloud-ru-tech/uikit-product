@@ -54,7 +54,7 @@ export function SidebarSelect({
 
   const allItems = useMemo(() => [...list, ...footerList], [list, footerList]);
 
-  const shouldShowSearch = hasSearch ?? (allItems.length > 5 || searchValue);
+  const shouldShowSearch = hasSearch ?? (allItems.length > 15 || searchValue);
 
   return (
     <MobileDroplist
