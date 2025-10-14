@@ -186,11 +186,19 @@
     },
     {
       "path": "./calculator/tsconfig.cjs.json"
+    },
+    {
+      "path": "./chat-status-announcement/tsconfig.cjs.json"
     }
   ],
   "compilerOptions": {
     "target": "es6",
-    "lib": ["es2017", "dom", "dom.iterable", "esnext"],
+    "lib": [
+      "es2017",
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "module": "CommonJS",
     "strict": true,
     "jsx": "react-jsx",

@@ -1,0 +1,45 @@
+{
+  "name": "@sbercloud/uikit-product-chat-status-announcement",
+  "title": "Chat Status Announcement",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/chat-status-announcement",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/chat-status-announcement"
+  },
+  "author": "Артем Сауляк <avsaulyak@cloud.ru>",
+  "contributors": [
+    "Артем Сауляк <avsaulyak@cloud.ru>"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-product-icons": "15.0.4",
+    "@sbercloud/uikit-product-utils": "6.2.1",
+    "@snack-uikit/truncate-string": "0.7.2",
+    "@snack-uikit/typography": "0.8.7",
+    "classnames": "2.5.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "@sbercloud/uikit-product-locale": "*"
+  }
+}

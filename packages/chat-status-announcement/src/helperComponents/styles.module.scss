@@ -1,0 +1,27 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.alertButton {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  background: none;
+  border: 0;
+}
+
+.text {
+  color: stv.$sys-blue-text-support;
+
+  &:hover {
+    color: stv.$sys-blue-text-main;
+  }
+}

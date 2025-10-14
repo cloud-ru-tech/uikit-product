@@ -1,0 +1,16 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.wrapper {
+  resize: horizontal;
+  overflow: hidden;
+  padding: 16px;
+  border: 1px solid styles-theme-variables.$sys-neutral-decor-default;
+}
+
+.chatStatusAnnouncementWrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 420px;
+  width: max-content;
+  gap: 16px;
+}
