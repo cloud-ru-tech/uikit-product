@@ -5,11 +5,24 @@ export function getValueTypographyProps(layoutType: LayoutType): Pick<Typography
   switch (layoutType) {
     case 'mobile':
     case 'tablet':
-      return { purpose: 'headline', size: 'l' };
+      return { purpose: 'display', size: 's' };
 
     case 'desktop':
     case 'desktopSmall':
     default:
       return { purpose: 'display', size: 'l' };
+  }
+}
+
+export function getValueTypographySubtitleProps(layoutType: LayoutType): Pick<TypographyProps, 'purpose' | 'size'> {
+  switch (layoutType) {
+    case 'mobile':
+    case 'tablet':
+      return { purpose: 'title', size: 'm' };
+
+    case 'desktop':
+    case 'desktopSmall':
+    default:
+      return { purpose: 'headline', size: 's' };
   }
 }

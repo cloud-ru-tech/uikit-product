@@ -1,21 +1,47 @@
 @use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
 
+$colors: (
+  neutral: ste.$sys-neutral-background,
+  white: ste.$sys-neutral-background1-level,
+  violet: ste.$sys-violet-background,
+  blue: ste.$sys-blue-background,
+);
+
+$decor: 'decor';
+$graphite: 'graphite';
+$brand: 'brand';
+
+@mixin decor-background-colors {
+  @each $color, $value in $colors {
+    &[data-color='#{$color}'][data-appearance='#{$decor}'] {
+      background-color: $value;
+    }
+  }
+}
+
+@mixin appearance {
+  &[data-appearance='#{$graphite}'] {
+    background-color: ste.$sys-graphite-accent-default;
+
+    color: ste.$sys-invert-neutral-text-main;
+  }
+
+  &[data-appearance='#{$brand}'] {
+    background-color: ste.$sys-primary-accent-default;
+  }
+}
+
 .bannerWrapper {
   display: flex;
   flex-direction: column;
-  gap: ste.$dimension-4m;
-
-  &[data-layout-type='tablet'],
-  &[data-layout-type='mobile'] {
-    gap: ste.$dimension-3m;
-  }
+  gap: ste.$dimension-2m;
 }
 
 .banner {
   position: relative;
   overflow: hidden;
-  background-color: ste.$sys-primary-accent-default;
 
+  color: ste.$sys-graphite-text-main;
   padding: ste.$dimension-5m;
 
   &[data-layout-type='tablet'] {
@@ -23,9 +49,11 @@
   }
 
   &[data-layout-type='mobile'] {
-    // 24px 24px 100px
-    padding: ste.$dimension-3m ste.$dimension-3m calc(#{ste.$dimension-10m} + #{ste.$dimension-2m} + #{ste.$dimension-050m});
+    padding: ste.$dimension-3m;
   }
+
+  @include decor-background-colors;
+  @include appearance;
 }
 
 .contentWrapper {
@@ -37,21 +65,37 @@
   display: flex;
   flex-direction: column;
   gap: ste.$dimension-4m;
+}
 
-  color: ste.$sys-graphite-text-main;
+.banner.white {
+  color: ste.$sys-graphite-on-accent;
+  background: transparent;
 }
 
 .benefitItems {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: ste.$dimension-2m;
 
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: calc(#{ste.$dimension-6m} + #{ste.$dimension-025m});
+  &[data-layout-type='tablet'] {
+    grid-template-columns: repeat(2, 1fr);
+    gap: ste.$dimension-4m ste.$dimension-6m;
+  }
 
-  &[data-layout-type='tablet'],
   &[data-layout-type='mobile'] {
-    flex-direction: column;
-    gap: ste.$dimension-4m;
+    grid-template-columns: 100%;
+    gap: ste.$dimension-3m;
+  }
+
+  &[data-items-amount='3'] {
+    grid-template-columns: repeat(3, 1fr);
+
+    &[data-layout-type='tablet'] {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &[data-layout-type='mobile'] {
+      grid-template-columns: 100%;
+    }
   }
 }
 
@@ -66,19 +110,10 @@
   /* stylelint-disable-next-line declaration-property-value-allowed-list */
   z-index: 0;
 
-  width: 640px;
-  right: -72px;
-  bottom: -49px;
-
-  &[data-layout-type='tablet'] {
-    width: 583px;
-    right: -170px;
-    bottom: 0;
-  }
-
-  &[data-layout-type='mobile'] {
-    width: 462px;
-    bottom: -95px;
-    right: -100px;
-  }
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 0;
+  top: 0;
+  left: 0;
 }

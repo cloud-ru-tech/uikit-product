@@ -63,12 +63,15 @@
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| backgroundImage* | `string` | - | Фоновая картинка |
 | items* | `ItemProps[]` | - | Выгоды |
 | title | `string` | - | Заголовок |
 | titleTag | enum Tag: `"span"`, `"h1"`, `"h2"`, `"h3"`, `"h4"`, `"h5"`, `"h6"`, `"div"`, `"label"`, `"p"` | h3 | Тэг заголовка |
 | description | `string \| string[]` | - | Описание под баннером |
 | className | `string` | - | CSS класс |
+| appearance | "decor" \| "brand" \| "graphite" | brand |  |
+| color | enum ColorType: `"neutral"`, `"white"`, `"violet"`, `"blue"` | - |  |
+| backgroundType | "color" \| "image" | color |  |
+| backgroundImage | `string` | - |  |
 ## SectionBlogCarousel
 ### Props
 | name | type | default value | description |
