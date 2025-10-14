@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.13.0 (2025-10-14)
+
+
+### Features
+
+* **GIGAID-449:** add export ([7886e7c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7886e7c6fd5fa5cc2cd4c3129e8fc3392785eba3))
+
+
+
+
+
 ## 0.12.9 (2025-10-07)
 
 
