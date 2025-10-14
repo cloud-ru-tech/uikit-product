@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-10-14)
+
+
+### Features
+
+* **SITE-10019:** add event param in article product click handler ([06f1e33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/06f1e3325f019f31e6683abf6969017b5e9ec2c2))
+
+
+
+
+
 # 0.1.0 (2025-10-03)
 
 
