@@ -1,3 +1,5 @@
+import { MouseEvent } from 'react';
+
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
@@ -8,7 +10,7 @@ export type ArticleProduct = {
   name: string;
   icon: string;
   href: string;
-  onClick?: () => void;
+  onClick?: (e: MouseEvent<HTMLAnchorElement>) => void;
 };
 
 export type ProductsProps = WithLayoutType<{
