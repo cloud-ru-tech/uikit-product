@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.19.0 (2025-10-14)
+
+
+### Bug Fixes
+
+* **FF-7390:** add hasSearch prop to sidebar props ([93c720f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/93c720f956ecdb964d872c880f25af12e57db6a2))
+* **FF-7390:** up items limit ([1c77a4e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1c77a4e761fd1dab2610ef6eaf85a99e317af459))
+
+
+### Features
+
+* **FF-7390:** add group items into sidebar ([5ac5579](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5ac5579e86b3c05b18cb89c59ead86b6782858b2))
+
+
+
+
+
 # 0.18.0 (2025-10-08)
 
 

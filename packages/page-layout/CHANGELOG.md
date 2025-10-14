@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.21.0 (2025-10-14)
+
+
+### Features
+
+* **FF-7390:** add group items into sidebar ([3f358d2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3f358d2ef5eff3190df3e1e0edd0d48394793c3c))
+
+
+
+
+
 ## 0.20.18 (2025-10-06)
 
 ### Only dependencies have been changed
