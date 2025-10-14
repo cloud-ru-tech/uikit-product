@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.11.0 (2025-10-14)
+
+
+### Features
+
+* **PDS-2843:** new way of bulk actions display ([347f8c2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/347f8c24dbed37a63573af0782c5384169c335a8))
+
+
+
+
+
 ## 0.10.15 (2025-10-06)
 
 ### Only dependencies have been changed

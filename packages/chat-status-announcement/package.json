@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-chat-status-announcement",
   "title": "Chat Status Announcement",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -38,7 +38,6 @@
     "@snack-uikit/typography": "0.8.7",
     "classnames": "2.5.1"
   },
-  "devDependencies": {},
   "peerDependencies": {
     "@sbercloud/uikit-product-locale": "*"
   }

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.15.0 (2025-10-14)
+
+
+### Features
+
+* **PDS-2843:** add mobile toolbar translations ([8438cf2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8438cf237ec8ce6f50caad92fe4b0e91ff095f6b))
+
+
+
+
+
 ## 0.14.1 (2025-09-30)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-locale
