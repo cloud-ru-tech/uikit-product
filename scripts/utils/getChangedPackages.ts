@@ -9,7 +9,7 @@ function isPackageItem(item: unknown): item is PackageItem {
 }
 
 export function getChangedPackages(): string[] {
-  const lernaResult = String(exec('lerna changed --json')).replaceAll('\n', '');
+  const lernaResult = String(exec('lerna changed --toposort --json')).replaceAll('\n', '');
   let changedPackages: unknown;
 
   try {
