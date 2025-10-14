@@ -121,7 +121,7 @@ packages
 
 ### Docker Image
 
-1. Запустите команду `pnpm deps:all && pnpm build:packages`
+1. Запустите команду `pnpm deps && pnpm build:packages`
 2. `docker build -t uikit:0.0.1 .`
 3. `docker run -t -p 8080:80 uikit:0.0.1`
 4. Откройте `http://localhost:8080/`
