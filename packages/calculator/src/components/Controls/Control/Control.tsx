@@ -76,7 +76,11 @@ export function Control({ formControl }: ControlProps) {
     if (formControl?.canChangeWholePricePeriod) {
       setPricePeriod(newValue);
     }
-    onAnalyticsClick(String(newValue), `${uiType}-${accessorKey}`);
+    if (typeof newValue === 'object') {
+      onAnalyticsClick(Object.values(newValue).join(' '), `${uiType}-${accessorKey}`);
+    } else {
+      onAnalyticsClick(String(newValue), `${uiType}-${accessorKey}`);
+    }
     setValue(valueProp, accessorKey, newValue);
     onChangeProp(valueProp);
   };
