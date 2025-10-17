@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-section",
   "title": "Site Section",
-  "version": "0.21.4",
+  "version": "0.22.0",
   "sideEffects": [
     "*.css",
     "*.woff",

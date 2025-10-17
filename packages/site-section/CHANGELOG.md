@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.22.0 (2025-10-17)
+
+
+### Features
+
+* **SITE-10058:** update section benefits banner ([3e45917](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3e459173f1694ae588dece9d45f75e667aa638f8))
+
+
+
+
+
 ## 0.21.4 (2025-10-06)
 
 ### Only dependencies have been changed
