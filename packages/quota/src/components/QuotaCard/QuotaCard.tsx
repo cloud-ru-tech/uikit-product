@@ -24,8 +24,8 @@ export type QuotaCardProps = QuotaCardCommonProps &
   (
     | {
         type?: 'instances' | 'value';
-        customUnit: never;
-        customLabel: never;
+        customUnit?: never;
+        customLabel?: never;
       }
     | {
         type: 'custom';
@@ -59,7 +59,7 @@ export function QuotaCard({
       case 'value':
         return { unit: t('gb'), label: t('filled') };
       case 'custom':
-        return { unit: customUnit, label: customLabel };
+        return { unit: customUnit ?? '', label: customLabel ?? '' };
       default:
         return { unit: t('peace'), label: t('created') };
     }

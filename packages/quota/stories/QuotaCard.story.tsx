@@ -53,6 +53,16 @@ export const quotaCard: StoryObj<StoryProps> = {
     showNoData: false,
     type: 'instances',
   },
+  argTypes: {
+    customLabel: {
+      control: 'text',
+      if: { arg: 'type', eq: 'custom' },
+    },
+    customUnit: {
+      control: 'text',
+      if: { arg: 'type', eq: 'custom' },
+    },
+  },
 
   parameters: {
     readme: {
