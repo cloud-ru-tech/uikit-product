@@ -101,12 +101,31 @@ export function ItemList({
     return () => clearInterval(timerRef.current);
   }, [autoSwipe, computedValues.itemWidth, scrollBy, scrollLeft]);
 
-  const handleScroll: UIEventHandler<HTMLDivElement> = event => {
-    const newScrollLeft = event.currentTarget.scrollLeft;
-    setScrollLeft(newScrollLeft);
+  /**
+   * Устанавливает номер текущей страницы.
+   * Текущей страницей считается та, над которой располагается центр контейнера.
+   * Странице принадлежит ее правый гап, если по центру контейнера он, то текущей страницей считается та что слева от этого gap-а
+   */
+  const setCurrentPage: UIEventHandler<HTMLDivElement> = event => {
+    const scrollLeft = event.currentTarget.scrollLeft;
+    setScrollLeft(scrollLeft);
 
-    const newPage = Number(Math.floor(newScrollLeft / (computedValues.itemWidth * scrollBy)));
-    onPageChange(Math.max(0, Math.min(totalPages - 1, newPage)));
+    const pageWith =
+      scrollBy > 1
+        ? computedValues.itemWidth * scrollBy + computedValues.gap * (scrollBy - 1) // scrollBy=3 [item + gap + item + gap + item]
+        : computedValues.itemWidth; // scrollBy=1 [item]
+
+    const centerOfScrollContainer = scrollLeft + (containerRef.current?.offsetWidth ?? 0) / 2;
+
+    for (let i = 0; i < totalPages; i++) {
+      const pageStart = i * pageWith;
+      const pageEnd = pageStart + pageWith + computedValues.gap;
+
+      if (centerOfScrollContainer >= pageStart && centerOfScrollContainer <= pageEnd) {
+        onPageChange(Math.max(0, Math.min(totalPages - 1, i)));
+        return;
+      }
+    }
   };
 
   const isScrolledLeft = () => Boolean(containerRef.current && containerRef.current.scrollLeft <= DELTA);
@@ -140,7 +159,7 @@ export function ItemList({
       className={styles.itemList}
       data-gap={gap}
       style={{ ...(gap ? { '--mobile-carousel--list-gap': gap } : {}) }}
-      onScroll={handleScroll}
+      onScroll={setCurrentPage}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
