@@ -3,11 +3,11 @@ import { forwardRef } from 'react';
 
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { HTML_TYPE, SIZE, TARGET } from '../../constants';
-import { ButtonPrivate } from '../../helperComponents';
-import { CommonButtonProps } from '../../types';
-import { extractCommonButtonProps } from '../../utils';
+import { HTML_TYPE, SIZE, TARGET } from './constants';
+import { ButtonPrivate } from './helperComponents';
 import styles from './styles.module.scss';
+import { CommonButtonProps } from './types';
+import { extractCommonButtonProps } from './utils';
 
 export type ButtonClaudiaProps = WithSupportProps<Omit<CommonButtonProps, 'appearance' | 'iconPosition'>>;
 

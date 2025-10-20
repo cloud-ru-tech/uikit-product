@@ -1,6 +1,4 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ChatStatusAnnouncement } from 'chat-status-announcement/src/ChatStatusAnnouncement';
-import { ChatStatusAnnouncementProps } from 'chat-status-announcement/src/types';
 import cn from 'classnames';
 
 import { PasswordLockSVG, PlaceholderSVG } from '@sbercloud/uikit-product-icons';
@@ -9,10 +7,12 @@ import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
+import { ChatStatusAnnouncement } from '../src/components/ChatStatusAnnouncement';
+import { ChatStatusAnnouncementProps } from '../src/components/ChatStatusAnnouncement/types';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Console/Chat Status Announcement',
+  title: 'Console/Claudia/Chat Status Announcement',
   component: ChatStatusAnnouncement,
 };
 export default meta;

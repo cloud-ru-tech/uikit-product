@@ -11,7 +11,7 @@ import { BUTTON_ARGS, COMMON_ARG_TYPES_CLAUDIA_BUTTON } from './constants';
 import { ControlledWrapper, TableCell, TableColumn, TableWrapper } from './helperComponents';
 
 const meta: Meta = {
-  title: 'Console/Button Predefined/Button Claudia',
+  title: 'Console/Claudia/Button Claudia',
   component: ButtonClaudia,
 };
 export default meta;

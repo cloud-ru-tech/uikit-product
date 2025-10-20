@@ -1,7 +1,7 @@
 {
-  "name": "@sbercloud/uikit-product-chat-status-announcement",
-  "title": "Chat Status Announcement",
-  "version": "0.1.0",
+  "name": "@sbercloud/uikit-product-claudia",
+  "title": "Claudia",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -19,11 +19,11 @@
     "src",
     "./CHANGELOG.md"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/chat-status-announcement",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/claudia",
   "repository": {
     "type": "git",
     "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
-    "directory": "packages/chat-status-announcement"
+    "directory": "packages/claudia"
   },
   "author": "Артем Сауляк <avsaulyak@cloud.ru>",
   "contributors": [
@@ -34,11 +34,10 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "15.0.4",
     "@sbercloud/uikit-product-utils": "6.2.1",
+    "@snack-uikit/loaders": "0.9.9",
     "@snack-uikit/truncate-string": "0.7.2",
-    "@snack-uikit/typography": "0.8.7",
+    "@snack-uikit/typography": "0.8.11",
+    "@snack-uikit/utils": "4.0.0",
     "classnames": "2.5.1"
-  },
-  "peerDependencies": {
-    "@sbercloud/uikit-product-locale": "*"
   }
 }
