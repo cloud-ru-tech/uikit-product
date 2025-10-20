@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.30.1 (2025-10-20)
+
+
+### Bug Fixes
+
+* **SITE-10071:** fix analytics calculator ([f6ab725](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f6ab7258da24afd4303cb8198c2f9e5108024ae3))
+
+
+
+
+
 # 0.30.0 (2025-10-09)
 
 
