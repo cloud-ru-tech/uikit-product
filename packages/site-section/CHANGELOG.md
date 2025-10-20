@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.22.1 (2025-10-20)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-site-case-card@0.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-case-card/CHANGELOG.md)
+
+
+
+
+
 # 0.22.0 (2025-10-17)
 
 

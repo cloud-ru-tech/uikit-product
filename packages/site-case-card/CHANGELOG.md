@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2025-10-20)
+
+
+### Features
+
+* **SITE-10016:** add skeleton for case card ([2d0049a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2d0049ad0517de16895a7abafbeb4334ade894db))
+
+
+
+
+
 ## 0.3.1 (2025-09-30)
 
 ### Only dependencies have been changed
