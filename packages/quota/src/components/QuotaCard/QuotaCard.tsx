@@ -6,21 +6,33 @@ import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-
 import { ButtonTonal, ButtonTonalProps } from '@snack-uikit/button';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
-import { QuotaUnitType } from '../../types';
 import { checkExceeded } from '../../utils';
 import { DataRow, NoData, QuotaCardLayout } from './components';
 import styles from './styles.module.scss';
 
-export type QuotaCardProps = WithSupportProps<{
+type QuotaCardCommonProps = WithSupportProps<{
   loading?: boolean;
   title: string;
   created?: number;
   limit?: number;
-  type?: QuotaUnitType;
   unlimited?: boolean;
   increaseLink?: Pick<ButtonTonalProps, 'target' | 'href' | 'onClick'>;
   onRetry?(): void;
 }>;
+
+export type QuotaCardProps = QuotaCardCommonProps &
+  (
+    | {
+        type?: 'instances' | 'value';
+        customUnit: never;
+        customLabel: never;
+      }
+    | {
+        type: 'custom';
+        customUnit: string;
+        customLabel: string;
+      }
+  );
 
 export function QuotaCard({
   loading,
@@ -31,6 +43,8 @@ export function QuotaCard({
   onRetry,
   unlimited = false,
   type = 'instances',
+  customUnit,
+  customLabel,
   ...rest
 }: QuotaCardProps) {
   const available = (limit ?? 0) - (created ?? 0);
@@ -44,10 +58,12 @@ export function QuotaCard({
     switch (type) {
       case 'value':
         return { unit: t('gb'), label: t('filled') };
+      case 'custom':
+        return { unit: customUnit, label: customLabel };
       default:
         return { unit: t('peace'), label: t('created') };
     }
-  }, [t, type]);
+  }, [t, type, customUnit, customLabel]);
 
   if (noData) {
     return (

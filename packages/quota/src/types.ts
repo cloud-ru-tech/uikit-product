@@ -1,1 +1,1 @@
-export type QuotaUnitType = 'instances' | 'value';
+export type QuotaUnitType = 'instances' | 'value' | 'custom';
