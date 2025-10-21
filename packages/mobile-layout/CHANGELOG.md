@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.20.0 (2025-10-21)
+
+
+### Features
+
+* **FF-7418:** add MobilePageCatalog component with adaptive layout support ([1cdd7d9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1cdd7d9fe2d977d1cb85bf822b4c9daa6ddd674d))
+
+
+
+
+
 # 0.19.0 (2025-10-14)
 
 
