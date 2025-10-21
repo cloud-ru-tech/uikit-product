@@ -1,12 +1,20 @@
 import { CardBanner, CardBannerProps } from '@sbercloud/uikit-product-card-predefined';
 import { BlockBasic, BlockBasicProps, EmptyBlock, EmptyBlockProps } from '@sbercloud/uikit-product-layout';
-import { PageForm, PageFormProps, PageServices, PageServicesProps } from '@sbercloud/uikit-product-page-layout';
+import {
+  PageCatalog,
+  PageCatalogProps,
+  PageForm,
+  PageFormProps,
+  PageServices,
+  PageServicesProps,
+} from '@sbercloud/uikit-product-page-layout';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 
 import { DesktopActions } from '../../helperComponents';
 import { MobileBlockBasic } from '../MobileBlockBasic';
 import { MobileCardBanner } from '../MobileCardBanner';
 import { MobileEmptyBlock } from '../MobileEmptyBlock';
+import { MobilePageCatalog, MobilePageCatalogProps } from '../MobilePageCatalog';
 import { MobilePageForm } from '../MobilePageForm';
 import { MobilePageServices, MobilePageServicesProps } from '../MobilePageServices';
 
@@ -61,4 +69,20 @@ export function AdaptivePageServices({ layoutType, actions, ...props }: Adaptive
   return <PageServices {...props} actions={actionsNode} />;
 }
 
-export type { BlockBasicProps, CardBannerProps, EmptyBlockProps, PageFormProps, PageServicesProps };
+export type AdaptivePageCatalogProps = WithLayoutType &
+  Omit<PageCatalogProps, 'actions'> &
+  Pick<MobilePageCatalogProps, 'actions'>;
+
+export function AdaptivePageCatalog({ layoutType, actions, ...props }: AdaptivePageCatalogProps) {
+  const isMobile = layoutType === 'mobile';
+
+  if (isMobile) {
+    return <MobilePageCatalog actions={actions} {...props} />;
+  }
+
+  const actionsNode = actions ? <DesktopActions items={actions} /> : undefined;
+
+  return <PageCatalog {...props} actions={actionsNode} />;
+}
+
+export type { BlockBasicProps, CardBannerProps, EmptyBlockProps, PageFormProps, PageServicesProps, PageCatalogProps };
