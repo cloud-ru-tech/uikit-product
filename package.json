@@ -50,6 +50,7 @@
     "@sbercloud/ft-config-vitest": "3.1.2",
     "@sbercloud/ft-copy-to-clipboard": "3.0.1",
     "@sbercloud/ft-storybook-deps-table-addon": "0.1.5",
+    "@sbercloud/ft-config-ai-editor": "0.1.0",
     "@snack-uikit/alert": "0.16.17",
     "@snack-uikit/avatar": "0.8.13",
     "@snack-uikit/button": "0.19.15",

@@ -39,3 +39,7 @@ deps-report.json
 /public
 
 /reports/unit
+
+# AI EDITOR CONFIG START
+.history
+# AI EDITOR CONFIG END

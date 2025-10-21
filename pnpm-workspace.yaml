@@ -6,6 +6,7 @@ packages:
   - "packages/*"
 onlyBuiltDependencies:
   - "@sbercloud/ft-config-husky"
+  - "@sbercloud/ft-config-ai-editor"
   - "@parcel/watcher"
   - "core-js"
   - "core-js-pure"
