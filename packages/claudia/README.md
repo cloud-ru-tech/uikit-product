@@ -41,6 +41,18 @@
 | content* | `string \| TextItem[]` | - |  |
 | icon | `ReactElement<any, string \| JSXElementConstructor<any>>` | - |  |
 | onActionClick | `() => void` | - |  |
+## RecommendPanel
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| chips* | `ChipProps[]` | - |  |
+| size | enum Size: `"s"`, `"m"` | Size.S |  |
+| type | enum ChipType: `"default"`, `"outline"` | ChipType.Default |  |
+| layoutType | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| onCloseClick | `() => void` | - |  |
+| onCloseChipLabel | `ReactNode` | - |  |
+| tooltip | `ReactNode` | - |  |
+| onClaudiaClick | `() => void` | - |  |
 
 
 [//]: DOCUMENTATION_SECTION_END

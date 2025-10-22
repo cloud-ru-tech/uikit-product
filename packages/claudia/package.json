@@ -27,14 +27,18 @@
   },
   "author": "Артем Сауляк <avsaulyak@cloud.ru>",
   "contributors": [
-    "Артем Сауляк <avsaulyak@cloud.ru>"
+    "Артем Сауляк <avsaulyak@cloud.ru>",
+    "Данил Панов <dapanov@cloud.ru>"
   ],
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-icons": "15.0.4",
+    "@sbercloud/uikit-product-mobile-dropdown": "0.9.18",
     "@sbercloud/uikit-product-utils": "6.2.1",
+    "@snack-uikit/dropdown": "0.5.3",
     "@snack-uikit/loaders": "0.9.9",
+    "@snack-uikit/tooltip": "0.18.5",
     "@snack-uikit/truncate-string": "0.7.2",
     "@snack-uikit/typography": "0.8.11",
     "@snack-uikit/utils": "4.0.0",

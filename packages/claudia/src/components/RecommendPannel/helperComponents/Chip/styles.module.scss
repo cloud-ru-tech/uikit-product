@@ -1,0 +1,46 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.text {
+  color: stv.$sys-neutral-text-support;
+}
+
+.chip {
+  height: 32px;
+  border-radius: 4px;
+  padding: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  max-width: 250px;
+  width: fit-content;
+  min-width: 32px;
+
+  &[data-mobile] {
+    height: 40px;
+  }
+
+  &:hover {
+    border: 1px solid stv.$sys-neutral-decor-hovered;
+  }
+
+  &:hover .text {
+    color: stv.$sys-neutral-text-main;
+  }
+
+  &:focus {
+    border: 1px solid stv.$sys-neutral-decor-hovered;
+  }
+
+  &:active {
+    border: 1px solid stv.$sys-neutral-decor-activated;
+  }
+}
+
+.chipDefault {
+  border: 1px solid stv.$sys-neutral-background;
+  background-color: stv.$sys-neutral-background;
+}
+
+.chipOutline {
+  border: 1px solid stv.$sys-neutral-decor-default;
+  background-color: transparent;
+}

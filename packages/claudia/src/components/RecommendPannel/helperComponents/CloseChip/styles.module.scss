@@ -1,0 +1,68 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.closeChip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  transform: rotate(90deg);
+  cursor: pointer;
+  border: unset;
+  background-color: unset;
+
+  &[data-hidden] {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &[data-mobile] {
+    width: 40px;
+    height: 40px;
+  }
+
+  & svg {
+    fill: stv.$sys-neutral-text-support;
+  }
+
+  &:hover svg {
+    fill: stv.$sys-neutral-text-main;
+  }
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 4px 0px;
+  box-sizing: border-box;
+}
+
+.dropdownItem {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  border: unset;
+  background-color: unset;
+  position: relative;
+  padding: 0px 8px;
+
+  &:before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  &:hover::before {
+    background-color: stv.$sys-neutral-accent-default;
+    opacity: 0.08;
+  }
+}

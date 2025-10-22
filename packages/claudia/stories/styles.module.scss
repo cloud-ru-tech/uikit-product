@@ -1,16 +1,39 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
 
 .wrapper {
   resize: horizontal;
   overflow: hidden;
   padding: 16px;
-  border: 1px solid styles-theme-variables.$sys-neutral-decor-default;
+  border: 1px solid stv.$sys-neutral-decor-default;
 }
 
 .chatStatusAnnouncementWrapper {
   display: flex;
   flex-direction: column;
   min-width: 420px;
+  width: max-content;
+  gap: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.recommendPanelWrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 550px;
+  width: max-content;
+  gap: 16px;
+}
+
+.recommendPanelWrapperWhiteBg {
+  display: flex;
+  flex-direction: column;
+  background-color: stv.$sys-neutral-background2-level;
+  min-width: 550px;
   width: max-content;
   gap: 16px;
 }
