@@ -14,18 +14,21 @@ type DropdownContentProps = {
   content: ReactNode;
   onClick: () => void;
   closeDropdown: () => void;
+  isMobileChipSize: boolean;
 };
 
-function DropdownContent({ content, onClick, closeDropdown }: DropdownContentProps) {
+function DropdownContent({ content, onClick, closeDropdown, isMobileChipSize }: DropdownContentProps) {
   const onDropdownItemClick = () => {
     closeDropdown();
     onClick();
   };
 
+  const TypographyComponent = isMobileChipSize ? Typography.SansBodyM : Typography.SansBodyS;
+
   return (
     <div className={styles.dropdown}>
-      <button className={styles.dropdownItem} onClick={onDropdownItemClick}>
-        <Typography.SansBodyS>{content}</Typography.SansBodyS>
+      <button className={styles.dropdownItem} data-mobile={isMobileChipSize || undefined} onClick={onDropdownItemClick}>
+        <TypographyComponent>{content}</TypographyComponent>
       </button>
     </div>
   );
@@ -54,7 +57,14 @@ export function CloseChip({ size, content, onClick, isVisible, layoutType }: Clo
     return (
       <MobileDropdown
         open={isDropdownOpen}
-        content={<DropdownContent closeDropdown={closeDropdown} content={content} onClick={onClick} />}
+        content={
+          <DropdownContent
+            isMobileChipSize={isMobileChipSize}
+            closeDropdown={closeDropdown}
+            content={content}
+            onClick={onClick}
+          />
+        }
       >
         <button
           data-hidden={!isVisible || undefined}
@@ -74,7 +84,14 @@ export function CloseChip({ size, content, onClick, isVisible, layoutType }: Clo
       open={isDropdownOpen}
       triggerRef={ref}
       placement='bottom-end'
-      content={<DropdownContent closeDropdown={closeDropdown} content={content} onClick={onClick} />}
+      content={
+        <DropdownContent
+          isMobileChipSize={isMobileChipSize}
+          closeDropdown={closeDropdown}
+          content={content}
+          onClick={onClick}
+        />
+      }
     >
       <button
         data-hidden={!isVisible || undefined}

@@ -7,6 +7,10 @@
   border-radius: 4px;
   padding: 4px 0px;
   box-sizing: border-box;
+
+  &[data-mobile] {
+    width: 100%;
+  }
 }
 
 .dropdownChip {
@@ -26,8 +30,13 @@
   cursor: pointer;
   border: unset;
   background-color: unset;
-  padding: 0px 8px;
+  padding: 4px 8px;
   position: relative;
+
+  &[data-mobile] {
+    padding: 8px 10px;
+    height: 40px;
+  }
 
   &:before {
     pointer-events: none;

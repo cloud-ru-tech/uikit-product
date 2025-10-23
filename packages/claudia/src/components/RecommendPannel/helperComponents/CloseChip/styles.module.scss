@@ -50,6 +50,11 @@
   position: relative;
   padding: 0px 8px;
 
+  &[data-mobile] {
+    padding: 0px 10px;
+    height: 40px;
+  }
+
   &:before {
     pointer-events: none;
     content: '';

@@ -14,23 +14,30 @@ import styles from './styles.module.scss';
 type DropdownContentProps = {
   dropdownItems: ChipProps[];
   closeDropdown: () => void;
+  isMobile: boolean;
+  size: Size;
 };
 
-function DropdownContent({ dropdownItems, closeDropdown }: DropdownContentProps) {
+function DropdownContent({ size, dropdownItems, closeDropdown, isMobile }: DropdownContentProps) {
+  const isMobileChipSize = isMobile || size === Size.M;
+
+  const TypographyComponent = isMobileChipSize ? Typography.SansBodyM : Typography.SansBodyS;
+
   return (
-    <div className={styles.dropdown}>
+    <div className={styles.dropdown} data-mobile={isMobile || undefined}>
       {dropdownItems.map(item => (
         <button
           key={item.id}
+          data-mobile={isMobileChipSize || undefined}
           className={styles.dropdownItem}
           onClick={() => {
             closeDropdown();
             item?.onClick?.();
           }}
         >
-          <Typography.SansBodyS>
+          <TypographyComponent>
             <TruncateString variant='end' placement='top' text={item.label} maxLines={1} />
-          </Typography.SansBodyS>
+          </TypographyComponent>
         </button>
       ))}
     </div>
@@ -59,7 +66,14 @@ export function DropdownChip({ size, layoutType, type, label, dropdownItems }: D
     return (
       <MobileDropdown
         open={isDropdownOpen}
-        content={<DropdownContent closeDropdown={closeDropdown} dropdownItems={dropdownItems} />}
+        content={
+          <DropdownContent
+            size={size}
+            isMobile={isMobile}
+            closeDropdown={closeDropdown}
+            dropdownItems={dropdownItems}
+          />
+        }
       >
         <Chip
           ref={ref}
@@ -80,7 +94,9 @@ export function DropdownChip({ size, layoutType, type, label, dropdownItems }: D
       triggerRef={ref}
       open={isDropdownOpen}
       placement='bottom-end'
-      content={<DropdownContent closeDropdown={closeDropdown} dropdownItems={dropdownItems} />}
+      content={
+        <DropdownContent size={size} isMobile={isMobile} closeDropdown={closeDropdown} dropdownItems={dropdownItems} />
+      }
     >
       <Chip
         isVisible={true}
