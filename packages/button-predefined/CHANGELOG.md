@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2025-10-23)
+
+
+### Features
+
+* **AINFR-4499:** move packages to claudia section ([2f741e4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2f741e45b4212d070392cab231e537b7a666ea90))
+
+
+
+
+
 ## 0.6.18 (2025-10-06)
 
 ### Only dependencies have been changed

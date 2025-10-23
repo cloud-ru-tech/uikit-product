@@ -1289,7 +1289,7 @@ importers:
         specifier: 0.21.0
         version: link:../page-layout
       '@sbercloud/uikit-product-quota':
-        specifier: 0.5.12
+        specifier: 0.5.13
         version: link:../quota
       '@sbercloud/uikit-product-utils':
         specifier: 6.2.1
@@ -1656,7 +1656,7 @@ importers:
         specifier: 3.4.3
         version: 3.4.3
       '@sbercloud/uikit-product-button-predefined':
-        specifier: 0.6.18
+        specifier: 0.7.0
         version: link:../button-predefined
       '@sbercloud/uikit-product-icons':
         specifier: 15.0.4
@@ -1725,7 +1725,7 @@ importers:
   packages/quota:
     dependencies:
       '@sbercloud/uikit-product-button-predefined':
-        specifier: 0.6.18
+        specifier: 0.7.0
         version: link:../button-predefined
       '@sbercloud/uikit-product-icons':
         specifier: 15.0.4
@@ -1791,7 +1791,7 @@ importers:
   packages/site-banner:
     dependencies:
       '@sbercloud/uikit-product-button-predefined':
-        specifier: 0.6.18
+        specifier: 0.7.0
         version: link:../button-predefined
       '@sbercloud/uikit-product-site-rich-text':
         specifier: 0.2.8
@@ -1818,7 +1818,7 @@ importers:
   packages/site-banner-predefined:
     dependencies:
       '@sbercloud/uikit-product-site-banner':
-        specifier: 0.3.8
+        specifier: 0.3.9
         version: link:../site-banner
       '@sbercloud/uikit-product-utils':
         specifier: 6.2.1
@@ -1967,7 +1967,7 @@ importers:
   packages/site-hero:
     dependencies:
       '@sbercloud/uikit-product-button-predefined':
-        specifier: 0.6.18
+        specifier: 0.7.0
         version: link:../button-predefined
       '@sbercloud/uikit-product-icons':
         specifier: 15.0.4
@@ -2299,7 +2299,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-carousel':
-        specifier: 0.1.9
+        specifier: 0.1.10
         version: link:../mobile-carousel
       '@sbercloud/uikit-product-utils':
         specifier: 6.2.1
@@ -14540,7 +14540,7 @@ snapshots:
       '@vitest/eslint-plugin': 1.1.43(@typescript-eslint/utils@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0)(typescript@5.5.4)(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.8.1)(jsdom@26.1.0)(less@4.4.2)(sass@1.80.4)(stylus@0.62.0)(terser@5.44.0)(yaml@2.8.1))
       eslint: 9.17.0
       eslint-config-prettier: 9.1.0(eslint@9.17.0)
-      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0)
+      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0)(eslint@9.17.0)
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.17.0)
       eslint-plugin-no-only-tests: 3.3.0
@@ -22620,7 +22620,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0):
+  eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0)(eslint@9.17.0):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.3
@@ -22646,14 +22646,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0))(eslint@9.17.0):
+  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.18.1(eslint@9.17.0)(typescript@5.5.4)
       eslint: 9.17.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0)
+      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0)(eslint@9.17.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -22681,7 +22681,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.17.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0))(eslint@9.17.0)
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3

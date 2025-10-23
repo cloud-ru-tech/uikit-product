@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-quota",
   "title": "Quota",
-  "version": "0.5.12",
+  "version": "0.5.13",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button-predefined": "0.6.18",
+    "@sbercloud/uikit-product-button-predefined": "0.7.0",
     "@sbercloud/uikit-product-icons": "15.0.4",
     "@sbercloud/uikit-product-utils": "6.2.1",
     "@snack-uikit/button": "0.19.7",
