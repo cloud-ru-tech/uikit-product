@@ -7,7 +7,7 @@ import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';
 
 import { useOutsideClick } from '../../hooks';
-import { ChipProps, ChipType, Size } from '../../types';
+import { ChipProps, ChipType, SIZE, Size } from '../../types';
 import { Chip } from '../Chip';
 import styles from './styles.module.scss';
 
@@ -19,7 +19,7 @@ type DropdownContentProps = {
 };
 
 function DropdownContent({ size, dropdownItems, closeDropdown, isMobile }: DropdownContentProps) {
-  const isMobileChipSize = isMobile || size === Size.M;
+  const isMobileChipSize = isMobile || size === SIZE.M;
 
   const TypographyComponent = isMobileChipSize ? Typography.SansBodyM : Typography.SansBodyS;
 

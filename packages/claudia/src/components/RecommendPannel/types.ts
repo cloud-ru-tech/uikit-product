@@ -1,7 +1,11 @@
-export enum ChipType {
+import { ValueOf } from '@snack-uikit/utils';
+
+export enum CHIP_TYPE {
   Default = 'default',
   Outline = 'outline',
 }
+
+export type ChipType = ValueOf<typeof CHIP_TYPE>;
 
 export type ChipProps = {
   id: string;
@@ -9,7 +13,9 @@ export type ChipProps = {
   onClick?: () => void;
 };
 
-export enum Size {
+export enum SIZE {
   S = 's',
   M = 'm',
 }
+
+export type Size = ValueOf<typeof SIZE>;

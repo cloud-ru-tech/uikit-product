@@ -7,7 +7,7 @@ import { Dropdown } from '@snack-uikit/dropdown';
 import { Typography } from '@snack-uikit/typography';
 
 import { useOutsideClick } from '../../hooks';
-import { Size } from '../../types';
+import { SIZE, Size } from '../../types';
 import styles from './styles.module.scss';
 
 type DropdownContentProps = {
@@ -46,7 +46,7 @@ export function CloseChip({ size, content, onClick, isVisible, layoutType }: Clo
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const ref = useRef<HTMLButtonElement>(null);
   const isMobile = layoutType === LAYOUT_TYPE.Mobile;
-  const isMobileChipSize = isMobile || size === Size.M;
+  const isMobileChipSize = isMobile || size === SIZE.M;
 
   const openDropdown = () => setDropdownOpen(true);
   const closeDropdown = () => setDropdownOpen(false);

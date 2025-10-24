@@ -46,8 +46,8 @@
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | chips* | `ChipProps[]` | - |  |
-| size | enum Size: `"s"`, `"m"` | Size.S |  |
-| type | enum ChipType: `"default"`, `"outline"` | ChipType.Default |  |
+| size | enum Size: `"s"`, `"m"` | SIZE.S |  |
+| type | enum ChipType: `"default"`, `"outline"` | CHIP_TYPE.Default |  |
 | layoutType | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | onCloseClick | `() => void` | - |  |
 | onCloseChipLabel | `ReactNode` | - |  |

@@ -7,7 +7,7 @@ import { ClaudiaChip } from './helperComponents/ClaudiaChip';
 import { CloseChip } from './helperComponents/CloseChip';
 import { DropdownChip } from './helperComponents/DropdownChip';
 import styles from './styles.module.scss';
-import { ChipProps, ChipType, Size } from './types';
+import { CHIP_TYPE, ChipProps, ChipType, SIZE, Size } from './types';
 import { getVisibleChipsCount } from './utils/gitVisibleChipsCount';
 
 export type RecommendPanelProps = {
@@ -23,8 +23,8 @@ export type RecommendPanelProps = {
 
 export function RecommendPanel({
   chips,
-  type = ChipType.Default,
-  size = Size.S,
+  type = CHIP_TYPE.Default,
+  size = SIZE.S,
   layoutType,
   onCloseClick,
   onCloseChipLabel,
@@ -36,7 +36,7 @@ export function RecommendPanel({
   const [chipWidths, setChipWidths] = useState<number[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const allChipsRefs = useRef<(HTMLButtonElement | HTMLElement | null)[]>([]);
-  const isSmall = size === Size.S;
+  const isSmall = size === SIZE.S;
 
   useEffect(() => {
     if (layoutType === LAYOUT_TYPE.Mobile) {

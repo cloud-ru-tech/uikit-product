@@ -5,7 +5,7 @@ import { LAYOUT_TYPE, LayoutType } from '@sbercloud/uikit-product-utils';
 import { Tooltip } from '@snack-uikit/tooltip';
 
 import { ButtonClaudia } from '../../../ButtonClaudia';
-import { Size } from '../../types';
+import { SIZE, Size } from '../../types';
 
 type ClaudiaChipProps = {
   onClick?: MouseEventHandler<HTMLElement>;
@@ -16,8 +16,8 @@ type ClaudiaChipProps = {
 
 export const ClaudiaChip = forwardRef<HTMLElement | HTMLButtonElement, ClaudiaChipProps>(
   ({ onClick, size, tooltip, layoutType }, ref) => {
-    const isMobile = layoutType === LAYOUT_TYPE.Mobile || size === Size.M;
-    const totalSize = isMobile ? Size.M : size;
+    const isMobile = layoutType === LAYOUT_TYPE.Mobile || size === SIZE.M;
+    const totalSize = isMobile ? SIZE.M : size;
 
     if (!tooltip) {
       return (

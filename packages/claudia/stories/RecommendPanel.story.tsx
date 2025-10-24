@@ -5,7 +5,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { RecommendPanel, RecommendPanelProps } from '../src';
-import { ChipType, Size } from '../src/components/RecommendPannel/types';
+import { CHIP_TYPE, SIZE } from '../src/components/RecommendPannel/types';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
@@ -46,20 +46,20 @@ export const recommendPanel: StoryObj<RecommendPanelProps> = {
     onCloseClick: () => alert('Closed panel'),
     onCloseChipLabel: 'Close',
     tooltip: 'Original tooltip',
-    type: ChipType.Default,
-    size: Size.S,
+    type: CHIP_TYPE.Default,
+    size: SIZE.S,
   },
   argTypes: {
     size: {
-      options: [Size.S, Size.M],
-      defaultValue: Size.S,
+      options: [SIZE.S, SIZE.M],
+      defaultValue: SIZE.S,
       control: {
         type: 'radio',
       },
     },
     type: {
-      options: [ChipType.Default, ChipType.Outline],
-      defaultValue: ChipType.Default,
+      options: [CHIP_TYPE.Default, CHIP_TYPE.Outline],
+      defaultValue: CHIP_TYPE.Default,
       control: {
         type: 'radio',
       },

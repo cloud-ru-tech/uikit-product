@@ -5,7 +5,7 @@ import { LAYOUT_TYPE, LayoutType } from '@sbercloud/uikit-product-utils';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';
 
-import { ChipType, Size } from '../../types';
+import { CHIP_TYPE, ChipType, SIZE, Size } from '../../types';
 import styles from './styles.module.scss';
 
 type ChipProps = {
@@ -20,9 +20,9 @@ type ChipProps = {
 
 export const Chip = forwardRef<HTMLButtonElement, ChipProps>(
   ({ layoutType, type, label, onClick, size, className }, ref) => {
-    const isDefaultType = type === ChipType.Default;
+    const isDefaultType = type === CHIP_TYPE.Default;
     const isMobile = layoutType === LAYOUT_TYPE.Mobile;
-    const isMobileChipSize = isMobile || size === Size.M;
+    const isMobileChipSize = isMobile || size === SIZE.M;
 
     return (
       <button
