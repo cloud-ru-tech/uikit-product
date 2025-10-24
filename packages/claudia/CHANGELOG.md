@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.5.0 (2025-10-24)
+
+
+### Features
+
+* **AINFR-0000:** fix types ([a5510f2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a5510f2700b08a73ff2e69bdbd1e2084f9886052))
+
+
+
+
+
 # 1.4.0 (2025-10-24)
 
 
