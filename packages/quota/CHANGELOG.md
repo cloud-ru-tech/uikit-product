@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2025-10-24)
+
+
+### Features
+
+* **AICJOBS-3074:** add custom type to QuotaUnitType ([934e71b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/934e71b46ff0e04b4123e4ac9ace67be7d3b3520))
+* **AICJOBS-3074:** add custom type to QuotaUnitType ([3d4c2cc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3d4c2cc4e3081451f76d5a500c6f8f75c64f17fe))
+
+
+
+
+
 ## 0.5.13 (2025-10-23)
 
 ### Only dependencies have been changed
