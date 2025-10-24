@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2025-10-24)
+
+
+### Features
+
+* **AINFR-4472:** fix mobile dropdown size and text ([6b1e1ae](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6b1e1aedbfdb0476f21c4714732ffe7da77cd032))
+
+
+
+
+
 # 1.1.0 (2025-10-23)
 
 
