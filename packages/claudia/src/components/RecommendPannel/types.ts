@@ -1,9 +1,9 @@
 import { ValueOf } from '@snack-uikit/utils';
 
-export enum CHIP_TYPE {
-  Default = 'default',
-  Outline = 'outline',
-}
+export const CHIP_TYPE = {
+  Default: 'default',
+  Outline: 'outline',
+} as const;
 
 export type ChipType = ValueOf<typeof CHIP_TYPE>;
 
@@ -13,9 +13,9 @@ export type ChipProps = {
   onClick?: () => void;
 };
 
-export enum SIZE {
-  S = 's',
-  M = 'm',
-}
+export const SIZE = {
+  S: 's',
+  M: 'm',
+} as const;
 
 export type Size = ValueOf<typeof SIZE>;
