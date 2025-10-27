@@ -1,3 +1,11 @@
+[FF]
 * @anbelov @gaahremenko @mstrifonov @apkozlova @svhlupin @iabelyavskiy @niershov
+
+[Site]
 packages/calculator/ @daparfirov @vaveschev @gabezobrazov @aaryabkov
+
+[Claudia]
 packages/claudia/ @dapanov @avsaulyak
+
+[Lock file]
+pnpm-lock.yaml @anbelov @gaahremenko @mstrifonov @apkozlova @svhlupin @iabelyavskiy @niershov @dapanov @avsaulyak @daparfirov @vaveschev @gabezobrazov @aaryabkov
