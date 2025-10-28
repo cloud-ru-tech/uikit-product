@@ -24,10 +24,10 @@ const tagsValues: Record<number, CardProductProps['tags']> = {
 
 type StoryProps = CardProductProps & CommonCardStoryProps;
 
-const Template: StoryFn<StoryProps> = ({ iconMode, storyIcon, imgSrc, ...args }) => {
+const Template: StoryFn<StoryProps> = ({ iconMode, storyIcon, imgSrc, showIcon, ...args }) => {
   const cardIcon = useStoryIcon({ imgSrc, storyIcon, iconMode });
 
-  return <CardProduct {...args} icon={cardIcon} onClick={undefined} />;
+  return <CardProduct {...args} icon={showIcon ? cardIcon : undefined} showIcon={showIcon} onClick={undefined} />;
 };
 
 export const cardProduct: StoryObj<StoryProps> = {
@@ -40,10 +40,29 @@ export const cardProduct: StoryObj<StoryProps> = {
     layoutType: LAYOUT_TYPE.Desktop,
     tags: tagsValues['2'],
     disabled: false,
+    showIcon: true,
+    showBadge: false,
     ...COMMON_CARD_STORY_ARGS,
   },
   argTypes: {
     ...COMMON_CARD_STORY_ARG_TYPES,
+    showIcon: {
+      name: '[Stories]: Show icon',
+      control: {
+        type: 'boolean',
+      },
+      table: {
+        type: {
+          summary: 'Показывать иконку, когда true',
+        },
+      },
+    },
+    showBadge: {
+      name: '[Stories]: With badge',
+      control: {
+        type: 'boolean',
+      },
+    },
     className: {
       control: false,
     },

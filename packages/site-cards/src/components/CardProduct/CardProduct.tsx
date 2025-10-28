@@ -1,7 +1,9 @@
 import { AnchorHTMLAttributes } from 'react';
 
+import { ArrowLinksSVG } from '@sbercloud/uikit-product-icons';
 import { TagSpecial, TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { ButtonFunction } from '@snack-uikit/button';
 import { Card, CardProps } from '@snack-uikit/card';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
@@ -14,7 +16,8 @@ export type CardProductProps = WithSupportProps<
   WithLayoutType<{
     title: string;
     description?: string;
-    icon: IconProps['icon'];
+    showIcon?: boolean;
+    icon?: IconProps['icon'];
     href?: string;
     target?: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
     disabled?: boolean;
@@ -22,6 +25,7 @@ export type CardProductProps = WithSupportProps<
     tags?: TagSpecialProps[];
     className?: string;
     outline?: boolean;
+    showBadge?: boolean;
   }>
 >;
 
@@ -37,6 +41,8 @@ export function CardProduct({
   disabled,
   tags,
   outline,
+  showIcon = true,
+  showBadge = false,
   'data-test-id': dataTestId = 'card-product',
   ...rest
 }: CardProductProps) {
@@ -58,10 +64,23 @@ export function CardProduct({
       onClick={handleCardClick}
       onKeyDown={handleCardKeyDown}
       outline={outline}
+      functionBadge={
+        showBadge ? (
+          <div className={styles.cardFunctionBadgeWrapper}>
+            <ButtonFunction
+              icon={<ArrowLinksSVG className={styles.badgeArrow} />}
+              appearance='primary'
+              onClick={handleCardClick}
+              href={href}
+              size='s'
+            />
+          </div>
+        ) : undefined
+      }
       {...extractSupportProps(rest)}
     >
       <div className={styles.wrapper}>
-        <Icon icon={icon} size='m' data-test-id={`${dataTestId}__icon`} decor />
+        {showIcon && <Icon icon={icon} size='m' data-test-id={`${dataTestId}__icon`} decor />}
 
         <div className={styles.content}>
           <Title data-test-id={`${dataTestId}__title`} className={styles.title}>

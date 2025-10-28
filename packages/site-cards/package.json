@@ -36,6 +36,7 @@
     "@sbercloud/uikit-product-site-rich-text": "0.2.8",
     "@sbercloud/uikit-product-site-tag": "0.3.8",
     "@sbercloud/uikit-product-utils": "6.2.1",
+    "@snack-uikit/button": "0.19.16",
     "@snack-uikit/card": "0.16.19",
     "@snack-uikit/tag": "0.12.7",
     "@snack-uikit/truncate-string": "0.6.15",
