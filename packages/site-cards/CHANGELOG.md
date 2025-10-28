@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.11.0 (2025-10-28)
+
+
+### Features
+
+* **SITE-10137:** update card product ([8f3b8e9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8f3b8e996c1d32e685ee3f2510a65f3a912eca9e))
+
+
+
+
+
 ## 0.10.35 (2025-10-06)
 
 ### Only dependencies have been changed
