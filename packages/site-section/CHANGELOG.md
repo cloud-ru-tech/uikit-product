@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.23.0 (2025-10-29)
+
+
+### Features
+
+* **SITE-10136:** upd section benefits ([4812286](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/481228640d9b50666a5d2460c69edea1a8de8f34))
+
+
+
+
+
 ## 0.22.2 (2025-10-28)
 
 ### Only dependencies have been changed
