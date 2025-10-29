@@ -2,7 +2,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useMemo } from 'react';
 
 import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
-import { CardInfoProps } from '@sbercloud/uikit-product-site-cards';
+import { CardInfoProps, CardProductProps } from '@sbercloud/uikit-product-site-cards';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -31,7 +31,21 @@ const CARD_INFO_ITEMS = Array.from({ length: 8 }, (_, i) => ({
   tag: { text: 'free', appearance: 'blue' } as CardInfoProps['tag'],
 }));
 
+const CARD_PRODUCT_ITEMS = Array.from({ length: 8 }, (_, i) => ({
+  title: `Title ${i + 1}`,
+  description: `description ${i + 1}`,
+  icon: PlaceholderSVG,
+  href: '#',
+  tags: [
+    { text: 'Разработка', appearance: 'neutral' },
+    { text: 'Git', appearance: 'neutral' },
+  ] as CardProductProps['tags'],
+  showBadge: true,
+  showIcon: false,
+}));
+
 const CONTENT_INFO = Array.from({ length: 3 }, (_, i) => ({ tabValue: i.toString(), cards: CARD_INFO_ITEMS }));
+const CONTENT_PRODUCT = Array.from({ length: 3 }, (_, i) => ({ tabValue: i.toString(), cards: CARD_PRODUCT_ITEMS }));
 
 type StoryProps = SectionBenefitsProps & { withTabs: boolean; buttonsExample?: 'buttons' | 'links' };
 
@@ -48,6 +62,7 @@ const Template: StoryFn<StoryProps> = ({
   withTabs,
   buttonsExample,
   backgroundColor,
+  buttonsAlign = 'left',
   note,
   ...rest
 }) => {
@@ -57,15 +72,19 @@ const Template: StoryFn<StoryProps> = ({
   const contentInfoWithTabs = { tabBarItems: TABS, content: CONTENT_INFO };
   const contentInfoWithoutTabs = { content: CARD_INFO_ITEMS };
 
+  const contentProductWithTabs = { tabBarItems: TABS, content: CONTENT_PRODUCT };
+  const contentProductWithoutTabs = { content: CARD_PRODUCT_ITEMS };
+
   const contentBasic = withTabs ? contentBasicWithTabs : contentBasicWithoutTabs;
   const contentInfo = withTabs ? contentInfoWithTabs : contentInfoWithoutTabs;
+  const contentProduct = withTabs ? contentProductWithTabs : contentProductWithoutTabs;
 
   const propsForTypeInfo = rest as SectionBenefitsProps & { type: 'info' };
 
   const buttons: SectionBenefitsProps['buttons'] = useMemo(() => {
     switch (buttonsExample) {
       case 'buttons':
-        return [{ label: 'Button example 1' }, { label: 'Button example 2' }];
+        return [{ label: 'Button example 1', type: 'outline' }, { label: 'Button example 2' }];
       case 'links': {
         return [
           { label: 'Link example 1', href: '#' },
@@ -92,6 +111,28 @@ const Template: StoryFn<StoryProps> = ({
         backgroundColor={backgroundColor}
         {...contentBasic}
         buttons={buttons}
+        buttonsAlign={buttonsAlign}
+        note={note}
+      />
+    );
+  }
+
+  if (type === 'product') {
+    return (
+      <SectionBenefits
+        id={id}
+        title={title}
+        subtitle={subtitle}
+        titleTag={titleTag}
+        subtitleTag={subtitleTag}
+        description={description}
+        type={type}
+        layoutType={layoutType}
+        columnsConfig={columnsConfig}
+        backgroundColor={backgroundColor}
+        {...contentProduct}
+        buttons={buttons}
+        buttonsAlign={buttonsAlign}
         note={note}
       />
     );
@@ -110,6 +151,7 @@ const Template: StoryFn<StoryProps> = ({
       backgroundColor={backgroundColor}
       {...contentInfo}
       buttons={buttons}
+      buttonsAlign={buttonsAlign}
       note={note}
     />
   );

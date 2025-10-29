@@ -1,10 +1,11 @@
-import { CardBasicProps, CardInfoProps } from '@sbercloud/uikit-product-site-cards';
+import { CardBasicProps, CardInfoProps, CardProductProps } from '@sbercloud/uikit-product-site-cards';
 
 import { SectionBasicProps } from '../SectionBasic';
 
 type CardBasicArray = Omit<CardBasicProps, 'layoutType'>[];
 type CardInfoArray = Omit<CardInfoProps, 'layoutType'>[];
 type CardNumericArray = Omit<CardInfoProps, 'layoutType' | 'icon'>[];
+type CardProductArray = Omit<CardProductProps, 'layoutType'>[];
 
 type ContentBasicTab = {
   tabValue: string;
@@ -19,6 +20,11 @@ type ContentInfoTab = {
 type ContentNumericTab = {
   tabValue: string;
   cards: CardNumericArray;
+};
+
+type ContentProductTab = {
+  tabValue: string;
+  cards: CardProductArray;
 };
 
 type ContentBasicWithoutTabs = {
@@ -65,6 +71,21 @@ type ContentInfoWithTabs = {
   tabBarItems: NonNullable<SectionBasicProps['tabBarItems']>;
 };
 
+type ContentProductWithoutTabs = {
+  type: 'product';
+  content: CardProductArray;
+
+  tabBarItems?: never;
+};
+
+type ContentProdctWithTabs = {
+  type: 'product';
+  content: ContentProductTab[];
+
+  tabBarItems: NonNullable<SectionBasicProps['tabBarItems']>;
+};
+
 export type ContentBasic = ContentBasicWithTabs | ContentBasicWithoutTabs;
 export type ContentInfo = ContentInfoWithTabs | ContentInfoWithoutTabs;
+export type ContentProduct = ContentProdctWithTabs | ContentProductWithoutTabs;
 export type ContentNumeric = ContentNumericWithTabs | ContentNumericWithoutTabs;

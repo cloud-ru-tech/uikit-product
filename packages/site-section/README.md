@@ -43,8 +43,8 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| content* | `ContentBasicTab[] \| CardBasicArray \| ContentInfoTab[] \| CardInfoArray \| ContentNumericTab[] \| CardNumericArray` | - |  |
-| type* | "basic" \| "info" \| "numeric" | - |  |
+| content* | `ContentBasicTab[] \| CardBasicArray \| ContentInfoTab[] \| CardInfoArray \| ContentNumericTab[] \| CardNumericArray \| ContentProductTab[] \| CardProductArray` | - |  |
+| type* | "basic" \| "info" \| "numeric" \| "product" | - |  |
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | columnsConfig* | `ColumnsConfig` | - | Конфигурация настройки колонок для разных layoutType |
 | id | `string` | - | id секции |
@@ -55,7 +55,8 @@
 | subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | description | `string` | - | Описание секции |
 | note | `string` | - | Текст нижней сноски |
-| buttons | `{ label: string; href?: string; target?: HTMLAttributeAnchorTarget; onClick?: MouseEventHandler<HTMLElement>; }[]` | - |  |
+| buttons | `SectionButtonProps[]` | - |  |
+| buttonsAlign | "left" \| "center" | left | Выравнивание кнопок по горизонтали |
 | tabBarItems | `TabBarItem[]` | - |  |
 | outline | `boolean` | - |  |
 ## SectionBenefitsBanner

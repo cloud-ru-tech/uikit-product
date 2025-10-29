@@ -4,6 +4,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+
+  &[data-buttons-align='center'] {
+    justify-content: center;
+  }
 }
 
 .note {

@@ -1,18 +1,17 @@
 import { MouseEvent, useMemo, useState } from 'react';
 
-import { CardBasic, CardInfo } from '@sbercloud/uikit-product-site-cards';
+import { CardBasic, CardInfo, CardProduct } from '@sbercloud/uikit-product-site-cards';
 import { Grid, GridProps } from '@sbercloud/uikit-product-site-grid';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
-import { ButtonFilled, ButtonFilledProps } from '@snack-uikit/button';
-import { Link } from '@snack-uikit/link';
 import { Typography } from '@snack-uikit/typography';
 
-import { SectionTitleProps } from '../../helperComponents';
+import { SectionButton, SectionTitleProps } from '../../helperComponents';
+import { SectionButtonProps } from '../../helperComponents/SectionButton/types';
 import { SectionColor } from '../../types';
 import { SectionBasic } from '../SectionBasic';
 import { CardNumeric } from './components';
 import styles from './styles.module.scss';
-import { ContentBasic, ContentInfo, ContentNumeric } from './types';
+import { ContentBasic, ContentInfo, ContentNumeric, ContentProduct } from './types';
 
 export type SectionBenefitsProps = WithSupportProps<
   WithLayoutType<{
@@ -35,15 +34,15 @@ export type SectionBenefitsProps = WithSupportProps<
     /** Текст нижней сноски */
     note?: string;
 
-    buttons?: {
-      label: string;
-      href?: string;
-      target?: ButtonFilledProps['target'];
-      onClick?: ButtonFilledProps['onClick'];
-    }[];
+    buttons?: SectionButtonProps[];
+    /**
+     * Выравнивание кнопок по горизонтали
+     * @default 'left'
+     */
+    buttonsAlign?: 'left' | 'center';
   }>
 > &
-  (ContentBasic | ContentInfo | ContentNumeric);
+  (ContentBasic | ContentInfo | ContentNumeric | ContentProduct);
 
 export function SectionBenefits({
   id,
@@ -60,6 +59,7 @@ export function SectionBenefits({
   buttons,
   note,
   backgroundColor,
+  buttonsAlign = 'left',
   ...rest
 }: SectionBenefitsProps) {
   const [activeTab, setActiveTab] = useState(tabBarItems && tabBarItems[0].value);
@@ -103,6 +103,9 @@ export function SectionBenefits({
               <CardNumeric key={index} {...item} number={index + 1} layoutType={layoutType} />
             ))}
 
+          {type === 'product' &&
+            content.map((item, index) => <CardProduct key={index} {...item} layoutType={layoutType} />)}
+
           {type === 'basic' &&
             content.map((item, index) => <CardBasic key={index} {...item} layoutType={layoutType} />)}
         </Grid>
@@ -128,6 +131,13 @@ export function SectionBenefits({
                 )),
               )}
 
+          {type === 'product' &&
+            content
+              .filter(({ tabValue }) => tabValue === activeTab)
+              .map(({ cards }) =>
+                cards.map((card, index) => <CardProduct key={index} layoutType={layoutType} {...card} />),
+              )}
+
           {type === 'basic' &&
             content
               .filter(({ tabValue }) => tabValue === activeTab)
@@ -144,14 +154,8 @@ export function SectionBenefits({
       )}
 
       {buttons && (
-        <div className={styles.buttons}>
-          {buttons.map(button =>
-            button.href ? (
-              <Link key={button.label} {...button} text={button.label} size='l' insideText />
-            ) : (
-              <ButtonFilled size='l' key={button.label} {...button} />
-            ),
-          )}
+        <div className={styles.buttons} data-buttons-align={buttonsAlign}>
+          {buttons.map(button => SectionButton(button))}
         </div>
       )}
     </SectionBasic>
