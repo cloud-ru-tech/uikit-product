@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2025-10-30)
+
+
+### BREAKING CHANGES
+
+
+* **PDS-2942:** update widget component, helpers and story ([c7082e6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c7082e6de768399c8820a6945a307f509aee32b8))
+
+
+
+
 ## 0.8.24 (2025-10-23)
 
 ### Only dependencies have been changed

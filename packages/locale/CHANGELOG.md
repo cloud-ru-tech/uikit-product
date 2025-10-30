@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.16.0 (2025-10-30)
+
+
+### Features
+
+* **PDS-2942:** update locale translations for widget errors ([ead9fa1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ead9fa18ba98cde7b22f9cd06b9543247f311b11))
+
+
+
+
+
 ## 0.15.1 (2025-10-27)
 
 
