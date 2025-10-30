@@ -411,5 +411,7 @@ export const ru_RU: typeof en_GB = {
     Products: {
       title: 'Сервисы платформы',
     },
+    dataErrorTitle: 'Не удалось получить данные',
+    dataErrorDescription: 'Попробуйте обновить виджет',
   },
 };
