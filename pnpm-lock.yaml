@@ -2298,27 +2298,39 @@ importers:
       '@sbercloud/uikit-product-card-predefined':
         specifier: 0.8.8
         version: link:../card-predefined
+      '@sbercloud/uikit-product-icons':
+        specifier: 15.0.4
+        version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-carousel':
         specifier: 0.1.10
         version: link:../mobile-carousel
+      '@sbercloud/uikit-product-mobile-dropdown':
+        specifier: 0.9.18
+        version: link:../mobile-dropdown
+      '@sbercloud/uikit-product-mobile-tooltip':
+        specifier: 0.4.62
+        version: link:../mobile-tooltip
+      '@sbercloud/uikit-product-title-clickable':
+        specifier: 0.0.45
+        version: link:../title-clickable
       '@sbercloud/uikit-product-utils':
         specifier: 6.2.1
         version: link:../utils
-      '@snack-uikit/icon-predefined':
-        specifier: 0.7.3
-        version: 0.7.3(react@18.2.0)
+      '@snack-uikit/button':
+        specifier: 0.19.16
+        version: 0.19.16(react@18.2.0)
+      '@snack-uikit/info-block':
+        specifier: 0.6.33
+        version: 0.6.33(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/link':
         specifier: 0.15.9
         version: 0.15.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/skeleton':
         specifier: 0.6.2
         version: 0.6.2(react@18.2.0)
-      '@snack-uikit/truncate-string':
-        specifier: 0.6.9
-        version: 0.6.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/typography':
         specifier: 0.8.4
         version: 0.8.4(react@18.2.0)

@@ -34,11 +34,17 @@
   "dependencies": {
     "@sbercloud/uikit-product-card-predefined": "0.8.8",
     "@sbercloud/uikit-product-mobile-carousel": "0.1.10",
+    "@sbercloud/uikit-product-mobile-tooltip": "0.4.62",
+    "@sbercloud/uikit-product-title-clickable": "0.0.45",
+    "@sbercloud/uikit-product-mobile-dropdown": "0.9.18",
+    "@sbercloud/uikit-product-icons": "15.0.4",
     "@sbercloud/uikit-product-utils": "6.2.1",
-    "@snack-uikit/icon-predefined": "0.7.3",
+    "@snack-uikit/button": "0.19.16",
+    
+    "@snack-uikit/info-block": "0.6.33",
     "@snack-uikit/link": "0.15.9",
     "@snack-uikit/skeleton": "0.6.2",
-    "@snack-uikit/truncate-string": "0.6.9",
+    
     "@snack-uikit/typography": "0.8.4",
     "@snack-uikit/utils": "3.7.0",
     "classnames": "2.5.1"

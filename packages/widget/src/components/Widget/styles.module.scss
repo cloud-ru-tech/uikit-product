@@ -4,36 +4,57 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: calc(styles-theme-variables.$dimension-1m + styles-theme-variables.$dimension-025m);
+  gap: calc(styles-theme-variables.$dimension-1m + styles-theme-variables.$dimension-050m);
   background-color: styles-theme-variables.$sys-neutral-background1-level;
   border-radius: calc(styles-theme-variables.$dimension-1m + styles-theme-variables.$dimension-050m);
   padding: styles-theme-variables.$dimension-2m;
 }
 
-.widgetHeading {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  gap: styles-theme-variables.$dimension-1m;
-}
-
 .widgetHeader {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: styles-theme-variables.$dimension-1m;
   min-width: 0;
-  width: 100%;
 }
 
-.widgetTitle {
-  color: styles-theme-variables.$sys-neutral-text-main;
+.titleClickable {
+  flex: 1;
   min-width: 0;
-}
-
-.widgetHeaderSlot {
-  flex-shrink: 0;
 }
 
 .widgetContent {
   color: styles-theme-variables.$sys-neutral-text-main;
+  min-height: 0;
 }
+
+.actionsWrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: styles-theme-variables.$dimension-050m;
+}
+
+.actionsWide {
+  justify-content: flex-end;
+}
+
+.skeletonContent {
+  display: flex;
+  flex-direction: column;
+  gap: styles-theme-variables.$dimension-050m;
+}
+
+.skeletonHeader {
+  flex: 1;
+  min-width: 0;
+}
+
+.skeletonActions {
+  display: flex;
+  align-items: center;
+  gap: styles-theme-variables.$dimension-1m;
+  width: 100%;
+}
+
+

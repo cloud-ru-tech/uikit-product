@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useMemo } from 'react';
 
-import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { PlaceholderSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
-import { Link } from '@snack-uikit/link';
+import { Skeleton } from '@snack-uikit/skeleton';
 import { ValueOf } from '@snack-uikit/utils';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -19,34 +19,135 @@ const meta: Meta = {
 };
 export default meta;
 
-const HEADER_SLOT_VARIANT = {
-  none: 'none',
-  custom: 'custom',
+const STATE_VARIANT = {
+  default: 'default',
+  loading: 'loading',
+  error: 'error',
 } as const;
 
-type StoryProps = Omit<WidgetProps, 'emblem'> & {
-  emblem: Omit<WidgetProps['emblem'], 'icon'>;
-  icon: IconPredefinedProps['icon'];
-  showIcon?: boolean;
-  headerSlot: ValueOf<typeof HEADER_SLOT_VARIANT>;
+const HEADER_VARIANT = {
+  title: 'title',
+  avatar: 'avatar',
+} as const;
+
+type StoryProps = Omit<WidgetProps, 'header'> & {
+  headerTitle: string;
+  headerIcon: IconPredefinedProps['icon'];
+  showHeaderIcon?: boolean;
+  headerHref: string;
+  state: ValueOf<typeof STATE_VARIANT>;
+  showActions?: boolean;
+  headerVariant: ValueOf<typeof HEADER_VARIANT>;
+  avatarName: string;
+  avatarSubtitle: string;
+  useCustomLoadingContent?: boolean;
 };
 
-function Template({ emblem, icon, headerSlot: headerSlotProp, showIcon, ...args }: StoryProps) {
-  const headerSlot = useMemo<WidgetProps['headerSlot']>(() => {
-    switch (headerSlotProp) {
-      case HEADER_SLOT_VARIANT.custom: {
-        return <Link text='Link text' appearance='neutral' href='#' size='m' />;
-      }
-      case HEADER_SLOT_VARIANT.none:
-      default: {
-        return undefined;
-      }
+function Template({
+  headerTitle,
+  headerIcon,
+  showHeaderIcon,
+  headerHref,
+  state,
+  wide,
+  showActions,
+  headerVariant,
+  avatarName,
+  avatarSubtitle,
+  useCustomLoadingContent,
+  ...args
+}: StoryProps) {
+  const header = useMemo<WidgetProps['header']>(() => {
+    if (headerVariant === HEADER_VARIANT.avatar) {
+      return {
+        avatar: {
+          name: avatarName,
+          subtitle: avatarSubtitle,
+          showTwoSymbols: true,
+        },
+        href: headerHref,
+        fullWidth: true,
+      };
     }
-  }, [headerSlotProp]);
+
+    return {
+      title: headerTitle,
+      icon: showHeaderIcon ? headerIcon : undefined,
+      href: headerHref,
+      fullWidth: !wide ? true : undefined,
+    };
+  }, [headerVariant, headerTitle, showHeaderIcon, headerIcon, headerHref, wide, avatarName, avatarSubtitle]);
+
+  const actions = useMemo(() => {
+    if (!showActions) return undefined;
+
+    return [
+      {
+        variant: 'kebab' as const,
+        list: {
+          closeDroplistOnItemClick: true,
+          items: [
+            {
+              content: {
+                option: 'Kebab action 1',
+              },
+            },
+            {
+              content: {
+                option: 'Kebab action 2',
+              },
+            },
+          ],
+        },
+      },
+      {
+        variant: 'outline' as const,
+        label: 'Primary action',
+        appearance: 'neutral' as const,
+        icon: <PlusSVG />,
+      },
+    ];
+  }, [showActions]);
+
+  const loadingState = useMemo(() => {
+    if (state !== 'loading') return undefined;
+
+    if (useCustomLoadingContent) {
+      return {
+        loadingContent: (
+          <div style={{ padding: 16 }}>
+            <div style={{ marginBottom: 12 }}>
+              <Skeleton loading width={'100%'} height={20} borderRadius={6} />
+            </div>
+            <Skeleton loading width={'80%'} height={20} borderRadius={6} />
+          </div>
+        ),
+      };
+    }
+
+    return { showSkeleton: true };
+  }, [state, useCustomLoadingContent]);
+
+  const errorState = useMemo(() => {
+    if (state !== 'error') return undefined;
+
+    return {
+      errorTitle: 'Не удалось получить данные',
+      errorDescription: 'Попробуйте обновить виджет',
+    };
+  }, [state]);
 
   return (
     <div className={styles.wrapperResize}>
-      <Widget {...args} headerSlot={headerSlot} emblem={showIcon ? { ...emblem, icon } : undefined} />
+      <Widget
+        {...args}
+        header={header}
+        actions={actions}
+        state={state}
+        wide={wide}
+        loadingState={loadingState}
+        errorState={errorState}
+      />
     </div>
   );
 }
@@ -55,40 +156,71 @@ export const widget: StoryObj<StoryProps> = {
   render: Template,
 
   args: {
-    title: 'Widget name',
+    headerTitle: 'Widget name',
+    headerHref: '#',
     children: `Demo content
-  For replacement, use the property: ◆Slot... Connect your local component with unique content to this property
-  The maximum height of the modal window can be equal to the height of the browser view window with margins of 24 px`,
-    emblem: {
-      decor: true,
-      appearance: 'primary',
-    },
-    icon: PlaceholderSVG,
-    showIcon: true,
-    headerSlot: HEADER_SLOT_VARIANT.custom,
+For replacement, use the property: ◆Slot... Connect your local component with unique content to this property
+The maximum height of the modal window can be equal to the height of the browser view window with margins of 24 px`,
+    headerIcon: PlaceholderSVG,
+    showHeaderIcon: true,
+    state: STATE_VARIANT.default,
+    wide: true,
+    showActions: true,
+    headerVariant: HEADER_VARIANT.title,
+    avatarName: 'Denis Villeneuve',
+    avatarSubtitle: 'duna@gmail.com',
+    useCustomLoadingContent: false,
   },
 
   argTypes: {
-    showIcon: {
-      name: '[Stories]: Show icon',
+    headerVariant: {
+      name: '[Stories]: Header variant',
+      options: Object.values(HEADER_VARIANT),
+      control: {
+        type: 'radio',
+      },
     },
-    icon: {
-      name: '[Stories]: Choose icon',
+    showHeaderIcon: {
+      name: '[Stories]: Show header icon',
+      if: {
+        arg: 'headerVariant',
+        eq: HEADER_VARIANT.title,
+      },
+    },
+    headerIcon: {
+      name: '[Stories]: Choose header icon',
       options: Object.keys(ICONS),
       mapping: ICONS,
       control: {
         type: 'select',
       },
       if: {
-        arg: 'showIcon',
+        arg: 'showHeaderIcon',
         eq: true,
       },
     },
-    headerSlot: {
-      name: '[Stories]: Preview header slot variant',
-      options: Object.values(HEADER_SLOT_VARIANT),
-      control: {
-        type: 'radio',
+    avatarName: {
+      name: '[Stories]: Avatar name',
+      if: {
+        arg: 'headerVariant',
+        eq: HEADER_VARIANT.avatar,
+      },
+    },
+    avatarSubtitle: {
+      name: '[Stories]: Avatar subtitle',
+      if: {
+        arg: 'headerVariant',
+        eq: HEADER_VARIANT.avatar,
+      },
+    },
+    showActions: {
+      name: '[Stories]: Show actions',
+    },
+    useCustomLoadingContent: {
+      name: '[Stories]: Use custom loading content',
+      if: {
+        arg: 'state',
+        eq: STATE_VARIANT.loading,
       },
     },
   },
@@ -101,7 +233,7 @@ export const widget: StoryObj<StoryProps> = {
     design: {
       name: 'Figma',
       type: 'figma',
-      url: 'https://www.figma.com/file/SZjPEs7Ac3a2wS0HapamrE/Product-components?type=design&node-id=578%3A15410&mode=design&t=rMYCa7WGV6xrL5wY-1',
+      url: 'https://www.figma.com/design/SZjPEs7Ac3a2wS0HapamrE/branch/U01Z7A8fMuUCGzNEZ9rdqz/Product-UI-Kit?node-id=620-73&m=dev',
     },
   },
 };
