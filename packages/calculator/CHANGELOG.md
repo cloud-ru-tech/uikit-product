@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.31.0 (2025-10-31)
+
+
+### Features
+
+* **SITE-10045:** update calculator EvolutionCloudServer and VmWareVirtualDataCenter ([e0ce8a4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e0ce8a4bd4b8a8a20596100d7033611f45a1c4c1))
+
+
+
+
+
 ## 0.30.1 (2025-10-20)
 
 
