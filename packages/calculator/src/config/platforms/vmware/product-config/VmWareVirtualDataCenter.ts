@@ -34,15 +34,6 @@ export const VIRTUAL_DATA_CENTER_FORM_CONFIG: FormConfig = {
       },
       rows: [
         {
-          label: 'Количество vCPU 2.6 GHz',
-          accessorKey: 'vCpu26',
-          uiProps: {
-            min: 0,
-            max: 9_999,
-            postfix: 'Шт',
-          },
-        },
-        {
           label: 'Количество vCPU 3.0 GHz',
           accessorKey: 'vCpu30',
           uiProps: {
@@ -97,15 +88,6 @@ export const VIRTUAL_DATA_CENTER_FORM_CONFIG: FormConfig = {
         ssd: 0,
       },
       rows: [
-        {
-          label: 'Количество vCPU 2.6 GHz',
-          accessorKey: 'vCpu26',
-          uiProps: {
-            min: 0,
-            max: 9_999,
-            postfix: 'Шт',
-          },
-        },
         {
           label: 'Количество vCPU 3.0 GHz',
           accessorKey: 'vCpu30',

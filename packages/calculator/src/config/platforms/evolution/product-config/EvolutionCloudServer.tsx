@@ -26,19 +26,7 @@ const guaranteedPartCards = [
   },
 ];
 
-const osItems = [
-  'CentOS 7',
-  'CentOS 7 kernel 5.4',
-  'CentOS 7 kernel 5.4 v2',
-  'CentOS 8',
-  'CentOS 9',
-  'Debian 12',
-  'Fedora 38',
-  'Ubuntu 18.04',
-  'Ubuntu 20.04',
-  'Ubuntu 22.04',
-  'openSUSE 15.2',
-];
+const osItems = ['CentOS 9', 'Debian 11', 'Debian 12', 'Ubuntu 20.04', 'Ubuntu 22.04', 'Ubuntu 24.04'];
 
 export const EVOLUTION_CLOUD_SERVER_FORM_CONFIG: FormConfig = {
   ui: [
