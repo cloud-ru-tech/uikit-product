@@ -414,4 +414,29 @@ export const en_GB = {
     dataErrorTitle: 'Could not load data',
     dataErrorDescription: 'Try to refresh the widget',
   },
+  Claudia: {
+    SshField: {
+      placeholder: 'Copy and paste SSH key or attach a file',
+      chatStatusAnnouncement: {
+        content: 'You have entered SSH key input mode',
+        cancel: 'Cancel',
+      },
+      dropZone: {
+        title: 'Release to upload the key',
+        description: 'Private part of SSH key (without .pub)',
+      },
+      attachFileTooltip: 'Attach file',
+      submitButtonTooltip: 'Send',
+      errors: {
+        emptyFile: 'File is empty',
+        binaryData: 'File contains binary data, not a text SSH key',
+        invalidSSHKey:
+          'File does not contain a valid SSH key. Supported: RSA, DSA, ECDSA, Ed25519 keys and certificates',
+        invalidFileExtension: 'Invalid file extension',
+        fileTooLarge: 'File is too large',
+        readError: 'Failed to read file',
+        unknownError: 'An unknown error occurred',
+      },
+    },
+  },
 } satisfies Dictionary;

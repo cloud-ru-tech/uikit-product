@@ -3,14 +3,13 @@ import { useEffect, useRef, useState } from 'react';
 
 import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
-import { TruncateString } from '@snack-uikit/truncate-string';
-import { Typography } from '@snack-uikit/typography';
 
 import { ANIMATION_INTERVAL } from './constants';
-import { AlertButton } from './helperComponents';
+import { AlertButton } from './helperComponents/AlertButton';
+import { TextContent } from './helperComponents/TextContent';
 import styles from './styled.module.scss';
 import { ChatStatusAnnouncementProps } from './types';
-import { getContent, isStringContent } from './utils';
+import { getContent, isReactNode } from './utils';
 
 export function ChatStatusAnnouncement({
   content,
@@ -18,6 +17,7 @@ export function ChatStatusAnnouncement({
   actionLabel,
   icon,
   layoutType,
+  className,
 }: ChatStatusAnnouncementProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimationEnded, setAnimationEnded] = useState(false);
@@ -30,7 +30,7 @@ export function ChatStatusAnnouncement({
 
   // запуск основной анимации
   useEffect(() => {
-    if (isStringContent(content) || isAnimationEnded || content.length <= 1) return;
+    if (isReactNode(content) || isAnimationEnded || content.length <= 1) return;
 
     let interval: NodeJS.Timeout;
 
@@ -81,7 +81,7 @@ export function ChatStatusAnnouncement({
 
   return (
     <div
-      className={styles.fieldAdvice}
+      className={cn(styles.fieldAdvice, className)}
       data-mobile={isMobile || undefined}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -98,9 +98,7 @@ export function ChatStatusAnnouncement({
             const currentTextStyle = index === currentIndex ? styles.textBlockCurrent : currentTextNextOrPreviousStyle;
 
             return (
-              <Typography.SansBodyS key={index} className={cn(styles.textBlock, currentTextStyle)}>
-                <TruncateString variant='end' placement='top' hideTooltip={true} text={item.content} maxLines={1} />
-              </Typography.SansBodyS>
+              <TextContent key={index} content={item.content} className={cn(styles.textBlock, currentTextStyle)} />
             );
           })}
         </div>

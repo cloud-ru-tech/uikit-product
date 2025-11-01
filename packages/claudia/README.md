@@ -38,9 +38,10 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | actionLabel* | `string` | - |  |
-| content* | `string \| TextItem[]` | - |  |
+| content* | `ReactNode \| TextItem[]` | - |  |
 | icon | `ReactElement<any, string \| JSXElementConstructor<any>>` | - |  |
 | onActionClick | `() => void` | - |  |
+| className | `string` | - | CSS-класс |
 ## RecommendPanel
 ### Props
 | name | type | default value | description |
@@ -53,6 +54,12 @@
 | onCloseChipLabel | `ReactNode` | - |  |
 | tooltip | `ReactNode` | - |  |
 | onClaudiaClick | `() => void` | - |  |
+## SshField
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| ref | `LegacyRef<HTMLTextAreaElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
 
 
 [//]: DOCUMENTATION_SECTION_END

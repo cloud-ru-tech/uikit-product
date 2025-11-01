@@ -37,3 +37,16 @@
   width: max-content;
   gap: 16px;
 }
+
+.sshFieldWrapper {
+  min-width: 420px;
+  width: max-content;
+}
+
+.sshTextWrapper {
+  display: flex;
+  width: 1000px;
+  background-color: stv.$sys-neutral-background2-level;
+  border: 1px solid stv.$sys-claudia-text-support;
+  margin-top: 16px;
+}

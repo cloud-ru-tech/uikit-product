@@ -415,4 +415,29 @@ export const ru_RU: typeof en_GB = {
     dataErrorTitle: 'Не удалось получить данные',
     dataErrorDescription: 'Попробуйте обновить виджет',
   },
+  Claudia: {
+    SshField: {
+      placeholder: 'Скопируйте и вставьте SSH-ключ или прикрепите файл',
+      chatStatusAnnouncement: {
+        content: 'Вы перешли в режим ввода SSH-ключа',
+        cancel: 'Отменить',
+      },
+      dropZone: {
+        title: 'Отпустите, чтобы загрузить ключ',
+        description: 'Приватная часть SSH-ключа (без .pub)',
+      },
+      attachFileTooltip: 'Прикрепить файл',
+      submitButtonTooltip: 'Отправить',
+      errors: {
+        emptyFile: 'Файл пустой',
+        binaryData: 'Файл содержит бинарные данные, а не текстовый SSH-ключ',
+        invalidSSHKey:
+          'Файл не содержит валидный SSH-ключ. Поддерживаются: RSA, DSA, ECDSA, Ed25519 ключи и сертификаты',
+        invalidFileExtension: 'Неподходящее расширение файла',
+        fileTooLarge: 'Файл слишком большой',
+        readError: 'Не удалось прочитать файл',
+        unknownError: 'Произошла неизвестная ошибка',
+      },
+    },
+  },
 };

@@ -1,0 +1,54 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields' as ste;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.chatStatus {
+  transform: translate(0px, 10px);
+  border-radius: 4px;
+}
+
+.uploadTooltip {
+  display: flex;
+}
+
+.secured {
+  textarea {
+    -webkit-text-security: disc;
+    /* stylelint-disable-next-line property-no-unknown */
+    text-security: disc;
+  }
+}
+
+.dropZone {
+  height: 90px;
+  transform: translateZ(0);
+}
+
+.defaultText {
+  color: ste.$sys-neutral-text-main;
+}
+
+.disclaimerText {
+  color: ste.$sys-green-text-support;
+}
+
+.mobileSubmitButton {
+  /* stylelint-disable-next-line declaration-no-important */
+  position: relative !important;
+  /* stylelint-disable-next-line declaration-no-important */
+  flex-shrink: 0 !important;
+
+  &:after {
+    content: '';
+    display: flex;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

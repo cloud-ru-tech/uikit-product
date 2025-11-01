@@ -1,0 +1,17 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.defaultText {
+  color: stv.$sys-neutral-text-main;
+}
+
+.disclaimerText {
+  color: stv.$sys-green-text-support;
+}
