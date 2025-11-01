@@ -27,6 +27,7 @@ const INVOICE_SAMPLE = [
     items: [
       {
         label: 'Label',
+        labelTooltip: 'label tooltip',
         quantity: 1,
         price: 9999999.99,
         discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
@@ -39,6 +40,7 @@ const INVOICE_SAMPLE = [
       },
       {
         label: 'Label',
+        labelTooltip: 'label tooltip',
         quantity: 1,
         price: 9999999.99,
         primary: false,

@@ -31,6 +31,7 @@ export type DiscountInvoiceItem = {
 };
 
 export type InvoiceItem = (PriceInvoiceItem | DiscountInvoiceItem) & {
+  labelTooltip?: QuestionTooltipProps['tip'];
   price?: number;
   hidePrice?: boolean;
   labelMaxLines?: number;

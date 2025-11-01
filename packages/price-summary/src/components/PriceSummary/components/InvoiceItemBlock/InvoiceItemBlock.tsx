@@ -1,11 +1,11 @@
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
-import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';
 
-import { formatCurrency, formatQuantity } from '../../../../helpers';
+import { formatCurrency } from '../../../../helpers';
 import { InvoiceItem } from '../../../../types';
 import { DiscountPercentCell } from '../DiscountPercentCell';
 import { Divider } from '../Divider';
+import { InvoiceItemLabelCell } from '../InvoiceItemLabelCell';
 import styles from './styles.module.scss';
 
 export type InvoiceItemBlockProps = WithLayoutType<{
@@ -34,13 +34,7 @@ export function InvoiceItemBlock({ item, index, layoutType }: InvoiceItemBlockPr
         {'label' in item && item.label !== undefined && (
           <>
             <div className={styles.labelCell} data-secondary={isSecondary}>
-              <Typography.SansBodyS className={styles.label}>
-                {item.labelMaxLines ? <TruncateString text={item.label} maxLines={item.labelMaxLines} /> : item.label}
-              </Typography.SansBodyS>
-
-              {item.quantity && (
-                <Typography.SansBodyS className={styles.quantity}>{formatQuantity(item.quantity)}</Typography.SansBodyS>
-              )}
+              <InvoiceItemLabelCell item={item} layoutType={layoutType} />
             </div>
 
             <Typography.SansBodyS tag='div' className={styles.priceCell} data-secondary={isSecondary}>

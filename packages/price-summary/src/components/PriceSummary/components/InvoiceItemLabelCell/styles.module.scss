@@ -1,0 +1,14 @@
+.labelCell {
+  display: flex;
+  gap: 2px;
+}
+
+.label {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.quantity {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}

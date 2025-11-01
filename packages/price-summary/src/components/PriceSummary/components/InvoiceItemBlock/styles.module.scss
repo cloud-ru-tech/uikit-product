@@ -16,16 +16,6 @@
   gap: styles-theme-variables.$dimension-050m;
 }
 
-.label {
-  flex: 0 1 auto;
-  min-width: 0;
-}
-
-.quantity {
-  flex: 0 0 auto;
-  white-space: nowrap;
-}
-
 .priceCell {
   justify-self: end;
 }
