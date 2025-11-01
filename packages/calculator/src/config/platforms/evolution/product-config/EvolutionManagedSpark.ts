@@ -290,7 +290,7 @@ export const EVOLUTION_MANAGED_SPARK_CONFIG: FormConfig = {
       decoratorProps: {
         label: 'Количество оперативной памяти (RAM)',
       },
-      defaultValue: '1',
+      defaultValue: '8',
       items: generateRamItems(VCPU_NO_MODEL_GPU['4']),
       accessorKey: 'ramAmount',
       watchedControls: {

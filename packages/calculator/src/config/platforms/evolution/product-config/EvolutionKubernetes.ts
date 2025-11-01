@@ -16,6 +16,27 @@ const GuaranteedPartItem = {
   '100': '100',
 };
 
+const NVIDIA_A100_80GB = {
+  value: 'NVIDIA A100 80GB',
+  label: 'NVIDIA A100 80GB',
+};
+
+const NVIDIA_H100_NVLINK_ITEM = {
+  value: 'NVIDIA H100 NVLink',
+  label: 'NVIDIA H100 NVLink',
+};
+const NVIDIA_H100_NVLINK_ITEM_PCIe = {
+  value: 'NVIDIA H100 PCI',
+  label: 'NVIDIA H100 PCI',
+};
+
+const NVIDIA_V100 = {
+  value: 'NVIDIA V100',
+  label: 'NVIDIA V100',
+};
+
+const MODEL_ITEMS = [NVIDIA_A100_80GB, NVIDIA_H100_NVLINK_ITEM, NVIDIA_H100_NVLINK_ITEM_PCIe, NVIDIA_V100];
+
 const guaranteedPartCards = [
   {
     value: GuaranteedPartItem[10],
@@ -64,6 +85,93 @@ const guaranteedPartVCpuToRamMap: Record<string, Record<string, number[]>> = {
   },
 };
 
+const GPU_BY_MODEL: { [model: string]: number[] } = {
+  [NVIDIA_A100_80GB.value]: [1, 2, 3, 4, 5, 6, 7, 8],
+  [NVIDIA_H100_NVLINK_ITEM.value]: [1, 2, 3, 4, 5, 6, 7, 8],
+  [NVIDIA_H100_NVLINK_ITEM_PCIe.value]: [1, 2, 3, 4, 5, 6, 7, 8],
+  [NVIDIA_V100.value]: [1, 2, 4, 8, 16],
+};
+
+const CPU_BY_MODEL_AND_GPU: { [model: string]: { [gpu: string]: number[] } } = {
+  [NVIDIA_A100_80GB.value]: {
+    '1': [20],
+    '2': [40],
+    '3': [60],
+    '4': [80],
+    '5': [100],
+    '6': [120],
+    '7': [140],
+    '8': [160],
+  },
+  [NVIDIA_H100_NVLINK_ITEM.value]: {
+    '1': [20],
+    '2': [40],
+    '3': [60],
+    '4': [80],
+    '5': [100],
+    '6': [120],
+    '7': [140],
+    '8': [160],
+  },
+  [NVIDIA_H100_NVLINK_ITEM_PCIe.value]: {
+    '1': [20],
+    '2': [40],
+    '3': [60],
+    '4': [80],
+    '5': [100],
+    '6': [120],
+    '7': [140],
+    '8': [160],
+  },
+  [NVIDIA_V100.value]: {
+    '1': [4],
+    '2': [8],
+    '4': [16],
+    '8': [32],
+    '16': [64],
+  },
+};
+
+const RAN_BY_MODEL_AND_GPU: { [model: string]: { [gpu: string]: number[] } } = {
+  [NVIDIA_A100_80GB.value]: {
+    '1': [125],
+    '2': [250],
+    '3': [375],
+    '4': [500],
+    '5': [625],
+    '6': [750],
+    '7': [875],
+    '8': [900],
+  },
+  [NVIDIA_H100_NVLINK_ITEM.value]: {
+    '1': [186],
+    '2': [372],
+    '3': [558],
+    '4': [744],
+    '5': [930],
+    '6': [1116],
+    '7': [1302],
+    '8': [1488],
+  },
+  [NVIDIA_H100_NVLINK_ITEM_PCIe.value]: {
+    '1': [125],
+    '2': [250],
+    '3': [375],
+    '4': [500],
+    '5': [625],
+    '6': [750],
+    '7': [875],
+    '8': [900],
+  },
+  [NVIDIA_V100.value]: {
+    '1': [64],
+    '2': [128],
+    '4': [256],
+    '8': [512],
+    '16': [1024],
+  },
+};
+
 export const EVOLUTION_KUBERNETES_FORM_CONFIG: FormConfig = {
   ui: ['masterNode', 'workerNode', 'bindingPublicIpAddress'],
   controls: {
@@ -102,11 +210,70 @@ export const EVOLUTION_KUBERNETES_FORM_CONFIG: FormConfig = {
       },
       control: {
         type: CONTROL.Object,
-        ui: ['guaranteedPart', ['vCpuCount', 'ramAmount'], ['nodeCount'], ['diskSize']],
+        ui: [
+          'hasGpu',
+          ['gpuModel'],
+          'gpuCount',
+          'guaranteedPart',
+          ['vCpuCount', 'ramAmount'],
+          ['nodeCount'],
+          ['diskSize'],
+        ],
         decoratorProps: {
           label: 'Рабочие узлы',
         },
         controls: {
+          hasGpu: {
+            type: CONTROL.Toggle,
+            accessorKey: 'workerNode.hasGpu',
+            defaultValue: false,
+            decoratorProps: {
+              label: 'Графический процессор (GPU)',
+            },
+          },
+          gpuModel: {
+            type: CONTROL.SelectSingle,
+            accessorKey: 'workerNode.gpuModel',
+            defaultValue: MODEL_ITEMS[0].value,
+            items: MODEL_ITEMS,
+            uiProps: {
+              visible: false,
+            },
+            decoratorProps: {
+              label: 'Модель GPU',
+            },
+            watchedControls: {
+              hasGpu: 'workerNode.hasGpu',
+            },
+            relateFn: ({ hasGpu }) => ({
+              uiProps: {
+                visible: hasGpu,
+              },
+            }),
+          },
+          gpuCount: {
+            type: CONTROL.Slider,
+            accessorKey: 'workerNode.gpuCount',
+            defaultValue: '1',
+            items: GPU_BY_MODEL[0],
+            decoratorProps: {
+              label: 'Количество GPU',
+            },
+            uiProps: {
+              visible: false,
+              step: 1,
+            },
+            watchedControls: {
+              hasGpu: 'workerNode.hasGpu',
+              gpuModel: 'workerNode.gpuModel',
+            },
+            relateFn: ({ hasGpu, gpuModel }) => ({
+              uiProps: {
+                visible: hasGpu,
+              },
+              items: GPU_BY_MODEL[gpuModel],
+            }),
+          },
           guaranteedPart: {
             type: CONTROL.Carousel,
             accessorKey: 'workerNode.guaranteedPart',
@@ -117,6 +284,12 @@ export const EVOLUTION_KUBERNETES_FORM_CONFIG: FormConfig = {
               labelTooltip:
                 'Гарантированная доля vCPU определяет долю использования процессора, выделенную для виртуальной машины. Этот параметр известен также как переподписка vCPU (vCPU Overcommitment). При 100% гарантируется использование полной мощности виртуальных ядер процессора хоста виртуализации, выделенных виртуальной машине.',
             },
+            watchedControls: {
+              hasGpu: 'workerNode.hasGpu',
+            },
+            relateFn: ({ hasGpu }) => ({
+              items: hasGpu ? [guaranteedPartCards[guaranteedPartCards.length - 1]] : guaranteedPartCards,
+            }),
           },
           vCpuCount: {
             type: CONTROL.Slider,
@@ -127,9 +300,16 @@ export const EVOLUTION_KUBERNETES_FORM_CONFIG: FormConfig = {
               label: 'Количество ядер vCPU',
               labelTooltip: 'Виртуальные ядра',
             },
-            watchedControls: { guaranteedPart: 'workerNode.guaranteedPart' },
-            relateFn: ({ guaranteedPart }) => {
-              const items = guaranteedPartToVCpuMap?.[guaranteedPart];
+            watchedControls: {
+              guaranteedPart: 'workerNode.guaranteedPart',
+              hasGpu: 'workerNode.hasGpu',
+              gpuModel: 'workerNode.gpuModel',
+              gpuCount: 'workerNode.gpuCount',
+            },
+            relateFn: ({ guaranteedPart, hasGpu, gpuModel, gpuCount }) => {
+              const items = hasGpu
+                ? CPU_BY_MODEL_AND_GPU[gpuModel][String(gpuCount)]
+                : guaranteedPartToVCpuMap?.[guaranteedPart];
 
               if (items?.length > 0) {
                 return {
@@ -149,9 +329,14 @@ export const EVOLUTION_KUBERNETES_FORM_CONFIG: FormConfig = {
             watchedControls: {
               guaranteedPart: 'workerNode.guaranteedPart',
               vCpuCoreCount: 'workerNode.vCpuCount',
+              hasGpu: 'workerNode.hasGpu',
+              gpuCount: 'workerNode.gpuCount',
+              gpuModel: 'workerNode.gpuModel',
             },
-            relateFn: ({ guaranteedPart, vCpuCoreCount }) => {
-              const items = guaranteedPartVCpuToRamMap?.[guaranteedPart]?.[vCpuCoreCount];
+            relateFn: ({ guaranteedPart, vCpuCoreCount, gpuModel, hasGpu, gpuCount }) => {
+              const items = hasGpu
+                ? RAN_BY_MODEL_AND_GPU[gpuModel][String(gpuCount)]
+                : guaranteedPartVCpuToRamMap?.[guaranteedPart]?.[vCpuCoreCount];
 
               if (items?.length > 0) {
                 return {
