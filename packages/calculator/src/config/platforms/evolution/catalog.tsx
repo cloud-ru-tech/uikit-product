@@ -69,6 +69,7 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
         EVOLUTION_PRODUCT.EvolutionSnatGateway,
         EVOLUTION_PRODUCT.EvolutionPublicIp,
         EVOLUTION_PRODUCT.EvolutionLoadBalancer,
+        EVOLUTION_PRODUCT.EvolutionDNS,
       ],
     },
     {

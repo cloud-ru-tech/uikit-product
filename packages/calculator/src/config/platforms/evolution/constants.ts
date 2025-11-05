@@ -14,6 +14,7 @@ export const EVOLUTION_PRODUCT = {
   EvolutionSnatGateway: 'evolutionSnatGateway',
   EvolutionManagedMetastore: 'evolutionManagedMetastore',
   EvolutionPublicIp: 'evolutionPublicIp',
+  EvolutionDNS: 'evolutionDNS',
   EvolutionArtifactRegistry: 'evolutionArtifactRegistry',
   EvolutionManagedTrino: 'evolutionManagedTrino',
   EvolutionManagedRedis: 'evolutionManagedRedis',

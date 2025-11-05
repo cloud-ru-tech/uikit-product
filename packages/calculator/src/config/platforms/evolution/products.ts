@@ -4,6 +4,7 @@ import {
   BareMetalSVG,
   ContainerAppsSVG,
   ElasticCloudServerWithGpuSVG,
+  EvoDnsSVG,
   EvolutionComputeSVG,
   LoadBalancerSVG,
   ManagedKubernetesSVG,
@@ -40,6 +41,7 @@ import {
   EVOLUTION_STORAGE_S3_FORM_CONFIG,
   EVOLUTION_STORAGE_S3_FREE_TIER_FORM_CONFIG,
 } from './product-config';
+import { EVOLUTION_DNS_CONFIG } from './product-config/EvolutionDNS';
 import { EVOLUTION_LOAD_BALANCER_CONFIG } from './product-config/EvolutionLoadBalancer';
 import { EVOLUTION_MANAGED_REDIS_CONFIG } from './product-config/EvolutionManagedRedis';
 import { EVOLUTION_MANAGED_SPARK_CONFIG } from './product-config/EvolutionManagedSpark';
@@ -244,6 +246,17 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     icon: SnatSVG,
     formConfig: EVOLUTION_SNAT_GATEWAY_FORM_CONFIG,
     dataTestId: EVOLUTION_PRODUCT.EvolutionSnatGateway,
+    enableChangeProductQuantity: true,
+    enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionDNS]: {
+    id: EVOLUTION_PRODUCT.EvolutionDNS,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution DNS',
+    caption: 'Сервис для управления публичными и приватными доменными зонами на облачной платформе Cloud.ru Evolution',
+    icon: EvoDnsSVG,
+    formConfig: EVOLUTION_DNS_CONFIG,
+    dataTestId: EVOLUTION_PRODUCT.EvolutionDNS,
     enableChangeProductQuantity: true,
     enableConnectToConsole: true,
   },
