@@ -1,0 +1,143 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.closeIcon {
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  will-change: opacity;
+}
+
+.feedbackForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 296px;
+  background-color: var.$sys-neutral-background2-level;
+  border: 1px solid var.$sys-neutral-decor-default;
+  border-radius: 8px;
+  padding: 24px;
+  gap: 16px;
+
+  &:hover {
+    .closeIcon {
+      opacity: 1;
+    }
+  }
+
+  &[data-touch] {
+    .closeIcon {
+      opacity: 1;
+    }
+  }
+}
+
+.feedbackFormTitle {
+  color: var.$sys-neutral-text-main;
+}
+
+.feedbackFormLoading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 296px;
+  height: 141px;
+  background-color: var.$sys-neutral-background2-level;
+  border: 1px solid var.$sys-neutral-decor-default;
+  border-radius: 8px;
+  padding: 24px;
+
+  &[data-loading] {
+    cursor: wait;
+  }
+}
+
+.gradeBlock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  position: relative;
+}
+
+.description {
+  color: var.$sys-neutral-text-light;
+  position: absolute;
+  bottom: -12px;
+  opacity: 0;
+}
+
+.grade {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  height: 40px;
+  width: 36px;
+
+  &:hover > .description {
+    opacity: 1;
+  }
+}
+
+.gradeIcon {
+  transition: all 0.2s ease;
+  font-size: 32px;
+
+  &:hover {
+    /* stylelint-disable-next-line declaration-no-important */
+    font-size: 36px !important;
+  }
+}
+
+.ratingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.ratingTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  color: var.$sys-neutral-text-main;
+}
+
+.ratingSubtitle {
+  color: var.$sys-neutral-text-main;
+}
+
+.ratingIcon {
+  /* stylelint-disable-next-line declaration-no-important */
+  line-height: 20px !important;
+}
+
+.mobileSubmitButton {
+  /* stylelint-disable-next-line declaration-no-important */
+  position: relative !important;
+  /* stylelint-disable-next-line declaration-no-important */
+  flex-shrink: 0 !important;
+
+  &:after {
+    content: '';
+    display: flex;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -107,6 +107,27 @@
 | contentClassName | `string` | - |  |
 | onActionClick | `() => void` | - |  |
 | className | `string` | - | CSS-класс |
+## RateForm
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| grades* | `Grade[]` | - | Массив доступных оценок |
+| selectedGrade | `Grade` | - | Текущая выбранная оценка |
+| title | `string` | - | Заголовок формы (показывается когда оценка не выбрана) |
+| ratedLabel | `string` | - | Текст "Вы поставили" |
+| ratedSubtitle | `string` | - | Подзаголовок после выбора оценки |
+| comment | `string` | - | Комментарий пользователя |
+| isLoading | `boolean` | - | Состояние загрузки |
+| onGradeClick | `(grade: Grade) => void` | - | Callback при клике на оценку |
+| onClose | `() => void` | - | Callback при закрытии формы |
+| onCommentChange | `(comment: string) => void` | - | Callback при изменении комментария |
+| onCommentSubmit | `(comment: string) => void` | - | Callback при отправке комментария |
+| commentPlaceholder | `string` | - | Плейсхолдер для поля комментария |
+| showCloseButton | `boolean` | true | Показывать ли кнопку закрытия |
+| className | `string` | - | Дополнительный className |
+| isTouchDevice | `boolean` | - | Является ли устройство тач-девайсом |
+| submitTooltipText | `string` | - | Текст тултипа для кнопки отправки |
+| renderTextField | `(props: { comment?: string; grade: Grade; placeholder?: string; onChange?: (value: string) => void; onSubmit?: (value: string) => void; }) => ReactNode` | - | Render prop для кастомного отображения текстового поля |
 ## IconGiga
 ### Props
 | name | type | default value | description |

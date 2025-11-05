@@ -1,0 +1,68 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.actionsFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px 9px 0;
+  cursor: text;
+}
+
+.textIcon {
+  min-width: 20px;
+  min-height: 20px;
+  transition: transform 0.2s ease;
+
+  &[data-rotated] {
+    transform: rotate(180deg);
+  }
+}
+
+.textContainer {
+  flex: 1;
+  min-width: 0;
+  line-height: 16px;
+
+  &[data-collapsed] {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 16px;
+    max-height: 32px;
+  }
+}
+
+.comment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.text {
+  color: var.$sys-neutral-text-light;
+  line-height: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 4px;
+  width: 100%;
+
+  svg path {
+    fill: var.$sys-neutral-text-light;
+  }
+
+  &[data-clickable] {
+    cursor: pointer;
+  }
+}
