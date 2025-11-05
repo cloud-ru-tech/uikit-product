@@ -36,6 +36,9 @@ export const bootstrapFiles = ({
   });
   logInfo('Created readme');
 
+  fileTemplates.license({ packageRootFolderName });
+  logInfo('Created license');
+
   fileTemplates.npmrc({ packageRootFolderName });
   logInfo('Created .npmrc');
 

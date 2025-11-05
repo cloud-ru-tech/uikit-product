@@ -101,8 +101,6 @@ inquirer
     logDebug('Finished generating files!');
     logInfo('Bootstrapping new package...This will take a few moments...');
 
-    logDebug('Bootstrapping new package...This will take a few moments...');
-
     const bootstrapResult = shell.exec('rm -rf ./node_modules && pnpm deps && pnpm build:packages');
 
     if (bootstrapResult.code !== 0) {

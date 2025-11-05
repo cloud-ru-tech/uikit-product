@@ -47,7 +47,7 @@ export const packageJson = ({
       import: './dist/esm/index.js',
       require: './dist/cjs/index.js',
     },
-    files: ['dist/esm', 'dist/cjs', 'src', './CHANGELOG.md'],
+    files: ['dist/esm', 'dist/cjs', 'src', './CHANGELOG.md', './LICENSE'],
     homepage: `${globConfig.homepage}packages/${packageRootFolderName}`,
     repository: {
       type: 'git',
@@ -56,7 +56,7 @@ export const packageJson = ({
     },
     author: `${user} <${email}>`,
     contributors: [`${user} <${email}>`],
-    license: 'UNLICENSED',
+    license: 'Apache-2.0',
     scripts: {},
     dependencies: {},
     devDependencies: {},
@@ -117,6 +117,13 @@ export const npmrc = ({ packageRootFolderName }: { packageRootFolderName: string
 save-exact=true
 `;
   fs.writeFileSync(path.join(`./${PackagesRootFolder}/${packageRootFolderName}/.npmrc`), fileContent);
+};
+
+export const license = ({ packageRootFolderName }: { packageRootFolderName: string }) => {
+  const src = path.join('./LICENSE');
+  const dist = path.join(`./${PackagesRootFolder}/${packageRootFolderName}/LICENSE`);
+
+  fs.copyFileSync(src, dist);
 };
 
 export const tsConfigCjs = ({ packageRootFolderName }: { packageRootFolderName: string }) => {
