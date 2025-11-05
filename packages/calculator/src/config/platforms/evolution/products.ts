@@ -5,6 +5,7 @@ import {
   ContainerAppsSVG,
   ElasticCloudServerWithGpuSVG,
   EvoDnsSVG,
+  EvolutionBiSVG,
   EvolutionComputeSVG,
   LoadBalancerSVG,
   ManagedKubernetesSVG,
@@ -43,6 +44,7 @@ import {
 } from './product-config';
 import { EVOLUTION_DNS_CONFIG } from './product-config/EvolutionDNS';
 import { EVOLUTION_LOAD_BALANCER_CONFIG } from './product-config/EvolutionLoadBalancer';
+import { EVOLUTION_MANAGED_BI } from './product-config/EvolutionManagedBI';
 import { EVOLUTION_MANAGED_REDIS_CONFIG } from './product-config/EvolutionManagedRedis';
 import { EVOLUTION_MANAGED_SPARK_CONFIG } from './product-config/EvolutionManagedSpark';
 
@@ -279,6 +281,17 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     icon: ArtifactRegistrySVG,
     formConfig: EVOLUTION_ARTIFACT_REGISTRY,
     dataTestId: EVOLUTION_PRODUCT.EvolutionArtifactRegistry,
+    enableChangeProductQuantity: false,
+    enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionManagedBI]: {
+    id: EVOLUTION_PRODUCT.EvolutionManagedBI,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution Managed BI',
+    caption: 'Управляемые инстансы Business Intelligence',
+    icon: EvolutionBiSVG,
+    formConfig: EVOLUTION_MANAGED_BI,
+    dataTestId: EVOLUTION_PRODUCT.EvolutionManagedBI,
     enableChangeProductQuantity: false,
     enableConnectToConsole: true,
   },

@@ -1,7 +1,7 @@
 import { CONTROL, FormConfig } from '../../../../components';
 
 export const EVOLUTION_LOAD_BALANCER_CONFIG: FormConfig = {
-  ui: [['availabilityZone'], ['incomingTraffic'], ['outcomingTraffic'], 'hasPublicIP'],
+  ui: [['availabilityZone'], ['outcomingTraffic'], ['incomingTraffic'], 'hasPublicIP'],
   controls: {
     availabilityZone: {
       type: CONTROL.Stepper,
@@ -18,10 +18,10 @@ export const EVOLUTION_LOAD_BALANCER_CONFIG: FormConfig = {
         postfix: 'Шт',
       },
     },
-    incomingTraffic: {
+    outcomingTraffic: {
       type: CONTROL.Stepper,
       defaultValue: 1,
-      accessorKey: 'incomingTraffic',
+      accessorKey: 'outcomingTraffic',
       decoratorProps: {
         label: 'Исходящий трафик',
         labelTooltip: 'Обработка балансировщиком L4 исходящего трафика',
@@ -33,10 +33,10 @@ export const EVOLUTION_LOAD_BALANCER_CONFIG: FormConfig = {
         postfix: 'Гб',
       },
     },
-    outcomingTraffic: {
+    incomingTraffic: {
       type: CONTROL.Stepper,
       defaultValue: 1,
-      accessorKey: 'outcomingTraffic',
+      accessorKey: 'incomingTraffic',
       decoratorProps: {
         label: 'Входящий трафик',
         labelTooltip: 'Обработка балансировщиком L4 входящего трафика',

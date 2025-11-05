@@ -17,6 +17,7 @@ export const EVOLUTION_PRODUCT = {
   EvolutionDNS: 'evolutionDNS',
   EvolutionArtifactRegistry: 'evolutionArtifactRegistry',
   EvolutionManagedTrino: 'evolutionManagedTrino',
+  EvolutionManagedBI: 'evolutionManagedBI',
   EvolutionManagedRedis: 'evolutionManagedRedis',
   EvolutionManagedSpark: 'evolutionManagedSpark',
   EvolutionLoadBalancer: 'evolutionLoadBalancer',
