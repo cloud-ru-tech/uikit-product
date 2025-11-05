@@ -18,7 +18,8 @@
     "dist/esm",
     "dist/cjs",
     "src",
-    "./CHANGELOG.md"
+    "./CHANGELOG.md",
+    "./LICENSE"
   ],
   "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/icons",
   "repository": {
@@ -30,7 +31,7 @@
   "contributors": [
     "Akhremenko Grigorii <gaahremenko@sbercloud.ru>"
   ],
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "scripts": {
     "compile": "ts-node scripts/compile.ts",
     "import:icons-interface-system": "ts-node scripts/importInterfaceSystemIcons.ts",

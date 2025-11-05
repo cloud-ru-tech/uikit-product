@@ -17,7 +17,8 @@
     "dist/esm",
     "dist/cjs",
     "src",
-    "./CHANGELOG.md"
+    "./CHANGELOG.md",
+    "./LICENSE"
   ],
   "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/load-status",
   "repository": {
@@ -29,7 +30,7 @@
   "contributors": [
     "Данил Непомнящих <dpnepomnyaschih@cloud.ru>"
   ],
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-icons": "15.0.4",
