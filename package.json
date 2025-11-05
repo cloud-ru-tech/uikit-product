@@ -34,7 +34,8 @@
     "test:testcafe": "testcafe chrome --config-file testcafe.config.js --live",
     "test:testcafe:local": "cross-env TEST_LOCAL=true pnpm test:testcafe",
     "test:testcafe:branch": "cross-env TEST_ON_BRANCH=true pnpm test:testcafe",
-    "test:unit": "ts-node scripts/run-unit-tests"
+    "test:unit": "ts-node scripts/run-unit-tests",
+    "transform:scope": "ts-node scripts/format-package-prefix && ts-node scripts/format-repo-urls"
   },
   "devDependencies": {
     "@cloud-ru/eslint-plugin-ssr-safe-react": "0.3.0",
