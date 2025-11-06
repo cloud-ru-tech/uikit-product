@@ -340,6 +340,7 @@ export const en_GB = {
   },
   PriceSummary: {
     total: 'Total',
+    totalSumFromPrefix: 'from',
     vat: 'including VAT',
     pricePeriodYear: 'per year',
     pricePeriodMonth: 'per month',

@@ -341,6 +341,7 @@ export const ru_RU: typeof en_GB = {
   },
   PriceSummary: {
     total: 'Итого',
+    totalSumFromPrefix: 'от',
     vat: 'с учетом НДС',
     pricePeriodYear: 'в год',
     pricePeriodMonth: 'в месяц',

@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import { InfoFilledSVG } from '@sbercloud/uikit-product-icons';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { AlarmFilledSVG, CrossFilledSVG, QuestionSVG } from '@snack-uikit/icons';
 import { Link } from '@snack-uikit/link';
 import { Tooltip } from '@snack-uikit/tooltip';
@@ -8,6 +9,7 @@ import { Typography } from '@snack-uikit/typography';
 import { ValueOf } from '@snack-uikit/utils';
 
 import { formatCurrency } from '../../../../helpers';
+import { TotalSumType } from '../../../../types';
 import styles from './styles.module.scss';
 
 export const APPEARANCE_STATE = {
@@ -21,6 +23,7 @@ export type AppearanceState = ValueOf<typeof APPEARANCE_STATE>;
 
 export type TotalValueBlockProps = {
   value?: number;
+  totalSumType?: TotalSumType;
   hint?: string;
   hintAppearance?: AppearanceState;
   showHintTooltip?: boolean;
@@ -56,6 +59,7 @@ function getAppearanceIcon(appearance: string) {
 
 export function TotalValueBlock({
   value,
+  totalSumType = 'equal',
   hint,
   hintAppearance = APPEARANCE_STATE.Default,
   showHintTooltip,
@@ -63,10 +67,14 @@ export function TotalValueBlock({
   hintLink,
   showHintLink,
 }: TotalValueBlockProps) {
+  const { t } = useLocale('PriceSummary');
+
+  const totalSumPrefix = totalSumType === 'from' ? `${t('totalSumFromPrefix')} ` : '';
+
   return (
     <div className={styles.content} data-appearance={hintAppearance}>
       <Typography.LightHeadlineS>
-        {value !== undefined ? formatCurrency(Number(value)) : 'N/A'}
+        {value !== undefined ? `${totalSumPrefix}${formatCurrency(Number(value))}` : 'N/A'}
       </Typography.LightHeadlineS>
 
       <Tooltip

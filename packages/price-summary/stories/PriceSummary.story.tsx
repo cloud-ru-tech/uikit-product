@@ -117,6 +117,7 @@ export const priceSummary: StoryObj<StoryProps> = {
   args: {
     showSingleGroup: false,
     value: 9999999.99,
+    totalSumType: 'equal',
     hint: 'Стоимость зависит от потребления',
     period: PricePeriod.Month,
     periodOptions: [PricePeriod.Year, PricePeriod.Month, PricePeriod.Day, PricePeriod.Hour, PricePeriod.Minute],

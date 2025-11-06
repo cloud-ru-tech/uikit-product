@@ -8,6 +8,8 @@ export enum PricePeriod {
   Minute = 'minute',
 }
 
+export type TotalSumType = 'equal' | 'from';
+
 export type DiscountItem = {
   value: number;
   percent?: number;

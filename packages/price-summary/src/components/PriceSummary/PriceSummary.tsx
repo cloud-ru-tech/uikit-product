@@ -31,6 +31,7 @@ export type PriceSummaryProps = WithLayoutType<
 
 export function PriceSummary({
   value,
+  totalSumType,
   hint,
   period,
   onPeriodChanged,
@@ -68,6 +69,7 @@ export function PriceSummary({
 
         <TotalValueBlock
           value={value}
+          totalSumType={totalSumType}
           hint={hint}
           hintAppearance={hintAppearance}
           showHintTooltip={showHintTooltip}
