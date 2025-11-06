@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.32.0 (2025-11-06)
+
+
+### Features
+
+* **SITE-10168:** update href clear .html calculator ([2320288](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2320288e40de54899b7ec51c231b4d71d50de745))
+
+
+
+
+
 # 0.31.0 (2025-10-31)
 
 
