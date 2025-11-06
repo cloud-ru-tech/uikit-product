@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2025-11-06)
+
+
+### Features
+
+* **LK-5919:** up deps, fix xss ([9947f42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9947f421f5a78231d96e4c947f973ad232aa665e))
+
+
+
+
+
 ## 0.8.19 (2025-10-06)
 
 ### Only dependencies have been changed
