@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.33.0 (2025-11-06)
+
+
+### Features
+
+* **SITE-10152:** update calculator EvolutionCloudServer ([02950fe](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/02950fe7a29317203a4e3240f8897fec5fc03969))
+
+
+
+
+
 # 0.32.0 (2025-11-06)
 
 
