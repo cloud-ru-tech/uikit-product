@@ -29,7 +29,7 @@ const mrsSpecificationItems = [
         вычислений, не требующих высокой нагрузки.{' '}
         <Link
           onClick={event => event.stopPropagation()}
-          href='https://cloud.ru/docs/ecs/ug/topics/glossary.html#term-2'
+          href='https://cloud.ru/docs/ecs/ug/topics/glossary#term-2'
           target='_blank'
           textMode='accent'
           insideText
@@ -49,7 +49,7 @@ const mrsSpecificationItems = [
         высокими требованиями к производительности процессора и памяти. Не использует{' '}
         <Link
           onClick={event => event.stopPropagation()}
-          href='https://cloud.ru/docs/ecs/ug/topics/glossary.html#term-2'
+          href='https://cloud.ru/docs/ecs/ug/topics/glossary#term-2'
           target='_blank'
           textMode='accent'
           insideText

@@ -69,7 +69,7 @@ export const CLOUD_CONTAINER_ENGINE_FORM_CONFIG: FormConfig = {
         description: 'При выборе 1 000 узлов и более активируется Kubernetes Turbo.',
         link: {
           target: '_blank',
-          href: 'https://cloud.ru/docs/cce/ug/topics/overview__comparison.html',
+          href: 'https://cloud.ru/docs/cce/ug/topics/overview__comparison',
           text: 'Сравнение Kubernetes и Kubernetes Turbo',
         },
         visible: false,

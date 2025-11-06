@@ -42,7 +42,7 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
                 textMode='accent'
                 insideText
                 target='_blank'
-                href='https://cloud.ru/docs/evolution/overview/topics/free-tier.html'
+                href='https://cloud.ru/docs/evolution/overview/topics/free-tier'
                 text='документации'
               />
             </>
