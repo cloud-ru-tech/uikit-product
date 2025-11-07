@@ -58,6 +58,14 @@ const INVOICE_SAMPLE = [
         primary: true,
         topDivider: true,
       },
+      {
+        label: 'Text describing the characteristic',
+        primary: false,
+      },
+      {
+        primary: true,
+        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+      },
     ],
   },
   {

@@ -1,9 +1,12 @@
 import { formatNumber } from '@sbercloud/ft-formatters';
 
 export function formatCurrency(value: number) {
-  return formatNumber(value, { type: formatNumber.types.Currency, precision: Number.isInteger(value) ? undefined : 2 });
+  return formatNumber(value.toFixed(2), {
+    precision: 2,
+    type: formatNumber.types.Currency,
+  });
 }
 
 export function formatQuantity(value: string | number) {
-  return typeof value === 'string' ? value : 'x' + value;
+  return typeof value === 'string' ? value : '×' + value;
 }

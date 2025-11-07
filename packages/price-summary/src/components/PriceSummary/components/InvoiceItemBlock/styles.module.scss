@@ -2,8 +2,9 @@
 
 .itemGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
+  column-gap: styles-theme-variables.$dimension-1m;
 
   &[data-discount='true'] {
     margin-bottom: styles-theme-variables.$dimension-050m;
@@ -13,8 +14,18 @@
 .labelCell {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   overflow: hidden;
+  gap: styles-theme-variables.$dimension-050m;
+}
+
+.label {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.quantity {
+  flex: 0 0 auto;
+  white-space: nowrap;
 }
 
 .priceCell {

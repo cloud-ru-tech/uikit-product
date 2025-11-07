@@ -34,11 +34,13 @@ export function InvoiceItemBlock({ item, index, layoutType }: InvoiceItemBlockPr
         {'label' in item && item.label !== undefined && (
           <>
             <div className={styles.labelCell} data-secondary={isSecondary}>
-              <Typography.SansBodyS>
+              <Typography.SansBodyS className={styles.label}>
                 {item.labelMaxLines ? <TruncateString text={item.label} maxLines={item.labelMaxLines} /> : item.label}
               </Typography.SansBodyS>
 
-              {item.quantity && <Typography.SansBodyS>{formatQuantity(item.quantity)}</Typography.SansBodyS>}
+              {item.quantity && (
+                <Typography.SansBodyS className={styles.quantity}>{formatQuantity(item.quantity)}</Typography.SansBodyS>
+              )}
             </div>
 
             <Typography.SansBodyS tag='div' className={styles.priceCell} data-secondary={isSecondary}>
@@ -47,7 +49,7 @@ export function InvoiceItemBlock({ item, index, layoutType }: InvoiceItemBlockPr
           </>
         )}
 
-        {item.discount && !item.hidePrice && item.price !== undefined && (
+        {item.discount && (
           <>
             <div className={styles.percentCell} data-secondary={isSecondary}>
               <DiscountPercentCell discount={item.discount} layoutType={layoutType} />
