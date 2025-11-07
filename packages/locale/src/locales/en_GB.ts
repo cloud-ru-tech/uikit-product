@@ -209,8 +209,8 @@ export const en_GB = {
         error: 'Password does not meet the requirements',
       },
       hint: {
-        text: 'Claudia may be wrong and recommends checking the answers',
-        tooltip: "If in doubt about Claudia's answer, you can clarify the information in ",
+        text: 'Giga-helper may be wrong and recommends checking the answers',
+        tooltip: "If in doubt about Giga-helper's answer, you can clarify the information in ",
         tooltipLink: 'the support chat',
       },
       submit: {
