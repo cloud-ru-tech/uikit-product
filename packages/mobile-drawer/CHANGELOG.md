@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.13 (2025-11-07)
+
+
+### Bug Fixes
+
+* **PD-3376:** mobile drawer deps update ([8498f07](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8498f07d7e968256f91faaf1f8426c96351586d9))
+
+
+
+
+
 ## 0.9.12 (2025-10-06)
 
 ### Only dependencies have been changed
