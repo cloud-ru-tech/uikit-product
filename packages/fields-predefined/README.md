@@ -14,39 +14,6 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| value | `string` | - | Значение input |
-| onChange | `((value: string, e?: ChangeEvent<HTMLInputElement>) => void) & ((value: string) => void)` | - | Колбек смены значения |
-| id | `string` | - | Значение html-атрибута id |
-| name | `string` | - | Значение html-атрибута name |
-| disabled | `boolean` | false | Является ли поле деактивированным |
-| readonly | `boolean` | false | Является ли поле доступным только для чтения |
-| onFocus | `FocusEventHandler<HTMLInputElement>` | - | Колбек обработки получения фокуса |
-| onBlur | `FocusEventHandler<HTMLInputElement>` | - | Колбек обработки потери фокуса |
-| autoComplete | `string \| boolean` | false | Включен ли автокомплит для поля |
-| autoFocus | `boolean` | false | Включен ли авто-фокус для поля |
-| onPaste | `ClipboardEventHandler<HTMLInputElement>` | - | Колбек обработки вставки значения |
-| spellCheck | `boolean` | true | Значение атрибута spellcheck (проверка орфографии) |
-| pattern | `string` | - | Регулярное выражение валидного инпута |
-| className | `string` | - | CSS-класс |
-| label | `string` | - | Лейбл |
-| labelTooltip | `ReactNode` | - | Всплывающая подсказка лейбла |
-| required | `boolean` | - | Является ли поле обязательным |
-| caption | `string` | - | Подпись справа от лейбла |
-| hint | `string` | - | Подсказка внизу |
-| showHintIcon | `boolean` | - | Отображать иконку подсказки |
-| size | enum Size: `"s"`, `"m"`, `"l"` | - | Размер |
-| validationState | enum ValidationState: `"error"`, `"default"`, `"warning"`, `"success"` | - | Состояние валидации |
-| labelTooltipPlacement | enum Placement: `"left"`, `"left-start"`, `"left-end"`, `"right"`, `"right-start"`, `"right-end"`, `"top"`, `"top-start"`, `"top-end"`, `"bottom"`, `"bottom-start"`, `"bottom-end"` | top | Расположение подсказки лейбла |
-| error | `string` | - |  |
-| type | "text" \| "tel" \| "email" | - |  |
-| showCopyButton | `boolean` | - | Отображение кнопки Копировать для поля (актуально только для `readonly = true`) |
-| onCopyButtonClick | `() => void` | - | Колбек клика по кнопке Копировать для поля |
-| showClearButton | `boolean` | true | Отображение кнопки очистки поля |
-| scrollList | `boolean` | - | Включить скролл для основной части списка стран |
-| searchPlaceholder | `string` | - |  |
-| onChangeCountry | `(country: FieldPhoneOptionsProps) => void` | - |  |
-| options | `CountrySettings` | - | options — объект конфигурации для изменения стандартного списка стран |
 | ref | `LegacyRef<HTMLInputElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 | key | `Key` | - |  |
 ## useCountries
@@ -60,90 +27,48 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| selectProps* | `FieldSelectProps` | - | Пропсы прокидываемые в селект |
-| submitHandler* | `() => Promise<string \| void>` | - | Коллбек создания новой опции, при успешном выполнении возвращает value новой опции |
-| entityName* | `EntityName` | - | Тип объекта для создания новой опции (в единственном числе вин.падеже для кнопки Создать <entityName> и множественном числе) |
-| createLayoutProps* | `CreateLayoutModalProps \| CreateLayoutDrawerProps` | - | Пропсы передаваемые в модалку или дровер создания новой опции |
-| createLayoutType* | "modal" \| "drawer" | - | По клику на кнопку создания открывать модальное окно или дровер |
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| onRefetch | `VoidFunction` | - | Коллбек рефетча запроса на получение списка опций в случае ошибки (при передаче dataError в selectProps). |
-| className | `string` | - | CSS-класс |
-| afterClose | `VoidFunction` | - | Коллбек после закрытия модального окна/дровера |
-| entityIcon | `JSXElementConstructor<{ size?: number; className?: string; }>` | - | Иконка сервиса |
-| permission | "none" \| "canRead" \| "canCreate" | - | Управление состоянием компонента в зависимости от прав пользователя (по дефолту permission = 'canCreate') |
 ## FieldAi
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| onSubmit* | `(value: string) => void` | - | Колбек действия при отправке |
-| value | `string` | - | HTML-аттрибут value |
-| onChange | `(value: string, e?: ChangeEvent<HTMLTextAreaElement>) => void` | - | Колбек смены значения |
-| inputMode | enum InputMode: `"none"`, `"text"`, `"tel"`, `"email"`, `"search"`, `"decimal"`, `"numeric"`, `"url"` | - | Режим работы экранной клавиатуры |
-| id | `string` | - | HTML-аттрибут id |
-| name | `string` | - | HTML-аттрибут name |
-| maxLength | `number` | - | Максимальное кол-во символов |
-| disabled | `boolean` | - | Является ли поле деактивированным |
-| readonly | `boolean` | - | Является ли поле доступным только на чтение |
-| onFocus | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек получения фокуса |
-| onBlur | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек потери фокуса |
-| autoFocus | `boolean` | - | Включен ли авто-фокус |
-| onKeyDown | `KeyboardEventHandler<HTMLTextAreaElement>` | - | Колбек нажатия клавиши клавиатуры |
-| className | `string` | - | CSS-класс |
-| caption | `string` | - | Подпись справа от лейбла |
-| hint | `string` | - | Подсказка внизу |
-| showHintIcon | `boolean` | - | Отображать иконку подсказки |
-| validationState | enum ValidationState: `"error"`, `"default"`, `"warning"`, `"success"` | - | Состояние валидации |
-| labelTooltipPlacement | enum Placement: `"left"`, `"left-start"`, `"left-end"`, `"right"`, `"right-start"`, `"right-end"`, `"top"`, `"top-start"`, `"top-end"`, `"bottom"`, `"bottom-start"`, `"bottom-end"` | top | Расположение подсказки лейбла |
-| error | `string` | - |  |
-| allowMoreThanMaxLength | `boolean` | - | Можно ли вводить больше разрешённого кол-ва символов |
-| showCopyButton | `boolean` | - | Отображение кнопки Копировать для поля (актуально только для `readonly = true`) |
-| onCopyButtonClick | `() => void` | - | Колбек клика по кнопке Копировать для поля |
-| showClearButton | `boolean` | true | Отображение кнопки очистки поля |
-| minRows | `number` | 3 | Минимальное кол-во строк, до которого размер поля может быть увеличен |
-| maxRows | `number` | 1000 | Максимальное кол-во строк, до которого размер поля может быть увеличен |
-| resizable | `boolean` | - | Может ли ли пользователь изменять размеры поля (если св-во не включено, поле автоматически меняет свой размер) |
-| secure | `boolean \| "password"` | - | Режим ввода sensitive данных (пароля, API ключей, токенов, etc) |
-| onResetContextClick | `() => void` | - | Действие при клике по кнопке сброса контекста |
 | ref | `LegacyRef<HTMLTextAreaElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 | key | `Key` | - |  |
 ## FieldChat
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| handleSubmit* | `(value: string) => void` | - | Колбек действия при отправке |
-| value | `string` | - | HTML-аттрибут value |
-| onChange | `(value: string, e?: ChangeEvent<HTMLTextAreaElement>) => void` | - | Колбек смены значения |
-| inputMode | enum InputMode: `"none"`, `"text"`, `"tel"`, `"email"`, `"search"`, `"decimal"`, `"numeric"`, `"url"` | - | Режим работы экранной клавиатуры |
-| id | `string` | - | HTML-аттрибут id |
-| name | `string` | - | HTML-аттрибут name |
-| maxLength | `number` | - | Максимальное кол-во символов |
-| disabled | `boolean` | - | Является ли поле деактивированным |
-| readonly | `boolean` | - | Является ли поле доступным только на чтение |
-| onFocus | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек получения фокуса |
-| onBlur | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек потери фокуса |
-| autoFocus | `boolean` | - | Включен ли авто-фокус |
-| onKeyDown | `KeyboardEventHandler<HTMLTextAreaElement>` | - | Колбек нажатия клавиши клавиатуры |
-| className | `string` | - | CSS-класс |
-| caption | `string` | - | Подпись справа от лейбла |
-| showHintIcon | `boolean` | - | Отображать иконку подсказки |
-| validationState | enum ValidationState: `"error"`, `"default"`, `"warning"`, `"success"` | - | Состояние валидации |
-| labelTooltipPlacement | enum Placement: `"left"`, `"left-start"`, `"left-end"`, `"right"`, `"right-start"`, `"right-end"`, `"top"`, `"top-start"`, `"top-end"`, `"bottom"`, `"bottom-start"`, `"bottom-end"` | top | Расположение подсказки лейбла |
-| error | `string` | - |  |
-| allowMoreThanMaxLength | `boolean` | - | Можно ли вводить больше разрешённого кол-ва символов |
-| showCopyButton | `boolean` | - | Отображение кнопки Копировать для поля (актуально только для `readonly = true`) |
-| onCopyButtonClick | `() => void` | - | Колбек клика по кнопке Копировать для поля |
-| showClearButton | `boolean` | true | Отображение кнопки очистки поля |
-| minRows | `number` | 3 | Минимальное кол-во строк, до которого размер поля может быть увеличен |
-| maxRows | `number` | 1000 | Максимальное кол-во строк, до которого размер поля может быть увеличен |
-| resizable | `boolean` | - | Может ли ли пользователь изменять размеры поля (если св-во не включено, поле автоматически меняет свой размер) |
-| attachment | `Pick<FileUploadProps, "onFilesUpload" \| "accept"> & { files?: File[]; onFileDelete: (file?: File) => void; }` | - |  |
 ## AIDisclaimer
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+## FieldName
+Поле имя c локальным стейтом и валидацией
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| ref | `LegacyRef<HTMLInputElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
+## FieldNameRHF
+Поле имя c оберткой для React Hook Form
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| ref | `LegacyRef<HTMLInputElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
+## FieldDescription
+Поле описание c локальным стейтом и валидацией
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| ref | `LegacyRef<HTMLTextAreaElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
+## FieldDescriptionRHF
+Поле описание c оберткой для React Hook Form
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| ref | `LegacyRef<HTMLTextAreaElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
 
 
 [//]: DOCUMENTATION_SECTION_END

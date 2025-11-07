@@ -19,6 +19,20 @@ export const ru_RU: typeof en_GB = {
     redirectButton: 'Перейти',
   },
   FieldsPredefined: {
+    FieldDescription: {
+      addButton: 'Добавить описание',
+      optional: 'Опционально',
+      label: 'Описание',
+      maxSymbols: 'Не более {{max}} символов',
+      required: 'Обязательное поле',
+    },
+    FieldName: {
+      label: 'Название',
+      maxSymbols: '2-{{max}} символа',
+      required: 'Обязательное поле',
+      wrongSymbols: 'Только латиница, цифры, дефисы и подчёркивания',
+      wrongStartWith: 'Должно начинаться с латинской буквы',
+    },
     SelectCreate: {
       buttonCreate: 'Создать',
       buttonCancel: 'Отмена',
@@ -192,9 +206,7 @@ export const ru_RU: typeof en_GB = {
       cambodia: 'Камбоджа',
     },
     FieldAi: {
-      regular: {
-        placeholder: 'Спросите что-нибудь...',
-      },
+      regular: { placeholder: 'Спросите что-нибудь...' },
       secret: {
         placeholder: 'Введите пароль',
         passwordTooltip: {
@@ -213,18 +225,13 @@ export const ru_RU: typeof en_GB = {
         tooltip: 'Если засомневаетесь в ответе Гига-помощника, можете уточнить информацию ',
         tooltipLink: 'в чате поддержки',
       },
-      submit: {
-        tooltip: 'Отправить',
-      },
+      submit: { tooltip: 'Отправить' },
       resetContext: {
         label: 'Сбросить сценарий',
         tooltip: 'Сброс контекста: предыдущие сообщения не будут учитываться в новом диалоге.',
       },
     },
-    FieldChat: {
-      placeholder: 'Новое сообщение',
-      attachFileTooltip: 'Прикрепить файл',
-    },
+    FieldChat: { placeholder: 'Новое сообщение', attachFileTooltip: 'Прикрепить файл' },
   },
   Header: {
     noDataFound: 'Ничего не найдено',
@@ -251,25 +258,14 @@ export const ru_RU: typeof en_GB = {
     themeModeSystem: 'Системная',
     themeModeLabel: 'Тема интерфейса',
   },
-  InfoRow: {
-    booleanValueTrue: 'Да',
-    booleanValueFalse: 'Нет',
-  },
+  InfoRow: { booleanValueTrue: 'Да', booleanValueFalse: 'Нет' },
   Layout: {
     noAccessTitle: 'Доступ ограничен',
     noAccessSubtitle: 'У вас нет прав для просмотра этого контента.',
     noAccessText: 'Для получения доступа обратитесь к администратору организации или проекта',
   },
-  MobileChips: {
-    selectedN: 'Выбрано: ',
-    resetAll: 'Сбросить все',
-    select: 'Выбрать',
-  },
-  MobileFields: {
-    selectedN: 'Выбрано: ',
-    resetAll: 'Сбросить все',
-    select: 'Выбрать',
-  },
+  MobileChips: { selectedN: 'Выбрано: ', resetAll: 'Сбросить все', select: 'Выбрать' },
+  MobileFields: { selectedN: 'Выбрано: ', resetAll: 'Сбросить все', select: 'Выбрать' },
   MobileLayout: {
     continue: 'Продолжить',
     create: 'Создать',
@@ -281,15 +277,8 @@ export const ru_RU: typeof en_GB = {
     add: 'Добавить',
     restore: 'Восстановить',
   },
-  MobileToaster: {
-    closeAll: 'Закрыть все',
-    showLess: 'Свернуть',
-    showMore: 'Развернуть',
-  },
-  MobileToolbar: {
-    more: 'Еще',
-    refresh: 'Обновить',
-  },
+  MobileToaster: { closeAll: 'Закрыть все', showLess: 'Свернуть', showMore: 'Развернуть' },
+  MobileToolbar: { more: 'Еще', refresh: 'Обновить' },
   ModalPredefined: {
     title: 'Удаление',
     recallTitle: 'Отзыв заявки',
@@ -298,14 +287,8 @@ export const ru_RU: typeof en_GB = {
     // TODO: deprecated - UIIAAS-968
     enterName: 'Введите название',
     invalidName: 'Неверное название',
-    enterText: {
-      name: 'Введите название',
-      text: 'Введите текст подтверждения',
-    },
-    invalidText: {
-      name: 'Неверное название',
-      text: 'Неверный текст подтверждения',
-    },
+    enterText: { name: 'Введите название', text: 'Введите текст подтверждения' },
+    invalidText: { name: 'Неверное название', text: 'Неверный текст подтверждения' },
     required: 'Поле должно быть заполнено',
     cancel: ruTranslations.buttons.cancel,
     delete: 'Удалить',
@@ -387,15 +370,9 @@ export const ru_RU: typeof en_GB = {
     noData: 'Не удалось загрузить данные',
     quotas: 'Квоты',
   },
-  SiteHero: {
-    Main: {
-      platforms: 'Платформы',
-    },
-  },
+  SiteHero: { Main: { platforms: 'Платформы' } },
   SiteSection: {
-    Basic: {
-      showMore: 'Показать еще',
-    },
+    Basic: { showMore: 'Показать еще' },
     PersonalManager: {
       title: 'Больше чем просто поддержка',
       subtitle: 'Полное сопровождение для решения ваших задач и понятный бизнес-результат',
@@ -411,13 +388,8 @@ export const ru_RU: typeof en_GB = {
     },
   },
   Widget: {
-    Solutions: {
-      title: 'Руководства для быстрого старта',
-      link: 'Смотреть все',
-    },
-    Products: {
-      title: 'Сервисы платформы',
-    },
+    Solutions: { title: 'Руководства для быстрого старта', link: 'Смотреть все' },
+    Products: { title: 'Сервисы платформы' },
     dataErrorTitle: 'Не удалось получить данные',
     dataErrorDescription: 'Попробуйте обновить виджет',
   },

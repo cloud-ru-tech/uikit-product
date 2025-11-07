@@ -39,10 +39,10 @@
     "@sbercloud/uikit-product-mobile-tooltip": "0.5.1",
     "@sbercloud/uikit-product-utils": "8.0.1",
     "@snack-uikit/attachment": "0.4.10",
-    "@snack-uikit/button": "0.19.11",
+    "@snack-uikit/button": "0.19.16",
     "@snack-uikit/drop-zone": "0.9.6",
     "@snack-uikit/icon-predefined": "0.7.3",
-    "@snack-uikit/input-private": "4.8.1",
+    "@snack-uikit/input-private": "4.8.5",
     "@snack-uikit/scroll": "0.10.1",
     "@snack-uikit/tooltip": "0.17.4",
     "@snack-uikit/typography": "0.8.7",
@@ -57,6 +57,8 @@
     "@types/merge-refs": "1.0.0"
   },
   "peerDependencies": {
-    "@sbercloud/uikit-product-locale": "*"
+    "@sbercloud/uikit-product-locale": "*",
+    "yup": ">=0.32.0",
+    "react-hook-form": ">=7.51.0"
   }
 }

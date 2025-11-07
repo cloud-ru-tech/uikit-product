@@ -19,6 +19,20 @@ export const en_GB = {
     redirectButton: 'Go to',
   },
   FieldsPredefined: {
+    FieldDescription: {
+      addButton: 'Add description',
+      optional: 'Optional',
+      label: 'Description',
+      maxSymbols: 'Maximum 255 characters',
+      required: 'Required field',
+    },
+    FieldName: {
+      label: 'Name',
+      maxSymbols: '2-64 characters',
+      required: 'Required field',
+      wrongSymbols: 'Only Latin characters, numbers, hyphens, and underscores',
+      wrongStartWith: 'Must start with a Latin letter',
+    },
     SelectCreate: {
       buttonCreate: 'Create',
       buttonCancel: 'Cancel',
@@ -192,9 +206,7 @@ export const en_GB = {
       cambodia: 'Cambodia',
     },
     FieldAi: {
-      regular: {
-        placeholder: 'Ask something...',
-      },
+      regular: { placeholder: 'Ask something...' },
       secret: {
         placeholder: 'Enter password',
         passwordTooltip: {
@@ -213,18 +225,13 @@ export const en_GB = {
         tooltip: "If in doubt about Giga-helper's answer, you can clarify the information in ",
         tooltipLink: 'the support chat',
       },
-      submit: {
-        tooltip: 'Submit',
-      },
+      submit: { tooltip: 'Submit' },
       resetContext: {
         label: 'Reset scenario',
         tooltip: 'Reset context: previous messages will not be taken into account in the new conversation',
       },
     },
-    FieldChat: {
-      placeholder: 'New message',
-      attachFileTooltip: 'Select file',
-    },
+    FieldChat: { placeholder: 'New message', attachFileTooltip: 'Select file' },
   },
   Header: {
     noDataFound: 'Nothing found',
@@ -251,25 +258,14 @@ export const en_GB = {
     themeModeSystem: 'System',
     themeModeLabel: 'Interface Theme',
   },
-  InfoRow: {
-    booleanValueTrue: 'Yes',
-    booleanValueFalse: 'No',
-  },
+  InfoRow: { booleanValueTrue: 'Yes', booleanValueFalse: 'No' },
   Layout: {
     noAccessTitle: 'Access restricted',
     noAccessSubtitle: "You don't have rights to view this content.",
     noAccessText: 'To gain access, contact the administrator of the organization or project',
   },
-  MobileChips: {
-    selectedN: 'Selected: ',
-    resetAll: 'Reset All',
-    select: 'Select',
-  },
-  MobileFields: {
-    selectedN: 'Selected: ',
-    resetAll: 'Reset All',
-    select: 'Select',
-  },
+  MobileChips: { selectedN: 'Selected: ', resetAll: 'Reset All', select: 'Select' },
+  MobileFields: { selectedN: 'Selected: ', resetAll: 'Reset All', select: 'Select' },
   MobileLayout: {
     continue: 'Continue',
     create: 'Create',
@@ -281,15 +277,8 @@ export const en_GB = {
     add: 'Add',
     restore: 'Restore',
   },
-  MobileToaster: {
-    closeAll: 'Close all',
-    showLess: 'Collapse',
-    showMore: 'Expand',
-  },
-  MobileToolbar: {
-    more: 'More',
-    refresh: 'Refresh',
-  },
+  MobileToaster: { closeAll: 'Close all', showLess: 'Collapse', showMore: 'Expand' },
+  MobileToolbar: { more: 'More', refresh: 'Refresh' },
   ModalPredefined: {
     title: 'Delete',
     recallTitle: 'Withdrawal of application',
@@ -298,14 +287,8 @@ export const en_GB = {
     // TODO: deprecated - UIIAAS-968
     enterName: 'Enter a name',
     invalidName: 'Invalid name',
-    enterText: {
-      name: 'Enter a name',
-      text: 'Enter confirmation text',
-    },
-    invalidText: {
-      name: 'Invalid name',
-      text: 'Invalid confirmation text',
-    },
+    enterText: { name: 'Enter a name', text: 'Enter confirmation text' },
+    invalidText: { name: 'Invalid name', text: 'Invalid confirmation text' },
     required: 'Field must be filled',
     cancel: enTranslations.buttons.cancel,
     delete: 'Delete',
@@ -387,15 +370,9 @@ export const en_GB = {
     noData: 'Failed to load data',
     quotas: 'Quotas',
   },
-  SiteHero: {
-    Main: {
-      platforms: 'Platforms',
-    },
-  },
+  SiteHero: { Main: { platforms: 'Platforms' } },
   SiteSection: {
-    Basic: {
-      showMore: 'Show More',
-    },
+    Basic: { showMore: 'Show More' },
     PersonalManager: {
       title: 'More than regular support',
       subtitle: 'Full support for solving your problems and achieving business results',
@@ -411,13 +388,8 @@ export const en_GB = {
     },
   },
   Widget: {
-    Solutions: {
-      title: 'Quick start guides',
-      link: 'View all',
-    },
-    Products: {
-      title: 'Platform services',
-    },
+    Solutions: { title: 'Quick start guides', link: 'View all' },
+    Products: { title: 'Platform services' },
     dataErrorTitle: 'Could not load data',
     dataErrorDescription: 'Try to refresh the widget',
   },

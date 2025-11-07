@@ -15,6 +15,11 @@ export const fuzzyFilter: FilterFn<any> = (row, columnId, value, addMeta) => {
   return itemRank.passed;
 };
 
-export const onSearchDebounced = debounce((newValue: string, onChange: (newValue: string) => void) => {
-  onChange(newValue);
-}, SEARCH_DELAY);
+type OnSearchDebouncedType = (newValue: string, onChange: (newValue: string) => void) => void;
+
+export const onSearchDebounced: OnSearchDebouncedType = debounce(
+  (newValue: string, onChange: (newValue: string) => void) => {
+    onChange(newValue);
+  },
+  SEARCH_DELAY,
+);
