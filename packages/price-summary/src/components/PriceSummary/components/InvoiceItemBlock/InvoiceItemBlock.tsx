@@ -31,17 +31,21 @@ export function InvoiceItemBlock({ item, index, layoutType }: InvoiceItemBlockPr
       {item.topDivider && <Divider />}
 
       <div className={styles.itemGrid} data-discount={Boolean(item.discount)}>
-        <div className={styles.labelCell} data-secondary={isSecondary}>
-          <Typography.SansBodyS>
-            {item.labelMaxLines ? <TruncateString text={item.label} maxLines={item.labelMaxLines} /> : item.label}
-          </Typography.SansBodyS>
+        {'label' in item && item.label !== undefined && (
+          <>
+            <div className={styles.labelCell} data-secondary={isSecondary}>
+              <Typography.SansBodyS>
+                {item.labelMaxLines ? <TruncateString text={item.label} maxLines={item.labelMaxLines} /> : item.label}
+              </Typography.SansBodyS>
 
-          {item.quantity && <Typography.SansBodyS>{formatQuantity(item.quantity)}</Typography.SansBodyS>}
-        </div>
+              {item.quantity && <Typography.SansBodyS>{formatQuantity(item.quantity)}</Typography.SansBodyS>}
+            </div>
 
-        <Typography.SansBodyS tag='div' className={styles.priceCell} data-secondary={isSecondary}>
-          {getPriceItem()}
-        </Typography.SansBodyS>
+            <Typography.SansBodyS tag='div' className={styles.priceCell} data-secondary={isSecondary}>
+              {getPriceItem()}
+            </Typography.SansBodyS>
+          </>
+        )}
 
         {item.discount && !item.hidePrice && item.price !== undefined && (
           <>

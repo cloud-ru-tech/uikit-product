@@ -19,13 +19,20 @@ export type DiscountDetails = {
   discounts: DiscountItem[];
 };
 
-export type InvoiceItem = {
+export type PriceInvoiceItem = {
   label: string;
-  labelMaxLines?: number;
-  quantity?: string | number;
+  discount?: DiscountItem;
+};
+
+export type DiscountInvoiceItem = {
+  discount: DiscountItem;
+};
+
+export type InvoiceItem = (PriceInvoiceItem | DiscountInvoiceItem) & {
   price?: number;
   hidePrice?: boolean;
-  discount?: DiscountItem;
+  labelMaxLines?: number;
+  quantity?: string | number;
   primary?: boolean;
   topDivider?: boolean;
   bottomDivider?: boolean;
