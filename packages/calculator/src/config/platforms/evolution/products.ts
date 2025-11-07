@@ -5,6 +5,7 @@ import {
   ContainerAppsSVG,
   ElasticCloudServerWithGpuSVG,
   EvolutionComputeSVG,
+  LoadBalancerSVG,
   ManagedKubernetesSVG,
   ManagedPostgreSqlSVG,
   MetastoreSVG,
@@ -39,6 +40,7 @@ import {
   EVOLUTION_STORAGE_S3_FORM_CONFIG,
   EVOLUTION_STORAGE_S3_FREE_TIER_FORM_CONFIG,
 } from './product-config';
+import { EVOLUTION_LOAD_BALANCER_CONFIG } from './product-config/EvolutionLoadBalancer';
 import { EVOLUTION_MANAGED_REDIS_CONFIG } from './product-config/EvolutionManagedRedis';
 import { EVOLUTION_MANAGED_SPARK_CONFIG } from './product-config/EvolutionManagedSpark';
 
@@ -125,6 +127,16 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     formConfig: EVOLUTION_MANAGED_REDIS_CONFIG,
     icon: RedisSVG,
     dataTestId: 'EvolutionManagedRedis',
+    enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionLoadBalancer]: {
+    id: EVOLUTION_PRODUCT.EvolutionLoadBalancer,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution Load Balancer',
+    caption: 'Сервис для балансировки сетевого трафика',
+    formConfig: EVOLUTION_LOAD_BALANCER_CONFIG,
+    icon: LoadBalancerSVG,
+    dataTestId: 'EvolutionLoadBalancer',
     enableConnectToConsole: true,
   },
   [EVOLUTION_PRODUCT.EvolutionStorageS3]: {

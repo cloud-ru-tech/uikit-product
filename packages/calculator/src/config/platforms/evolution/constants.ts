@@ -18,6 +18,7 @@ export const EVOLUTION_PRODUCT = {
   EvolutionManagedTrino: 'evolutionManagedTrino',
   EvolutionManagedRedis: 'evolutionManagedRedis',
   EvolutionManagedSpark: 'evolutionManagedSpark',
+  EvolutionLoadBalancer: 'evolutionLoadBalancer',
 } as const;
 
 const GuaranteedPartItem = {
