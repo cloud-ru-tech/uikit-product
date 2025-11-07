@@ -23,9 +23,6 @@
       "path": "./mobile-carousel/tsconfig.esm.json"
     },
     {
-      "path": "./widget/tsconfig.esm.json"
-    },
-    {
       "path": "./welcome-tour/tsconfig.esm.json"
     },
     {
@@ -189,6 +186,9 @@
     },
     {
       "path": "./claudia/tsconfig.esm.json"
+    },
+    {
+      "path": "./widget/tsconfig.esm.json"
     }
   ],
   "compilerOptions": {

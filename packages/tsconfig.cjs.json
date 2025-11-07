@@ -23,9 +23,6 @@
       "path": "./mobile-carousel/tsconfig.cjs.json"
     },
     {
-      "path": "./widget/tsconfig.cjs.json"
-    },
-    {
       "path": "./welcome-tour/tsconfig.cjs.json"
     },
     {
@@ -189,6 +186,9 @@
     },
     {
       "path": "./claudia/tsconfig.cjs.json"
+    },
+    {
+      "path": "./widget/tsconfig.cjs.json"
     }
   ],
   "compilerOptions": {
