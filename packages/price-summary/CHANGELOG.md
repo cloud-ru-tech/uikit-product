@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-11-10)
+
+
+### Features
+
+* **PDS-3063:** PriceSummary, edit layout component ([35134c1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/35134c150f3746709d27be5c201e443b83b0cedc))
+* **PDS-3063:** PriceSummary, fix after design review ([2278e84](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2278e84f46017f3ad088c5da7859e95e9c7558c2))
+* **PDS-3063:** PriceSummary, optional label for displaying a separate discount line ([09b3fcc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/09b3fcc9b7c09ce3951c40824fd25f6419b64036))
+
+
+
+
+
 ## 0.2.2 (2025-11-07)
 
 ### Only dependencies have been changed
