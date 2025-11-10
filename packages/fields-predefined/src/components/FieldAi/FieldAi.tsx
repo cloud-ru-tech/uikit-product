@@ -97,7 +97,7 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
             minRows={secure ? 1 : 2}
             maxRows={secure ? 1 : 4}
             placeholder={secure ? t('FieldAi.secret.placeholder') : t('FieldAi.regular.placeholder')}
-            className={secure && isValueHidden ? styles.secured : undefined}
+            className={cn(styles.textarea, secure && isValueHidden ? styles.secured : undefined)}
             onKeyDown={handleKeyDown}
             spellCheck={!secure}
             validationState={showPasswordError ? 'error' : validationState}
@@ -126,7 +126,7 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
                     )}
                     <FieldSubmitButton
                       showTooltip={!isTouchDevice}
-                      className={isTouchDevice ? styles.mobileSubmitButton : undefined}
+                      className={cn(styles.submitButton, isTouchDevice ? styles.mobileSubmitButton : undefined)}
                       active={isValueValid && !disabled && isPasswordValid}
                       handleClick={handleSubmit}
                       size={isTouchDevice ? 's' : 'xs'}

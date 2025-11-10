@@ -31,3 +31,21 @@
     transform: translate(-50%, -50%);
   }
 }
+
+.submitButton {
+  &:not([data-disabled]) {
+    /* stylelint-disable-next-line color-no-hex */
+    background: radial-gradient(92.53% 92.53% at 65.87% 21.69%, #7CB5F2 15%, #5FD7C2 45%, #26D07C 65%);
+  }
+}
+
+.textarea {
+  &> :first-child {
+    &[data-validation=default]:not([data-readonly]):not([data-disable-focus]):focus-within:not([data-disabled]) {
+      border-color: transparent;
+      /* stylelint-disable-next-line color-no-hex */
+      background: linear-gradient(var(--sys-neutral-background2-level), var(--sys-neutral-background2-level) 0) padding-box, radial-gradient(92.53% 92.53% at 65.87% 21.69%, #7CB5F2 8%, #78B9EC 17%, #70C6DD 28%, #64D8C7 38%, #5FD7C2 44%, #54D5B3 51%, #40D39C 58%, #26D07C 66%) border-box;
+    }
+  }
+}
+ 

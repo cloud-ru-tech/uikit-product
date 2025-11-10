@@ -47,6 +47,10 @@ $sizes: 's', 'm', 'l';
         @include ste.composite-var(ste.$theme-variables, 'sans', 'body', $size);
 
         padding-right: calc(42px + ste.simple-var(ste.$fields-scroll-bar-width, 'width'));
+
+        &::placeholder {
+          color: ste.simple-var(ste.$sys-neutral-text-disabled);
+        }
       }
     }
   }
@@ -67,6 +71,11 @@ $sizes: 's', 'm', 'l';
   position: relative !important;
   /* stylelint-disable-next-line declaration-no-important */
   flex-shrink: 0 !important;
+
+  &:not([data-disabled]) {
+    /* stylelint-disable-next-line color-no-hex */
+    background: radial-gradient(92.53% 92.53% at 65.87% 21.69%, #7CB5F2 15%, #5FD7C2 45%, #26D07C 65%); 
+  }
 
   &:after {
     content: '';
