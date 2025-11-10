@@ -21,7 +21,7 @@ type StoryProps = PriceSummaryProps & {
 
 const INVOICE_SAMPLE = [
   {
-    title: 'Label detalization list',
+    title: 'Label',
     quantity: 5,
     price: 9999999.99,
     items: [
@@ -53,13 +53,15 @@ const INVOICE_SAMPLE = [
       },
       {
         label: 'Label',
+        labelMaxLines: 1,
         quantity: 1,
         price: 9999999.99,
         primary: true,
         topDivider: true,
       },
       {
-        label: 'Text describing the characteristic',
+        label: 'Text describing the characteristic text describing the characteristic',
+        labelMaxLines: 1,
         primary: false,
       },
       {

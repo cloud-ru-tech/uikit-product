@@ -3,7 +3,6 @@
 .itemGrid {
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: center;
   column-gap: styles-theme-variables.$dimension-1m;
 
   &[data-discount='true'] {
@@ -13,7 +12,6 @@
 
 .labelCell {
   display: flex;
-  align-items: center;
   overflow: hidden;
   gap: styles-theme-variables.$dimension-050m;
 }
