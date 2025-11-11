@@ -50,3 +50,13 @@
   border: 1px solid stv.$sys-claudia-text-support;
   margin-top: 16px;
 }
+
+.gigaMamaWrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 420px;
+  height: 350px;
+  padding: 20px;
+  width: max-content;
+  gap: 16px;
+}

@@ -32,6 +32,70 @@
 | fullWidth | `boolean` | - | Сделать кнопку во всю ширину |
 | ref | `LegacyRef<HTMLButtonElement \| HTMLAnchorElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 | key | `Key` | - |  |
+## ButtonGigaMama
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| href | `string` | - | Ссылка |
+| target | `HTMLAttributeAnchorTarget` | _blank | HTML-аттрибут target |
+| className | `string` | - | CSS-класс |
+| disabled | `boolean` | - | Флаг неактивности компонента |
+| icon | `ReactElement` | - | Иконка |
+| label | `string` | - | Текст кнопки |
+| loading | `boolean` | - | Флаг состояния загрузки |
+| onClick | `MouseEventHandler<HTMLElement>` | - | Колбек обработки клика |
+| onKeyDown | `KeyboardEventHandler<HTMLElement>` | - | Колбек обработки нажатия клавиши |
+| onFocus | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - | Колбек обработки фокуса |
+| onBlur | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - | Колбек обработки блюра |
+| type | "submit" \| "reset" \| "button" | button | HTML-аттрибут type |
+| tabIndex | `number` | - | HTML-аттрибут tab-index |
+| fullWidth | `boolean` | - | Сделать кнопку во всю ширину |
+| ref | `LegacyRef<HTMLButtonElement \| HTMLAnchorElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
+## ButtonGigaOutline
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| iconPosition | enum IconPosition: `"before"`, `"after"` | before | Позиция иконки |
+| href | `string` | - | Ссылка |
+| target | `HTMLAttributeAnchorTarget` | _blank | HTML-аттрибут target |
+| className | `string` | - | CSS-класс |
+| disabled | `boolean` | - | Флаг неактивности компонента |
+| icon | `ReactElement` | - | Иконка |
+| label | `string` | - | Текст кнопки |
+| loading | `boolean` | - | Флаг состояния загрузки |
+| onClick | `MouseEventHandler<HTMLElement>` | - | Колбек обработки клика |
+| onKeyDown | `KeyboardEventHandler<HTMLElement>` | - | Колбек обработки нажатия клавиши |
+| onFocus | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - | Колбек обработки фокуса |
+| onBlur | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - | Колбек обработки блюра |
+| size | enum Size: `"xs"`, `"s"`, `"m"`, `"l"` | s | Размер |
+| type | "submit" \| "reset" \| "button" | button | HTML-аттрибут type |
+| tabIndex | `number` | - | HTML-аттрибут tab-index |
+| fullWidth | `boolean` | - | Сделать кнопку во всю ширину |
+| ref | `LegacyRef<HTMLButtonElement \| HTMLAnchorElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
+## ButtonGigaFunction
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| iconPosition | enum IconPosition: `"before"`, `"after"` | before |  |
+| href | `string` | - |  |
+| target | `HTMLAttributeAnchorTarget` | _blank |  |
+| className | `string` | - | CSS-класс |
+| disabled | `boolean` | - |  |
+| icon | `ReactElement<any, string \| JSXElementConstructor<any>>` | - |  |
+| label | `string` | - |  |
+| loading | `boolean` | - |  |
+| onClick | `MouseEventHandler<HTMLElement>` | - |  |
+| onKeyDown | `KeyboardEventHandler<HTMLElement>` | - |  |
+| onFocus | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - |  |
+| onBlur | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - |  |
+| size | enum Size: `"xs"`, `"s"`, `"m"`, `"l"` | s |  |
+| type | "submit" \| "reset" \| "button" | button |  |
+| tabIndex | `number` | - |  |
+| fullWidth | `boolean` | - |  |
+| ref | `LegacyRef<HTMLButtonElement \| HTMLAnchorElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
 ## ChatStatusAnnouncement
 ### Props
 | name | type | default value | description |
@@ -42,6 +106,435 @@
 | icon | `ReactElement<any, string \| JSXElementConstructor<any>>` | - |  |
 | onActionClick | `() => void` | - |  |
 | className | `string` | - | CSS-класс |
+## IconGiga
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| string | `string \| number` | - |  |
+| href | `string` | - |  |
+| target | `string` | - |  |
+| className | `string` | - | CSS-класс |
+| onClick | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onKeyDown | `KeyboardEventHandler<SVGSVGElement>` | - |  |
+| onFocus | `FocusEventHandler<SVGSVGElement>` | - |  |
+| onBlur | `FocusEventHandler<SVGSVGElement>` | - |  |
+| size | `number` | 24 |  |
+| type | `string` | - |  |
+| tabIndex | `number` | - |  |
+| key | `Key` | - |  |
+| style | `CSSProperties` | - |  |
+| withBranding | `boolean` | - |  |
+| suppressHydrationWarning | `boolean` | - |  |
+| color | `string` | - |  |
+| height | `string \| number` | - |  |
+| id | `string` | - |  |
+| lang | `string` | - |  |
+| max | `string \| number` | - |  |
+| media | `string` | - |  |
+| method | `string` | - |  |
+| min | `string \| number` | - |  |
+| name | `string` | - |  |
+| width | `string \| number` | - |  |
+| role | `AriaRole` | - |  |
+| crossOrigin | enum CrossOrigin: `""`, `"anonymous"`, `"use-credentials"` | - |  |
+| accentHeight | `string \| number` | - |  |
+| accumulate | "none" \| "sum" | - |  |
+| additive | "sum" \| "replace" | - |  |
+| alignmentBaseline | "alphabetic" \| "hanging" \| "ideographic" \| "mathematical" \| "auto" \| "baseline" \| "before-edge" \| "text-before-edge" \| "middle" \| "central" \| "after-edge" \| "text-after-edge" \| "inherit" | - |  |
+| allowReorder | "no" \| "yes" | - |  |
+| alphabetic | `string \| number` | - |  |
+| amplitude | `string \| number` | - |  |
+| arabicForm | "initial" \| "medial" \| "terminal" \| "isolated" | - |  |
+| ascent | `string \| number` | - |  |
+| attributeName | `string` | - |  |
+| attributeType | `string` | - |  |
+| autoReverse | `Booleanish` | - |  |
+| azimuth | `string \| number` | - |  |
+| baseFrequency | `string \| number` | - |  |
+| baselineShift | `string \| number` | - |  |
+| baseProfile | `string \| number` | - |  |
+| bbox | `string \| number` | - |  |
+| begin | `string \| number` | - |  |
+| bias | `string \| number` | - |  |
+| by | `string \| number` | - |  |
+| calcMode | `string \| number` | - |  |
+| capHeight | `string \| number` | - |  |
+| clip | `string \| number` | - |  |
+| clipPath | `string` | - |  |
+| clipPathUnits | `string \| number` | - |  |
+| clipRule | `string \| number` | - |  |
+| colorInterpolation | `string \| number` | - |  |
+| colorInterpolationFilters | "auto" \| "inherit" \| "sRGB" \| "linearRGB" | - |  |
+| colorProfile | `string \| number` | - |  |
+| colorRendering | `string \| number` | - |  |
+| contentScriptType | `string \| number` | - |  |
+| contentStyleType | `string \| number` | - |  |
+| cursor | `string \| number` | - |  |
+| cx | `string \| number` | - |  |
+| cy | `string \| number` | - |  |
+| d | `string` | - |  |
+| decelerate | `string \| number` | - |  |
+| descent | `string \| number` | - |  |
+| diffuseConstant | `string \| number` | - |  |
+| direction | `string \| number` | - |  |
+| display | `string \| number` | - |  |
+| divisor | `string \| number` | - |  |
+| dominantBaseline | `string \| number` | - |  |
+| dur | `string \| number` | - |  |
+| dx | `string \| number` | - |  |
+| dy | `string \| number` | - |  |
+| edgeMode | `string \| number` | - |  |
+| elevation | `string \| number` | - |  |
+| enableBackground | `string \| number` | - |  |
+| end | `string \| number` | - |  |
+| exponent | `string \| number` | - |  |
+| externalResourcesRequired | `Booleanish` | - |  |
+| fill | `string` | - |  |
+| fillOpacity | `string \| number` | - |  |
+| fillRule | "inherit" \| "nonzero" \| "evenodd" | - |  |
+| filter | `string` | - |  |
+| filterRes | `string \| number` | - |  |
+| filterUnits | `string \| number` | - |  |
+| floodColor | `string \| number` | - |  |
+| floodOpacity | `string \| number` | - |  |
+| focusable | `Booleanish \| "auto"` | - |  |
+| fontFamily | `string` | - |  |
+| fontSize | `string \| number` | - |  |
+| fontSizeAdjust | `string \| number` | - |  |
+| fontStretch | `string \| number` | - |  |
+| fontStyle | `string \| number` | - |  |
+| fontVariant | `string \| number` | - |  |
+| fontWeight | `string \| number` | - |  |
+| format | `string \| number` | - |  |
+| fr | `string \| number` | - |  |
+| from | `string \| number` | - |  |
+| fx | `string \| number` | - |  |
+| fy | `string \| number` | - |  |
+| g1 | `string \| number` | - |  |
+| g2 | `string \| number` | - |  |
+| glyphName | `string \| number` | - |  |
+| glyphOrientationHorizontal | `string \| number` | - |  |
+| glyphOrientationVertical | `string \| number` | - |  |
+| glyphRef | `string \| number` | - |  |
+| gradientTransform | `string` | - |  |
+| gradientUnits | `string` | - |  |
+| hanging | `string \| number` | - |  |
+| horizAdvX | `string \| number` | - |  |
+| horizOriginX | `string \| number` | - |  |
+| ideographic | `string \| number` | - |  |
+| imageRendering | `string \| number` | - |  |
+| in2 | `string \| number` | - |  |
+| in | `string` | - |  |
+| intercept | `string \| number` | - |  |
+| k1 | `string \| number` | - |  |
+| k2 | `string \| number` | - |  |
+| k3 | `string \| number` | - |  |
+| k4 | `string \| number` | - |  |
+| k | `string \| number` | - |  |
+| kernelMatrix | `string \| number` | - |  |
+| kernelUnitLength | `string \| number` | - |  |
+| kerning | `string \| number` | - |  |
+| keyPoints | `string \| number` | - |  |
+| keySplines | `string \| number` | - |  |
+| keyTimes | `string \| number` | - |  |
+| lengthAdjust | `string \| number` | - |  |
+| letterSpacing | `string \| number` | - |  |
+| lightingColor | `string \| number` | - |  |
+| limitingConeAngle | `string \| number` | - |  |
+| local | `string \| number` | - |  |
+| markerEnd | `string` | - |  |
+| markerHeight | `string \| number` | - |  |
+| markerMid | `string` | - |  |
+| markerStart | `string` | - |  |
+| markerUnits | `string \| number` | - |  |
+| markerWidth | `string \| number` | - |  |
+| mask | `string` | - |  |
+| maskContentUnits | `string \| number` | - |  |
+| maskUnits | `string \| number` | - |  |
+| mathematical | `string \| number` | - |  |
+| mode | `string \| number` | - |  |
+| numOctaves | `string \| number` | - |  |
+| offset | `string \| number` | - |  |
+| opacity | `string \| number` | - |  |
+| operator | `string \| number` | - |  |
+| order | `string \| number` | - |  |
+| orient | `string \| number` | - |  |
+| orientation | `string \| number` | - |  |
+| origin | `string \| number` | - |  |
+| overflow | `string \| number` | - |  |
+| overlinePosition | `string \| number` | - |  |
+| overlineThickness | `string \| number` | - |  |
+| paintOrder | `string \| number` | - |  |
+| panose1 | `string \| number` | - |  |
+| path | `string` | - |  |
+| pathLength | `string \| number` | - |  |
+| patternContentUnits | `string` | - |  |
+| patternTransform | `string \| number` | - |  |
+| patternUnits | `string` | - |  |
+| pointerEvents | `string \| number` | - |  |
+| points | `string` | - |  |
+| pointsAtX | `string \| number` | - |  |
+| pointsAtY | `string \| number` | - |  |
+| pointsAtZ | `string \| number` | - |  |
+| preserveAlpha | `Booleanish` | - |  |
+| preserveAspectRatio | `string` | - |  |
+| primitiveUnits | `string \| number` | - |  |
+| r | `string \| number` | - |  |
+| radius | `string \| number` | - |  |
+| refX | `string \| number` | - |  |
+| refY | `string \| number` | - |  |
+| renderingIntent | `string \| number` | - |  |
+| repeatCount | `string \| number` | - |  |
+| repeatDur | `string \| number` | - |  |
+| requiredExtensions | `string \| number` | - |  |
+| requiredFeatures | `string \| number` | - |  |
+| restart | `string \| number` | - |  |
+| result | `string` | - |  |
+| rotate | `string \| number` | - |  |
+| rx | `string \| number` | - |  |
+| ry | `string \| number` | - |  |
+| scale | `string \| number` | - |  |
+| seed | `string \| number` | - |  |
+| shapeRendering | `string \| number` | - |  |
+| slope | `string \| number` | - |  |
+| spacing | `string \| number` | - |  |
+| specularConstant | `string \| number` | - |  |
+| specularExponent | `string \| number` | - |  |
+| speed | `string \| number` | - |  |
+| spreadMethod | `string` | - |  |
+| startOffset | `string \| number` | - |  |
+| stdDeviation | `string \| number` | - |  |
+| stemh | `string \| number` | - |  |
+| stemv | `string \| number` | - |  |
+| stitchTiles | `string \| number` | - |  |
+| stopColor | `string` | - |  |
+| stopOpacity | `string \| number` | - |  |
+| strikethroughPosition | `string \| number` | - |  |
+| strikethroughThickness | `string \| number` | - |  |
+| stroke | `string` | - |  |
+| strokeDasharray | `string \| number` | - |  |
+| strokeDashoffset | `string \| number` | - |  |
+| strokeLinecap | "inherit" \| "butt" \| "round" \| "square" | - |  |
+| strokeLinejoin | "inherit" \| "round" \| "miter" \| "bevel" | - |  |
+| strokeMiterlimit | `string \| number` | - |  |
+| strokeOpacity | `string \| number` | - |  |
+| strokeWidth | `string \| number` | - |  |
+| surfaceScale | `string \| number` | - |  |
+| systemLanguage | `string \| number` | - |  |
+| tableValues | `string \| number` | - |  |
+| targetX | `string \| number` | - |  |
+| targetY | `string \| number` | - |  |
+| textAnchor | `string` | - |  |
+| textDecoration | `string \| number` | - |  |
+| textLength | `string \| number` | - |  |
+| textRendering | `string \| number` | - |  |
+| to | `string \| number` | - |  |
+| transform | `string` | - |  |
+| u1 | `string \| number` | - |  |
+| u2 | `string \| number` | - |  |
+| underlinePosition | `string \| number` | - |  |
+| underlineThickness | `string \| number` | - |  |
+| unicode | `string \| number` | - |  |
+| unicodeBidi | `string \| number` | - |  |
+| unicodeRange | `string \| number` | - |  |
+| unitsPerEm | `string \| number` | - |  |
+| vAlphabetic | `string \| number` | - |  |
+| values | `string` | - |  |
+| vectorEffect | `string \| number` | - |  |
+| version | `string` | - |  |
+| vertAdvY | `string \| number` | - |  |
+| vertOriginX | `string \| number` | - |  |
+| vertOriginY | `string \| number` | - |  |
+| vHanging | `string \| number` | - |  |
+| vIdeographic | `string \| number` | - |  |
+| viewBox | `string` | - |  |
+| viewTarget | `string \| number` | - |  |
+| visibility | `string \| number` | - |  |
+| vMathematical | `string \| number` | - |  |
+| widths | `string \| number` | - |  |
+| wordSpacing | `string \| number` | - |  |
+| writingMode | `string \| number` | - |  |
+| x1 | `string \| number` | - |  |
+| x2 | `string \| number` | - |  |
+| x | `string \| number` | - |  |
+| xChannelSelector | `string` | - |  |
+| xHeight | `string \| number` | - |  |
+| xlinkActuate | `string` | - |  |
+| xlinkArcrole | `string` | - |  |
+| xlinkHref | `string` | - |  |
+| xlinkRole | `string` | - |  |
+| xlinkShow | `string` | - |  |
+| xlinkTitle | `string` | - |  |
+| xlinkType | `string` | - |  |
+| xmlBase | `string` | - |  |
+| xmlLang | `string` | - |  |
+| xmlns | `string` | - |  |
+| xmlnsXlink | `string` | - |  |
+| xmlSpace | `string` | - |  |
+| y1 | `string \| number` | - |  |
+| y2 | `string \| number` | - |  |
+| y | `string \| number` | - |  |
+| yChannelSelector | `string` | - |  |
+| z | `string \| number` | - |  |
+| zoomAndPan | `string` | - |  |
+| dangerouslySetInnerHTML | `{ __html: string \| TrustedHTML; }` | - |  |
+| onCopy | `ClipboardEventHandler<SVGSVGElement>` | - |  |
+| onCopyCapture | `ClipboardEventHandler<SVGSVGElement>` | - |  |
+| onCut | `ClipboardEventHandler<SVGSVGElement>` | - |  |
+| onCutCapture | `ClipboardEventHandler<SVGSVGElement>` | - |  |
+| onPaste | `ClipboardEventHandler<SVGSVGElement>` | - |  |
+| onPasteCapture | `ClipboardEventHandler<SVGSVGElement>` | - |  |
+| onCompositionEnd | `CompositionEventHandler<SVGSVGElement>` | - |  |
+| onCompositionEndCapture | `CompositionEventHandler<SVGSVGElement>` | - |  |
+| onCompositionStart | `CompositionEventHandler<SVGSVGElement>` | - |  |
+| onCompositionStartCapture | `CompositionEventHandler<SVGSVGElement>` | - |  |
+| onCompositionUpdate | `CompositionEventHandler<SVGSVGElement>` | - |  |
+| onCompositionUpdateCapture | `CompositionEventHandler<SVGSVGElement>` | - |  |
+| onFocusCapture | `FocusEventHandler<SVGSVGElement>` | - |  |
+| onBlurCapture | `FocusEventHandler<SVGSVGElement>` | - |  |
+| onChange | `FormEventHandler<SVGSVGElement>` | - |  |
+| onChangeCapture | `FormEventHandler<SVGSVGElement>` | - |  |
+| onBeforeInput | `FormEventHandler<SVGSVGElement>` | - |  |
+| onBeforeInputCapture | `FormEventHandler<SVGSVGElement>` | - |  |
+| onInput | `FormEventHandler<SVGSVGElement>` | - |  |
+| onInputCapture | `FormEventHandler<SVGSVGElement>` | - |  |
+| onReset | `FormEventHandler<SVGSVGElement>` | - |  |
+| onResetCapture | `FormEventHandler<SVGSVGElement>` | - |  |
+| onSubmit | `FormEventHandler<SVGSVGElement>` | - |  |
+| onSubmitCapture | `FormEventHandler<SVGSVGElement>` | - |  |
+| onInvalid | `FormEventHandler<SVGSVGElement>` | - |  |
+| onInvalidCapture | `FormEventHandler<SVGSVGElement>` | - |  |
+| onLoad | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onLoadCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onError | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onErrorCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onKeyDownCapture | `KeyboardEventHandler<SVGSVGElement>` | - |  |
+| onKeyPress | `KeyboardEventHandler<SVGSVGElement>` | - | @deprecated |
+| onKeyPressCapture | `KeyboardEventHandler<SVGSVGElement>` | - | @deprecated |
+| onKeyUp | `KeyboardEventHandler<SVGSVGElement>` | - |  |
+| onKeyUpCapture | `KeyboardEventHandler<SVGSVGElement>` | - |  |
+| onAbort | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onAbortCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onCanPlay | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onCanPlayCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onCanPlayThrough | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onCanPlayThroughCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onDurationChange | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onDurationChangeCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onEmptied | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onEmptiedCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onEncrypted | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onEncryptedCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onEnded | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onEndedCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onLoadedData | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onLoadedDataCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onLoadedMetadata | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onLoadedMetadataCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onLoadStart | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onLoadStartCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onPause | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onPauseCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onPlay | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onPlayCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onPlaying | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onPlayingCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onProgress | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onProgressCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onRateChange | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onRateChangeCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onResize | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onResizeCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onSeeked | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onSeekedCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onSeeking | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onSeekingCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onStalled | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onStalledCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onSuspend | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onSuspendCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onTimeUpdate | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onTimeUpdateCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onVolumeChange | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onVolumeChangeCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onWaiting | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onWaitingCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onAuxClick | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onAuxClickCapture | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onClickCapture | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onContextMenu | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onContextMenuCapture | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onDoubleClick | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onDoubleClickCapture | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onDrag | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDragCapture | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDragEnd | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDragEndCapture | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDragEnter | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDragEnterCapture | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDragExit | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDragExitCapture | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDragLeave | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDragLeaveCapture | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDragOver | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDragOverCapture | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDragStart | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDragStartCapture | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDrop | `DragEventHandler<SVGSVGElement>` | - |  |
+| onDropCapture | `DragEventHandler<SVGSVGElement>` | - |  |
+| onMouseDown | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onMouseDownCapture | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onMouseEnter | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onMouseLeave | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onMouseMove | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onMouseMoveCapture | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onMouseOut | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onMouseOutCapture | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onMouseOver | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onMouseOverCapture | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onMouseUp | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onMouseUpCapture | `MouseEventHandler<SVGSVGElement>` | - |  |
+| onSelect | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onSelectCapture | `ReactEventHandler<SVGSVGElement>` | - |  |
+| onTouchCancel | `TouchEventHandler<SVGSVGElement>` | - |  |
+| onTouchCancelCapture | `TouchEventHandler<SVGSVGElement>` | - |  |
+| onTouchEnd | `TouchEventHandler<SVGSVGElement>` | - |  |
+| onTouchEndCapture | `TouchEventHandler<SVGSVGElement>` | - |  |
+| onTouchMove | `TouchEventHandler<SVGSVGElement>` | - |  |
+| onTouchMoveCapture | `TouchEventHandler<SVGSVGElement>` | - |  |
+| onTouchStart | `TouchEventHandler<SVGSVGElement>` | - |  |
+| onTouchStartCapture | `TouchEventHandler<SVGSVGElement>` | - |  |
+| onPointerDown | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onPointerDownCapture | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onPointerMove | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onPointerMoveCapture | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onPointerUp | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onPointerUpCapture | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onPointerCancel | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onPointerCancelCapture | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onPointerEnter | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onPointerLeave | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onPointerOver | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onPointerOverCapture | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onPointerOut | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onPointerOutCapture | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onGotPointerCapture | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onGotPointerCaptureCapture | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onLostPointerCapture | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onLostPointerCaptureCapture | `PointerEventHandler<SVGSVGElement>` | - |  |
+| onScroll | `UIEventHandler<SVGSVGElement>` | - |  |
+| onScrollCapture | `UIEventHandler<SVGSVGElement>` | - |  |
+| onWheel | `WheelEventHandler<SVGSVGElement>` | - |  |
+| onWheelCapture | `WheelEventHandler<SVGSVGElement>` | - |  |
+| onAnimationStart | `AnimationEventHandler<SVGSVGElement>` | - |  |
+| onAnimationStartCapture | `AnimationEventHandler<SVGSVGElement>` | - |  |
+| onAnimationEnd | `AnimationEventHandler<SVGSVGElement>` | - |  |
+| onAnimationEndCapture | `AnimationEventHandler<SVGSVGElement>` | - |  |
+| onAnimationIteration | `AnimationEventHandler<SVGSVGElement>` | - |  |
+| onAnimationIterationCapture | `AnimationEventHandler<SVGSVGElement>` | - |  |
+| onTransitionEnd | `TransitionEventHandler<SVGSVGElement>` | - |  |
+| onTransitionEndCapture | `TransitionEventHandler<SVGSVGElement>` | - |  |
+| ref | `LegacyRef<SVGSVGElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 ## RecommendPanel
 ### Props
 | name | type | default value | description |
@@ -58,6 +551,34 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| onSubmit* | `(value: string) => void` | - | Колбек действия при отправке |
+| className | `string` | - | CSS-класс |
+| disabled | `boolean` | - | Является ли поле деактивированным |
+| onKeyDown | `KeyboardEventHandler<HTMLTextAreaElement>` | - | Колбек нажатия клавиши клавиатуры |
+| onFocus | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек получения фокуса |
+| onBlur | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек потери фокуса |
+| id | `string` | - | HTML-аттрибут id |
+| name | `string` | - | HTML-аттрибут name |
+| onChange | `(value: string, e?: ChangeEvent<HTMLTextAreaElement>) => void` | - | Колбек смены значения |
+| value | `string` | - | HTML-аттрибут value |
+| maxLength | `number` | - | Максимальное кол-во символов |
+| readonly | `boolean` | - | Является ли поле доступным только на чтение |
+| autoFocus | `boolean` | - | Включен ли авто-фокус |
+| inputMode | enum InputMode: `"none"`, `"text"`, `"search"`, `"decimal"`, `"numeric"`, `"tel"`, `"email"`, `"url"` | - | Режим работы экранной клавиатуры |
+| caption | `string` | - | Подпись справа от лейбла |
+| hint | `string` | - | Подсказка внизу |
+| validationState | enum ValidationState: `"default"`, `"error"`, `"warning"`, `"success"` | - | Состояние валидации |
+| showHintIcon | `boolean` | - | Отображать иконку подсказки |
+| labelTooltipPlacement | enum Placement: `"left"`, `"left-start"`, `"left-end"`, `"right"`, `"right-start"`, `"right-end"`, `"top"`, `"top-start"`, `"top-end"`, `"bottom"`, `"bottom-start"`, `"bottom-end"` | top | Расположение подсказки лейбла |
+| error | `string` | - |  |
+| minRows | `number` | 3 | Минимальное кол-во строк, до которого размер поля может быть увеличен |
+| maxRows | `number` | 1000 | Максимальное кол-во строк, до которого размер поля может быть увеличен |
+| resizable | `boolean` | - | Может ли ли пользователь изменять размеры поля (если св-во не включено, поле автоматически меняет свой размер) |
+| showCopyButton | `boolean` | - | Отображение кнопки Копировать для поля (актуально только для `readonly = true`) |
+| onCopyButtonClick | `() => void` | - | Колбек клика по кнопке Копировать для поля |
+| showClearButton | `boolean` | true | Отображение кнопки очистки поля |
+| allowMoreThanMaxLength | `boolean` | - | Можно ли вводить больше разрешённого кол-ва символов |
 | ref | `LegacyRef<HTMLTextAreaElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 | key | `Key` | - |  |
 

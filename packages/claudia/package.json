@@ -35,9 +35,8 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-icons": "15.0.5",
-    "@sbercloud/uikit-product-locale": "0.16.0",
     "@sbercloud/uikit-product-mobile-dropdown": "0.9.19",
-    "@sbercloud/uikit-product-mobile-fields": "0.11.21",
+    "@sbercloud/uikit-product-mobile-fields": "0.11.22",
     "@sbercloud/uikit-product-utils": "6.2.2",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/drop-zone": "0.9.6",
@@ -51,5 +50,8 @@
     "@snack-uikit/utils": "4.0.0",
     "classnames": "2.5.1",
     "react-textarea-autosize": "8.5.9"
+  },
+  "peerDependencies": {
+    "@sbercloud/uikit-product-locale": "*"
   }
 }

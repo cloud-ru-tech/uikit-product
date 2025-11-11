@@ -558,13 +558,13 @@ importers:
         specifier: 15.0.5
         version: link:../icons
       '@sbercloud/uikit-product-locale':
-        specifier: 0.16.0
+        specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
         specifier: 0.9.19
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.11.21
+        specifier: 0.11.22
         version: link:../mobile-fields
       '@sbercloud/uikit-product-utils':
         specifier: 6.2.2

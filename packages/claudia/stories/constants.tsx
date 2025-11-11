@@ -3,7 +3,7 @@ import { ArgTypes } from '@storybook/react';
 import * as Icons from '@sbercloud/uikit-product-icons';
 import { BaseItemProps } from '@snack-uikit/list';
 
-import { APPEARANCE, HTML_TYPE, SIZE } from '../src/components/ButtonClaudia/constants';
+import { APPEARANCE, HTML_TYPE, ICON_POSITION, SIZE } from '../src/components/ButtonClaudia/constants';
 
 export const DROPLIST_ITEMS: BaseItemProps[] = [
   {
@@ -91,6 +91,80 @@ export const COMMON_ARG_TYPES_CLAUDIA_BUTTON: ArgTypes = {
   },
   size: {
     options: Object.values(SIZE),
+    control: {
+      type: 'radio',
+    },
+  },
+  icon: {
+    name: '[Stories]: Show icon examples',
+    options: Object.keys(ICONS),
+    mapping: ICONS,
+    control: {
+      type: 'select',
+    },
+  },
+  testMode: {
+    name: '[Stories]: Show onClick counter',
+    control: {
+      type: 'boolean',
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+};
+
+export const COMMON_ARG_TYPES_GIGA_BUTTON: ArgTypes = {
+  type: {
+    options: Object.values(HTML_TYPE),
+    control: {
+      type: 'radio',
+    },
+  },
+  size: {
+    options: Object.values(SIZE),
+    control: {
+      type: 'radio',
+    },
+  },
+  appearance: {
+    options: Object.values(APPEARANCE),
+    control: {
+      type: 'radio',
+    },
+  },
+  icon: {
+    name: '[Stories]: Show icon examples',
+    options: Object.keys(ICONS),
+    mapping: ICONS,
+    control: {
+      type: 'select',
+    },
+  },
+  iconPosition: {
+    options: Object.values(ICON_POSITION),
+    control: {
+      type: 'radio',
+    },
+  },
+  testMode: {
+    name: '[Stories]: Show onClick counter',
+    control: {
+      type: 'boolean',
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+};
+
+export const COMMON_ARG_TYPES_GIGA_MAMA_BUTTON: ArgTypes = {
+  type: {
+    options: Object.values(HTML_TYPE),
     control: {
       type: 'radio',
     },

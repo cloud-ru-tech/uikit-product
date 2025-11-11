@@ -1,0 +1,223 @@
+/* stylelint-disable color-no-hex */
+// TODO: refactor styles to use tokens
+@use '@sbercloud/figma-tokens-giga-id/build/scss/components/styles-tokens-button-buttonOutline' as buttonOutline;
+@use '@sbercloud/figma-tokens-giga-id/build/scss/styles-theme-variables' as stv;
+@use '@sbercloud/figma-tokens-giga-id/build/scss/components/styles-tokens-element';
+
+$sizes: 'xs', 's', 'm', 'l';
+$variants: 'label-only', 'icon-only', 'icon-after';
+$appearances: 'primary', 'neutral';
+$typography: (
+  'xs': stv.$sans-label-s,
+  's': stv.$sans-label-m,
+  'm': stv.$sans-label-l,
+  'l': stv.$sans-label-l,
+);
+
+$outline-gradient-color-start: #7cb5f2;
+$outline-gradient-color-middle: #5fd7c2;
+$outline-gradient-color-end: #26d07c;
+$outline-gradient: radial-gradient(
+  92.53% 92.53% at 65.87% 21.69%,
+  $outline-gradient-color-start 15%,
+  $outline-gradient-color-middle 45%,
+  $outline-gradient-color-end 65%
+);
+$outline-box-shadow-hover: 0px 0px 1px 0px #00000026 inset;
+$outline-box-shadow-active: 0px 0px 1px 0px #0000004d inset;
+$outline-filter-brightness-hover: 0.9;
+$outline-filter-brightness-active: 0.7;
+
+@mixin icon-fill($color) {
+  .icon {
+    color: $color;
+  }
+}
+
+@mixin label-color($color) {
+  .label {
+    color: $color;
+  }
+}
+
+@mixin button-anatomy-styles($button-theme, $sizes, $variants, $typography) {
+  @each $size in $sizes {
+    &[data-size='#{$size}'] {
+      .label {
+        @include styles-tokens-element.composite-var($typography, $size);
+      }
+
+      .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: styles-tokens-element.$icon-s;
+        height: styles-tokens-element.$icon-s;
+
+        svg {
+          max-width: styles-tokens-element.$icon-s;
+          max-height: styles-tokens-element.$icon-s;
+        }
+      }
+
+      @each $variant in $variants {
+        &[data-variant='#{$variant}'] {
+          @include styles-tokens-element.composite-var($button-theme, 'container', $size, $variant);
+        }
+      }
+
+      &[data-variant='icon-before'] {
+        @include styles-tokens-element.composite-var($button-theme, 'container', $size, 'icon-after');
+        $padding-from-icon: styles-tokens-element.simple-var(
+          $button-theme,
+          'container',
+          $size,
+          'icon-after',
+          'padding-right'
+        );
+        $padding-from-label: styles-tokens-element.simple-var(
+          $button-theme,
+          'container',
+          $size,
+          'icon-after',
+          'padding-left'
+        );
+        padding-left: $padding-from-icon;
+        padding-right: $padding-from-label;
+      }
+    }
+  }
+}
+
+@mixin loading-label-only($button-theme) {
+  &[data-loading][data-variant='label-only'] {
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .label {
+      @include styles-tokens-element.composite-var($button-theme, 'label', 'load-label-only');
+    }
+  }
+}
+
+@mixin button-focus-outline {
+  &:focus-visible {
+    @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-s);
+
+    outline-offset: styles-tokens-element.$spacing-state-focus-offset;
+    outline-color: stv.$sys-available-complementary;
+  }
+}
+
+@mixin giga-outline-colors {
+  @each $appearance in $appearances {
+    &[data-appearance='#{$appearance}'] {
+      @include label-color(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-default'));
+      @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-default'));
+
+      background-color: transparent;
+      border: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        padding: 1px;
+        border-radius: inherit;
+        background: $outline-gradient;
+        mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          @include label-color(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
+          @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
+
+          box-shadow: $outline-box-shadow-hover;
+
+          &::before {
+            filter: brightness($outline-filter-brightness-hover);
+          }
+
+          .icon {
+            filter: brightness($outline-filter-brightness-hover);
+          }
+        }
+      }
+
+      @media (hover: none) or (hover: hover) {
+        &:focus-visible {
+          @include label-color(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
+          @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
+        }
+
+        &:active {
+          @include label-color(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-pressed'));
+          @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-pressed'));
+
+          box-shadow: $outline-box-shadow-active;
+
+          &::before {
+            filter: brightness($outline-filter-brightness-active);
+          }
+
+          .icon {
+            filter: brightness($outline-filter-brightness-active);
+          }
+        }
+
+        &[data-loading] {
+          @include label-color(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-pressed'));
+          @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-pressed'));
+
+          box-shadow: $outline-box-shadow-active;
+
+          &::before {
+            filter: brightness($outline-filter-brightness-active);
+          }
+
+          .icon {
+            filter: brightness($outline-filter-brightness-active);
+          }
+        }
+
+        &:disabled,
+        &[data-disabled] {
+          @include label-color(stv.simple-var(stv.$theme-variables, 'sys', 'neutral', 'text-disabled'));
+          @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', 'neutral', 'text-disabled'));
+
+          background-color: transparent;
+
+          &::before {
+            background: stv.simple-var(stv.$theme-variables, 'sys', 'neutral', 'text-disabled');
+          }
+
+          .icon {
+            svg path {
+              fill: currentColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.button.specificityX2 {
+  display: inline-flex;
+
+  @include button-anatomy-styles(buttonOutline.$button-outline, $sizes, $variants, $typography);
+  @include loading-label-only(buttonOutline.$button-outline);
+  @include giga-outline-colors;
+  @include button-focus-outline;
+}

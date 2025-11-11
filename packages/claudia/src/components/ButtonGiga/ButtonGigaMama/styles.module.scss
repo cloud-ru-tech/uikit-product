@@ -1,0 +1,180 @@
+/* stylelint-disable color-no-hex */
+// TODO: refactor styles to use tokens
+@use '@sbercloud/figma-tokens-giga-id/build/scss/styles-theme-variables' as stv;
+@use '@sbercloud/figma-tokens-giga-id/build/scss/components/styles-tokens-element';
+
+$mama-gap: 4px;
+$mama-width: 304px;
+$mama-max-height: 72px;
+$mama-padding: 24px 0px;
+$mama-border-radius: 12px;
+$mama-icon-height: 24px;
+$mama-before-padding: 1px;
+
+$mama-gradient-color-start: #7cb5f2;
+$mama-gradient-color-middle: #5fd7c2;
+$mama-gradient-color-end: #26d07c;
+$mama-gradient: radial-gradient(
+  92.53% 92.53% at 65.87% 21.69%,
+  $mama-gradient-color-start 15%,
+  $mama-gradient-color-middle 45%,
+  $mama-gradient-color-end 65%
+);
+
+$mama-box-shadow-hover: 0px 0px 1px 0px #00000026 inset;
+$mama-box-shadow-active: 0px 0px 1px 0px #0000004d inset;
+$mama-filter-brightness-hover: 0.9;
+$mama-filter-brightness-active: 0.7;
+
+@mixin icon-fill($color) {
+  .icon {
+    color: $color;
+  }
+}
+
+@mixin label-color($color) {
+  .label {
+    color: $color;
+  }
+}
+
+.button.specificity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $mama-gap;
+  width: $mama-width;
+  max-height: $mama-max-height;
+  padding: $mama-padding;
+  border-radius: $mama-border-radius;
+
+  background-color: styles-tokens-element.color-on-background-with-opacity(
+    transparent,
+    stv.$sys-primary-decor-default,
+    0.7
+  );
+  border: none;
+
+  &[data-full-width] {
+    width: 100%;
+  }
+
+  @include label-color(stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'text-support'));
+
+  .label {
+    @include styles-tokens-element.composite-var(stv.$sans-title-m);
+  }
+
+  .icon {
+    color: stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'text-support');
+    height: $mama-icon-height;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: $mama-before-padding;
+    border-radius: inherit;
+    background: $mama-gradient;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  &:disabled,
+  &[data-disabled] {
+    @include label-color(stv.simple-var(stv.$theme-variables, 'sys', 'neutral', 'text-disabled'));
+    @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', 'neutral', 'text-disabled'));
+
+    background-color: transparent;
+
+    &::before {
+      background: stv.simple-var(stv.$theme-variables, 'sys', 'neutral', 'text-disabled');
+    }
+
+    .icon {
+      svg path {
+        fill: stv.simple-var(stv.$theme-variables, 'sys', 'neutral', 'text-disabled');
+      }
+    }
+  }
+
+  &:hover:not(:disabled):not([data-disabled]) {
+    @include label-color(stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'text-support'));
+    @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'text-support'));
+
+    box-shadow: $mama-box-shadow-hover;
+
+    &::before {
+      filter: brightness($mama-filter-brightness-hover);
+    }
+
+    .icon {
+      filter: brightness($mama-filter-brightness-hover);
+    }
+
+    .label {
+      filter: brightness($mama-filter-brightness-hover);
+    }
+  }
+
+  &:active:not(:disabled):not([data-disabled]) {
+    @include label-color(stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'text-support'));
+    @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'text-support'));
+
+    box-shadow: $mama-box-shadow-active;
+
+    &::before {
+      filter: brightness($mama-filter-brightness-active);
+    }
+
+    .label {
+      filter: brightness($mama-filter-brightness-active);
+    }
+
+    .icon {
+      filter: brightness($mama-filter-brightness-active);
+    }
+  }
+
+  &:focus-visible:not(:disabled):not([data-disabled]) {
+    @include label-color(stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'text-support'));
+    @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'text-support'));
+
+    .label {
+      filter: brightness($mama-filter-brightness-hover);
+    }
+
+    .icon {
+      filter: brightness($mama-filter-brightness-hover);
+    }
+
+    @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-s);
+
+    outline-offset: styles-tokens-element.$spacing-state-focus-offset;
+    outline-color: stv.$sys-available-complementary;
+  }
+
+  &[data-loading]:not(:disabled):not([data-disabled]) {
+    @include label-color(stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'text-support'));
+    @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'accent-pressed'));
+
+    box-shadow: $mama-box-shadow-active;
+
+    &::before {
+      filter: brightness($mama-filter-brightness-active);
+    }
+
+    .label {
+      filter: brightness($mama-filter-brightness-active);
+    }
+
+    .icon {
+      filter: brightness($mama-filter-brightness-active);
+    }
+  }
+}
