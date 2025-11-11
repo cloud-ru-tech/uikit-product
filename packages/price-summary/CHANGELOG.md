@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2025-11-11)
+
+
+### Features
+
+* **PDS-3130:** price-summary. add support for "from" price prefix in total value display ([74c2aed](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74c2aed9c60e85f44700f08d5c5aa9bedd70fd95))
+
+
+
+
+
 # 0.3.0 (2025-11-10)
 
 
