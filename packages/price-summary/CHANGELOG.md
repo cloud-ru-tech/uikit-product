@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2025-11-11)
+
+
+### Features
+
+* **PDS-3125:** add tooltip support to invoice item labels ([9175dd4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9175dd428014a9d87f1fea7f3e53b2cbd9ad5538))
+
+
+
+
+
 # 0.4.0 (2025-11-11)
 
 
