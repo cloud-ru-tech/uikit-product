@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.20.4 (2025-11-12)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-card-predefined@0.8.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@15.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-layout@0.19.62](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/layout/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-dropdown@0.9.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-modal@0.9.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-tooltip@0.4.64](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-page-layout@0.21.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/page-layout/CHANGELOG.md)
+* [@sbercloud/uikit-product-quota@0.6.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/quota/CHANGELOG.md)
+
+
+
+
+
 ## 0.20.3 (2025-11-07)
 
 ### Only dependencies have been changed

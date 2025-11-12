@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2025-11-12)
+
+
+### Features
+
+* **AINFR-4479:** add new ssh field ([f78a07e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f78a07ebc576bcceb51851109c371d5ebe08e737))
+* **AINFR-4525:** new button giga ([2661a39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2661a39f95aa2384b251cf6faf75f867a5099be9))
+
+
+
+
+
 ## 1.5.1 (2025-11-07)
 
 ### Only dependencies have been changed

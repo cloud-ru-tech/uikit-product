@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 15.1.0 (2025-11-12)
+
+
+### Features
+
+* **EVODP-7450:** flink icon ([14564c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/14564c9d00f6f9d473cc0297c880db1c4efd249e))
+
+
+
+
+
 ## 15.0.5 (2025-11-07)
 
 ### Only dependencies have been changed

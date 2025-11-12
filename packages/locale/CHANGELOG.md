@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.18.0 (2025-11-12)
+
+
+### Features
+
+* **AINFR-4479:** add new ssh field ([f78a07e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f78a07ebc576bcceb51851109c371d5ebe08e737))
+
+
+
+
+
 # 0.17.0 (2025-11-11)
 
 
