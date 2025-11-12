@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.6.1 (2025-11-12)
+
+
+### Bug Fixes
+
+* **AINFR-4525:** returned rebased data ([7768586](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/776858629fc7a3a0f774a5b2825d1a727b7266e4))
+
+
+
+
+
 # 1.6.0 (2025-11-12)
 
 
