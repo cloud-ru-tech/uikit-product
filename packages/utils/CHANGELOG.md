@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 7.0.0 (2025-11-12)
+
+
+### Bug Fixes
+
+* **PD-3377:** updated deps with public scopes ([5c0544a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5c0544acf7db65fb6fe1fbde10ac21721d9046fb))
+
+
+### BREAKING CHANGES
+
+
+* **PD-3377:** moved figma-tokens to optionalDependencies ([f53a77c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f53a77c9dce4a5623dc5eb19232e1d6bae940c37))
+
+
+
+
 ## 6.2.2 (2025-11-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-utils

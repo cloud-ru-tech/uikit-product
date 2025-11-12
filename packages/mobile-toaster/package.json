@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-toaster",
   "title": "Mobile Toaster",
-  "version": "0.1.25",
+  "version": "0.1.26",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,8 +36,8 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "15.1.0",
-    "@sbercloud/uikit-product-utils": "6.2.2",
+    "@sbercloud/uikit-product-icons": "15.1.1",
+    "@sbercloud/uikit-product-utils": "7.0.0",
     "@snack-uikit/link": "0.17.9",
     "@snack-uikit/loaders": "0.9.8",
     "@snack-uikit/toaster": "0.11.14",

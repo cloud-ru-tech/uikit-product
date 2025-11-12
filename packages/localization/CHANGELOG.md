@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.13.12 (2025-11-12)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-localization
+
+
+
+
+
 ## 0.13.11 (2025-11-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-localization
