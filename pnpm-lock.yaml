@@ -2270,6 +2270,17 @@ importers:
       '@cloud-ru/ft-debug-mode':
         specifier: 1.0.1
         version: 1.0.1
+      '@snack-uikit/utils':
+        specifier: 3.5.0
+        version: 3.5.0(react@18.2.0)
+      ua-parser-js:
+        specifier: 1.0.39
+        version: 1.0.39
+    devDependencies:
+      '@types/ua-parser-js':
+        specifier: 0.7.39
+        version: 0.7.39
+    optionalDependencies:
       '@sbercloud/figma-tokens-admin':
         specifier: '*'
         version: 17.1.0
@@ -2285,16 +2296,6 @@ importers:
       '@sbercloud/figma-tokens-web':
         specifier: '*'
         version: 17.7.6
-      '@snack-uikit/utils':
-        specifier: 3.5.0
-        version: 3.5.0(react@18.2.0)
-      ua-parser-js:
-        specifier: 1.0.39
-        version: 1.0.39
-    devDependencies:
-      '@types/ua-parser-js':
-        specifier: 0.7.39
-        version: 0.7.39
 
   packages/welcome-tour:
     dependencies:
