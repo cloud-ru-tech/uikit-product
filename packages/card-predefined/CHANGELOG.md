@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.12 (2025-11-12)
+
+
+### Bug Fixes
+
+* **PD-3377:** updated deps for card-predefined ([898f0e4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/898f0e4e00f96d225d38d5c73d8d6952e0daff6d))
+
+
+
+
+
 ## 0.8.11 (2025-11-12)
 
 ### Only dependencies have been changed
