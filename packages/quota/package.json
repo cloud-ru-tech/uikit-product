@@ -26,10 +26,10 @@
     "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/quota"
   },
-  "author": "Nikita Ershov <niershov@cloud.ru>",
-  "contributors": [
-    "Nikita Ershov <niershov@cloud.ru>"
-  ],
+  "author": {
+    "name": "Akhremenko Grigorii",
+    "url": "https://github.com/AGrigorii"
+  },
   "license": "Apache-2.0",
   "publishConfig": {
     "access": "public"

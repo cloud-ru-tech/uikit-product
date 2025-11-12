@@ -26,10 +26,10 @@
     "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/mobile-info-row"
   },
-  "author": "Anna Kozlova <apkozlova@cloud.ru>",
-  "contributors": [
-    "Anna Kozlova <apkozlova@cloud.ru>"
-  ],
+  "author": {
+    "name": "Akhremenko Grigorii",
+    "url": "https://github.com/AGrigorii"
+  },
   "license": "Apache-2.0",
   "publishConfig": {
     "access": "public"

@@ -16,10 +16,10 @@
     "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/fields-predefined"
   },
-  "author": "anbelov <anbelov@cloud.ru>",
-  "contributors": [
-    "anbelov <anbelov@cloud.ru>"
-  ],
+  "author": {
+    "name": "Akhremenko Grigorii",
+    "url": "https://github.com/AGrigorii"
+  },
   "files": [
     "dist",
     "src",

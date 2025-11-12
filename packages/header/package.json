@@ -26,11 +26,10 @@
     "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/header"
   },
-  "author": "Kozlova Anna <apkozlova@sbercloud.ru>",
-  "contributors": [
-    "Belov Aleksei <anbelov@sbercloud.ru>",
-    "Kozlova Anna <apkozlova@sbercloud.ru>"
-  ],
+  "author": {
+    "name": "Akhremenko Grigorii",
+    "url": "https://github.com/AGrigorii"
+  },
   "license": "Apache-2.0",
   "publishConfig": {
     "access": "public"
