@@ -6,7 +6,7 @@ import componentReadme from '../README.md';
 import { IconGiga, IconGigaProps } from '../src';
 
 const meta: Meta = {
-  title: 'Console/Claudia/Icon Giga Gradient',
+  title: 'Console/Claudia/Icon Giga',
   component: IconGiga,
 };
 export default meta;
@@ -15,11 +15,11 @@ type StoryProps = IconGigaProps;
 
 const Template: StoryFn<StoryProps> = ({ ...args }) => <IconGiga {...args} />;
 
-export const iconGigaGradient: StoryObj<StoryProps> = {
+export const iconGiga: StoryObj<StoryProps> = {
   render: Template,
   args: {
     size: 24,
-    withBranding: true,
+    withBranding: false,
   },
   argTypes: {
     size: {
@@ -28,6 +28,11 @@ export const iconGigaGradient: StoryObj<StoryProps> = {
         min: 8,
         max: 200,
         step: 1,
+      },
+    },
+    withBranding: {
+      control: {
+        type: 'boolean',
       },
     },
   },

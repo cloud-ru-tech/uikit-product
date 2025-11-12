@@ -1,16 +1,12 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import cn from 'classnames';
-
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
-import { S3StorageSVG } from '@sbercloud/uikit-product-icons';
-import { Typography } from '@snack-uikit/typography';
+import { useState } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ButtonGigaMama, ButtonGigaMamaProps, IconGiga } from '../src';
-import { COMMON_ARG_TYPES_GIGA_MAMA_BUTTON } from './constants';
-import styles from './styles.module.scss';
+import { BUTTON_ARGS, COMMON_ARG_TYPES_GIGA_MAMA_BUTTON } from './constants';
+import { ControlledWrapper, TableCell, TableColumn, TableWrapper } from './helperComponents';
 
 const meta: Meta = {
   title: 'Console/Claudia/Button Giga/Button Giga Mama',
@@ -18,28 +14,57 @@ const meta: Meta = {
 };
 export default meta;
 
-type StoryProps = ButtonGigaMamaProps;
+type StoryProps = ButtonGigaMamaProps & { testMode: boolean };
 
-const Template: StoryFn<StoryProps> = ({ ...args }) => {
+const Template: StoryFn<StoryProps> = ({ testMode, ...args }) => {
+  const [count, setCount] = useState<number>(0);
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleClick = (event: any) => {
     args.onClick && args.onClick(event);
-    alert('onClick');
+    setCount(value => value + 1);
   };
 
+  const opacity = testMode ? 1 : 0;
+
   return (
-    <div className={cn(styles.wrapper, styles.gigaMamaWrapper)}>
-      <Typography.SansBodyM>Default</Typography.SansBodyM>
-      <ButtonGigaMama {...args} onClick={handleClick} icon={<IconGiga withBranding />} />
-      <Typography.SansBodyM>Custom Icon</Typography.SansBodyM>
-      <ButtonGigaMama
-        {...args}
-        onClick={handleClick}
-        icon={<S3StorageSVG color={themeVars.sys.primary.accentDefault} size={24} />}
-      />
-      <Typography.SansBodyM>Full width</Typography.SansBodyM>
-      <ButtonGigaMama {...args} onClick={handleClick} icon={<IconGiga withBranding />} fullWidth />
-    </div>
+    <>
+      <ControlledWrapper>
+        <ButtonGigaMama {...args} onClick={handleClick} icon={<IconGiga withBranding />} />
+      </ControlledWrapper>
+
+      <TableWrapper>
+        <TableColumn>
+          <TableCell>Icon Only</TableCell>
+          <TableCell>
+            <ButtonGigaMama {...BUTTON_ARGS} icon={<IconGiga withBranding />} label={undefined} />
+          </TableCell>
+        </TableColumn>
+        <TableColumn>
+          <TableCell>Label Only</TableCell>
+          <TableCell>
+            <ButtonGigaMama {...BUTTON_ARGS} icon={undefined} label='Label Only' />
+          </TableCell>
+        </TableColumn>
+        <TableColumn>
+          <TableCell>Label + Icon</TableCell>
+          <TableCell>
+            <ButtonGigaMama {...BUTTON_ARGS} icon={<IconGiga withBranding />} label='Label + Icon' />
+          </TableCell>
+        </TableColumn>
+        <TableColumn>
+          <TableCell>Full Width</TableCell>
+          <TableCell>
+            <ButtonGigaMama {...BUTTON_ARGS} icon={<IconGiga withBranding />} label='Full Width' fullWidth />
+          </TableCell>
+        </TableColumn>
+      </TableWrapper>
+
+      <div style={{ opacity }}>
+        <span>Controlled button presses: </span>
+        <span data-test-id={'count'}>{count}</span>
+      </div>
+    </>
   );
 };
 
@@ -53,6 +78,7 @@ export const buttonGigaMama: StoryObj<StoryProps> = {
     icon: undefined,
     type: 'button',
     fullWidth: false,
+    testMode: false,
   },
 
   argTypes: COMMON_ARG_TYPES_GIGA_MAMA_BUTTON,

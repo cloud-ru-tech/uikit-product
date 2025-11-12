@@ -1,6 +1,6 @@
 import { CSSProperties, forwardRef, SVGProps } from 'react';
 
-import { GIGA_ICON_GRADIENT_ID, GRADIENT_PARAMS, GRADIENT_STEPS, ICON_PATH } from './constants';
+import { GIGA_ICON_GRADIENT_ID, GRADIENT_PARAMS, GRADIENT_STOPS, ICON_PATH } from './constants';
 
 export type IconGigaProps = {
   className?: string;
@@ -36,7 +36,7 @@ export const IconGiga = forwardRef<SVGSVGElement, IconGigaProps>(
           <path d={ICON_PATH} fill={`url(#${GIGA_ICON_GRADIENT_ID})`} />
           <defs>
             <radialGradient id={GIGA_ICON_GRADIENT_ID} {...GRADIENT_PARAMS}>
-              {GRADIENT_STEPS.map(({ offset, stopColor }) => (
+              {GRADIENT_STOPS.map(({ offset, stopColor }) => (
                 <stop key={offset} offset={offset} stopColor={stopColor} />
               ))}
             </radialGradient>

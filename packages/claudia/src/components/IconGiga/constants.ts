@@ -3,7 +3,7 @@ export const ICON_PATH =
 
 export const GIGA_ICON_GRADIENT_ID = 'GIGA_ICON_GRADIENT_ID';
 
-export const GRADIENT_STEPS = [
+export const GRADIENT_STOPS = [
   { offset: '0.08', stopColor: '#7CB5F2' },
   { offset: '0.17', stopColor: '#78B9EC' },
   { offset: '0.28', stopColor: '#70C6DD' },
