@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-carousel",
   "title": "Mobile Carousel",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -37,7 +37,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "7.0.0",
+    "@sbercloud/uikit-product-utils": "7.0.1",
     "@snack-uikit/carousel": "0.6.4",
     "@snack-uikit/pagination": "0.10.18",
     "classnames": "2.5.1",

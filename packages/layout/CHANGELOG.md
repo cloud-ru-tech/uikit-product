@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.19.64 (2025-11-12)
+
+
+### Bug Fixes
+
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+
+
+
+
+
 ## 0.19.63 (2025-11-12)
 
 ### Only dependencies have been changed

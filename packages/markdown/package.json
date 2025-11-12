@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-markdown",
   "title": "Markdown",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -37,7 +37,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-code-editor": "0.3.6",
+    "@sbercloud/uikit-product-code-editor": "0.3.7",
     "@snack-uikit/markdown": "0.5.3",
     "@snack-uikit/utils": "3.8.1"
   }

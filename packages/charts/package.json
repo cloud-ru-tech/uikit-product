@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-charts",
   "title": "React Charts",
-  "version": "0.13.12",
+  "version": "0.13.13",
   "sideEffects": [
     "*.css",
     "*.scss",
@@ -39,8 +39,8 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/ft-formatters": "1.0.1",
-    "@sbercloud/uikit-product-localization": "0.13.12",
-    "@sbercloud/uikit-product-utils": "7.0.0",
+    "@sbercloud/uikit-product-localization": "0.13.13",
+    "@sbercloud/uikit-product-utils": "7.0.1",
     "@snack-uikit/divider": "3.2.3",
     "@snack-uikit/link": "0.15.9",
     "@snack-uikit/scroll": "0.9.3",

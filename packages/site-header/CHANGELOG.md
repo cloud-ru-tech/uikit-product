@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.9 (2025-11-12)
+
+
+### Bug Fixes
+
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+
+
+
+
+
 ## 0.4.8 (2025-11-12)
 
 ### Only dependencies have been changed
@@ -39,7 +50,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.4.5 (2025-10-16)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-site-header
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@15.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-modal@0.9.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-layout@0.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-layout/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@7.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-info-block-predefined",
   "title": "Info Block Predefined",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "sideEffects": [
     "*.css",
     "*.woff",

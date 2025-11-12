@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-rich-text",
   "title": "Site Rich Text",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -37,7 +37,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "7.0.0",
+    "@sbercloud/uikit-product-utils": "7.0.1",
     "classnames": "2.5.1"
   }
 }

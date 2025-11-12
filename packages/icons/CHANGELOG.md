@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 15.1.2 (2025-11-12)
+
+
+### Bug Fixes
+
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+
+
+
+
+
 ## 15.1.1 (2025-11-12)
 
 ### Only dependencies have been changed
@@ -56,7 +67,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 15.0.2 (2025-10-03)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-icons
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-utils@7.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
