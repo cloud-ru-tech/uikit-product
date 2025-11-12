@@ -1,4 +1,4 @@
-import { commonTranslations, I18N_NS } from '@sbercloud/common-translations';
+import { commonTranslations, I18N_NS } from '@cloud-ru/common-translations';
 
 import { DeepPartial, getTranslationResolver } from '../helpers';
 import { en_GB } from './en_GB';

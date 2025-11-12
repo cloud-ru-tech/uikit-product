@@ -345,9 +345,9 @@ importers:
 
   packages/calculator:
     dependencies:
-      '@sbercloud/ft-copy-to-clipboard':
-        specifier: 3.0.1
-        version: 3.0.1
+      '@cloud-ru/ft-copy-to-clipboard':
+        specifier: 0.1.0
+        version: 0.1.0
       '@sbercloud/uikit-product-icons':
         specifier: 15.1.0
         version: link:../icons
@@ -481,9 +481,9 @@ importers:
 
   packages/charts:
     dependencies:
-      '@sbercloud/ft-formatters':
-        specifier: 3.4.3
-        version: 3.4.3
+      '@cloud-ru/ft-formatters':
+        specifier: 1.0.1
+        version: 1.0.1
       '@sbercloud/uikit-product-localization':
         specifier: 0.13.11
         version: link:../localization
@@ -632,9 +632,9 @@ importers:
 
   packages/copy-line:
     dependencies:
-      '@sbercloud/ft-copy-to-clipboard':
-        specifier: 3.0.1
-        version: 3.0.1
+      '@cloud-ru/ft-copy-to-clipboard':
+        specifier: 0.1.0
+        version: 0.1.0
       '@sbercloud/uikit-product-icons':
         specifier: 15.1.0
         version: link:../icons
@@ -661,7 +661,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-utils':
         specifier: 6.2.2
         version: link:../utils
@@ -688,7 +688,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-mobile-dropdown':
         specifier: 0.9.20
         version: link:../mobile-dropdown
@@ -761,7 +761,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-mobile-drawer':
         specifier: 0.9.14
         version: link:../mobile-drawer
@@ -889,7 +889,7 @@ importers:
     dependencies:
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-utils':
         specifier: 6.2.2
         version: link:../utils
@@ -919,7 +919,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-utils':
         specifier: 6.2.2
         version: link:../utils
@@ -950,9 +950,9 @@ importers:
 
   packages/locale:
     dependencies:
-      '@sbercloud/common-translations':
-        specifier: 1.2.0
-        version: 1.2.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
+      '@cloud-ru/common-translations':
+        specifier: 1.3.2
+        version: 1.3.2(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@snack-uikit/locale':
         specifier: 0.15.2
         version: 0.15.2
@@ -980,7 +980,7 @@ importers:
     dependencies:
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
 
   packages/markdown:
     dependencies:
@@ -1081,7 +1081,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-mobile-dropdown':
         specifier: 0.9.20
         version: link:../mobile-dropdown
@@ -1193,7 +1193,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-mobile-dropdown':
         specifier: 0.9.20
         version: link:../mobile-dropdown
@@ -1260,7 +1260,7 @@ importers:
         version: link:../info-row
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.4.64
         version: link:../mobile-tooltip
@@ -1296,7 +1296,7 @@ importers:
         version: link:../layout
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-mobile-dropdown':
         specifier: 0.9.20
         version: link:../mobile-dropdown
@@ -1410,7 +1410,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-mobile-chips':
         specifier: 0.8.35
         version: link:../mobile-chips
@@ -1501,7 +1501,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-mobile-chips':
         specifier: 0.8.35
         version: link:../mobile-chips
@@ -1576,7 +1576,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-markdown':
         specifier: 0.1.6
         version: link:../markdown
@@ -1633,7 +1633,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-utils':
         specifier: 6.2.2
         version: link:../utils
@@ -1673,9 +1673,9 @@ importers:
 
   packages/price-summary:
     dependencies:
-      '@sbercloud/ft-formatters':
-        specifier: 3.4.3
-        version: 3.4.3
+      '@cloud-ru/ft-formatters':
+        specifier: 1.0.1
+        version: 1.0.1
       '@sbercloud/uikit-product-button-predefined':
         specifier: 0.7.2
         version: link:../button-predefined
@@ -1684,7 +1684,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.4.64
         version: link:../mobile-tooltip
@@ -1729,7 +1729,7 @@ importers:
     dependencies:
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-utils':
         specifier: 6.2.2
         version: link:../utils
@@ -1753,7 +1753,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-utils':
         specifier: 6.2.2
         version: link:../utils
@@ -1998,7 +1998,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-site-layout':
         specifier: 0.2.1
         version: link:../site-layout
@@ -2103,7 +2103,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-mobile-fields':
         specifier: 0.11.23
         version: link:../mobile-fields
@@ -2267,6 +2267,9 @@ importers:
 
   packages/utils:
     dependencies:
+      '@cloud-ru/ft-debug-mode':
+        specifier: 1.0.1
+        version: 1.0.1
       '@sbercloud/figma-tokens-admin':
         specifier: '*'
         version: 17.1.0
@@ -2282,9 +2285,6 @@ importers:
       '@sbercloud/figma-tokens-web':
         specifier: '*'
         version: 17.7.6
-      '@sbercloud/ft-debug-mode':
-        specifier: 4.1.0
-        version: 4.1.0
       '@snack-uikit/utils':
         specifier: 3.5.0
         version: 3.5.0(react@18.2.0)
@@ -2324,7 +2324,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
       '@sbercloud/uikit-product-mobile-carousel':
         specifier: 0.1.11
         version: link:../mobile-carousel
@@ -3038,6 +3038,11 @@ packages:
     resolution: {integrity: sha512-6zABk/ECA/QYSCQ1NGiVwwbQerUCZ+TQbp64Q3AgmfNvurHH0j8TtXa1qbShXA6qqkpAj4V5W8pP6mLe1mcMqA==}
     engines: {node: '>=18'}
 
+  '@cloud-ru/common-translations@1.3.2':
+    resolution: {integrity: sha512-aF/Dwy11YP1il3396O3O4Q5S58doX7//w4rcC5/vsIx0T5izly/4ZCgC5EJOTOEzRs76MVKRDLnlqmETPkzIJQ==}
+    peerDependencies:
+      '@cloud-ru/ft-config-i18n': '>= 1.0.2'
+
   '@cloud-ru/eslint-config@2.1.1':
     resolution: {integrity: sha512-fqfG6YHvNIVAkkOvyjTo+Zm+Suj7fbcUtIKfkZHroElsPr6fxpMB+rjafZUgT3ew1CEwR2x/ueDjwgkGbJr3Cw==}
 
@@ -3045,6 +3050,9 @@ packages:
     resolution: {integrity: sha512-33KDw3MS7uzvRErnAD/G58gLCzTMG65goDk6UfmZR7i7qRdOb6kHx2epykMJ0qEw9FHlwXHzozyvptuvE5PBzg==}
     peerDependencies:
       eslint: '>= 9.0.0'
+
+  '@cloud-ru/ft-config-i18n@1.0.2':
+    resolution: {integrity: sha512-TgW8Ymf515Fso0MAMb/uUfbpfe/6EJT6K4vbn+BfEFFtgs+Nurw+0pElMyvnxu1oRx66S0q39DX64M4bQgD+IA==}
 
   '@cloud-ru/ft-config-stylelint@3.0.0':
     resolution: {integrity: sha512-F5XbjNunHS5shl23IHMfhDIsUeuDFkqdJeX2GLsiFmf0ZLZsQdkLchyJ6/mf8LaTELEytztYGjeKeqIJTKcMDQ==}
@@ -3054,6 +3062,12 @@ packages:
 
   '@cloud-ru/ft-copy-to-clipboard@0.1.0':
     resolution: {integrity: sha512-RzTCYuandisqxPijMdS3JnSN6O22g54YzhT4k6IRKGSDGrI/8zY7JN+dWR4TTx/0kqPEU27t1HAhC4GDnAybgQ==}
+
+  '@cloud-ru/ft-debug-mode@1.0.1':
+    resolution: {integrity: sha512-UZJ795tTg9iXwNkImRraDMqbsx1fJUZUISp8FF9l3kr/kDkNzkBFwb9L5rUA2Es1umuhCVXiphokMw/AuFA9YQ==}
+
+  '@cloud-ru/ft-formatters@1.0.1':
+    resolution: {integrity: sha512-tKjq0o1hgVRA/2tLXOrDatqxxOOGIL35zdNGdnJhDAov1K9ogoGn2Eo1H+3GBdOSx6m7c6O78Il+hDJWe602gQ==}
 
   '@cloud-ru/ft-request-payload-transform@0.1.0':
     resolution: {integrity: sha512-lpbvHevLl9W/D4bEVnOiyYcJJwVlNQnrnaPj4Z0ky6lkYuk6bglkBbp7bVx5qt80H/JCgYh4KyV4vKQDJAjrDA==}
@@ -4004,36 +4018,42 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
+    libc: [glibc]
 
   '@parcel/watcher-linux-arm-musl@2.5.1':
     resolution: {integrity: sha512-6E+m/Mm1t1yhB8X412stiKFG3XykmgdIOqhjWj+VL8oHkKABfu/gjFj8DvLrYVHSBNC+/u5PeNrujiSQ1zwd1Q==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
+    libc: [musl]
 
   '@parcel/watcher-linux-arm64-glibc@2.5.1':
     resolution: {integrity: sha512-LrGp+f02yU3BN9A+DGuY3v3bmnFUggAITBGriZHUREfNEzZh/GO06FF5u2kx8x+GBEUYfyTGamol4j3m9ANe8w==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@parcel/watcher-linux-arm64-musl@2.5.1':
     resolution: {integrity: sha512-cFOjABi92pMYRXS7AcQv9/M1YuKRw8SZniCDw0ssQb/noPkRzA+HBDkwmyOJYp5wXcsTrhxO0zq1U11cK9jsFg==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   '@parcel/watcher-linux-x64-glibc@2.5.1':
     resolution: {integrity: sha512-GcESn8NZySmfwlTsIur+49yDqSny2IhPeZfXunQi48DMugKeZ7uy1FX83pO0X22sHntJ4Ub+9k34XQCX+oHt2A==}
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@parcel/watcher-linux-x64-musl@2.5.1':
     resolution: {integrity: sha512-n0E2EQbatQ3bXhcH2D1XIAANAcTZkQICBPVaxMeaCVBtOpBZpWJuf7LwyWPSBDITb7In8mqQgJ7gH8CILCURXg==}
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   '@parcel/watcher-win32-arm64@2.5.1':
     resolution: {integrity: sha512-RFzklRvmc3PkjKjry3hLF9wD7ppR4AKcWNzH7kXR7GUe0Igb3Nz8fyPwtZCSquGrhU5HhUNDr/mKBqj7tqA2Vw==}
@@ -4358,9 +4378,6 @@ packages:
   '@sbercloud/ft-download-file@3.0.1':
     resolution: {integrity: sha512-gENQwXAZEtyH+1s01KyzG/0lnb0+MmuHMqRy3juxMAtNeakQ7tkcUa39vPoR/IXGKXfPWDnWhD1hFYMkEBnhEw==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/ft-download-file/-/@sbercloud/ft-download-file-3.0.1.tgz}
 
-  '@sbercloud/ft-formatters@3.4.3':
-    resolution: {integrity: sha512-0k6L+aNyoD7eMLzOFIaEBup54K4Z9UsF6uKH9EllyDezGq5bCCznzwG6TcoajjL3erNROqCmhOgYVLL9aqWPCg==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/ft-formatters/-/@sbercloud/ft-formatters-3.4.3.tgz}
-
   '@sbercloud/ft-storybook-deps-table-addon@0.1.5':
     resolution: {integrity: sha512-5zMNl0+EPV3k5m09q0zJ3jprM1tTPIl22jxsiQ92InukeKkbl0GnsfFbcpq+S4HPqr+lqcQFGn/bmyIBoAF4ig==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/ft-storybook-deps-table-addon/-/@sbercloud/ft-storybook-deps-table-addon-0.1.5.tgz}
     peerDependencies:
@@ -4370,6 +4387,9 @@ packages:
 
   '@sbercloud/uikit-product-icons@15.0.0':
     resolution: {integrity: sha512-2DlUC4aILfCvyi/t2Ar1tLybxlAMoHweM4qX/75RgJpjXX9lLhUCC1fgbreo8jKdLS/oELeU0JjOG/ggpFT28A==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-icons/-/@sbercloud/uikit-product-icons-15.0.0.tgz}
+
+  '@sbercloud/uikit-product-locale@0.18.0':
+    resolution: {integrity: sha512-8XHk+7eZJ+2RU8Wqho8/BjXEAEuyMmqNU4+UmnWyEYW1IpMG155LK/Uog1cAx+eCeUAW7LWwxxURU9m1F+17oA==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-locale/-/@sbercloud/uikit-product-locale-0.18.0.tgz}
 
   '@sbercloud/uikit-product-utils@6.2.0':
     resolution: {integrity: sha512-isCKWEH/QOU/Jtc7R9kfy+cFxZVwDXTZfk4L6fD37sqO3Jp1R+7mi5Eh50PbOghlB/oSTWy7AnRjuIKKLYDFtA==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-utils/-/@sbercloud/uikit-product-utils-6.2.0.tgz}
@@ -14576,6 +14596,10 @@ snapshots:
 
   '@bcoe/v8-coverage@1.0.2': {}
 
+  '@cloud-ru/common-translations@1.3.2(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))':
+    dependencies:
+      '@cloud-ru/ft-config-i18n': 1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4)
+
   '@cloud-ru/eslint-config@2.1.1(@types/eslint@9.6.1)(@typescript-eslint/utils@8.18.1(eslint@9.17.0)(typescript@5.5.4))(prettier@3.6.2)(typescript@5.5.4)(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.8.1)(jsdom@26.1.0)(less@4.4.2)(sass@1.80.4)(stylus@0.62.0)(terser@5.44.0)(yaml@2.8.1))':
     dependencies:
       '@typescript-eslint/parser': 8.18.1(eslint@9.17.0)(typescript@5.5.4)
@@ -14607,6 +14631,19 @@ snapshots:
     dependencies:
       eslint: 9.17.0
 
+  '@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4)':
+    dependencies:
+      i18next: 24.0.5(typescript@5.5.4)
+      i18next-browser-languagedetector: 8.0.0
+      i18next-http-backend: 3.0.1(encoding@0.1.13)
+      react-i18next: 15.1.3(i18next@24.0.5(typescript@5.5.4))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+    transitivePeerDependencies:
+      - encoding
+      - react
+      - react-dom
+      - react-native
+      - typescript
+
   '@cloud-ru/ft-config-stylelint@3.0.0(postcss@8.5.6)':
     dependencies:
       stylelint: 14.16.1
@@ -14623,6 +14660,13 @@ snapshots:
   '@cloud-ru/ft-copy-to-clipboard@0.1.0':
     dependencies:
       copy-to-clipboard: 3.3.3
+
+  '@cloud-ru/ft-debug-mode@1.0.1': {}
+
+  '@cloud-ru/ft-formatters@1.0.1':
+    dependencies:
+      date-fns: 2.30.0
+      js-base64: 3.7.5
 
   '@cloud-ru/ft-request-payload-transform@0.1.0': {}
 
@@ -15995,11 +16039,6 @@ snapshots:
     dependencies:
       js-file-download: 0.4.12
 
-  '@sbercloud/ft-formatters@3.4.3':
-    dependencies:
-      date-fns: 2.30.0
-      js-base64: 3.7.5
-
   '@sbercloud/ft-storybook-deps-table-addon@0.1.5(@snack-uikit/locale@0.15.2)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.14(prettier@3.6.2))':
     dependencies:
       '@snack-uikit/calendar': 0.11.6(@snack-uikit/locale@0.15.2)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -16033,6 +16072,16 @@ snapshots:
       - '@sbercloud/figma-tokens-mlspace'
       - '@sbercloud/figma-tokens-web'
       - react
+
+  '@sbercloud/uikit-product-locale@0.18.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))':
+    dependencies:
+      '@sbercloud/common-translations': 1.2.0(@sbercloud/ft-config-i18n@4.0.4(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
+      '@snack-uikit/locale': 0.15.2
+      lodash.get: 4.4.2
+      lodash.merge: 4.6.2
+      lodash.set: 4.3.2
+    transitivePeerDependencies:
+      - '@sbercloud/ft-config-i18n'
 
   '@sbercloud/uikit-product-utils@6.2.0(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.3)(@sbercloud/figma-tokens-web@17.7.6)(react@18.2.0)':
     dependencies:

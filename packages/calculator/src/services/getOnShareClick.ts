@@ -1,4 +1,4 @@
-import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
+import { copyToClipboard } from '@cloud-ru/ft-copy-to-clipboard';
 
 import { State } from '../types';
 import { DEFAULT_BACKEND_HOST, DEFAULT_BASE_URL, DEFAULT_HEADERS } from './constants';

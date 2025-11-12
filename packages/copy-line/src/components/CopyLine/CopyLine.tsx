@@ -1,7 +1,7 @@
+import { copyToClipboard } from '@cloud-ru/ft-copy-to-clipboard';
 import cn from 'classnames';
 import { MouseEventHandler, ReactNode, useEffect, useRef, useState } from 'react';
 
-import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
 import { CheckSVG, CopySVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';

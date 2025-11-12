@@ -1,7 +1,7 @@
+import { truncateString } from '@cloud-ru/ft-formatters';
 import cn from 'classnames';
 import { MouseEvent, useCallback, useMemo, useState } from 'react';
 
-import { truncateString } from '@sbercloud/ft-formatters';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Scroll } from '@snack-uikit/scroll';
 import { Typography } from '@snack-uikit/typography';

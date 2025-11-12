@@ -1,4 +1,5 @@
-import { enTranslations } from '@sbercloud/common-translations';
+import { enTranslations } from '@cloud-ru/common-translations';
+
 import { Dictionary } from '@snack-uikit/locale';
 
 export const en_GB = {

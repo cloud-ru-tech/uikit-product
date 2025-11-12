@@ -1,4 +1,4 @@
-import { additionalTranslationsResources } from '@sbercloud/common-translations';
+import { additionalTranslationsResources } from '@cloud-ru/common-translations';
 
 export type DeepPartial<T> = T extends object
   ? {

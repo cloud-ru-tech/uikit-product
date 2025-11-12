@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/ft-formatters": "3.4.3",
+    "@cloud-ru/ft-formatters": "1.0.1",
     "@sbercloud/uikit-product-button-predefined": "0.7.2",
     "@sbercloud/uikit-product-icons": "15.1.0",
     "@sbercloud/uikit-product-mobile-tooltip": "0.4.64",

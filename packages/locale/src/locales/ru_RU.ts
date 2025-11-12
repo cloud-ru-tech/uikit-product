@@ -1,4 +1,4 @@
-import { ruTranslations } from '@sbercloud/common-translations';
+import { ruTranslations } from '@cloud-ru/common-translations';
 
 import { en_GB } from './en_GB';
 

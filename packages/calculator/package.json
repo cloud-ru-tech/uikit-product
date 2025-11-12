@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/ft-copy-to-clipboard": "3.0.1",
+    "@cloud-ru/ft-copy-to-clipboard": "0.1.0",
     "@sbercloud/uikit-product-icons": "15.1.0",
     "@sbercloud/uikit-product-mobile-accordion": "0.4.20",
     "@sbercloud/uikit-product-mobile-dropdown": "0.9.20",

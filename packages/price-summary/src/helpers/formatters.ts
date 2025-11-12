@@ -1,4 +1,4 @@
-import { formatNumber } from '@sbercloud/ft-formatters';
+import { formatNumber } from '@cloud-ru/ft-formatters';
 
 export function formatCurrency(value: number) {
   return formatNumber(value.toFixed(2), {

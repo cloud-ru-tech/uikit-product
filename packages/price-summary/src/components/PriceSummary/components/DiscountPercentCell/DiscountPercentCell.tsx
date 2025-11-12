@@ -1,4 +1,5 @@
-import { formatNumber } from '@sbercloud/ft-formatters';
+import { formatNumber } from '@cloud-ru/ft-formatters';
+
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { AdaptiveQuestionTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
