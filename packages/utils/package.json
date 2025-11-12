@@ -44,11 +44,18 @@
   "devDependencies": {
     "@types/ua-parser-js": "0.7.39"
   },
-  "optionalDependencies": {
+  "peerDependencies": {
     "@sbercloud/figma-tokens-admin": "*",
     "@sbercloud/figma-tokens-cloud-platform": "*",
     "@sbercloud/figma-tokens-giga-id": "*",
     "@sbercloud/figma-tokens-mlspace": "*",
     "@sbercloud/figma-tokens-web": "*"
+  },
+  "peerDependenciesMeta": {
+    "@sbercloud/figma-tokens-admin": { "optional": true },
+    "@sbercloud/figma-tokens-cloud-platform": { "optional": true },
+    "@sbercloud/figma-tokens-giga-id": { "optional": true },
+    "@sbercloud/figma-tokens-mlspace": { "optional": true },
+    "@sbercloud/figma-tokens-web": { "optional": true }
   }
 }
