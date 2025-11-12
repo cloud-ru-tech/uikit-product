@@ -31,6 +31,9 @@
     "Anna Kozlova <apkozlova@cloud.ru>"
   ],
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-info-row": "0.8.23",

@@ -31,6 +31,9 @@
     "Nikita Ershov <niershov@cloud.ru>"
   ],
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-button-predefined": "0.7.2",

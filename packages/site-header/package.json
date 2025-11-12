@@ -31,6 +31,10 @@
     "daparfirov <daparfirov@cloud.ru>"
   ],
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-icons": "15.1.0",
     "@sbercloud/uikit-product-mobile-modal": "0.9.17",

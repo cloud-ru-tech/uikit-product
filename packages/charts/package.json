@@ -32,6 +32,9 @@
     "Akhremenko Grigorii <gaahremenko@sbercloud.ru>"
   ],
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {},
   "dependencies": {
     "@sbercloud/ft-formatters": "3.4.3",

@@ -31,6 +31,9 @@
     "Трифонов Михаил Сергеевич <mstrifonov@sbercloud.ru>"
   ],
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {},
   "peerDependencies": {
     "@sbercloud/uikit-product-locale": "*"

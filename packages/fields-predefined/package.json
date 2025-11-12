@@ -27,6 +27,9 @@
     "./LICENSE"
   ],
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-icons": "15.1.0",

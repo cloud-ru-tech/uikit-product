@@ -31,6 +31,9 @@
     "Nikita Ershov <niershov@cloud.ru>"
   ],
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {},
   "dependencies": {
     "@snack-uikit/button": "0.19.7",

@@ -32,6 +32,9 @@
     "Akhremenko Grigorii <gaahremenko@sbercloud.ru>"
   ],
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "compile": "ts-node scripts/compile.ts",
     "import:icons-interface-system": "ts-node scripts/importInterfaceSystemIcons.ts",
