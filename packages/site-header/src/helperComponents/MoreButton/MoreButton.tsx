@@ -32,10 +32,15 @@ export function MoreButton({ linkItemsArray, activeItemId }: MoreButtonProps) {
           {linkItemsArray.map(item => (
             <div
               key={item.id}
-              className={cn(styles.rowLinkMore, {
-                [styles.hovered]: !item.href,
-                [styles.active]: item.id === activeItemId && !item.href,
-              })}
+              className={cn(
+                styles.rowLinkMore,
+                {
+                  [styles.hovered]: !item.href,
+                  [styles.active]: item.id === activeItemId && !item.href,
+                },
+                item.className,
+              )}
+              {...item.dataAttributes}
             >
               <LinkItemHeader
                 label={item.label}

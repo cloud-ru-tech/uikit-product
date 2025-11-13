@@ -90,7 +90,12 @@ export function HeaderItems({ linkItems, isMobileTabletView, activeLinkItemId }:
     <div className={styles.wrapper}>
       <div className={cn(styles.linkItemsContainer, styles.hiddenRow)} ref={hiddenRowElementRef}>
         {linkItems.map((linkItem, index) => (
-          <div key={linkItem.id} className={styles.lastItemContainer} ref={setItemElement(linkItem, index)}>
+          <div
+            key={linkItem.id}
+            className={cn(styles.lastItemContainer, linkItem.className)}
+            ref={setItemElement(linkItem, index)}
+            {...linkItem.dataAttributes}
+          >
             <LinkItemHeader
               label={linkItem.label}
               target={linkItem.target}
@@ -107,7 +112,11 @@ export function HeaderItems({ linkItems, isMobileTabletView, activeLinkItemId }:
       >
         {/*Добавлено для сайта, так как используется next и приходит html без расчета js*/}
         {(isVisibleEmpty ? linkItems : visibleItems).map(linkItem => (
-          <div key={linkItem.id} className={styles.lastItemContainer}>
+          <div
+            key={linkItem.id}
+            className={cn(styles.lastItemContainer, linkItem.className)}
+            {...linkItem.dataAttributes}
+          >
             <LinkItemHeader
               label={linkItem.label}
               href={linkItem.href}

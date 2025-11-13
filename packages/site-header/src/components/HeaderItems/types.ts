@@ -9,4 +9,10 @@ export type LinkItem = {
   href?: string;
   /** target для ссылки элемента */
   target?: string;
+  /** className для элемента списка */
+  className?: string;
+  /** Кастомные data-атрибуты для a/b теста и тд */
+  dataAttributes?: {
+    [key: string]: string;
+  };
 };
