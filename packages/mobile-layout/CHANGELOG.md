@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.20.11 (2025-11-13)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-quota@0.6.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/quota/CHANGELOG.md)
+
+
+
+
+
 ## 0.20.10 (2025-11-13)
 
 

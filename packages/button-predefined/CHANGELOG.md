@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.8 (2025-11-13)
+
+
+### Bug Fixes
+
+* **PD-3377:** button-predefined deps updated ([5e8373f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5e8373f3c3b5853c668fd50907174551d980d168))
+
+
+
+
+
 ## 0.7.7 (2025-11-13)
 
 
