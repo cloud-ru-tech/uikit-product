@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.2 (2025-11-13)
+
+
+### Bug Fixes
+
+* **PD-3377:** move token deps back to peers ([1b99749](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1b99749040515e23e094f814dbf46291a317c3ae))
+
+
+
+
+
 ## 7.0.1 (2025-11-12)
 
 

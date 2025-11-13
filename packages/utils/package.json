@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-utils",
   "title": "Utils",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -52,10 +52,20 @@
     "@sbercloud/figma-tokens-web": "*"
   },
   "peerDependenciesMeta": {
-    "@sbercloud/figma-tokens-admin": { "optional": true },
-    "@sbercloud/figma-tokens-cloud-platform": { "optional": true },
-    "@sbercloud/figma-tokens-giga-id": { "optional": true },
-    "@sbercloud/figma-tokens-mlspace": { "optional": true },
-    "@sbercloud/figma-tokens-web": { "optional": true }
+    "@sbercloud/figma-tokens-admin": {
+      "optional": true
+    },
+    "@sbercloud/figma-tokens-cloud-platform": {
+      "optional": true
+    },
+    "@sbercloud/figma-tokens-giga-id": {
+      "optional": true
+    },
+    "@sbercloud/figma-tokens-mlspace": {
+      "optional": true
+    },
+    "@sbercloud/figma-tokens-web": {
+      "optional": true
+    }
   }
 }

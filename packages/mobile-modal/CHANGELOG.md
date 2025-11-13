@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.20 (2025-11-13)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-mobile-drawer@0.9.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-tooltip@0.4.67](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@7.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## 0.9.19 (2025-11-12)
 
 

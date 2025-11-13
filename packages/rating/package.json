@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-rating",
   "title": "React Rating",
-  "version": "0.6.21",
+  "version": "0.6.22",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -37,7 +37,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "7.0.1",
+    "@sbercloud/uikit-product-utils": "7.0.2",
     "@snack-uikit/toggles": "0.13.5",
     "classnames": "2.5.1"
   }
