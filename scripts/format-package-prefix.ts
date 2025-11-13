@@ -8,9 +8,9 @@ import { logDebug, logError, logInfo } from './utils/console';
 const OLD_PREFIX = '@sbercloud/uikit-product-';
 const NEW_PREFIX = '@cloud-ru/uikit-product-';
 
-const FILE_PATTERNS = ['**/*.ts', '**/*.tsx', '**/package.json', '**/*.md'];
+const FILE_PATTERNS = ['**/*.ts', '**/*.tsx', '**/*.js', '**/package.json', '**/*.md'];
 
-const IGNORE_PATTERNS = ['**/node_modules/**', '**/dist/**', '**/.git/**'];
+const IGNORE_PATTERNS = ['**/node_modules/**', '**/.git/**'];
 
 /**
  * Заменяет префикс пакета в содержимом файла
