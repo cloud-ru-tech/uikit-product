@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.7.0 (2025-11-13)
+
+
+### Features
+
+* **RM-3714:** replace claudia button by giga for recommend panel ([9114db7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9114db7e67cc17a4e134b3d3b7a12055b6d5edae))
+
+
+
+
+
 ## 1.6.5 (2025-11-13)
 
 
