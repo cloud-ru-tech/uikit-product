@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.18.4 (2025-11-13)
+
+
+### Bug Fixes
+
+* **LK-6839:** rename Claudia to Giga-helper ([6f9247d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6f9247d31229fd9ef88a2e70bb30f811f88aea20))
+
+
+
+
+
 ## 0.18.3 (2025-11-13)
 
 

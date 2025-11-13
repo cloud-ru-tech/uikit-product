@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.13.7 (2025-11-13)
+
+
+### Bug Fixes
+
+* **LK-6839:** repaint submitButton and textarea for Giga-helper ([49b1652](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/49b165277c94deea5ececcea54f41a1505424a99))
+
+
+
+
+
 ## 0.13.6 (2025-11-13)
 
 
