@@ -2,9 +2,9 @@ import cn from 'classnames';
 import React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { NumberFormatter } from '@sbercloud/uikit-product-localization';
 import { error, extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { themeVars } from '@snack-uikit/figma-tokens';
 
 import styles from './styles.module.scss';
 import { getSegmentColor } from './utils';

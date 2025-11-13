@@ -1,6 +1,6 @@
 import { PieChart, pieChartDefaultProps } from 'react-minimal-pie-chart';
 
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+import { themeVars } from '@snack-uikit/figma-tokens';
 
 import styles from '../styles.module.scss';
 import { DefaultChartProps } from '../types';

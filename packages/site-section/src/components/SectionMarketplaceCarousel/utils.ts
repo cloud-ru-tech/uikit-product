@@ -1,5 +1,5 @@
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { LayoutType } from '@sbercloud/uikit-product-utils';
+import { themeVars } from '@snack-uikit/figma-tokens';
 
 import { SectionCarouselProps } from '../../helperComponents';
 

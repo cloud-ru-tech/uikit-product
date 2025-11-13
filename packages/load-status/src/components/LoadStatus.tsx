@@ -1,8 +1,8 @@
 import cn from 'classnames';
 
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { CrossFilledSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { themeVars } from '@snack-uikit/figma-tokens';
 import { ProgressBar, ProgressBarProps } from '@snack-uikit/progress-bar';
 import { Typography } from '@snack-uikit/typography';
 

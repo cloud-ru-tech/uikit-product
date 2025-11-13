@@ -1,7 +1,6 @@
 import cn from 'classnames';
 import { DragEvent, forwardRef, KeyboardEventHandler, useState } from 'react';
 
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { AttachmentSVG, EyeClosedSVG, EyeSVG, PasswordLockSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import {
@@ -12,6 +11,7 @@ import {
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { DropZone, FileUpload } from '@snack-uikit/drop-zone';
+import { themeVars } from '@snack-uikit/figma-tokens';
 import { Tooltip } from '@snack-uikit/tooltip';
 
 import { ChatStatusAnnouncement } from '../ChatStatusAnnouncement';

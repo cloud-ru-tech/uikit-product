@@ -55,6 +55,7 @@
     "react-textarea-autosize": "8.5.9"
   },
   "peerDependencies": {
-    "@sbercloud/uikit-product-locale": "*"
+    "@sbercloud/uikit-product-locale": "*",
+    "@snack-uikit/figma-tokens": "*"
   }
 }

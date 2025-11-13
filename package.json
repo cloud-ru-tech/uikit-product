@@ -60,6 +60,7 @@
     "@snack-uikit/counter": "0.8.9",
     "@snack-uikit/divider": "3.2.9",
     "@snack-uikit/fields": "0.51.0",
+    "@snack-uikit/figma-tokens": "18.0.1",
     "@snack-uikit/modal": "0.19.0",
     "@snack-uikit/search": "0.12.13",
     "@snack-uikit/slider": "0.3.25",

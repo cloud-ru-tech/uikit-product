@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+import { themeVars } from '@snack-uikit/figma-tokens';
 
 import { CardClient, CardClientProps, LimitedSectionCarouselProps, SectionCarousel } from '../../helperComponents';
 import { getCarouselProps } from './utils';

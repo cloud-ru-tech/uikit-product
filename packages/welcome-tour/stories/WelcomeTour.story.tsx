@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { ButtonFilled } from '@snack-uikit/button';
+import { themeVars } from '@snack-uikit/figma-tokens';
 
 import { BADGE } from '../../../storybook/constants';
 import componentChangelog from '../CHANGELOG.md';

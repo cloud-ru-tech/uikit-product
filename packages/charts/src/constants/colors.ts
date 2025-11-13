@@ -1,4 +1,4 @@
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+import { themeVars } from '@snack-uikit/figma-tokens';
 import { ValueOf } from '@snack-uikit/utils';
 
 export const COLOR_CONTAINER_CLASSNAME = 'interactive-chart-wrapper';

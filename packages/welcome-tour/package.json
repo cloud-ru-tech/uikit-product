@@ -42,5 +42,8 @@
     "@snack-uikit/pagination": "0.10.2",
     "@snack-uikit/typography": "0.8.4",
     "react-joyride": "2.5.3"
+  },
+  "peerDependencies": {
+    "@snack-uikit/figma-tokens": "*"
   }
 }

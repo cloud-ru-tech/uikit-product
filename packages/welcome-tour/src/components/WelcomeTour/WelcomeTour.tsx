@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import JoyRide, { CallBackProps, STATUS, TooltipRenderProps } from 'react-joyride';
 
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+import { themeVars } from '@snack-uikit/figma-tokens';
 
 import { Hint } from '../Hint';
 import { TourStepExtended } from '../types';

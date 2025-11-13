@@ -1,4 +1,4 @@
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+import { themeVars } from '@snack-uikit/figma-tokens';
 
 function getLoadingWheelAnimationPerChild(quantity: number, duration: number) {
   function getLoadingWheelAnimation(child: number) {

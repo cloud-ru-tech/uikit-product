@@ -3,9 +3,9 @@ import { scaleLinear } from 'd3-scale';
 import { useCallback, useMemo, useRef, useState } from 'react';
 import { HeatMapGrid } from 'react-grid-heatmap';
 
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { extractSupportProps, useTheme, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Divider } from '@snack-uikit/divider';
+import { themeVars } from '@snack-uikit/figma-tokens';
 import { useLayoutEffect } from '@snack-uikit/utils';
 
 import { XAxisPosition } from './constants';

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+import { themeVars } from '@snack-uikit/figma-tokens';
 
 import { GroupChart } from '../src/chart/GroupChart';
 import { SingleChart } from '../src/chart/SingleChart';

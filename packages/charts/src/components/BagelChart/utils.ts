@@ -1,4 +1,4 @@
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+import { themeVars } from '@snack-uikit/figma-tokens';
 
 export function getSegmentColor({ value, total }: { value: number; total: number }) {
   const occupancyPercent = (value / total) * 100;

@@ -65,6 +65,7 @@
     "@types/lodash.debounce": "4.0.9"
   },
   "peerDependencies": {
-    "@sbercloud/uikit-product-locale": "*"
+    "@sbercloud/uikit-product-locale": "*",
+    "@snack-uikit/figma-tokens": "*"
   }
 }

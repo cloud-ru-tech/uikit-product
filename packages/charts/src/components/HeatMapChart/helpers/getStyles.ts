@@ -1,6 +1,6 @@
 import { ScaleLinear } from 'd3-scale';
 
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+import { themeVars } from '@snack-uikit/figma-tokens';
 
 import { HeatMapChartStyles } from '../types';
 import { TICKS_SIZE } from './constants';
