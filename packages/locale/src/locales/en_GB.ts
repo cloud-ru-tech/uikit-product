@@ -416,6 +416,11 @@ export const en_GB = {
     dataErrorDescription: 'Try to refresh the widget',
   },
   Claudia: {
+    AiAssistantChip: {
+      tooltipTitle: 'Giga assistant',
+      tooltipDescription: 'AI assistant in the cloud',
+      documentationLink: 'Documentation',
+    },
     SshField: {
       placeholder: 'Copy and paste SSH key or attach a file',
       chatStatusAnnouncement: {

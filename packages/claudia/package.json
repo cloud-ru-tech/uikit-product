@@ -44,6 +44,7 @@
     "@snack-uikit/drop-zone": "0.9.6",
     "@snack-uikit/dropdown": "0.5.3",
     "@snack-uikit/input-private": "4.8.3",
+    "@snack-uikit/link": "0.17.12",
     "@snack-uikit/loaders": "0.9.9",
     "@snack-uikit/scroll": "0.10.5",
     "@snack-uikit/tooltip": "0.18.5",

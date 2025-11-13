@@ -45,7 +45,6 @@ export const recommendPanel: StoryObj<RecommendPanelProps> = {
     chips: chipsData,
     onCloseClick: () => alert('Closed panel'),
     onCloseChipLabel: 'Close',
-    tooltip: 'Original tooltip',
     type: CHIP_TYPE.Default,
     size: SIZE.S,
   },

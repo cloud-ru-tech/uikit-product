@@ -2,8 +2,8 @@ import { ReactNode, useEffect, useRef, useState } from 'react';
 
 import { LAYOUT_TYPE, LayoutType } from '@sbercloud/uikit-product-utils';
 
+import { AiAssistantChip } from './helperComponents/AiAssistantChip';
 import { Chip } from './helperComponents/Chip';
-import { ClaudiaChip } from './helperComponents/ClaudiaChip';
 import { CloseChip } from './helperComponents/CloseChip';
 import { DropdownChip } from './helperComponents/DropdownChip';
 import styles from './styles.module.scss';
@@ -17,9 +17,12 @@ export type RecommendPanelProps = {
   layoutType?: LayoutType;
   onCloseClick?: () => void;
   onCloseChipLabel?: ReactNode;
-  tooltip?: ReactNode;
-  onClaudiaClick?: () => void;
+  onAiAssistantClick?: () => void;
+  docsUrl?: string;
+  dataTestId?: string;
 };
+
+const AI_ASSISTANT_DOCUMENTATION_URL = 'https://cloud.ru/docs/ai_assistant_cloudia/ug/index';
 
 export function RecommendPanel({
   chips,
@@ -28,8 +31,9 @@ export function RecommendPanel({
   layoutType,
   onCloseClick,
   onCloseChipLabel,
-  tooltip,
-  onClaudiaClick,
+  onAiAssistantClick,
+  docsUrl = AI_ASSISTANT_DOCUMENTATION_URL,
+  dataTestId = 'recommend-panel',
 }: RecommendPanelProps) {
   const [containerWidth, setContainerWidth] = useState(0);
   const [isCloseIconVisible, setCloseIconVisible] = useState(false);
@@ -95,8 +99,20 @@ export function RecommendPanel({
   };
 
   return (
-    <div className={styles.container} ref={containerRef} onMouseEnter={showCloseIcon} onMouseLeave={hideCloseIcon}>
-      <ClaudiaChip layoutType={layoutType} onClick={onClaudiaClick} size={size} tooltip={tooltip} />
+    <div
+      className={styles.container}
+      ref={containerRef}
+      onMouseEnter={showCloseIcon}
+      onMouseLeave={hideCloseIcon}
+      data-test-id={dataTestId}
+    >
+      <AiAssistantChip
+        layoutType={layoutType}
+        onClick={onAiAssistantClick}
+        size={size}
+        data-test-id={`${dataTestId}__ai-assistant-chip`}
+        docsUrl={docsUrl}
+      />
       {visibleChips.map((chip, index) => (
         <Chip
           ref={chipElement => (allChipsRefs.current[index] = chipElement)}
@@ -106,6 +122,7 @@ export function RecommendPanel({
           type={type}
           layoutType={layoutType}
           onClick={chip.onClick}
+          data-test-id={`${dataTestId}__chip-${chip.id}`}
         />
       ))}
       {hasHiddenChips && (
@@ -115,6 +132,7 @@ export function RecommendPanel({
           size={size}
           label={`+${hiddenChips.length}`}
           dropdownItems={hiddenChips}
+          data-test-id={`${dataTestId}__dropdown-chip`}
         />
       )}
       {onCloseClick && onCloseChipLabel && (
@@ -124,6 +142,7 @@ export function RecommendPanel({
           content={onCloseChipLabel}
           onClick={onCloseClick}
           isVisible={isCloseIconVisible}
+          data-test-id={`${dataTestId}__close-chip`}
         />
       )}
     </div>

@@ -545,8 +545,9 @@
 | layoutType | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | onCloseClick | `() => void` | - |  |
 | onCloseChipLabel | `ReactNode` | - |  |
-| tooltip | `ReactNode` | - |  |
-| onClaudiaClick | `() => void` | - |  |
+| onAiAssistantClick | `() => void` | - |  |
+| docsUrl | `string` | https://cloud.ru/docs/ai_assistant_cloudia/ug/index |  |
+| dataTestId | `string` | recommend-panel |  |
 ## SshField
 ### Props
 | name | type | default value | description |

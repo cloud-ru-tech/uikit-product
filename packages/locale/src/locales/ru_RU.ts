@@ -416,6 +416,11 @@ export const ru_RU: typeof en_GB = {
     dataErrorDescription: 'Попробуйте обновить виджет',
   },
   Claudia: {
+    AiAssistantChip: {
+      tooltipTitle: 'Гига-помощник',
+      tooltipDescription: 'ИИ-помощник в облаке',
+      documentationLink: 'Документация',
+    },
     SshField: {
       placeholder: 'Скопируйте и вставьте SSH-ключ или прикрепите файл',
       chatStatusAnnouncement: {
