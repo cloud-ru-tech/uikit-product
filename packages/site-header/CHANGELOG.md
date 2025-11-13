@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2025-11-13)
+
+
+### Features
+
+* **SITE-10174:** update headerItems for a/b test ([fee9eb7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fee9eb73144a9c68b8d109ee386fe97752aec9b2))
+
+
+
+
+
 ## 0.4.11 (2025-11-13)
 
 
