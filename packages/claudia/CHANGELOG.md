@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.6.5 (2025-11-13)
+
+
+### Bug Fixes
+
+* **PD-3377:** removed contributors ([121640f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** replaced tokens import to snack-uikit scoped package ([dd13d3b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dd13d3b7134a4b0d4696830dcd78c0e790700d09))
+
+
+
+
+
 ## 1.6.4 (2025-11-13)
 
 ### Only dependencies have been changed

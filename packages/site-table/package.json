@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-table",
   "title": "Site Table",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,8 +36,8 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-site-rich-text": "0.2.12",
-    "@sbercloud/uikit-product-utils": "7.0.2",
+    "@sbercloud/uikit-product-site-rich-text": "0.2.13",
+    "@sbercloud/uikit-product-utils": "7.0.3",
     "@snack-uikit/scroll": "0.9.4",
     "classnames": "2.5.1"
   }

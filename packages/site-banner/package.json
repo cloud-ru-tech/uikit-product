@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-banner",
   "title": "Site Banner",
-  "version": "0.3.15",
+  "version": "0.3.16",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,10 +36,10 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button-predefined": "0.7.6",
-    "@sbercloud/uikit-product-site-rich-text": "0.2.12",
-    "@sbercloud/uikit-product-site-tag": "0.3.12",
-    "@sbercloud/uikit-product-utils": "7.0.2",
+    "@sbercloud/uikit-product-button-predefined": "0.7.7",
+    "@sbercloud/uikit-product-site-rich-text": "0.2.13",
+    "@sbercloud/uikit-product-site-tag": "0.3.13",
+    "@sbercloud/uikit-product-utils": "7.0.3",
     "@snack-uikit/promo-tag": "0.7.1",
     "@snack-uikit/typography": "0.8.4",
     "@snack-uikit/utils": "3.7.0",

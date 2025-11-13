@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-tag",
   "title": "Site Tag",
-  "version": "0.3.12",
+  "version": "0.3.13",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "7.0.2",
+    "@sbercloud/uikit-product-utils": "7.0.3",
     "@snack-uikit/promo-tag": "0.7.1",
     "@snack-uikit/tooltip": "0.16.2",
     "@snack-uikit/utils": "3.8.1"

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.13.15 (2025-11-13)
+
+
+### Bug Fixes
+
+* **PD-3377:** removed contributors ([121640f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** replaced tokens import to snack-uikit scoped package ([dd13d3b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dd13d3b7134a4b0d4696830dcd78c0e790700d09))
+* **PD-3377:** updated charts deps ([dc59df5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dc59df5e99fb0c31a277244ca5de51a3c97e5c34))
+
+
+
+
+
 ## 0.13.14 (2025-11-13)
 
 ### Only dependencies have been changed
@@ -624,7 +637,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.8.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-charts@0.8.19...@sbercloud/uikit-product-charts@0.8.20) (2022-06-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-charts
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-localization@0.13.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/localization/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@7.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.8.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-charts@0.8.18...@sbercloud/uikit-product-charts@0.8.19) (2022-05-18)
 
