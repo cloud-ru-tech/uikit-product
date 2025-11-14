@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.34.0 (2025-11-14)
+
+
+### Features
+
+* **SITE-10150:** add new calculator EVOLUTION_DNS ([197f047](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/197f0478db06bf409cfa6b0e17dee8edd1009914))
+* **SITE-10160:** add new calculator EvolutionManagedBI ([902f499](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/902f4992291ee2e7ea04cc49f9d0ba7befb802e6))
+* **SITE-9969:** add new calculator Load Balancer ([3014938](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3014938f4720501b75b2400f8eb8c9ae6d87211e))
+
+
+
+
+
 ## 0.33.6 (2025-11-13)
 
 
