@@ -1,15 +1,16 @@
-import { ReactElement, ReactNode } from 'react';
+import { ReactElement } from 'react';
 
 import { LayoutType } from '@sbercloud/uikit-product-utils';
 
 export type TextItem = {
-  content: ReactNode;
+  content: string;
   shouldFocusOnHover?: boolean;
 };
 
 export type ChatStatusAnnouncementProps = {
   icon?: ReactElement;
-  content: ReactNode | TextItem[];
+  content: string | TextItem[];
+  contentClassName?: string;
   actionLabel: string;
   onActionClick?: () => void;
   layoutType: LayoutType;

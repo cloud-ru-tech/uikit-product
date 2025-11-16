@@ -29,11 +29,13 @@ export type SshFieldProps = WithLayoutType<
   Omit<FieldTextAreaProps, 'placeholder' | 'labelTooltip' | 'label' | 'required' | 'size' | 'spellCheck' | 'footer'> & {
     /** Колбек действия при отправке */
     onSubmit(value: string): void;
+    /** Колбек отмены действия */
+    onCancel(): void;
   }
 >;
 
 export const SshField = forwardRef<HTMLTextAreaElement, SshFieldProps>(
-  ({ onSubmit: handleSubmitProp, value, disabled, className, ...props }, ref) => {
+  ({ onSubmit: handleSubmitProp, onCancel, value, disabled, className, ...props }, ref) => {
     const { layoutType, validationState, onChange } = props;
     const { t } = useLocale('Claudia');
     const isTouchDevice = isTouchDeviceHelper(layoutType);
@@ -152,7 +154,7 @@ export const SshField = forwardRef<HTMLTextAreaElement, SshFieldProps>(
           icon={<PasswordLockSVG size={16} color={themeVars.sys.neutral.textSupport} />}
           content={t('SshField.chatStatusAnnouncement.content')}
           actionLabel={t('SshField.chatStatusAnnouncement.cancel')}
-          onActionClick={() => {}}
+          onActionClick={onCancel}
         />
         {isDragOver ? (
           <DropZone

@@ -102,8 +102,9 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | actionLabel* | `string` | - |  |
-| content* | `ReactNode \| TextItem[]` | - |  |
+| content* | `string \| TextItem[]` | - |  |
 | icon | `ReactElement<any, string \| JSXElementConstructor<any>>` | - |  |
+| contentClassName | `string` | - |  |
 | onActionClick | `() => void` | - |  |
 | className | `string` | - | CSS-класс |
 ## IconGiga
@@ -553,6 +554,7 @@
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| onCancel* | `() => void` | - | Колбек отмены действия |
 | onSubmit* | `(value: string) => void` | - | Колбек действия при отправке |
 | className | `string` | - | CSS-класс |
 | disabled | `boolean` | - | Является ли поле деактивированным |
