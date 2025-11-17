@@ -1,6 +1,9 @@
+import { QuestionRoundSVG } from '@sbercloud/uikit-product-icons';
+import { Tooltip } from '@snack-uikit/tooltip';
 import { ValueOf } from '@snack-uikit/utils';
 
-import { CONTROL, ObjectControl, SelectSingleControl, StepperControl } from '../../components';
+import { CONTROL, ObjectControl, SelectSingleControl, StepperControl } from '../../../components';
+import styles from './styles.module.scss';
 
 export const SpecificationItem = {
   Extreme_SSD: 'Extreme SSD',
@@ -12,10 +15,20 @@ export const specificationItems = [
   {
     value: SpecificationItem.Extreme_SSD,
     label: 'Extreme SSD',
+    afterContent: (
+      <Tooltip tip='Диски Ultra-high I/O с увеличенной пропускной способностью'>
+        <QuestionRoundSVG size={20} className={styles.icon} data-test-id='field-decorator__label-tooltip-trigger' />
+      </Tooltip>
+    ),
   },
   {
     value: SpecificationItem.Cloud_SSD,
     label: 'Cloud SSD',
+    afterContent: (
+      <Tooltip tip='Диски Ultra-high I/O'>
+        <QuestionRoundSVG size={20} className={styles.icon} data-test-id='field-decorator__label-tooltip-trigger' />
+      </Tooltip>
+    ),
   },
 ];
 

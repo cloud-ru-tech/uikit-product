@@ -17,6 +17,7 @@ export type SelectControlItem = {
   icon?: ReactNode;
   disabled?: boolean;
   disabledReason?: ReactNode;
+  afterContent?: ReactNode;
   dataTestId?: string;
   onChangePeriod?: (value: PRICE_PERIOD) => void;
   canChangeWholePricePeriod?: boolean;
@@ -65,6 +66,7 @@ function convertItemsToOptions(items: SelectControlItem[]): BaseOptionProps[] {
     disabled: item.disabled,
     option: item.label ?? item.value,
     beforeContent: item.icon,
+    afterContent: item.afterContent,
   }));
 }
 

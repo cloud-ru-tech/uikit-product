@@ -15,7 +15,7 @@ const bdEngineVersionItems = [
   },
   {
     value: BdEngineVersionItem.General_Purpose,
-    label: 'General Purpose',
+    label: 'General-Purpose',
     description: `Инстансы используют ресурсы процессора совместно с другими инстансами того же класса, размещенными на одном физическом сервере`,
   },
 ];

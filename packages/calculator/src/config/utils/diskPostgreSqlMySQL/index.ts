@@ -1,0 +1,1 @@
+export { getDisk } from './diskPostgreSqlMySQL';

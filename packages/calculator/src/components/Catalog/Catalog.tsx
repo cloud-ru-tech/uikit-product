@@ -15,7 +15,7 @@ import { Tag } from '@snack-uikit/tag';
 import { Tooltip } from '@snack-uikit/tooltip';
 
 import { useCalculatorContext } from '../../contexts';
-import { useCatalogCardClick } from '../../hooks';
+import { useCatalogCardClick, useCatalogLockBodyScroll } from '../../hooks';
 import { CatalogConfig, PlatformType } from '../../types';
 import { parseKeyToDataTest } from '../../utils';
 import { PrivateCardHeader } from './components';
@@ -66,6 +66,9 @@ export function Catalog() {
     },
     'data-test-id': dataTestId,
   }));
+
+  // FIXME: убрать после задачи PDS-3175
+  useCatalogLockBodyScroll({ catalogOpen: catalogOpen });
 
   const [openMobileCategory, setOpenMobileCategory] = useState<boolean>(false);
 

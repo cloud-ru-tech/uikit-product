@@ -1,0 +1,8 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields' as styles-tokens-fields;
+
+.icon {
+  flex-shrink: 0;
+  box-sizing: content-box;
+  color: styles-tokens-fields.$sys-neutral-text-light;
+  margin: auto 0;
+}
