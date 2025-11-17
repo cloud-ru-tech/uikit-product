@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.8.0 (2025-11-17)
+
+
+### Features
+
+* **AINFR-4479:** add onCancel ([e3dbed9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e3dbed92b1435c7d53b51d2da1cbf64c86674b5a))
+
+
+
+
+
 # 1.7.0 (2025-11-13)
 
 
