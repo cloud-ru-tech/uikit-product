@@ -338,6 +338,12 @@ export const en_GB = {
       closeSearch: 'Close search',
       openSearch: 'Open search',
     },
+    TreeNavigation: {
+      collapseAll: 'Collapse all',
+      expandAll: 'Expand all',
+      openMenu: 'Open menu',
+      closeMenu: 'Close menu',
+    },
   },
   PriceSummary: {
     total: 'Total',

@@ -338,6 +338,12 @@ export const ru_RU: typeof en_GB = {
       closeSearch: 'Закрыть поиск',
       openSearch: 'Открыть поиск',
     },
+    TreeNavigation: {
+      collapseAll: 'Свернуть все',
+      expandAll: 'Развернуть все',
+      openMenu: 'Открыть меню',
+      closeMenu: 'Закрыть меню',
+    },
   },
   PriceSummary: {
     total: 'Итого',
