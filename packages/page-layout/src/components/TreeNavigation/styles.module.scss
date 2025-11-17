@@ -1,0 +1,86 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+$page-padding: 24px;
+$main-content-padding: 8px;
+$content-gap: 16px;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: $main-content-padding $page-padding;
+  background-color: $sys-neutral-background;
+  border-bottom: 1px solid $sys-neutral-decor-default;
+  box-sizing: border-box;
+}
+
+.description {
+  color: $sys-neutral-text-support;
+}
+
+.body {
+  display: flex;
+  gap: $content-gap;
+  padding: 0 $page-padding;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.sidebar {
+  border-radius: 12px;
+  padding: $content-gap;
+  height: max-content;
+  background: $sys-neutral-background1-level;
+}
+
+.main {
+  padding-top: $content-gap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: $content-gap;
+  row-gap: $main-content-padding;
+}
+
+.titleInner {
+  display: flex;
+  gap: $main-content-padding;
+}
+
+.title {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+
+.innerElement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $sans-title-l-line-height;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}

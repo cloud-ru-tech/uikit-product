@@ -1,0 +1,14 @@
+$sidebar-width: 292px; // Общая ширина 324пкс из-за 16пкс paddings
+
+.sidebar {
+  min-width: $sidebar-width;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
