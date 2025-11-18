@@ -189,6 +189,9 @@
     },
     {
       "path": "./widget/tsconfig.cjs.json"
+    },
+    {
+      "path": "./site-selector-platform-drop-list/tsconfig.cjs.json"
     }
   ],
   "compilerOptions": {

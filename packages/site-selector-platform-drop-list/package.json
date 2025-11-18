@@ -1,0 +1,44 @@
+{
+  "name": "@sbercloud/uikit-product-site-selector-platform-drop-list",
+  "title": "Site Selector Platform DropList",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "Site Selector Platform DropList",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md",
+    "./LICENSE"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-site-selector-platform-drop-list",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/site-site-selector-platform-drop-list"
+  },
+  "author": "daparfirov <daparfirov@cloud.ru>",
+  "contributors": [
+    "daparfirov <daparfirov@cloud.ru>"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-product-icons": "15.1.4",
+    "@sbercloud/uikit-product-mobile-dropdown": "0.9.24",
+    "@sbercloud/uikit-product-mobile-modal": "0.9.21",
+    "@sbercloud/uikit-product-utils": "7.0.3",
+    "@snack-uikit/list": "0.32.7",
+    "@snack-uikit/tooltip": "0.18.5",
+    "@snack-uikit/typography": "0.8.11"
+  }
+}

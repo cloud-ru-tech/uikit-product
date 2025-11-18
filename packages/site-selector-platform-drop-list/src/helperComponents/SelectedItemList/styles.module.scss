@@ -1,0 +1,35 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
+
+.iconPlatform {
+  color: ste.$sys-primary-text-light;
+}
+
+.text {
+  color: ste.$sys-neutral-text-main;
+}
+
+.container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 2px;
+  width: 100%;
+
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item {
+  display: flex;
+  gap: 4px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.icon {
+  color: ste.$sys-primary-text-light;
+}

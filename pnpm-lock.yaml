@@ -2193,6 +2193,30 @@ importers:
         specifier: 4.0.9
         version: 4.0.9
 
+  packages/site-selector-platform-drop-list:
+    dependencies:
+      '@sbercloud/uikit-product-icons':
+        specifier: 15.1.4
+        version: link:../icons
+      '@sbercloud/uikit-product-mobile-dropdown':
+        specifier: 0.9.24
+        version: link:../mobile-dropdown
+      '@sbercloud/uikit-product-mobile-modal':
+        specifier: 0.9.21
+        version: link:../mobile-modal
+      '@sbercloud/uikit-product-utils':
+        specifier: 7.0.3
+        version: link:../utils
+      '@snack-uikit/list':
+        specifier: 0.32.7
+        version: 0.32.7(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/tooltip':
+        specifier: 0.18.5
+        version: 0.18.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/typography':
+        specifier: 0.8.11
+        version: 0.8.11(react@18.2.0)
+
   packages/site-table:
     dependencies:
       '@sbercloud/uikit-product-site-rich-text':
@@ -4042,42 +4066,36 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@parcel/watcher-linux-arm-musl@2.5.1':
     resolution: {integrity: sha512-6E+m/Mm1t1yhB8X412stiKFG3XykmgdIOqhjWj+VL8oHkKABfu/gjFj8DvLrYVHSBNC+/u5PeNrujiSQ1zwd1Q==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@parcel/watcher-linux-arm64-glibc@2.5.1':
     resolution: {integrity: sha512-LrGp+f02yU3BN9A+DGuY3v3bmnFUggAITBGriZHUREfNEzZh/GO06FF5u2kx8x+GBEUYfyTGamol4j3m9ANe8w==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@parcel/watcher-linux-arm64-musl@2.5.1':
     resolution: {integrity: sha512-cFOjABi92pMYRXS7AcQv9/M1YuKRw8SZniCDw0ssQb/noPkRzA+HBDkwmyOJYp5wXcsTrhxO0zq1U11cK9jsFg==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@parcel/watcher-linux-x64-glibc@2.5.1':
     resolution: {integrity: sha512-GcESn8NZySmfwlTsIur+49yDqSny2IhPeZfXunQi48DMugKeZ7uy1FX83pO0X22sHntJ4Ub+9k34XQCX+oHt2A==}
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@parcel/watcher-linux-x64-musl@2.5.1':
     resolution: {integrity: sha512-n0E2EQbatQ3bXhcH2D1XIAANAcTZkQICBPVaxMeaCVBtOpBZpWJuf7LwyWPSBDITb7In8mqQgJ7gH8CILCURXg==}
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@parcel/watcher-win32-arm64@2.5.1':
     resolution: {integrity: sha512-RFzklRvmc3PkjKjry3hLF9wD7ppR4AKcWNzH7kXR7GUe0Igb3Nz8fyPwtZCSquGrhU5HhUNDr/mKBqj7tqA2Vw==}
@@ -4970,6 +4988,11 @@ packages:
     peerDependencies:
       '@snack-uikit/locale': '*'
 
+  '@snack-uikit/list@0.32.7':
+    resolution: {integrity: sha512-Ph3jR2hvwZS8GcyO9lLrmPKtW6xZXnOKFF3TrZcE+5iht630NIlQvTPF7v2H/Ty3Ws/tuH+g/4AyMgHGmSl/Fw==}
+    peerDependencies:
+      '@snack-uikit/locale': '*'
+
   '@snack-uikit/loaders@0.7.1':
     resolution: {integrity: sha512-cLFjGByoLrFk4vDII90NJjfx3RWQ8i+ajBBgLK0DeHs40KPnSmYXR1BiDgYSviexrgDR+vkwcfY3ZZeku1SxUA==}
 
@@ -5397,6 +5420,9 @@ packages:
 
   '@snack-uikit/truncate-string@0.7.3':
     resolution: {integrity: sha512-zKZOmKsubXXHDuX4zHN84C9BlwQME95lqAzQG3OZ8dSTmlOLFJH8BbDLQb7fHNvYhup20pkdQPtU4tpJzqns0A==}
+
+  '@snack-uikit/truncate-string@0.7.4':
+    resolution: {integrity: sha512-ypLM6L2R/QNwt0AkKS9iDm4+Aopv9pGzNzeE+xdAkLtkGUTeib054oQxNGYdB6qY+sa6GNj95wLQ5uf/eM7NEA==}
 
   '@snack-uikit/typography@0.8.0':
     resolution: {integrity: sha512-Xjj9H0iYBe6YF/eBHZ2eJdLhUzqBDS5YS0efO4isTuj2eavoFVgBHQi2FZP1uqV2b8HoX4WW+v9C9yw0FEVMDg==}
@@ -17891,6 +17917,28 @@ snapshots:
       - react
       - react-dom
 
+  '@snack-uikit/list@0.32.7(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/button': 0.19.16(react@18.2.0)
+      '@snack-uikit/divider': 3.2.10(react@18.2.0)
+      '@snack-uikit/dropdown': 0.5.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/icons': 0.27.3
+      '@snack-uikit/info-block': 0.6.33(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/loaders': 0.9.9(react@18.2.0)
+      '@snack-uikit/locale': 0.15.3
+      '@snack-uikit/scroll': 0.10.5(react@18.2.0)
+      '@snack-uikit/search-private': 0.4.31(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react@18.2.0)
+      '@snack-uikit/toggles': 0.13.22(@types/react@18.2.79)(react@18.2.0)
+      '@snack-uikit/truncate-string': 0.7.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.0(react@18.2.0)
+      '@tanstack/react-virtual': 3.11.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      classnames: 2.5.1
+      merge-refs: 1.3.0(@types/react@18.2.79)
+    transitivePeerDependencies:
+      - '@types/react'
+      - react
+      - react-dom
+
   '@snack-uikit/loaders@0.7.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@snack-uikit/utils': 3.5.0(react@18.2.0)
@@ -19306,6 +19354,16 @@ snapshots:
       - react-dom
 
   '@snack-uikit/truncate-string@0.7.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/tooltip': 0.18.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.0(react@18.2.0)
+      classnames: 2.5.1
+      lodash.throttle: 4.1.1
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
+  '@snack-uikit/truncate-string@0.7.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@snack-uikit/tooltip': 0.18.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/utils': 4.0.0(react@18.2.0)

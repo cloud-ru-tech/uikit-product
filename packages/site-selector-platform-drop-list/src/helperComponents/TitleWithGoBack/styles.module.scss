@@ -1,0 +1,21 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // оставляем, потому нет возможности отцентрировать через пропс, в компоненте AdaptiveDroplist ->MobileDroplist -> MobileModalCustom.Header не передается align, который в MobileModalCustom.Header имеется
+  width: calc(100vw - 32px);
+
+  &[data-icon-back="false"] {
+    justify-content: center;
+  }
+}
+
+.arrow {
+  color: ste.$sys-neutral-text-light;
+}
+
+.buttonStub {
+  width: 24px;
+}
