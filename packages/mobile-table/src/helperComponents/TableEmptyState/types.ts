@@ -1,11 +1,3 @@
-import { ReactNode } from 'react';
+import { InfoBlockProps } from '@snack-uikit/info-block';
 
-import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
-
-export type EmptyStateProps = {
-  title?: string;
-  description?: string;
-  icon?: Pick<IconPredefinedProps, 'icon' | 'decor' | 'appearance'>;
-  footer?: ReactNode;
-  className?: string;
-};
+export type EmptyStateProps = Pick<InfoBlockProps, 'title' | 'description' | 'icon' | 'footer' | 'className'>;
