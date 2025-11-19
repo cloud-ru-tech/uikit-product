@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.35.0 (2025-11-19)
+
+
+### Features
+
+* **SITE-10199:** update calculator info and fox scroll calculator ([396c783](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/396c78336370e1c87d565e8b16bc5445d636cb28))
+
+
+
+
+
 # 0.34.0 (2025-11-14)
 
 
