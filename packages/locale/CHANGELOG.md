@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.19.1 (2025-11-19)
+
+
+### Bug Fixes
+
+* **FF-7605:** up snack locale dependency ([392b023](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/392b023b5ed165ee66a0478114c768dc33f72931))
+
+
+
+
+
 # 0.19.0 (2025-11-13)
 
 
