@@ -46,7 +46,7 @@
     "@snack-uikit/pagination": "0.10.18",
     "@snack-uikit/skeleton": "0.6.8",
     "@snack-uikit/status": "0.10.0",
-    "@snack-uikit/table": "0.37.16",
+    "@snack-uikit/table": "0.37.19",
     "@snack-uikit/toggles": "0.13.20",
     "@tanstack/match-sorter-utils": "8.19.4",
     "@tanstack/react-table": "8.12.0",

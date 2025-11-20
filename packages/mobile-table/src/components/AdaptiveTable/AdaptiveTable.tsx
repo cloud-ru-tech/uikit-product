@@ -1,6 +1,13 @@
 import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
-import { CellContext, ColumnDefinition, Table as DesktopTable, Table, TableProps } from '@snack-uikit/table';
+import {
+  CellContext,
+  ColumnDefinition,
+  RowAppearance,
+  Table as DesktopTable,
+  Table,
+  TableProps,
+} from '@snack-uikit/table';
 
 import { MobileTable, MobileTableProps } from '../MobileTable';
 
@@ -32,3 +39,4 @@ export const useAdaptiveGetStatusColumnDef = ({ layoutType }: WithLayoutType) =>
 };
 
 export type { CellContext, ColumnDefinition, TableProps };
+export { RowAppearance };
