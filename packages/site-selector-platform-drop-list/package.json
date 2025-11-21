@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-selector-platform-drop-list",
   "title": "Site Selector Platform DropList",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
