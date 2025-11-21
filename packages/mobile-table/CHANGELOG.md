@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0 (2025-11-21)
+
+
+### Features
+
+* **IAM-5889:** up @snack-uikit/table deps ([8f56ef4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8f56ef440f8b8b9b17f953352deed0071f7d7ddb))
+
+
+
+
+
 ## 0.11.6 (2025-11-13)
 
 
