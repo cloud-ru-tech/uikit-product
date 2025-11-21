@@ -1,4 +1,5 @@
-import { ReactNode, useMemo, useState } from 'react';
+import cn from 'classnames';
+import { ReactNode, useCallback, useMemo, useState } from 'react';
 
 import { ChevronDownSVG, ChevronUpSVG } from '@cloud-ru/uikit-product-icons';
 import { AdaptiveDroplist } from '@cloud-ru/uikit-product-mobile-dropdown';
@@ -36,6 +37,10 @@ type BaseSelectorPlatformDropListPrivateProps = WithLayoutType<{
   items: Array<Item>;
   /** Нижняя часть под списком droplist */
   footer?: ReactNode;
+  loading?: boolean;
+  triggerClassName?: string;
+  /** Колбек отображения компонента. Срабатывает при изменении состояния open. */
+  onOpenChange?: (isOpen: boolean) => void;
 }>;
 
 export type SelectorPlatformDropListPrivateProps = BaseSelectorPlatformDropListPrivateProps &
@@ -51,6 +56,9 @@ export function SelectorPlatformDropListPrivate({
   baseIcon,
   layoutType,
   mode,
+  loading,
+  triggerClassName,
+  onOpenChange,
 }: SelectorPlatformDropListPrivateProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [tooltipMobile, setTooltipMobile] = useState<TooltipMobile>({
@@ -69,9 +77,9 @@ export function SelectorPlatformDropListPrivate({
         id: item.id,
         content: <ContentItemList title={item.title} />,
         beforeContent: <IconItemList icon={item.icon} />,
-        afterContent: (
+        afterContent: item.tooltipText ? (
           <Tooltip setTooltipMobile={setTooltipMobile} tooltipText={item.tooltipText} layoutType={layoutType} />
-        ),
+        ) : null,
         className: styles.rowItem,
         onClick: item.onClick,
       })),
@@ -93,6 +101,14 @@ export function SelectorPlatformDropListPrivate({
 
   const foundItems = useMemo(() => findItems(items, value), [items, value]);
 
+  const handleIsOpenChange = useCallback(
+    (isOpen: boolean) => {
+      setIsOpen(isOpen);
+      onOpenChange?.(isOpen);
+    },
+    [onOpenChange],
+  );
+
   return (
     <>
       <AdaptiveDroplist
@@ -102,13 +118,14 @@ export function SelectorPlatformDropListPrivate({
         trigger='click'
         open={isOpen}
         items={footer ? itemsWithDivider : itemsView}
-        onOpenChange={setIsOpen}
+        onOpenChange={handleIsOpenChange}
         selection={selection}
         footer={footer}
         closeDroplistOnItemClick
         size='m'
+        loading={loading}
       >
-        <div className={styles.root} data-focus={isOpen} role='button'>
+        <div className={cn(styles.root, triggerClassName)} data-focus={isOpen} role='button'>
           <BaseIcon baseIcon={baseIcon} value={foundItems} lengthDroplist={items.length} />
           <div className={styles.titleContainer}>
             <Typography className={styles.valueLabel} family='sans' purpose='body' size='s'>

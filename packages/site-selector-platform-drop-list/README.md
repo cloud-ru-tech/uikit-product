@@ -19,6 +19,9 @@ SiteSelectorPlatformDropList
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `Platform[]` | - | Список элементов droplist |
 | footer | `ReactNode` | - | Нижняя часть под списком droplist |
+| loading | `boolean` | - |  |
+| triggerClassName | `string` | - |  |
+| onOpenChange | `(isOpen: boolean) => void` | - | Колбек отображения компонента. Срабатывает при изменении состояния open. |
 
 
 [//]: DOCUMENTATION_SECTION_END

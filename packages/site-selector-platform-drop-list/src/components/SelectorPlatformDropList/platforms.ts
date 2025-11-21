@@ -1,4 +1,4 @@
-import { AdvancedSVG, CloudSVG, EvolutionSVG, VmwareSVG } from '@cloud-ru/uikit-product-icons';
+import { AdvancedSVG, CloudSVG, EvolutionSVG, MlSpaceSVG, VmwareSVG } from '@cloud-ru/uikit-product-icons';
 
 import { Item } from '../../types';
 import { PlatformType } from './SelectorPlatformDropList';
@@ -31,5 +31,15 @@ export const PLATFORMS: { [key in PlatformType]: Item } = {
     icon: CloudSVG,
     tooltipText:
       'Совокупность сервисов, программных и/или аппаратных средств, решающих определенную задачу или группу задач.',
+  },
+  mlSpace: {
+    id: 'mlSpace',
+    title: 'ML Space',
+    icon: MlSpaceSVG,
+  },
+  Кроссплатформенный: {
+    id: 'Кроссплатформенный',
+    title: 'Кроссплатформенный',
+    icon: CloudSVG,
   },
 };

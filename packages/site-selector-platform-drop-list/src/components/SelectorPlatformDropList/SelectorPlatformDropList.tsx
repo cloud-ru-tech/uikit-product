@@ -7,7 +7,7 @@ import { SelectorPlatformDropListPrivate } from '../../helperComponents';
 import { Item, MultipleSelectorPlatformDropListProps, SingleSelectorPlatformDropListProps } from '../../types';
 import { PLATFORMS } from './platforms';
 
-export type PlatformType = 'advanced' | 'evolution' | 'vmware' | 'all';
+export type PlatformType = 'advanced' | 'evolution' | 'vmware' | 'all' | 'mlSpace' | 'Кроссплатформенный';
 
 export type Platform = {
   /** Тип элемента */
@@ -21,6 +21,10 @@ type BaseSelectorPlatformDropListProps = WithLayoutType<{
   items: Array<Platform>;
   /** Нижняя часть под списком droplist */
   footer?: ReactNode;
+  loading?: boolean;
+  triggerClassName?: string;
+  /** Колбек отображения компонента. Срабатывает при изменении состояния open. */
+  onOpenChange?: (isOpen: boolean) => void;
 }>;
 
 export type SelectorPlatformDropListProps = BaseSelectorPlatformDropListProps &
@@ -29,10 +33,10 @@ export type SelectorPlatformDropListProps = BaseSelectorPlatformDropListProps &
 export function SelectorPlatformDropList({
   items,
   value,
-  footer,
   onChange,
   layoutType,
   mode,
+  ...rest
 }: SelectorPlatformDropListProps) {
   const selection = useMemo(
     () =>
@@ -59,11 +63,11 @@ export function SelectorPlatformDropList({
     <SelectorPlatformDropListPrivate
       layoutType={layoutType === 'tablet' ? 'mobile' : layoutType}
       items={itemsView}
-      title={'Облачная платформа'}
-      baseTitle={'Все платформы'}
+      title='Облачная платформа'
+      baseTitle='Все платформы'
       baseIcon={CloudSVG}
-      footer={footer}
       {...selection}
+      {...rest}
     />
   );
 }
