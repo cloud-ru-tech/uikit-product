@@ -23,4 +23,12 @@ export const useAdaptiveGetRowActionsColumnDef = ({ layoutType }: WithLayoutType
   ) as typeof DesktopTable.getRowActionsColumnDef;
 };
 
-export type { TableProps, ColumnDefinition, CellContext };
+export const useAdaptiveGetStatusColumnDef = ({ layoutType }: WithLayoutType) => {
+  const isMobile = layoutType === 'mobile';
+
+  return (
+    isMobile ? MobileTable.getStatusColumnDef : DesktopTable.getStatusColumnDef
+  ) as typeof DesktopTable.getStatusColumnDef;
+};
+
+export type { CellContext, ColumnDefinition, TableProps };

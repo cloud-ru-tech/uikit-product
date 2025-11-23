@@ -6,7 +6,16 @@ function randomIntFromInterval(min: number, max: number) {
 
 export const numberFormatter = new Intl.NumberFormat('ru-RU', { minimumFractionDigits: 2 });
 
-export function generateRows(count: number): StubData[] {
+const STATUSES = ['pending', 'success', 'error', 'warning', 'info'] as const;
+const STATUS_APPEARANCES: Record<string, 'blue' | 'green' | 'red' | 'yellow' | 'neutral'> = {
+  pending: 'blue',
+  success: 'green',
+  error: 'red',
+  warning: 'yellow',
+  info: 'neutral',
+};
+
+export function generateRows(count: number, includeStatus = false): StubData[] {
   const res: StubData[] = [];
 
   for (let i = 0; i < count; ++i) {
@@ -17,7 +26,9 @@ export function generateRows(count: number): StubData[] {
     );
 
     res.push({
-      // status: i === 3 ? 'Not' : STATUSES[randomIntFromInterval(0, STATUSES.length - 1)],
+      ...(includeStatus && {
+        status: STATUSES[randomIntFromInterval(0, STATUSES.length - 1)],
+      }),
       col1: i * 5,
       col2: i * 5 + 1,
       col3: i * 5 + 2,
@@ -30,3 +41,5 @@ export function generateRows(count: number): StubData[] {
 
   return res;
 }
+
+export { STATUS_APPEARANCES };

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { HeaderContext, RowSelectionState } from '@tanstack/react-table';
+import { CellContext, HeaderContext, RowSelectionState } from '@tanstack/react-table';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { TrashSVG } from '@sbercloud/uikit-product-icons';
@@ -25,6 +25,7 @@ type Props = MobileTableProps<StubData, Filters>;
 type StoryProps = Props & {
   rowsAmount: number;
   showActionsColumn?: boolean;
+  showStatusColumn?: boolean;
   initialColumnFiltersOpen: boolean;
   rowSelectionMode?: 'single' | 'multiple';
 };
@@ -145,7 +146,7 @@ const columnDefinitions: Props['columnDefinitions'] = [
   {
     id: '6',
     accessorKey: 'col6',
-    cell: cell => numberFormatter.format(cell.getValue<number>()),
+    cell: (cell: CellContext<StubData, unknown>) => numberFormatter.format(cell.getValue() as number),
     header: renderHeader,
     size: 150,
     headerAlign: 'right',
@@ -169,8 +170,8 @@ const columnDefinitions: Props['columnDefinitions'] = [
     size: 146,
     align: 'right',
     pinned: 'right',
-    sortingFn: (a, b) => a.original.date - b.original.date,
-    accessorFn: row =>
+    sortingFn: (a: { original: StubData }, b: { original: StubData }) => a.original.date - b.original.date,
+    accessorFn: (row: StubData) =>
       new Date(row.date).toLocaleDateString('ru-RU', {
         year: 'numeric',
         month: 'numeric',
@@ -185,13 +186,14 @@ function Template({
   rowsAmount,
   columnDefinitions,
   showActionsColumn,
+  showStatusColumn,
   className,
   columnFilters,
   initialColumnFiltersOpen,
   rowSelectionMode,
   ...args
 }: StoryProps) {
-  const data = useMemo(() => generateRows(rowsAmount), [rowsAmount]);
+  const data = useMemo(() => generateRows(rowsAmount, showStatusColumn), [rowsAmount, showStatusColumn]);
 
   const [filteredData, setFilteredData] = useState(data);
 
@@ -201,6 +203,23 @@ function Template({
 
   const columns = useMemo(() => {
     const colDefs = [...columnDefinitions];
+
+    if (showStatusColumn) {
+      colDefs.unshift(
+        MobileTable.getStatusColumnDef<StubData, Filters>({
+          accessorKey: 'status',
+          mapStatusToAppearance: {
+            pending: 'blue',
+            success: 'green',
+            error: 'red',
+            warning: 'yellow',
+            info: 'neutral',
+          },
+          header: 'Статус',
+          size: 150,
+        }),
+      );
+    }
 
     if (showActionsColumn) {
       const handleRowActionClick = ({ rowId, itemId }: { rowId: string; itemId: string }) => {
@@ -248,7 +267,7 @@ function Template({
     }
 
     return colDefs;
-  }, [columnDefinitions, showActionsColumn]);
+  }, [columnDefinitions, showActionsColumn, showStatusColumn]);
 
   const filters = useMemo(
     () =>
@@ -312,6 +331,7 @@ export const table: StoryObj<StoryProps> = {
     columnDefinitions,
     columnFilters,
     showActionsColumn: true,
+    showStatusColumn: false,
     initialColumnFiltersOpen: false,
     rowSelection: {
       enable: true,
@@ -333,6 +353,13 @@ export const table: StoryObj<StoryProps> = {
     },
     showActionsColumn: {
       name: '[Stories]: Show RowActions',
+      control: {
+        type: 'boolean',
+      },
+    },
+    showStatusColumn: {
+      name: '[Stories]: Show Status Column',
+      description: 'Demonstrates how status cells are rendered in the table',
       control: {
         type: 'boolean',
       },

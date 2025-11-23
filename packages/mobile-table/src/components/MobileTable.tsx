@@ -20,6 +20,7 @@ import { PaginationState, TableProps } from '@snack-uikit/table';
 
 import {
   getRowActionsColumnDef,
+  getStatusColumnDef,
   TableCard,
   TableEmptyState,
   TablePagination,
@@ -270,3 +271,4 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
 }
 
 MobileTable.getRowActionsColumnDef = getRowActionsColumnDef;
+MobileTable.getStatusColumnDef = getStatusColumnDef;

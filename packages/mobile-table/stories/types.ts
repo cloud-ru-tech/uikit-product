@@ -1,7 +1,7 @@
 import { ChipChoiceTimeProps } from '@snack-uikit/chips';
 
 export type StubData = {
-  // status: string;
+  status?: string;
   col1: number;
   col2: number;
   col3: number;
