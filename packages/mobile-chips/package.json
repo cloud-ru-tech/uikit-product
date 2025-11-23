@@ -55,5 +55,8 @@
   },
   "peerDependencies": {
     "@sbercloud/uikit-product-locale": "*"
+  },
+  "devDependencies": {
+    "@types/fuzzy-search": "2.1.5"
   }
 }

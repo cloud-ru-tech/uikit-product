@@ -1142,6 +1142,10 @@ importers:
       uncontrollable:
         specifier: 8.0.4
         version: 8.0.4(react@18.2.0)
+    devDependencies:
+      '@types/fuzzy-search':
+        specifier: 2.1.5
+        version: 2.1.5
 
   packages/mobile-drawer:
     dependencies:
