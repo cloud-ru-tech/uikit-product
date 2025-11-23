@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-chips",
   "title": "Mobile Chips",
-  "version": "0.8.39",
+  "version": "0.8.40",
   "sideEffects": [
     "*.css",
     "*.woff",

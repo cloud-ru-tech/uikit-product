@@ -1431,13 +1431,13 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-chips':
-        specifier: 0.8.39
+        specifier: 0.8.40
         version: link:../mobile-chips
       '@sbercloud/uikit-product-mobile-dropdown':
         specifier: 0.9.24
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-toolbar':
-        specifier: 0.4.6
+        specifier: 0.4.7
         version: link:../mobile-toolbar
       '@sbercloud/uikit-product-utils':
         specifier: 7.0.3
@@ -1522,7 +1522,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-chips':
-        specifier: 0.8.39
+        specifier: 0.8.40
         version: link:../mobile-chips
       '@sbercloud/uikit-product-mobile-dropdown':
         specifier: 0.9.24

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.40 (2025-11-23)
+
+
+### Bug Fixes
+
+* **FF-7560:** add searchable prop into chips ([8c30e4e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8c30e4ef1395d4de5d2522dddb15432efc635446))
+
+
+### Dependencies
+
+* **FF-7560:** add types deps into chips ([ff4eb37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ff4eb37448671e27d129441b042090f997f4b1c5))
+
+
+
+
+
 ## 0.8.39 (2025-11-13)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.13.0 (2025-11-23)
+
+
+### Features
+
+* **FF-7560:** add status column support to mobile table ([2589830](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2589830b331efbc93ca22cbf91009a1e1be0745f))
+
+
+
+
+
 # 0.12.0 (2025-11-21)
 
 
