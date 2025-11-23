@@ -11,7 +11,7 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { MobileTable, MobileTableProps } from '../src';
 import { STORY_TEST_IDS } from './constants';
-import { generateRows, numberFormatter } from './helpers';
+import { generateRows, numberFormatter, STATUS_APPEARANCES } from './helpers';
 import { Filters, StubData } from './types';
 
 const meta: Meta = {
@@ -208,13 +208,7 @@ function Template({
       colDefs.unshift(
         MobileTable.getStatusColumnDef<StubData, Filters>({
           accessorKey: 'status',
-          mapStatusToAppearance: {
-            pending: 'blue',
-            success: 'green',
-            error: 'red',
-            warning: 'yellow',
-            info: 'neutral',
-          },
+          mapStatusToAppearance: (value: string | number) => STATUS_APPEARANCES[String(value)] || 'neutral',
           header: 'Статус',
           size: 150,
         }),

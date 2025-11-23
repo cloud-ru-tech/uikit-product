@@ -12,7 +12,7 @@ export type StatusColumnDefProps<TData extends object> = {
   /** Ключ для доступа к значению статуса в данных */
   accessorKey: keyof TData;
   /** Маппинг значений статусов на appearance */
-  mapStatusToAppearance: Record<string, StatusAppearance>;
+  mapStatusToAppearance: (value: string | number) => StatusAppearance;
   /** Заголовок колонки */
   header?: string | ((ctx: HeaderContext<TData, unknown>) => React.ReactNode);
   /** Функция для рендеринга описания статуса (опционально) */
@@ -58,7 +58,7 @@ export function getStatusColumnDef<TData extends object, TFilters extends Filter
       const statusValue = cell.getValue<string>();
       if (!statusValue) return null;
 
-      const appearance = mapStatusToAppearance[statusValue] || 'neutral';
+      const appearance = mapStatusToAppearance(statusValue) || 'neutral';
       const label = renderDescription ? renderDescription(statusValue) : statusValue;
 
       return (
