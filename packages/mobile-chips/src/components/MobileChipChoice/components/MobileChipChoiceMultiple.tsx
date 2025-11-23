@@ -72,7 +72,7 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
     return flattenOptions;
   }, [options]);
 
-  const searchable = searchableProp && Object.values(flattenOptions).length > 5;
+  const searchable = searchableProp && Object.values(flattenOptions).length > 10;
 
   const [searchValue = '', setSearchValue] = useState<string>('');
 
@@ -173,6 +173,7 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
         setOpen(open);
       }}
       label={label}
+      search={searchable ? { value: searchValue, onChange: setSearchValue } : undefined}
       virtualized={virtualized}
       footer={
         <div className={styles.footer}>

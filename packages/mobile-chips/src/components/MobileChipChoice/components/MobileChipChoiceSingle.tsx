@@ -58,7 +58,7 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
     return flattenOptions;
   }, [options]);
 
-  const searchable = searchableProp && Object.values(flattenOptions).length > 5;
+  const searchable = searchableProp && Object.values(flattenOptions).length > 10;
 
   const { t } = useLocale('Chips');
 
@@ -156,6 +156,7 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
         }
         setOpen(open);
       }}
+      search={searchable ? { value: searchValue, onChange: setSearchValue } : undefined}
       label={label}
       virtualized={virtualized}
       footer={!autoApply && autoApplyFooter ? <div className={styles.footer}>{autoApplyFooter}</div> : undefined}
