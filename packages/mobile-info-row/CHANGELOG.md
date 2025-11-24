@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.25 (2025-11-24)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-info-row@0.8.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/info-row/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-tooltip@0.4.70](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@8.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## 0.6.24 (2025-11-24)
 
 ### Only dependencies have been changed

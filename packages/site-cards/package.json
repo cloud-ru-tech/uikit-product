@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-cards",
   "title": "Site Cards",
-  "version": "0.11.7",
+  "version": "0.11.8",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,10 +36,10 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "15.1.5",
-    "@sbercloud/uikit-product-site-rich-text": "0.2.14",
-    "@sbercloud/uikit-product-site-tag": "0.3.14",
-    "@sbercloud/uikit-product-utils": "8.0.0",
+    "@sbercloud/uikit-product-icons": "15.1.6",
+    "@sbercloud/uikit-product-site-rich-text": "0.2.15",
+    "@sbercloud/uikit-product-site-tag": "0.3.15",
+    "@sbercloud/uikit-product-utils": "8.0.1",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/card": "0.16.19",
     "@snack-uikit/tag": "0.12.7",

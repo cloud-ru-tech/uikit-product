@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-layout",
   "title": "Site Layout",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "8.0.0",
+    "@sbercloud/uikit-product-utils": "8.0.1",
     "classnames": "2.5.1"
   }
 }

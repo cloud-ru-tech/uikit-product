@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 8.0.1 (2025-11-24)
+
+
+### Bug Fixes
+
+* **FF-7533:** mobile layout type for small tablets ([22fc805](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/22fc805273e29253c6e54f2587d121999744b1ff))
+
+
+
+
+
 # 8.0.0 (2025-11-24)
 
 
