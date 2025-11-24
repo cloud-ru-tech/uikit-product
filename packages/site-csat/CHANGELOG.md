@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-11-24)
+
+
+### Features
+
+* **SITE-10171:** update component Site-csat for a/b test ([8061656](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8061656f79946d2987b7fe407aa98b6c6e033263))
+
+
+
+
+
 ## 0.1.18 (2025-11-13)
 
 

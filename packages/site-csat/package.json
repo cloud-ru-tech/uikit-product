@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-csat",
   "title": "Site Csat",
-  "version": "0.1.18",
+  "version": "0.2.0",
   "sideEffects": [
     "*.css",
     "*.woff",
