@@ -19,10 +19,11 @@ export const siteCsatPopover: StoryObj<SiteCsatPopoverProps> = {
   render: Template,
   args: {
     loading: false,
-    like: false,
+    like: true,
     onSetLike: () => {},
     layoutType: LAYOUT_TYPE.Desktop,
     label: 'Было полезно ?',
+    showNewAppearance: true,
     negativeFeedbackForm: {
       open: false,
       onSetOpen: () => {},

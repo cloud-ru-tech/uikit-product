@@ -23,6 +23,7 @@ export const siteCsat: StoryObj<SiteCsatProps> = {
     onSetLike: () => {},
     layoutType: LAYOUT_TYPE.Desktop,
     label: 'Было полезно ?',
+    showNewAppearance: true,
     dislikeCommentForm: {
       open: true,
       loadingButton: false,

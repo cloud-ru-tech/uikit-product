@@ -11,19 +11,34 @@ import { onSubmitVariables } from '../../types';
 import styles from './styles.module.scss';
 
 export type SiteCsatPopoverProps = WithLayoutType<{
+  /** Отображение Spinner */
   loading?: boolean;
+  /** Состояние отображение лайка: лайк, дизлайк или ничего не выбрано */
   like?: boolean;
+  /** Обработчик нажатия на лайк или дизлайк */
   onSetLike: (flag: boolean) => void;
+  /** Текст рядом с кнопками */
   label: string;
+  /** Данные поповера */
   negativeFeedbackForm: {
+    /** Флаг открытости поповера */
     open: boolean;
+    /** Обработчик открытия или закрытия поповера */
     onSetOpen: (flag: boolean) => void;
   };
+  /** Выбор версии компонента, сделано для a/b тестирования, после тестирования этот prop удалится */
+  showNewAppearance?: boolean;
+  /** Данные для заполнения формы фидбэка */
   dislikeCommentForm?: {
+    /** Доступно ли нажатие на дизлайк */
     dislikeEnabled: boolean;
+    /** Состояние загрузки кнопки отправки */
     loadingButton?: boolean;
+    /** Обработчик нажатия на форму */
     onClickForm(): void;
+    /** Обработчик нажатия на chips */
     onCheckChips?(titleChip: string): void;
+    /** Обработчик onSubmit формы */
     onSubmit({ textComment, selectedChips }: onSubmitVariables): void;
   };
 }>;
@@ -36,6 +51,7 @@ export function SiteCsatPopover({
   negativeFeedbackForm,
   label,
   dislikeCommentForm,
+  showNewAppearance = false,
 }: SiteCsatPopoverProps) {
   const isMobile = layoutType === 'mobile';
 
@@ -83,20 +99,30 @@ export function SiteCsatPopover({
     </MobileModalCustom>
   );
 
+  const title =
+    like === true || (like !== undefined && !dislikeCommentForm?.dislikeEnabled) ? 'Спасибо за отзыв!' : label;
+
   return (
     <>
       <div className={styles.siteCsatPopoverBlock}>
-        {!isMobile && <Typography.SansBodyM className={styles.label}>{label}</Typography.SansBodyM>}
+        {!isMobile &&
+          (showNewAppearance ? (
+            <Typography.SansTitleM className={styles.labelNewAppearance}>{title}</Typography.SansTitleM>
+          ) : (
+            <Typography.SansBodyM className={styles.label}>{label}</Typography.SansBodyM>
+          ))}
         {loading ? (
           <Spinner className={styles.spinner} />
         ) : (
           <LikeDislikeBlock
+            showNewAppearance={showNewAppearance}
             dislikeEnabled={dislikeCommentForm?.dislikeEnabled}
             className={styles.likeDislikeBlock}
             onOpenClosePopover={handleOpenClosePopover}
             triggerRef={triggerRef}
             like={like}
             onSetLike={onSetLike}
+            hideTextLabel={isMobile}
           />
         )}
       </div>

@@ -6,10 +6,15 @@
   flex-direction: row;
   align-items: center;
   gap: 12px;
+  height: 32px;
 }
 
 .label {
   color: ste.$sys-neutral-text-support;
+}
+
+.labelNewAppearance {
+  color: ste.$sys-neutral-text-main;
 }
 
 .likeDislikeBlock {
