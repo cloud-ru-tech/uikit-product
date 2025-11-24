@@ -17,7 +17,7 @@ import { LocaleProvider } from '@sbercloud/uikit-product-locale';
 import { Alert } from '@snack-uikit/alert';
 import { Link } from '@snack-uikit/link';
 
-import { ConfigProvider } from '../packages/utils/src';
+import { ConfigProvider } from '../packages/utils/src/config';
 import {
   BADGE,
   Brand,
