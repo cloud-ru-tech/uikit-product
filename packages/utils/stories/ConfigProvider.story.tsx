@@ -7,16 +7,8 @@ import { BADGE } from '../../../storybook/constants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import {
-  Brand,
-  ConfigProvider,
-  ConfigProviderProps,
-  LanguageCodeType,
-  Themes,
-  useBrand,
-  useLanguage,
-  useTheme,
-} from '../src';
+import { Brand, LanguageCodeType, Themes, useBrand, useLanguage, useTheme } from '../src';
+import { ConfigProvider, ConfigProviderProps } from '../src/config';
 import styles from './config-styles.module.scss';
 
 const meta: Meta = {

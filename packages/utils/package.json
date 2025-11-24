@@ -9,9 +9,21 @@
   ],
   "description": "",
   "types": "./dist/esm/index.d.ts",
+  "typesVersions": {
+    "*": {
+      ".": ["./dist/esm/index.d.ts"],
+      "uikit-config": ["./dist/esm/config.d.ts"]
+    }
+  },
   "exports": {
-    "import": "./dist/esm/index.js",
-    "require": "./dist/cjs/index.js"
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./uikit-config": {
+      "import": "./dist/esm/config.js",
+      "require": "./dist/cjs/config.js"
+    }
   },
   "files": [
     "dist/esm",
