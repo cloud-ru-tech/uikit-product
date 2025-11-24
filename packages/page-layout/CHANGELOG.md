@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.22.0 (2025-11-24)
+
+
+### Features
+
+* **PDS-2935:** add new component TreeNavigation for Page Layout ([ef1a595](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ef1a595fb34619087d5930de5affe72bff4e867b))
+
+
+
+
+
 ## 0.21.6 (2025-11-13)
 
 

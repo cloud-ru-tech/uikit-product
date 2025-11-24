@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.20.0 (2025-11-24)
+
+
+### Features
+
+* **PDS-2935:** add new locales ([52ff081](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/52ff081c8a887c558da4c5a0ac3fca6b6626f973))
+
+
+
+
+
 ## 0.19.1 (2025-11-19)
 
 

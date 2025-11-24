@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-page-layout",
   "title": "Page Layout",
-  "version": "0.21.6",
+  "version": "0.22.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -47,8 +47,8 @@
     "@snack-uikit/search": "0.12.13",
     "@snack-uikit/status": "0.10.4",
     "@snack-uikit/tooltip": "0.16.2",
-    "@snack-uikit/truncate-string": "0.6.9",
     "@snack-uikit/tree": "0.9.30",
+    "@snack-uikit/truncate-string": "0.6.9",
     "@snack-uikit/typography": "0.8.4",
     "@snack-uikit/utils": "3.7.0",
     "classnames": "2.5.1",
