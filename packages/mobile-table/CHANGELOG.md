@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.13.1 (2025-11-24)
+
+
+### Bug Fixes
+
+* **FF-7578:** fix status column ([a1314f5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a1314f5c6017dc3ab34aa63067031ab466e7d7dc))
+
+
+
+
+
 # 0.13.0 (2025-11-23)
 
 
