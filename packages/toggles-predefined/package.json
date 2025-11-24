@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-toggles-predefined",
   "title": "Toggles Predefined",
-  "version": "0.8.13",
+  "version": "0.8.14",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "7.0.3",
+    "@sbercloud/uikit-product-utils": "8.0.0",
     "@snack-uikit/card": "0.19.0",
     "@snack-uikit/toggles": "0.13.14",
     "classnames": "2.5.1"

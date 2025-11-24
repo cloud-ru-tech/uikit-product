@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-button-predefined",
   "title": "Button Predefined",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "15.1.4",
-    "@sbercloud/uikit-product-mobile-dropdown": "0.9.24",
-    "@sbercloud/uikit-product-utils": "7.0.3",
+    "@sbercloud/uikit-product-icons": "15.1.5",
+    "@sbercloud/uikit-product-mobile-dropdown": "0.9.25",
+    "@sbercloud/uikit-product-utils": "8.0.0",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/dropdown": "0.4.5",
     "@snack-uikit/list": "0.25.0",

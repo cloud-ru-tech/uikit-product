@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-media",
   "title": "Site Media",
-  "version": "0.1.35",
+  "version": "0.1.36",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,8 +36,8 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "15.1.4",
-    "@sbercloud/uikit-product-utils": "7.0.3",
+    "@sbercloud/uikit-product-icons": "15.1.5",
+    "@sbercloud/uikit-product-utils": "8.0.0",
     "@snack-uikit/icon-predefined": "0.7.5",
     "classnames": "2.5.1"
   }

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-title-clickable",
   "title": "Title Clickable",
-  "version": "0.0.51",
+  "version": "0.0.52",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "15.1.4",
+    "@sbercloud/uikit-product-icons": "15.1.5",
     "@snack-uikit/avatar": "0.8.4",
     "@snack-uikit/icon-predefined": "0.7.3",
     "@snack-uikit/truncate-string": "0.6.9",

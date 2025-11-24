@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-icons",
   "title": "React Icons package",
-  "version": "15.1.4",
+  "version": "15.1.5",
   "sideEffects": [
     "*.svg",
     "*.css",
@@ -62,7 +62,7 @@
     "create-sprite": "ts-node scripts/createSprite.ts"
   },
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "7.0.3",
+    "@sbercloud/uikit-product-utils": "8.0.0",
     "@snack-uikit/icons": "0.27.3"
   },
   "devDependencies": {

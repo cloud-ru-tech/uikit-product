@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-utils",
   "title": "Utils",
-  "version": "7.0.3",
+  "version": "8.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -11,8 +11,12 @@
   "types": "./dist/esm/index.d.ts",
   "typesVersions": {
     "*": {
-      ".": ["./dist/esm/index.d.ts"],
-      "uikit-config": ["./dist/esm/config.d.ts"]
+      ".": [
+        "./dist/esm/index.d.ts"
+      ],
+      "uikit-config": [
+        "./dist/esm/config.d.ts"
+      ]
     }
   },
   "exports": {

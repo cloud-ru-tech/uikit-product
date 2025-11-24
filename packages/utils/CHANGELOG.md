@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 8.0.0 (2025-11-24)
+
+
+### BREAKING CHANGES
+
+
+* **FF-7631:** special entry for useConfig ([21d4aea](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/21d4aea1e3ea05b517f66080af8f2eefaf999cfb))
+
+
+
+
 ## 7.0.3 (2025-11-13)
 
 
