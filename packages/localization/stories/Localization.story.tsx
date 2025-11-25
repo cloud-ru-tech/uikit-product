@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import { useLocale } from '@sbercloud/uikit-product-locale';
-import { ConfigProvider } from '@sbercloud/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -12,7 +11,7 @@ import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Console/Localization',
-  component: ConfigProvider,
+  component: undefined,
 };
 export default meta;
 
