@@ -59,7 +59,7 @@ export function SelectorPlatformDropList({
     <SelectorPlatformDropListPrivate
       layoutType={layoutType === 'tablet' ? 'mobile' : layoutType}
       items={itemsView}
-      title={'Облачные платформы'}
+      title={'Облачная платформа'}
       baseTitle={'Все платформы'}
       baseIcon={CloudSVG}
       footer={footer}
