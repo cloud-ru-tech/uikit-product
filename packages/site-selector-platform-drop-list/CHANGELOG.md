@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.3 (2025-11-25)
+
+
+### Bug Fixes
+
+* **SITE-10304:** update text site-selection-platform-text ([1365d3d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1365d3df7a9186c146fa755619f9b2fe320fe430))
+
+
+
+
+
 ## 0.1.2 (2025-11-24)
 
 ### Only dependencies have been changed
