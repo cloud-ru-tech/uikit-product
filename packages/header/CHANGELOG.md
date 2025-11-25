@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.23 (2025-11-25)
+
+
+### Bug Fixes
+
+* **FF-7638:** mobile-header search default open if has value ([9e958ab](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e958ab193f08eb8ee94f8602f128468ae331cb1))
+
+
+
+
+
 ## 5.0.22 (2025-11-24)
 
 ### Only dependencies have been changed
