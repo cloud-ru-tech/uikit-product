@@ -26,7 +26,7 @@ export const SearchMobile = forwardRef<HTMLDivElement, SearchProps>(
       toggleSearchActive,
       isSearchActive,
       searchInputTabIndex,
-    } = useSearchAnimation();
+    } = useSearchAnimation(searchValue.length > 0);
 
     return (
       <div className={styles.searchItem} ref={ref}>

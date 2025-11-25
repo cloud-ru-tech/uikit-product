@@ -3,10 +3,10 @@ import useTransition from 'react-transition-state';
 
 import { SEARCH_TRANSITION_TIMEOUT } from './constants';
 
-export function useSearchAnimation() {
+export function useSearchAnimation(defaultSearchActive: boolean) {
   const searchRef = useRef<HTMLInputElement>(null);
 
-  const [isSearchActive, setIsSearchActive] = useState<boolean>(false);
+  const [isSearchActive, setIsSearchActive] = useState<boolean>(defaultSearchActive);
 
   const searchInputTabIndex = isSearchActive ? undefined : -1;
 
