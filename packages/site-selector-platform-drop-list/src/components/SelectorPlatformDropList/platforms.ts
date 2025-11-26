@@ -1,4 +1,4 @@
-import { AdvancedSVG, CloudSVG, EvolutionSVG, VMwareBackupServerSVG } from '@sbercloud/uikit-product-icons';
+import { AdvancedSVG, CloudSVG, EvolutionSVG, VmwareSVG } from '@sbercloud/uikit-product-icons';
 
 import { Item } from '../../types';
 import { PlatformType } from './SelectorPlatformDropList';
@@ -21,7 +21,7 @@ export const PLATFORMS: { [key in PlatformType]: Item } = {
   vmware: {
     id: 'vmware',
     title: 'Облако VMware',
-    icon: VMwareBackupServerSVG,
+    icon: VmwareSVG,
     tooltipText:
       'Вендорская платформа, предоставляющая инфраструктуру как услугу, основанную на технологиях VMware — ведущего поставщика решений IaaS.',
   },
