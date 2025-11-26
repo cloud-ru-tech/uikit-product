@@ -1,0 +1,49 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+$width: 900px;
+$gap: 48px;
+$info-row-width: 426px;
+$label-double-min-width: 100px;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &[data-columns='double'] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: $gap;
+    max-width: $width;
+  }
+
+  &[data-width='full'] {
+    max-width: 100%;
+  }
+}
+
+.infoRowWrapper {
+  &[data-width='fixed'] {
+    width: $info-row-width;
+  }
+
+  &[data-width='full'] {
+    max-width: 100%;
+  }
+}
+
+.infoRowLabelDoubleFixed.infoRowLabelDoubleFixed {
+  width: $label-double-min-width;
+  flex-shrink: 0;
+}
+
+.infoRowLabelDoubleFull.infoRowLabelDoubleFull {
+  width: $label-double-min-width;
+  flex-grow: 0.3;
+  flex-shrink: 0;
+}
+
+.contentDouble {
+  height: 100%;
+  box-sizing: border-box;
+}

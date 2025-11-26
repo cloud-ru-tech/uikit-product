@@ -21,4 +21,6 @@ export type InfoGroupProps<T extends DataType> = {
   items: InfoGroupItem<T>[];
   className?: string;
   loading?: boolean;
+  columns?: 'single' | 'double';
+  width?: 'fixed' | 'full';
 };

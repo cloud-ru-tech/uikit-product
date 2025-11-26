@@ -3,9 +3,12 @@
 $labelWidth: 200px;
 $contentWidth: 496px;
 $gap: styles-theme-variables.$dimension-3m;
+$minHeight: 40px;
+$minRowHeight: 32px;
 
 .wrapper {
   width: calc($labelWidth + $gap + $contentWidth);
+  min-height: $minHeight;
 
   &[data-width=full] {
     width: 100%;
@@ -17,6 +20,7 @@ $gap: styles-theme-variables.$dimension-3m;
   display: flex;
   column-gap: $gap;
   width: 100%;
+  min-height: $minRowHeight;
   align-items: center;
 }
 
@@ -30,6 +34,14 @@ $gap: styles-theme-variables.$dimension-3m;
   align-items: center;
   justify-content: flex-start;
   height: 100%;
+
+  &[data-label-width='auto'] {
+    width: auto;
+  }
+}
+
+.label {
+  color: styles-theme-variables.$sys-neutral-text-support;
 }
 
 .contentLayout {

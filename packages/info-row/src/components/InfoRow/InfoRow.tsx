@@ -23,6 +23,8 @@ export type InfoRowPropsBase = {
   topDivider?: boolean;
   bottomDivider?: boolean;
   className?: string;
+  labelClassName?: string;
+  rowClassName?: string;
   content?: ReactNode;
   rowActions?: {
     first: RowActionButton;
@@ -30,6 +32,7 @@ export type InfoRowPropsBase = {
   };
   loading?: boolean;
   width?: 'fixed' | 'full';
+  labelWidth?: 'fixed' | 'auto';
 };
 
 export type InfoRowProps = WithSupportProps<InfoRowPropsBase>;
@@ -53,15 +56,18 @@ export function InfoRow({
   labelTruncate = 1,
   loading = false,
   width = 'fixed',
+  labelClassName,
+  rowClassName,
+  labelWidth,
   ...rest
 }: InfoRowProps) {
   return (
     <div {...extractSupportProps(rest)} className={cn(styles.wrapper, className)} data-width={width}>
-      {topDivider && <Divider weight='regular' />}
+      {topDivider && <Divider weight='light' />}
 
-      <div className={styles.infoRow}>
-        <div className={styles.labelLayout}>
-          <TruncateString text={label} maxLines={labelTruncate} />
+      <div className={cn(styles.infoRow, rowClassName)}>
+        <div className={cn(styles.labelLayout, labelClassName)} data-label-width={labelWidth}>
+          <TruncateString className={styles.label} text={label} maxLines={labelTruncate} />
 
           {labelTooltip &&
             (typeof labelTooltip === 'string' ? (
@@ -103,7 +109,7 @@ export function InfoRow({
         </div>
       </div>
 
-      {bottomDivider && <Divider weight='regular' />}
+      {bottomDivider && <Divider weight='light' />}
     </div>
   );
 }
