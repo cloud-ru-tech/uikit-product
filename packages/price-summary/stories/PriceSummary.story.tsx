@@ -8,6 +8,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { PriceSummary, PriceSummaryProps } from '../src/components';
+import { InvoiceDetails } from '../src/types';
 
 const meta: Meta = {
   title: 'Console/Price Summary/Price Summary',
@@ -17,9 +18,10 @@ export default meta;
 
 type StoryProps = PriceSummaryProps & {
   showSingleGroup: boolean;
+  showCoveredByGrantLabel: boolean;
 };
 
-const INVOICE_SAMPLE = [
+const INVOICE_SAMPLE: InvoiceDetails[] = [
   {
     title: 'Label',
     quantity: 5,
@@ -31,6 +33,8 @@ const INVOICE_SAMPLE = [
         quantity: 1,
         price: 9999999.99,
         discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+        primary: true,
+        coveredByGrant: false,
       },
       {
         label: 'Label',
@@ -52,6 +56,7 @@ const INVOICE_SAMPLE = [
         price: 9999999.99,
         discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
         primary: true,
+        coveredByGrant: true,
       },
       {
         label: 'Label',
@@ -59,6 +64,7 @@ const INVOICE_SAMPLE = [
         quantity: 1,
         price: 9999999.99,
         primary: true,
+        coveredByGrant: true,
         topDivider: true,
       },
       {
@@ -68,6 +74,60 @@ const INVOICE_SAMPLE = [
       },
       {
         primary: true,
+        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+      },
+      {
+        label: 'Label',
+        labelMaxLines: 1,
+        quantity: 1,
+        price: 9999999.99,
+        primary: true,
+        coveredByGrant: false,
+      },
+    ],
+  },
+  {
+    title: 'Covered by grant block',
+    quantity: 5,
+    price: 9999999.99,
+    items: [
+      {
+        label: 'Label',
+        quantity: 1,
+        price: 9999999.99,
+        primary: true,
+        coveredByGrant: true,
+        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+      },
+      {
+        label: 'Label',
+        quantity: 1,
+        price: 9999999.99,
+        primary: true,
+        coveredByGrant: true,
+        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+      },
+    ],
+  },
+  {
+    title: 'Not covered by grant block',
+    quantity: 5,
+    price: 9999999.99,
+    items: [
+      {
+        label: 'Label',
+        quantity: 1,
+        price: 9999999.99,
+        primary: true,
+        coveredByGrant: false,
+        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+      },
+      {
+        label: 'Label',
+        quantity: 1,
+        price: 9999999.99,
+        primary: true,
+        coveredByGrant: false,
         discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
       },
     ],
@@ -96,16 +156,28 @@ const INVOICE_SAMPLE = [
   },
 ];
 
-const Template: StoryFn<StoryProps> = ({ showSingleGroup, ...args }) => {
+const Template: StoryFn<StoryProps> = ({ showSingleGroup, showCoveredByGrantLabel, ...args }) => {
   const [_, setArgs] = useArgs();
 
   const invoice = useMemo(() => {
-    if (!showSingleGroup) {
-      return INVOICE_SAMPLE;
+    let _invoice = INVOICE_SAMPLE;
+
+    if (!showCoveredByGrantLabel) {
+      _invoice = _invoice.map(invoice => ({
+        ...invoice,
+        items: invoice.items.map(item => ({
+          ...item,
+          coveredByGrant: undefined,
+        })),
+      }));
     }
 
-    return [INVOICE_SAMPLE[0]];
-  }, [showSingleGroup]);
+    if (!showSingleGroup) {
+      return _invoice;
+    }
+
+    return [_invoice[0]];
+  }, [showSingleGroup, showCoveredByGrantLabel]);
 
   return (
     <div style={{ maxWidth: 304 }}>
@@ -151,6 +223,17 @@ export const priceSummary: StoryObj<StoryProps> = {
         type: 'select',
       },
       options: ['default', 'warning', 'userError', 'systemError'],
+    },
+    showCoveredByGrantLabel: {
+      name: '[Stories]: showCoveredByGrantLabel',
+      control: {
+        type: 'boolean',
+      },
+      table: {
+        defaultValue: {
+          summary: 'true',
+        },
+      },
     },
   },
   parameters: {

@@ -3,6 +3,7 @@ import { Typography } from '@snack-uikit/typography';
 
 import { formatCurrency } from '../../../../helpers';
 import { InvoiceItem } from '../../../../types';
+import { CoveredByGrantLabel } from '../CoveredByGrantLabel';
 import { DiscountPercentCell } from '../DiscountPercentCell';
 import { Divider } from '../Divider';
 import { InvoiceItemLabelCell } from '../InvoiceItemLabelCell';
@@ -11,9 +12,10 @@ import styles from './styles.module.scss';
 export type InvoiceItemBlockProps = WithLayoutType<{
   item: InvoiceItem;
   index: number;
+  showCoveredByGrantLabel?: boolean;
 }>;
 
-export function InvoiceItemBlock({ item, index, layoutType }: InvoiceItemBlockProps) {
+export function InvoiceItemBlock({ item, index, layoutType, showCoveredByGrantLabel }: InvoiceItemBlockProps) {
   const isEven = (index + 1) % 2 === 0;
 
   const isSecondary = item.primary === undefined ? isEven : !item.primary;
@@ -30,6 +32,9 @@ export function InvoiceItemBlock({ item, index, layoutType }: InvoiceItemBlockPr
     <>
       {item.topDivider && <Divider />}
 
+      {item.coveredByGrant !== undefined && showCoveredByGrantLabel && (
+        <CoveredByGrantLabel covered={item.coveredByGrant} />
+      )}
       <div className={styles.itemGrid} data-discount={Boolean(item.discount)}>
         {'label' in item && item.label !== undefined && (
           <>

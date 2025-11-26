@@ -347,6 +347,12 @@ export const en_GB = {
     docsLink: 'More about tariffs and prices',
     dataError: 'Loading error',
     costLink: 'More about the cost',
+    coveredByGrant: 'Covered by grants',
+    notCoveredByGrant: 'Not covered by grants',
+    coveredByGrantTooltip:
+      'The order contains services that can be paid with a grant. Payment will be debited in bonuses.',
+    notCoveredByGrantTooltip:
+      'The order contains services that cannot be paid with a grant. Payment will be debited in rubles.',
   },
   PromoTagPredefined: {
     connecting: 'Connecting',

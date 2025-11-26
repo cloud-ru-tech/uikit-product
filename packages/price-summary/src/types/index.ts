@@ -30,16 +30,27 @@ export type DiscountInvoiceItem = {
   discount: DiscountItem;
 };
 
-export type InvoiceItem = (PriceInvoiceItem | DiscountInvoiceItem) & {
+export type BaseInvoiceItem = (PriceInvoiceItem | DiscountInvoiceItem) & {
   labelTooltip?: QuestionTooltipProps['tip'];
   price?: number;
   hidePrice?: boolean;
   labelMaxLines?: number;
   quantity?: string | number;
-  primary?: boolean;
   topDivider?: boolean;
   bottomDivider?: boolean;
 };
+
+export type PrimaryInvoiceItem = BaseInvoiceItem & {
+  primary: true;
+  coveredByGrant?: boolean;
+};
+
+export type SecondaryInvoiceItem = BaseInvoiceItem & {
+  primary?: false;
+  coveredByGrant?: never;
+};
+
+export type InvoiceItem = PrimaryInvoiceItem | SecondaryInvoiceItem;
 
 export type InvoiceDetails = {
   title?: string;

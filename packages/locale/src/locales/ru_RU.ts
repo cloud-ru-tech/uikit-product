@@ -348,6 +348,12 @@ export const ru_RU: typeof en_GB = {
     docsLink: 'Подробнее о тарифах и ценах',
     dataError: 'Ошибка загрузки',
     costLink: 'Подробнее о стоимости',
+    coveredByGrant: 'Покрывается грантами',
+    notCoveredByGrant: 'Не покрывается грантами',
+    coveredByGrantTooltip:
+      'В заказе есть сервисы, которые можно оплатить грантом. Оплата за эти сервисы будет списываться в бонусах.',
+    notCoveredByGrantTooltip:
+      'В заказе есть сервисы, которые нельзя оплатить грантом. Оплата за эти сервисы будет списываться в рублях.',
   },
   PromoTagPredefined: {
     connecting: 'Подключается',
