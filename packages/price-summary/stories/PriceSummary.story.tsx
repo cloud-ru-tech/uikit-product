@@ -209,6 +209,7 @@ export const priceSummary: StoryObj<StoryProps> = {
       href: '',
     },
     showHintLink: true,
+    showCoveredByGrantLabel: true,
   },
   argTypes: {
     showSingleGroup: {
