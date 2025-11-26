@@ -18,7 +18,11 @@ export function Tooltip({ layoutType, tooltipText, setTooltipMobile }: TooltipPr
   }
 
   if (layoutType !== 'mobile') {
-    return <QuestionTooltip className={styles.questionTooltip} tip={tooltipText} />;
+    return (
+      <div className={styles.questionTooltipContainer}>
+        <QuestionTooltip tip={tooltipText} />
+      </div>
+    );
   }
 
   const handleOpen = (event: MouseEvent<SVGElement>) => {
