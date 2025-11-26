@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.6 (2025-11-26)
+
+
+### Bug Fixes
+
+* **SITE-10317:** update scss site-selection-platform-text ([69cb7e5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/69cb7e5c3f60f0db9699f94610a19b2bbe2b26c3))
+
+
+
+
+
 ## 0.1.5 (2025-11-26)
 
 
