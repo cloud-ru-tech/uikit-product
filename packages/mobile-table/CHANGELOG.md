@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.13.4 (2025-11-27)
+
+
+### Dependencies
+
+* **PDS-3156:** up table ([8f97cb9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8f97cb9096de5a4d74ffe587d6dd708975b7ba6e))
+
+
+
+
+
 ## 0.13.3 (2025-11-24)
 
 ### Only dependencies have been changed
