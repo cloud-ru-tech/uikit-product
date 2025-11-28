@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 16.0.0 (2025-11-28)
+
+
+### BREAKING CHANGES
+
+
+* **PDS-3144:** added: AdmissionControl, AiInConstruction, BoldText, Clusters, CreatingCorporateAiAgents, NumberedList, SmartSearchBasedOnData, WorkSafetyGuide, History, ScalableLeft, ScalableRight; changed: AiAssistant, ApacheFlink; deleted: Flink, Hystory. ([1cb2885](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1cb28854218e04d5a40cc7e12d5974bebb4e5800))
+
+
+
+
 ## 15.1.6 (2025-11-24)
 
 ### Only dependencies have been changed

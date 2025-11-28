@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-alert",
   "title": "Mobile Alert",
-  "version": "0.4.69",
+  "version": "0.4.70",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "15.1.6",
+    "@sbercloud/uikit-product-icons": "16.0.0",
     "@sbercloud/uikit-product-utils": "8.0.1",
     "@snack-uikit/alert": "0.16.17",
     "@snack-uikit/link": "0.17.9",
