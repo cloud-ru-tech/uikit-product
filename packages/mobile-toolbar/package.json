@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-toolbar",
   "title": "Mobile Toolbar",
-  "version": "0.4.9",
+  "version": "0.4.10",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -37,9 +37,9 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-icons": "15.1.6",
-    "@sbercloud/uikit-product-mobile-chips": "0.8.42",
-    "@sbercloud/uikit-product-mobile-dropdown": "0.9.26",
-    "@sbercloud/uikit-product-mobile-tooltip": "0.4.70",
+    "@sbercloud/uikit-product-mobile-chips": "0.8.43",
+    "@sbercloud/uikit-product-mobile-dropdown": "0.9.27",
+    "@sbercloud/uikit-product-mobile-tooltip": "0.5.0",
     "@sbercloud/uikit-product-utils": "8.0.1",
     "@snack-uikit/button": "0.19.15",
     "@snack-uikit/counter": "0.8.9",

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-tooltip",
   "title": "Mobile Tooltip",
-  "version": "0.4.70",
+  "version": "0.5.0",
   "sideEffects": [
     "*.css",
     "*.woff",

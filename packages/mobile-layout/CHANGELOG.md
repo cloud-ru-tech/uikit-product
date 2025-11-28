@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.20.15 (2025-11-28)
+
+
+### Bug Fixes
+
+* **PDS-3214:** MobilePageServices links in hidden items kebab ([8a8334e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8a8334e6a69ab3752b5681b6ca960383a84d3afa))
+
+
+
+
+
 ## 0.20.14 (2025-11-24)
 
 ### Only dependencies have been changed

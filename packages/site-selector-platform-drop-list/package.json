@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-selector-platform-drop-list",
   "title": "Site Selector Platform DropList",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -37,8 +37,8 @@
   },
   "dependencies": {
     "@sbercloud/uikit-product-icons": "15.1.6",
-    "@sbercloud/uikit-product-mobile-dropdown": "0.9.26",
-    "@sbercloud/uikit-product-mobile-modal": "0.9.23",
+    "@sbercloud/uikit-product-mobile-dropdown": "0.9.27",
+    "@sbercloud/uikit-product-mobile-modal": "0.9.24",
     "@sbercloud/uikit-product-utils": "8.0.1",
     "@snack-uikit/list": "0.32.7",
     "@snack-uikit/tooltip": "0.18.5",

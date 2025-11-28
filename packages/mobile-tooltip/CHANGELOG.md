@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2025-11-28)
+
+
+### Features
+
+* **PDS-3214:** add WithMobileTooltip HOC ([d64e42b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d64e42b76123b86bc50824052b7a4fa8e342d061))
+
+
+
+
+
 ## 0.4.70 (2025-11-24)
 
 ### Only dependencies have been changed
