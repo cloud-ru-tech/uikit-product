@@ -3,7 +3,7 @@ import { Children, isValidElement, useRef, useState } from 'react';
 import { ChevronDownSVG, KebabSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { AdaptiveDropdown, MobileDroplist, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
-import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
+import { MobileTooltip, WithMobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
 import { checkExceeded, QuotaCardProps, QuotaDropdownContent } from '@sbercloud/uikit-product-quota';
 import { ButtonOutline } from '@snack-uikit/button';
 import { Counter } from '@snack-uikit/counter';
@@ -52,13 +52,17 @@ export function MobileActions({ items, maxVisibleItems }: ActionsProps) {
                       action.onClick?.(event);
                     },
                     beforeContent: action?.icon,
-                    itemWrapRender: action.tooltip
-                      ? item => (
-                          <MobileTooltip tip={action.tooltip?.tip ?? ''} {...action.tooltip}>
+                    itemWrapRender: item => (
+                      <WithMobileTooltip {...action.tooltip}>
+                        {action.href && !action.disabled ? (
+                          <a href={action.href} target='_blank' rel='noreferrer'>
                             {item}
-                          </MobileTooltip>
-                        )
-                      : undefined,
+                          </a>
+                        ) : (
+                          item
+                        )}
+                      </WithMobileTooltip>
+                    ),
                   });
                   break;
                 }

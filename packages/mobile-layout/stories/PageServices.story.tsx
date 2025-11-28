@@ -107,6 +107,7 @@ export const pageServices: StoryObj<PageServicesStoryProps> = {
         variant: 'outline',
         label: 'Third action',
         icon: <PlaceholderSVG />,
+        href: '#',
       },
       {
         variant: 'droplist',
