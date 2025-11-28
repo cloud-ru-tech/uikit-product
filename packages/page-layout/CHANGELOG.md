@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.22.4 (2025-11-28)
+
+
+### Bug Fixes
+
+* **PDS-3211:** truncated title ([3f4b406](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3f4b406ea30a05df81b454be6be211f53962d563))
+
+
+
+
+
 ## 0.22.3 (2025-11-28)
 
 ### Only dependencies have been changed
