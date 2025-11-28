@@ -42,6 +42,8 @@ export {
   PlusSVG,
   QuestionSVG,
   ResizeSVG,
+  ScalableLeftSVG,
+  ScalableRightSVG,
   SearchSVG,
   SettingsSVG,
   StarFilledSVG,
