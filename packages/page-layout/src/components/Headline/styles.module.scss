@@ -19,6 +19,7 @@
   align-items: flex-start;
   width: 100%;
   color: styles-theme-variables.$sys-neutral-text-main;
+  min-width: 0;
 }
 
 .title {
