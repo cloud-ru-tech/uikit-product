@@ -1,14 +1,19 @@
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
-import { QuestionTooltip, QuestionTooltipProps, Tooltip, TooltipProps } from '@snack-uikit/tooltip';
+import { QuestionTooltip, QuestionTooltipProps, TooltipProps, WithTooltip } from '@snack-uikit/tooltip';
 
 import { MobileQuestionTooltip } from '../MobileQuestionTooltip';
-import { MobileTooltip } from '../MobileTooltip';
+import { WithMobileTooltip } from '../MobileTooltip';
 
 export type AdaptiveTooltipProps = WithLayoutType<TooltipProps>;
 
-export function AdaptiveTooltip({ layoutType, ...props }: AdaptiveTooltipProps) {
+export function AdaptiveTooltip({ layoutType, children, ...props }: AdaptiveTooltipProps) {
   const isMobile = layoutType === 'mobile';
-  return isMobile ? <MobileTooltip {...props} /> : <Tooltip {...props} />;
+
+  return isMobile ? (
+    <WithMobileTooltip tooltip={props}>{children}</WithMobileTooltip>
+  ) : (
+    <WithTooltip tooltip={props}>{children}</WithTooltip>
+  );
 }
 
 export type AdaptiveQuestionTooltipProps = WithLayoutType<QuestionTooltipProps>;

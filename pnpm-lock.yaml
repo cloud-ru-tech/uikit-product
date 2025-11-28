@@ -1573,8 +1573,8 @@ importers:
         specifier: 0.14.5
         version: 0.14.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/tooltip':
-        specifier: 0.18.3
-        version: 0.18.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 0.18.7
+        version: 0.18.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/utils':
         specifier: 3.10.1
         version: 3.10.1(react@18.2.0)
@@ -4873,6 +4873,9 @@ packages:
   '@snack-uikit/icons@0.27.3':
     resolution: {integrity: sha512-yU0nQjYazFFUzpTu1NhUEH4lNCQDT+R2Hh+JROus1maCUp1AN9Q2URCNf6fHCFrfJFW5HkQEohCqUAiogpRZ5Q==}
 
+  '@snack-uikit/icons@0.27.4':
+    resolution: {integrity: sha512-C4aj+DK1ee2DkrP9/EakYJgJ/FcbQSrqNQF8ewtEaw+DIC1lXiX6aRqdSZztIpsKJRfNKbIsLmQZpEFsLVyB4g==}
+
   '@snack-uikit/info-block@0.6.1':
     resolution: {integrity: sha512-5rduqa1hOW3lTfNl6QNznnhUu13uel+YY7OsFUUSVOsQL+4r8QSPGQHAbfaTLQD9czZa4DRnwcpNiTUJuGvjug==}
 
@@ -5457,6 +5460,9 @@ packages:
 
   '@snack-uikit/tooltip@0.18.5':
     resolution: {integrity: sha512-GfOoHEihBzaokjzfP70LkMH7veHQSt58iP7Y2+nI6FbdfrZgUo9/JLsBXsBrw2BjmcDcXBDBQAOd5TpzCGN//w==}
+
+  '@snack-uikit/tooltip@0.18.7':
+    resolution: {integrity: sha512-vdplgI655LD28ffKDMcCsgc7QqTjiIZdBVAoxCPwMrNvHcNlAu+lEZxtCsPiTQT3JbhoGDF7T4KDpli1zryM9g==}
 
   '@snack-uikit/tree@0.9.30':
     resolution: {integrity: sha512-ZxcacerX5+wOek4P4TtXNhfu7F9K68eU/pV4fdRTS0Uh+g6Kd0gBe/dZe1Xhm1PsAw7LOJtLl1cszuyrn/CMmQ==}
@@ -17508,6 +17514,8 @@ snapshots:
 
   '@snack-uikit/icons@0.27.3': {}
 
+  '@snack-uikit/icons@0.27.4': {}
+
   '@snack-uikit/info-block@0.6.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@snack-uikit/button': 0.19.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -19523,6 +19531,17 @@ snapshots:
   '@snack-uikit/tooltip@0.18.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@snack-uikit/icons': 0.27.3
+      '@snack-uikit/popover-private': 0.15.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.0(react@18.2.0)
+      classnames: 2.5.1
+      uncontrollable: 8.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
+  '@snack-uikit/tooltip@0.18.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/icons': 0.27.4
       '@snack-uikit/popover-private': 0.15.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/utils': 4.0.0(react@18.2.0)
       classnames: 2.5.1
