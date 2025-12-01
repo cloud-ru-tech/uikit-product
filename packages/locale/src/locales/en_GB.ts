@@ -423,4 +423,9 @@ export const en_GB = {
       },
     },
   },
+  Table: {
+    sort: 'Sort',
+    clearSort: 'Clear sorting',
+    columnsSettings: 'Column settings',
+  },
 } satisfies Dictionary;

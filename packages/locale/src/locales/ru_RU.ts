@@ -423,4 +423,9 @@ export const ru_RU: typeof en_GB = {
       },
     },
   },
+  Table: {
+    sort: 'Сортировка',
+    clearSort: 'Сбросить сортировку',
+    columnsSettings: 'Настройки отображения',
+  },
 };
