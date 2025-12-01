@@ -22,7 +22,6 @@ export type SidebarItemWithItems = SidebarItemBase & {
   /** @default collapse */
   type?: 'collapse' | 'group';
   divider?: boolean;
-  // eslint-disable-next-line no-use-before-define
   items?: SidebarItem[];
 };
 
