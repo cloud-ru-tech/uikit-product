@@ -13,13 +13,10 @@ if (!isMainBranch()) {
   const paths = getChangedPackages();
 
   if (paths.length > 0) {
-    paths.push(path.join(__dirname, '../testcafe'));
+    paths.push(path.join(__dirname, '../playwright'));
   }
 
-  changedPaths = paths.map(item => `${item}/__tests__/*.ts`).join(' ');
+  changedPaths = paths.map(item => `${item}/__tests__/**/*.test.ts`).join(' ');
 }
 
-exec(
-  `testcafe ${BROWSER ? `"${BROWSER}:headless --no-sandbox"` : 'chrome'} --config-file testcafe.config.js ${changedPaths}`,
-  exit,
-);
+exec(`playwright test --project=${BROWSER || 'chrome'} ${changedPaths}`, exit);

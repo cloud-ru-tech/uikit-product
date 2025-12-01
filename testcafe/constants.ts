@@ -1,9 +1,0 @@
-import { config } from 'dotenv';
-
-config();
-
-const { TEST_LOCAL, UIKIT_PRODUCT_URL } = process.env;
-
-export const UIKIT_URL = TEST_LOCAL === 'true' ? 'https://localhost:6006/' : UIKIT_PRODUCT_URL || '';
-
-export const DEPLOY_NAMESPACE = 'ui-uikit-product';

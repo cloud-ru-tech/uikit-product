@@ -31,10 +31,6 @@ deps-report.json
 
 .DS_Store
 
-/testcafe/screenshots
-/testcafe/videos
-/testcafe/reports
-/testcafe/coverage
 .nyc_output
 /public
 
@@ -43,3 +39,12 @@ deps-report.json
 # AI EDITOR CONFIG START
 .history
 # AI EDITOR CONFIG END
+
+# Playwright files
+reports
+test-results/
+playwright-report/
+blob-report/
+/playwright/.cache/
+.auth
+playwright/coverage/

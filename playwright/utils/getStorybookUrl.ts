@@ -1,7 +1,5 @@
 import { IStringifyOptions, stringify } from 'qs';
 
-import { UIKIT_URL } from './constants';
-
 const HEX_REGEXP = /^#([a-f0-9]{3,4}|[a-f0-9]{6}|[a-f0-9]{8})$/i;
 const COLOR_REGEXP = /^(rgba?|hsla?)\(([0-9]{1,3}),\s?([0-9]{1,3})%?,\s?([0-9]{1,3})%?,?\s?([0-9](\.[0-9]{1,2})?)?\)$/i;
 
@@ -39,8 +37,23 @@ const buildArgsParam = (args: Record<string, unknown>): string =>
     .map((part: string) => part.replace('=', ':'))
     .join(';');
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function getTestcafeUrl({ name, group, props, story = name, category = 'console', globals }: any) {
+export type StorybookUrlOptions = {
+  name: string;
+  group?: string;
+  props?: Record<string, unknown>;
+  story?: string;
+  category?: string;
+  globals?: Record<string, unknown>;
+};
+
+export function getStorybookUrl({
+  name,
+  group,
+  props,
+  story = name,
+  category = 'console',
+  globals,
+}: StorybookUrlOptions): string {
   let propsString = '';
   let globalsString = '';
 
@@ -52,11 +65,8 @@ export function getTestcafeUrl({ name, group, props, story = name, category = 'c
     globalsString = buildArgsParam(globals);
   }
 
-  return `${UIKIT_URL}iframe.html?id=${category}${group ? `-${group}` : ''}-${name}--${story}&viewMode=story${
+  // Возвращаем относительный путь, так как baseURL уже настроен в конфиге
+  return `iframe.html?id=${category}${group ? `-${group}` : ''}-${name}--${story}&viewMode=story${
     globalsString ? `&globals=${globalsString}` : ''
   }${propsString ? `&args=${propsString}` : ''}`;
-}
-
-export function dataTestIdSelector(value: string) {
-  return `*[data-test-id="${value}"]`;
 }

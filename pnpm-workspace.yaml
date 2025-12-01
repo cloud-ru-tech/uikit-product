@@ -7,6 +7,7 @@ packages:
 onlyBuiltDependencies:
   - "@sbercloud/ft-config-husky"
   - "@sbercloud/ft-config-ai-editor"
+  - "@sbercloud/ft-config-playwright"
   - "@parcel/watcher"
   - "core-js"
   - "core-js-pure"
