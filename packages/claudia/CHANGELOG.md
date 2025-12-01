@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.9.0 (2025-12-01)
+
+
+### Features
+
+* **AINFR-4454:** new component rate block for claudia ([234e89a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/234e89accd3018b17979ccd3bab1944ccb30806e))
+
+
+
+
+
 ## 1.8.4 (2025-11-28)
 
 ### Only dependencies have been changed

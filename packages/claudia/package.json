@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-claudia",
   "title": "Claudia",
-  "version": "1.8.4",
+  "version": "1.9.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -41,8 +41,8 @@
     "@sbercloud/uikit-product-mobile-fields": "0.11.31",
     "@sbercloud/uikit-product-utils": "8.0.1",
     "@snack-uikit/button": "0.19.16",
-    "@snack-uikit/drop-zone": "0.9.6",
     "@snack-uikit/divider": "3.2.3",
+    "@snack-uikit/drop-zone": "0.9.6",
     "@snack-uikit/dropdown": "0.5.3",
     "@snack-uikit/fields": "0.51.0",
     "@snack-uikit/icons": "0.27.3",
