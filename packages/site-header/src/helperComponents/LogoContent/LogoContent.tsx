@@ -1,7 +1,7 @@
 import { CloudFullLogoSVG } from '@sbercloud/uikit-product-icons';
 import { Typography } from '@snack-uikit/typography';
 
-import { AdditionalLogoText, Logo } from '../../components/SiteHeaderBasic/SiteHeaderBasic';
+import { AdditionalLogoText, Logo } from '../../components/SiteHeaderBasic';
 import styles from './styles.module.scss';
 
 export type LogoContentProps = {

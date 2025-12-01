@@ -8,6 +8,8 @@ import { ButtonBurger, LogoContent, MobileMenu } from '../../helperComponents';
 import { useHeaderPosition } from '../../hooks';
 import styles from './styles.module.scss';
 
+export type Appearance = 'neutral' | 'none';
+
 export type AdditionalLogoText = {
   /** Дополнительный текст Логотипа */
   text?: string;
@@ -36,6 +38,8 @@ export type HeaderProps = WithSupportProps<
     maxWidth?: number;
     /** Флаг открытия мобильного меню */
     mobileMenuOpen: boolean;
+    /** Внешний вид */
+    appearance?: Appearance;
     /** Настройки Логотипа */
     logo: Logo;
     /** Функция изменения флаг открытия мобильного меню */
@@ -71,6 +75,7 @@ export function SiteHeaderBasic({
   mobileMenuOpen,
   onSetMobileMenuOpen,
   mainHeaderClassName,
+  appearance = 'none',
   logo,
   ...rest
 }: HeaderProps) {
@@ -94,6 +99,7 @@ export function SiteHeaderBasic({
         ref={refHeader}
         className={cn(styles.headerMaster, styles.dividerHeader, mainHeaderClassName)}
         data-layout-type={layoutType}
+        data-appearance={appearance}
       >
         <div
           className={styles.headerPartsContainer}
@@ -112,6 +118,7 @@ export function SiteHeaderBasic({
                 {mobileMenuContent && isMobileTabletView && (
                   <>
                     <ButtonBurger
+                      appearance={appearance}
                       mobileMenuOpen={mobileMenuOpen}
                       onClick={() => onSetMobileMenuOpen(!mobileMenuOpen)}
                     />

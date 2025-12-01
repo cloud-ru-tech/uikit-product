@@ -13,6 +13,10 @@
   background: ste.$sys-neutral-background1-level;
   padding: 0 32px;
 
+  &[data-appearance='neutral'] {
+    background: ste.$sys-neutral-background;
+  }
+
   &[data-layout-type='mobile'] {
     padding: 0 16px;
   }

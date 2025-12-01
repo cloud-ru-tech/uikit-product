@@ -52,6 +52,7 @@ export const header: StoryObj<HeaderProps> = {
     mobileMenuContent: <div>Меню мобильной версии</div>,
     rightContent: <div>Правый контент</div>,
     layoutType: LAYOUT_TYPE.Desktop,
+    appearance: 'none',
   },
   parameters: {
     readme: {
