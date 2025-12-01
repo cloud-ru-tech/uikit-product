@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.13.7 (2025-12-01)
+
+
+### Bug Fixes
+
+* **PDS-3244:** update deps versions ([52abf44](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/52abf44209b4f9ed6750e447cadb4b9ec31420ab))
+
+
+
+
+
 ## 0.13.6 (2025-11-28)
 
 ### Only dependencies have been changed
