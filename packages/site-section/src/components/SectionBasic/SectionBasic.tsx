@@ -13,6 +13,7 @@ import { SECTION_COLORS } from '../../constants';
 import { SectionTitle, SectionTitleProps } from '../../helperComponents';
 import { SectionColor } from '../../types';
 import styles from './styles.module.scss';
+import { getAppearanceByBackground } from './utils';
 
 type TabBarItem = WithSupportProps<{
   value: string;
@@ -103,6 +104,7 @@ export function SectionBasic({
           titleAlign={titleAlign}
           subtitle={subtitle}
           subtitleTag={subtitleTag}
+          appearance={getAppearanceByBackground(backgroundColor)}
         />
 
         {tabBarItems?.length && (

@@ -17,7 +17,7 @@
 | expandedDefault | `string \| string[]` | - |  |
 | onExpandedChange | `((value?: string) => void) \| ((value?: string[]) => void)` | - |  |
 | id | `string` | - | id секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | outline | `boolean` | - | Внешний бордер для блоков |
 | className | `string` | - | CSS-класс |
 ## SectionBasic
@@ -36,7 +36,7 @@
 | tabBarItems | `TabBarItem[]` | - | Массив табов |
 | filterItems | `FieldSelectProps[]` | - | Массив фильтров |
 | pagination | `PaginationProps` | - | Настройки пагинации |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | neutral-background1-level | Цвет фона |
 | className | `string` | - | CSS-класс |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 ## SectionBenefits
@@ -50,7 +50,7 @@
 | id | `string` | - | id секции |
 | title | `string` | - | Название секции |
 | subtitle | `string` | - | Название подзаголовка секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона секции |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | description | `string` | - | Описание секции |
@@ -69,7 +69,7 @@
 | titleTag | enum Tag: `"span"`, `"h1"`, `"h2"`, `"h3"`, `"h4"`, `"h5"`, `"h6"`, `"div"`, `"label"`, `"p"` | h3 | Тэг заголовка |
 | description | `string \| string[]` | - | Описание под баннером |
 | className | `string` | - | CSS класс |
-| backgroundSectionColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Фон подложки |
+| backgroundSectionColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Фон подложки |
 | appearance | "decor" \| "brand" \| "graphite" | brand |  |
 | color | enum ColorType: `"neutral"`, `"white"`, `"violet"`, `"blue"` | - |  |
 | backgroundType | "color" \| "image" | color |  |
@@ -89,8 +89,9 @@
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
+| appearance | "neutral" \| "invert" | - |  |
 | autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | infiniteScroll | `boolean` | false | Цикличная прокрутка |
 ## SectionCaseCarousel
@@ -107,8 +108,9 @@
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
+| appearance | "neutral" \| "invert" | - |  |
 | autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | infiniteScroll | `boolean` | false | Цикличная прокрутка |
 ## SectionCatalog
@@ -120,7 +122,7 @@
 | title* | `string` | - | Заголовок |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS-класс |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | selectedCategory | `string` | - | Выбранная категория продуктов |
 | onCategorySelect | `(category: string) => void` | - | Колбек смены выбранной категории продуктов |
 | footer | `FooterItem[]` | - | Список элементов для футера в каталоге |
@@ -138,8 +140,9 @@
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
+| appearance | "neutral" \| "invert" | - |  |
 | autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | infiniteScroll | `boolean` | false | Цикличная прокрутка |
 ## SectionContent
@@ -152,7 +155,7 @@
 | title | `string` | - | Заголовок |
 | description | `string` | - | Описание |
 | button | `Omit<ButtonFilledProps, "size" \| "fullWidth">` | - | Кнопка действия |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | neutral-background1-level | Цвет фона |
 | contentPosition | "left" \| "right" | left | Местоположение контента в секции |
 | video | `ReactNode \| VideoPlayerProps` | - |  |
 | onPlay | `() => void` | - |  |
@@ -169,7 +172,7 @@
 | title | `string` | - | Заголовок |
 | description | `string` | - | Описание |
 | items | `Item[]` | - | Список элементов |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | contentPosition | "left" \| "right" | left | Местоположение контента в секции |
 | video | `ReactNode \| VideoPlayerProps` | - |  |
 | onPlay | `() => void` | - |  |
@@ -188,7 +191,7 @@
 | activeTab | `string` | - | Выбранная вкладок |
 | onActiveTabChange | `() => void` | - | колбэк на смену вкладки |
 | button | `Omit<ButtonFilledProps, "size" \| "fullWidth">` | - | Кнопка действия |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 ## SectionExpertsCarousel
 ### Props
@@ -204,8 +207,9 @@
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
+| appearance | "neutral" \| "invert" | - |  |
 | autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | infiniteScroll | `boolean` | false | Цикличная прокрутка |
 ## SectionLeading
@@ -218,7 +222,7 @@
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | m | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | id | `string` | - | id секции |
 | footerDescription | `string` | - | Описание секции |
@@ -238,8 +242,9 @@
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
+| appearance | "neutral" \| "invert" | - |  |
 | autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | infiniteScroll | `boolean` | false | Цикличная прокрутка |
 ## SectionMedia
@@ -251,7 +256,7 @@
 | description | `string` | - | Описание секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | id | `string` | - | id секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | video | `ReactNode \| VideoPlayerProps` | - |  |
 | onPlay | `() => void` | - |  |
 | onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
@@ -293,7 +298,7 @@
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS-класс |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | gap | "s" \| "m" \| "l" \| "xs" | s | Размер отступов сетки |
 ## SectionTable
 ### Props
@@ -306,7 +311,7 @@
 | title | `string` | - | Заголовок |
 | subtitle | `string` | - | Подзаголовок |
 | description | `string` | - | Описание |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Фон подложки |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Фон подложки |
 | withHeader | `boolean` | - |  |
 ## SectionCarousel
 ### Props
@@ -324,8 +329,9 @@
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег подзаголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
+| appearance | "neutral" \| "invert" | - |  |
 | id | `string` | - | id секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | neutral-background1-level | Цвет фона |
 | className | `string` | - | CSS - класснейм |
 | autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | gap | `string` | var(--dimension-2m) | Расстояние между айтемами |

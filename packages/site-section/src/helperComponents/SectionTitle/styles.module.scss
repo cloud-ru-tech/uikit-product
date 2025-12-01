@@ -1,4 +1,4 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
 
 .sectionTitle,
 .titlesWrapper {
@@ -9,10 +9,6 @@
   &[data-align='center'] {
     text-align: center;
   }
-}
-
-.sectionTitle {
-  flex-direction: column;
 }
 
 .titlesWrapper {
@@ -30,4 +26,19 @@
 
 .description {
   color: var.$sys-neutral-text-support;
+}
+
+.sectionTitle {
+  flex-direction: column;
+
+  &[data-text-color='invert'] {
+    .title,
+    .description {
+      color: var.$sys-graphite-on-accent;
+    }
+
+    .subtitle {
+      color: var.$sys-graphite-text-disabled;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
 
 .sectionBasic {
   display: flex;
@@ -15,16 +15,6 @@
   &[data-layout-type='mobile'] {
     gap: var.$dimension-3m;
     padding: var.$dimension-4m 0;
-  }
-}
-
-.wrapper {
-  &[data-section-background='neutral-background1-level'] {
-    background-color: var.$sys-neutral-background1-level;
-  }
-
-  &[data-section-background='neutral-background'] {
-    background-color: var.$sys-neutral-background;
   }
 }
 
@@ -83,4 +73,27 @@
   &[data-layout-type='mobile'] {
     width: 100%;
   }
+}
+
+.wrapper {
+  &[data-section-background='neutral-background1-level'] {
+    background-color: var.$sys-neutral-background1-level;
+  }
+
+  &[data-section-background='neutral-background'] {
+    background-color: var.$sys-neutral-background;
+  }
+
+  &[data-section-background='graphite-accent-default'] {
+    background-color: var.$sys-graphite-accent-default;
+
+    .title,
+    .sectionTitle,
+    .description,
+    .sectionTabs {
+      color: var.$sys-graphite-on-accent;
+    }
+  }
+
+  border-radius: var.$dimension-050m;
 }
