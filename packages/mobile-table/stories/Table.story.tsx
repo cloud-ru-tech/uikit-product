@@ -28,6 +28,7 @@ type StoryProps = Props & {
   showStatusColumn?: boolean;
   initialColumnFiltersOpen: boolean;
   rowSelectionMode?: 'single' | 'multiple';
+  showColumnsSettings?: boolean;
 };
 
 const renderHeader = (ctx: HeaderContext<StubData, unknown>) => `Table column №${ctx.column.id}`;
@@ -102,12 +103,18 @@ const columnFilters: Props['columnFilters'] = {
   ],
 } as const;
 
+const renderHeaderConfigLabel = (label: string) => `Column №${label}`;
+
 const columnDefinitions: Props['columnDefinitions'] = [
   {
     id: '1',
     accessorKey: 'col1',
     accessorFn: accessorFn('col1'),
     header: renderHeader,
+    columnSettings: {
+      label: renderHeaderConfigLabel('1'),
+      mode: 'hidden',
+    },
     size: 140,
     enableSorting: true,
     enableResizing: true,
@@ -119,6 +126,9 @@ const columnDefinitions: Props['columnDefinitions'] = [
     accessorKey: 'col2',
     accessorFn: accessorFn('col2'),
     header: renderHeader,
+    columnSettings: {
+      label: renderHeaderConfigLabel('2'),
+    },
     size: 200,
     minSize: 150,
     maxSize: 300,
@@ -131,6 +141,9 @@ const columnDefinitions: Props['columnDefinitions'] = [
     accessorKey: 'col3',
     accessorFn: accessorFn('col3'),
     header: renderHeader,
+    columnSettings: {
+      label: renderHeaderConfigLabel('3'),
+    },
     minSize: 110,
     sortDescFirst: true,
     enableResizing: true,
@@ -140,6 +153,9 @@ const columnDefinitions: Props['columnDefinitions'] = [
     accessorKey: 'col4',
     accessorFn: accessorFn('col4'),
     header: renderHeader,
+    columnSettings: {
+      label: renderHeaderConfigLabel('4'),
+    },
     enableSorting: true,
     enableResizing: true,
   },
@@ -148,6 +164,9 @@ const columnDefinitions: Props['columnDefinitions'] = [
     accessorKey: 'col6',
     cell: (cell: CellContext<StubData, unknown>) => numberFormatter.format(cell.getValue() as number),
     header: renderHeader,
+    columnSettings: {
+      label: renderHeaderConfigLabel('6'),
+    },
     size: 150,
     headerAlign: 'right',
     align: 'right',
@@ -159,12 +178,18 @@ const columnDefinitions: Props['columnDefinitions'] = [
     accessorKey: 'col7',
     cell: () => <TagRow items={tags} rowLimit={1} />,
     header: renderHeader,
+    columnSettings: {
+      label: renderHeaderConfigLabel('7'),
+    },
     size: 230,
   },
   {
     id: '8',
     accessorKey: 'date',
     header: renderHeader,
+    columnSettings: {
+      label: renderHeaderConfigLabel('8'),
+    },
     enableSorting: true,
     enableResizing: true,
     size: 146,
@@ -191,6 +216,7 @@ function Template({
   columnFilters,
   initialColumnFiltersOpen,
   rowSelectionMode,
+  showColumnsSettings,
   ...args
 }: StoryProps) {
   const data = useMemo(() => generateRows(rowsAmount, showStatusColumn), [rowsAmount, showStatusColumn]);
@@ -311,6 +337,13 @@ function Template({
           onClick: onDelete,
         },
       ]}
+      columnsSettings={
+        showColumnsSettings
+          ? {
+              enableSettingsMenu: true,
+            }
+          : undefined
+      }
     />
   );
 }
@@ -332,6 +365,7 @@ export const table: StoryObj<StoryProps> = {
       multiRow: true,
     },
     rowSelectionMode: 'multiple',
+    showColumnsSettings: true,
   },
 
   argTypes: {
@@ -375,6 +409,10 @@ export const table: StoryObj<StoryProps> = {
       control: {
         type: 'select',
       },
+    },
+    showColumnsSettings: {
+      name: '[Stories]: Show columns settings',
+      controls: { type: 'boolean' },
     },
   },
 

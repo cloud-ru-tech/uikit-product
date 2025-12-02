@@ -9,14 +9,21 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import cn from 'classnames';
-import { useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo } from 'react';
 
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { FiltersState, MobileChipChoiceRowProps } from '@sbercloud/uikit-product-mobile-chips';
 import { MobileToolbar, MobileToolbarProps } from '@sbercloud/uikit-product-mobile-toolbar';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { SkeletonContextProvider } from '@snack-uikit/skeleton';
-import { PaginationState, TableProps } from '@snack-uikit/table';
+import {
+  getPinnedGroups,
+  PaginationState,
+  TableProps,
+  useColumnOrderByDrag,
+  useColumnSettings,
+  usePageReset,
+} from '@snack-uikit/table';
 
 import {
   getRowActionsColumnDef,
@@ -24,8 +31,10 @@ import {
   TableCard,
   TableEmptyState,
   TablePagination,
+  TableSorting,
   useEmptyState,
 } from '../helperComponents';
+import { ColumnsSettings } from '../helperComponents/ColumnsSettings';
 import { DEFAULT_PAGE_SIZE } from './constants';
 import { useLoadingTable, useStateControl } from './hooks';
 import styles from './styles.module.scss';
@@ -40,7 +49,6 @@ export type MobileTableProps<TData extends object, TFilters extends FiltersState
   | 'suppressSearch'
   | 'search'
   | 'onRefresh'
-  | 'toolbarAfter'
   | 'moreActions'
   | 'className'
   | 'enableFuzzySearch'
@@ -59,6 +67,10 @@ export type MobileTableProps<TData extends object, TFilters extends FiltersState
   | 'getRowId'
   | 'rowSelection'
   | 'bulkActions'
+  | 'columnsSettings'
+  | 'savedState'
+  | 'autoResetPageIndex'
+  | 'toolbarAfter'
 > &
   WithSupportProps<{
     headlineId?: string;
@@ -93,9 +105,12 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
   manualSorting = false,
   manualPagination = false,
   manualFiltering = false,
+  autoResetPageIndex = false,
   getRowId,
   rowSelection: rowSelectionProp,
   bulkActions: bulkActionsProp,
+  columnsSettings: columnsSettingsProp,
+  savedState,
   ...rest
 }: MobileTableProps<TData, TFilters>) {
   const defaultPaginationState = useMemo(() => ({ pageIndex: 0, pageSize: DEFAULT_PAGE_SIZE }), []);
@@ -126,18 +141,96 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
     [rowSelectionProp],
   );
 
+  const enableSelection = Boolean(rowSelectionProp?.enable);
+
+  const pinnedGroups = useMemo(() => getPinnedGroups(columnDefinitions), [columnDefinitions]);
+
+  const {
+    enabledColumns,
+    setEnabledColumns,
+    getColumnsSettings,
+    enabledTableColumns,
+    enabledColumnsDefinitions,
+    areColumnsSettingsEnabled,
+  } = useColumnSettings({
+    columnDefinitions,
+    pinnedGroups,
+    savedState,
+    columnsSettings: columnsSettingsProp,
+    rowSelection: undefined,
+    enableSelectPinned: false,
+    expanding: undefined,
+  });
+
+  const { columnOrder, setColumnOrder, enableColumnsOrderSortByDrag } = useColumnOrderByDrag<TData>({
+    tableColumns: columnDefinitions,
+    savedState,
+    columnSettings: columnsSettingsProp,
+  });
+
+  const columnsSettings = useMemo(() => getColumnsSettings(columnOrder), [columnOrder, getColumnsSettings]);
+
+  // Получаем список колонок с mode: 'hidden', которые всегда доступны для сортировки
+  const hiddenColumnsBySettings = useMemo(() => {
+    if (!areColumnsSettingsEnabled) return new Set<string>();
+
+    const hidden = new Set<string>();
+    columnDefinitions.forEach(colDef => {
+      let columnId: string | undefined;
+      if ('id' in colDef && colDef.id) {
+        columnId = colDef.id;
+      } else if ('accessorKey' in colDef && colDef.accessorKey) {
+        columnId = String(colDef.accessorKey);
+      }
+
+      if (columnId) {
+        const colDefWithSettings = colDef as typeof colDef & {
+          columnSettings?: { mode?: 'hidden' | string };
+        };
+        if (colDefWithSettings.columnSettings?.mode === 'hidden') {
+          hidden.add(columnId);
+        }
+      }
+    });
+    return hidden;
+  }, [areColumnsSettingsEnabled, columnDefinitions]);
+
+  // Сбрасываем сортировку, если колонка с активной сортировкой была скрыта
+  // Колонки с mode: 'hidden' всегда доступны для сортировки
+  useEffect(() => {
+    if (areColumnsSettingsEnabled && enabledColumns && sorting.length > 0) {
+      const activeSortColumnId = sorting[0]?.id;
+      if (activeSortColumnId) {
+        const isHiddenColumn = hiddenColumnsBySettings.has(activeSortColumnId);
+        const isEnabledColumn = enabledColumns.includes(activeSortColumnId);
+        // Сбрасываем сортировку только если колонка не скрыта через mode: 'hidden' и не включена
+        if (!isHiddenColumn && !isEnabledColumn) {
+          // Колонка с активной сортировкой скрыта - сбрасываем сортировку
+          onSortingChange([]);
+        }
+      }
+    }
+  }, [areColumnsSettingsEnabled, enabledColumns, sorting, onSortingChange, hiddenColumnsBySettings]);
+
   const table = useReactTable<TData>({
     data,
-    columns: columnDefinitions,
+    columns: enabledTableColumns,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     getSortedRowModel: getSortedRowModel(),
 
-    state: { pagination, globalFilter, sorting, rowSelection },
+    state: {
+      pagination,
+      globalFilter,
+      sorting,
+      rowSelection,
+      columnOrder: enableColumnsOrderSortByDrag ? columnOrder : undefined,
+    },
     pageCount,
     onPaginationChange,
     onSortingChange,
+    onColumnOrderChange: enableColumnsOrderSortByDrag ? setColumnOrder : undefined,
     globalFilterFn: enableFuzzySearch ? fuzzyFilter : 'includesString',
 
     enableFilters: true,
@@ -145,6 +238,8 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
     manualPagination,
     manualFiltering,
     getRowId,
+
+    autoResetPageIndex,
 
     onRowSelectionChange,
     enableGrouping: true,
@@ -155,7 +250,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
 
   const { loadingTable } = useLoadingTable<TData, TFilters>({
     pageSize: DEFAULT_PAGE_SIZE,
-    columnDefinitions,
+    columnDefinitions: enabledColumnsDefinitions,
   });
 
   const tableRows = table.getRowModel().rows;
@@ -168,8 +263,6 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
     table.resetRowSelection();
     onRefresh?.();
   }, [onRefresh, table]);
-
-  const enableSelection = Boolean(rowSelectionProp?.enable);
 
   const bulkActions: MobileToolbarProps<TFilters>['bulkActions'] = useMemo(
     () =>
@@ -206,6 +299,26 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
     ? 'multiple'
     : 'single';
 
+  const hasSortableColumns = useMemo(
+    () => columnDefinitions.some(column => column.enableSorting !== false),
+    [columnDefinitions],
+  );
+
+  const shouldShowSorting = useMemo(
+    () => Boolean(sortingProp) || hasSortableColumns,
+    [sortingProp, hasSortableColumns],
+  );
+
+  const tableFilteredRows = table.getFilteredRowModel().rows;
+
+  usePageReset({
+    manualPagination,
+    maximumAvailablePage: pageCount || tableFilteredRows.length / pagination.pageSize,
+    pagination,
+    onPaginationChange,
+    autoResetPageIndex,
+  });
+
   return (
     <div className={cn(styles.tableWrapper, className)} {...extractSupportProps(rest)}>
       {(!suppressToolbar || columnFilters) && (
@@ -224,7 +337,28 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
             onRefresh={onRefresh ? handleOnRefresh : undefined}
             outline
             filterRow={columnFilters}
-            after={toolbarAfter}
+            after={
+              toolbarAfter || shouldShowSorting || (areColumnsSettingsEnabled && columnsSettings) ? (
+                <>
+                  {toolbarAfter}
+                  {shouldShowSorting && (
+                    <TableSorting
+                      table={table}
+                      columnDefinitions={columnDefinitions}
+                      enabledColumns={areColumnsSettingsEnabled ? enabledColumns : undefined}
+                      areColumnsSettingsEnabled={areColumnsSettingsEnabled}
+                    />
+                  )}
+                  {areColumnsSettingsEnabled && columnsSettings && (
+                    <ColumnsSettings
+                      columnsSettings={columnsSettings}
+                      enabledColumns={enabledColumns}
+                      setEnabledColumns={setEnabledColumns}
+                    />
+                  )}
+                </>
+              ) : undefined
+            }
             moreActions={moreActions}
             bulkActions={bulkActions}
             selectedCount={table.getSelectedRowModel().rows.length}

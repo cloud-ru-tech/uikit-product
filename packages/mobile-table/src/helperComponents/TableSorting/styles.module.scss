@@ -1,0 +1,9 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.clearSortItem {
+  &[data-disabled='true'] {
+    svg {
+      color: stv.$sys-neutral-text-disabled;
+    }
+  }
+}
