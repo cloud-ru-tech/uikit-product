@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.14.0 (2025-12-03)
+
+
+### Features
+
+* **UIIAAS-1251:** added FieldDescription & FieldName ([e03ba16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e03ba16f0bbe62d0c00e7e109727a4b49f13fc6b))
+
+
+
+
+
 ## 0.13.11 (2025-11-28)
 
 ### Only dependencies have been changed
