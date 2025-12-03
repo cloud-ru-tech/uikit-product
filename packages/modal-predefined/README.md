@@ -11,7 +11,7 @@
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | content* | `ReactNode` | - |  |
-| settings | `Pick<any, "selectionMode" \| "value" \| "defaultValue" \| "onChange"> & { items: ToggleSwitchRowProps[]; }` | - |  |
+| settings | `Pick<ToggleGroupProps, "selectionMode" \| "value" \| "defaultValue" \| "onChange"> & { items: ToggleSwitchRowProps[]; }` | - |  |
 ## DeleteModal
 ### Props
 | name | type | default value | description |
@@ -33,10 +33,10 @@
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | onDelete* | `(onClose: () => void) => void` | - | Колбек нажатия кнопки удаления @param onClose колбэк для закрытия модального окна |
-| onClose* | `MobileDrawerCustomProps` | - |  |
-| open* | `MobileDrawerCustomProps` | - |  |
+| onClose* | `() => void` | - | Колбэк закрытия |
+| open* | `boolean` | - | Управление состоянием показан/не показан. |
 | mode | enum Mode: `"regular"`, `"aggressive"`, `"forced"` | Mode.Regular | Режим отображения модального окна: <br> - __`Regular`__ -  есть кнопка закрытия, клик на оверлей и нажатие кнопки `Esc` закрывают модалку <br> - __`Aggressive`__ - есть кнопка закрытия, но выключен клик на оверлей и не работает закрытие по клавише `Esc` <br> - __`Forced`__ - закрыть модальное окно можно только по нажатию на кнопку действия в нижней части |
-| titleTooltip | `MobileQuestionTooltipProps` | - | Всплывающая подсказка для заголовка |
+| titleTooltip | `ReactNode` | - | Всплывающая подсказка для заголовка |
 | objectType | `string` | - | Тип удаляемого объекта. Отображается в заголовке модального окна |
 | deleting | `boolean` | - | Состояние загрузки кнопки удаления |
 | description | `ReactNode` | - | Описание |
@@ -66,7 +66,7 @@
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | content* | `ReactNode` | - |  |
-| settings | `Pick<any, "selectionMode" \| "value" \| "defaultValue" \| "onChange"> & { items: ToggleSwitchRowProps[]; }` | - |  |
+| settings | `Pick<ToggleGroupProps, "selectionMode" \| "value" \| "defaultValue" \| "onChange"> & { items: ToggleSwitchRowProps[]; }` | - |  |
 ## RecallModal
 ### Props
 | name | type | default value | description |
@@ -86,10 +86,10 @@
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | onRecall* | `(onClose: () => void) => void` | - | Колбек нажатия кнопки отзыва @param onClose колбэк для закрытия модального окна |
-| onClose* | `MobileDrawerCustomProps` | - |  |
-| open* | `MobileDrawerCustomProps` | - |  |
+| onClose* | `() => void` | - | Колбэк закрытия |
+| open* | `boolean` | - | Управление состоянием показан/не показан. |
 | mode | enum Mode: `"regular"`, `"aggressive"`, `"forced"` | Mode.Regular | Режим отображения модального окна: <br> - __`Regular`__ -  есть кнопка закрытия, клик на оверлей и нажатие кнопки `Esc` закрывают модалку <br> - __`Aggressive`__ - есть кнопка закрытия, но выключен клик на оверлей и не работает закрытие по клавише `Esc` <br> - __`Forced`__ - закрыть модальное окно можно только по нажатию на кнопку действия в нижней части |
-| titleTooltip | `MobileQuestionTooltipProps` | - | Всплывающая подсказка для заголовка |
+| titleTooltip | `ReactNode` | - | Всплывающая подсказка для заголовка |
 | loading | `boolean` | - | Состояние загрузки кнопки отзыва |
 | description | `ReactNode` | - | Описание |
 | confirmText | `string` | - | Текст для подтверждения отзыва |

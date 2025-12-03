@@ -45,14 +45,14 @@ Hero blocks for Site
 | description* | `string` | - | Описание продукта |
 | title* | `string` | - | Заголовок продукта |
 | image | `string` | - | Ссылка на изображение |
-| video | `WithLayoutType<WithSupportProps<{ video: VideoPlayerProps \| ReactNode; onPlay?(): void; onError?: ReactEventHandler<HTMLVideoElement>; className?: string; }>>` | - | Видео |
-| tags | `Pick<WithSupportProps<{ text: string; appearance: Appearance; tip?: ReactNode; className?: string; }>, "text" \| "appearance" \| "tip">[]` | [] | Тэги |
+| video | `VideoPlayerProps \| ReactNode` | - | Видео |
+| tags | `Pick<TagSpecialProps, "text" \| "appearance" \| "tip">[]` | [] | Тэги |
 | platforms | `Platform[]` | [] | Платформы |
 | handlePlatformClick | `(e: MouseEvent<HTMLAnchorElement, MouseEvent>, platform: Platform) => void` | - | Обработка клика по платформе |
 | backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвета фона |
-| buttons | `[Omit<ButtonFilledProps, "size" \| "appearance">, Omit<WithSupportProps<Omit<CommonButtonProps, "iconPosition">>, "size" \| "appearance">?]` | - | Массив с настройками кнопок ButtonFilled |
+| buttons | `[Omit<ButtonFilledProps, "size" \| "appearance">, Omit<ButtonPromoOutlineProps, "size" \| "appearance">?]` | - | Массив с настройками кнопок ButtonFilled |
 | className | `string` | - | CSS - класснейм |
-| navbar | `Pick<WithSupportProps<{ items: NavbarItemProps[]; onItemClick(id: string, text: string): void; active?: string; className?: string; topPosition?: number; }>, "items" \| "active" \| "onItemClick" \| "topPosition">` | - | Navbar |
+| navbar | `Pick<SiteNavbarProps, "items" \| "active" \| "onItemClick" \| "topPosition">` | - | Navbar |
 ## HeroSlider
 ### Props
 | name | type | default value | description |

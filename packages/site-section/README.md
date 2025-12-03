@@ -46,7 +46,7 @@
 | content* | `ContentBasicTab[] \| CardBasicArray \| ContentInfoTab[] \| CardInfoArray \| ContentNumericTab[] \| CardNumericArray \| ContentProductTab[] \| CardProductArray` | - |  |
 | type* | "basic" \| "info" \| "numeric" \| "product" | - |  |
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| columnsConfig* | `WithSupportProps<WithLayoutType<{ children: ReactNode; columnsConfig: ColumnsConfig; gap?: "s" \| "m" \| "l" \| "xs"; className?: string; }>>` | - | Конфигурация настройки колонок для разных layoutType |
+| columnsConfig* | `ColumnsConfig` | - | Конфигурация настройки колонок для разных layoutType |
 | id | `string` | - | id секции |
 | title | `string` | - | Название секции |
 | subtitle | `string` | - | Название подзаголовка секции |
@@ -153,9 +153,9 @@
 | button | `Omit<ButtonFilledProps, "size" \| "fullWidth">` | - | Кнопка действия |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | contentPosition | "left" \| "right" | left | Местоположение контента в секции |
-| video | `any` | - |  |
-| onPlay | `any` | - |  |
-| onError | `any` | - |  |
+| video | `ReactNode \| VideoPlayerProps` | - |  |
+| onPlay | `() => void` | - |  |
+| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 ## SectionContentList
@@ -170,9 +170,9 @@
 | items | `Item[]` | - | Список элементов |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | contentPosition | "left" \| "right" | left | Местоположение контента в секции |
-| video | `any` | - |  |
-| onPlay | `any` | - |  |
-| onError | `any` | - |  |
+| video | `ReactNode \| VideoPlayerProps` | - |  |
+| onPlay | `() => void` | - |  |
+| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 ## SectionContentTabs
@@ -227,7 +227,7 @@
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| items* | `WithSupportProps<WithLayoutType<{ title: string; description?: string; href: string; target?: HTMLAttributeAnchorTarget; onClick?(e?: MouseEvent<HTMLAnchorElement \| HTMLDivElement, MouseEvent>): void; logo: { ...; }; tag?: Omit<...>; disabled?: boolean; className?: string; }>>[]` | - | Массив айтемов |
+| items* | `CardMarketplaceProps[]` | - | Массив айтемов |
 | title | `string` | - | Название секции |
 | subtitle | `string` | - | Подзаголовок секции |
 | description | `string` | - | Описание секции |
@@ -250,9 +250,9 @@
 | description | `string` | - | Описание секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | id | `string` | - | id секции |
-| video | `any` | - |  |
-| onPlay | `any` | - |  |
-| onError | `any` | - |  |
+| video | `ReactNode \| VideoPlayerProps` | - |  |
+| onPlay | `() => void` | - |  |
+| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 ## SectionPersonalManager
 ### Props
@@ -265,7 +265,7 @@
 | title | `string` | - |  |
 | description | `string` | - |  |
 | card | `{ title: string; text: string; }` | - |  |
-| benefits | `Pick<WithSupportProps<WithLayoutType<{ title: string; description?: string; icon?: ReactNode \| IconElement \| { src: string; alt?: string; }; className?: string; }>>, "title" \| "icon">[]` | - |  |
+| benefits | `Pick<CardBasicProps, "title" \| "icon">[]` | - |  |
 | withoutBenefits | `boolean` | - |  |
 | className | `string` | - | CSS-класс |
 ## SectionPromoList
@@ -292,11 +292,19 @@
 | id | `string` | - | id секции |
 | className | `string` | - | CSS-класс |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| gap | `WithSupportProps<WithLayoutType<{ children: ReactNode; columnsConfig: ColumnsConfig; gap?: "s" \| "m" \| "l" \| "xs"; className?: string; }>>` | s | Размер отступов сетки |
+| gap | "s" \| "m" \| "l" \| "xs" | s | Размер отступов сетки |
 ## SectionTable
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| rows* | `Cell[][]` | - |  |
+| id | `string` | - | id секции |
+| className | `string` | - | CSS-класс |
+| title | `string` | - | Заголовок |
+| subtitle | `string` | - | Подзаголовок |
+| description | `string` | - | Описание |
+| withHeader | `boolean` | - |  |
 ## SectionCarousel
 ### Props
 | name | type | default value | description |
