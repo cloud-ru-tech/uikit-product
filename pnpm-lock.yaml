@@ -2008,7 +2008,7 @@ importers:
         version: 17.7.6
       '@sbercloud/uikit-product-button-predefined':
         specifier: 0.7.10
-        version: link:../button-predefined
+        version: 0.7.10(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@sbercloud/uikit-product-icons':
         specifier: 16.0.0
         version: link:../icons
@@ -4468,8 +4468,26 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0
 
+  '@sbercloud/uikit-product-button-predefined@0.7.10':
+    resolution: {integrity: sha512-wE+57MLcsQutdsz04YfomygKCdIrA3AeCk0QZ0d/80J17h8LPAmibrzpMof72ufmF7I78epQpV5bEX5Ho5HfBQ==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-button-predefined/-/@sbercloud/uikit-product-button-predefined-0.7.10.tgz}
+
   '@sbercloud/uikit-product-icons@15.0.0':
     resolution: {integrity: sha512-2DlUC4aILfCvyi/t2Ar1tLybxlAMoHweM4qX/75RgJpjXX9lLhUCC1fgbreo8jKdLS/oELeU0JjOG/ggpFT28A==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-icons/-/@sbercloud/uikit-product-icons-15.0.0.tgz}
+
+  '@sbercloud/uikit-product-icons@15.1.6':
+    resolution: {integrity: sha512-2BOKJ30uPE9i3mJE72uBZxSWc3Se7qQHRHM9VAjXKF1fQzUOeU1bpdUgxgmdl5mP+Lk3d7OZkd9WrOLqq1cKVw==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-icons/-/@sbercloud/uikit-product-icons-15.1.6.tgz}
+
+  '@sbercloud/uikit-product-mobile-drawer@0.9.20':
+    resolution: {integrity: sha512-keO4CkjAx0nWxsYdlKgMOHL26QBwAsPQYfQbsI2W0vpobshVdnFddz9wn9l7C6Lcv/FzuYUE6C6QIl3Lp2/u7w==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-mobile-drawer/-/@sbercloud/uikit-product-mobile-drawer-0.9.20.tgz}
+
+  '@sbercloud/uikit-product-mobile-dropdown@0.9.26':
+    resolution: {integrity: sha512-N6ywEmbOLPbmFmRDnm1a57f+aixC5hanmUs0VEPObGg27sOd0zm+6NS0F5GZblAm0VScQ4hQ+QdgP8JrlBuCmw==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-mobile-dropdown/-/@sbercloud/uikit-product-mobile-dropdown-0.9.26.tgz}
+
+  '@sbercloud/uikit-product-mobile-modal@0.9.23':
+    resolution: {integrity: sha512-LjuZaGf7Gvp/PFRXJwkBb0q8fFm4anHj0f66oHp/JLAgN+oqPJ1N6tfZe/yqiWeoCkxgLx4/KrIeYb5IAK26Ew==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-mobile-modal/-/@sbercloud/uikit-product-mobile-modal-0.9.23.tgz}
+
+  '@sbercloud/uikit-product-mobile-tooltip@0.4.70':
+    resolution: {integrity: sha512-BPOg+EWYTMY+Q0YSZ2aPuwZMXegI7oeP0K6GyEoVqbefl8gmlpIkxbn+iKxbYOw/QQOtXD42muFgcmcMdzydsg==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-mobile-tooltip/-/@sbercloud/uikit-product-mobile-tooltip-0.4.70.tgz}
 
   '@sbercloud/uikit-product-utils@6.2.0':
     resolution: {integrity: sha512-isCKWEH/QOU/Jtc7R9kfy+cFxZVwDXTZfk4L6fD37sqO3Jp1R+7mi5Eh50PbOghlB/oSTWy7AnRjuIKKLYDFtA==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-utils/-/@sbercloud/uikit-product-utils-6.2.0.tgz}
@@ -4479,6 +4497,27 @@ packages:
       '@sbercloud/figma-tokens-giga-id': '*'
       '@sbercloud/figma-tokens-mlspace': '*'
       '@sbercloud/figma-tokens-web': '*'
+
+  '@sbercloud/uikit-product-utils@8.0.1':
+    resolution: {integrity: sha512-GPxbZqWMw2MtIwlrrstEgfQU9XTAXuwVn5xfJBV6xn0Nw1ZSji77uf7xCO5jcnQYnZY9VhJQcsTlj+KAdK2MdA==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-utils/-/@sbercloud/uikit-product-utils-8.0.1.tgz}
+    peerDependencies:
+      '@sbercloud/figma-tokens-admin': '*'
+      '@sbercloud/figma-tokens-cloud-platform': '*'
+      '@sbercloud/figma-tokens-giga-id': '*'
+      '@sbercloud/figma-tokens-mlspace': '*'
+      '@sbercloud/figma-tokens-web': '*'
+      '@snack-uikit/figma-tokens': '*'
+    peerDependenciesMeta:
+      '@sbercloud/figma-tokens-admin':
+        optional: true
+      '@sbercloud/figma-tokens-cloud-platform':
+        optional: true
+      '@sbercloud/figma-tokens-giga-id':
+        optional: true
+      '@sbercloud/figma-tokens-mlspace':
+        optional: true
+      '@sbercloud/figma-tokens-web':
+        optional: true
 
   '@sigstore/bundle@1.1.0':
     resolution: {integrity: sha512-PFutXEy0SmQxYI4texPw3dd2KewuNqv7OuK1ZFtY2fM754yhvG2KdgwIhRnoEE2uHdtdGNQ8s0lb94dW9sELog==}
@@ -14832,8 +14871,8 @@ snapshots:
       '@vitest/eslint-plugin': 1.1.43(@typescript-eslint/utils@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0)(typescript@5.5.4)(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.8.1)(jsdom@26.1.0)(less@4.4.2)(sass@1.80.4)(stylus@0.62.0)(terser@5.44.0)(yaml@2.8.1))
       eslint: 9.17.0
       eslint-config-prettier: 9.1.0(eslint@9.17.0)
-      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0)
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0))(eslint@9.17.0)
+      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0)(eslint@9.17.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.17.0)
       eslint-plugin-no-only-tests: 3.3.0
       eslint-plugin-prettier: 5.2.1(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.17.0))(eslint@9.17.0)(prettier@3.6.2)
@@ -16277,6 +16316,30 @@ snapshots:
       - '@types/react'
       - storybook
 
+  '@sbercloud/uikit-product-button-predefined@0.7.10(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@sbercloud/uikit-product-icons': 15.1.6(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(react@18.2.0)
+      '@sbercloud/uikit-product-mobile-dropdown': 0.9.26(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@sbercloud/uikit-product-utils': 8.0.1(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(react@18.2.0)
+      '@snack-uikit/button': 0.19.16(react@18.2.0)
+      '@snack-uikit/dropdown': 0.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/list': 0.25.0(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/loaders': 0.9.4(react@18.2.0)
+      '@snack-uikit/utils': 4.0.0(react@18.2.0)
+      classnames: 2.5.1
+      uncontrollable: 8.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - '@sbercloud/figma-tokens-admin'
+      - '@sbercloud/figma-tokens-cloud-platform'
+      - '@sbercloud/figma-tokens-giga-id'
+      - '@sbercloud/figma-tokens-mlspace'
+      - '@sbercloud/figma-tokens-web'
+      - '@snack-uikit/figma-tokens'
+      - '@snack-uikit/locale'
+      - '@types/react'
+      - react
+      - react-dom
+
   '@sbercloud/uikit-product-icons@15.0.0(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@18.0.1)(react@18.2.0)':
     dependencies:
       '@sbercloud/uikit-product-utils': 6.2.0(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@18.0.1)(react@18.2.0)
@@ -16289,6 +16352,105 @@ snapshots:
       - '@sbercloud/figma-tokens-web'
       - react
 
+  '@sbercloud/uikit-product-icons@15.1.6(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(react@18.2.0)':
+    dependencies:
+      '@sbercloud/uikit-product-utils': 8.0.1(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(react@18.2.0)
+      '@snack-uikit/icons': 0.27.3
+    transitivePeerDependencies:
+      - '@sbercloud/figma-tokens-admin'
+      - '@sbercloud/figma-tokens-cloud-platform'
+      - '@sbercloud/figma-tokens-giga-id'
+      - '@sbercloud/figma-tokens-mlspace'
+      - '@sbercloud/figma-tokens-web'
+      - '@snack-uikit/figma-tokens'
+      - react
+
+  '@sbercloud/uikit-product-mobile-drawer@0.9.20(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@sbercloud/uikit-product-icons': 15.1.6(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(react@18.2.0)
+      '@sbercloud/uikit-product-mobile-tooltip': 0.4.70(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/button': 0.19.15(react@18.2.0)
+      '@snack-uikit/scroll': 0.10.4(react@18.2.0)
+      '@snack-uikit/typography': 0.8.10(react@18.2.0)
+      '@snack-uikit/utils': 4.0.0(react@18.2.0)
+      classnames: 2.5.1
+      merge-refs: 1.3.0(@types/react@18.2.79)
+      rc-drawer: 6.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      uncontrollable: 8.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - '@sbercloud/figma-tokens-admin'
+      - '@sbercloud/figma-tokens-cloud-platform'
+      - '@sbercloud/figma-tokens-giga-id'
+      - '@sbercloud/figma-tokens-mlspace'
+      - '@sbercloud/figma-tokens-web'
+      - '@snack-uikit/figma-tokens'
+      - '@types/react'
+      - react
+      - react-dom
+
+  '@sbercloud/uikit-product-mobile-dropdown@0.9.26(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@sbercloud/uikit-product-mobile-modal': 0.9.23(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@sbercloud/uikit-product-utils': 8.0.1(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(react@18.2.0)
+      '@snack-uikit/dropdown': 0.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/list': 0.32.1(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 3.10.1(react@18.2.0)
+      uncontrollable: 8.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - '@sbercloud/figma-tokens-admin'
+      - '@sbercloud/figma-tokens-cloud-platform'
+      - '@sbercloud/figma-tokens-giga-id'
+      - '@sbercloud/figma-tokens-mlspace'
+      - '@sbercloud/figma-tokens-web'
+      - '@snack-uikit/figma-tokens'
+      - '@snack-uikit/locale'
+      - '@types/react'
+      - react
+      - react-dom
+
+  '@sbercloud/uikit-product-mobile-modal@0.9.23(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@sbercloud/uikit-product-mobile-drawer': 0.9.20(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@sbercloud/uikit-product-mobile-tooltip': 0.4.70(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@sbercloud/uikit-product-utils': 8.0.1(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(react@18.2.0)
+      '@snack-uikit/button': 0.19.15(react@18.2.0)
+      '@snack-uikit/drawer': 0.13.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/link': 0.17.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/loaders': 0.9.8(react@18.2.0)
+      '@snack-uikit/modal': 0.19.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/typography': 0.8.10(react@18.2.0)
+      '@snack-uikit/utils': 3.10.1(react@18.2.0)
+      classnames: 2.5.1
+    transitivePeerDependencies:
+      - '@sbercloud/figma-tokens-admin'
+      - '@sbercloud/figma-tokens-cloud-platform'
+      - '@sbercloud/figma-tokens-giga-id'
+      - '@sbercloud/figma-tokens-mlspace'
+      - '@sbercloud/figma-tokens-web'
+      - '@snack-uikit/figma-tokens'
+      - '@types/react'
+      - react
+      - react-dom
+
+  '@sbercloud/uikit-product-mobile-tooltip@0.4.70(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@sbercloud/uikit-product-icons': 15.1.6(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(react@18.2.0)
+      '@sbercloud/uikit-product-utils': 8.0.1(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(react@18.2.0)
+      '@snack-uikit/popover-private': 0.14.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/tooltip': 0.18.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 3.10.1(react@18.2.0)
+      classnames: 2.5.1
+      uncontrollable: 8.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - '@sbercloud/figma-tokens-admin'
+      - '@sbercloud/figma-tokens-cloud-platform'
+      - '@sbercloud/figma-tokens-giga-id'
+      - '@sbercloud/figma-tokens-mlspace'
+      - '@sbercloud/figma-tokens-web'
+      - '@snack-uikit/figma-tokens'
+      - react
+      - react-dom
+
   '@sbercloud/uikit-product-utils@6.2.0(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@18.0.1)(react@18.2.0)':
     dependencies:
       '@sbercloud/figma-tokens-admin': 17.1.0
@@ -16299,6 +16461,21 @@ snapshots:
       '@sbercloud/ft-debug-mode': 4.1.0
       '@snack-uikit/utils': 3.5.0(react@18.2.0)
       ua-parser-js: 1.0.39
+    transitivePeerDependencies:
+      - react
+
+  '@sbercloud/uikit-product-utils@8.0.1(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@18.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@17.7.6)(@snack-uikit/figma-tokens@18.0.1)(react@18.2.0)':
+    dependencies:
+      '@cloud-ru/ft-debug-mode': 1.0.1
+      '@snack-uikit/figma-tokens': 18.0.1
+      '@snack-uikit/utils': 3.5.0(react@18.2.0)
+      ua-parser-js: 1.0.39
+    optionalDependencies:
+      '@sbercloud/figma-tokens-admin': 17.1.0
+      '@sbercloud/figma-tokens-cloud-platform': 18.0.1
+      '@sbercloud/figma-tokens-giga-id': 18.0.1
+      '@sbercloud/figma-tokens-mlspace': 17.7.4
+      '@sbercloud/figma-tokens-web': 17.7.6
     transitivePeerDependencies:
       - react
 
@@ -23412,7 +23589,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0):
+  eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0)(eslint@9.17.0):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.3
@@ -23424,7 +23601,7 @@ snapshots:
       is-glob: 4.0.3
       stable-hash: 0.0.4
     optionalDependencies:
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0))(eslint@9.17.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -23438,14 +23615,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0))(eslint@9.17.0):
+  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.18.1(eslint@9.17.0)(typescript@5.5.4)
       eslint: 9.17.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0)
+      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0)(eslint@9.17.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -23462,7 +23639,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0))(eslint@9.17.0):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
@@ -23473,7 +23650,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.17.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0))(eslint@9.17.0)
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2025-12-03)
+
+
+### Features
+
+* **SITE-10319:** add new props appearance to site-header ([6e459d6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6e459d6f692bb50fe17fa6686ef3a6aeec039490))
+
+
+
+
+
 ## 0.5.5 (2025-12-03)
 
 ### Only dependencies have been changed
