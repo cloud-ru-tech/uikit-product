@@ -1,6 +1,7 @@
 import { flexRender, Row, Table } from '@tanstack/react-table';
 import { useCallback } from 'react';
 
+import { RowAppearance } from '@snack-uikit/table';
 import { Checkbox, Radio } from '@snack-uikit/toggles';
 
 import { ROW_ACTIONS_COLUMN_ID } from '../../constants';
@@ -11,9 +12,16 @@ type TableCardProps<TData extends object> = {
   row: Row<TData>;
   table: Table<TData>;
   selection: 'multiple' | 'single' | 'none';
+  selectionAppearance?: RowAppearance;
 };
 
-export function TableCard<TData extends object>({ headlineId, table, row, selection }: TableCardProps<TData>) {
+export function TableCard<TData extends object>({
+  headlineId,
+  table,
+  row,
+  selection,
+  selectionAppearance = RowAppearance.Disabled,
+}: TableCardProps<TData>) {
   const headerGroups = table.getHeaderGroups();
 
   const headerCell = row._getAllCellsByColumnId()[headlineId ?? ''];
@@ -23,11 +31,14 @@ export function TableCard<TData extends object>({ headlineId, table, row, select
   const actionsColumn = table.getFlatHeaders().find(header => header.id === ROW_ACTIONS_COLUMN_ID);
 
   const isSelected = row.getIsSelected();
+  const canSelect = row.getCanSelect();
+  const isDisabled = !canSelect;
 
   const handleSelection = useCallback(() => {
+    if (isDisabled) return;
     if (selection === 'single') row.toggleSelected(true);
     if (selection === 'multiple') row.toggleSelected(!isSelected);
-  }, [isSelected, row, selection]);
+  }, [isDisabled, isSelected, row, selection]);
 
   return (
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
@@ -65,8 +76,14 @@ export function TableCard<TData extends object>({ headlineId, table, row, select
         </div>
       </div>
 
-      {selection === 'single' && <Radio size='m' className={styles.selectionController} checked={isSelected} />}
-      {selection === 'multiple' && <Checkbox size='m' className={styles.selectionController} checked={isSelected} />}
+      {selection === 'single' &&
+        (isDisabled && selectionAppearance === RowAppearance.HideToggler ? null : (
+          <Radio size='m' className={styles.selectionController} checked={isSelected} disabled={isDisabled} />
+        ))}
+      {selection === 'multiple' &&
+        (isDisabled && selectionAppearance === RowAppearance.HideToggler ? null : (
+          <Checkbox size='m' className={styles.selectionController} checked={isSelected} disabled={isDisabled} />
+        ))}
       {actionsCell && actionsColumn && (
         <div className={styles.button}>{flexRender(actionsColumn.column.columnDef.cell, actionsCell.getContext())}</div>
       )}

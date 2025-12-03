@@ -385,6 +385,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
                 headlineId={headlineId}
                 row={row}
                 table={table}
+                selectionAppearance={rowSelectionProp?.appearance}
                 selection={enableSelection ? selectionMode : 'none'}
               />
             ))}
