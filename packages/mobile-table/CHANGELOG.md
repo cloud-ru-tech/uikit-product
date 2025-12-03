@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.16.0 (2025-12-03)
+
+
+### Features
+
+* **FF-7473:** add disabled state and HideToggler support for row selection in mobile table ([f0f7517](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f0f7517d45ef8f5580865951790238426b96fc16))
+
+
+
+
+
 # 0.15.0 (2025-12-03)
 
 
