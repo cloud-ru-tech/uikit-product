@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-hero",
   "title": "Site Hero",
-  "version": "0.5.48",
+  "version": "0.5.49",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -38,7 +38,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-button-predefined": "0.7.12",
     "@sbercloud/uikit-product-icons": "16.0.0",
-    "@sbercloud/uikit-product-site-layout": "0.2.7",
+    "@sbercloud/uikit-product-site-layout": "0.3.0",
     "@sbercloud/uikit-product-site-media": "0.1.38",
     "@sbercloud/uikit-product-site-navbar": "0.2.16",
     "@sbercloud/uikit-product-site-rich-text": "0.2.15",

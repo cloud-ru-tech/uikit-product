@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.49 (2025-12-03)
+
+
+### Bug Fixes
+
+* **UIIAAS-1251:** docs ([0226b84](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0226b8456be07d407c614979552ce88023eb8bd9))
+
+
+
+
+
 ## 0.5.48 (2025-11-28)
 
 ### Only dependencies have been changed

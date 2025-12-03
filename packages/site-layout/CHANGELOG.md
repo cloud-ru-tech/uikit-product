@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-12-03)
+
+
+### Features
+
+* **SITE-10318:** edit layout content wrapper style ([174419a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/174419a9bfa32f8c16aa6765f809dc8c4946ea8e))
+
+
+
+
+
 ## 0.2.7 (2025-11-24)
 
 ### Only dependencies have been changed
