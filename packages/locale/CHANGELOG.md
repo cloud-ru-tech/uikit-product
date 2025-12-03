@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.22.0 (2025-12-03)
+
+
+### Features
+
+* **FF-7560:** add table locales ([db3ab63](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/db3ab634e134af27c426c51b06c09430c6d0b56a))
+
+
+
+
+
 # 0.21.0 (2025-12-03)
 
 

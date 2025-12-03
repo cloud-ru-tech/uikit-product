@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.15.0 (2025-12-03)
+
+
+### Features
+
+* **FF-7560:** add table sorting and column settings support to mobile table ([f6c47c0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f6c47c0bce3f47ad2098b21d9520d244f32f31a2))
+
+
+
+
+
 # 0.14.0 (2025-12-03)
 
 
