@@ -1,3 +1,4 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ste;
 .navbar {
   display: flex;
   flex-direction: column;
@@ -11,4 +12,10 @@
   overflow-y: visible;
   max-width: 100%;
   scrollbar-width: none;
+}
+
+.divider {
+  &[data-background-color='invert'] {
+    background-color: ste.$sys-invert-neutral-decor-default;
+  }
 }

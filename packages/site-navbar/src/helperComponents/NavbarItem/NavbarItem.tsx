@@ -9,6 +9,7 @@ export type NavbarItemProps = {
   text: string;
   icon?: ReactElement;
   disabled?: boolean;
+  appereance?: 'neutral' | 'invert';
 };
 
 const KEYS = ['Space', 'Enter'];
@@ -18,7 +19,15 @@ type Props = NavbarItemProps & {
   onClick(id: string, text: string): void;
 };
 
-export function NavbarItem({ id, text, icon, onClick, active = false, disabled = false }: Props) {
+export function NavbarItem({
+  id,
+  text,
+  icon,
+  appereance = 'neutral',
+  onClick,
+  active = false,
+  disabled = false,
+}: Props) {
   const handleClick = useCallback(() => {
     onClick(id, text);
   }, [id, onClick, text]);
@@ -42,7 +51,12 @@ export function NavbarItem({ id, text, icon, onClick, active = false, disabled =
       onKeyDown={disabled ? undefined : handleKeyDown}
       tabIndex={disabled ? undefined : 0}
     >
-      <div className={styles.background} data-active={active || undefined} data-disabled={disabled || undefined} />
+      <div
+        className={styles.background}
+        data-background-color={appereance}
+        data-active={active || undefined}
+        data-disabled={disabled || undefined}
+      />
       <Typography
         family='sans'
         purpose='body'
@@ -50,11 +64,12 @@ export function NavbarItem({ id, text, icon, onClick, active = false, disabled =
         tag='div'
         className={styles.text}
         data-disabled={disabled || undefined}
+        data-text-color={appereance}
       >
         {text}
       </Typography>
       {icon && (
-        <div className={styles.iconWrapper} data-disabled={disabled || undefined}>
+        <div className={styles.iconWrapper} data-text-color={appereance} data-disabled={disabled || undefined}>
           {icon}
         </div>
       )}

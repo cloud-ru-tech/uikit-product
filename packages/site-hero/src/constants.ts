@@ -9,4 +9,5 @@ export const HERO_EVENT_BUTTONS = {
 export const HERO_COLORS = {
   NeutralBackground1Level: 'neutral-background1-level',
   NeutralBackground: 'neutral-background',
+  GraphiteAccentDefault: 'graphite-accent-default',
 } as const;

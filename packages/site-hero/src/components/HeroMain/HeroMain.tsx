@@ -10,13 +10,14 @@ import { RichText } from '@sbercloud/uikit-product-site-rich-text';
 import { TagSpecial, TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
-import { ButtonFilled, ButtonFilledProps } from '@snack-uikit/button';
+import { ButtonFilled, ButtonFilledProps, ButtonOutline, ButtonOutlineProps } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
 
+import { HERO_COLORS } from '../../constants';
 import { HeroColor } from '../../types';
 import { PlatformLink, PlatformLinkProps } from './components';
 import styles from './styles.module.scss';
-import { getTitleTypographyProps } from './utils';
+import { getAppearanceByBackground, getNavbarAppearanceByBackground, getTitleTypographyProps } from './utils';
 
 export type HeroMainProps = WithSupportProps<
   WithLayoutType<{
@@ -39,7 +40,11 @@ export type HeroMainProps = WithSupportProps<
     /** Цвета фона */
     backgroundColor?: HeroColor;
     /** Массив с настройками кнопок ButtonFilled */
-    buttons?: [Omit<ButtonFilledProps, 'size' | 'appearance'>, Omit<ButtonPromoOutlineProps, 'size' | 'appearance'>?];
+    buttons?: [
+      Omit<ButtonFilledProps, 'size' | 'appearance'>,
+      Omit<ButtonPromoOutlineProps, 'size' | 'appearance'>?,
+      Omit<ButtonOutlineProps, 'size'>?,
+    ];
     /** CSS - класснейм */
     className?: string;
     /** Navbar */
@@ -71,7 +76,9 @@ export function HeroMain({
     <>
       <Layout.SectionWrapper
         layoutType={layoutType}
-        className={cn(className, styles.sectionWrapper)}
+        className={cn(className, styles.sectionWrapper, {
+          [styles.withNavbarBorderRadius]: navbar && navbar.items.length > 0,
+        })}
         data-section-background={backgroundColor}
       >
         <div className={styles.contentWrapper} {...extractSupportProps(rest)} data-layout-type={layoutType}>
@@ -102,7 +109,11 @@ export function HeroMain({
                       {t('Main.platforms')}:{' '}
                       {platforms.map((platform, index) => (
                         <Fragment key={platform.id || platform.title}>
-                          <PlatformLink platform={platform} handlePlatformClick={handlePlatformClick} />
+                          <PlatformLink
+                            platform={platform}
+                            appearance={getAppearanceByBackground(backgroundColor)}
+                            handlePlatformClick={handlePlatformClick}
+                          />
                           {platforms.length - 1 !== index && ', '}
                         </Fragment>
                       ))}
@@ -120,15 +131,18 @@ export function HeroMain({
                     appearance='primary'
                     fullWidth={isAdaptive}
                   />
-                  {buttons.length > 1 && (
-                    <ButtonPromoOutline
-                      {...buttons[1]}
-                      data-layout-type={layoutType}
-                      size='l'
-                      appearance='secondary'
-                      fullWidth={isAdaptive}
-                    />
-                  )}
+                  {buttons.length > 1 &&
+                    (backgroundColor !== HERO_COLORS.GraphiteAccentDefault ? (
+                      <ButtonPromoOutline
+                        {...buttons[1]}
+                        data-layout-type={layoutType}
+                        size='l'
+                        appearance='secondary'
+                        fullWidth={isAdaptive}
+                      />
+                    ) : (
+                      <ButtonOutline {...buttons[1]} data-layout-type={layoutType} size='l' fullWidth={isAdaptive} />
+                    ))}
                 </div>
               )}
             </div>
@@ -151,7 +165,11 @@ export function HeroMain({
           data-sticky={true}
           data-section-background={backgroundColor}
         >
-          <SiteNavbar {...navbar} data-test-id='hero-main__navbar' />
+          <SiteNavbar
+            {...navbar}
+            appereance={getNavbarAppearanceByBackground(backgroundColor)}
+            data-test-id='hero-main__navbar'
+          />
         </Layout.SectionWrapper>
       )}
     </>

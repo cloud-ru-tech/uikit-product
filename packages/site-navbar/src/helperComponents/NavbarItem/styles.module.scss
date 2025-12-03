@@ -79,6 +79,12 @@
   &[data-disabled] {
     background-color: transparent;
   }
+
+  &[data-background-color='invert'] {
+    &:hover {
+      background-color: var.$sys-invert-neutral-accent-default;
+    }
+  }
 }
 
 .text {
@@ -95,5 +101,9 @@
 
   &[data-disabled] {
     color: var.$sys-neutral-text-disabled;
+  }
+
+  &[data-text-color='invert'] {
+    color: var.$sys-invert-neutral-text-main;
   }
 }

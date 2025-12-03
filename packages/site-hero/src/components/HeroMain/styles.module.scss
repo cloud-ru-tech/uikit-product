@@ -1,6 +1,25 @@
 @use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as ds;
 
+.title {
+  color: ds.$sys-neutral-text-main;
+  word-break: break-word;
+  white-space: pre-line;
+  max-width: 720px;
+}
+
+.description {
+  color: ds.$sys-neutral-text-support;
+  word-break: break-word;
+  max-width: 560px;
+}
+
+.platforms {
+  color: ds.$sys-neutral-text-main;
+}
+
 .sectionWrapper {
+  border-radius: ds.$dimension-050m;
+
   &[data-section-background='neutral-background1-level'] {
     background-color: ds.$sys-neutral-background1-level;
   }
@@ -9,9 +28,27 @@
     background-color: ds.$sys-neutral-background;
   }
 
+  &[data-section-background='graphite-accent-default'] {
+    background-color: ds.$sys-graphite-accent-default;
+
+    .title,
+    .description,
+    .platforms {
+      color: ds.$sys-graphite-on-accent;
+    }
+  }
+
   &[data-sticky] {
     position: sticky;
     top: 0;
+  }
+
+  &.withNavbarBorderRadius {
+    border-radius: ds.$dimension-050m ds.$dimension-050m 0 0;
+  }
+
+  &.navbarWrapper {
+    border-radius: 0 0 ds.$dimension-050m ds.$dimension-050m;
   }
 }
 
@@ -71,30 +108,13 @@
 .tagRow {
   display: flex;
   flex-wrap: wrap;
-  gap: ds.$dimension-050m;
+  gap: ds.$dimension-025m;
 }
 
 .textWrapper {
   display: flex;
   flex-direction: column;
   gap: ds.$dimension-2m;
-}
-
-.title {
-  color: ds.$sys-neutral-text-main;
-  word-break: break-word;
-  white-space: pre-line;
-  max-width: 720px;
-}
-
-.description {
-  color: ds.$sys-neutral-text-support;
-  word-break: break-word;
-  max-width: 560px;
-}
-
-.platforms {
-  color: ds.$sys-neutral-text-main;
 }
 
 .imageWrapper {
@@ -136,7 +156,7 @@
 .buttons {
   display: flex;
   flex-direction: row;
-  gap: ds.$dimension-2m;
+  gap: ds.$dimension-1m;
 
   &[data-layout-type='tablet'] {
     flex-direction: column;
@@ -144,7 +164,6 @@
 
   &[data-layout-type='mobile'] {
     flex-direction: column;
-    gap: ds.$dimension-1m;
   }
 }
 

@@ -11,9 +11,10 @@ type Platform = {
 export type PlatformLinkProps = {
   platform: Platform;
   handlePlatformClick(e: MouseEvent<HTMLAnchorElement>, platform: Platform): void;
+  appearance?: 'neutral' | 'invert-neutral';
 };
 
-export function PlatformLink({ platform, handlePlatformClick }: PlatformLinkProps) {
+export function PlatformLink({ platform, appearance = 'neutral', handlePlatformClick }: PlatformLinkProps) {
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     handlePlatformClick(e, platform);
   };
@@ -25,7 +26,7 @@ export function PlatformLink({ platform, handlePlatformClick }: PlatformLinkProp
       onClick={handleClick}
       size='l'
       textMode='accent'
-      appearance='neutral'
+      appearance={appearance}
     />
   );
 }

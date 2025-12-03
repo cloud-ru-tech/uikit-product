@@ -19,7 +19,7 @@ Hero blocks for Site
 | startsAt* | `string` | - | Начало события события |
 | title* | `string` | - | Заголовок события |
 | className | `string` | - | CSS - класснейм |
-| backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background | Цвета фона |
+| backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | neutral-background | Цвета фона |
 | category | `PromoTagProps` | - | Категория события |
 | format | enum Format: `"online"`, `"offline"`, `"hybrid"` | - | Формат проведения события |
 | audience | enum Audience: `"it"`, `"students"`, `"business"` | - | Аудитория, для которой проводится событие |
@@ -33,7 +33,7 @@ Hero blocks for Site
 | description | `string` | - | Описание секции |
 | buttons | `[ButtonFilledProps, ButtonFilledProps?]` | - | Массив с настройками кнопок ButtonFilled |
 | showBottomPadding | `boolean` | true | Наличие нижнего паддинга |
-| backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background | Цвет фона |
+| backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | neutral-background | Цвет фона |
 | contentAlign | "left" \| "center" | left | Выравнивание текста |
 | className | `string` | - | CSS - класснейм |
 ## HeroMain
@@ -49,8 +49,8 @@ Hero blocks for Site
 | tags | `Pick<TagSpecialProps, "text" \| "appearance" \| "tip">[]` | [] | Тэги |
 | platforms | `Platform[]` | [] | Платформы |
 | handlePlatformClick | `(e: MouseEvent<HTMLAnchorElement, MouseEvent>, platform: Platform) => void` | - | Обработка клика по платформе |
-| backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвета фона |
-| buttons | `[Omit<ButtonFilledProps, "size" \| "appearance">, Omit<ButtonPromoOutlineProps, "size" \| "appearance">?]` | - | Массив с настройками кнопок ButtonFilled |
+| backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | neutral-background1-level | Цвета фона |
+| buttons | `[Omit<ButtonFilledProps, "size" \| "appearance">, Omit<ButtonPromoOutlineProps, "size" \| "appearance">?, Omit<...>?]` | - | Массив с настройками кнопок ButtonFilled |
 | className | `string` | - | CSS - класснейм |
 | navbar | `Pick<SiteNavbarProps, "items" \| "active" \| "onItemClick" \| "topPosition">` | - | Navbar |
 ## HeroSlider
