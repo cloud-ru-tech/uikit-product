@@ -152,7 +152,11 @@ export const SshField = forwardRef<HTMLTextAreaElement, SshFieldProps>(
           className={styles.chatStatus}
           layoutType={layoutType}
           icon={<PasswordLockSVG size={16} color={themeVars.sys.neutral.textSupport} />}
-          content={t('SshField.chatStatusAnnouncement.content')}
+          content={[
+            { content: t('SshField.chatStatusAnnouncement.content.option1') },
+            { content: t('SshField.chatStatusAnnouncement.content.option2'), shouldFocusOnHover: true },
+            { content: t('SshField.chatStatusAnnouncement.content.option3') },
+          ]}
           actionLabel={t('SshField.chatStatusAnnouncement.cancel')}
           onActionClick={onCancel}
         />

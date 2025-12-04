@@ -402,7 +402,11 @@ export const ru_RU: typeof en_GB = {
     SshField: {
       placeholder: 'Скопируйте и вставьте SSH-ключ или прикрепите файл',
       chatStatusAnnouncement: {
-        content: 'Вы перешли в режим ввода SSH-ключа',
+        content: {
+          option1: 'Вы перешли в режим ввода SSH-ключа',
+          option2: 'Гига не хранит ваши SSH-ключи',
+          option3: 'Безопасный режим ввода SSH-ключа',
+        },
         cancel: 'Отменить',
       },
       dropZone: {

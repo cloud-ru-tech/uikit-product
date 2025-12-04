@@ -25,7 +25,7 @@ const MAX_ROWS = 6;
 
 export const MobileFieldAi = forwardRef<HTMLTextAreaElement, MobileFieldAiProps>(
   ({ onSubmit, value, submitEnabled, ...props }, ref) => {
-    const { t } = useLocale('FieldsPredefined');
+    const { t } = useLocale('Claudia');
 
     return (
       <div
@@ -40,7 +40,7 @@ export const MobileFieldAi = forwardRef<HTMLTextAreaElement, MobileFieldAiProps>
             ref={ref}
             value={value}
             minRows={MIN_ROWS}
-            placeholder={t('FieldAi.regular.placeholder')}
+            placeholder={t('SshField.placeholder')}
             spellCheck={true}
           />
         </Scroll>
@@ -48,7 +48,7 @@ export const MobileFieldAi = forwardRef<HTMLTextAreaElement, MobileFieldAiProps>
         <div className={styles.mobileSubmitButtonWrapper}>
           <Tooltip
             disableSpanWrapper
-            tip={t('FieldChat.attachFileTooltip')}
+            tip={t('SshField.attachFileTooltip')}
             hoverDelayOpen={600}
             triggerClassName={styles.uploadTooltip}
           >

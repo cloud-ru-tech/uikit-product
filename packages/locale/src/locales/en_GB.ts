@@ -402,7 +402,11 @@ export const en_GB = {
     SshField: {
       placeholder: 'Copy and paste SSH key or attach a file',
       chatStatusAnnouncement: {
-        content: 'You have entered SSH key input mode',
+        content: {
+          option1: 'You have entered SSH key entry mode',
+          option2: 'Giga does not store your SSH keys',
+          option3: 'Secure SSH key entry mode',
+        },
         cancel: 'Cancel',
       },
       dropZone: {
