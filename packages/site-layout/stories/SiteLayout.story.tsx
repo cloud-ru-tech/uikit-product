@@ -25,7 +25,7 @@ const Template = ({ layoutType }: StoryProps) => (
       <Layout.Header data-test-id='header-test-id' data-attr='layout-header'>
         <SiteHeader layoutType={layoutType} />
       </Layout.Header>
-      <Layout.Main>
+      <Layout.Main layoutType={layoutType}>
         <Layout.SectionWrapper layoutType={layoutType} className={styles.sampleSection}>
           <div className={styles.sampleSection}>Какое-то содержимое</div>
         </Layout.SectionWrapper>

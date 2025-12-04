@@ -1,19 +1,23 @@
 import cn from 'classnames';
 import { ReactNode } from 'react';
 
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import styles from './styles.module.scss';
 
-export type MainProps = WithSupportProps<{
-  children: ReactNode;
-  className?: string;
-}>;
+export type MainProps = WithSupportProps<
+  WithLayoutType<{
+    children: ReactNode;
+    className?: string;
+  }>
+>;
 
-export function Main({ children, className, ...rest }: MainProps) {
+export function Main({ children, className, layoutType, ...rest }: MainProps) {
   return (
     <main className={cn(styles.main, className)} {...extractSupportProps(rest)}>
-      {children}
+      <div className={styles.mainContent} data-layout-type={layoutType}>
+        {children}
+      </div>
     </main>
   );
 }

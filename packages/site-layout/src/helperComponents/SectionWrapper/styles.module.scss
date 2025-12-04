@@ -5,28 +5,21 @@
   justify-content: center;
   width: 100%;
   min-width: 0;
-  background: var.$sys-neutral-background;
 }
 
 .contentWrapper {
   width: 100%;
-  max-width: 1440px;
-  padding: 0;
+  max-width: 1216px;
+  padding: 0 var.$dimension-4m;
   min-width: 0;
-  box-sizing: border-box;
-
-  &[data-layout-type='desktop'],
-  &[data-layout-type='desktopSmall'] {
-    padding: 0 var.$dimension-2m;
-  }
 
   &[data-layout-type='tablet'] {
     max-width: unset;
-    padding: 0 var.$dimension-2m;
+    padding: 0 var.$dimension-4m;
   }
 
   &[data-layout-type='mobile'] {
     max-width: unset;
-    padding: 0;
+    padding: 0 var.$dimension-2m;
   }
 }
