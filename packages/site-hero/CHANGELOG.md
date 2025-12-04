@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2025-12-04)
+
+
+### Features
+
+* **SITE-10320:** edit hero main ([a85a31d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a85a31d49635867e75ae1dffec8ecb510d95a71e))
+
+
+
+
+
 ## 0.5.50 (2025-12-04)
 
 ### Only dependencies have been changed

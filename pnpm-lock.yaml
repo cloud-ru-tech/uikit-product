@@ -2061,7 +2061,7 @@ importers:
         specifier: 0.1.38
         version: link:../site-media
       '@sbercloud/uikit-product-site-navbar':
-        specifier: 0.2.16
+        specifier: 0.3.0
         version: link:../site-navbar
       '@sbercloud/uikit-product-site-rich-text':
         specifier: 0.2.15
