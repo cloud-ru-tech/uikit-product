@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2025-12-04)
+
+
+### Features
+
+* **SITE-10318:** edit layout styles ([d4db088](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d4db088946220586887d3ea7fd2bfe6cf7fc6bd0))
+
+
+
+
+
 # 0.3.0 (2025-12-03)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-section",
   "title": "Site Section",
-  "version": "0.23.12",
+  "version": "0.23.13",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -41,7 +41,7 @@
     "@sbercloud/uikit-product-site-cards": "0.11.9",
     "@sbercloud/uikit-product-site-case-card": "0.4.7",
     "@sbercloud/uikit-product-site-grid": "0.1.8",
-    "@sbercloud/uikit-product-site-layout": "0.3.0",
+    "@sbercloud/uikit-product-site-layout": "0.4.0",
     "@sbercloud/uikit-product-site-media": "0.1.38",
     "@sbercloud/uikit-product-site-rich-text": "0.2.15",
     "@sbercloud/uikit-product-site-table": "0.2.16",
