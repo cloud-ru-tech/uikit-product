@@ -6,7 +6,9 @@ import { SectionBasic, SectionBasicProps } from '../SectionBasic';
 import styles from './styles.module.scss';
 
 export type SectionMediaProps = WithLayoutType<
-  WithSupportProps<Pick<SectionBasicProps, 'id' | 'title' | 'titleTag' | 'description'> & MediaContentProps>
+  WithSupportProps<
+    Pick<SectionBasicProps, 'id' | 'title' | 'titleTag' | 'description' | 'backgroundColor'> & MediaContentProps
+  >
 >;
 
 export function SectionMedia({
@@ -19,6 +21,7 @@ export function SectionMedia({
   onPlay,
   onError,
   image,
+  backgroundColor,
   'data-test-id': dataTestId = 'section-media',
   ...rest
 }: SectionMediaProps) {
@@ -30,6 +33,7 @@ export function SectionMedia({
       titleTag={titleTag}
       description={description}
       data-test-id={dataTestId}
+      backgroundColor={backgroundColor ?? 'neutral-background'}
       {...extractSupportProps(rest)}
     >
       <div className={styles.content}>

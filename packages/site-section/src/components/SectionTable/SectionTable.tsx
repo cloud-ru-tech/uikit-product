@@ -4,7 +4,7 @@ import { RichText } from '@sbercloud/uikit-product-site-rich-text';
 import { Table, TableProps } from '@sbercloud/uikit-product-site-table';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { SectionBasic } from '../SectionBasic';
+import { SectionBasic, SectionBasicProps } from '../SectionBasic';
 import styles from './styles.module.scss';
 
 export type SectionTableProps = WithSupportProps<
@@ -20,16 +20,27 @@ export type SectionTableProps = WithSupportProps<
       subtitle?: string;
       /** Описание */
       description?: string;
+      /** Фон подложки */
+      backgroundColor?: SectionBasicProps['backgroundColor'];
     } & TableProps
   >
 >;
 
-export function SectionTable({ id, layoutType, className, title, subtitle, description, ...rest }: SectionTableProps) {
+export function SectionTable({
+  id,
+  layoutType,
+  className,
+  title,
+  subtitle,
+  description,
+  backgroundColor,
+  ...rest
+}: SectionTableProps) {
   return (
     <SectionBasic
       id={id}
       title={title}
-      backgroundColor='neutral-background1-level'
+      backgroundColor={backgroundColor ?? 'neutral-background'}
       layoutType={layoutType}
       className={cn(className, styles.sectionTable)}
       {...extractSupportProps(rest)}

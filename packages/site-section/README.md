@@ -250,6 +250,7 @@
 | description | `string` | - | Описание секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | id | `string` | - | id секции |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | video | `ReactNode \| VideoPlayerProps` | - |  |
 | onPlay | `() => void` | - |  |
 | onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
@@ -304,6 +305,7 @@
 | title | `string` | - | Заголовок |
 | subtitle | `string` | - | Подзаголовок |
 | description | `string` | - | Описание |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Фон подложки |
 | withHeader | `boolean` | - |  |
 ## SectionCarousel
 ### Props
