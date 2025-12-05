@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2025-12-05)
+
+
+### Features
+
+* **SITE-10382:** add prop for full width content container ([f7ebb0c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f7ebb0cc6ae7240b14b65105fab589e230a336da))
+
+
+
+
+
 # 0.4.0 (2025-12-04)
 
 

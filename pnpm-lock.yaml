@@ -2016,7 +2016,7 @@ importers:
         specifier: 0.9.25
         version: link:../mobile-modal
       '@sbercloud/uikit-product-site-layout':
-        specifier: 0.4.0
+        specifier: 0.5.0
         version: link:../site-layout
       '@sbercloud/uikit-product-utils':
         specifier: 8.0.1
@@ -2055,7 +2055,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-site-layout':
-        specifier: 0.4.0
+        specifier: 0.5.0
         version: link:../site-layout
       '@sbercloud/uikit-product-site-media':
         specifier: 0.1.38
@@ -2172,7 +2172,7 @@ importers:
         specifier: 0.1.8
         version: link:../site-grid
       '@sbercloud/uikit-product-site-layout':
-        specifier: 0.4.0
+        specifier: 0.5.0
         version: link:../site-layout
       '@sbercloud/uikit-product-site-media':
         specifier: 0.1.38
