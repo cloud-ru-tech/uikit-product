@@ -5,7 +5,7 @@ import { WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils
 import { Typography, TypographyProps } from '@snack-uikit/typography';
 
 import { BenefitItem, BenefitItemProps } from '../../helperComponents';
-import { SectionBasic } from '../SectionBasic';
+import { SectionBasic, SectionBasicProps } from '../SectionBasic';
 import styles from './styles.module.scss';
 import { BackgroundType } from './types';
 import { getTitleTypographyProps } from './utils';
@@ -25,6 +25,8 @@ export type SectionBenefitsBannerProps = WithSupportProps<
       description?: string[] | string;
       /** CSS класс */
       className?: string;
+      /** Фон подложки */
+      backgroundSectionColor?: SectionBasicProps['backgroundColor'];
     } & BackgroundType
   >
 >;
@@ -38,12 +40,18 @@ export function SectionBenefitsBanner({
   appearance = 'brand',
   color,
   backgroundImage,
+  backgroundSectionColor,
   description,
   className,
   ...rest
 }: SectionBenefitsBannerProps) {
   return (
-    <SectionBasic layoutType={layoutType} className={className} {...rest}>
+    <SectionBasic
+      layoutType={layoutType}
+      className={className}
+      backgroundColor={backgroundSectionColor ?? 'neutral-background'}
+      {...rest}
+    >
       <div className={styles.bannerWrapper} data-layout-type={layoutType}>
         <div
           className={cn(styles.banner, {

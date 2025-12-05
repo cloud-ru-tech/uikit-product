@@ -69,6 +69,7 @@
 | titleTag | enum Tag: `"span"`, `"h1"`, `"h2"`, `"h3"`, `"h4"`, `"h5"`, `"h6"`, `"div"`, `"label"`, `"p"` | h3 | Тэг заголовка |
 | description | `string \| string[]` | - | Описание под баннером |
 | className | `string` | - | CSS класс |
+| backgroundSectionColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Фон подложки |
 | appearance | "decor" \| "brand" \| "graphite" | brand |  |
 | color | enum ColorType: `"neutral"`, `"white"`, `"violet"`, `"blue"` | - |  |
 | backgroundType | "color" \| "image" | color |  |
