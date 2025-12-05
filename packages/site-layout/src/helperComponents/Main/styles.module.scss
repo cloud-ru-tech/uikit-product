@@ -28,4 +28,12 @@
     max-width: unset;
     padding: 0;
   }
+
+  &[data-full-width='true'] {
+    max-width: 100%;
+
+    &[data-layout-type] {
+      padding: 0;
+    }
+  }
 }

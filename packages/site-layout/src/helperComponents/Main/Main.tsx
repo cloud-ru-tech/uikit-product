@@ -9,13 +9,14 @@ export type MainProps = WithSupportProps<
   WithLayoutType<{
     children: ReactNode;
     className?: string;
+    fullWidth?: boolean;
   }>
 >;
 
-export function Main({ children, className, layoutType, ...rest }: MainProps) {
+export function Main({ children, className, layoutType, fullWidth, ...rest }: MainProps) {
   return (
     <main className={cn(styles.main, className)} {...extractSupportProps(rest)}>
-      <div className={styles.mainContent} data-layout-type={layoutType}>
+      <div className={styles.mainContent} data-layout-type={layoutType} data-full-width={fullWidth}>
         {children}
       </div>
     </main>
