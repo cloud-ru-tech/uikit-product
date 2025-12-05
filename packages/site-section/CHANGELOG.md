@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.24.0 (2025-12-05)
+
+
+### Features
+
+* **SITE-10379:** add props backgroundColor ([dfd03f1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dfd03f116c8f5037010c5c30427cbcdf383aa9ee))
+
+
+
+
+
 ## 0.23.13 (2025-12-04)
 
 ### Only dependencies have been changed
