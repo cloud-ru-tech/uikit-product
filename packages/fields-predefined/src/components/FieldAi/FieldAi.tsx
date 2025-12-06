@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { forwardRef, KeyboardEventHandler, useMemo, useState } from 'react';
+import { forwardRef, KeyboardEventHandler, useEffect, useMemo, useRef, useState } from 'react';
 
 import { EyeClosedSVG, EyeSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
@@ -19,7 +19,7 @@ import { AIDisclaimer } from '../AIDisclaimer/AIDisclaimer';
 import { MobileFieldAi } from './components/MobileFieldAi';
 import { WithPasswordValidation } from './components/WithPasswordValidation';
 import styles from './styles.module.scss';
-import { getValidationPassword } from './utils';
+import { getValidationPassword, ValidationPasswordKey } from './utils';
 
 export type FieldAiProps = WithLayoutType<
   Omit<FieldTextAreaProps, 'placeholder' | 'labelTooltip' | 'label' | 'required' | 'size' | 'spellCheck' | 'footer'> & {
@@ -39,6 +39,8 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
     const isTouchDevice = isTouchDeviceHelper(layoutType);
 
     const [isValueHidden, setIsValueHidden] = useState<boolean>(true);
+    const [animatedValidationKey, setAnimatedValidationKey] = useState<ValidationPasswordKey | null>(null);
+    const timerRef = useRef<NodeJS.Timeout | null>(null);
 
     const isValueValid = typeof value === 'string' && value.trim().length > 0;
     const isPasswordMode = secure === 'password';
@@ -47,19 +49,47 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
     const isPasswordValid = isPasswordMode ? Object.values(passwordValidation).every(Boolean) : true;
     const showPasswordError = !isPasswordValid && secure && value;
 
+    useEffect(
+      () => () => {
+        if (timerRef.current) {
+          clearTimeout(timerRef.current);
+        }
+      },
+      [],
+    );
+
     const handleSubmit = () => {
       if (isValueValid && isPasswordValid) {
         handleSubmitProp(value);
       }
     };
 
-    const handleKeyDown: KeyboardEventHandler<HTMLTextAreaElement> = e => {
+    const triggerValidationHighlight = (key: ValidationPasswordKey) => {
+      setAnimatedValidationKey(key);
+
+      timerRef.current = setTimeout(() => {
+        setAnimatedValidationKey(null);
+      }, 1000);
+    };
+
+    const handleKeyDown: KeyboardEventHandler<HTMLTextAreaElement> = event => {
       if (isTouchDevice) {
         return;
       }
 
-      if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
+      if (isPasswordMode && event.key.length === 1) {
+        const isLetter = /\p{L}/u.test(event.key);
+        const isLatinLetter = /^[a-zA-Z]$/.test(event.key);
+
+        if (isLetter && !isLatinLetter) {
+          event.preventDefault();
+          triggerValidationHighlight('onlyLatin');
+          return;
+        }
+      }
+
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
 
         if (!disabled) {
           handleSubmit();
@@ -88,6 +118,7 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
           showValidation={isPasswordMode}
           passwordValidation={passwordValidation}
           layoutType={layoutType}
+          animatedKey={animatedValidationKey}
         >
           <AdaptiveFieldTextArea
             {...props}

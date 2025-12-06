@@ -1,5 +1,17 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
 
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-4px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(4px);
+  }
+}
+
 .checkItem {
   display: inline-flex;
   gap: 10px;
@@ -7,6 +19,10 @@
   &[data-layout-type='mobile'],
   &[data-layout-type='tablet'] {
     gap: 8px;
+  }
+
+  &[data-animated='true'] {
+    animation: shake 0.5s ease-in-out;
   }
 }
 

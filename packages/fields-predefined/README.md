@@ -80,7 +80,7 @@
 | onSubmit* | `(value: string) => void` | - | Колбек действия при отправке |
 | value | `string` | - | HTML-аттрибут value |
 | onChange | `(value: string, e?: ChangeEvent<HTMLTextAreaElement>) => void` | - | Колбек смены значения |
-| inputMode | enum InputMode: `"none"`, `"text"`, `"tel"`, `"email"`, `"search"`, `"decimal"`, `"numeric"`, `"url"` | - | Режим работы экранной клавиатуры |
+| inputMode | enum InputMode: `"search"`, `"none"`, `"text"`, `"tel"`, `"email"`, `"decimal"`, `"numeric"`, `"url"` | - | Режим работы экранной клавиатуры |
 | id | `string` | - | HTML-аттрибут id |
 | name | `string` | - | HTML-аттрибут name |
 | maxLength | `number` | - | Максимальное кол-во символов |
@@ -106,7 +106,7 @@
 | resizable | `boolean` | - | Может ли ли пользователь изменять размеры поля (если св-во не включено, поле автоматически меняет свой размер) |
 | secure | `boolean \| "password"` | - | Режим ввода sensitive данных (пароля, API ключей, токенов, etc) |
 | onResetContextClick | `() => void` | - | Действие при клике по кнопке сброса контекста |
-| ref | `LegacyRef<HTMLTextAreaElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| ref | `LegacyRef<HTMLInputElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 | key | `Key` | - |  |
 ## FieldChat
 ### Props
@@ -116,7 +116,7 @@
 | handleSubmit* | `(value: string) => void` | - | Колбек действия при отправке |
 | value | `string` | - | HTML-аттрибут value |
 | onChange | `(value: string, e?: ChangeEvent<HTMLTextAreaElement>) => void` | - | Колбек смены значения |
-| inputMode | enum InputMode: `"none"`, `"text"`, `"tel"`, `"email"`, `"search"`, `"decimal"`, `"numeric"`, `"url"` | - | Режим работы экранной клавиатуры |
+| inputMode | enum InputMode: `"search"`, `"none"`, `"text"`, `"tel"`, `"email"`, `"decimal"`, `"numeric"`, `"url"` | - | Режим работы экранной клавиатуры |
 | id | `string` | - | HTML-аттрибут id |
 | name | `string` | - | HTML-аттрибут name |
 | maxLength | `number` | - | Максимальное кол-во символов |
@@ -266,7 +266,7 @@
 | customSchema | `StringSchema<string, AnyObject, undefined, "">` | - |  |
 | addButton | `boolean` | - | Поле появляется по кнопке "Добавить описание" (только для опционального поля) |
 | onValidationError | `(error: ValidationError) => void` | - | Колбэк, вызываемый при изменении ошибки валидации (только в standalone режиме) |
-| ref | `LegacyRef<HTMLTextAreaElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| ref | `LegacyRef<HTMLInputElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 | key | `Key` | - |  |
 ## FieldDescriptionRHF
 Поле описание c оберткой для React Hook Form
@@ -303,7 +303,7 @@
 | resizable | `boolean` | true | Может ли ли пользователь изменять размеры поля (если св-во не включено, поле автоматически меняет свой размер) |
 | customSchema | `StringSchema<string, AnyObject, undefined, "">` | - |  |
 | addButton | `boolean` | - | Поле появляется по кнопке "Добавить описание" (только для опционального поля) |
-| ref | `LegacyRef<HTMLTextAreaElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| ref | `LegacyRef<HTMLInputElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 | key | `Key` | - |  |
 
 

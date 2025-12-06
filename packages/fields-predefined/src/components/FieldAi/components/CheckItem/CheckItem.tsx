@@ -10,11 +10,12 @@ type CheckItemProps = WithLayoutType<{
   label: string;
   checked: boolean;
   shouldHide?: boolean;
+  animated?: boolean;
 }>;
 
 const CHECKED_ITEM_DISAPPEAR_TIMEOUT = 500;
 
-export function CheckItem({ label, checked, layoutType, shouldHide = false }: CheckItemProps) {
+export function CheckItem({ label, checked, layoutType, shouldHide = false, animated = false }: CheckItemProps) {
   const [visible, setVisible] = useState(checked);
 
   useEffect(() => {
@@ -34,7 +35,7 @@ export function CheckItem({ label, checked, layoutType, shouldHide = false }: Ch
   }
 
   return (
-    <div className={styles.checkItem} data-layout-type={layoutType}>
+    <div className={styles.checkItem} data-layout-type={layoutType} data-animated={animated}>
       <CheckSVG size={20} className={styles.icon} data-checked={checked} />
       <Typography.SansBodyM className={styles.label} data-checked={checked}>
         {label}

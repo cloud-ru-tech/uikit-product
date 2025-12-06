@@ -7,6 +7,8 @@ export type ValidationPassword = {
   noSpaces: boolean;
 };
 
+export type ValidationPasswordKey = keyof ValidationPassword;
+
 const MIN_PASSWORD_LENGTH = 8;
 const NUMBER_REGEX = /[0-9]/;
 const CAPITAL_REGEX = /\p{Lu}/u;
