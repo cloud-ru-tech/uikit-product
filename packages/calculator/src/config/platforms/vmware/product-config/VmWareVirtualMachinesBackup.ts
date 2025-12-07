@@ -8,6 +8,7 @@ export const VM_WARE_VIRTUAL_MACHINES_BACKUP_FORM_CONFIG: FormConfig = {
       accessorKey: 'vmWareVirtualMachinesBackup',
       defaultValue: {
         backupVM: 0,
+        // eslint-disable-next-line @cloud-ru/ssr-safe-react/domApi -- это имя свойства объекта, не использование localStorage API
         localStorage: 0,
         remoteStorage: 0,
       },

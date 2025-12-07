@@ -1,6 +1,6 @@
 import { UAParser } from 'ua-parser-js';
 
-import { ValueOf } from '@snack-uikit/utils';
+import { isBrowser, ValueOf } from '@snack-uikit/utils';
 
 const DEVICE_TYPE = {
   Console: 'console',
@@ -20,7 +20,7 @@ const getDeviceType = (type: string | undefined): DeviceType =>
   DEVICE_TYPES.find(value => value === type) || DEVICE_TYPE.Desktop;
 
 export function getUserAgentInfo() {
-  const parser = new UAParser(globalThis.navigator.userAgent);
+  const parser = new UAParser(isBrowser() ? globalThis.navigator.userAgent : undefined);
   const device = parser.getDevice();
   const browser = parser.getBrowser();
   const os = parser.getOS();
