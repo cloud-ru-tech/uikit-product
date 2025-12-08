@@ -6,24 +6,20 @@ export type HeroSlideImageProps = {
   /** Ссылки на картинку */
   source: {
     desktop: string;
-    tablet?: string;
+    tablet: string;
+    mobile: string;
   };
-  /** Форма картинки */
-  format: 'rectangle' | 'square' | 'custom';
 };
 
-export function HeroSlideImage({ source, format, layoutType }: WithLayoutType<HeroSlideImageProps>) {
-  const { tablet, desktop } = source;
-
-  if (layoutType === 'mobile') {
-    return null;
-  }
+export function HeroSlideImage({ source, layoutType }: WithLayoutType<HeroSlideImageProps>) {
+  const { desktop, tablet, mobile } = source;
 
   return (
-    <picture className={styles.imageWrapper} data-image-format={format} data-layout-type={layoutType}>
+    <picture className={styles.imageWrapper} data-layout-type={layoutType}>
+      {mobile && <source srcSet={mobile} media={CSS_BREAKPOINTS.mobile} />}
       {tablet && <source srcSet={tablet} media={CSS_BREAKPOINTS.tablet} />}
       <source srcSet={desktop} media={CSS_BREAKPOINTS.large} />
-      <img src={desktop} className={styles.image} data-image-format={format} loading='lazy' alt='main slide' />
+      <img src={desktop} className={styles.image} loading='lazy' alt='main slide' />
     </picture>
   );
 }

@@ -4,7 +4,6 @@
   resize: both;
   overflow: auto;
   background: var.$sys-neutral-background2-level;
-  height: 500px;
 }
 
 .body {
@@ -15,9 +14,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  max-width: 1440px;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 16px;
 }
 
 .longContent {

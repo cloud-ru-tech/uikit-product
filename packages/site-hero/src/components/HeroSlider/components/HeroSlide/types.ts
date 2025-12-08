@@ -1,4 +1,5 @@
-import { ButtonPromoProps } from '@sbercloud/uikit-product-button-predefined';
+import { HTMLAttributeAnchorTarget, MouseEventHandler } from 'react';
+
 import { EridProps } from '@sbercloud/uikit-product-site-tag';
 import { ValueOf } from '@snack-uikit/utils';
 
@@ -7,7 +8,7 @@ import { Appearance, Color } from './constants';
 
 type ColorType = ValueOf<typeof Color>;
 
-type AppearanceType = ValueOf<typeof Appearance>;
+export type AppearanceType = ValueOf<typeof Appearance>;
 
 export type HeroSlideBaseProps = {
   /** id компонента */
@@ -18,10 +19,21 @@ export type HeroSlideBaseProps = {
   description?: string;
   /** Медиа-контент */
   media: HeroSlideMediaProps;
-  /** Кнопка ButtonPromo */
-  button: Omit<ButtonPromoProps, 'size' | 'appearance' | 'className'>;
+  /** Кнопка CTA */
+  button: {
+    /** Текст кнопки */
+    label: string;
+    /** Ссылка */
+    href: string;
+    /** Как открывать ссылку */
+    target?: HTMLAttributeAnchorTarget;
+    /** Обработчик клика по кнопке */
+    onClick?: MouseEventHandler<HTMLElement>;
+  };
   /** Плашка рекламы с tooltip */
-  erid?: Pick<EridProps, 'tip' | 'appearance'>;
+  erid?: Pick<EridProps, 'tip'> & {
+    place: 'tooltip' | 'under-button';
+  };
   /** CSS-класс */
   className?: string;
 };

@@ -2074,9 +2074,6 @@ importers:
       '@snack-uikit/link':
         specifier: 0.15.9
         version: 0.15.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@snack-uikit/pagination':
-        specifier: 0.10.9
-        version: 0.10.9(react@18.2.0)
       '@snack-uikit/promo-tag':
         specifier: 0.7.1
         version: 0.7.1(react@18.2.0)
@@ -5181,9 +5178,6 @@ packages:
 
   '@snack-uikit/pagination@0.10.21':
     resolution: {integrity: sha512-S0W4LjQk6VvMbNEx0WpAhN5YPVlTPCWPnk4dCGlKoN8eScnNIteZ0EJiKl7zMPwkKk4VgaUnQg/3M0/4xyAi+A==}
-
-  '@snack-uikit/pagination@0.10.9':
-    resolution: {integrity: sha512-ajUnExF8cICgmlfDVMVmP0vE4VSEQUlgkmiE5tj+VICaT8YG5+KhzF+zJQZxoB0vpM0lBZ7Vs5WgN4yONB9eqA==}
 
   '@snack-uikit/pagination@0.9.1':
     resolution: {integrity: sha512-X6hFyW3+qSnhRFiSQ4bCkEuX0t2MdWO8MnQiD+9SHTGbUqgQmjLylm4fOTLkHXKjqWx8qoSlcIgRDB6N/ddVOw==}
@@ -18827,14 +18821,6 @@ snapshots:
       '@snack-uikit/button': 0.19.16(react@18.2.0)
       '@snack-uikit/icons': 0.27.4
       '@snack-uikit/utils': 4.0.0(react@18.2.0)
-    transitivePeerDependencies:
-      - react
-
-  '@snack-uikit/pagination@0.10.9(react@18.2.0)':
-    dependencies:
-      '@snack-uikit/button': 0.19.9(react@18.2.0)
-      '@snack-uikit/icons': 0.26.2(react@18.2.0)
-      '@snack-uikit/utils': 3.8.1(react@18.2.0)
     transitivePeerDependencies:
       - react
 

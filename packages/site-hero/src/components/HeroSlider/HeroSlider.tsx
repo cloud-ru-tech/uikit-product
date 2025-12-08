@@ -3,9 +3,9 @@ import { useState } from 'react';
 
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Carousel, CarouselProps } from '@snack-uikit/carousel';
-import { PaginationSlider } from '@snack-uikit/pagination';
 
-import { HeroSlide, HeroSlideProps } from './components';
+import { Control, HeroSlide, HeroSlideProps, TabsRowHeroSlider } from './components';
+import { TabHeroSliderBase } from './components/TabHeroSlider';
 import styles from './styles.module.scss';
 
 export type HeroSliderProps = WithSupportProps<
@@ -14,29 +14,54 @@ export type HeroSliderProps = WithSupportProps<
       id?: string;
       /** Слайды карусели */
       items: HeroSlideProps[];
+      /** Заголовки для tabs */
+      tabs: TabHeroSliderBase[];
       /** CSS-класс */
       className?: string;
-      /** Использовать пагинацию для переключения страниц @default true */
-      pagination?: boolean;
-    } & Pick<CarouselProps, 'state' | 'autoSwipe'>
+    } & Pick<CarouselProps, 'state'>
   >
 >;
 
-export function HeroSlider({
-  id,
-  layoutType,
-  items,
-  autoSwipe,
-  pagination = true,
-  className,
-  ...rest
-}: HeroSliderProps) {
-  const [currentPage, setCurrentPage] = useState<number>(0);
+const AUTO_SWIPE: CarouselProps['autoSwipe'] = 5;
+const AUTO_SWIPE_DISABLED: CarouselProps['autoSwipe'] = 0;
 
-  const currentSlideAppearance = items[currentPage].appearance;
+export function HeroSlider({ id, tabs: tabsProp, layoutType, items: itemsProp, className, ...rest }: HeroSliderProps) {
+  // Максимум 5 слайдов
+  const items = itemsProp.toSpliced(5);
+  const tabs = tabsProp.toSpliced(5);
+
+  const [currentPage, setCurrentPage] = useState<number>(0);
+  const [autoSwipe, setAutoSwipe] = useState(AUTO_SWIPE);
+
+  const currentAppearance = items[currentPage].appearance;
+  const currentColor = items[currentPage].color;
+
+  const currentTab = tabs[currentPage];
+
+  const handleTabClick = (tab: TabHeroSliderBase) => {
+    const currentIndex = tabs.findIndex(t => t.title === tab.title);
+
+    setCurrentPage(currentIndex);
+    setAutoSwipe(AUTO_SWIPE_DISABLED);
+  };
+
+  const handleLeftClick = () => {
+    setCurrentPage(page => (items.length + page - 1) % items.length);
+    setAutoSwipe(AUTO_SWIPE_DISABLED);
+  };
+  const handleRightClick = () => {
+    setCurrentPage(page => (page + 1) % items.length);
+    setAutoSwipe(AUTO_SWIPE_DISABLED);
+  };
 
   return (
-    <section className={cn(styles.root, className)} id={id}>
+    <section
+      className={cn(styles.root, className)}
+      id={id}
+      data-appearance={currentAppearance}
+      data-color={currentColor}
+      data-layout-type={layoutType}
+    >
       <Carousel
         className={styles.heroCarousel}
         arrows={false}
@@ -47,26 +72,26 @@ export function HeroSlider({
           page: currentPage,
           onChange: setCurrentPage,
         }}
-        gap={'0'}
+        gap='0'
         {...extractSupportProps(rest)}
       >
         {items.map((item, i) => (
-          <HeroSlide key={`${item.title}${i}`} {...item} layoutType={layoutType} />
+          <div key={`${item.title}${i}`} className={styles.carouselItemWrapper} data-layout-type={layoutType}>
+            <HeroSlide {...item} className={styles.heroSlide} layoutType={layoutType} />
+          </div>
         ))}
       </Carousel>
-
-      {pagination && (
-        <div className={styles.paginationWrapper} data-appearance={currentSlideAppearance}>
-          <PaginationSlider
-            data-test-id='hero-slider__pagination'
-            page={currentPage + 1}
-            onChange={(page: number) => {
-              setCurrentPage(page - 1);
-            }}
-            total={items.length}
-          />
-        </div>
-      )}
+      <div className={cn(styles.tabsWrapper)} data-layout-type={layoutType}>
+        <TabsRowHeroSlider
+          className={styles.tabs}
+          appearance={currentAppearance}
+          active={currentTab}
+          items={tabs}
+          onTabClick={handleTabClick}
+        />
+      </div>
+      <Control className={styles.control} variant='prev' onClick={handleLeftClick} />
+      <Control className={styles.control} variant='next' onClick={handleRightClick} />
     </section>
   );
 }

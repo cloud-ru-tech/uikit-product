@@ -1,16 +1,16 @@
 import cn from 'classnames';
 
 import { ButtonPromo } from '@sbercloud/uikit-product-button-predefined';
-import { Layout } from '@sbercloud/uikit-product-site-layout';
 import { RichText } from '@sbercloud/uikit-product-site-rich-text';
 import { Erid } from '@sbercloud/uikit-product-site-tag';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { ButtonFilled } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
 
 import { HeroSlideMedia } from '../HeroSlideMedia';
 import styles from './styles.module.scss';
 import { HeroSlideProps } from './types';
-import { getSliderContentWrapperImageType, getTitleProps } from './util';
+import { getTitleProps } from './util';
 
 type Props = WithLayoutType<HeroSlideProps>;
 
@@ -26,6 +26,15 @@ export function HeroSlide({
   erid,
   className,
 }: Props) {
+  const hasButtonErid = Boolean(erid && erid.place === 'under-button');
+
+  const buttonNode =
+    appearance === 'brand' ? (
+      <ButtonPromo {...button} size='l' className={styles.button} />
+    ) : (
+      <ButtonFilled {...button} size='l' appearance='primary' className={styles.button} />
+    );
+
   return (
     <div
       id={id}
@@ -34,37 +43,32 @@ export function HeroSlide({
       data-color={color}
       className={cn(styles.wrapper, className)}
     >
-      <Layout.SectionWrapper layoutType={layoutType} className={styles.sectionWrapper}>
-        {erid && <Erid className={styles.erid} tip={erid.tip} appearance={erid.appearance} />}
-        <div
-          className={styles.slideContentWrapper}
-          data-layout-type={layoutType}
-          data-image-format={getSliderContentWrapperImageType(media)}
-        >
-          <div
-            className={styles.content}
-            data-layout-type={layoutType}
-            data-image-format={getSliderContentWrapperImageType(media)}
-          >
-            <div className={styles.text} data-layout-type={layoutType}>
-              <Typography family='sans' {...getTitleProps(layoutType)} tag='div'>
-                <RichText richText={title} />
-              </Typography>
-              {description && (
-                <Typography.SansBodyL tag='div'>
-                  <RichText richText={description} />
-                </Typography.SansBodyL>
-              )}
-            </div>
-
-            <div className={styles.buttonWrapper} data-layout-type={layoutType}>
-              <ButtonPromo target='_self' {...button} size='l' appearance='tertiary' className={styles.button} />
-            </div>
+      {erid && erid.place === 'tooltip' && <Erid className={styles.erid} tip={erid.tip} appearance='neutral' />}
+      <div className={styles.slideContentWrapper} data-layout-type={layoutType}>
+        <div className={styles.content}>
+          <div className={styles.text} data-layout-type={layoutType}>
+            <Typography family='sans' {...getTitleProps(layoutType)} tag='div'>
+              <RichText richText={title} />
+            </Typography>
+            {description && (
+              <Typography.SansBodyM className={styles.description} tag='div'>
+                <RichText richText={description} />
+              </Typography.SansBodyM>
+            )}
           </div>
 
-          <HeroSlideMedia {...media} layoutType={layoutType} />
+          <div className={styles.buttonWrapper} data-layout-type={layoutType} data-has-button-erid={hasButtonErid}>
+            {buttonNode}
+            {erid && hasButtonErid && (
+              <Typography.LightLabelS className={styles.buttonErid} tag='div'>
+                {erid.tip}
+              </Typography.LightLabelS>
+            )}
+          </div>
         </div>
-      </Layout.SectionWrapper>
+
+        <HeroSlideMedia {...media} layoutType={layoutType} />
+      </div>
     </div>
   );
 }

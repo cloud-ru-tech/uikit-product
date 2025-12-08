@@ -1,31 +1,31 @@
-$rectangle: 'rectangle';
-$square: 'square';
+.image {
+  max-width: 512px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+
+  pointer-events: none;
+}
 
 .imageWrapper {
   display: flex;
   align-items: center;
   height: 100%;
+  border-radius: 4px;
 
-  &[data-image-format='#{$rectangle}'] {
-    &[data-layout-type='desktop'] {
-      flex-shrink: 0;
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    justify-content: center;
+  }
+
+  &[data-layout-type='mobile'] {
+    width: 100%;
+    margin-top: 16px;
+
+    .image {
+      max-width: 328px;
+      max-height: 226px;
     }
-  }
-}
-
-.image {
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-
-  pointer-events: none;
-
-  &[data-image-format='#{$rectangle}'] {
-    width: auto;
-    max-height: 328px;
-  }
-
-  &[data-image-format='#{$square}'] {
-    max-height: 368px;
   }
 }

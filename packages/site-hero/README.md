@@ -58,12 +58,11 @@ Hero blocks for Site
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| tabs* | `TabHeroSliderBase[]` | - | Заголовки для tabs |
 | items* | `HeroSlideProps[]` | - | Слайды карусели |
 | id | `string` | - |  |
 | className | `string` | - | CSS-класс |
-| pagination | `boolean` | true | Использовать пагинацию для переключения страниц |
 | state | `{ page: number; onChange(page: number): void; }` | - | Управление состоянием извне |
-| autoSwipe | `number` | - | Автоматическое переключение слайдов в секундах |
 
 
 [//]: DOCUMENTATION_SECTION_END

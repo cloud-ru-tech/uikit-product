@@ -1,0 +1,86 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
+
+$decor: 'decor';
+$graphite: 'graphite';
+$brand: 'brand';
+
+.tab {
+  position: relative;
+
+  cursor: pointer;
+
+  display: block;
+
+  width: 241px;
+  min-width: 160px;
+  max-width: 237px;
+
+  min-height: 44px;
+
+  padding: 12px 16px 0 8px;
+  text-align: start;
+
+  background: none;
+  outline: none;
+
+  border-width: 0;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-radius: 0 2px 0 0;
+
+  &[data-appearance='#{$graphite}'] {
+    color: var.$sys-graphite-text-disabled;
+    border-color: var.$sys-graphite-accent-pressed;
+
+    &[data-active='true'] {
+      color: var.$sys-graphite-on-accent;
+    }
+  }
+
+  &[data-appearance='#{$decor}'] {
+    color: var.$sys-neutral-text-support;
+    border-color: var.$sys-invert-neutral-decor-activated;
+
+    &[data-active='true'] {
+      color: var.$sys-neutral-text-main;
+    }
+  }
+
+  &[data-appearance='#{$brand}'] {
+    color: var.$sys-primary-text-support;
+    border-color: var.$sys-primary-text-light;
+
+    .timeline {
+      border-color: var.$sys-fluorescent-yellow-accent-default;
+    }
+
+    &[data-active='true'] {
+      color: var.$sys-primary-text-main;
+    }
+  }
+}
+
+.timeline {
+  position: absolute;
+
+  top: -1px;
+  left: 0px;
+
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  z-index: 1;
+
+  width: 0;
+
+  border-top: 3px solid var.$sys-primary-accent-default;
+
+  animation: growTimeline 5s linear forwards;
+}
+
+@keyframes growTimeline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

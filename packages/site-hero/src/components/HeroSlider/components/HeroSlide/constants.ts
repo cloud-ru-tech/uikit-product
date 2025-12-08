@@ -5,8 +5,6 @@ export const Appearance = {
 } as const;
 
 export const Color = {
-  Neutral: 'neutral',
-  White: 'white',
   Violet: 'violet',
   Blue: 'blue',
 } as const;

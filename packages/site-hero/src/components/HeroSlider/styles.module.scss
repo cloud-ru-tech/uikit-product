@@ -4,9 +4,77 @@ $decor: 'decor';
 $graphite: 'graphite';
 $brand: 'brand';
 
+$colors: (
+  violet: var.$sys-violet-decor-default,
+  blue: var.$sys-blue-decor-default,
+);
+
+@mixin decor-background-colors {
+  @each $color, $value in $colors {
+    &[data-color='#{$color}'][data-appearance='#{$decor}'] {
+      background-color: $value;
+    }
+  }
+}
+
+@mixin appearance {
+  &[data-appearance='#{$graphite}'] {
+    background-color: var.$sys-graphite-accent-default;
+  }
+
+  &[data-appearance='#{$brand}'] {
+    background-color: var.$sys-primary-accent-default;
+  }
+}
+
+.control {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
 .root {
   position: relative;
   touch-action: none;
+
+  margin: 0 16px;
+  border-radius: 4px;
+
+  @include decor-background-colors;
+  @include appearance;
+
+  &[data-layout-type='mobile'] {
+    margin: 0;
+  }
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    .control {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .control {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.carouselItemWrapper {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.heroSlide {
+  max-width: 1216px;
+  width: 100%;
 }
 
 .heroCarousel {
@@ -16,26 +84,21 @@ $brand: 'brand';
   }
 }
 
-.paginationWrapper {
-  position: absolute;
-  bottom: 24px;
-  left: 0;
-  right: 0;
-
+.tabsWrapper {
   display: flex;
   justify-content: center;
 
-  &[data-appearance='#{$brand}'] {
-    button[data-activated='true'] > div {
-      /* stylelint-disable-next-line declaration-no-important */
-      background-color: var.$sys-neutral-accent-default !important;
+  padding: 0 32px 24px 32px;
 
-      &:hover,
-      &:focus-visible,
-      &:active {
-        /* stylelint-disable-next-line declaration-no-important */
-        background-color: var.$sys-neutral-accent-hovered !important;
-      }
-    }
+  &[data-layout-type='tablet'] {
+    padding: 0 24px 24px 24px;
   }
+
+  &[data-layout-type='mobile'] {
+    padding: 0 16px 16px 16px;
+  }
+}
+
+.tabs {
+  max-width: 1216px;
 }
