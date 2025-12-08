@@ -3,6 +3,7 @@
 .label {
   @include var.composite-var(var.$light-label-s);
 
+  color: var.$sys-graphite-text-main;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -14,7 +15,7 @@
   align-items: center;
   height: 24px;
 
-  background: var.$sys-opacity-enabled;
+  background: var.$sys-graphite-decor-default;
   padding: 0 8px;
 
   box-sizing: border-box;

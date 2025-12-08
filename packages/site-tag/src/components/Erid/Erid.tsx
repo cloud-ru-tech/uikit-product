@@ -17,7 +17,7 @@ export type EridProps = {
 
 export function Erid({ tip, className, appearance }: EridProps) {
   return (
-    <Tooltip triggerClassName={className} tip={tip}>
+    <Tooltip triggerClassName={className} tip={tip} placement='bottom-end'>
       <span
         data-appearance={appearance}
         className={styles.root}
