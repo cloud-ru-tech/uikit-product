@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-grid",
   "title": "Site Grid",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "8.0.1",
+    "@sbercloud/uikit-product-utils": "8.0.2",
     "classnames": "2.5.1"
   }
 }

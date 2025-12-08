@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-csat",
   "title": "Site Csat",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "16.0.0",
-    "@sbercloud/uikit-product-mobile-modal": "0.9.25",
-    "@sbercloud/uikit-product-utils": "8.0.1",
+    "@sbercloud/uikit-product-icons": "16.0.1",
+    "@sbercloud/uikit-product-mobile-modal": "0.9.26",
+    "@sbercloud/uikit-product-utils": "8.0.2",
     "@snack-uikit/button": "0.19.15",
     "@snack-uikit/chips": "0.28.4",
     "@snack-uikit/fields": "0.48.7",

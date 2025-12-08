@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.26 (2025-12-08)
+
+
+### Bug Fixes
+
+* **FF-7187:** add SSR safety checks for localStorage and navigator usage ([c2c7561](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c2c7561c9a2f5e3b1bd897b696b33ea309f39dfa))
+
+
+
+
+
 ## 5.0.25 (2025-11-28)
 
 ### Only dependencies have been changed
