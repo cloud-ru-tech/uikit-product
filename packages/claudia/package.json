@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-claudia",
   "title": "Claudia",
-  "version": "1.9.2",
+  "version": "1.10.0",
   "sideEffects": [
     "*.css",
     "*.woff",

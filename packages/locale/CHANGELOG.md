@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.23.0 (2025-12-09)
+
+
+### Features
+
+* **AINFR-4628:** vibe ops scenario ([65bdd10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/65bdd107b6d0cbd4b6162c5bae5d0a4b6ccc0b88))
+
+
+
+
+
 # 0.22.0 (2025-12-03)
 
 
