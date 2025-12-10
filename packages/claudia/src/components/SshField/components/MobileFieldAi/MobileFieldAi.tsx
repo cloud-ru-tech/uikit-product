@@ -3,6 +3,7 @@ import { forwardRef } from 'react';
 import { AttachmentSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { FieldTextAreaProps } from '@sbercloud/uikit-product-mobile-fields';
+import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { FileUpload } from '@snack-uikit/drop-zone';
 import { Scroll } from '@snack-uikit/scroll';
@@ -12,19 +13,19 @@ import { FieldSubmitButton } from '../../helperComponents/FieldSubmitButton';
 import { TextArea } from '../TextArea';
 import styles from './styles.module.scss';
 
-type MobileFieldAiProps = Omit<
-  FieldTextAreaProps,
-  'placeholder' | 'labelTooltip' | 'label' | 'required' | 'size' | 'spellCheck' | 'footer'
+type MobileFieldAiProps = WithLayoutType<
+  Omit<FieldTextAreaProps, 'placeholder' | 'labelTooltip' | 'label' | 'required' | 'size' | 'spellCheck' | 'footer'>
 > & {
   onSubmit(): void;
   submitEnabled: boolean;
+  onFileUpload(file: File): void;
 };
 
 const MIN_ROWS = 1;
 const MAX_ROWS = 6;
 
 export const MobileFieldAi = forwardRef<HTMLTextAreaElement, MobileFieldAiProps>(
-  ({ onSubmit, value, submitEnabled, ...props }, ref) => {
+  ({ onSubmit, value, submitEnabled, onFileUpload, ...props }, ref) => {
     const { t } = useLocale('Claudia');
 
     return (
@@ -52,7 +53,7 @@ export const MobileFieldAi = forwardRef<HTMLTextAreaElement, MobileFieldAiProps>
             hoverDelayOpen={600}
             triggerClassName={styles.uploadTooltip}
           >
-            <FileUpload mode='multiple' onFilesUpload={() => {}}>
+            <FileUpload mode='multiple' onFilesUpload={(files: File[]) => onFileUpload(files[0])}>
               <ButtonFunction size={'s'} icon={<AttachmentSVG />} />
             </FileUpload>
           </Tooltip>

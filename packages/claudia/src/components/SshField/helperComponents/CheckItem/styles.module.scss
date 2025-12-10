@@ -1,0 +1,31 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
+
+.checkItem {
+  display: flex;
+  flex-direction: row;
+  gap: ste.$dimension-050m;
+
+  &[data-layout-type='mobile'],
+  &[data-layout-type='tablet'] {
+    gap: ste.$dimension-1m;
+  }
+}
+
+.iconWrapper {
+  width: ste.$dimension-2m;
+  height: ste.$dimension-2m;
+  transform: translateY(ste.$dimension-025m);
+}
+
+.icon {
+  color: ste.$sys-red-accent-default;
+}
+
+.label {
+  color: ste.$sys-red-decor-default;
+
+  &[data-layout-type='mobile'],
+  &[data-layout-type='tablet'] {
+    color: ste.$sys-red-text-main;
+  }
+}

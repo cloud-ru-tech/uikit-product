@@ -39,6 +39,7 @@
     "@sbercloud/uikit-product-icons": "16.1.0",
     "@sbercloud/uikit-product-mobile-dropdown": "0.9.30",
     "@sbercloud/uikit-product-mobile-fields": "0.12.2",
+    "@sbercloud/uikit-product-mobile-tooltip": "0.5.3",
     "@sbercloud/uikit-product-utils": "8.0.2",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/divider": "3.2.3",

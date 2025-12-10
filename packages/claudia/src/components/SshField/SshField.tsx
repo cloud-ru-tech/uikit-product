@@ -19,11 +19,12 @@ import { MobileFieldAi } from './components/MobileFieldAi';
 import { DropZoneContent } from './helperComponents/DropZoneContent';
 import { FieldSubmitButton } from './helperComponents/FieldSubmitButton';
 import { TextAreaActionsFooter } from './helperComponents/TextAreaActionsFooter';
+import { WithSshValidation } from './helperComponents/WithSshValidation';
 import styles from './styles.module.scss';
-import { FileErrorType, getFileErrorType } from './utils/handleFileError';
+import { ValidationState } from './types';
 import { isTouchDevice as isTouchDeviceHelper } from './utils/isTouchDevice';
 import { readFileContent } from './utils/readFileContent';
-import { validateFileSize, validateFileType, validateSSHKeyContent } from './utils/validateSSHKey';
+import { validateFileErrors, validateSshKeyErrors } from './utils/validateSSHKey';
 
 export type SshFieldProps = WithLayoutType<
   Omit<FieldTextAreaProps, 'placeholder' | 'labelTooltip' | 'label' | 'required' | 'size' | 'spellCheck' | 'footer'> & {
@@ -42,39 +43,23 @@ export const SshField = forwardRef<HTMLTextAreaElement, SshFieldProps>(
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [isDragOver, setIsDragOver] = useState(false);
     const [isValueHidden, setIsValueHidden] = useState<boolean>(true);
-    const [fileErrorType, setFileErrorType] = useState<FileErrorType | null>(null);
+    const [sshValidation, setSshValidation] = useState<ValidationState | null>(null);
 
-    const isValueValid = typeof value === 'string' && value.trim().length > 0;
-    const showFileError = Boolean(fileErrorType);
-
-    const getErrorMessage = (errorType: FileErrorType): string => {
-      switch (errorType) {
-        case 'EMPTY_FILE':
-          return t('SshField.errors.emptyFile');
-        case 'BINARY_DATA':
-          return t('SshField.errors.binaryData');
-        case 'INVALID_SSH_KEY':
-          return t('SshField.errors.invalidSSHKey');
-        case 'INVALID_EXTENSION':
-        case 'INVALID_MIME_TYPE':
-        case 'INVALID_FILE_TYPE':
-          return t('SshField.errors.invalidFileExtension');
-        case 'FILE_TOO_LARGE':
-          return t('SshField.errors.fileTooLarge');
-        case 'READ_ERROR':
-          return t('SshField.errors.readError');
-        case 'UNKNOWN_ERROR':
-        default:
-          return t('SshField.errors.unknownError');
-      }
-    };
+    const isSshValid = !sshValidation || Object.values(sshValidation).every(value => !value);
+    const isValueValid = isSshValid && typeof value === 'string' && value.trim().length > 0;
 
     const handleChange = (newValue: string) => {
-      if (fileErrorType) {
-        setFileErrorType(null);
+      if (sshValidation) {
+        setSshValidation(null);
       }
-      if (onChange) {
-        onChange(newValue);
+
+      if (!onChange) return;
+
+      onChange(newValue);
+
+      if (newValue) {
+        const sshValidationState = validateSshKeyErrors(newValue);
+        setSshValidation(sshValidationState);
       }
     };
 
@@ -113,20 +98,28 @@ export const SshField = forwardRef<HTMLTextAreaElement, SshFieldProps>(
     const onFileUpload = async (file: File) => {
       try {
         setIsLoading(true);
-        setFileErrorType(null);
-        validateFileType(file);
-        validateFileSize(file);
+        setSshValidation(null);
 
-        const fileContent = await readFileContent(file);
+        const fileValidationErrorState = validateFileErrors(file);
 
-        validateSSHKeyContent(fileContent);
-
-        if (onChange) {
-          onChange(fileContent);
+        if (fileValidationErrorState.fileType) {
+          setSshValidation(fileValidationErrorState);
+          return;
         }
-      } catch (err) {
-        const errorType = getFileErrorType(err);
-        setFileErrorType(errorType);
+
+        const { error, fileContent } = await readFileContent(file);
+
+        if (error || typeof fileContent !== 'string') {
+          setSshValidation({ ...fileValidationErrorState, readError: true });
+          return;
+        }
+
+        const sshValidationState = validateSshKeyErrors(fileContent);
+        setSshValidation({ ...fileValidationErrorState, ...sshValidationState });
+
+        if (!onChange) return;
+
+        onChange(fileContent);
       } finally {
         setIsLoading(false);
         setIsDragOver(false);
@@ -135,93 +128,99 @@ export const SshField = forwardRef<HTMLTextAreaElement, SshFieldProps>(
 
     if (isTouchDevice) {
       return (
-        <MobileFieldAi
-          {...props}
-          {...getAdaptiveFieldProps(props)}
-          onSubmit={handleSubmit}
-          submitEnabled={isValueValid && !disabled}
-          ref={ref}
-          value={value}
-        />
+        <WithSshValidation layoutType={layoutType} sshValidation={sshValidation}>
+          <MobileFieldAi
+            {...props}
+            onChange={handleChange}
+            onFileUpload={onFileUpload}
+            {...getAdaptiveFieldProps(props)}
+            onSubmit={handleSubmit}
+            submitEnabled={isValueValid && !disabled}
+            ref={ref}
+            value={value}
+          />
+        </WithSshValidation>
       );
     }
 
     return (
       <div className={cn(styles.wrapper, className)} onDragOver={handleDragOver} onDragLeave={handleDragLeave}>
-        <ChatStatusAnnouncement
-          className={styles.chatStatus}
-          layoutType={layoutType}
-          icon={<PasswordLockSVG size={16} color={themeVars.sys.neutral.textSupport} />}
-          content={[
-            { content: t('SshField.chatStatusAnnouncement.content.option1') },
-            { content: t('SshField.chatStatusAnnouncement.content.option2'), shouldFocusOnHover: true },
-            { content: t('SshField.chatStatusAnnouncement.content.option3') },
-          ]}
-          actionLabel={t('SshField.chatStatusAnnouncement.cancel')}
-          onActionClick={onCancel}
-        />
-        {isDragOver ? (
-          <DropZone
-            description={<DropZoneContent />}
-            className={styles.dropZone}
-            mode='single'
-            onFilesUpload={(files: File[]) => onFileUpload(files[0])}
+        <WithSshValidation layoutType={layoutType} sshValidation={sshValidation}>
+          <ChatStatusAnnouncement
+            className={styles.chatStatus}
+            layoutType={layoutType}
+            icon={<PasswordLockSVG size={16} color={themeVars.sys.neutral.textSupport} />}
+            content={[
+              { content: t('SshField.chatStatusAnnouncement.content.option1') },
+              { content: t('SshField.chatStatusAnnouncement.content.option2'), shouldFocusOnHover: true },
+              { content: t('SshField.chatStatusAnnouncement.content.option3') },
+            ]}
+            actionLabel={t('SshField.chatStatusAnnouncement.cancel')}
+            onActionClick={onCancel}
           />
-        ) : (
-          <AdaptiveFieldTextArea
-            {...props}
-            ref={ref}
-            value={value}
-            onChange={handleChange}
-            size='m'
-            disabled={isLoading}
-            minRows={2}
-            maxRows={4}
-            placeholder={t('SshField.placeholder')}
-            className={isValueHidden ? styles.secured : undefined}
-            onKeyDown={handleKeyDown}
-            validationState={showFileError ? 'error' : validationState}
-            hint={showFileError && fileErrorType ? getErrorMessage(fileErrorType) : props.hint}
-            footer={
-              <TextAreaActionsFooter
-                left={
-                  <ButtonFunction
-                    size='xs'
-                    icon={isValueHidden ? <EyeSVG /> : <EyeClosedSVG />}
-                    onClick={() => setIsValueHidden(prev => !prev)}
-                    disabled={isLoading}
-                  />
-                }
-                right={
-                  <>
-                    <Tooltip
-                      tip={t('SshField.attachFileTooltip')}
-                      hoverDelayOpen={600}
-                      triggerClassName={styles.uploadTooltip}
-                      open={isTouchDevice ? false : undefined}
-                    >
-                      <FileUpload mode='single' onFilesUpload={(files: File[]) => onFileUpload(files[0])}>
-                        <ButtonFunction
-                          disabled={isLoading}
-                          size={isTouchDevice ? 's' : 'xs'}
-                          icon={<AttachmentSVG />}
-                        />
-                      </FileUpload>
-                    </Tooltip>
-                    <FieldSubmitButton
+          {isDragOver ? (
+            <DropZone
+              description={<DropZoneContent />}
+              className={styles.dropZone}
+              mode='single'
+              onFilesUpload={(files: File[]) => onFileUpload(files[0])}
+            />
+          ) : (
+            <AdaptiveFieldTextArea
+              {...props}
+              ref={ref}
+              value={value}
+              onChange={handleChange}
+              size='m'
+              disabled={isLoading}
+              minRows={2}
+              maxRows={4}
+              placeholder={t('SshField.placeholder')}
+              className={isValueHidden ? styles.secured : undefined}
+              onKeyDown={handleKeyDown}
+              validationState={isSshValid ? validationState : 'error'}
+              hint={props.hint}
+              footer={
+                <TextAreaActionsFooter
+                  left={
+                    <ButtonFunction
+                      size='xs'
+                      icon={isValueHidden ? <EyeSVG /> : <EyeClosedSVG />}
+                      onClick={() => setIsValueHidden(prev => !prev)}
                       disabled={isLoading}
-                      showTooltip={!isTouchDevice}
-                      className={isTouchDevice ? styles.mobileSubmitButton : undefined}
-                      active={isValueValid && !disabled}
-                      handleClick={handleSubmit}
-                      size={isTouchDevice ? 's' : 'xs'}
                     />
-                  </>
-                }
-              />
-            }
-          />
-        )}
+                  }
+                  right={
+                    <>
+                      <Tooltip
+                        tip={t('SshField.attachFileTooltip')}
+                        hoverDelayOpen={600}
+                        triggerClassName={styles.uploadTooltip}
+                        open={isTouchDevice ? false : undefined}
+                      >
+                        <FileUpload mode='single' onFilesUpload={(files: File[]) => onFileUpload(files[0])}>
+                          <ButtonFunction
+                            disabled={isLoading}
+                            size={isTouchDevice ? 's' : 'xs'}
+                            icon={<AttachmentSVG />}
+                          />
+                        </FileUpload>
+                      </Tooltip>
+                      <FieldSubmitButton
+                        disabled={isLoading}
+                        showTooltip={!isTouchDevice}
+                        className={isTouchDevice ? styles.mobileSubmitButton : undefined}
+                        active={isValueValid && !disabled}
+                        handleClick={handleSubmit}
+                        size={isTouchDevice ? 's' : 'xs'}
+                      />
+                    </>
+                  }
+                />
+              }
+            />
+          )}
+        </WithSshValidation>
       </div>
     );
   },

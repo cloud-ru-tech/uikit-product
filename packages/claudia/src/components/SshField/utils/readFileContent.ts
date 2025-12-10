@@ -1,22 +1,23 @@
-export const readFileContent = (file: File): Promise<string> =>
-  new Promise((resolve, reject) => {
+type ReadFileContentResult = {
+  error: boolean;
+  fileContent?: string;
+};
+
+export const readFileContent = (file: File): Promise<ReadFileContentResult> =>
+  new Promise(resolve => {
     const reader = new FileReader();
 
     reader.onload = (e: ProgressEvent<FileReader>) => {
-      if (e.target?.result && typeof e.target.result === 'string') {
-        resolve(e.target.result);
+      if (e.target && typeof e.target.result === 'string') {
+        resolve({ error: false, fileContent: e.target.result });
       } else {
-        reject(new Error('READ_ERROR: Не удалось прочитать содержимое файла'));
+        resolve({ error: true });
       }
     };
 
-    reader.onerror = () => {
-      reject(new Error('READ_ERROR: Не удалось прочитать файл'));
-    };
+    reader.onerror = () => resolve({ error: true });
 
-    reader.onabort = () => {
-      reject(new Error('READ_ERROR: Чтение файла было прервано'));
-    };
+    reader.onabort = () => resolve({ error: true });
 
     // Читаем как текст
     reader.readAsText(file);
