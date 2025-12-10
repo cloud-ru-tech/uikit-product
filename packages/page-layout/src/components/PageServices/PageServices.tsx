@@ -14,6 +14,7 @@ export type PageServicesProps = WithSupportProps<
       className?: string;
       sidebar?: PageSidebarProps;
       autoHeight?: boolean;
+      limitContentMaxWidth?: boolean;
     }
   >
 >;
@@ -33,6 +34,7 @@ export const PageServices = forwardRef<HTMLDivElement, PageServicesProps>(
       afterHeadline,
       truncateTitle,
       autoHeight,
+      limitContentMaxWidth,
       ...rest
     },
     ref,
@@ -67,7 +69,7 @@ export const PageServices = forwardRef<HTMLDivElement, PageServicesProps>(
         {...extractSupportProps(rest)}
       >
         <div className={styles.tempContainer} ref={ref}>
-          <div className={styles.container}>
+          <div className={styles.container} data-limited={limitContentMaxWidth}>
             <Headline
               title={title}
               actions={actions}

@@ -34,6 +34,11 @@
   padding: styles-theme-variables.$dimension-3m;
   gap: styles-theme-variables.$dimension-2m;
   box-sizing: border-box;
+
+  &[data-limited='true'] {
+    max-width: 1248px;
+    margin: 0 auto;
+  }
 }
 
 .childWrapper {
