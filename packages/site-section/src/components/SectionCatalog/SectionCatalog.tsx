@@ -89,7 +89,7 @@ export function SectionCatalog({
 
           {categories.map(({ id, items }) => (
             <Tabs.TabContent key={id} value={id} className={styles.tabContent}>
-              <Grid columnsConfig={GRID_CONFIG} gap='s' layoutType={layoutType}>
+              <Grid columnsConfig={GRID_CONFIG} gap='xs' layoutType={layoutType}>
                 {items.map(item => (
                   <CardProduct key={item.title} layoutType={layoutType} outline={isOutlineCard} {...item} />
                 ))}

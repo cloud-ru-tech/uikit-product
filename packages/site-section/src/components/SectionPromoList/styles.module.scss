@@ -7,7 +7,7 @@
 
 .cards {
   display: flex;
-  gap: 8px;
+  gap: 2px;
 
   &[data-layout-type='tablet'],
   &[data-layout-type='mobile'] {

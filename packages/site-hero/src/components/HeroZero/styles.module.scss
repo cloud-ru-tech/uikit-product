@@ -65,7 +65,7 @@
 .buttons {
   display: flex;
   flex-direction: row;
-  gap: var.$dimension-2m;
+  gap: var.$dimension-025m;
 
   &[data-layout-type='tablet'],
   &[data-layout-type='mobile'] {

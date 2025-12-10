@@ -46,7 +46,7 @@
 | content* | `ContentBasicTab[] \| CardBasicArray \| ContentInfoTab[] \| CardInfoArray \| ContentNumericTab[] \| CardNumericArray \| ContentProductTab[] \| CardProductArray` | - |  |
 | type* | "basic" \| "info" \| "numeric" \| "product" | - |  |
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| columnsConfig* | `ColumnsConfig` | - | Конфигурация настройки колонок для разных layoutType |
+| columnsConfig* | `GridProps` | - | Конфигурация настройки колонок для разных layoutType |
 | id | `string` | - | id секции |
 | title | `string` | - | Название секции |
 | subtitle | `string` | - | Название подзаголовка секции |
@@ -78,8 +78,8 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `BlogCarouselItem[]` | - | Массив айтемов |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | title | `string` | - | Название секции |
 | subtitle | `string` | - | Подзаголовок секции |
 | description | `string` | - | Описание секции |
@@ -88,8 +88,8 @@
 | subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег подзаголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
-| className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| className | `string` | - | CSS - класснейм |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 | autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | infiniteScroll | `boolean` | false | Цикличная прокрутка |
@@ -97,8 +97,8 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CaseItem[]` | - | Массив айтемов |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | title | `string` | - | Название секции |
 | subtitle | `string` | - | Подзаголовок секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
@@ -106,8 +106,8 @@
 | subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег подзаголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
-| className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| className | `string` | - | CSS - класснейм |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 | autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | infiniteScroll | `boolean` | false | Цикличная прокрутка |
@@ -128,8 +128,8 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CardClientProps[]` | - | Массив айтемов |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | title | `string` | - | Название секции |
 | subtitle | `string` | - | Подзаголовок секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
@@ -137,8 +137,8 @@
 | subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег подзаголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
-| className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| className | `string` | - | CSS - класснейм |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 | autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | infiniteScroll | `boolean` | false | Цикличная прокрутка |
@@ -154,9 +154,9 @@
 | button | `Omit<ButtonFilledProps, "size" \| "fullWidth">` | - | Кнопка действия |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | contentPosition | "left" \| "right" | left | Местоположение контента в секции |
-| video | `ReactNode \| VideoPlayerProps` | - |  |
-| onPlay | `() => void` | - |  |
-| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
+| video | `any` | - |  |
+| onPlay | `any` | - |  |
+| onError | `any` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 ## SectionContentList
@@ -171,9 +171,9 @@
 | items | `Item[]` | - | Список элементов |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | contentPosition | "left" \| "right" | left | Местоположение контента в секции |
-| video | `ReactNode \| VideoPlayerProps` | - |  |
-| onPlay | `() => void` | - |  |
-| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
+| video | `any` | - |  |
+| onPlay | `any` | - |  |
+| onError | `any` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 ## SectionContentTabs
@@ -194,8 +194,8 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `ExpertDetails[]` | - | Массив айтемов |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | title | `string` | - | Название секции |
 | subtitle | `string` | - | Подзаголовок секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
@@ -203,8 +203,8 @@
 | subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег подзаголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
-| className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| className | `string` | - | CSS - класснейм |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 | autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | infiniteScroll | `boolean` | false | Цикличная прокрутка |
@@ -227,8 +227,8 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CardMarketplaceProps[]` | - | Массив айтемов |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | title | `string` | - | Название секции |
 | subtitle | `string` | - | Подзаголовок секции |
 | description | `string` | - | Описание секции |
@@ -237,8 +237,8 @@
 | subtitleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег подзаголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
-| className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| className | `string` | - | CSS - класснейм |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 | autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | infiniteScroll | `boolean` | false | Цикличная прокрутка |
@@ -252,9 +252,9 @@
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | id | `string` | - | id секции |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| video | `ReactNode \| VideoPlayerProps` | - |  |
-| onPlay | `() => void` | - |  |
-| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
+| video | `any` | - |  |
+| onPlay | `any` | - |  |
+| onError | `any` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 ## SectionPersonalManager
 ### Props
@@ -294,20 +294,11 @@
 | id | `string` | - | id секции |
 | className | `string` | - | CSS-класс |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| gap | "s" \| "m" \| "l" \| "xs" | s | Размер отступов сетки |
+| gap | `GridProps` | s | Размер отступов сетки |
 ## SectionTable
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| rows* | `Cell[][]` | - |  |
-| id | `string` | - | id секции |
-| className | `string` | - | CSS-класс |
-| title | `string` | - | Заголовок |
-| subtitle | `string` | - | Подзаголовок |
-| description | `string` | - | Описание |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Фон подложки |
-| withHeader | `boolean` | - |  |
 ## SectionCarousel
 ### Props
 | name | type | default value | description |
@@ -318,7 +309,7 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | title | `string` | - | Название секции |
 | subtitle | `string` | - | Подзаголовок секции |
-| titleLink | `PickLinkProps<(<T extends ElementType = "a">({ text, className, textMode, size, purpose, appearance, insideText, truncateVariant, as, ...rest }: LinkProps<T>) => Element), "onClick" \| "appearance" \| "href" \| "target" \| "textMode">` | - | Ссылка в названии |
+| titleLink | `PickLinkProps<(<T extends ElementType = "a">({ text, className, textMode, size, purpose, appearance, insideText, truncateVariant, as, ...rest }: LinkProps<T>) => Element), "onClick" \| "href" \| "target" \| "appearance" \| "textMode">` | - | Ссылка в названии |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |

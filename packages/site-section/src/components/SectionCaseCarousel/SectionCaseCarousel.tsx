@@ -13,7 +13,7 @@ export function SectionCaseCarousel({ items, layoutType, ...props }: SectionCase
   const carouselProps = useMemo(() => getCarouselProps(layoutType), [layoutType]);
 
   return (
-    <SectionCarousel {...props} {...carouselProps} layoutType={layoutType}>
+    <SectionCarousel {...props} {...carouselProps} layoutType={layoutType} gap='2px'>
       {items.map(item => (
         <CaseCard key={item.description} {...item} layoutType={layoutType} />
       ))}

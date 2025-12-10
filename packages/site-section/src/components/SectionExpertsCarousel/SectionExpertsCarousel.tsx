@@ -9,7 +9,7 @@ export type SectionExpertsCarouselProps = Omit<
 
 export function SectionExpertsCarousel({ items, ...props }: SectionExpertsCarouselProps) {
   return (
-    <SectionCarousel {...props} itemMinWidth={EXPERT_MINIMAL_WIDTH} maxItemsPerPage={MAX_PER_PAGE}>
+    <SectionCarousel {...props} itemMinWidth={EXPERT_MINIMAL_WIDTH} maxItemsPerPage={MAX_PER_PAGE} gap='2px'>
       {items.map(item => (
         <Expert key={item.name} {...item} />
       ))}

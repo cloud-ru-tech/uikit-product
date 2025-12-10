@@ -14,7 +14,7 @@ export function SectionMarketplaceCarousel({ items, ...props }: SectionMarketpla
   const carouselProps = useMemo(() => getCarouselProps(props.layoutType), [props]);
 
   return (
-    <SectionCarousel {...props} {...carouselProps}>
+    <SectionCarousel {...props} {...carouselProps} gap='2px'>
       {items.map(item => (
         <CardMarketplace key={item.title} {...item} />
       ))}

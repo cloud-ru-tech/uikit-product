@@ -98,6 +98,7 @@ export function SectionLeading({
             swipe={items.length > itemsPerPageAmount}
             autoSwipe={autoSwipe}
             infiniteScroll
+            gap='2px'
           >
             {items.map(item => (
               <CardLeading key={item.label} {...item} layoutType={layoutType} data-test-id={item['data-test-id']} />

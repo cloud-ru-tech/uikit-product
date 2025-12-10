@@ -1,7 +1,8 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ste;
 
 .accordion {
-  gap: 1px;
+  // Important нужен из-за перезаписи типа
+  gap: 2px !important; /* stylelint-disable-line declaration-no-important */
 }
 
 .description {

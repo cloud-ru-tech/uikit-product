@@ -77,7 +77,7 @@ export function SectionBenefits({
   );
 
   const outline = (rest as ContentInfo).outline;
-  const gap = type === 'basic' ? 'l' : 's';
+  const gap = type === 'basic' ? 'l' : 'xs';
   const backgroundColorSection = type === 'basic' || outline ? 'neutral-background1-level' : 'neutral-background';
 
   return (
