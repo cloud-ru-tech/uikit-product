@@ -416,14 +416,12 @@ export const en_GB = {
       attachFileTooltip: 'Attach file',
       submitButtonTooltip: 'Send',
       errors: {
+        fileSize: 'File too large',
+        fileType: 'Invalid file extension',
         emptyFile: 'File is empty',
         binaryData: 'File contains binary data, not a text SSH key',
-        invalidSSHKey:
-          'File does not contain a valid SSH key. Supported: RSA, DSA, ECDSA, Ed25519 keys and certificates',
-        invalidFileExtension: 'Invalid file extension',
-        fileTooLarge: 'File is too large',
+        invalidSSHKey: 'Invalid SSH key. Supported keys and certificates: RSA, DSA, ECDSA, Ed25519',
         readError: 'Failed to read file',
-        unknownError: 'An unknown error occurred',
       },
     },
   },

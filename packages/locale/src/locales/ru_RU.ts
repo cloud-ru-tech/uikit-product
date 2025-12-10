@@ -416,14 +416,12 @@ export const ru_RU: typeof en_GB = {
       attachFileTooltip: 'Прикрепить файл',
       submitButtonTooltip: 'Отправить',
       errors: {
+        fileSize: 'Файл слишком большой',
+        fileType: 'Неподходящее расширение файла',
         emptyFile: 'Файл пустой',
         binaryData: 'Файл содержит бинарные данные, а не текстовый SSH-ключ',
-        invalidSSHKey:
-          'Файл не содержит валидный SSH-ключ. Поддерживаются: RSA, DSA, ECDSA, Ed25519 ключи и сертификаты',
-        invalidFileExtension: 'Неподходящее расширение файла',
-        fileTooLarge: 'Файл слишком большой',
+        invalidSSHKey: 'Невалидный SSH-ключ. Поддерживаются: RSA, DSA, ECDSA, Ed25519 ключи и сертификаты',
         readError: 'Не удалось прочитать файл',
-        unknownError: 'Произошла неизвестная ошибка',
       },
     },
   },
