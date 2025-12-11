@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.10 (2025-12-11)
+
+
+### Dependencies
+
+* **MKP-2791:** add FieldTextAreaProps to MarkdownEditor ([658dbb3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/658dbb3622fe58fe4f7a92c10972a6a49cc3accc))
+
+
+
+
+
 ## 0.1.9 (2025-11-13)
 
 

@@ -1611,7 +1611,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-markdown':
-        specifier: 0.1.9
+        specifier: 0.1.10
         version: link:../markdown
       '@sbercloud/uikit-product-mobile-modal':
         specifier: 0.9.26

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.12 (2025-12-11)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-markdown@0.1.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/markdown/CHANGELOG.md)
+
+
+
+
+
 ## 0.9.11 (2025-12-08)
 
 
