@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.23.0 (2025-12-11)
+
+
+### Features
+
+* **PDS-2329:** added max-width for page services container ([4a1426b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4a1426b46a778dac8891cbf24b78e4bab03a61b1))
+
+
+
+
+
 ## 0.22.5 (2025-12-08)
 
 ### Only dependencies have been changed

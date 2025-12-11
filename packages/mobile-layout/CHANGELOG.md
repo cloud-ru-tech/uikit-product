@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.20.19 (2025-12-11)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-page-layout@0.23.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/page-layout/CHANGELOG.md)
+
+
+
+
+
 ## 0.20.18 (2025-12-08)
 
 ### Only dependencies have been changed
