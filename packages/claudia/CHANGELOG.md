@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.11.0 (2025-12-11)
+
+
+### Features
+
+* **LK-6854:** add giga-chat icons ([e263f6a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e263f6af80876b53450082b20ec01f3a05503221))
+
+
+
+
+
 # 1.10.0 (2025-12-09)
 
 
