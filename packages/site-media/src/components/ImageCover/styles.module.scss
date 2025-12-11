@@ -1,6 +1,7 @@
 .imageCoverContainer {
   overflow: hidden;
   display: inline-block;
+  border-radius: 4px;
 
   &[data-disabled] {
     opacity: 0.5;

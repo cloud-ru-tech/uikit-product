@@ -8,8 +8,11 @@
   display: flex;
   padding-bottom: 56.5%;
   border: 0;
+  border-radius: 4px;
+  overflow: hidden;
 
-  iframe, video {
+  iframe,
+  video {
     position: absolute;
     top: 0;
     left: 0;

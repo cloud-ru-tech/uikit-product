@@ -72,9 +72,25 @@ export function HeroEvent({
               <div className={styles.titleWrapper} data-layout-type={layoutType}>
                 {showTagRow && (
                   <div className={styles.tagRow}>
-                    {category && <PromoTag {...category} color='decor' size='xs' />}
-                    {formatTitle && <PromoTag appearance='violet' text={formatTitle} color='decor' size='xs' />}
-                    {audienceTitle && <PromoTag appearance='violet' text={audienceTitle} color='decor' size='xs' />}
+                    {category && <PromoTag {...category} color='decor' size='xs' className={styles.promoTag} />}
+                    {formatTitle && (
+                      <PromoTag
+                        appearance='violet'
+                        text={formatTitle}
+                        color='decor'
+                        size='xs'
+                        className={styles.promoTag}
+                      />
+                    )}
+                    {audienceTitle && (
+                      <PromoTag
+                        appearance='violet'
+                        text={audienceTitle}
+                        color='decor'
+                        size='xs'
+                        className={styles.promoTag}
+                      />
+                    )}
                   </div>
                 )}
 
@@ -94,7 +110,7 @@ export function HeroEvent({
                 </div>
               </div>
 
-              <HeroEventButton {...button} layoutType={layoutType} />
+              <HeroEventButton {...button} layoutType={layoutType} className={styles.button} />
             </div>
 
             <div className={styles.imageWrapper} data-layout-type={layoutType}>

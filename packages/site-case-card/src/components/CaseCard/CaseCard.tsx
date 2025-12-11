@@ -46,7 +46,7 @@ export function CaseCard({
   const descriptionTextSize = layoutType === 'mobile' ? 's' : 'm';
 
   return (
-    <Card href={href} onClick={onClick} size={SIZE_CARD_LAYOUT_TYPE[layoutType]}>
+    <Card href={href} onClick={onClick} size={SIZE_CARD_LAYOUT_TYPE[layoutType]} className={styles.root}>
       <div className={styles.container} data-layout-type={layoutType}>
         <Skeleton loading={loading} className={styles.skeletonIcon}>
           <div>

@@ -6,14 +6,23 @@ import { ButtonFilled, ButtonFilledProps } from '@snack-uikit/button';
 import { HERO_BUTTON_META } from './constants';
 import { HeroButtonType } from './types';
 
-export type HeroButtonProps = Pick<ButtonFilledProps, 'label' | 'href' | 'disabled' | 'icon'> & {
+export type HeroButtonProps = Pick<ButtonFilledProps, 'label' | 'href' | 'disabled' | 'icon' | 'className'> & {
   type?: HeroButtonType;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
 type HeroButtonPropsInternal = WithLayoutType<HeroButtonProps>;
 
-export function HeroEventButton({ href, label, disabled, icon, onClick, type, layoutType }: HeroButtonPropsInternal) {
+export function HeroEventButton({
+  href,
+  label,
+  disabled,
+  icon,
+  onClick,
+  type,
+  layoutType,
+  className,
+}: HeroButtonPropsInternal) {
   const meta = type ? HERO_BUTTON_META[type] : undefined;
   const Icon = meta?.icon;
 
@@ -27,6 +36,7 @@ export function HeroEventButton({ href, label, disabled, icon, onClick, type, la
       label={meta?.label ?? label}
       icon={(Icon && <Icon />) ?? icon}
       fullWidth={['mobile', 'tablet'].includes(layoutType)}
+      className={className}
     />
   );
 }

@@ -30,7 +30,13 @@ export function BannerPrimary({ tags, imgType, layoutType, expirationDate, ...pr
         (tags || expirationDate) && (
           <div className={styles.tags}>
             {expirationDate && (
-              <PromoTag size='xs' text={`Действует до ${expirationDate}`} appearance='neutral' color='decor' />
+              <PromoTag
+                size='xs'
+                text={`Действует до ${expirationDate}`}
+                appearance='neutral'
+                color='decor'
+                className={styles.promoTag}
+              />
             )}
 
             {tags?.map((props, index) => (

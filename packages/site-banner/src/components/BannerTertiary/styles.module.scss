@@ -1,7 +1,3 @@
-.root {
-  position: relative;
-}
-
 .topRightCorner {
   position: absolute;
   top: 0;
@@ -26,6 +22,7 @@
 .image {
   max-width: 105px;
   max-height: 72px;
+  border-radius: 4px;
 }
 
 .texts {
@@ -34,4 +31,15 @@
   flex-direction: column;
   align-self: stretch;
   gap: 4px;
+}
+
+.root {
+  position: relative;
+  border-radius: 4px;
+
+  .content {
+    .button {
+      border-radius: 2px;
+    }
+  }
 }

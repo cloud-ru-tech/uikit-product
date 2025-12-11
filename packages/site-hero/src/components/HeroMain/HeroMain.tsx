@@ -90,7 +90,13 @@ export function HeroMain({
                 {tags.length > 0 && (
                   <div className={styles.tagRow} data-layout-type={layoutType}>
                     {tags.map(({ text, tip, appearance }) => (
-                      <TagSpecial key={text} text={text} tip={tip} appearance={appearance} />
+                      <TagSpecial
+                        key={text}
+                        text={text}
+                        tip={tip}
+                        appearance={appearance}
+                        className={styles.promoTag}
+                      />
                     ))}
                   </div>
                 )}
@@ -130,6 +136,7 @@ export function HeroMain({
                     size='l'
                     appearance='primary'
                     fullWidth={isAdaptive}
+                    className={styles.button}
                   />
                   {buttons.length > 1 &&
                     (backgroundColor !== HERO_COLORS.GraphiteAccentDefault ? (
@@ -139,9 +146,16 @@ export function HeroMain({
                         size='l'
                         appearance='secondary'
                         fullWidth={isAdaptive}
+                        className={styles.button}
                       />
                     ) : (
-                      <ButtonOutline {...buttons[1]} data-layout-type={layoutType} size='l' fullWidth={isAdaptive} />
+                      <ButtonOutline
+                        {...buttons[1]}
+                        data-layout-type={layoutType}
+                        size='l'
+                        fullWidth={isAdaptive}
+                        className={styles.button}
+                      />
                     ))}
                 </div>
               )}

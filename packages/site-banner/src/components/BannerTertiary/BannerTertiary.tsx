@@ -84,6 +84,7 @@ export function BannerTertiary({
           size='l'
           appearance={ColorWrapper.getButtonAppearance(rest.appearance)}
           fullWidth={isMobile}
+          className={styles.button}
         />
       </div>
     </ColorWrapper>

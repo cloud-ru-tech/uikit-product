@@ -10,10 +10,10 @@ $brand: 'brand';
 }
 
 .heroCarousel {
- & > div > div {
-   padding: 0;
-   margin: 0;
- }
+  & > div > div {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .paginationWrapper {
@@ -26,7 +26,7 @@ $brand: 'brand';
   justify-content: center;
 
   &[data-appearance='#{$brand}'] {
-    button[data-activated="true"] > div {
+    button[data-activated='true'] > div {
       /* stylelint-disable-next-line declaration-no-important */
       background-color: var.$sys-neutral-accent-default !important;
 

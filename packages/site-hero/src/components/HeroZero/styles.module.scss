@@ -1,18 +1,5 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
 
-.heroZero {
-  position: relative;
-  padding: var.$dimension-5m 0 0;
-
-  &[data-layout-type='tablet'] {
-    padding: var.$dimension-4m 0 0;
-  }
-
-  &[data-layout-type='mobile'] {
-    padding: var.$dimension-3m 0 0;
-  }
-}
-
 .sectionWrapper {
   &[data-section-background='neutral-background1-level'] {
     background-color: var.$sys-neutral-background1-level;
@@ -55,7 +42,7 @@
   gap: var.$dimension-4m;
 
   &[data-layout-type='tablet'],
-  &[data-layout-type='mobile']{
+  &[data-layout-type='mobile'] {
     gap: var.$dimension-3m;
   }
 }
@@ -68,7 +55,7 @@
   text-align: left;
 
   &[data-layout-type='tablet'],
-  &[data-layout-type='mobile']{
+  &[data-layout-type='mobile'] {
     gap: var.$dimension-1m;
     max-width: unset;
   }
@@ -103,9 +90,28 @@
   }
 }
 
-.button{
+.button {
   &[data-layout-type='tablet'],
   &[data-layout-type='mobile'] {
     width: 100%;
+  }
+}
+
+.heroZero {
+  position: relative;
+  padding: var.$dimension-5m 0 0;
+
+  &[data-layout-type='tablet'] {
+    padding: var.$dimension-4m 0 0;
+  }
+
+  &[data-layout-type='mobile'] {
+    padding: var.$dimension-3m 0 0;
+  }
+
+  .buttons {
+    .button {
+      border-radius: 2px;
+    }
   }
 }

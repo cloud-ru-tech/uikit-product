@@ -25,17 +25,9 @@
 .tagRow {
   display: flex;
   gap: ds.$dimension-050m;
-}
 
-.heroEvent {
-  display: flex;
-  flex-direction: column;
-  gap: ds.$dimension-4m;
-  overflow: hidden;
-
-  &[data-layout-type='tablet'],
-  &[data-layout-type='mobile'] {
-    gap: ds.$dimension-3m;
+  .promoTag {
+    border-radius: 2px;
   }
 }
 
@@ -125,6 +117,8 @@
 
   width: 488px;
   flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
 
   &[data-layout-type='tablet'],
   &[data-layout-type='mobile'] {
@@ -143,5 +137,23 @@
   &[data-layout-type='tablet'],
   &[data-layout-type='mobile'] {
     max-width: 504px;
+  }
+}
+
+.heroEvent {
+  display: flex;
+  flex-direction: column;
+  gap: ds.$dimension-4m;
+  overflow: hidden;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    gap: ds.$dimension-3m;
+  }
+
+  .content {
+    .button {
+      border-radius: 2px;
+    }
   }
 }
