@@ -143,7 +143,6 @@
 | size | `number` | 24 |  |
 | type | `string` | - |  |
 | tabIndex | `number` | - |  |
-| key | `Key` | - |  |
 | style | `CSSProperties` | - |  |
 | withBranding | `boolean` | - |  |
 | suppressHydrationWarning | `boolean` | - |  |
@@ -556,7 +555,8 @@
 | onAnimationIterationCapture | `AnimationEventHandler<SVGSVGElement>` | - |  |
 | onTransitionEnd | `TransitionEventHandler<SVGSVGElement>` | - |  |
 | onTransitionEndCapture | `TransitionEventHandler<SVGSVGElement>` | - |  |
-| ref | `LegacyRef<SVGSVGElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
+| ref | `LegacyRef<HTMLButtonElement \| HTMLAnchorElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 ## RecommendPanel
 ### Props
 | name | type | default value | description |
@@ -592,7 +592,7 @@
 | inputMode | enum InputMode: `"none"`, `"text"`, `"search"`, `"decimal"`, `"numeric"`, `"tel"`, `"email"`, `"url"` | - | Режим работы экранной клавиатуры |
 | caption | `string` | - | Подпись справа от лейбла |
 | hint | `string` | - | Подсказка внизу |
-| validationState | enum ValidationState: `"default"`, `"error"`, `"warning"`, `"success"` | - | Состояние валидации |
+| validationState | enum ValidationState: `"error"`, `"default"`, `"warning"`, `"success"` | - | Состояние валидации |
 | showHintIcon | `boolean` | - | Отображать иконку подсказки |
 | labelTooltipPlacement | enum Placement: `"left"`, `"left-start"`, `"left-end"`, `"right"`, `"right-start"`, `"right-end"`, `"top"`, `"top-start"`, `"top-end"`, `"bottom"`, `"bottom-start"`, `"bottom-end"` | top | Расположение подсказки лейбла |
 | error | `string` | - |  |
@@ -603,8 +603,38 @@
 | onCopyButtonClick | `() => void` | - | Колбек клика по кнопке Копировать для поля |
 | showClearButton | `boolean` | true | Отображение кнопки очистки поля |
 | allowMoreThanMaxLength | `boolean` | - | Можно ли вводить больше разрешённого кол-ва символов |
-| ref | `LegacyRef<HTMLTextAreaElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| ref | `LegacyRef<HTMLButtonElement \| HTMLAnchorElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 | key | `Key` | - |  |
+## ChatsSVG
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| className | `string` | - | CSS-класс |
+## SidebarHideSVG
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| className | `string` | - | CSS-класс |
+## FullscreenSVG
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| className | `string` | - | CSS-класс |
+## SidebarShowSVG
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| className | `string` | - | CSS-класс |
+## PopupSVG
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| className | `string` | - | CSS-класс |
+## InlineSVG
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| className | `string` | - | CSS-класс |
 
 
 [//]: DOCUMENTATION_SECTION_END
