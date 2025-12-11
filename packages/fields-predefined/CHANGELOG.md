@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.15.0 (2025-12-11)
+
+
+### Features
+
+* **AINFR-4597:** latin symbols for password and tooltip keys animation ([a3c533f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a3c533f05551ad665af52a5e6788a134c6dbb7b5))
+
+
+
+
+
 ## 0.14.1 (2025-12-08)
 
 
