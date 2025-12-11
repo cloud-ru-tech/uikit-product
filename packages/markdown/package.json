@@ -37,7 +37,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-code-editor": "0.3.8",
-    "@snack-uikit/markdown": "0.5.3",
+    "@snack-uikit/markdown": "0.5.41",
     "@snack-uikit/utils": "3.8.1"
   }
 }
