@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.30 (2025-12-12)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-info-row@0.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/info-row/CHANGELOG.md)
+
+
+
+
+
 ## 0.6.29 (2025-12-12)
 
 ### Only dependencies have been changed

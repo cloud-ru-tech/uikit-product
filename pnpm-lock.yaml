@@ -1280,7 +1280,7 @@ importers:
   packages/mobile-info-row:
     dependencies:
       '@sbercloud/uikit-product-info-row':
-        specifier: 0.8.30
+        specifier: 0.9.0
         version: link:../info-row
       '@sbercloud/uikit-product-locale':
         specifier: '*'
