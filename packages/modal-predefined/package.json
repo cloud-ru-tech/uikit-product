@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-modal-predefined",
   "title": "Modal Predefined",
-  "version": "0.9.12",
+  "version": "0.9.13",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,10 +36,10 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-copy-line": "0.7.70",
-    "@sbercloud/uikit-product-icons": "16.0.1",
+    "@sbercloud/uikit-product-copy-line": "0.7.71",
+    "@sbercloud/uikit-product-icons": "16.1.0",
     "@sbercloud/uikit-product-markdown": "0.1.10",
-    "@sbercloud/uikit-product-mobile-modal": "0.9.26",
+    "@sbercloud/uikit-product-mobile-modal": "0.9.27",
     "@sbercloud/uikit-product-switch-row": "0.6.16",
     "@sbercloud/uikit-product-toggles-predefined": "0.8.16",
     "@sbercloud/uikit-product-utils": "8.0.2",

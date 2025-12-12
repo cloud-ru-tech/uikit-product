@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-cards",
   "title": "Site Cards",
-  "version": "0.11.10",
+  "version": "0.11.11",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "16.0.1",
+    "@sbercloud/uikit-product-icons": "16.1.0",
     "@sbercloud/uikit-product-site-rich-text": "0.2.16",
     "@sbercloud/uikit-product-site-tag": "0.3.16",
     "@sbercloud/uikit-product-utils": "8.0.2",

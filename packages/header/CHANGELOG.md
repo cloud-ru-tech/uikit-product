@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.1.0 (2025-12-12)
+
+
+### Features
+
+* **EVOVPC-2169:** add virtualip to service groups constant ([133fd82](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/133fd82ca67900a90dc8861ba6a5dbb1eb6c7119))
+
+
+
+
+
 ## 5.0.26 (2025-12-08)
 
 

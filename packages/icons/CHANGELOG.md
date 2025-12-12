@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 16.1.0 (2025-12-12)
+
+
+### Features
+
+* **EVOVPC-2169:** virtualip icon ([295d893](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/295d893597b3194b0caba590e1bdb01ffb169ce6))
+
+
+
+
+
 ## 16.0.1 (2025-12-08)
 
 ### Only dependencies have been changed
