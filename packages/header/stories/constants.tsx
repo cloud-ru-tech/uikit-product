@@ -138,6 +138,14 @@ export const SERVICE_GROUPS: LinksGroup[] = [
         icon: PlaceholderSVG,
         aliases: ['magic router', 'магический маршрутизатор', 'маршрутизатор'],
       },
+      {
+        id: 'virtualIp',
+        label: 'Virtual IP',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        icon: PlaceholderSVG,
+        aliases: ['virtual ip', 'виртуальные IP адреса', 'vip'],
+      },
     ],
   },
   {
