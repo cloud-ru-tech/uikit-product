@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2025-12-15)
+
+
+### Bug Fixes
+
+* **SITE-10072:** redesign HeroSlider ([30b951b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/30b951b16af801e5215907a9644b9b4e82eac3ce))
+
+
+### Features
+
+* **SITE-10394:** add border radius ([5e950bc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5e950bce806fab0a3213eef811a7ebcb411f1860))
+
+
+
+
+
 ## 0.6.3 (2025-12-12)
 
 ### Only dependencies have been changed

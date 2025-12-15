@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-tag",
   "title": "Site Tag",
-  "version": "0.3.16",
+  "version": "0.4.0",
   "sideEffects": [
     "*.css",
     "*.woff",

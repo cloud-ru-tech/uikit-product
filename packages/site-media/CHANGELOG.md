@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-12-15)
+
+
+### Features
+
+* **SITE-10394:** add border radius ([5e950bc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5e950bce806fab0a3213eef811a7ebcb411f1860))
+
+
+
+
+
 ## 0.1.40 (2025-12-12)
 
 ### Only dependencies have been changed

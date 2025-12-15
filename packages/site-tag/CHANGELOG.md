@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2025-12-15)
+
+
+### Features
+
+* **SITE-10072:** update erid background color ([41cdb61](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/41cdb61654c8d9b1c539d006fc812cc09c6b7639))
+
+
+
+
+
 ## 0.3.16 (2025-12-08)
 
 ### Only dependencies have been changed

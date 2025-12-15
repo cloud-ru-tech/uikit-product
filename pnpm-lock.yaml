@@ -1860,7 +1860,7 @@ importers:
         specifier: 0.2.16
         version: link:../site-rich-text
       '@sbercloud/uikit-product-site-tag':
-        specifier: 0.3.16
+        specifier: 0.4.0
         version: link:../site-tag
       '@sbercloud/uikit-product-utils':
         specifier: 8.0.2
@@ -1881,7 +1881,7 @@ importers:
   packages/site-banner-predefined:
     dependencies:
       '@sbercloud/uikit-product-site-banner':
-        specifier: 0.3.23
+        specifier: 0.4.0
         version: link:../site-banner
       '@sbercloud/uikit-product-utils':
         specifier: 8.0.2
@@ -1896,7 +1896,7 @@ importers:
         specifier: 0.2.16
         version: link:../site-rich-text
       '@sbercloud/uikit-product-site-tag':
-        specifier: 0.3.16
+        specifier: 0.4.0
         version: link:../site-tag
       '@sbercloud/uikit-product-utils':
         specifier: 8.0.2
@@ -2048,7 +2048,7 @@ importers:
         specifier: 0.5.1
         version: link:../site-layout
       '@sbercloud/uikit-product-site-media':
-        specifier: 0.1.40
+        specifier: 0.2.0
         version: link:../site-media
       '@sbercloud/uikit-product-site-navbar':
         specifier: 0.3.1
@@ -2057,7 +2057,7 @@ importers:
         specifier: 0.2.16
         version: link:../site-rich-text
       '@sbercloud/uikit-product-site-tag':
-        specifier: 0.3.16
+        specifier: 0.4.0
         version: link:../site-tag
       '@sbercloud/uikit-product-utils':
         specifier: 8.0.2
@@ -2150,10 +2150,10 @@ importers:
         specifier: 0.12.2
         version: link:../mobile-fields
       '@sbercloud/uikit-product-site-cards':
-        specifier: 0.11.11
+        specifier: 0.12.0
         version: link:../site-cards
       '@sbercloud/uikit-product-site-case-card':
-        specifier: 0.4.8
+        specifier: 0.5.0
         version: link:../site-case-card
       '@sbercloud/uikit-product-site-grid':
         specifier: 0.1.9
@@ -2162,7 +2162,7 @@ importers:
         specifier: 0.5.1
         version: link:../site-layout
       '@sbercloud/uikit-product-site-media':
-        specifier: 0.1.40
+        specifier: 0.2.0
         version: link:../site-media
       '@sbercloud/uikit-product-site-rich-text':
         specifier: 0.2.16
