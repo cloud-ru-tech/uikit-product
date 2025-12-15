@@ -32,6 +32,7 @@ $brand: 'brand';
     color: var.$sys-graphite-text-disabled;
     border-color: var.$sys-graphite-accent-pressed;
 
+    &:hover,
     &[data-active='true'] {
       color: var.$sys-graphite-on-accent;
     }
@@ -41,6 +42,7 @@ $brand: 'brand';
     color: var.$sys-neutral-text-support;
     border-color: var.$sys-invert-neutral-decor-activated;
 
+    &:hover,
     &[data-active='true'] {
       color: var.$sys-neutral-text-main;
     }
@@ -54,6 +56,7 @@ $brand: 'brand';
       border-color: var.$sys-fluorescent-yellow-accent-default;
     }
 
+    &:hover,
     &[data-active='true'] {
       color: var.$sys-primary-text-main;
     }
@@ -69,11 +72,14 @@ $brand: 'brand';
   /* stylelint-disable-next-line declaration-property-value-allowed-list */
   z-index: 1;
 
-  width: 0;
+  width: 100%;
 
   border-top: 3px solid var.$sys-primary-accent-default;
 
-  animation: growTimeline 5s linear forwards;
+  &[data-animation-enabled='true'] {
+    width: 0;
+    animation: growTimeline 5s linear forwards;
+  }
 }
 
 @keyframes growTimeline {

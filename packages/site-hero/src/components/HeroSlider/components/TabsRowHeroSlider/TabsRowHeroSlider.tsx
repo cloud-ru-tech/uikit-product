@@ -10,11 +10,12 @@ type TabsRowHeroSliderProps = {
   appearance: AppearanceType;
   active: TabHeroSliderBase;
   items: TabHeroSliderBase[];
+  animationEnabled: boolean;
   onTabClick: (page: TabHeroSliderBase) => void;
 };
 
 export function TabsRowHeroSlider(props: TabsRowHeroSliderProps) {
-  const { className, items, appearance, active, onTabClick } = props;
+  const { className, items, appearance, active, animationEnabled, onTabClick } = props;
 
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -49,6 +50,7 @@ export function TabsRowHeroSlider(props: TabsRowHeroSliderProps) {
           key={`tab-${i}-${tab.title}`}
           appearance={appearance}
           active={tab === active}
+          animationEnabled={animationEnabled}
           onClick={handleTabClick(tab)}
           {...tab}
         />

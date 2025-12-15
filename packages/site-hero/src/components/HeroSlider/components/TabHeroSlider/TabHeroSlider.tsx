@@ -11,11 +11,12 @@ export type TabHeroSliderBase = {
 type TabHeroSliderProps = TabHeroSliderBase & {
   active: boolean;
   appearance: AppearanceType;
+  animationEnabled: boolean;
   onClick: () => void;
 };
 
 export function TabHeroSlider(props: TabHeroSliderProps) {
-  const { title, appearance, active, onClick } = props;
+  const { title, appearance, active, animationEnabled, onClick } = props;
 
   return (
     <button
@@ -29,7 +30,7 @@ export function TabHeroSlider(props: TabHeroSliderProps) {
       <Typography.SansBodyS>
         <RichText richText={title} />
       </Typography.SansBodyS>
-      {active && <div className={styles.timeline} />}
+      {active && <div className={styles.timeline} data-animation-enabled={animationEnabled} />}
     </button>
   );
 }

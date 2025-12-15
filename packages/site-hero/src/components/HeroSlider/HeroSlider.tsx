@@ -87,6 +87,7 @@ export function HeroSlider({ id, tabs: tabsProp, layoutType, items: itemsProp, c
           appearance={currentAppearance}
           active={currentTab}
           items={tabs}
+          animationEnabled={autoSwipe === AUTO_SWIPE}
           onTabClick={handleTabClick}
         />
       </div>
