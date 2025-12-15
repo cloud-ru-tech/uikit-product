@@ -132,7 +132,7 @@ export function ItemList({
   const isScrolledRight = () =>
     Boolean(
       containerRef.current &&
-        containerRef.current.scrollWidth - containerRef.current.scrollLeft - containerRef.current.offsetWidth <= DELTA,
+      containerRef.current.scrollWidth - containerRef.current.scrollLeft - containerRef.current.offsetWidth <= DELTA,
     );
 
   const handleTouchStart = () => {

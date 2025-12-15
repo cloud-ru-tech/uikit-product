@@ -10,3 +10,4 @@ export * from './useTextProvider';
 export * from './useAdaptive';
 export * from './useDisplayMode';
 export * from './useMatchMedia';
+export * from './useLocalStorage';
