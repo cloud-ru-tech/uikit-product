@@ -1,0 +1,44 @@
+{
+  "name": "@sbercloud/uikit-product-site-cookie-policy",
+  "title": "Site Cookie Policy",
+  "version": "1.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "Site Cookie Policy",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md",
+    "./LICENSE"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-cookie-policy",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/site-cookie-policy"
+  },
+  "author": "vastepanenko <vastepanenko@cloud.ru>",
+  "contributors": [
+    "vastepanenko <vastepanenko@cloud.ru>"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@sbercloud/uikit-product-utils": "8.0.2",
+    "@snack-uikit/typography": "0.8.7",
+    "@snack-uikit/button": "0.19.7",
+    "@snack-uikit/link": "0.17.12"
+  }
+}

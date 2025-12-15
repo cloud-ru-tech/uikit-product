@@ -192,6 +192,9 @@
     },
     {
       "path": "./site-selector-platform-drop-list/tsconfig.cjs.json"
+    },
+    {
+      "path": "./site-cookie-policy/tsconfig.cjs.json"
     }
   ],
   "compilerOptions": {

@@ -1,0 +1,46 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as ds;
+
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 1023px;
+
+.cookiePolicyWrapper {
+  background: ds.$sys-graphite-accent-default;
+  width: 100%;
+  max-width: 1219px;
+  padding: 24px;
+  display: flex;
+  overflow: hidden;
+}
+
+.cookiePolicyDescription {
+  color: ds.$sys-neutral-on-accent;
+}
+
+.cookiePolicyDescriptionWithButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .cookiePolicyWrapper {
+    padding: 16px;
+    max-width: 704px;
+  }
+
+  .cookiePolicyDescriptionWithButton {
+    gap: 24px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .cookiePolicyWrapper {
+    max-width: 328px;
+  }
+
+  .cookiePolicyDescriptionWithButton {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
