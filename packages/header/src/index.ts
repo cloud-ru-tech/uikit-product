@@ -1,2 +1,2 @@
 export * from './components';
-export * from './hooks';
+export { useLocalStorage } from '@sbercloud/uikit-product-utils';
