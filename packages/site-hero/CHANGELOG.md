@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.1 (2025-12-15)
+
+
+### Bug Fixes
+
+* **SITE-10411:** add missing HeroSlider styles ([fdc9edf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fdc9edf140c657c6857ba9496fafe81e8ae0e32e))
+
+
+
+
+
 # 1.1.0 (2025-12-15)
 
 
