@@ -107,7 +107,7 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       id: CATEGORY.ML,
       label: 'ML/AI Инструменты',
       dataTestId: 'ml',
-      visibleProducts: [EVOLUTION_PRODUCT.EvolutionMlInference],
+      visibleProducts: [EVOLUTION_PRODUCT.EvolutionMlInference, EVOLUTION_PRODUCT.EvolutionNotebooks],
     },
   ],
 };

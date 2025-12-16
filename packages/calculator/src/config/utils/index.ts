@@ -20,6 +20,7 @@ export function generateBaseItems(arr: (string | number)[], labelReplacerFn?: (v
 export * from './disk';
 export * from './eip';
 export * from './obs';
+export * from './notebooks';
 
 export const getNumeralWord = (value: number, words: string[]) => {
   const newValue = Math.abs(value) % 100;

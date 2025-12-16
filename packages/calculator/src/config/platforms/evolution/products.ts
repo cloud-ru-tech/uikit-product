@@ -7,6 +7,7 @@ import {
   EvoDnsSVG,
   EvolutionBiSVG,
   EvolutionComputeSVG,
+  JupyterServersSVG,
   LoadBalancerSVG,
   ManagedKubernetesSVG,
   ManagedPostgreSqlSVG,
@@ -36,6 +37,7 @@ import {
   EVOLUTION_MANAGED_METASTORE_CONFIG,
   EVOLUTION_MANAGED_TRINO_CONFIG,
   EVOLUTION_ML_INFERENCE_FORM_CONFIG,
+  EVOLUTION_NOTEBOOKS_CONFIG,
   EVOLUTION_POSTGRE_SQL_FORM_CONFIG,
   EVOLUTION_PUBLIC_IP_FORM_CONFIG,
   EVOLUTION_SNAT_GATEWAY_FORM_CONFIG,
@@ -196,9 +198,7 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     formConfig: EVOLUTION_CONTAINER_APPS_CONFIG,
     dataTestId: EVOLUTION_PRODUCT.EvolutionContainerApps,
     enableChangeProductQuantity: true,
-    productQuantityValues: {
-      max: 5,
-    },
+    productQuantityValues: { max: 5 },
     enableConnectToConsole: true,
   },
   [EVOLUTION_PRODUCT.EvolutionContainerAppsFreeTier]: {
@@ -224,9 +224,7 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     dataTestId: EVOLUTION_PRODUCT.EvolutionArenadataDb,
     enableChangeProductQuantity: true,
     enableConnectToConsole: false,
-    productQuantityValues: {
-      max: 3,
-    },
+    productQuantityValues: { max: 3 },
   },
   [EVOLUTION_PRODUCT.EvolutionMlInference]: {
     id: EVOLUTION_PRODUCT.EvolutionMlInference,
@@ -293,6 +291,17 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     formConfig: EVOLUTION_MANAGED_BI,
     dataTestId: EVOLUTION_PRODUCT.EvolutionManagedBI,
     enableChangeProductQuantity: false,
+    enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionNotebooks]: {
+    id: EVOLUTION_PRODUCT.EvolutionNotebooks,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution Notebooks',
+    caption: 'Интерактивная разработка ML-моделей в облаке в готовом окружении',
+    icon: JupyterServersSVG,
+    formConfig: EVOLUTION_NOTEBOOKS_CONFIG,
+    dataTestId: EVOLUTION_PRODUCT.EvolutionNotebooks,
+    enableChangeProductQuantity: true,
     enableConnectToConsole: true,
   },
 };

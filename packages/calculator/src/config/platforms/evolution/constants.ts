@@ -21,6 +21,7 @@ export const EVOLUTION_PRODUCT = {
   EvolutionManagedRedis: 'evolutionManagedRedis',
   EvolutionManagedSpark: 'evolutionManagedSpark',
   EvolutionLoadBalancer: 'evolutionLoadBalancer',
+  EvolutionNotebooks: 'evolutionNotebooks',
 } as const;
 
 const GuaranteedPartItem = {
