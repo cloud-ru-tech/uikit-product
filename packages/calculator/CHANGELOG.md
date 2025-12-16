@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.36.0 (2025-12-16)
+
+
+### Features
+
+* **AICNTB-2466:** evo notebooks calculator ([1aa1ffd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1aa1ffdf55e4f392ab5d3c35b33cb6e7c7c37530))
+
+
+
+
+
 ## 0.35.7 (2025-12-12)
 
 ### Only dependencies have been changed
