@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2025-12-17)
+
+
+### Features
+
+* **DOCDEV-2456:** addded cookie policy component ([44c003f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/44c003f613e7590f209061cf0a0f5f9f9a1b9dbf))
+
+
+
+
+
 # 0.2.0 (2025-12-15)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.1.1 (2025-12-17)
+
+
+### Dependencies
+
+* **DOCDEV-2456:** reexported useLocalStorage in header pckg ([b1b5d66](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b1b5d6650736dcd7c06f0ee15840e4c19a7fabeb))
+
+
+
+
+
 # 5.1.0 (2025-12-12)
 
 

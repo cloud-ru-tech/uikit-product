@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 8.1.0 (2025-12-17)
+
+
+### Features
+
+* **DOCDEV-2456:** moved useLocalStorage to utils pckg ([9809058](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/98090588fc37da109dd01b9f2b89f0fe776df565))
+
+
+
+
+
 ## 8.0.2 (2025-12-08)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-fields",
   "title": "Mobile Fields",
-  "version": "0.12.2",
+  "version": "0.12.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,10 +36,10 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "16.1.0",
-    "@sbercloud/uikit-product-mobile-dropdown": "0.9.30",
-    "@sbercloud/uikit-product-mobile-modal": "0.9.27",
-    "@sbercloud/uikit-product-utils": "8.0.2",
+    "@sbercloud/uikit-product-icons": "16.1.1",
+    "@sbercloud/uikit-product-mobile-dropdown": "0.9.31",
+    "@sbercloud/uikit-product-mobile-modal": "0.9.28",
+    "@sbercloud/uikit-product-utils": "8.1.0",
     "@snack-uikit/button": "0.19.15",
     "@snack-uikit/calendar": "0.13.0",
     "@snack-uikit/fields": "0.51.12",

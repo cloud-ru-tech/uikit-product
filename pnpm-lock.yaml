@@ -306,13 +306,13 @@ importers:
   packages/button-predefined:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.30
+        specifier: 0.9.31
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.16
@@ -342,22 +342,22 @@ importers:
         specifier: 0.1.0
         version: 0.1.0
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-mobile-accordion':
-        specifier: 0.4.30
+        specifier: 0.4.31
         version: link:../mobile-accordion
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.30
+        specifier: 0.9.31
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.12.2
+        specifier: 0.12.3
         version: link:../mobile-fields
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.9.27
+        specifier: 0.9.28
         version: link:../mobile-modal
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/alert':
         specifier: 0.15.12
@@ -439,10 +439,10 @@ importers:
   packages/card-predefined:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-promo-tag-predefined':
-        specifier: 0.2.10
+        specifier: 0.2.11
         version: link:../promo-tag-predefined
       '@snack-uikit/button':
         specifier: 0.19.16
@@ -481,7 +481,7 @@ importers:
         specifier: 0.13.14
         version: link:../localization
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/divider':
         specifier: 3.2.3
@@ -551,22 +551,22 @@ importers:
   packages/claudia:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.30
+        specifier: 0.9.31
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.12.2
+        specifier: 0.12.3
         version: link:../mobile-fields
       '@sbercloud/uikit-product-mobile-tooltip':
-        specifier: 0.5.3
+        specifier: 0.5.4
         version: link:../mobile-tooltip
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.16
@@ -650,10 +650,10 @@ importers:
         specifier: 0.1.0
         version: 0.1.0
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -671,13 +671,13 @@ importers:
   packages/error-pages:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -698,25 +698,25 @@ importers:
   packages/fields-predefined:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.30
+        specifier: 0.9.31
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.12.2
+        specifier: 0.12.3
         version: link:../mobile-fields
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.9.27
+        specifier: 0.9.28
         version: link:../mobile-modal
       '@sbercloud/uikit-product-mobile-tooltip':
-        specifier: 0.5.3
+        specifier: 0.5.4
         version: link:../mobile-tooltip
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/attachment':
         specifier: 0.4.10
@@ -774,25 +774,25 @@ importers:
   packages/header:
     dependencies:
       '@sbercloud/uikit-product-card-predefined':
-        specifier: 0.8.20
+        specifier: 0.8.21
         version: link:../card-predefined
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-drawer':
-        specifier: 0.9.24
+        specifier: 0.9.25
         version: link:../mobile-drawer
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.9.27
+        specifier: 0.9.28
         version: link:../mobile-modal
       '@sbercloud/uikit-product-title-clickable':
-        specifier: 0.0.56
+        specifier: 0.0.57
         version: link:../title-clickable
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/avatar':
         specifier: 0.8.14
@@ -847,7 +847,7 @@ importers:
   packages/icons:
     dependencies:
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/icons':
         specifier: 0.27.4
@@ -911,7 +911,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -935,13 +935,13 @@ importers:
   packages/layout:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/info-block':
         specifier: 0.6.13
@@ -953,10 +953,10 @@ importers:
   packages/load-status:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/figma-tokens':
         specifier: '*'
@@ -1020,13 +1020,13 @@ importers:
   packages/mobile-accordion:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-mobile-tooltip':
-        specifier: 0.5.3
+        specifier: 0.5.4
         version: link:../mobile-tooltip
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/accordion':
         specifier: 0.11.11
@@ -1054,10 +1054,10 @@ importers:
   packages/mobile-alert:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/alert':
         specifier: 0.16.17
@@ -1078,7 +1078,7 @@ importers:
   packages/mobile-carousel:
     dependencies:
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/carousel':
         specifier: 0.6.4
@@ -1100,19 +1100,19 @@ importers:
   packages/mobile-chips:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.30
+        specifier: 0.9.31
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-tooltip':
-        specifier: 0.5.3
+        specifier: 0.5.4
         version: link:../mobile-tooltip
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1158,10 +1158,10 @@ importers:
   packages/mobile-drawer:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-mobile-tooltip':
-        specifier: 0.5.3
+        specifier: 0.5.4
         version: link:../mobile-tooltip
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1195,10 +1195,10 @@ importers:
   packages/mobile-dropdown:
     dependencies:
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.9.27
+        specifier: 0.9.28
         version: link:../mobile-modal
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/dropdown':
         specifier: 0.5.2
@@ -1216,19 +1216,19 @@ importers:
   packages/mobile-fields:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.30
+        specifier: 0.9.31
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.9.27
+        specifier: 0.9.28
         version: link:../mobile-modal
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1283,16 +1283,16 @@ importers:
   packages/mobile-info-row:
     dependencies:
       '@sbercloud/uikit-product-info-row':
-        specifier: 0.9.0
+        specifier: 0.9.1
         version: link:../info-row
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-tooltip':
-        specifier: 0.5.3
+        specifier: 0.5.4
         version: link:../mobile-tooltip
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1313,34 +1313,34 @@ importers:
   packages/mobile-layout:
     dependencies:
       '@sbercloud/uikit-product-card-predefined':
-        specifier: 0.8.20
+        specifier: 0.8.21
         version: link:../card-predefined
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-layout':
-        specifier: 0.19.71
+        specifier: 0.19.72
         version: link:../layout
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.30
+        specifier: 0.9.31
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.9.27
+        specifier: 0.9.28
         version: link:../mobile-modal
       '@sbercloud/uikit-product-mobile-tooltip':
-        specifier: 0.5.3
+        specifier: 0.5.4
         version: link:../mobile-tooltip
       '@sbercloud/uikit-product-page-layout':
-        specifier: 0.23.1
+        specifier: 0.23.2
         version: link:../page-layout
       '@sbercloud/uikit-product-quota':
-        specifier: 0.6.14
+        specifier: 0.6.15
         version: link:../quota
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -1370,13 +1370,13 @@ importers:
   packages/mobile-modal:
     dependencies:
       '@sbercloud/uikit-product-mobile-drawer':
-        specifier: 0.9.24
+        specifier: 0.9.25
         version: link:../mobile-drawer
       '@sbercloud/uikit-product-mobile-tooltip':
-        specifier: 0.5.3
+        specifier: 0.5.4
         version: link:../mobile-tooltip
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1406,10 +1406,10 @@ importers:
   packages/mobile-stepper:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/loaders':
         specifier: 0.9.8
@@ -1433,22 +1433,22 @@ importers:
   packages/mobile-table:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-chips':
-        specifier: 0.8.46
+        specifier: 0.8.47
         version: link:../mobile-chips
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.30
+        specifier: 0.9.31
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-toolbar':
-        specifier: 0.4.13
+        specifier: 0.4.14
         version: link:../mobile-toolbar
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.16
@@ -1503,10 +1503,10 @@ importers:
   packages/mobile-toaster:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/link':
         specifier: 0.17.9
@@ -1533,22 +1533,22 @@ importers:
   packages/mobile-toolbar:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-chips':
-        specifier: 0.8.46
+        specifier: 0.8.47
         version: link:../mobile-chips
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.30
+        specifier: 0.9.31
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-tooltip':
-        specifier: 0.5.3
+        specifier: 0.5.4
         version: link:../mobile-tooltip
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1581,10 +1581,10 @@ importers:
   packages/mobile-tooltip:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/popover-private':
         specifier: 0.14.5
@@ -1605,10 +1605,10 @@ importers:
   packages/modal-predefined:
     dependencies:
       '@sbercloud/uikit-product-copy-line':
-        specifier: 0.7.71
+        specifier: 0.7.72
         version: link:../copy-line
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
@@ -1617,16 +1617,16 @@ importers:
         specifier: 0.1.10
         version: link:../markdown
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.9.27
+        specifier: 0.9.28
         version: link:../mobile-modal
       '@sbercloud/uikit-product-switch-row':
-        specifier: 0.6.16
+        specifier: 0.6.17
         version: link:../switch-row
       '@sbercloud/uikit-product-toggles-predefined':
-        specifier: 0.8.16
+        specifier: 0.8.17
         version: link:../toggles-predefined
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1662,16 +1662,16 @@ importers:
   packages/page-layout:
     dependencies:
       '@sbercloud/uikit-product-copy-line':
-        specifier: 0.7.71
+        specifier: 0.7.72
         version: link:../copy-line
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.13
@@ -1722,19 +1722,19 @@ importers:
         specifier: 1.0.1
         version: 1.0.1
       '@sbercloud/uikit-product-button-predefined':
-        specifier: 0.7.14
+        specifier: 0.7.15
         version: link:../button-predefined
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-tooltip':
-        specifier: 0.5.3
+        specifier: 0.5.4
         version: link:../mobile-tooltip
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/accordion':
         specifier: 0.10.5
@@ -1776,7 +1776,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/promo-tag':
         specifier: 0.7.8
@@ -1791,16 +1791,16 @@ importers:
   packages/quota:
     dependencies:
       '@sbercloud/uikit-product-button-predefined':
-        specifier: 0.7.14
+        specifier: 0.7.15
         version: link:../button-predefined
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -1821,7 +1821,7 @@ importers:
   packages/rating:
     dependencies:
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/toggles':
         specifier: 0.13.5
@@ -1857,16 +1857,16 @@ importers:
   packages/site-banner:
     dependencies:
       '@sbercloud/uikit-product-button-predefined':
-        specifier: 0.7.14
+        specifier: 0.7.15
         version: link:../button-predefined
       '@sbercloud/uikit-product-site-rich-text':
-        specifier: 0.2.16
+        specifier: 0.2.17
         version: link:../site-rich-text
       '@sbercloud/uikit-product-site-tag':
-        specifier: 0.4.0
+        specifier: 0.4.1
         version: link:../site-tag
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/promo-tag':
         specifier: 0.7.1
@@ -1884,25 +1884,25 @@ importers:
   packages/site-banner-predefined:
     dependencies:
       '@sbercloud/uikit-product-site-banner':
-        specifier: 0.4.0
+        specifier: 0.4.1
         version: link:../site-banner
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
 
   packages/site-cards:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-site-rich-text':
-        specifier: 0.2.16
+        specifier: 0.2.17
         version: link:../site-rich-text
       '@sbercloud/uikit-product-site-tag':
-        specifier: 0.4.0
+        specifier: 0.4.1
         version: link:../site-tag
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.16
@@ -1926,7 +1926,7 @@ importers:
   packages/site-case-card:
     dependencies:
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/card':
         specifier: 0.20.4
@@ -1945,7 +1945,7 @@ importers:
   packages/site-cookie-policy:
     dependencies:
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -1960,13 +1960,13 @@ importers:
   packages/site-csat:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.9.27
+        specifier: 0.9.28
         version: link:../mobile-modal
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -2003,7 +2003,7 @@ importers:
   packages/site-grid:
     dependencies:
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       classnames:
         specifier: 2.5.1
@@ -2018,16 +2018,16 @@ importers:
         specifier: 0.7.10
         version: 0.7.10(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@19.0.0)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@18.0.1)(@snack-uikit/figma-tokens@18.0.1)(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.9.27
+        specifier: 0.9.28
         version: link:../mobile-modal
       '@sbercloud/uikit-product-site-layout':
-        specifier: 0.5.1
+        specifier: 0.5.2
         version: link:../site-layout
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/alert':
         specifier: 0.16.17
@@ -2054,31 +2054,31 @@ importers:
   packages/site-hero:
     dependencies:
       '@sbercloud/uikit-product-button-predefined':
-        specifier: 0.7.14
+        specifier: 0.7.15
         version: link:../button-predefined
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-site-layout':
-        specifier: 0.5.1
+        specifier: 0.5.2
         version: link:../site-layout
       '@sbercloud/uikit-product-site-media':
-        specifier: 0.2.0
+        specifier: 0.2.1
         version: link:../site-media
       '@sbercloud/uikit-product-site-navbar':
-        specifier: 0.3.1
+        specifier: 0.3.2
         version: link:../site-navbar
       '@sbercloud/uikit-product-site-rich-text':
-        specifier: 0.2.16
+        specifier: 0.2.17
         version: link:../site-rich-text
       '@sbercloud/uikit-product-site-tag':
-        specifier: 0.4.0
+        specifier: 0.4.1
         version: link:../site-tag
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/breadcrumbs':
         specifier: 0.10.24
@@ -2108,7 +2108,7 @@ importers:
   packages/site-layout:
     dependencies:
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       classnames:
         specifier: 2.5.1
@@ -2117,10 +2117,10 @@ importers:
   packages/site-media:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/icon-predefined':
         specifier: 0.7.5
@@ -2132,7 +2132,7 @@ importers:
   packages/site-navbar:
     dependencies:
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/divider':
         specifier: 3.2.3
@@ -2150,7 +2150,7 @@ importers:
   packages/site-rich-text:
     dependencies:
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       classnames:
         specifier: 2.5.1
@@ -2159,37 +2159,37 @@ importers:
   packages/site-section:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.12.2
+        specifier: 0.12.3
         version: link:../mobile-fields
       '@sbercloud/uikit-product-site-cards':
-        specifier: 0.12.0
+        specifier: 0.12.1
         version: link:../site-cards
       '@sbercloud/uikit-product-site-case-card':
-        specifier: 0.5.0
+        specifier: 0.5.1
         version: link:../site-case-card
       '@sbercloud/uikit-product-site-grid':
-        specifier: 0.1.9
+        specifier: 0.1.10
         version: link:../site-grid
       '@sbercloud/uikit-product-site-layout':
-        specifier: 0.5.1
+        specifier: 0.5.2
         version: link:../site-layout
       '@sbercloud/uikit-product-site-media':
-        specifier: 0.2.0
+        specifier: 0.2.1
         version: link:../site-media
       '@sbercloud/uikit-product-site-rich-text':
-        specifier: 0.2.16
+        specifier: 0.2.17
         version: link:../site-rich-text
       '@sbercloud/uikit-product-site-table':
-        specifier: 0.2.17
+        specifier: 0.2.18
         version: link:../site-table
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/accordion':
         specifier: 0.11.0
@@ -2241,16 +2241,16 @@ importers:
   packages/site-selector-platform-drop-list:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.30
+        specifier: 0.9.31
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.9.27
+        specifier: 0.9.28
         version: link:../mobile-modal
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/list':
         specifier: 0.32.7
@@ -2265,10 +2265,10 @@ importers:
   packages/site-table:
     dependencies:
       '@sbercloud/uikit-product-site-rich-text':
-        specifier: 0.2.16
+        specifier: 0.2.17
         version: link:../site-rich-text
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/scroll':
         specifier: 0.9.4
@@ -2280,7 +2280,7 @@ importers:
   packages/site-tag:
     dependencies:
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/promo-tag':
         specifier: 0.7.1
@@ -2295,7 +2295,7 @@ importers:
   packages/switch-row:
     dependencies:
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/toggles':
         specifier: 0.13.5
@@ -2316,7 +2316,7 @@ importers:
   packages/title-clickable:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@snack-uikit/avatar':
         specifier: 0.8.4
@@ -2340,7 +2340,7 @@ importers:
   packages/toggles-predefined:
     dependencies:
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/card':
         specifier: 0.19.0
@@ -2389,7 +2389,7 @@ importers:
   packages/welcome-tour:
     dependencies:
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -2410,28 +2410,28 @@ importers:
   packages/widget:
     dependencies:
       '@sbercloud/uikit-product-card-predefined':
-        specifier: 0.8.20
+        specifier: 0.8.21
         version: link:../card-predefined
       '@sbercloud/uikit-product-icons':
-        specifier: 16.1.0
+        specifier: 16.1.1
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-carousel':
-        specifier: 0.1.18
+        specifier: 0.2.0
         version: link:../mobile-carousel
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.30
+        specifier: 0.9.31
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-tooltip':
-        specifier: 0.5.3
+        specifier: 0.5.4
         version: link:../mobile-tooltip
       '@sbercloud/uikit-product-title-clickable':
-        specifier: 0.0.56
+        specifier: 0.0.57
         version: link:../title-clickable
       '@sbercloud/uikit-product-utils':
-        specifier: 8.0.2
+        specifier: 8.1.0
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.16
