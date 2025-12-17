@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.24.0 (2025-12-17)
+
+
+### Features
+
+* **AINFR-4587:** translations ([0b7d117](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0b7d117e9e2e4673fe314d24d2decace92adcdc5))
+
+
+
+
+
 # 0.23.0 (2025-12-09)
 
 

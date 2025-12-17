@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.12.0 (2025-12-17)
+
+
+### Features
+
+* **AINFR-4587:** add new ssh validation rules ([cf6ad31](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cf6ad31b9549c73de2346a63fcd489fa2f39068f))
+
+
+
+
+
 ## 1.11.1 (2025-12-12)
 
 ### Only dependencies have been changed
