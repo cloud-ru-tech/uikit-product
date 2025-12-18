@@ -10,18 +10,6 @@
   }
 }
 
-.withBottomPadding {
-  padding-bottom: var.$dimension-5m;
-
-  &[data-layout-type='tablet'] {
-    padding-bottom: var.$dimension-4m;
-  }
-
-  &[data-layout-type='mobile'] {
-    padding-bottom: var.$dimension-3m;
-  }
-}
-
 .contentLayout {
   display: flex;
   flex-direction: column;
@@ -113,5 +101,17 @@
     .button {
       border-radius: 2px;
     }
+  }
+}
+
+.withBottomPadding {
+  padding-bottom: var.$dimension-5m;
+
+  &[data-layout-type='tablet'] {
+    padding-bottom: var.$dimension-4m;
+  }
+
+  &[data-layout-type='mobile'] {
+    padding-bottom: var.$dimension-3m;
   }
 }
