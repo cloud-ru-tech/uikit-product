@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2025-12-18)
+
+
+### Features
+
+* **SITE-10338:** update gap site components ([9afded2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9afded24fb470672c8f92be51ecb3fa147ba7bf1))
+
+
+
+
+
 # 1.2.0 (2025-12-18)
 
 
