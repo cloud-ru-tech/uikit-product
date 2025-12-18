@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2025-12-18)
+
+
+### Features
+
+* **SITE-10424:** edit styles ([c699b5b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c699b5bd4db41da4bdf613a5bf4a508d4fb065bd))
+
+
+
+
+
 ## 1.1.2 (2025-12-17)
 
 ### Only dependencies have been changed
