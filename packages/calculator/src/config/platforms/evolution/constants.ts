@@ -1,6 +1,5 @@
 export const EVOLUTION_PRODUCT = {
   EvolutionCloudServer: 'evolutionCloudServer',
-  EvolutionCloudServerGpu: 'evolutionCloudServerGpu',
   EvolutionCloudServerFreeTier: 'evolutionCloudServerFreeTier',
   EvolutionKubernetes: 'evolutionKubernetes',
   EvolutionStorageS3FreeTier: 'evolutionStorageS3FreeTier',

@@ -3,7 +3,6 @@ import {
   ArtifactRegistrySVG,
   BareMetalSVG,
   ContainerAppsSVG,
-  ElasticCloudServerWithGpuSVG,
   EvoDnsSVG,
   EvolutionBiSVG,
   EvolutionComputeSVG,
@@ -30,11 +29,15 @@ import {
   EVOLUTION_BARE_METAL_FORM_CONFIG,
   EVOLUTION_CLOUD_SERVER_FORM_CONFIG,
   EVOLUTION_CLOUD_SERVER_FREE_TIER_FORM_CONFIG,
-  EVOLUTION_CLOUD_SERVER_GPU_FORM_CONFIG,
   EVOLUTION_CONTAINER_APPS_CONFIG,
   EVOLUTION_CONTAINER_APPS_FREE_TIER_CONFIG,
+  EVOLUTION_DNS_CONFIG,
   EVOLUTION_KUBERNETES_FORM_CONFIG,
+  EVOLUTION_LOAD_BALANCER_CONFIG,
+  EVOLUTION_MANAGED_BI,
   EVOLUTION_MANAGED_METASTORE_CONFIG,
+  EVOLUTION_MANAGED_REDIS_CONFIG,
+  EVOLUTION_MANAGED_SPARK_CONFIG,
   EVOLUTION_MANAGED_TRINO_CONFIG,
   EVOLUTION_ML_INFERENCE_FORM_CONFIG,
   EVOLUTION_NOTEBOOKS_CONFIG,
@@ -44,11 +47,6 @@ import {
   EVOLUTION_STORAGE_S3_FORM_CONFIG,
   EVOLUTION_STORAGE_S3_FREE_TIER_FORM_CONFIG,
 } from './product-config';
-import { EVOLUTION_DNS_CONFIG } from './product-config/EvolutionDNS';
-import { EVOLUTION_LOAD_BALANCER_CONFIG } from './product-config/EvolutionLoadBalancer';
-import { EVOLUTION_MANAGED_BI } from './product-config/EvolutionManagedBI';
-import { EVOLUTION_MANAGED_REDIS_CONFIG } from './product-config/EvolutionManagedRedis';
-import { EVOLUTION_MANAGED_SPARK_CONFIG } from './product-config/EvolutionManagedSpark';
 
 export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
   [EVOLUTION_PRODUCT.EvolutionCloudServer]: {
@@ -178,17 +176,6 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     enableChangeProductQuantity: false,
     enableConnectToConsole: true,
   },
-  [EVOLUTION_PRODUCT.EvolutionCloudServerGpu]: {
-    id: EVOLUTION_PRODUCT.EvolutionCloudServerGpu,
-    platform: PLATFORM.Evolution,
-    label: 'Вычислительные мощности с GPU',
-    caption: 'Аренда виртуальных машин, серверов и ML-сервисов с графическими ускорителями',
-    icon: ElasticCloudServerWithGpuSVG,
-    formConfig: EVOLUTION_CLOUD_SERVER_GPU_FORM_CONFIG,
-    dataTestId: EVOLUTION_PRODUCT.EvolutionCloudServerGpu,
-    enableChangeProductQuantity: true,
-    enableConnectToConsole: true,
-  },
   [EVOLUTION_PRODUCT.EvolutionContainerApps]: {
     id: EVOLUTION_PRODUCT.EvolutionContainerApps,
     platform: PLATFORM.Evolution,
@@ -291,6 +278,7 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     formConfig: EVOLUTION_MANAGED_BI,
     dataTestId: EVOLUTION_PRODUCT.EvolutionManagedBI,
     enableChangeProductQuantity: false,
+    freeTier: true,
     enableConnectToConsole: true,
   },
   [EVOLUTION_PRODUCT.EvolutionNotebooks]: {

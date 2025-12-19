@@ -27,6 +27,7 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
         EVOLUTION_PRODUCT.EvolutionCloudServerFreeTier,
         EVOLUTION_PRODUCT.EvolutionStorageS3FreeTier,
         EVOLUTION_PRODUCT.EvolutionContainerAppsFreeTier,
+        EVOLUTION_PRODUCT.EvolutionManagedBI,
       ],
       banner: (
         <Alert
@@ -58,7 +59,6 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
         EVOLUTION_PRODUCT.EvolutionCloudServer,
         EVOLUTION_PRODUCT.EvolutionCloudServerFreeTier,
         EVOLUTION_PRODUCT.EvolutionBareMetal,
-        EVOLUTION_PRODUCT.EvolutionCloudServerGpu,
       ],
     },
     {
