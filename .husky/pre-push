@@ -1,3 +1,2 @@
 # 8.0.0
 node_modules/.bin/solidarity
-node_modules/.bin/ts-node scripts/check-dependencies.ts
