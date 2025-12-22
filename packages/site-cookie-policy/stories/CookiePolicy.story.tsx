@@ -4,7 +4,7 @@ import { useReducer } from 'react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { CookiePolicy } from '../src/components';
+import { CookiePolicy, CookiePolicyProps } from '../src/components';
 import { COOKIE_POLICY_STORAGE_KEY } from '../src/constants';
 
 const meta: Meta = {
@@ -13,7 +13,7 @@ const meta: Meta = {
 };
 export default meta;
 
-const Template: StoryFn = () => {
+const Template: StoryFn<CookiePolicyProps> = ({ ...args }) => {
   const [, forceUpdate] = useReducer(x => x + 1, 0);
 
   const handleReset = () => {
@@ -26,14 +26,17 @@ const Template: StoryFn = () => {
       <button style={{ marginBottom: 16 }} onClick={handleReset}>
         Сбросить cookie-policy
       </button>
-      <CookiePolicy />
+      <CookiePolicy {...args} />
     </div>
   );
 };
 
-export const cookiePolicy: StoryObj = {
+export const cookiePolicy: StoryObj<CookiePolicyProps> = {
   render: Template,
   parameters: {
+    args: {
+      layoutType: 'desktop',
+    },
     readme: {
       sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
     },
