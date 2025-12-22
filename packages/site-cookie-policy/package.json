@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-cookie-policy",
   "title": "Site Cookie Policy",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "sideEffects": [
     "*.css",
     "*.woff",
