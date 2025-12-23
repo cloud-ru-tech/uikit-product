@@ -28,6 +28,7 @@
   background-color: var.$sys-neutral-background;
 
   padding: var.$dimension-4m;
+  border-radius: 4px;
 
   &[data-layout-type='tablet'],
   &[data-layout-type='mobile'] {
@@ -100,7 +101,7 @@
   gap: var.$dimension-4m;
 
   &[data-layout-type='tablet'],
-  &[data-layout-type='mobile']{
+  &[data-layout-type='mobile'] {
     flex-direction: column;
     gap: var.$dimension-2m;
   }

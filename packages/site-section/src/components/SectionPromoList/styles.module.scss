@@ -30,7 +30,8 @@
   background-image: var(--image);
   background-repeat: no-repeat;
   background-size: var(--image-size);
-  background-position: calc(100% + var(--image-size) - var(--image-visible-size)) calc(100% + var(--image-size) - var(--image-visible-size));
+  background-position: calc(100% + var(--image-size) - var(--image-visible-size))
+    calc(100% + var(--image-size) - var(--image-visible-size));
 
   &[data-layout-type='tablet'] {
     --image-visible-size: 300px;
@@ -49,4 +50,9 @@
   &[data-layout-type='mobile'] {
     padding: 32px 32px 0;
   }
+}
+
+.left,
+.right {
+  border-radius: 4px;
 }

@@ -51,6 +51,8 @@
 
 .mediaWrapper {
   flex-grow: 1;
+  border-radius: 4px;
+  overflow: hidden;
 
   [data-layout-type='tablet'] & {
     width: 100%;
