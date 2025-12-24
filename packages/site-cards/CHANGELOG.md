@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.14.0 (2025-12-24)
+
+
+### Features
+
+* **SITE-9351:** add alt image for card media ([7c93b0e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7c93b0e0ef242d011b7c86c802b8136953581e64))
+
+
+
+
+
 # 0.13.0 (2025-12-24)
 
 

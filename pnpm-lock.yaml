@@ -2171,7 +2171,7 @@ importers:
         specifier: 0.12.4
         version: link:../mobile-fields
       '@sbercloud/uikit-product-site-cards':
-        specifier: 0.13.0
+        specifier: 0.14.0
         version: link:../site-cards
       '@sbercloud/uikit-product-site-case-card':
         specifier: 0.5.1
