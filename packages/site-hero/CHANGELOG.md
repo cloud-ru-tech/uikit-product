@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.1 (2025-12-24)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-site-media@0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-media/CHANGELOG.md)
+
+
+
+
+
 # 1.3.0 (2025-12-18)
 
 

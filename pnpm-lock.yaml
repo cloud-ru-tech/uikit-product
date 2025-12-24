@@ -2069,7 +2069,7 @@ importers:
         specifier: 0.5.2
         version: link:../site-layout
       '@sbercloud/uikit-product-site-media':
-        specifier: 0.2.1
+        specifier: 0.3.0
         version: link:../site-media
       '@sbercloud/uikit-product-site-navbar':
         specifier: 0.3.2
@@ -2171,7 +2171,7 @@ importers:
         specifier: 0.12.3
         version: link:../mobile-fields
       '@sbercloud/uikit-product-site-cards':
-        specifier: 0.12.1
+        specifier: 0.13.0
         version: link:../site-cards
       '@sbercloud/uikit-product-site-case-card':
         specifier: 0.5.1
@@ -2183,7 +2183,7 @@ importers:
         specifier: 0.5.2
         version: link:../site-layout
       '@sbercloud/uikit-product-site-media':
-        specifier: 0.2.1
+        specifier: 0.3.0
         version: link:../site-media
       '@sbercloud/uikit-product-site-rich-text':
         specifier: 0.2.17
