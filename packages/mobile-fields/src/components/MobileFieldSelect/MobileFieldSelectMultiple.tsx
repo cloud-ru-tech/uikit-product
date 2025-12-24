@@ -266,6 +266,8 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
                       label={selectedOptionFormatter(option)}
                       key={option.id}
                       appearance={option.appearance ?? 'neutral'}
+                      className={styles.tag}
+                      data-disabled={disabled || undefined}
                     />
                   ))}
 
