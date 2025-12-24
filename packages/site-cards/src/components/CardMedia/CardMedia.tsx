@@ -21,6 +21,8 @@ export type CardMediaProps = WithSupportProps<
     size: 's' | 'm' | 'l';
     /** Ссылка на картинку */
     img: string;
+    /** Описание для картинки */
+    imgAlt?: string;
     /** Тег */
     tag: Pick<TagProps, 'label' | 'appearance'>;
     /** Время чтения */
@@ -46,6 +48,7 @@ export function CardMedia({
   titleTag = 'h2',
   size = 's',
   img,
+  imgAlt,
   tag,
   time,
   href,
@@ -77,7 +80,7 @@ export function CardMedia({
       tabIndex={0}
     >
       <div className={styles.imgWrapper}>
-        <img className={styles.img} src={img} alt='card-media-img' />
+        <img className={styles.img} src={img} alt={imgAlt ?? 'card-media-img'} />
       </div>
 
       <div className={styles.header}>
