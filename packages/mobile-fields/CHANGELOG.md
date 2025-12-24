@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.12.4 (2025-12-24)
+
+
+### Bug Fixes
+
+* **PDS-3335:** FieldSelect disabled tag background-color ([8e169bd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e169bd5f5c2857c661b1bb819742e0173e744d0))
+
+
+
+
+
 ## 0.12.3 (2025-12-17)
 
 ### Only dependencies have been changed

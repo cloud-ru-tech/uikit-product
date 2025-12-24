@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-claudia",
   "title": "Claudia",
-  "version": "1.12.1",
+  "version": "1.12.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -38,7 +38,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "16.1.1",
     "@sbercloud/uikit-product-mobile-dropdown": "0.9.31",
-    "@sbercloud/uikit-product-mobile-fields": "0.12.3",
+    "@sbercloud/uikit-product-mobile-fields": "0.12.4",
     "@sbercloud/uikit-product-mobile-tooltip": "0.5.4",
     "@sbercloud/uikit-product-utils": "8.1.0",
     "@snack-uikit/button": "0.19.16",
