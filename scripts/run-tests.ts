@@ -1,3 +1,4 @@
+import fs from 'fs';
 import path from 'path';
 
 import { exec, exit } from 'shelljs';
@@ -12,11 +13,16 @@ let changedPaths = '';
 if (!isMainBranch()) {
   const paths = getChangedPackages();
 
-  if (paths.length > 0) {
-    paths.push(path.join(__dirname, '../playwright'));
-  }
+  const filteredPaths = paths.filter(item => {
+    const testsDir = path.join(item, '__tests__');
+    return fs.existsSync(testsDir) && fs.statSync(testsDir).isDirectory();
+  });
 
-  changedPaths = paths.map(item => `${item}/__tests__/**/*.test.ts`).join(' ');
+  if (filteredPaths.length > 0) {
+    changedPaths = filteredPaths.map(item => `${item}/__tests__/`).join(' ');
+  } else {
+    process.exit(0);
+  }
 }
 
 exec(`playwright test --project=${BROWSER || 'chrome'} ${changedPaths}`, exit);
