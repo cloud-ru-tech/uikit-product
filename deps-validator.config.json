@@ -1,0 +1,8 @@
+{
+  "ignoredPackagesFolderFiles": [
+    "packages/tsconfig.cjs.json",
+    "packages/tsconfig.esm.json",
+    "packages/site-header",
+    "packages/site-article"
+  ]
+}
