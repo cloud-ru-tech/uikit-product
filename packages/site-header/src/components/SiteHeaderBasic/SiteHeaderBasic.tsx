@@ -56,6 +56,8 @@ export type HeaderProps = WithSupportProps<
     mobileMenuContent?: ReactNode;
     /** Нижний контент кнопок мобильной версии меню */
     mobileConsultationButton?: ReactNode;
+    /** className для левой части хедера */
+    leftPartClassName?: string;
   }>
 >;
 
@@ -77,6 +79,7 @@ export function SiteHeaderBasic({
   mainHeaderClassName,
   appearance = 'none',
   logo,
+  leftPartClassName,
   ...rest
 }: HeaderProps) {
   const refHeader = useRef<HTMLDivElement>(null);
@@ -109,7 +112,7 @@ export function SiteHeaderBasic({
         >
           {fullWidthContent ?? (
             <>
-              <div className={styles.leftPart} data-layout-type={layoutType}>
+              <div className={cn(styles.leftPart, leftPartClassName)} data-layout-type={layoutType}>
                 <LogoContent additionalLogoText={additionalLogoText} isMobile={isMobile} logo={logo} />
               </div>
               <div className={styles.middlePart}>{middleContent}</div>
