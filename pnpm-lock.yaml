@@ -1880,7 +1880,7 @@ importers:
   packages/site-banner-predefined:
     dependencies:
       '@sbercloud/uikit-product-site-banner':
-        specifier: 0.4.1
+        specifier: 0.5.0
         version: link:../site-banner
       '@sbercloud/uikit-product-utils':
         specifier: 8.1.0

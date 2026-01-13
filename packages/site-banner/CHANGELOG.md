@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2026-01-13)
+
+
+### Features
+
+* **SITE-10478:** add border radius for banner primary ([a6accec](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a6accecb766c5ef90ae767b6f39dc2acfb5acfa1))
+
+
+
+
+
 ## 0.4.1 (2025-12-17)
 
 ### Only dependencies have been changed
