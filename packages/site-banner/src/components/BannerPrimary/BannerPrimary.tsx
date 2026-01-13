@@ -26,6 +26,7 @@ export function BannerPrimary({ tags, imgType, layoutType, expirationDate, ...pr
     <BannerCommon
       sizes={{ image: IMAGE_SIZE[layoutType][imgType], mainGap: layoutType === 'mobile' ? 24 : 32 }}
       layoutType={layoutType}
+      className={styles.wrapper}
       topSlot={
         (tags || expirationDate) && (
           <div className={styles.tags}>
