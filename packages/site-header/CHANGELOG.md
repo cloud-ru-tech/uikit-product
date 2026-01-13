@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2026-01-13)
+
+
+### Features
+
+* **DOCDEV-2558:** added leftPartClassName prop to site header ([a1dc537](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a1dc537c2558b5f3e48c4a70aebbc54fd01208ef))
+
+
+
+
+
 ## 0.6.5 (2025-12-17)
 
 ### Only dependencies have been changed
