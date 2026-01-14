@@ -103,6 +103,7 @@ export const fieldPhone: StoryObj<StoryProps> = {
     excludedCountries: [ABKHAZIA_COUNTRY_CODE, AUSTRALIA_COUNTRY_CODE],
     includedCountries: [RUSSIA_COUNTRY_CODE, BELARUS_COUNTRY_CODE],
     filterCountriesMode: 'none',
+    autoComplete: 'tel webauthn',
   },
   argTypes: {
     labelTooltip: {

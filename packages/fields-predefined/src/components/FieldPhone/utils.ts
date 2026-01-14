@@ -69,3 +69,44 @@ export function detectCountryByPhone(text: string, options: FieldPhoneOptionsPro
 
   return options.find(opt => opt.iso2 === regionCode);
 }
+
+export const handleAutoInsert = ({
+  raw,
+  onValueChange,
+  onCountryChange,
+  country,
+  options,
+}: {
+  raw: string;
+  onValueChange: (str: string) => void;
+  onCountryChange: (country: FieldPhoneOptionsProps) => void;
+  country?: FieldPhoneOptionsProps;
+  options: FieldPhoneOptionsProps[];
+}) => {
+  if (!raw) return;
+
+  const parsed = parsePhoneNumber(raw);
+  const ok = parsed.valid || parsed.possible;
+  if (!ok) return;
+
+  const detected = detectCountryByPhone(raw, options);
+  if (!detected) return;
+
+  let national = parsed.number?.significant.replace(/\D/g, '');
+  if (!national) return;
+
+  const nextNationalLength = (detected.mask?.match(/X/g) ?? []).length;
+  if (nextNationalLength && national.length > nextNationalLength) {
+    national = national.slice(-nextNationalLength);
+  }
+
+  const fullDigits = (parsed.number?.e164 ?? raw).replace(/\D/g, '');
+  const countryCodeDigits = String(parsed.countryCode ?? '');
+  const expected = countryCodeDigits.length + nextNationalLength;
+  if (fullDigits.length < expected) return;
+
+  if (detected.id !== country?.id) {
+    onCountryChange(detected);
+  }
+  onValueChange(national);
+};

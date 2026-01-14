@@ -12,7 +12,7 @@ import { PLACEHOLDER_CHAR } from './constants';
 import { useCountries } from './hooks';
 import styles from './styles.module.scss';
 import { CountrySettings, FieldPhoneOptionsProps, MaskOptions } from './types';
-import { detectCountryByPhone } from './utils';
+import { detectCountryByPhone, handleAutoInsert } from './utils';
 
 export type FieldPhoneProps = WithLayoutType<
   Omit<
@@ -63,6 +63,9 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
     const options = useCountries(optionsProp);
     const isOnlyOneCountryAvailable = options.length === 1;
 
+    const rawInsertRef = useRef('');
+    const insertSwitchRef = useRef(false);
+
     const [country, setCountry] = useValueControl<FieldPhoneOptionsProps>({
       defaultValue: options[0],
       onChange: onChangeCountry,
@@ -90,9 +93,22 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
         definitions: {
           X: /[0-9]/,
         },
+        prepare: (str: string) => {
+          if (str.replace(/\D/g, '').length > 1) {
+            rawInsertRef.current = str;
+          }
+          return str;
+        },
       }),
       [country?.mask],
     );
+
+    const clearRaw = () => {
+      rawInsertRef.current = '';
+    };
+    const markSwitchRef = () => {
+      insertSwitchRef.current = true;
+    };
 
     const {
       ref: iMaskRef,
@@ -110,6 +126,24 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
         if (value !== valueProp) {
           onChangeProp?.(value);
         }
+
+        if (insertSwitchRef.current) {
+          insertSwitchRef.current = false;
+          return;
+        }
+        handleAutoInsert({
+          raw: rawInsertRef.current,
+          onValueChange: value => {
+            setTimeout(() => setValue(value), 0);
+          },
+          onCountryChange: country => {
+            markSwitchRef();
+            clearRaw();
+            setCountry(country);
+          },
+          country,
+          options,
+        });
       },
     });
 
