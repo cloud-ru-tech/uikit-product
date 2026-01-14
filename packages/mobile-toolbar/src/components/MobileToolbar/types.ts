@@ -1,3 +1,4 @@
+import { RequestPayloadParams } from '@cloud-ru/ft-request-payload-transform';
 import { ReactNode } from 'react';
 
 import { FiltersState, MobileChipChoiceRowProps } from '@sbercloud/uikit-product-mobile-chips';
@@ -50,4 +51,28 @@ export type FilterRow<TState extends FiltersState> = Omit<MobileChipChoiceRowPro
   open?: boolean;
   initialOpen?: boolean;
   onOpenChange?(isOpen: boolean): void;
+};
+
+export type PersistedFilterState<T extends FiltersState> = {
+  pagination?: RequestPayloadParams['pagination'];
+  ordering?: RequestPayloadParams['ordering'];
+  search?: string;
+  filter?: T;
+};
+
+export type ToolbarPersistConfig<T extends FiltersState> = {
+  /** Уникальный id для текущего инстанса компонента */
+  id?: string;
+  /** Ключ для queryParams */
+  filterQueryKey?: string;
+  /** Валидатор сохраненных */
+  validateData?(value: unknown): value is PersistedFilterState<T>;
+  /** Custom-сериализация состояния перед сохранением в queryParams */
+  serializer?(value: PersistedFilterState<T>): string;
+  /** Custom-парсер queryParams для преобразования в данные состояния */
+  parser?(value: string): PersistedFilterState<T>;
+  /** Состояние для сохранения */
+  state?: PersistedFilterState<T>;
+  /** Колбэк при первом рендере для получения сохраненных данных и установки их в стейт */
+  onLoad?(state: PersistedFilterState<T>): void;
 };

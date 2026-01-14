@@ -12,14 +12,18 @@ import { TEST_IDS } from '../../constants';
 import { BulkActions, FilterButton, MoreActions, Separator } from '../../helperComponents';
 import { BulkActionsCheckbox } from '../../helperComponents/BulkActionsCheckbox';
 import { isBulkActionsProps } from './helpers';
-import { useFilters } from './hooks';
+import { useFilters, usePersistState } from './hooks';
 import styles from './styles.module.scss';
-import { CheckedToolbarProps, DefaultToolbarProps, FilterRow } from './types';
+import { CheckedToolbarProps, DefaultToolbarProps, FilterRow, ToolbarPersistConfig } from './types';
 
 export type MobileToolbarProps<TState extends FiltersState = Record<string, unknown>> = WithSupportProps<
   DefaultToolbarProps | CheckedToolbarProps
 > & {
   filterRow?: FilterRow<TState>;
+  /** Конфиг для сохранения состояния в localStorage и queryParams. <br>
+   *  Поле id должно быть уникальным для каждого инстанса компонента. <br>
+   *  */
+  persist?: ToolbarPersistConfig<TState>;
 };
 
 export function MobileToolbar<TState extends FiltersState = Record<string, unknown>>({
@@ -30,6 +34,7 @@ export function MobileToolbar<TState extends FiltersState = Record<string, unkno
   onRefresh,
   search,
   filterRow: filterRowProps,
+  persist,
   ...rest
 }: MobileToolbarProps<TState>) {
   const needsBulkActions = isBulkActionsProps(rest);
@@ -38,6 +43,8 @@ export function MobileToolbar<TState extends FiltersState = Record<string, unkno
   const resizingContainerRef = useRef<HTMLDivElement>(null);
 
   const { t } = useLocale('MobileToolbar');
+
+  usePersistState({ persist, filter: filterRowProps?.value, search: search?.value });
 
   const moreActionsProps = useMemo(
     () =>

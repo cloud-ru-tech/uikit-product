@@ -3,8 +3,8 @@ import { useUncontrolledProp } from 'uncontrollable';
 
 import { FiltersState, hasFilterBeenApplied } from '@sbercloud/uikit-product-mobile-chips';
 
-import { FilterButtonProps } from '../../helperComponents';
-import { FilterRow } from './types';
+import { FilterButtonProps } from '../../../helperComponents';
+import { FilterRow } from '../types';
 
 type UseFiltersProps<TState extends FiltersState> = {
   filterRow?: FilterRow<TState>;

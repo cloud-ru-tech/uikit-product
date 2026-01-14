@@ -72,7 +72,6 @@ export const FILTER_ROW: FilterRow<Record<string, string>> = {
         { label: 'Option 2', value: 2 },
         { label: 'Option 3', value: 3 },
       ],
-      // autoApply: false,
     },
     {
       id: 'single3',
@@ -95,7 +94,6 @@ export const FILTER_ROW: FilterRow<Record<string, string>> = {
         { label: 'Option 2', value: 2 },
         { label: 'Option 3', value: 3 },
       ],
-      // autoApply: false,
       'data-test-id': STORY_TEST_IDS.singleFilter,
     },
     {
