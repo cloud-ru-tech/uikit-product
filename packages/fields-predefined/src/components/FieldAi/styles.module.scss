@@ -1,9 +1,38 @@
+/* stylelint-disable color-no-hex */
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields' as ste;
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
 
 .wrapper {
   display: flex;
   flex-direction: column;
   gap: ste.$dimension-050m;
+  position: relative;
+}
+
+.passwordWrapper {
+  gap: 0;
+}
+
+.alert {
+  display: flex;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid stv.$sys-blue-decor-activated;
+  background-color: stv.$sys-blue-decor-default;
+  box-sizing: border-box;
+  height: 38px;
+  position: absolute;
+  left: 0;
+  top: -26px;
+  width: 100%;
+  color: stv.$sys-neutral-text-main;
+}
+
+.alertText {
+  flex: 1;
+  min-width: 0;
+  color: stv.$sys-neutral-text-main;
 }
 
 .secured {
@@ -34,18 +63,28 @@
 
 .submitButton {
   &:not([data-disabled]) {
-    /* stylelint-disable-next-line color-no-hex */
-    background: radial-gradient(92.53% 92.53% at 65.87% 21.69%, #7CB5F2 15%, #5FD7C2 45%, #26D07C 65%);
+    background: radial-gradient(92.53% 92.53% at 65.87% 21.69%, #7cb5f2 15%, #5fd7c2 45%, #26d07c 65%);
   }
 }
 
 .textarea {
-  &> :first-child {
-    &[data-validation=default]:not([data-readonly]):not([data-disable-focus]):focus-within:not([data-disabled]) {
+  & > :first-child {
+    &[data-validation='default']:not([data-readonly]):not([data-disable-focus]):focus-within:not([data-disabled]) {
       border-color: transparent;
-      /* stylelint-disable-next-line color-no-hex */
-      background: linear-gradient(var(--sys-neutral-background2-level), var(--sys-neutral-background2-level) 0) padding-box, radial-gradient(92.53% 92.53% at 65.87% 21.69%, #7CB5F2 8%, #78B9EC 17%, #70C6DD 28%, #64D8C7 38%, #5FD7C2 44%, #54D5B3 51%, #40D39C 58%, #26D07C 66%) border-box;
+      background:
+        linear-gradient(var(--sys-neutral-background2-level), var(--sys-neutral-background2-level) 0) padding-box,
+        radial-gradient(
+            92.53% 92.53% at 65.87% 21.69%,
+            #7cb5f2 8%,
+            #78b9ec 17%,
+            #70c6dd 28%,
+            #64d8c7 38%,
+            #5fd7c2 44%,
+            #54d5b3 51%,
+            #40d39c 58%,
+            #26d07c 66%
+          )
+          border-box;
     }
   }
 }
- 

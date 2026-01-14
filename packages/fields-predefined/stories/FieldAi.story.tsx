@@ -22,12 +22,14 @@ export default meta;
 
 type StoryProps = FieldAiProps & {
   showResetContextButton?: boolean;
+  showAlert?: boolean;
 };
 
 const onSubmit = (value: string) => window.alert(`Submitted: ${value}`);
 const handleResetContextClick = () => window.alert('Context has been reset successfully!');
+const handleCancelSecure = () => window.alert('Secure mode has been cancelled');
 
-const Template = ({ value: valueProp, showResetContextButton, ...args }: StoryProps) => {
+const Template = ({ value: valueProp, showResetContextButton, showAlert, ...args }: StoryProps) => {
   const [value, setValue] = useState(valueProp);
   const [aiChatOpened, setAiChatOpened] = useState(false);
 
@@ -72,6 +74,7 @@ const Template = ({ value: valueProp, showResetContextButton, ...args }: StoryPr
                 onChange={setValue}
                 onSubmit={onSubmit}
                 onResetContextClick={showResetContextButton ? handleResetContextClick : undefined}
+                onCancelSecure={showAlert && args.secure === 'password' ? handleCancelSecure : undefined}
               />
             </div>
           </div>
@@ -92,6 +95,7 @@ const Template = ({ value: valueProp, showResetContextButton, ...args }: StoryPr
         onChange={setValue}
         onSubmit={onSubmit}
         onResetContextClick={showResetContextButton ? handleResetContextClick : undefined}
+        onCancelSecure={showAlert && args.secure === 'password' ? handleCancelSecure : undefined}
       />
     </div>
   );
@@ -109,10 +113,15 @@ export const fieldAI: StoryObj<StoryProps> = {
   },
   args: {
     showResetContextButton: false,
+    showAlert: false,
   },
   argTypes: {
     showResetContextButton: {
       name: '[Stories]: Enable reset context button',
+    },
+    showAlert: {
+      name: '[Stories]: Show password alert',
+      description: 'Shows alert when secure mode is set to "password"',
     },
     secure: {
       options: [false, true, 'password'],

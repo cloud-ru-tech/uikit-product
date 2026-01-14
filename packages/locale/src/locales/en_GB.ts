@@ -218,6 +218,10 @@ export const en_GB = {
           hasSymbol: 'Minimum 1 special character: !, @, #, % etc.',
           noSpaces: 'No spaces',
         },
+        alert: {
+          text: 'You have switched to password entry mode',
+          button: 'Cancel',
+        },
         error: 'Password does not meet the requirements',
       },
       hint: {

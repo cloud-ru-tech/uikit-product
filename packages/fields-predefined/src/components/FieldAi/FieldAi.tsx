@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { forwardRef, KeyboardEventHandler, useEffect, useMemo, useRef, useState } from 'react';
 
-import { EyeClosedSVG, EyeSVG } from '@sbercloud/uikit-product-icons';
+import { EyeClosedSVG, EyeSVG, PasswordLockSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import {
   AdaptiveFieldTextArea,
@@ -10,12 +10,15 @@ import {
 } from '@sbercloud/uikit-product-mobile-fields';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction, ButtonOutline } from '@snack-uikit/button';
+import { themeVars } from '@snack-uikit/figma-tokens';
 import { Tooltip } from '@snack-uikit/tooltip';
+import { Typography } from '@snack-uikit/typography';
 
 import { FieldSubmitButton } from '../../helperComponents/FieldSubmitButton';
 import { TextAreaActionsFooter } from '../../helperComponents/TextAreaActionsFooter';
 import { isTouchDevice as isTouchDeviceHelper } from '../../helpers';
 import { AIDisclaimer } from '../AIDisclaimer/AIDisclaimer';
+import { AlertButton } from './components/AlertButton';
 import { MobileFieldAi } from './components/MobileFieldAi';
 import { WithPasswordValidation } from './components/WithPasswordValidation';
 import styles from './styles.module.scss';
@@ -29,11 +32,25 @@ export type FieldAiProps = WithLayoutType<
     onSubmit(value: string): void;
     /** Действие при клике по кнопке сброса контекста */
     onResetContextClick?(): void;
+    /** Действие для отмены секьюрности поля */
+    onCancelSecure?(): void;
   }
 >;
 
 export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
-  ({ secure = false, onSubmit: handleSubmitProp, value, onResetContextClick, disabled, className, ...props }, ref) => {
+  (
+    {
+      secure = false,
+      onSubmit: handleSubmitProp,
+      value,
+      onResetContextClick,
+      onCancelSecure,
+      disabled,
+      className,
+      ...props
+    },
+    ref,
+  ) => {
     const { layoutType, validationState } = props;
     const { t } = useLocale('FieldsPredefined');
     const isTouchDevice = isTouchDeviceHelper(layoutType);
@@ -48,6 +65,7 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
     const passwordValidation = useMemo(() => getValidationPassword(value), [value]);
     const isPasswordValid = isPasswordMode ? Object.values(passwordValidation).every(Boolean) : true;
     const showPasswordError = !isPasswordValid && secure && value;
+    const showPasswordAlert = Boolean(onCancelSecure) && secure === 'password';
 
     useEffect(
       () => () => {
@@ -113,7 +131,14 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
     }
 
     return (
-      <div className={cn(styles.wrapper, className)}>
+      <div className={cn(styles.wrapper, isPasswordMode && styles.passwordWrapper, className)}>
+        {showPasswordAlert && (
+          <div className={styles.alert}>
+            <PasswordLockSVG size={16} color={themeVars.sys.neutral.textSupport} />
+            <Typography.SansBodyS className={styles.alertText}>{t('FieldAi.secret.alert.text')}</Typography.SansBodyS>
+            <AlertButton label={t('FieldAi.secret.alert.button')} onClick={onCancelSecure} />
+          </div>
+        )}
         <WithPasswordValidation
           showValidation={isPasswordMode}
           passwordValidation={passwordValidation}
