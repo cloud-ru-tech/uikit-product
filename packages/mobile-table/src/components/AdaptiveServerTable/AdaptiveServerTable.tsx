@@ -3,11 +3,12 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { PaginationState, ServerTable as DesktopTable, ServerTableProps } from '@snack-uikit/table';
+import { useValueControl } from '@snack-uikit/utils';
 
-import { DEFAULT_PAGE_SIZE, DEFAULT_PAGINATION_LIMIT } from '../constants';
-import { useStateControl } from '../hooks';
+import { DEFAULT_PAGE_SIZE } from '../../constants';
 import { MobileTable, MobileTableProps } from '../MobileTable';
-import { onSearchDebounced } from '../utils';
+import { DEFAULT_PAGINATION_LIMIT } from './constants';
+import { onSearchDebounced } from './utils';
 
 export type AdaptiveServerTableProps<TData extends object, TFilters extends FiltersState> = Omit<
   ServerTableProps<TData, TFilters>,
@@ -34,7 +35,7 @@ export function AdaptiveServerTable<TData extends object, TFilters extends Filte
     ...rest
   } = props;
 
-  const { state: search, onStateChange: setSearch } = useStateControl<string>(searchProp, '');
+  const [search, setSearch] = useValueControl<string>(searchProp ?? { defaultValue: '' });
 
   const [tempSearch, setTempSearch] = useState(search || '');
 

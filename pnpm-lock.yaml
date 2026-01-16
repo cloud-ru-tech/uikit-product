@@ -1428,6 +1428,9 @@ importers:
 
   packages/mobile-table:
     dependencies:
+      '@cloud-ru/ft-request-payload-transform':
+        specifier: 0.3.0
+        version: 0.3.0
       '@sbercloud/uikit-product-icons':
         specifier: 16.1.1
         version: link:../icons
@@ -1449,6 +1452,9 @@ importers:
       '@snack-uikit/button':
         specifier: 0.19.16
         version: 0.19.16(react@18.2.0)
+      '@snack-uikit/chips':
+        specifier: 0.28.12
+        version: 0.28.12(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/figma-tokens':
         specifier: 18.0.1
         version: 18.0.1
@@ -1476,6 +1482,12 @@ importers:
       '@snack-uikit/toggles':
         specifier: 0.13.23
         version: 0.13.23(@types/react@18.2.79)(react@18.2.0)
+      '@snack-uikit/toolbar':
+        specifier: 0.14.15
+        version: 0.14.15(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils':
+        specifier: 4.0.1
+        version: 4.0.1(react@18.2.0)
       '@tanstack/match-sorter-utils':
         specifier: 8.19.4
         version: 8.19.4
@@ -1488,9 +1500,6 @@ importers:
       lodash.debounce:
         specifier: 4.0.8
         version: 4.0.8
-      uncontrollable:
-        specifier: 8.0.4
-        version: 8.0.4(react@18.2.0)
     devDependencies:
       '@types/lodash.debounce':
         specifier: 4.0.9
@@ -5423,6 +5432,11 @@ packages:
 
   '@snack-uikit/toolbar@0.14.13':
     resolution: {integrity: sha512-xL3qMElZOmHxsmct2wIlYfYONlE9PTDwAv/35xqkmKGx0cWWsTPklzZSr8flNmrd1K5A6XeOH7awj3RBirEf4w==}
+    peerDependencies:
+      '@snack-uikit/locale': '*'
+
+  '@snack-uikit/toolbar@0.14.15':
+    resolution: {integrity: sha512-tt5pyvJLCy7ZmONECcGcRG8It8YFvrBtoI01QaJcCAWczw9eH3hB17DgPHshPPwqR8LDowwgORCZidL3zoFn2Q==}
     peerDependencies:
       '@snack-uikit/locale': '*'
 
@@ -19235,6 +19249,26 @@ snapshots:
       '@snack-uikit/chips': 0.28.11(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/icons': 0.27.4
       '@snack-uikit/list': 0.32.10(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/locale': 0.15.3
+      '@snack-uikit/search-private': 0.4.33(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react@18.2.0)
+      '@snack-uikit/tag': 0.15.12(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/toggles': 0.13.23(@types/react@18.2.79)(react@18.2.0)
+      '@snack-uikit/tooltip': 0.18.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.0(react@18.2.0)
+      classnames: 2.5.1
+      uncontrollable: 8.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
+      - react
+      - react-dom
+
+  '@snack-uikit/toolbar@0.14.15(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@cloud-ru/ft-request-payload-transform': 0.3.0
+      '@snack-uikit/button': 0.19.16(react@18.2.0)
+      '@snack-uikit/chips': 0.28.12(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/icons': 0.27.4
+      '@snack-uikit/list': 0.32.11(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/locale': 0.15.3
       '@snack-uikit/search-private': 0.4.33(@snack-uikit/locale@0.15.3)(@types/react@18.2.79)(react@18.2.0)
       '@snack-uikit/tag': 0.15.12(react-dom@18.2.0(react@18.2.0))(react@18.2.0)

@@ -4,6 +4,7 @@ import { FunctionSettingsSVG } from '@snack-uikit/icons';
 import { GroupSelectItemProps } from '@snack-uikit/list';
 
 import styles from './styles.module.scss';
+
 export type ColumnsSettingsProps = {
   enabledColumns: string[];
   setEnabledColumns(enabledColumns: string[]): void;

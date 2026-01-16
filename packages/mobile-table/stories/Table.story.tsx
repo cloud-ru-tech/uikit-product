@@ -29,6 +29,7 @@ type StoryProps = Props & {
   initialColumnFiltersOpen: boolean;
   rowSelectionMode?: 'single' | 'multiple';
   showColumnsSettings?: boolean;
+  enablePersist?: boolean;
 };
 
 const renderHeader = (ctx: HeaderContext<StubData, unknown>) => `Table column №${ctx.column.id}`;
@@ -217,6 +218,7 @@ function Template({
   initialColumnFiltersOpen,
   rowSelectionMode,
   showColumnsSettings,
+  enablePersist,
   ...args
 }: StoryProps) {
   const data = useMemo(() => generateRows(rowsAmount, showStatusColumn), [rowsAmount, showStatusColumn]);
@@ -344,6 +346,14 @@ function Template({
             }
           : undefined
       }
+      savedState={
+        enablePersist
+          ? {
+              id: 'uikit-product-table-storybook_filter',
+              filterQueryKey: 'filters',
+            }
+          : undefined
+      }
     />
   );
 }
@@ -366,6 +376,7 @@ export const table: StoryObj<StoryProps> = {
     },
     rowSelectionMode: 'multiple',
     showColumnsSettings: true,
+    enablePersist: false,
   },
 
   argTypes: {
@@ -412,6 +423,10 @@ export const table: StoryObj<StoryProps> = {
     },
     showColumnsSettings: {
       name: '[Stories]: Show columns settings',
+      controls: { type: 'boolean' },
+    },
+    enablePersist: {
+      name: '[Stories]: Enable saving state to storage',
       controls: { type: 'boolean' },
     },
   },

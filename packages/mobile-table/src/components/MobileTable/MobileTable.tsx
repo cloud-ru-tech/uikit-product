@@ -12,20 +12,22 @@ import cn from 'classnames';
 import { useCallback, useEffect, useMemo } from 'react';
 
 import { useLocale } from '@sbercloud/uikit-product-locale';
-import { FiltersState, MobileChipChoiceRowProps } from '@sbercloud/uikit-product-mobile-chips';
+import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
 import { MobileToolbar, MobileToolbarProps } from '@sbercloud/uikit-product-mobile-toolbar';
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 import { SkeletonContextProvider } from '@snack-uikit/skeleton';
 import {
   getPinnedGroups,
   PaginationState,
-  TableProps,
   useColumnOrderByDrag,
   useColumnSettings,
   usePageReset,
 } from '@snack-uikit/table';
+import { useValueControl } from '@snack-uikit/utils';
 
+import { DEFAULT_PAGE_SIZE } from '../../constants';
 import {
+  ColumnsSettings,
   getRowActionsColumnDef,
   getStatusColumnDef,
   TableCard,
@@ -33,50 +35,18 @@ import {
   TablePagination,
   TableSorting,
   useEmptyState,
-} from '../helperComponents';
-import { ColumnsSettings } from '../helperComponents/ColumnsSettings';
-import { DEFAULT_PAGE_SIZE } from './constants';
-import { useLoadingTable, useStateControl } from './hooks';
+} from '../../helperComponents';
+import { useFilters, useLoadingTable } from './hooks';
 import styles from './styles.module.scss';
-import { fuzzyFilter } from './utils';
-
-export type MobileTableProps<TData extends object, TFilters extends FiltersState = Record<string, unknown>> = Pick<
-  TableProps<TData, TFilters>,
-  | 'data'
-  | 'columnDefinitions'
-  | 'suppressPagination'
-  | 'suppressToolbar'
-  | 'suppressSearch'
-  | 'search'
-  | 'onRefresh'
-  | 'moreActions'
-  | 'className'
-  | 'enableFuzzySearch'
-  | 'loading'
-  | 'dataError'
-  | 'dataFiltered'
-  | 'noDataState'
-  | 'noResultsState'
-  | 'errorDataState'
-  | 'sorting'
-  | 'pagination'
-  | 'pageCount'
-  | 'manualFiltering'
-  | 'manualPagination'
-  | 'manualSorting'
-  | 'getRowId'
-  | 'rowSelection'
-  | 'bulkActions'
-  | 'columnsSettings'
-  | 'savedState'
-  | 'autoResetPageIndex'
-  | 'toolbarAfter'
-> &
-  WithSupportProps<{
-    headlineId?: string;
-    headerBackground?: 'default' | '1-level' | '2-level';
-    columnFilters?: MobileChipChoiceRowProps<FiltersState>;
-  }>;
+import { MobileTableProps } from './types';
+import {
+  fuzzyFilter,
+  getPersistedStateValidator,
+  mapPaginationToRequestPayload,
+  mapPaginationToTableState,
+  mapSortToRequestPayload,
+  mapSortToTableState,
+} from './utils';
 
 export function MobileTable<TData extends object, TFilters extends FiltersState = Record<string, unknown>>({
   data,
@@ -115,16 +85,14 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
 }: MobileTableProps<TData, TFilters>) {
   const defaultPaginationState = useMemo(() => ({ pageIndex: 0, pageSize: DEFAULT_PAGE_SIZE }), []);
 
-  const { state: sorting, onStateChange: onSortingChange } = useStateControl<SortingState>(sortingProp, []);
-  const { state: globalFilter, onStateChange: onGlobalFilterChange } = useStateControl<string>(search, '');
-  const { state: pagination, onStateChange: onPaginationChange } = useStateControl<PaginationState>(
-    paginationProp,
-    defaultPaginationState,
+  const [sorting = [], onSortingChange] = useValueControl<SortingState>(sortingProp ?? { defaultValue: [] });
+  const [globalFilter = '', onGlobalFilterChange] = useValueControl<string>(search ?? { defaultValue: '' });
+  const [pagination = defaultPaginationState, onPaginationChange] = useValueControl<PaginationState>(
+    paginationProp ?? { defaultValue: defaultPaginationState },
   );
 
-  const { state: rowSelection, onStateChange: onRowSelectionChange } = useStateControl<RowSelectionState>(
-    rowSelectionProp,
-    {},
+  const [rowSelection = {}, onRowSelectionChange] = useValueControl<RowSelectionState>(
+    rowSelectionProp ?? { defaultValue: {} },
   );
 
   const enableRowSelection = useCallback(
@@ -311,6 +279,9 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
 
   const tableFilteredRows = table.getFilteredRowModel().rows;
 
+  const { filter, patchedFilter, setFilter, setFilterVisibility } = useFilters({ columnFilters });
+  const validatePersistedState = useMemo(() => getPersistedStateValidator(columnFilters), [columnFilters]);
+
   usePageReset({
     manualPagination,
     maximumAvailablePage: pageCount || tableFilteredRows.length / pagination.pageSize,
@@ -336,7 +307,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
             }
             onRefresh={onRefresh ? handleOnRefresh : undefined}
             outline
-            filterRow={columnFilters}
+            filterRow={patchedFilter}
             after={
               toolbarAfter || shouldShowSorting || (areColumnsSettingsEnabled && columnsSettings) ? (
                 <>
@@ -366,6 +337,30 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
             onCheck={enableSelection ? handleOnToolbarCheck : undefined}
             checked={table.getIsAllPageRowsSelected()}
             indeterminate={table.getIsSomePageRowsSelected()}
+            persist={
+              savedState?.id && savedState?.filterQueryKey
+                ? {
+                    id: savedState.id,
+                    filterQueryKey: savedState.filterQueryKey,
+                    validateData: data => validatePersistedState(data),
+                    state: {
+                      pagination: mapPaginationToRequestPayload(pagination),
+                      ordering: mapSortToRequestPayload(sorting),
+                      filter,
+                      search: globalFilter || '',
+                    },
+                    onLoad: state => {
+                      state.pagination && onPaginationChange(mapPaginationToTableState(state.pagination));
+                      state.search && onGlobalFilterChange(state.search);
+                      state.ordering && onSortingChange(mapSortToTableState(state.ordering));
+                      if (state.filter) {
+                        setFilter(state.filter as TFilters);
+                        setFilterVisibility(Object.keys(state.filter));
+                      }
+                    },
+                  }
+                : undefined
+            }
           />
         </div>
       )}

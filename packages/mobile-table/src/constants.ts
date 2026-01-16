@@ -16,3 +16,5 @@ export const TEST_IDS = {
 };
 
 export const ROW_ACTIONS_COLUMN_ID = 'rowActions';
+
+export const DEFAULT_PAGE_SIZE = 5;
