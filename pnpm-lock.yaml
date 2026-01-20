@@ -26,8 +26,8 @@ importers:
         specifier: 2.0.4
         version: 2.0.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.15(prettier@3.7.4))
       '@cloud-ru/ft-storybook-readme-addon':
-        specifier: 2.0.3
-        version: 2.0.3(@storybook/components@8.6.15(storybook@8.6.15(prettier@3.7.4)))(@storybook/manager-api@8.3.6(storybook@8.6.15(prettier@3.7.4)))(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 2.0.5
+        version: 2.0.5(@storybook/components@8.6.15(storybook@8.6.15(prettier@3.7.4)))(@storybook/manager-api@8.3.6(storybook@8.6.15(prettier@3.7.4)))(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@geometricpanda/storybook-addon-badges':
         specifier: 2.0.5
         version: 2.0.5(@storybook/blocks@8.6.15(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.15(prettier@3.7.4)))(@storybook/components@8.6.15(storybook@8.6.15(prettier@3.7.4)))(@storybook/core-events@8.6.15(storybook@8.6.15(prettier@3.7.4)))(@storybook/manager-api@8.3.6(storybook@8.6.15(prettier@3.7.4)))(@storybook/preview-api@8.6.15(storybook@8.6.15(prettier@3.7.4)))(@storybook/theming@8.6.15(storybook@8.6.15(prettier@3.7.4)))(@storybook/types@8.6.14(storybook@8.6.15(prettier@3.7.4)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -551,7 +551,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-mobile-dropdown':
         specifier: 0.9.31
         version: link:../mobile-dropdown
@@ -671,7 +671,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-utils':
         specifier: 8.1.0
         version: link:../utils
@@ -698,7 +698,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-mobile-dropdown':
         specifier: 0.9.31
         version: link:../mobile-dropdown
@@ -777,7 +777,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-mobile-drawer':
         specifier: 0.9.25
         version: link:../mobile-drawer
@@ -905,7 +905,7 @@ importers:
     dependencies:
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-utils':
         specifier: 8.1.0
         version: link:../utils
@@ -935,7 +935,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-utils':
         specifier: 8.1.0
         version: link:../utils
@@ -999,7 +999,7 @@ importers:
     dependencies:
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
 
   packages/markdown:
     dependencies:
@@ -1100,7 +1100,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-mobile-dropdown':
         specifier: 0.9.31
         version: link:../mobile-dropdown
@@ -1216,7 +1216,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-mobile-dropdown':
         specifier: 0.9.31
         version: link:../mobile-dropdown
@@ -1283,7 +1283,7 @@ importers:
         version: link:../info-row
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.5.4
         version: link:../mobile-tooltip
@@ -1319,7 +1319,7 @@ importers:
         version: link:../layout
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-mobile-dropdown':
         specifier: 0.9.31
         version: link:../mobile-dropdown
@@ -1433,7 +1433,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-mobile-chips':
         specifier: 0.8.47
         version: link:../mobile-chips
@@ -1533,7 +1533,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-mobile-chips':
         specifier: 0.8.47
         version: link:../mobile-chips
@@ -1608,7 +1608,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-markdown':
         specifier: 0.1.10
         version: link:../markdown
@@ -1665,7 +1665,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-utils':
         specifier: 8.1.0
         version: link:../utils
@@ -1725,7 +1725,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.5.4
         version: link:../mobile-tooltip
@@ -1770,7 +1770,7 @@ importers:
     dependencies:
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-utils':
         specifier: 8.1.0
         version: link:../utils
@@ -1794,7 +1794,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-utils':
         specifier: 8.1.0
         version: link:../utils
@@ -2060,7 +2060,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-site-layout':
         specifier: 0.5.2
         version: link:../site-layout
@@ -2162,7 +2162,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-mobile-fields':
         specifier: 0.12.4
         version: link:../mobile-fields
@@ -2416,7 +2416,7 @@ importers:
         version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
-        version: link:../locale
+        version: 0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
       '@sbercloud/uikit-product-mobile-carousel':
         specifier: 0.2.0
         version: link:../mobile-carousel
@@ -3067,8 +3067,8 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0
 
-  '@cloud-ru/ft-storybook-readme-addon@2.0.3':
-    resolution: {integrity: sha512-Dsfze2o45XDT/cEVcUIu7yg8/CdIM6CGuMXZz+gDtkBuYjUEsIUVcSDZyUnKMDy0bxxUTrhUsohhrJqAkkCL2Q==}
+  '@cloud-ru/ft-storybook-readme-addon@2.0.5':
+    resolution: {integrity: sha512-Ja4ceM03KYC48mNd/2QxJOU6JMY6wUY3A66jUq862vAcQdbIHY51L4PsqDZhAPJrruwuuwjZex/H7bXi2Zkj8A==}
     peerDependencies:
       '@storybook/components': 7.x || 8.x
       '@storybook/manager-api': 7.x || 8.x
@@ -4361,6 +4361,9 @@ packages:
 
   '@sbercloud/uikit-product-icons@15.1.6':
     resolution: {integrity: sha512-2BOKJ30uPE9i3mJE72uBZxSWc3Se7qQHRHM9VAjXKF1fQzUOeU1bpdUgxgmdl5mP+Lk3d7OZkd9WrOLqq1cKVw==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-icons/-/@sbercloud/uikit-product-icons-15.1.6.tgz}
+
+  '@sbercloud/uikit-product-locale@0.25.0':
+    resolution: {integrity: sha512-A4bUYI6iKYBZ8QA99qQiMQtXlUiaBxjt4XrjDy1/+/Z0M9Yf9Ao7fwUlejDqi92vvRoFWcDfVjtuqFsutOAebw==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-locale/-/@sbercloud/uikit-product-locale-0.25.0.tgz}
 
   '@sbercloud/uikit-product-mobile-drawer@0.9.20':
     resolution: {integrity: sha512-keO4CkjAx0nWxsYdlKgMOHL26QBwAsPQYfQbsI2W0vpobshVdnFddz9wn9l7C6Lcv/FzuYUE6C6QIl3Lp2/u7w==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-mobile-drawer/-/@sbercloud/uikit-product-mobile-drawer-0.9.20.tgz}
@@ -6148,6 +6151,9 @@ packages:
 
   '@types/postcss-modules-scope@3.0.4':
     resolution: {integrity: sha512-//ygSisVq9kVI0sqx3UPLzWIMCmtSVrzdljtuaAEJtGoGnpjBikZ2sXO5MpH9SnWX9HRfXxHifDAXcQjupWnIQ==}
+
+  '@types/prismjs@1.26.5':
+    resolution: {integrity: sha512-AUZTa7hQ2KY5L7AmtSiqxlhWxb4ina0yd8hNbl4TWuqnv/pFP0nDMb3YrfSBf4hJVGLh2YEIBfKaBW/9UEl6IQ==}
 
   '@types/prop-types@15.7.15':
     resolution: {integrity: sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==}
@@ -11546,6 +11552,12 @@ packages:
   react-lifecycles-compat@3.0.4:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
 
+  react-markdown@10.1.0:
+    resolution: {integrity: sha512-qKxVopLT/TyA6BX3Ue5NwabOsAzm0Q7kAPwq6L+wWDwisYs7R8vZ0nRXqq6rkueboxpkjvLGU9fWifiX/ZZFxQ==}
+    peerDependencies:
+      '@types/react': '>=18'
+      react: 18.2.0
+
   react-markdown@7.1.1:
     resolution: {integrity: sha512-bXS7indkcPlCLB6wRFFzX8Xdghr62TBxUF2587o+CUkaZlNaoILb2qNt+5pYmTZuCOC+OeEcdJ+06mu5whtCVQ==}
     peerDependencies:
@@ -11578,6 +11590,12 @@ packages:
 
   react-syntax-highlighter@15.6.1:
     resolution: {integrity: sha512-OqJ2/vL7lEeV5zTJyG7kmARppUjiB9h9udl4qHQjjgEos66z00Ia0OckwYfRxCSFrW8RJIBnsBwQsHZbVPspqg==}
+    peerDependencies:
+      react: 18.2.0
+
+  react-syntax-highlighter@16.1.0:
+    resolution: {integrity: sha512-E40/hBiP5rCNwkeBN1vRP+xow1X0pndinO+z3h7HLsHyjztbyjfzNWNKuAsJj+7DLam9iT4AaaOZnueCU+Nplg==}
+    engines: {node: '>= 16.20.2'}
     peerDependencies:
       react: 18.2.0
 
@@ -11705,6 +11723,9 @@ packages:
   refractor@3.6.0:
     resolution: {integrity: sha512-MY9W41IOWxxk31o+YvFCNyNzdkc9M20NoZK5vq6jkv4I/uh2zkWcfudj0Q1fovjUQJrNewS9NMzeTtqPf+n5EA==}
 
+  refractor@5.0.0:
+    resolution: {integrity: sha512-QXOrHQF5jOpjjLfiNk5GFnWhRXvxjUVnlFxkeDmewR5sXkr3iM46Zo+CnRR8B+MDVqkULW4EcLVcRBNOPXHosw==}
+
   regenerate-unicode-properties@10.2.2:
     resolution: {integrity: sha512-m03P+zhBeQd1RGnYxrGyDAPpWX/epKirLrp8e3qevZdVkKtnCrjjWczIbYc8+xd6vcTStVlqfycTx1KR4LOr0g==}
     engines: {node: '>=4'}
@@ -11760,8 +11781,8 @@ packages:
   remark-gfm@3.0.1:
     resolution: {integrity: sha512-lEFDoi2PICJyNrACFOfDD3JlLkuSbOa5Wd8EPt06HUdptv8Gn0bxYTdbU/XXQ3swAPkEaGxxPN9cbnMHvVu1Ig==}
 
-  remark-gfm@4.0.0:
-    resolution: {integrity: sha512-U92vJgBPkbw4Zfu/IiW2oTZLSL3Zpv+uI7My2eq8JxKgqraFdU8YUGicEJCEgSbeaG+QDFqIcwwfMTOEelPxuA==}
+  remark-gfm@4.0.1:
+    resolution: {integrity: sha512-1quofZ2RQ9EWdeN34S79+KExV1764+wCUGop5CPL1WGdD0ocPpu91lzPGbwWMECpEpd42kJGQwzRfyov9j4yNg==}
 
   remark-parse@10.0.2:
     resolution: {integrity: sha512-3ydxgHa/ZQzG8LvC7jTXccARYDcRld3VfcgIIFs7bI6vbRSxJJmzgLEIIoYKyrfhaY+ujuWaf/PJiMZXoiCXgw==}
@@ -14317,16 +14338,16 @@ snapshots:
     transitivePeerDependencies:
       - storybook
 
-  '@cloud-ru/ft-storybook-readme-addon@2.0.3(@storybook/components@8.6.15(storybook@8.6.15(prettier@3.7.4)))(@storybook/manager-api@8.3.6(storybook@8.6.15(prettier@3.7.4)))(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@cloud-ru/ft-storybook-readme-addon@2.0.5(@storybook/components@8.6.15(storybook@8.6.15(prettier@3.7.4)))(@storybook/manager-api@8.3.6(storybook@8.6.15(prettier@3.7.4)))(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@storybook/components': 8.6.15(storybook@8.6.15(prettier@3.7.4))
       '@storybook/manager-api': 8.3.6(storybook@8.6.15(prettier@3.7.4))
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-markdown: 9.0.1(@types/react@18.2.79)(react@18.2.0)
-      react-syntax-highlighter: 15.6.1(react@18.2.0)
+      react-markdown: 10.1.0(@types/react@18.2.79)(react@18.2.0)
+      react-syntax-highlighter: 16.1.0(react@18.2.0)
       rehype-raw: 7.0.0
-      remark-gfm: 4.0.0
+      remark-gfm: 4.0.1
     transitivePeerDependencies:
       - '@types/react'
       - supports-color
@@ -15722,6 +15743,16 @@ snapshots:
       - '@sbercloud/figma-tokens-web'
       - '@snack-uikit/figma-tokens'
       - react
+
+  '@sbercloud/uikit-product-locale@0.25.0(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))':
+    dependencies:
+      '@cloud-ru/common-translations': 1.3.2(@cloud-ru/ft-config-i18n@1.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.9.3))
+      '@snack-uikit/locale': 0.15.3
+      lodash.get: 4.4.2
+      lodash.merge: 4.6.2
+      lodash.set: 4.3.2
+    transitivePeerDependencies:
+      - '@cloud-ru/ft-config-i18n'
 
   '@sbercloud/uikit-product-mobile-drawer@0.9.20(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@18.0.1)(@sbercloud/figma-tokens-giga-id@19.0.0)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@18.0.1)(@snack-uikit/figma-tokens@18.0.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
@@ -20355,6 +20386,8 @@ snapshots:
   '@types/postcss-modules-scope@3.0.4':
     dependencies:
       postcss: 8.5.6
+
+  '@types/prismjs@1.26.5': {}
 
   '@types/prop-types@15.7.15': {}
 
@@ -27101,6 +27134,24 @@ snapshots:
 
   react-lifecycles-compat@3.0.4: {}
 
+  react-markdown@10.1.0(@types/react@18.2.79)(react@18.2.0):
+    dependencies:
+      '@types/hast': 3.0.4
+      '@types/mdast': 4.0.4
+      '@types/react': 18.2.79
+      devlop: 1.1.0
+      hast-util-to-jsx-runtime: 2.3.6
+      html-url-attributes: 3.0.1
+      mdast-util-to-hast: 13.2.1
+      react: 18.2.0
+      remark-parse: 11.0.0
+      remark-rehype: 11.1.2
+      unified: 11.0.5
+      unist-util-visit: 5.0.0
+      vfile: 6.0.3
+    transitivePeerDependencies:
+      - supports-color
+
   react-markdown@7.1.1(@types/react@18.2.79)(react@18.2.0):
     dependencies:
       '@types/hast': 2.3.10
@@ -27167,6 +27218,16 @@ snapshots:
       prismjs: 1.30.0
       react: 18.2.0
       refractor: 3.6.0
+
+  react-syntax-highlighter@16.1.0(react@18.2.0):
+    dependencies:
+      '@babel/runtime': 7.28.4
+      highlight.js: 10.7.3
+      highlightjs-vue: 1.0.0
+      lowlight: 1.20.0
+      prismjs: 1.30.0
+      react: 18.2.0
+      refractor: 5.0.0
 
   react-textarea-autosize@8.5.3(@types/react@18.2.79)(react@18.2.0):
     dependencies:
@@ -27333,6 +27394,13 @@ snapshots:
       parse-entities: 2.0.0
       prismjs: 1.27.0
 
+  refractor@5.0.0:
+    dependencies:
+      '@types/hast': 3.0.4
+      '@types/prismjs': 1.26.5
+      hastscript: 9.0.1
+      parse-entities: 4.0.2
+
   regenerate-unicode-properties@10.2.2:
     dependencies:
       regenerate: 1.4.2
@@ -27406,7 +27474,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  remark-gfm@4.0.0:
+  remark-gfm@4.0.1:
     dependencies:
       '@types/mdast': 4.0.4
       mdast-util-gfm: 3.1.0
