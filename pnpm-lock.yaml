@@ -1619,7 +1619,7 @@ importers:
         specifier: 0.6.17
         version: link:../switch-row
       '@sbercloud/uikit-product-toggles-predefined':
-        specifier: 0.8.17
+        specifier: 0.8.18
         version: link:../toggles-predefined
       '@sbercloud/uikit-product-utils':
         specifier: 8.1.0

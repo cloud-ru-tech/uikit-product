@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.16.0 (2026-01-20)
+
+
+### Features
+
+* **AINFR-4337:** alert for secure password field ([b44c4dc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b44c4dc95160f4758070c33380581a1103c530a5))
+
+
+
+
+
 ## 0.15.3 (2025-12-24)
 
 ### Only dependencies have been changed

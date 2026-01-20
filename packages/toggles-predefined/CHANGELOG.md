@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.18 (2026-01-20)
+
+
+### Bug Fixes
+
+* **RAG-1030:** truncate prop in toggle-card ([5e78074](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5e78074cbfdb5f37874d109df552a81184afdc34))
+
+
+
+
+
 ## 0.8.17 (2025-12-17)
 
 ### Only dependencies have been changed
