@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.17.0 (2026-01-20)
+
+
+### Features
+
+* **GIGAID-673:** fieldPhone browser paste ([0f3ed76](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f3ed76746a5499db194edc06c97f7987461262d))
+
+
+
+
+
 # 0.16.0 (2026-01-20)
 
 
