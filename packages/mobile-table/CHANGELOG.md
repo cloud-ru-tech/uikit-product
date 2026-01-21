@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.17.0 (2026-01-21)
+
+
+### Features
+
+* **FF-7319:** mobile table persistent filters state and structure refactoring ([80e26a3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/80e26a317a9b25eb8af327329a4b14d47e6b8b60))
+
+
+
+
+
 ## 0.16.3 (2025-12-17)
 
 ### Only dependencies have been changed

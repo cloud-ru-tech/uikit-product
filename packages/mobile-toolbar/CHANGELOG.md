@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2026-01-21)
+
+
+### Features
+
+* **FF-7319:** persist state functionality in mobile toolbar ([95099d3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/95099d3de3883152d2eb8066537c4bb8ad74ed92))
+
+
+
+
+
 ## 0.4.14 (2025-12-17)
 
 ### Only dependencies have been changed

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-table",
   "title": "Mobile Table",
-  "version": "0.16.3",
+  "version": "0.17.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -40,7 +40,7 @@
     "@sbercloud/uikit-product-icons": "16.1.1",
     "@sbercloud/uikit-product-mobile-chips": "0.8.47",
     "@sbercloud/uikit-product-mobile-dropdown": "0.9.31",
-    "@sbercloud/uikit-product-mobile-toolbar": "0.4.14",
+    "@sbercloud/uikit-product-mobile-toolbar": "0.5.0",
     "@sbercloud/uikit-product-utils": "8.1.0",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/chips": "0.28.12",
@@ -53,8 +53,8 @@
     "@snack-uikit/status": "0.10.7",
     "@snack-uikit/table": "0.37.25",
     "@snack-uikit/toggles": "0.13.23",
-    "@snack-uikit/utils": "4.0.1",
     "@snack-uikit/toolbar": "0.14.15",
+    "@snack-uikit/utils": "4.0.1",
     "@tanstack/match-sorter-utils": "8.19.4",
     "@tanstack/react-table": "8.12.0",
     "classnames": "2.5.1",

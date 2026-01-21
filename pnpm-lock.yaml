@@ -1444,7 +1444,7 @@ importers:
         specifier: 0.9.31
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-toolbar':
-        specifier: 0.4.14
+        specifier: 0.5.0
         version: link:../mobile-toolbar
       '@sbercloud/uikit-product-utils':
         specifier: 8.1.0
