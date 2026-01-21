@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.2 (2026-01-21)
+
+
+### Bug Fixes
+
+* **SITE-10515:** update hero slider carousel deps ([0deb215](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0deb215e38183435ac4f12d38aaaff80e929c1ba))
+
+
+
+
+
 ## 1.3.1 (2025-12-24)
 
 ### Only dependencies have been changed
