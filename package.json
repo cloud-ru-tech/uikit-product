@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@cloud-ru/eslint-plugin-ssr-safe-react": "0.6.0",
+    "@cloud-ru/ft-config-vitest": "1.3.0",
     "@cloud-ru/ft-conventional-changelog-old": "npm:@cloud-ru/ft-conventional-changelog@1.1.0",
     "@cloud-ru/ft-storybook-brand-addon": "2.0.7",
     "@cloud-ru/ft-storybook-deps-graph-addon": "2.0.4",
@@ -47,7 +48,6 @@
     "@sbercloud/figma-tokens-web": "18.0.1",
     "@sbercloud/ft-all-linters-pack": "5.0.1",
     "@sbercloud/ft-config-ai-editor": "0.9.1",
-    "@sbercloud/ft-config-vitest": "3.1.2",
     "@sbercloud/ft-copy-to-clipboard": "3.0.1",
     "@sbercloud/ft-storybook-deps-table-addon": "0.1.6",
     "@snack-uikit/alert": "0.16.21",
