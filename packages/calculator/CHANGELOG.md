@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.39.0 (2026-01-26)
+
+
+### Features
+
+* **SITE-10509:** update calculator VM_WARE_VIRTUAL_WORKSPACES ([9be7f90](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9be7f9066c013dfbea10dddb4c7656fcd6d61956))
+
+
+
+
+
 ## 0.38.1 (2025-12-24)
 
 ### Only dependencies have been changed
