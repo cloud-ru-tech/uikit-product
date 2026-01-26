@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Markdown } from '../../../storybook/welcome/markdown/Markdown';
+import { Markdown } from '../../../storybook/stories/components/markdown/Markdown';
 import Doc from '../README.md';
 
 const meta: Meta = {

@@ -1,4 +1,4 @@
-body[data-theme='purpleDark'], body[data-theme='greenDark'] {
+.markdown-body-dark {
   --color-prettylights-syntax-comment: #8b949e;
   --color-prettylights-syntax-constant: #79c0ff;
   --color-prettylights-syntax-entity: #d2a8ff;
@@ -43,7 +43,7 @@ body[data-theme='purpleDark'], body[data-theme='greenDark'] {
   --color-danger-fg: #f85149;
 }
 
-body[data-theme='purple'], body[data-theme='green'] {
+.markdown-body-light {
   --color-prettylights-syntax-comment: #6e7781;
   --color-prettylights-syntax-constant: #0550ae;
   --color-prettylights-syntax-entity: #8250df;

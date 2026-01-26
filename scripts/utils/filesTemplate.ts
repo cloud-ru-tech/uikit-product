@@ -183,7 +183,7 @@ export function ${componentName}(props: ${componentName}Props) {
   const stylesFilePath = path.join(
     `./${PackagesRootFolder}/${packageRootFolderName}/${Folders.srcComponents}/styles.module.scss`,
   );
-  const stylesFileContent = `@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+  const stylesFileContent = `@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .${className} {
   box-sizing: border-box;

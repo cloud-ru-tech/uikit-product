@@ -2,8 +2,8 @@ import { PieChart } from 'react-minimal-pie-chart';
 
 import { themeVars } from '@snack-uikit/figma-tokens';
 
-import styles from '../styles.module.scss';
-import { SingleChartProps } from '../types';
+import styles from './styles.module.scss';
+import { SingleChartProps } from './types';
 
 export function SingleChart(props: SingleChartProps) {
   return (

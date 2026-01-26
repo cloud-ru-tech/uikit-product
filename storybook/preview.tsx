@@ -1,32 +1,24 @@
 import './styles.module.scss';
 
+import { Sprite, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
+import { LocaleProvider } from '@sbercloud/uikit-product-locale';
+import { GlobalTypes, Parameters } from '@storybook/csf';
+import { Preview } from '@storybook/react';
+import { themes, ThemeVars } from '@storybook/theming';
+import { FormProvider, useForm } from 'react-hook-form';
+
 import {
   PARAM_CAN_ADD_CUSTOM_BRAND_KEY,
   PARAM_COLOR_MAP_KEY,
   PARAM_KEY,
   withBrand,
 } from '@cloud-ru/ft-storybook-brand-addon';
-import { GlobalTypes, Parameters } from '@storybook/csf';
-import { Preview } from '@storybook/react';
-import { themes, ThemeVars } from '@storybook/theming';
-import { FormProvider, useForm } from 'react-hook-form';
-import { useDarkMode } from 'storybook-dark-mode';
-
-import { Sprite, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
-import { LocaleProvider } from '@sbercloud/uikit-product-locale';
 import { Alert } from '@snack-uikit/alert';
 import { Link } from '@snack-uikit/link';
 
 import { ConfigProvider } from '../packages/utils/src/config';
-import {
-  BADGE,
-  Brand,
-  BRAND_TO_BRAND_MODE_MAP,
-  BRAND_TO_THEME_MAP,
-  DEFAULT_BRAND_COLORS_MAP,
-  DEFAULT_BRAND_MAP,
-  Mode,
-} from './constants';
+import { themes as additionalThemes } from '../themes.config';
+import { BADGE, Brand, DEFAULT_BRAND_COLORS_MAP, DEFAULT_BRAND_MAP } from './constants';
 
 const LanguageCodeType = ConfigProvider.languages;
 
@@ -34,10 +26,7 @@ const url = process.env.DEPS_URL && new URL(process.env.DEPS_URL);
 
 const decorators: Preview['decorators'] = [
   withBrand,
-  (Story, { globals: { locale, [PARAM_KEY]: brand }, parameters: { badges, snackUiLink } }) => {
-    const isDark = useDarkMode();
-    const mode = isDark ? Mode.Dark : Mode.Light;
-    const normalizedBrand = Object.values(Brand).includes(brand) ? (brand as Brand) : Brand.Cloud;
+  (Story, { globals: { locale }, parameters: { badges, snackUiLink } }) => {
     const languageCode = locale || LanguageCodeType.ruRU;
 
     const methods = useForm({
@@ -78,13 +67,7 @@ const decorators: Preview['decorators'] = [
             // @ts-ignore
             additionalTranslationsResources={undefined}
           >
-            <ConfigProvider
-              theme={BRAND_TO_THEME_MAP[normalizedBrand][mode] || ConfigProvider.themes.Purple}
-              brand={BRAND_TO_BRAND_MODE_MAP[normalizedBrand][mode] || ConfigProvider.brand.Cloud}
-              languageCode={languageCode}
-            >
-              <Story />
-            </ConfigProvider>
+            <Story />
           </LocaleProvider>
         </FormProvider>
       </div>
@@ -158,36 +141,41 @@ const globalTypes: GlobalTypes = {
   [PARAM_KEY]: {
     name: 'Brand',
     description: 'Changing brands',
-    defaultValue: Brand.Cloud,
+    defaultValue: Brand.Default,
   },
   [PARAM_COLOR_MAP_KEY]: {
     name: 'Brand Map with Colors',
     description: 'Map of color for brands list',
-    defaultValue: DEFAULT_BRAND_COLORS_MAP,
+    defaultValue: {
+      ...Object.entries(DEFAULT_BRAND_COLORS_MAP).reduce((res: Record<string, string>, [key, value]) => {
+        res[key as Brand] = value;
+        return res;
+      }, {}),
+      ...additionalThemes.reduce((res: Record<string, string>, theme) => {
+        res[theme.key] = theme.color;
+        return res;
+      }, {}),
+    },
   },
+  ...Object.entries(DEFAULT_BRAND_MAP).reduce((res: GlobalTypes, [key, value]) => {
+    res[key as Brand] = {
+      name: key,
+      description: '',
+      defaultValue: value,
+    };
+    return res;
+  }, {}),
+  ...additionalThemes.reduce((res: GlobalTypes, { key, name, defaultValue }) => {
+    res[key] = {
+      name,
+      description: '',
+      defaultValue,
+    };
+    return res;
+  }, {}),
   [PARAM_CAN_ADD_CUSTOM_BRAND_KEY]: {
     name: 'Can add custom brand',
     defaultValue: false,
-  },
-  [Brand.Cloud]: {
-    name: 'Brand Cloud',
-    description: '',
-    defaultValue: DEFAULT_BRAND_MAP[Brand.Cloud],
-  },
-  [Brand.MLSpace]: {
-    name: 'Brand MLSpace',
-    description: '',
-    defaultValue: DEFAULT_BRAND_MAP[Brand.MLSpace],
-  },
-  [Brand.Site]: {
-    name: 'Brand Site',
-    description: '',
-    defaultValue: DEFAULT_BRAND_MAP[Brand.Site],
-  },
-  [Brand.GigaId]: {
-    name: 'Brand GigaId',
-    description: '',
-    defaultValue: DEFAULT_BRAND_MAP[Brand.GigaId],
   },
 };
 

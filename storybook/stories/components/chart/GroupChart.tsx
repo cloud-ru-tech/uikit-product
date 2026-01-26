@@ -2,8 +2,8 @@ import { PieChart, pieChartDefaultProps } from 'react-minimal-pie-chart';
 
 import { themeVars } from '@snack-uikit/figma-tokens';
 
-import styles from '../styles.module.scss';
-import { DefaultChartProps } from '../types';
+import styles from './styles.module.scss';
+import { DefaultChartProps } from './types';
 
 export function GroupChart(props: DefaultChartProps) {
   return (

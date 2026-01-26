@@ -2,15 +2,15 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { themeVars } from '@snack-uikit/figma-tokens';
 
-import { GroupChart } from '../src/chart/GroupChart';
-import { SingleChart } from '../src/chart/SingleChart';
-import { PackagesStatistics } from '../src/types';
+import { GroupChart } from './components/chart/GroupChart';
+import { SingleChart } from './components/chart/SingleChart';
+import { PackagesStatistics } from './components/chart/types';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Welcome/Statistics',
 };
-// eslint-disable-next-line import/no-default-export
+
 export default meta;
 
 function Template() {

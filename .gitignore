@@ -48,3 +48,7 @@ blob-report/
 /playwright/.cache/
 .auth
 playwright/coverage/
+
+
+snack.config.ts
+themes.config.ts

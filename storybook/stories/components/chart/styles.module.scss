@@ -1,4 +1,4 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@snack-uikit/figma-tokens/build/scss/styles-theme-variables.scss';
 
 .groupTitle {
   @include styles-theme-variables.composite-var(styles-theme-variables.$sans-title-m);

@@ -1,1 +1,1 @@
-module.exports = require('@sbercloud/ft-all-linters-pack').defaultLintStagedConfig;
+module.exports = require('@cloud-ru/ft-all-linters-pack').defaultLintStagedConfig;

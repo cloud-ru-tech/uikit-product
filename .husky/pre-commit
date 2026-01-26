@@ -1,4 +1,4 @@
-# 8.0.0
+# 1.2.2
 node_modules/.bin/lint-staged
 pnpx @cloud-ru/ft-deps-validator@latest
 node_modules/.bin/ts-node scripts/docgen/docgenForStagedPackages.ts

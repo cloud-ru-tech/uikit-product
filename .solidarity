@@ -1,14 +1,6 @@
 {
   "$schema": "http://json.schemastore.org/solidaritySchema",
   "requirements": {
-    "pnpm": [
-      {
-        "rule": "cli",
-        "binary": "pnpm",
-        "semver": "^10.22.0",
-        "error": "You have pnpm@{{installedVersion}}, and need pnpm@{{wantedVersion}}. Fix with `pnpm self-update {{wantedVersion}}`"
-      }
-    ],
     "NPM": [
       {
         "rule": "cli",
@@ -27,12 +19,13 @@
         "error": "You have node@{{installedVersion}}, and need node@{{wantedVersion}}. Go to https://nodejs.org/ to update`"
       }
     ],
-    "Git email": [
+    "PNPM": [
       {
-        "rule": "shell",
-        "command": "git config user.email",
-        "match": ".+@cloud\\.ru",
-        "error": "You have an incorrect email set in git. Execute `git config --global user.email {your-name}@cloud.ru`"
+        "rule": "cli",
+        "binary": "pnpm",
+        "semver": "^10.22.0",
+        "version": "--version",
+        "error": "You have pnpm@{{installedVersion}}, and need pnpm@{{wantedVersion}}. Fix with `npm install -g pnpm@{{wantedVersion}}``"
       }
     ]
   }

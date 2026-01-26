@@ -17,8 +17,8 @@ const STORIES = globSync(`packages/${process.env.STORYBOOK_PACKAGE_NAME || '*'}/
   .map(x => path.resolve(__dirname, `../${x}`))
   .sort((a, b) => a.localeCompare(b));
 
-const WELCOME = path.resolve(__dirname, './welcome/stories/Welcome.story.tsx');
-const STATISTICS = path.resolve(__dirname, './welcome/stories/Statistics.story.tsx');
+const WELCOME = path.resolve(__dirname, './stories/Welcome.story.tsx');
+const STATISTICS = path.resolve(__dirname, './stories/Statistics.story.tsx');
 const isTestServer = Boolean(process.env.TEST_SERVER);
 
 const needToCompileIcons = process.env.STORYBOOK_PACKAGE_NAME?.includes('icons');
@@ -50,7 +50,7 @@ const mainConfig: StorybookConfig = {
     '@cloud-ru/ft-storybook-brand-addon',
     'storybook-dark-mode',
     '@cloud-ru/ft-storybook-deps-graph-addon',
-    '@sbercloud/ft-storybook-deps-table-addon',
+    ...(process.env.CUSTOM_STORYBOOK_ADDONS?.split(' ') ?? []),
   ],
   staticDirs: needToCompileIcons
     ? [{ from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }]
@@ -69,6 +69,7 @@ const mainConfig: StorybookConfig = {
     PACKAGES_STATISTICS: PACKAGES_STATISTICS as unknown as string,
     DEPENDENCIES_LINKS: DEPENDENCIES_LINKS as unknown as string,
     DEPS_URL: (process.env.DEPS_URL || '') as unknown as string,
+    CUSTOM_STORYBOOK_ADDONS: (process.env.CUSTOM_STORYBOOK_ADDONS || '') as string,
   }),
   webpackFinal: async config => {
     isTestServer && (config.watch = false);

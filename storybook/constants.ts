@@ -1,77 +1,34 @@
 import { BADGE as Badges } from '@geometricpanda/storybook-addon-badges';
 
-import CloudBrandThemes from '@sbercloud/figma-tokens-cloud-platform/build/css/brand.module.css';
-import GigaIdBrandThemes from '@sbercloud/figma-tokens-giga-id/build/css/brand.module.css';
-import MLSpaceBrandThemes from '@sbercloud/figma-tokens-mlspace/build/css/brand.module.css';
-import SiteBrandThemes from '@sbercloud/figma-tokens-web/build/css/brand.module.css';
-import { Brand as UtilsBrand, Themes } from '@sbercloud/uikit-product-utils';
+import cloud from '@cloud-ru/figma-tokens-cloud-platform/build/css/brand.module.css';
+import gigaid from '@cloud-ru/figma-tokens-giga-id/build/css/brand.module.css';
+import web from '@cloud-ru/figma-tokens-web/build/css/brand.module.css';
+import DefaultBrandThemes from '@snack-uikit/figma-tokens/build/css/brand.module.css';
 
 enum CustomBadges {
   PRIVATE = 'private',
+  STABLE = 'stable',
 }
 
 export const BADGE = { ...Badges, ...CustomBadges };
 
 export enum Brand {
-  Cloud = 'Cloud',
-  MLSpace = 'MLSpace',
-  Site = 'Site',
-  GigaId = 'GigaId',
+  Default = 'default',
+  Cloud = 'cloud',
+  GigaId = 'gigaid',
+  Web = 'web',
 }
-
-export enum Mode {
-  Light = 'Light',
-  Dark = 'Dark',
-}
-
-export const BRAND_TO_THEME_MAP: Record<Brand, Record<Mode, Themes>> = {
-  [Brand.Cloud]: {
-    [Mode.Light]: Themes.Green,
-    [Mode.Dark]: Themes.GreenDark,
-  },
-  [Brand.MLSpace]: {
-    [Mode.Light]: Themes.Purple,
-    [Mode.Dark]: Themes.PurpleDark,
-  },
-  [Brand.Site]: {
-    [Mode.Light]: Themes.Green,
-    [Mode.Dark]: Themes.GreenDark,
-  },
-  [Brand.GigaId]: {
-    [Mode.Light]: Themes.Green,
-    [Mode.Dark]: Themes.GreenDark,
-  },
-};
-
-export const BRAND_TO_BRAND_MODE_MAP: Record<Brand, Record<Mode, UtilsBrand>> = {
-  [Brand.Cloud]: {
-    [Mode.Light]: UtilsBrand.Cloud,
-    [Mode.Dark]: UtilsBrand.CloudDark,
-  },
-  [Brand.MLSpace]: {
-    [Mode.Light]: UtilsBrand.MLSpace,
-    [Mode.Dark]: UtilsBrand.MLSpaceDark,
-  },
-  [Brand.Site]: {
-    [Mode.Light]: UtilsBrand.Site,
-    [Mode.Dark]: UtilsBrand.SiteDark,
-  },
-  [Brand.GigaId]: {
-    [Mode.Light]: UtilsBrand.GigaId,
-    [Mode.Dark]: UtilsBrand.GigaIdDark,
-  },
-};
 
 export const DEFAULT_BRAND_MAP = {
-  [Brand.Cloud]: CloudBrandThemes,
-  [Brand.MLSpace]: MLSpaceBrandThemes,
-  [Brand.Site]: SiteBrandThemes,
-  [Brand.GigaId]: GigaIdBrandThemes,
+  [Brand.Default]: DefaultBrandThemes,
+  [Brand.Cloud]: cloud,
+  [Brand.GigaId]: gigaid,
+  [Brand.Web]: web,
 };
 
 export const DEFAULT_BRAND_COLORS_MAP = {
+  [Brand.Default]: '#06b877',
   [Brand.Cloud]: '#06b877',
-  [Brand.MLSpace]: '#5558fa',
-  [Brand.Site]: '#26d07c',
   [Brand.GigaId]: '#393a45',
+  [Brand.Web]: '#26d07c',
 };

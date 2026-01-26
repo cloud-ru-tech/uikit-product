@@ -1,3 +1,3 @@
 module.exports = {
-  extends: '@sbercloud/ft-config-stylelint',
+  extends: '@cloud-ru/ft-config-stylelint',
 };

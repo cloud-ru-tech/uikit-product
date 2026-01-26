@@ -1,6 +1,5 @@
+import monorepoEslintConfig from '@cloud-ru/eslint-config/monorepo';
 import ssrSafe from '@cloud-ru/eslint-plugin-ssr-safe-react';
-
-import monorepoEslintConfig from '@sbercloud/eslint-config/monorepo';
 
 export default [
   ...monorepoEslintConfig,
