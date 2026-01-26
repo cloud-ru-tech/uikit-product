@@ -1,0 +1,24 @@
+$cell-widths: (
+  's': 32px,
+  'm': 40px,
+  'l': 52px,
+);
+
+.cell {
+  flex-shrink: 0;
+
+  input {
+    text-align: center;
+  }
+
+  @each $size, $width in $cell-widths {
+    &[data-size='#{$size}']:not([data-stretch-cells]) {
+      width: $width;
+    }
+  }
+
+  &[data-stretch-cells] {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}

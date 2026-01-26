@@ -1,0 +1,46 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+@use 'sass:map';
+
+$container-gaps: (
+  's': 8px,
+  'm': 8px,
+  'l': 12px,
+);
+
+.fieldCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  &[data-stretch-cells] {
+    width: 100%;
+  }
+}
+
+.fieldCodeScrollable {
+  overflow-x: auto;
+}
+
+.fieldDecorator {
+  width: unset;
+}
+
+.codeContainer {
+  display: flex;
+  justify-content: safe center;
+
+  @each $size, $gap in $container-gaps {
+    &[data-size='#{$size}'] {
+      gap: $gap;
+    }
+  }
+}
+
+.cellSpacing {
+  @each $size, $margin-right in $container-gaps {
+    &[data-size='#{$size}'] {
+      margin-right: $margin-right;
+    }
+  }
+}

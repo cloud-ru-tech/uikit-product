@@ -314,6 +314,34 @@
 | onChange | `(value: string, mask: InputMask<Record<string, unknown>>) => void` | - |  |
 | ref | `LegacyRef<HTMLInputElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 | key | `Key` | - |  |
+## useFieldCodeValidate
+Возвращает функцию валидации значения кода (пусто / неполный код).
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| codeLength* | `number` | - | Ожидаемая длина кода (цифр) |
+## FieldCode
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| codeLength* | `number` | - | Количество цифр в коде (ожидается целое ≥ 1) |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| className | `string` | - | CSS-класс компонента |
+| cellClassName | `string` | - | CSS-класс ячейки кода |
+| spacing | `number[]` | - | Позиции, после которых нужно вставить пробел (индексы символов, после которых будет пробел) |
+| showEmptyChars | `boolean` | - | Подсветить пустые символы кода |
+| resendCode | `ResendCodeProps` | - | Компонент отправки нового кода |
+| invalidCode | `string` | - | Сообщение при неверном коде, если не передан свой `error` |
+| stretchCells | `boolean` | - | Растягивать ячейки на всю доступную ширину; иначе фиксированная ширина по `size` |
+| value | `string` | - | Значение кода |
+| onChange | `(code: string) => void` | - | Колбек изменения значения |
+| onComplete | `(code: string) => void` | - | Колбек достижения ввода всех символов кода |
+| disabled | `boolean` | - | Деактивирован ли элемент Является ли поле деактивированным |
+| label | `string` | - | Лейбл |
+| size | enum Size: `"s"`, `"m"`, `"l"` | - | Размер |
+| error | `string` | - |  |
+| ref | `LegacyRef<HTMLInputElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
 
 
 [//]: DOCUMENTATION_SECTION_END

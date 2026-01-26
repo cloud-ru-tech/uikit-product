@@ -235,6 +235,15 @@ export const en_GB = {
       },
     },
     FieldChat: { placeholder: 'New message', attachFileTooltip: 'Select file' },
+    FieldCode: {
+      required: 'Required field',
+      minLength: 'At least {{count}} characters',
+      invalidCode: 'Invalid code',
+      resendCodeButtons: {
+        resendCode: 'Get a new code',
+        resendCodeWithVia: 'Get a new code in {{timer}}',
+      },
+    },
   },
   Header: {
     noDataFound: 'Nothing found',

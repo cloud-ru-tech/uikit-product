@@ -37,9 +37,11 @@
     "@cloud-ru/uikit-product-mobile-fields": "2.1.4",
     "@cloud-ru/uikit-product-mobile-modal": "2.1.5",
     "@cloud-ru/uikit-product-utils": "9.1.0",
+    "@siberiacancode/reactuse": "0.3.22",
     "@snack-uikit/attachment": "0.4.40",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/drop-zone": "0.9.6",
+    "@snack-uikit/fields": "0.51.15",
     "@snack-uikit/icon-predefined": "0.7.3",
     "@snack-uikit/input-private": "4.8.8",
     "@snack-uikit/scroll": "0.11.0",
@@ -48,7 +50,8 @@
     "awesome-phonenumber": "7.5.0",
     "classnames": "2.5.1",
     "merge-refs": "1.2.2",
-    "react-imask": "7.6.1"
+    "react-imask": "7.6.1",
+    "sass": "1.80.4"
   },
   "devDependencies": {
     "@types/merge-refs": "1.0.0",

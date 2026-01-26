@@ -236,6 +236,15 @@ export const ru_RU: typeof en_GB = {
       },
     },
     FieldChat: { placeholder: 'Новое сообщение', attachFileTooltip: 'Прикрепить файл' },
+    FieldCode: {
+      required: 'Обязательное поле',
+      minLength: 'Не менее {{count}} символов',
+      invalidCode: 'Неверный код',
+      resendCodeButtons: {
+        resendCode: 'Получить новый код',
+        resendCodeWithVia: 'Получить новый код через {{timer}}',
+      },
+    },
   },
   Header: {
     noDataFound: 'Ничего не найдено',

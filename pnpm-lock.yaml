@@ -726,6 +726,9 @@ importers:
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
         version: link:../utils
+      '@siberiacancode/reactuse':
+        specifier: 0.3.22
+        version: 0.3.22(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/attachment':
         specifier: 0.4.40
         version: 0.4.40(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -735,6 +738,9 @@ importers:
       '@snack-uikit/drop-zone':
         specifier: 0.9.6
         version: 0.9.6(lodash.debounce@4.0.8)(react@18.2.0)
+      '@snack-uikit/fields':
+        specifier: 0.51.15
+        version: 0.51.15(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/icon-predefined':
         specifier: 0.7.3
         version: 0.7.3(react@18.2.0)
@@ -765,6 +771,9 @@ importers:
       react-imask:
         specifier: 7.6.1
         version: 7.6.1(react@18.2.0)
+      sass:
+        specifier: 1.80.4
+        version: 1.80.4
       yup:
         specifier: '>=0.32.0'
         version: 1.7.1
@@ -4562,6 +4571,17 @@ packages:
       zen-observable:
         optional: true
 
+  '@siberiacancode/reactuse@0.3.22':
+    resolution: {integrity: sha512-WeTCR239tjsLX2cdQF1aUueeDW7vw9Og5sVxfITjueVcUtOEGGHooHCz56UwfWrLyzdaIxt1Rqj7D43Qw4Cjwg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@types/react': ^18 || ^19
+      react: 18.2.0
+      react-dom: 18.2.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+
   '@sigstore/bundle@1.1.0':
     resolution: {integrity: sha512-PFutXEy0SmQxYI4texPw3dd2KewuNqv7OuK1ZFtY2fM754yhvG2KdgwIhRnoEE2uHdtdGNQ8s0lb94dW9sELog==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
@@ -4648,6 +4668,11 @@ packages:
   '@snack-uikit/button@0.19.7':
     resolution: {integrity: sha512-eSHC7US9fl/Pq0SluiLmsT56AfB5LEzSjOMj+INwqzy0lqKp08vmjSyUJnNdo1/QXlFiALjc87vhNXVfP0KpKw==}
 
+  '@snack-uikit/calendar@0.13.13':
+    resolution: {integrity: sha512-eRTwVrUYs4Fauck55LSljDaUR8OgK001uizQWcfc4Dg7BMD+Wbi02FPebefbhe+AKGn2B6w2lICkxu1qWH7UVg==}
+    peerDependencies:
+      '@snack-uikit/locale': '*'
+
   '@snack-uikit/calendar@0.13.18':
     resolution: {integrity: sha512-8YvzX7oNaSy12I5JnT52zwbLHP6rNkPqOO2TRyo8jZeE0kuJZbXXkYr7uMm3KaDvGRB+mLtK7Amo8DOCT2Jxqw==}
     peerDependencies:
@@ -4692,6 +4717,11 @@ packages:
 
   '@snack-uikit/code-editor@0.7.16':
     resolution: {integrity: sha512-7qgODNoPGdozgxGECGbGC8uAJ+ckiuoL8PQyUU4QUQRxG5w4cOuHF7nErRbYFIjBaMqwbBq6iogJrdDA8jrzeA==}
+
+  '@snack-uikit/color-picker@0.3.51':
+    resolution: {integrity: sha512-9VJtBwLNog0RxdVxJSo/Fja0/io0ZUcxr2xsS7tx92poknnn3qQo6ZVsOH1lWKQtZQ2lLXG9IwXSYOfKRp2Oaw==}
+    peerDependencies:
+      '@snack-uikit/locale': '*'
 
   '@snack-uikit/color-picker@0.3.56':
     resolution: {integrity: sha512-41Rl+qguMmNo+59CTdtFo3aSGz/b9WXCzmMuh5M6XDoB/GY0HHyAEAluQf6160xUaZydoZi1GRXjC8sEL7CS8Q==}
@@ -4742,11 +4772,19 @@ packages:
     peerDependencies:
       lodash.debounce: 4.0.8
 
+  '@snack-uikit/dropdown@0.5.4':
+    resolution: {integrity: sha512-ma5f/5WeMQsdqLvdO6ShRWKeIMTjxbvtrYJSITcZGYAfdHUmEESajtUtnjUTwqGZdo8/o4x6d8fEFV4oqGiuog==}
+
   '@snack-uikit/dropdown@0.5.5':
     resolution: {integrity: sha512-2h8LUJo+Y20ujKgL5poSD1WDJh2TmTgjBr4Tz+VR73x4dYDxPMuT04H8xy5gjowiukYKolIgbCTlXtQZa3eWBQ==}
 
   '@snack-uikit/dropdown@0.5.6':
     resolution: {integrity: sha512-3+YrArTGodiK5QpcxrIS/WKJEwcIjvivNKDVVyliUtRZJGm74uYKXx1VY+rIjZLGBT1ACil1eNNW7Mv26CyANA==}
+
+  '@snack-uikit/fields@0.51.15':
+    resolution: {integrity: sha512-rFvT5xl/FlaU/SDIJSuQ/ajZMLMk0Dm0CFiDrfSNtIDm8y+JXsStD1vOfXNyPt/QSHk3hyX+eBrkdkOeNVHGAA==}
+    peerDependencies:
+      '@snack-uikit/locale': '*'
 
   '@snack-uikit/fields@0.56.1':
     resolution: {integrity: sha512-RsDRaNba7RQFJewAxxdefzNUX7LahSk7DpmERuVBdk4rwJR6QwS1+xZL4CDR/1wxxGPovyhb+9qf1V27ohndkg==}
@@ -4777,14 +4815,23 @@ packages:
   '@snack-uikit/icons@0.24.2':
     resolution: {integrity: sha512-8WR+BtuO/R70C9PoeT/56zfEn7nHkEkfrn8Wb3a5dUZ1vW7VWYG4nxAUAoQVySvHKsQtiqFlGSDv1cUqzoFofQ==}
 
+  '@snack-uikit/icons@0.27.5':
+    resolution: {integrity: sha512-y7HKvtht3bxZ7UhoyMBxFd5a4r68nudi/sV/bntJoOzaA6vYUjWfPoJ9SM8Xx1Cyk6bTXjahiPQvAKTiqGGnQQ==}
+
   '@snack-uikit/icons@0.27.7':
     resolution: {integrity: sha512-IMXoOc4hkrvI4OqiWwRL5yQ0wvG5I+bJAvTtCiyxDG4y7fNnpmtUiN7dXAkWzESr/mt84JTDfJ6VD+KVoYtbMA==}
+
+  '@snack-uikit/info-block@0.6.36':
+    resolution: {integrity: sha512-4GEJz+KWM2xO7kzP54QL5aBrXbo9018+rVH9o4+JI2lL9wGCKj5rqDzOsMawrFTGTp9yss2oNOdmxl14rkmbtg==}
 
   '@snack-uikit/info-block@0.6.40':
     resolution: {integrity: sha512-rk61k7qxAnb9gC2lmbxxJgDfuqo5KOqgWMPzXQVZaAmrozdrBNULQkDD5c2F7f5HWDBQkOU04MXDZB3PzdkVmQ==}
 
   '@snack-uikit/info-block@0.6.41':
     resolution: {integrity: sha512-yd1GvZTLrdWQ6CXIb5QONLOplR5OjlB219Vv+P8CybB9JGrV4jwjg9ofTOS34L35ZJkX0uQebefrzrBD4FaBqA==}
+
+  '@snack-uikit/input-private@4.8.6':
+    resolution: {integrity: sha512-anI3COcm5bRcyn7S6D29Zz9qcy/CmPMBag29HsVoQTfv1DvaYJEtPowgRHXaP/ZKNk9bPRjWYBOVOFD6slsDqA==}
 
   '@snack-uikit/input-private@4.8.8':
     resolution: {integrity: sha512-w0aVxUzOGqHjkwB6zg15vsCQrBSGZVaXLVz+lXEDJhEdnCNVnAbPthKDE9nWNzf+e2UKTUkyAz6HEDSt13Z/7w==}
@@ -4800,6 +4847,11 @@ packages:
 
   '@snack-uikit/link@0.18.1':
     resolution: {integrity: sha512-CbQlK9lmPXV95QOgnjCsDokMC3ZDTsADKEplsUjZvpNm3aIFWFw0N+0xpWxQIAa8ja9tZ2lVUV6ENYmnvQU1FQ==}
+
+  '@snack-uikit/list@0.32.12':
+    resolution: {integrity: sha512-PedVdpnFoL2x5hrnjK6q1SO0ix9bq7X8Le0TQOOc0u+Jx6w19hPOubjh4Thcu9HUaCqA/OMclLnoSViMg5FT9A==}
+    peerDependencies:
+      '@snack-uikit/locale': '*'
 
   '@snack-uikit/list@0.32.17':
     resolution: {integrity: sha512-EOA8geOMFphFuotnPPv3/R/oRYafgLKonsd621a5Snkj46L4pGrTQd4Qhry3HppfoePc/lHJbBZDPreuxOrBVA==}
@@ -4849,6 +4901,9 @@ packages:
   '@snack-uikit/pagination@0.10.24':
     resolution: {integrity: sha512-4Rp8MSa289kWqsydcmsQopp+L+MzuJcXMohOppPer4B7rIBQZTW5hTtBrtukpA/MymuSYZuuPF/h2MMYJMXsnQ==}
 
+  '@snack-uikit/popover-private@0.15.4':
+    resolution: {integrity: sha512-xUOJggmR59I0If9zH3+jJ6xA/cMOxMgye9OPdOHbj6MXaddSjI1ccGGxSaGb8A0XNRsRlgNYck57e0F4tCHiTg==}
+
   '@snack-uikit/popover-private@0.15.5':
     resolution: {integrity: sha512-kSxjyM3qO43waAL5PLND4DtWQ7l3Nbn30+QbZS/qBymUZAt1dCG0SMkHEiKIfBYIXSrpGdNOJziFDwFsBD4sSA==}
 
@@ -4876,11 +4931,19 @@ packages:
   '@snack-uikit/promo-tag@0.7.9':
     resolution: {integrity: sha512-FL5szrW0drlws0IntFpeW0Rrle3LO2g7BECjr4wBmxaQWbqJP8eewQV7obGTmTqbOq/yPdpItCD3B7Vd+VChYQ==}
 
+  '@snack-uikit/scroll@0.10.6':
+    resolution: {integrity: sha512-JY8shID9T7NcsSbTFTza9D8+/V102Mp0UTD7yqjfAIvdJsar3QdFZgY1c/clAQSdXs2j+Oz8ofBzLURAdnZJ9w==}
+
   '@snack-uikit/scroll@0.10.8':
     resolution: {integrity: sha512-9sMx0SKstjuSq9OAAq20GeFlk2/eCM2EffDB6rs/RDqYCDm5JS6VXr3UZb12ufC0nI+K0HlQH/EW6mQqbiHcGg==}
 
   '@snack-uikit/scroll@0.11.0':
     resolution: {integrity: sha512-GCKsL98Nr6ht0EIsx7w0jpByRBEgrByxjSxejtd87GRrmMdCLQHewkEyvb3whK0g0oN2XYae/NIzbeGTX/7eFQ==}
+
+  '@snack-uikit/search-private@0.4.34':
+    resolution: {integrity: sha512-AgKncv3C2A/39fVHC5oV8a2TtBwR9PI55jHuKxg7QcnUFZCwGuknx8rnM8aA8Fy8iRuehvAI8CvvXNwwXzuNTA==}
+    peerDependencies:
+      '@snack-uikit/locale': '*'
 
   '@snack-uikit/search-private@0.4.36':
     resolution: {integrity: sha512-xIYVQD9Op8s1ZhsefZPQEaHZFeY7bkSOzGbYUdPDbuVEDqgooH5I6KSWqhIskpe6Sv+H6pZaY79x3pHx9LkiuA==}
@@ -4897,6 +4960,9 @@ packages:
 
   '@snack-uikit/search@0.12.29':
     resolution: {integrity: sha512-AYOBIgiiKjGaew/2uX7mxEMpNJU2BmKCPZg/Z+PMJ8A0xQLN+X0kaUQMl8H9lDQj9UzQxD09QP+/ll5f7Zmk0Q==}
+
+  '@snack-uikit/segmented-control@0.6.16':
+    resolution: {integrity: sha512-d3rVFfOCGrYnk+/PoDh+pQR+dUWd+9VFd936QGOsUfLf2Gu7180Llckgr6BtaLQO22U7OAazpTUwkZQQUrWsxA==}
 
   '@snack-uikit/segmented-control@0.6.21':
     resolution: {integrity: sha512-gHmG/1Fy53UYnP8a8oqVbCAZlLWaPDdBLEDB/zYYsJxmwuFowOOQoM1wUUgw20ioKCUgH+FhpR481ocAihSyDA==}
@@ -4915,6 +4981,9 @@ packages:
 
   '@snack-uikit/skeleton@0.6.9':
     resolution: {integrity: sha512-EVt6+fIGFsmShhTVVDZPyqZL5f43jyiWynn+L3RbgLIlLDPMwjyfHvJNye8lirok3fEsFGRk8X8nPCiSPyTYgg==}
+
+  '@snack-uikit/slider@0.3.31':
+    resolution: {integrity: sha512-MeT2S56jewqEkK9JsJ0gk7973qUq0weBhzFP70vts2olgHsGlIvERNqMNFxfK/mr2eCMxoknPdrPpM0wgZFWfg==}
 
   '@snack-uikit/slider@0.3.36':
     resolution: {integrity: sha512-Rkc5mxhq9xZTDG/L4T8u5LAUUo/s5TlIVTj251R1j+fwgIb8/gcnIMwSnjRK2MoaG3vLsgW5CfSu1Y2ui9q+bg==}
@@ -4942,6 +5011,9 @@ packages:
   '@snack-uikit/tabs@0.9.3':
     resolution: {integrity: sha512-dDScLa2Lm3iYb5GLzis0vTSZPb/R7vwSVw0VHtTlQOLwP4jixKlr1y79yL6dYMn+wRyjRMrjZNyM7YxeKeY6WQ==}
 
+  '@snack-uikit/tag@0.15.13':
+    resolution: {integrity: sha512-eR9uKOW5ULQ6fnDZu8MfsqHwHdIvxzpEm3f0lFG8nKfyYTE/8DwYSb8JjA7biPrm/PPK5bWqgKF+sWSNR1zFNQ==}
+
   '@snack-uikit/tag@0.15.18':
     resolution: {integrity: sha512-XW3LPwxPftxG/etfm36NJwvcHReZUWPwJymh9VLCKN+bhi0anWk5vsMSYGLwivV4uwJgSpr1k/hXaciTZBL74A==}
 
@@ -4952,6 +5024,9 @@ packages:
     resolution: {integrity: sha512-scBgOGbM5J69LQRgcqOKbv5LAuvrz2tblaiUsUDGM9Y9MahpcTjMSCVykPxKGwW1EraFCU31u0SRCVLZ1W7uRA==}
     peerDependencies:
       '@snack-uikit/locale': '*'
+
+  '@snack-uikit/toggles@0.13.24':
+    resolution: {integrity: sha512-xHOu8Kag0I+eKovm9MEEd9iTj3fsfZeE484JU78V5X5w0tJ47VQbrduEHXF9RW+w9ANnKQozGsN+CfV5kmAa3g==}
 
   '@snack-uikit/toggles@0.13.26':
     resolution: {integrity: sha512-m02IltlcShQ85+45mWKlbYI0yE0v/ZNrONNEBxQItjo0PPOgwdooXObEY/RNJ7pCAbVpnHlNPaSeORWAkRly5Q==}
@@ -4975,6 +5050,9 @@ packages:
   '@snack-uikit/tooltip@0.18.13':
     resolution: {integrity: sha512-9klC0WyxGMhSGreJyEhFQa82zNhPvQu07/QMLX7V4ICnE6sxWb3eKUledxRpfxv4NbbsXvRGvvRif6a3jBTK4w==}
 
+  '@snack-uikit/tooltip@0.18.8':
+    resolution: {integrity: sha512-XGls3xS8bQNdbgKuN1cHPDEH0wZe5uEW2e/CMbrJp0X5MZH2y8AyEnnWKw09gX6DZ1uA3zr56bWkKhQiuu4tgQ==}
+
   '@snack-uikit/tree@0.10.3':
     resolution: {integrity: sha512-3qiZAvYJlMleW/pDqZy6+GcBoQuzDsrp2QpWSPhy7TuKTNx07myqO3dapqTkLdEnogwVzWD+T6jeANeZ7PXP9A==}
 
@@ -4983,6 +5061,9 @@ packages:
 
   '@snack-uikit/truncate-string@0.7.12':
     resolution: {integrity: sha512-ntMtSciA7x2pxv2NhTGKqw+ZthSGj2fRLvXOND/mGXb6FniS9feKUVHxJ+mWlcT5M/xeWEWn/eblnmQXFyX1gQ==}
+
+  '@snack-uikit/truncate-string@0.7.7':
+    resolution: {integrity: sha512-jiZ9du5OS8X6VdThCe0Yi4WpnpqQy3m8/LAsG+TGBIOPdi/b66ysa6vt82EV4rVGO3NyN55nORgNn0W9ppGk2Q==}
 
   '@snack-uikit/typography@0.8.10':
     resolution: {integrity: sha512-uA9jnRjUykRaC9ymxpAgeNKWospox2pPO9oZnccYxKCaAIqZgMSCgNj9EQPu2HQLjopGIcxpWOYrJ9Iu+uUk0w==}
@@ -8740,6 +8821,9 @@ packages:
     resolution: {integrity: sha512-sJlIFM7eathUEMChTh9Mrfw/IgiWgJqBKq2VNbyXvBZ7ev/IlO6/KQTKlV/Fm+viQMLrFLG/zCuudrLIwgK2dg==}
     engines: {npm: '>=4.0.0'}
 
+  immutable@4.3.8:
+    resolution: {integrity: sha512-d/Ld9aLbKpNwyl0KiM2CT1WYvkitQ1TSvmRtkcV8FKStiDoA7Slzgjmb/1G2yhKM1p0XeNOieaTbFZmU1d3Xuw==}
+
   immutable@5.1.5:
     resolution: {integrity: sha512-t7xcm2siw+hlUM68I+UEOK+z84RzmN59as9DZ7P1l0994DKUWV7UXBMQZVxaoMSRQ+PBZbHCOoBt7a2wxOMt+A==}
 
@@ -10942,7 +11026,6 @@ packages:
     engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
     deprecated: |-
       You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
-
       (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
 
   qs@6.15.1:
@@ -11537,6 +11620,11 @@ packages:
       webpack:
         optional: true
 
+  sass@1.80.4:
+    resolution: {integrity: sha512-rhMQ2tSF5CsuuspvC94nPM9rToiAFw2h3JTrLlgmNw1MH79v8Cr3DH6KF6o6r+8oofY3iYVPUf66KzC8yuVN1w==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+
   sass@1.97.3:
     resolution: {integrity: sha512-fDz1zJpd5GycprAbu4Q2PV/RprsRtKC/0z82z0JLgdytmcq0+ujJbJ/09bPGDxCLkKY3Np5cRAOcWiVkLXJURg==}
     engines: {node: '>=14.0.0'}
@@ -11563,6 +11651,10 @@ packages:
   schema-utils@4.3.3:
     resolution: {integrity: sha512-eflK8wEtyOE6+hsaRVPxvUKYCpRgzLqDTb8krvAsRIwOGlHoSgYLgBXoubGgLd2fT41/OUYdb48v4k4WWHQurA==}
     engines: {node: '>= 10.13.0'}
+
+  screenfull@6.0.2:
+    resolution: {integrity: sha512-AQdy8s4WhNvUZ6P8F6PB21tSPIYKniic+Ogx0AacBMjKP1GUHN2E9URxQHtCusiwxudnCKkdy4GrHXPPJSkCCw==}
+    engines: {node: ^14.13.1 || >=16.0.0}
 
   scroll@3.0.1:
     resolution: {integrity: sha512-pz7y517OVls1maEzlirKO5nPYle9AXsFzTMNJrRGmT951mzpIBy7sNHOg5o/0MQd/NqliCiWnAi0kZneMPFLcg==}
@@ -15076,7 +15168,6 @@ snapshots:
       '@parcel/watcher-win32-arm64': 2.5.6
       '@parcel/watcher-win32-ia32': 2.5.6
       '@parcel/watcher-win32-x64': 2.5.6
-    optional: true
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -15230,6 +15321,14 @@ snapshots:
       rxjs: 6.6.7
     transitivePeerDependencies:
       - zenObservable
+
+  '@siberiacancode/reactuse@0.3.22(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      screenfull: 6.0.2
+    optionalDependencies:
+      '@types/react': 18.2.79
 
   '@sigstore/bundle@1.1.0':
     dependencies:
@@ -15430,6 +15529,22 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@snack-uikit/calendar@0.13.13(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/button': 0.19.17(react@18.2.0)
+      '@snack-uikit/divider': 3.2.11(react@18.2.0)
+      '@snack-uikit/icons': 0.27.5
+      '@snack-uikit/list': 0.32.12(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/locale': 0.15.5
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+      uncontrollable: 8.0.4(react@18.2.0)
+      weekstart: 2.0.0
+    transitivePeerDependencies:
+      - '@types/react'
+      - react
+      - react-dom
+
   '@snack-uikit/calendar@0.13.18(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@snack-uikit/button': 0.19.17(react@18.2.0)
@@ -15629,6 +15744,20 @@ snapshots:
       - react
       - react-dom
 
+  '@snack-uikit/color-picker@0.3.51(@snack-uikit/locale@0.15.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/button': 0.19.17(react@18.2.0)
+      '@snack-uikit/icons': 0.27.5
+      '@snack-uikit/input-private': 4.8.6(react@18.2.0)
+      '@snack-uikit/locale': 0.15.5
+      '@snack-uikit/segmented-control': 0.6.16(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+      react-colorful: 5.6.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
   '@snack-uikit/color-picker@0.3.56(@snack-uikit/locale@0.15.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@snack-uikit/button': 0.19.18(react@18.2.0)
@@ -15758,6 +15887,15 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@snack-uikit/dropdown@0.5.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/popover-private': 0.15.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
   '@snack-uikit/dropdown@0.5.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@snack-uikit/popover-private': 0.15.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -15773,6 +15911,36 @@ snapshots:
       '@snack-uikit/utils': 4.0.2(react@18.2.0)
       classnames: 2.5.1
     transitivePeerDependencies:
+      - react
+      - react-dom
+
+  '@snack-uikit/fields@0.51.15(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/button': 0.19.17(react@18.2.0)
+      '@snack-uikit/calendar': 0.13.13(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/color-picker': 0.3.51(@snack-uikit/locale@0.15.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/divider': 3.2.11(react@18.2.0)
+      '@snack-uikit/dropdown': 0.5.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/icons': 0.27.5
+      '@snack-uikit/input-private': 4.8.6(react@18.2.0)
+      '@snack-uikit/list': 0.32.12(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/locale': 0.15.5
+      '@snack-uikit/scroll': 0.10.6(react@18.2.0)
+      '@snack-uikit/skeleton': 0.6.10(react@18.2.0)
+      '@snack-uikit/slider': 0.3.31(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/tag': 0.15.13(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/tooltip': 0.18.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/truncate-string': 0.7.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+      copy-to-clipboard: 3.3.3
+      decimal.js: 10.6.0
+      fuzzy-search: 3.2.1
+      merge-refs: 1.3.0(@types/react@18.2.79)
+      react-textarea-autosize: 8.5.3(@types/react@18.2.79)(react@18.2.0)
+      uncontrollable: 8.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
       - react
       - react-dom
 
@@ -15846,7 +16014,21 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@snack-uikit/icons@0.27.5': {}
+
   '@snack-uikit/icons@0.27.7': {}
+
+  '@snack-uikit/info-block@0.6.36(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/button': 0.19.17(react@18.2.0)
+      '@snack-uikit/icon-predefined': 0.7.11(react@18.2.0)
+      '@snack-uikit/tooltip': 0.18.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/typography': 0.8.12(react@18.2.0)
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+    transitivePeerDependencies:
+      - react
+      - react-dom
 
   '@snack-uikit/info-block@0.6.40(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
@@ -15871,6 +16053,14 @@ snapshots:
     transitivePeerDependencies:
       - react
       - react-dom
+
+  '@snack-uikit/input-private@4.8.6(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/icons': 0.27.5
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+    transitivePeerDependencies:
+      - react
 
   '@snack-uikit/input-private@4.8.8(react@18.2.0)':
     dependencies:
@@ -15912,6 +16102,28 @@ snapshots:
       '@snack-uikit/utils': 4.0.2(react@18.2.0)
       classnames: 2.5.1
     transitivePeerDependencies:
+      - react
+      - react-dom
+
+  '@snack-uikit/list@0.32.12(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/button': 0.19.17(react@18.2.0)
+      '@snack-uikit/divider': 3.2.11(react@18.2.0)
+      '@snack-uikit/dropdown': 0.5.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/icons': 0.27.5
+      '@snack-uikit/info-block': 0.6.36(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/loaders': 0.9.10(react@18.2.0)
+      '@snack-uikit/locale': 0.15.5
+      '@snack-uikit/scroll': 0.10.6(react@18.2.0)
+      '@snack-uikit/search-private': 0.4.34(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react@18.2.0)
+      '@snack-uikit/toggles': 0.13.24(@types/react@18.2.79)(react@18.2.0)
+      '@snack-uikit/truncate-string': 0.7.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      '@tanstack/react-virtual': 3.11.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      classnames: 2.5.1
+      merge-refs: 1.3.0(@types/react@18.2.79)
+    transitivePeerDependencies:
+      - '@types/react'
       - react
       - react-dom
 
@@ -16080,6 +16292,17 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@snack-uikit/popover-private@0.15.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@floating-ui/react': 0.26.24(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+      react-is: 18.2.0
+      uncontrollable: 8.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
   '@snack-uikit/popover-private@0.15.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@floating-ui/react': 0.26.24(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -16160,6 +16383,15 @@ snapshots:
     transitivePeerDependencies:
       - react
 
+  '@snack-uikit/scroll@0.10.6(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+      overlayscrollbars: 2.11.1
+      overlayscrollbars-react: 0.5.6(overlayscrollbars@2.11.1)(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+
   '@snack-uikit/scroll@0.10.8(react@18.2.0)':
     dependencies:
       '@snack-uikit/utils': 4.0.1(react@18.2.0)
@@ -16176,6 +16408,19 @@ snapshots:
       overlayscrollbars: 2.11.1
       overlayscrollbars-react: 0.5.6(overlayscrollbars@2.11.1)(react@18.2.0)
     transitivePeerDependencies:
+      - react
+
+  '@snack-uikit/search-private@0.4.34(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/icons': 0.27.5
+      '@snack-uikit/input-private': 4.8.6(react@18.2.0)
+      '@snack-uikit/loaders': 0.9.10(react@18.2.0)
+      '@snack-uikit/locale': 0.15.5
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+      merge-refs: 1.3.0(@types/react@18.2.79)
+    transitivePeerDependencies:
+      - '@types/react'
       - react
 
   '@snack-uikit/search-private@0.4.36(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react@18.2.0)':
@@ -16230,6 +16475,17 @@ snapshots:
       - react
       - react-dom
 
+  '@snack-uikit/segmented-control@0.6.16(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/counter': 0.8.11(react@18.2.0)
+      '@snack-uikit/truncate-string': 0.7.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+      uncontrollable: 8.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
   '@snack-uikit/segmented-control@0.6.21(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@snack-uikit/counter': 0.8.12(react@18.2.0)
@@ -16275,6 +16531,16 @@ snapshots:
       classnames: 2.5.1
     transitivePeerDependencies:
       - react
+
+  '@snack-uikit/slider@0.3.31(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/tooltip': 0.18.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+      rc-slider: 10.5.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+      - react-dom
 
   '@snack-uikit/slider@0.3.36(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
@@ -16391,6 +16657,18 @@ snapshots:
       - react
       - react-dom
 
+  '@snack-uikit/tag@0.15.13(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/dropdown': 0.5.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/icons': 0.27.5
+      '@snack-uikit/scroll': 0.10.6(react@18.2.0)
+      '@snack-uikit/tooltip': 0.18.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
   '@snack-uikit/tag@0.15.18(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@snack-uikit/dropdown': 0.5.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -16432,6 +16710,17 @@ snapshots:
     transitivePeerDependencies:
       - react
       - react-dom
+
+  '@snack-uikit/toggles@0.13.24(@types/react@18.2.79)(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/icons': 0.27.5
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+      merge-refs: 1.3.0(@types/react@18.2.79)
+      uncontrollable: 8.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
+      - react
 
   '@snack-uikit/toggles@0.13.26(@types/react@18.2.79)(react@18.2.0)':
     dependencies:
@@ -16517,6 +16806,17 @@ snapshots:
       - react
       - react-dom
 
+  '@snack-uikit/tooltip@0.18.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/icons': 0.27.5
+      '@snack-uikit/popover-private': 0.15.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
+      classnames: 2.5.1
+      uncontrollable: 8.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
   '@snack-uikit/tree@0.10.3(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@snack-uikit/button': 0.19.17(react@18.2.0)
@@ -16550,6 +16850,16 @@ snapshots:
     dependencies:
       '@snack-uikit/tooltip': 0.18.13(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/utils': 4.0.2(react@18.2.0)
+      classnames: 2.5.1
+      lodash.throttle: 4.1.1
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
+  '@snack-uikit/truncate-string@0.7.7(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/tooltip': 0.18.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.1(react@18.2.0)
       classnames: 2.5.1
       lodash.throttle: 4.1.1
     transitivePeerDependencies:
@@ -19668,8 +19978,7 @@ snapshots:
 
   detect-indent@5.0.0: {}
 
-  detect-libc@2.1.2:
-    optional: true
+  detect-libc@2.1.2: {}
 
   devlop@1.1.0:
     dependencies:
@@ -21242,6 +21551,8 @@ snapshots:
   imask@7.6.1:
     dependencies:
       '@babel/runtime-corejs3': 7.29.2
+
+  immutable@4.3.8: {}
 
   immutable@5.1.5: {}
 
@@ -23173,8 +23484,7 @@ snapshots:
 
   node-abort-controller@3.1.1: {}
 
-  node-addon-api@7.1.1:
-    optional: true
+  node-addon-api@7.1.1: {}
 
   node-dir@0.1.17:
     dependencies:
@@ -24834,6 +25144,13 @@ snapshots:
       sass: 1.97.3
       webpack: 5.107.1(esbuild@0.25.12)(postcss@8.5.15)
 
+  sass@1.80.4:
+    dependencies:
+      '@parcel/watcher': 2.5.6
+      chokidar: 4.0.3
+      immutable: 4.3.8
+      source-map-js: 1.2.1
+
   sass@1.97.3:
     dependencies:
       chokidar: 4.0.3
@@ -24867,6 +25184,8 @@ snapshots:
       ajv: 8.18.0
       ajv-formats: 2.1.1(ajv@8.18.0)
       ajv-keywords: 5.1.0(ajv@8.18.0)
+
+  screenfull@6.0.2: {}
 
   scroll@3.0.1: {}
 
