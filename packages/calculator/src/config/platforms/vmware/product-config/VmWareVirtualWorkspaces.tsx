@@ -21,22 +21,10 @@ const osTypeItems = [
 ];
 
 const TariffPlanItem = {
-  Linux: 'Linux',
-  Standard: 'Standard',
   Advanced: 'Advanced',
 };
 
 const tariffPlanItems = [
-  {
-    value: TariffPlanItem.Linux,
-    label: 'Linux',
-    description: 'Удаленные рабочие столы будут развернуты на операционной системе Linux',
-  },
-  {
-    value: TariffPlanItem.Standard,
-    label: 'Стандартный',
-    description: 'Удаленные рабочие столы будут развернуты на десктопной операционной системе',
-  },
   {
     value: TariffPlanItem.Advanced,
     label: 'Продвинутый',
@@ -74,7 +62,7 @@ export const VM_WARE_VIRTUAL_WORKSPACES_FORM_CONFIG: FormConfig = {
     },
     tariffPlan: {
       type: CONTROL.ToggleCards,
-      defaultValue: TariffPlanItem.Standard,
+      defaultValue: TariffPlanItem.Advanced,
       items: tariffPlanItems,
       accessorKey: 'vdi.tariffPlan',
       decoratorProps: {
@@ -94,16 +82,8 @@ export const VM_WARE_VIRTUAL_WORKSPACES_FORM_CONFIG: FormConfig = {
           </>
         ),
       },
-      watchedControls: { osType: 'vdi.osType' },
-      relateFn: ({ osType }) => {
-        if (osType === OsTypeItem.Linux) {
-          return {
-            items: tariffPlanItems.filter(item => item.value !== TariffPlanItem.Standard),
-          };
-        }
-        return {
-          items: tariffPlanItems.filter(item => item.value !== TariffPlanItem.Linux),
-        };
+      uiProps: {
+        visible: false,
       },
     },
     workSpacesCount: {

@@ -122,7 +122,7 @@ data-test-id
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| __@iterator@1094* | `() => StringIterator<string>` | - | Iterator |
+| __@iterator@1092* | `() => StringIterator<string>` | - | Iterator |
 | toWellFormed* | `() => string` | - | Returns a string where all lone or out-of-order surrogates have been replaced by the Unicode replacement character (U+FFFD). |
 | isWellFormed* | `() => boolean` | - | Returns true if all leading surrogates and trailing surrogates appear paired and in order. |
 | at* | `(index: number) => string` | - | Returns a new String consisting of the single UTF-16 code unit located at the specified index. @param index The zero-based index of the desired code unit. A negative index will count back from the last item. |
