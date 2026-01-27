@@ -1,4 +1,4 @@
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Stepper, StepperProps, useStepperApi } from '@snack-uikit/stepper';
 
 import { useMobileStepperApi } from '../../MobileStepperContext';

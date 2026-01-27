@@ -1,6 +1,6 @@
 import { MouseEvent } from 'react';
 
-import { LAYOUT_TYPE, LayoutType } from '@sbercloud/uikit-product-utils';
+import { LAYOUT_TYPE, LayoutType } from '@cloud-ru/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';

@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useLayoutEffect, useState } from 'react';
 
-import { DaySVG } from '@sbercloud/uikit-product-icons';
+import { DaySVG } from '@cloud-ru/uikit-product-icons';
 import { Avatar } from '@snack-uikit/avatar';
 import { SelectionSingleValueType } from '@snack-uikit/list';
 import { Tag } from '@snack-uikit/tag';

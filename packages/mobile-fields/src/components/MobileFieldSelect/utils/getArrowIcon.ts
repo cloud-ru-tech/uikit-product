@@ -1,6 +1,6 @@
 import { JSXElementConstructor } from 'react';
 
-import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
+import { ChevronDownSVG, ChevronUpSVG } from '@cloud-ru/uikit-product-icons';
 import { ICON_SIZE, SIZE, Size } from '@snack-uikit/input-private';
 import { ValueOf } from '@snack-uikit/utils';
 

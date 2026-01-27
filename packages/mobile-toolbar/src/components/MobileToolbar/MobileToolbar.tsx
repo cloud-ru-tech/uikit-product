@@ -1,9 +1,9 @@
 import cn from 'classnames';
 import { useMemo, useRef } from 'react';
 
-import { UpdateSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { FiltersState, MobileChipChoiceRow } from '@sbercloud/uikit-product-mobile-chips';
+import { UpdateSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { FiltersState, MobileChipChoiceRow } from '@cloud-ru/uikit-product-mobile-chips';
 import { ButtonFunction } from '@snack-uikit/button';
 import { SearchPrivate } from '@snack-uikit/search-private';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';

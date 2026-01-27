@@ -1,6 +1,6 @@
 import { MouseEventHandler, ReactNode } from 'react';
 
-import { ArrowLeftSVG } from '@sbercloud/uikit-product-icons';
+import { ArrowLeftSVG } from '@cloud-ru/uikit-product-icons';
 import { Typography } from '@snack-uikit/typography';
 
 import s from './styles.module.scss';

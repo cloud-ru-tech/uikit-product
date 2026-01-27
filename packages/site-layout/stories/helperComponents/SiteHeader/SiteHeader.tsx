@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import { useState } from 'react';
 
-import { CloudFullLogoSVG } from '@sbercloud/uikit-product-icons';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { CloudFullLogoSVG } from '@cloud-ru/uikit-product-icons';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
 
 import { Menu } from '../Menu';

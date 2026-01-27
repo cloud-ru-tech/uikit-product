@@ -1,5 +1,5 @@
-import { TooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
-import { QuotaDropdownProps } from '@sbercloud/uikit-product-quota';
+import { TooltipProps } from '@cloud-ru/uikit-product-mobile-tooltip';
+import { QuotaDropdownProps } from '@cloud-ru/uikit-product-quota';
 import {
   ButtonFilledProps,
   ButtonFunctionProps,

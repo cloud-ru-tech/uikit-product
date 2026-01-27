@@ -8,7 +8,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PD-3377:** removed contributors ([121640f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
 
 
 
@@ -19,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PD-3377:** contributors update to publish all packages ([719fd3e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
 
 
 
@@ -27,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.1.4 (2025-11-12)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-config-selector
+**Note:** Version bump only for package @cloud-ru/uikit-product-config-selector
 
 
 
@@ -35,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.1.3 (2025-11-07)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-config-selector
+**Note:** Version bump only for package @cloud-ru/uikit-product-config-selector
 
 
 
@@ -43,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.1.2 (2025-09-30)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-config-selector
+**Note:** Version bump only for package @cloud-ru/uikit-product-config-selector
 
 
 
@@ -54,7 +54,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PDS-2668:** fixed configSelector minWidth ([f7cd4f1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f7cd4f1b295807a3daaf1349890580bc2bb61922))
+* **PDS-2668:** fixed configSelector minWidth ([f7cd4f1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f7cd4f1b295807a3daaf1349890580bc2bb61922))
 
 
 
@@ -65,7 +65,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-2668:** Config Selector redesign ([d381e02](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d381e02955aad9081ff1518b8959a0e2cfd1a568))
+* **PDS-2668:** Config Selector redesign ([d381e02](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d381e02955aad9081ff1518b8959a0e2cfd1a568))
 
 
 
@@ -76,7 +76,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PDS-2424:** chipToggleIndicator storybook fix ([58497ba](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/58497ba7fef13bf23e36ab3dcb2c9052e6c06622))
+* **PDS-2424:** chipToggleIndicator storybook fix ([58497ba](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/58497ba7fef13bf23e36ab3dcb2c9052e6c06622))
 
 
 
@@ -87,7 +87,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-2424:** added ChipsTogglePredefined ([008ae62](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/008ae62d385b64eb8edfba0f35c13ca134ba05e5))
+* **PDS-2424:** added ChipsTogglePredefined ([008ae62](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/008ae62d385b64eb8edfba0f35c13ca134ba05e5))
 
 
 

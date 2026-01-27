@@ -1,5 +1,5 @@
-import { CrossFilledSVG } from '@sbercloud/uikit-product-icons';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { CrossFilledSVG } from '@cloud-ru/uikit-product-icons';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';

@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 
-import { SearchSVG, UpdateSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { FieldSelectProps } from '@sbercloud/uikit-product-mobile-fields';
+import { SearchSVG, UpdateSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { FieldSelectProps } from '@cloud-ru/uikit-product-mobile-fields';
 import { ButtonTonal } from '@snack-uikit/button';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
 

@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import { ReactNode } from 'react';
 
-import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { RichText } from '@cloud-ru/uikit-product-site-rich-text';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Scroll } from '@snack-uikit/scroll';
 
 import styles from './styles.module.scss';

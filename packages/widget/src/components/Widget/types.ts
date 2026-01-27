@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { TitleClickableProps } from '@sbercloud/uikit-product-title-clickable';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { TitleClickableProps } from '@cloud-ru/uikit-product-title-clickable';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import type { InfoBlockProps } from '@snack-uikit/info-block';
 import { WithSupportProps } from '@snack-uikit/utils';
 

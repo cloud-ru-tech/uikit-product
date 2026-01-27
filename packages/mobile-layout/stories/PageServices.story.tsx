@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useMemo, useState } from 'react';
 
-import { PlaceholderSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
-import { QuotaCard } from '@sbercloud/uikit-product-quota';
-import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
+import { PlaceholderSVG, PlusSVG } from '@cloud-ru/uikit-product-icons';
+import { QuotaCard } from '@cloud-ru/uikit-product-quota';
+import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Status } from '@snack-uikit/status';
 import { Typography } from '@snack-uikit/typography';

@@ -1,6 +1,6 @@
 import { useCallback, useMemo } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Carousel } from '@snack-uikit/carousel';
 import { ModalCustom } from '@snack-uikit/modal';

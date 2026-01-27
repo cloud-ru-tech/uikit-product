@@ -70,7 +70,7 @@ function buildPackagesWithLerna(packagesToBuild: string[]): boolean {
   }
 
   // Формируем scope для lerna
-  const scopes = packagesToBuild.map(packageName => `--scope=@sbercloud/uikit-product-${packageName}`).join(' ');
+  const scopes = packagesToBuild.map(packageName => `--scope=@cloud-ru/uikit-product-${packageName}`).join(' ');
 
   logInfo(`Building ${packagesToBuild.length} packages: ${packagesToBuild.join(', ')}`);
 

@@ -2,7 +2,7 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-product-promo-tag-predefined`
+`npm i @cloud-ru/uikit-product-promo-tag-predefined`
 
 [Changelog](./CHANGELOG.md)
 

@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import { useEffect, useRef, useState } from 'react';
 
-import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
-import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
+import { PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
+import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';
 

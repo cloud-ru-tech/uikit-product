@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-copy-line",
+  "name": "@cloud-ru/uikit-product-copy-line",
   "title": "Copy Line",
   "version": "0.7.73",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/copy-line",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/copy-line",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/copy-line"
   },
   "author": {
@@ -37,8 +37,8 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/ft-copy-to-clipboard": "0.1.0",
-    "@sbercloud/uikit-product-icons": "16.2.0",
-    "@sbercloud/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-icons": "16.2.0",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/truncate-string": "0.6.9",
     "@snack-uikit/utils": "3.7.0",

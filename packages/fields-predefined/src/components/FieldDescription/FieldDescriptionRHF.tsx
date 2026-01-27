@@ -3,9 +3,9 @@ import { forwardRef, useMemo, useRef } from 'react';
 import { Controller } from 'react-hook-form';
 import { string } from 'yup';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { AdaptiveFieldTextArea } from '@sbercloud/uikit-product-mobile-fields';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { AdaptiveFieldTextArea } from '@cloud-ru/uikit-product-mobile-fields';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 import { useCustomFieldValidation } from '../../hooks';
 import { FieldWithAddButton } from './components/FieldWithAddButton';

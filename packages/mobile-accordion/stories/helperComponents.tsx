@@ -1,7 +1,7 @@
 import { ReactNode, useState } from 'react';
 
-import { AdaptiveFieldText } from '@sbercloud/uikit-product-mobile-fields';
-import { MobileQuestionTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
+import { AdaptiveFieldText } from '@cloud-ru/uikit-product-mobile-fields';
+import { MobileQuestionTooltip } from '@cloud-ru/uikit-product-mobile-tooltip';
 import { Avatar } from '@snack-uikit/avatar';
 import { Typography } from '@snack-uikit/typography';
 

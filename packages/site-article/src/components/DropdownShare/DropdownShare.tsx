@@ -1,4 +1,4 @@
-import { LinkSVG, ShareSVG, TelegramSVG, VkSVG } from '@sbercloud/uikit-product-icons';
+import { LinkSVG, ShareSVG, TelegramSVG, VkSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Droplist, DroplistProps } from '@snack-uikit/list';
 import { ValueOf } from '@snack-uikit/utils';

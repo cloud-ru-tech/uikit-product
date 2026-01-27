@@ -2,22 +2,12 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-product-calculator`
+`npm i @cloud-ru/uikit-product-calculator`
 
 ### Example
 
 ```tsx
-import {
-  ADVANCED_PLATFORM,
-  ADVANCED_PRODUCT,
-  CATALOG_CONFIG,
-  getFetcherFn,
-  getOnDownloadFileClick,
-  getOnShareClick,
-  VM_WARE_PLATFORM,
-} from '@sbercloud/cpt-calculator-configs';
-import { useAdaptive } from '@sbercloud/cpt-common';
-import { Calculator as CalculatorUi, CALCULATOR_TYPE } from '@sbercloud/uikit-product-calculator';
+import { Calculator as CalculatorUi, CALCULATOR_TYPE } from '@cloud-ru/uikit-product-calculator';
 
 const onDownloadFileClick = getOnDownloadFileClick();
 const onShareClick = getOnShareClick();

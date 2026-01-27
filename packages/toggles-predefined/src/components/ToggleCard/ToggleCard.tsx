@@ -1,4 +1,4 @@
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Card, CardProps } from '@snack-uikit/card';
 import { useToggleGroup } from '@snack-uikit/toggles';
 

@@ -1,4 +1,4 @@
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Droplist, DroplistProps } from '@snack-uikit/list';
 
 import { MobileDroplist, MobileDroplistProps } from '../MobileDroplist';

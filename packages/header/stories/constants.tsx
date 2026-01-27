@@ -1,4 +1,4 @@
-import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
 
 import { LinksGroup } from '../src';
 

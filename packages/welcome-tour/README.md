@@ -2,7 +2,7 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-product-welcome-tour`
+`npm i @cloud-ru/uikit-product-welcome-tour`
 
 [Changelog](./CHANGELOG.md)
 

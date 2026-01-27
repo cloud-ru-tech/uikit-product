@@ -1,8 +1,7 @@
 import { formatNumber } from '@cloud-ru/ft-formatters';
-
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { AdaptiveQuestionTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { AdaptiveQuestionTooltip } from '@cloud-ru/uikit-product-mobile-tooltip';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import { DiscountItem } from '../../../../types';

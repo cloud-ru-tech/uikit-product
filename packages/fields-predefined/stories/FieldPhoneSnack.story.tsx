@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import cn from 'classnames';
 import { useState } from 'react';
 
-import { LayoutType } from '@sbercloud/uikit-product-utils';
+import { LayoutType } from '@cloud-ru/uikit-product-utils';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

@@ -1,4 +1,4 @@
-import { extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps } from '@cloud-ru/uikit-product-utils';
 import { AccordionProps } from '@snack-uikit/accordion';
 import { ToggleGroup } from '@snack-uikit/toggles';
 

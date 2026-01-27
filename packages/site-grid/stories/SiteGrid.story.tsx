@@ -1,6 +1,6 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
-import { CardSuggest } from '@sbercloud/uikit-product-card-predefined';
+import { CardSuggest } from '@cloud-ru/uikit-product-card-predefined';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

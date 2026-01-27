@@ -1,4 +1,4 @@
-import { LAYOUT_TYPE, WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { LAYOUT_TYPE, WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { PURPOSE, SIZE, TypographyProps } from '@snack-uikit/typography';
 
 type Props = WithLayoutType<unknown>;

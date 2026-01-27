@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { SwitchRow } from '@sbercloud/uikit-product-switch-row';
-import { ToggleGroup, ToggleGroupProps, useToggleGroup } from '@sbercloud/uikit-product-toggles-predefined';
+import { SwitchRow } from '@cloud-ru/uikit-product-switch-row';
+import { ToggleGroup, ToggleGroupProps, useToggleGroup } from '@cloud-ru/uikit-product-toggles-predefined';
 
 import styles from './styles.module.scss';
 

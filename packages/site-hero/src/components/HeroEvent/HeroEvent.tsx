@@ -1,7 +1,7 @@
 import cn from 'classnames';
 
-import { Layout } from '@sbercloud/uikit-product-site-layout';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { Layout } from '@cloud-ru/uikit-product-site-layout';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
 import { PromoTag, PromoTagProps } from '@snack-uikit/promo-tag';
 

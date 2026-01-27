@@ -3,7 +3,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import {
   FreeCoursesAndCertification,
   FreeCoursesAndCertificationProps,
-} from '@sbercloud/uikit-product-site-banner-predefined';
+} from '@cloud-ru/uikit-product-site-banner-predefined';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

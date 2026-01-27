@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { ItemId } from '@sbercloud/uikit-product-mobile-dropdown';
+import { ItemId } from '@cloud-ru/uikit-product-mobile-dropdown';
 
 import { ContentRenderProps, FilterOption } from '../types';
 import { isBaseOption } from './typeGuards';

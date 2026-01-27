@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import cn from 'classnames';
 import { useEffect, useState } from 'react';
 
-import { MobileDrawerCustom } from '@sbercloud/uikit-product-mobile-drawer';
+import { MobileDrawerCustom } from '@cloud-ru/uikit-product-mobile-drawer';
 import { ButtonFilled } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 

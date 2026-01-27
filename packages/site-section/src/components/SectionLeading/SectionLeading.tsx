@@ -1,7 +1,7 @@
 import debounce from 'lodash.debounce';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Carousel, CarouselProps } from '@snack-uikit/carousel';
 import { Typography } from '@snack-uikit/typography';
 

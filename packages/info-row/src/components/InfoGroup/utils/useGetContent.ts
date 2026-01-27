@@ -1,4 +1,4 @@
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 
 import { NO_DATA_PLACEHOLDER } from '../constants';
 import { DataType, InfoGroupItem, InfoGroupProps } from '../types';

@@ -2,7 +2,7 @@ import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useMemo } from 'react';
 
-import { PricePeriod } from '@sbercloud/uikit-product-price-summary';
+import { PricePeriod } from '@cloud-ru/uikit-product-price-summary';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

@@ -1,11 +1,11 @@
 import cn from 'classnames';
 import { useState } from 'react';
 
-import { FilterSVG } from '@sbercloud/uikit-product-icons';
-import { MobileDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
-import { AdaptiveFieldSelect } from '@sbercloud/uikit-product-mobile-fields';
-import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
-import { LAYOUT_TYPE, LayoutType } from '@sbercloud/uikit-product-utils';
+import { FilterSVG } from '@cloud-ru/uikit-product-icons';
+import { MobileDroplist } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { AdaptiveFieldSelect } from '@cloud-ru/uikit-product-mobile-fields';
+import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
+import { LAYOUT_TYPE, LayoutType } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled } from '@snack-uikit/button';
 import { Card } from '@snack-uikit/card';
 import { Divider } from '@snack-uikit/divider';

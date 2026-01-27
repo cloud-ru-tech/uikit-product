@@ -1,14 +1,14 @@
 import cn from 'classnames';
 import { DragEvent, forwardRef, KeyboardEventHandler, useState } from 'react';
 
-import { AttachmentSVG, EyeClosedSVG, EyeSVG, PasswordLockSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { AttachmentSVG, EyeClosedSVG, EyeSVG, PasswordLockSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import {
   AdaptiveFieldTextArea,
   FieldTextAreaProps,
   getAdaptiveFieldProps,
-} from '@sbercloud/uikit-product-mobile-fields';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+} from '@cloud-ru/uikit-product-mobile-fields';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { DropZone, FileUpload } from '@snack-uikit/drop-zone';
 import { themeVars } from '@snack-uikit/figma-tokens';

@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
-import { ModelInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { ModelInterfaceSVG } from '@cloud-ru/uikit-product-icons';
 import { ToggleGroup } from '@snack-uikit/toggles';
 
 import { BADGE } from '../../../storybook/constants';

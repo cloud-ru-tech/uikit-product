@@ -2,7 +2,7 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-product-utils`
+`npm i @cloud-ru/uikit-product-utils`
 
 ### Config provider
 
@@ -34,7 +34,7 @@ const imageSrc = useForThemeMode({
 creates text provider
 
 ```typescript jsx
-import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-product-utils';
+import { LanguageCodeType, createTextProvider } from '@cloud-ru/uikit-product-utils';
 
 enum Texts {
   Hide = 'Hide',
@@ -57,7 +57,7 @@ export const textProvider = createTextProvider<Texts>(Dictionary, 'package-name'
 return props matched to `/^(data-test|aria)-/` regexp
 
 ```typescript jsx
-import { extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps } from '@cloud-ru/uikit-product-utils';
 
 const sampleProps = {
   ['data-test-id']: '1',
@@ -78,7 +78,7 @@ extractSupportProps(sampleProps) => {
 return props matched to `/^data-test-/` regexp
 
 ```typescript jsx
-import { extractDataTestProps } from '@sbercloud/uikit-product-utils';
+import { extractDataTestProps } from '@cloud-ru/uikit-product-utils';
 
 const sampleProps = {
   ['data-test-id']: '1',
@@ -98,7 +98,7 @@ extractDataTestProps(sampleProps) => {
 return props not matched to `/^(data-test|aria)-/` regexp
 
 ```typescript jsx
-import { excludeSupportProps } from '@sbercloud/uikit-product-utils';
+import { excludeSupportProps } from '@cloud-ru/uikit-product-utils';
 
 const sampleProps = {
   ['data-test-id']: '1',
@@ -120,7 +120,7 @@ excludeSupportProps(sampleProps) => {
 If you need to repeat mouse click behavior via keyboard pressing you may use following approach:
 
 ```typescript jsx
-import { keyboardSelectHandler } from '@sbercloud/uikit-product-utils';
+import { keyboardSelectHandler } from '@cloud-ru/uikit-product-utils';
 
 
 <div
@@ -138,7 +138,7 @@ In that case Space or Enter pressing when component in focus will be equivalent 
 If you need to get a unique string you may use following approach:
 
 ```typescript jsx
-import { uniqueId } from '@sbercloud/uikit-product-utils';
+import { uniqueId } from '@cloud-ru/uikit-product-utils';
 
 uniqueId(); // '1'
 uniqueId(); // '2'
@@ -152,7 +152,7 @@ uniqueId('foo'); // 'foo__1'
 Require Config Provider to be mounted
 
 ```typescript jsx
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLanguage } from '@cloud-ru/uikit-product-utils';
 
 function Component() {
   const { languageCode, changeLanguage } = useLanguage();
@@ -164,7 +164,7 @@ function Component() {
 Require Config Provider to be mounted
 
 ```typescript jsx
-import { useBrand } from '@sbercloud/uikit-product-utils';
+import { useBrand } from '@cloud-ru/uikit-product-utils';
 
 function Component() {
   const { brand, changeBrand } = useBrand();
@@ -176,7 +176,7 @@ function Component() {
 Require Config Provider to be mounted
 
 ```typescript jsx
-import { useTheme } from '@sbercloud/uikit-product-utils';
+import { useTheme } from '@cloud-ru/uikit-product-utils';
 
 function Component() {
   const { theme, changeTheme } = useTheme();
@@ -188,7 +188,7 @@ function Component() {
 Component will rerender after each `rerender`'s function call.
 
 ```typescript jsx
-import { useForceUpdate } from '@sbercloud/uikit-product-utils';
+import { useForceUpdate } from '@cloud-ru/uikit-product-utils';
 
 function Component() {
   const rerender = useForceUpdate();
@@ -204,7 +204,7 @@ Component will rerender after window's `load` event happened.
 Could be helpfull in cases when you need await for css applied.
 
 ```typescript jsx
-import { useForceUpdateOnPageLoadedCompletely } from '@sbercloud/uikit-product-utils';
+import { useForceUpdateOnPageLoadedCompletely } from '@cloud-ru/uikit-product-utils';
 
 function Component() {
   useForceUpdateOnPageLoadedCompletely();
@@ -216,7 +216,7 @@ function Component() {
 Returns a unique string.
 
 ```typescript jsx
-import { useUniqueId } from '@sbercloud/uikit-product-utils';
+import { useUniqueId } from '@cloud-ru/uikit-product-utils';
 
 function Component() {
   const id = useUniqueId();
@@ -228,7 +228,7 @@ function Component() {
 A hook to define an event handler with an always-stable function identity.
 
 ```tsx
-import { useEventHandler } from '@sbercloud/uikit-product-utils';
+import { useEventHandler } from '@cloud-ru/uikit-product-utils';
 
 function Chat() {
   const [text, setText] = useState('');
@@ -247,7 +247,7 @@ function Chat() {
 A hook to simplify usage of textProvider (to avoid manually passing current language code to the text provider function each time).
 
 ```typescript jsx
-import { useTextProvider } from '@sbercloud/uikit-product-utils';
+import { useTextProvider } from '@cloud-ru/uikit-product-utils';
 import { textProvider, Texts } from '../../helpers';
 
 function Component() {

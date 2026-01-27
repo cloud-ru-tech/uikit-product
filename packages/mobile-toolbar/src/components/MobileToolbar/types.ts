@@ -1,7 +1,7 @@
-import { RequestPayloadParams } from '@cloud-ru/ft-request-payload-transform';
 import { ReactNode } from 'react';
 
-import { FiltersState, MobileChipChoiceRowProps } from '@sbercloud/uikit-product-mobile-chips';
+import { RequestPayloadParams } from '@cloud-ru/ft-request-payload-transform';
+import { FiltersState, MobileChipChoiceRowProps } from '@cloud-ru/uikit-product-mobile-chips';
 
 import { BulkActionsProps, MoreActionsProps } from '../../helperComponents';
 import { NeverOrUndefined, RequireAtLeastOne } from './typesUtils';

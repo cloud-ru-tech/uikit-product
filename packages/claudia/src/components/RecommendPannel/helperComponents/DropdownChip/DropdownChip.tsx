@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 
-import { MobileDropdown } from '@sbercloud/uikit-product-mobile-dropdown';
-import { LAYOUT_TYPE, LayoutType } from '@sbercloud/uikit-product-utils';
+import { MobileDropdown } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { LAYOUT_TYPE, LayoutType } from '@cloud-ru/uikit-product-utils';
 import { Dropdown } from '@snack-uikit/dropdown';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';

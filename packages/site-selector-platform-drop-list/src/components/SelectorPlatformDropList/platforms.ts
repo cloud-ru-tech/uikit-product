@@ -1,4 +1,4 @@
-import { AdvancedSVG, CloudSVG, EvolutionSVG, VmwareSVG } from '@sbercloud/uikit-product-icons';
+import { AdvancedSVG, CloudSVG, EvolutionSVG, VmwareSVG } from '@cloud-ru/uikit-product-icons';
 
 import { Item } from '../../types';
 import { PlatformType } from './SelectorPlatformDropList';

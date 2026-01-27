@@ -1,10 +1,10 @@
 import cn from 'classnames';
 import { MouseEvent as ReactMouseEvent, ReactNode } from 'react';
 
-import { CrossSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { AdaptiveDroplistProps, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
-import { TitleClickable } from '@sbercloud/uikit-product-title-clickable';
+import { CrossSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { AdaptiveDroplistProps, MobileDroplistProps } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { TitleClickable } from '@cloud-ru/uikit-product-title-clickable';
 import { InfoBlock } from '@snack-uikit/info-block';
 import { Skeleton } from '@snack-uikit/skeleton';
 import { extractSupportProps } from '@snack-uikit/utils';

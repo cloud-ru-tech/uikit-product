@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { AlertTop, AlertTopProps } from '@snack-uikit/alert';
 
 import styles from './styles.module.scss';

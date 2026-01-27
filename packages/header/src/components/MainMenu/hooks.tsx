@@ -1,7 +1,7 @@
 import debounce from 'lodash.debounce';
 import { useMemo, useRef } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { BaseItemProps } from '@snack-uikit/list';
 
 import { SearchHandler } from './Search/types';

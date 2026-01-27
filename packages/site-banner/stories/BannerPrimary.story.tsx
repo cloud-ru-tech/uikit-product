@@ -2,8 +2,8 @@ import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useEffect } from 'react';
 
-import { Layout } from '@sbercloud/uikit-product-site-layout';
-import { APPEARANCE_ERID, EridProps } from '@sbercloud/uikit-product-site-tag';
+import { Layout } from '@cloud-ru/uikit-product-site-layout';
+import { APPEARANCE_ERID, EridProps } from '@cloud-ru/uikit-product-site-tag';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

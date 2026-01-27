@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { MutableRefObject } from 'react';
 
-import { DislikeFilledSVG, DislikeOutlineSVG, LikeFilledSVG, LikeOutlineSVG } from '@sbercloud/uikit-product-icons';
+import { DislikeFilledSVG, DislikeOutlineSVG, LikeFilledSVG, LikeOutlineSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFunction, ButtonTonal } from '@snack-uikit/button';
 
 import styles from './styles.module.scss';

@@ -1,5 +1,5 @@
-import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { FiltersState } from '@cloud-ru/uikit-product-mobile-chips';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Toolbar, ToolbarProps } from '@snack-uikit/toolbar';
 
 import { MobileToolbar } from '../MobileToolbar';

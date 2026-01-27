@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 import { ModalCustom, ModalCustomProps } from '@snack-uikit/modal';
 import { TruncateString } from '@snack-uikit/truncate-string';

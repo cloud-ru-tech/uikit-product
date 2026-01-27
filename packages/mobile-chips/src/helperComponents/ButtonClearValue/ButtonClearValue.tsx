@@ -1,6 +1,6 @@
 import { forwardRef, KeyboardEventHandler, MouseEventHandler } from 'react';
 
-import { CrossSVG } from '@sbercloud/uikit-product-icons';
+import { CrossSVG } from '@cloud-ru/uikit-product-icons';
 
 import { BUTTON_SIZE } from '../../constants';
 import { ButtonSize } from '../../types';

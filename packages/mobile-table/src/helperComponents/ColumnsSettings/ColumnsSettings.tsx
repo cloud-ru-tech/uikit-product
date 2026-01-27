@@ -1,4 +1,4 @@
-import { MobileDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
+import { MobileDroplist } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { ButtonFunction } from '@snack-uikit/button';
 import { FunctionSettingsSVG } from '@snack-uikit/icons';
 import { GroupSelectItemProps } from '@snack-uikit/list';

@@ -1,7 +1,7 @@
 # Site Table
 
 ## Installation
-`npm i @sbercloud/uikit-product-site-table`
+`npm i @cloud-ru/uikit-product-site-table`
 
 [Changelog](./CHANGELOG.md)
 

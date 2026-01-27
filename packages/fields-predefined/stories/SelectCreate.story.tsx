@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
-import { KeyManagementSVG } from '@sbercloud/uikit-product-icons';
-import { useAdaptive } from '@sbercloud/uikit-product-utils';
+import { KeyManagementSVG } from '@cloud-ru/uikit-product-icons';
+import { useAdaptive } from '@cloud-ru/uikit-product-utils';
 import { FieldSelectProps } from '@snack-uikit/fields';
 
 import componentChangelog from '../CHANGELOG.md';

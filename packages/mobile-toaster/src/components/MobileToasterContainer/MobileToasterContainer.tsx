@@ -10,7 +10,7 @@ import {
   ToastPosition,
 } from 'react-toastify';
 
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLanguage } from '@cloud-ru/uikit-product-utils';
 import { useLayoutEffect } from '@snack-uikit/utils';
 
 import { TOASTER_CONTAINER_PREFIX, TOASTER_TYPE } from '../../constants';

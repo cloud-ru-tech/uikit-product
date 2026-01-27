@@ -2,7 +2,7 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-product-header`
+`npm i @cloud-ru/uikit-product-header`
 
 ## Props
 
@@ -203,10 +203,10 @@ import {
   NotifyInterfaceSVG,
   QuestionInterfaceSVG,
   SupportInterfaceSVG,
-} from '@sbercloud/uikit-product-icons';
-import { Badge } from '@sbercloud/uikit-product-badge-private';
+} from '@cloud-ru/uikit-product-icons';
+import { Badge } from '@cloud-ru/uikit-product-badge-private';
 import { Divider } from '@snack-uikit/divider';
-import { PredefinedMLSpaceLogo } from '@sbercloud/uikit-product-predefined-icons-private';
+import { PredefinedMLSpaceLogo } from '@cloud-ru/uikit-product-predefined-icons-private';
 import {
   Header,
   HeaderBalanceTooltip,
@@ -218,9 +218,9 @@ import {
   MobileHeader,
   MobileMenu,
   MobileMenuReference,
-} from '@sbercloud/uikit-product-header';
-import { useMatchMedia } from '@sbercloud/uikit-product-utils';
-import { SidebarMobile } from '@sbercloud/uikit-product-sidebar';
+} from '@cloud-ru/uikit-product-header';
+import { useMatchMedia } from '@cloud-ru/uikit-product-utils';
+import { SidebarMobile } from '@cloud-ru/uikit-product-sidebar';
 
 function App() {
   const { isMobile } = useMatchMedia();

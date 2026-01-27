@@ -1,7 +1,7 @@
 # Error Pages
 
 ## Installation
-`npm i @sbercloud/uikit-product-error-pages`
+`npm i @cloud-ru/uikit-product-error-pages`
 
 ## Props
 

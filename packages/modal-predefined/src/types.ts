@@ -1,4 +1,4 @@
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ModalCustomProps } from '@snack-uikit/modal';
 
 import { NoteItemProps } from './helperComponents/NoteItem';

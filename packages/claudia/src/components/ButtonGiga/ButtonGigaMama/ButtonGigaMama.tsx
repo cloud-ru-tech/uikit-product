@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { forwardRef } from 'react';
 
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 import { HTML_TYPE, TARGET } from '../constants';
 import { ButtonPrivate } from '../helperComponents';

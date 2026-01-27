@@ -1,7 +1,7 @@
 # Mobile Alert
 
 ## Installation
-`npm i @sbercloud/uikit-product-mobile-alert`
+`npm i @cloud-ru/uikit-product-mobile-alert`
 
 [Changelog](./CHANGELOG.md)
 

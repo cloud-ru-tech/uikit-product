@@ -1,5 +1,5 @@
-import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { RichText } from '@cloud-ru/uikit-product-site-rich-text';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { AccordionPrimary } from '@snack-uikit/accordion';
 import { Typography } from '@snack-uikit/typography';
 

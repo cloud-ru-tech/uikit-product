@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { MouseEventHandler, useEffect, useMemo, useState } from 'react';
 
-import { CloudLogoDevSVG, CloudLogoHybridSVG, CloudLogoStageSVG, CloudLogoSVG } from '@sbercloud/uikit-product-icons';
+import { CloudLogoDevSVG, CloudLogoHybridSVG, CloudLogoStageSVG, CloudLogoSVG } from '@cloud-ru/uikit-product-icons';
 import { Skeleton } from '@snack-uikit/skeleton';
 import { extractDataTestProps, WithSupportProps } from '@snack-uikit/utils';
 

@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { FiltersState, hasFilterBeenApplied } from '@sbercloud/uikit-product-mobile-chips';
+import { FiltersState, hasFilterBeenApplied } from '@cloud-ru/uikit-product-mobile-chips';
 
 import { FilterButtonProps } from '../../../helperComponents';
 import { FilterRow } from '../types';

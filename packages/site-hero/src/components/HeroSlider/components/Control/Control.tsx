@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import { forwardRef } from 'react';
 
-import { ChevronLeftSVG } from '@sbercloud/uikit-product-icons';
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { ChevronLeftSVG } from '@cloud-ru/uikit-product-icons';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 import styles from './styles.module.scss';
 

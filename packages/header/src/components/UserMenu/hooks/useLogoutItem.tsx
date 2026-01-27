@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
-import { ExitSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { ExitSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { ListProps } from '@snack-uikit/list';
 
 type UseLogoutItemProps = {

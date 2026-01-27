@@ -1,7 +1,7 @@
 import { getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import { useMemo } from 'react';
 
-import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
+import { FiltersState } from '@cloud-ru/uikit-product-mobile-chips';
 import { SkeletonText } from '@snack-uikit/skeleton';
 import { TableProps } from '@snack-uikit/table';
 

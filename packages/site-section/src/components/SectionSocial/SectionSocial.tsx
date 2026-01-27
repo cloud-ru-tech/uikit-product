@@ -1,7 +1,7 @@
 import cn from 'classnames';
 
-import { Grid, GridProps } from '@sbercloud/uikit-product-site-grid';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { Grid, GridProps } from '@cloud-ru/uikit-product-site-grid';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 import { CardSocial, CardSocialProps } from '../../helperComponents';
 import { SectionColor } from '../../types';

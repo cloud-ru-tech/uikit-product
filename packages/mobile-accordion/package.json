@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-mobile-accordion",
+  "name": "@cloud-ru/uikit-product-mobile-accordion",
   "title": "Mobile Accordion",
   "version": "0.4.32",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/mobile-accordion",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/mobile-accordion",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/mobile-accordion"
   },
   "author": {
@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "16.2.0",
-    "@sbercloud/uikit-product-mobile-tooltip": "0.5.5",
-    "@sbercloud/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-icons": "16.2.0",
+    "@cloud-ru/uikit-product-mobile-tooltip": "0.5.5",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/accordion": "0.11.11",
     "@snack-uikit/button": "0.19.15",
     "@snack-uikit/toggles": "0.13.20",

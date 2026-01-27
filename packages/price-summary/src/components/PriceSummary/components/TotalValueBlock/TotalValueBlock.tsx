@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { InfoFilledSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { InfoFilledSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { AlarmFilledSVG, CrossFilledSVG, QuestionSVG } from '@snack-uikit/icons';
 import { Link } from '@snack-uikit/link';
 import { Tooltip } from '@snack-uikit/tooltip';

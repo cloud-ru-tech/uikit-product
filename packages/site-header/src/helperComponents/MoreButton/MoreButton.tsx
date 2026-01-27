@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { useState } from 'react';
 
-import { MoreSVG } from '@sbercloud/uikit-product-icons';
+import { MoreSVG } from '@cloud-ru/uikit-product-icons';
 import { Dropdown } from '@snack-uikit/dropdown';
 
 import { LinkItem } from '../../components/HeaderItems/types';

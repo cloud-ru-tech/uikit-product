@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import { SearchSVG } from '@sbercloud/uikit-product-icons';
+import { SearchSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonSimple } from '@snack-uikit/button';
 
 import { useWindowWidth } from '../../hooks';

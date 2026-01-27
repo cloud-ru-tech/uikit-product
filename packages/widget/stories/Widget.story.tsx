@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useMemo } from 'react';
 
-import { PlaceholderSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
+import { PlaceholderSVG, PlusSVG } from '@cloud-ru/uikit-product-icons';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
 import { Skeleton } from '@snack-uikit/skeleton';
 import { ValueOf } from '@snack-uikit/utils';

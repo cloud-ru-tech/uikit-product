@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-icons",
+  "name": "@cloud-ru/uikit-product-icons",
   "title": "React Icons package",
   "version": "16.2.0",
   "sideEffects": [
@@ -21,10 +21,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/icons",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/icons",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/icons"
   },
   "author": {
@@ -62,11 +62,10 @@
     "create-sprite": "ts-node scripts/createSprite.ts"
   },
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/icons": "0.27.4"
   },
   "devDependencies": {
-    "@sbercloud/ft-download-file": "3.0.1",
     "@svgr/cli": "8.1.0",
     "@svgr/plugin-jsx": "8.1.0",
     "@types/lodash.camelcase": "4.3.9",

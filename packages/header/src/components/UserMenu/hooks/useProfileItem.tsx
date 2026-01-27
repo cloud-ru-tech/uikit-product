@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { SettingsSVG } from '@sbercloud/uikit-product-icons';
+import { SettingsSVG } from '@cloud-ru/uikit-product-icons';
 import { Avatar } from '@snack-uikit/avatar';
 import { BaseItemProps } from '@snack-uikit/list';
 

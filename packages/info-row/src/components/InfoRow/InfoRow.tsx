@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { ReactNode } from 'react';
 
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ButtonTonal, ButtonTonalProps } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { SkeletonContextProvider, SkeletonText, WithSkeleton } from '@snack-uikit/skeleton';

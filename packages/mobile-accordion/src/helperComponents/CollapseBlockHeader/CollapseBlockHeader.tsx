@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { MobileQuestionTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { MobileQuestionTooltip } from '@cloud-ru/uikit-product-mobile-tooltip';
+import { WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import { TEST_IDS } from '../../testIds';

@@ -1,4 +1,4 @@
-import { AdvancedSVG, EvolutionSVG, MlSpaceSVG, VmwareSVG } from '@sbercloud/uikit-product-icons';
+import { AdvancedSVG, EvolutionSVG, MlSpaceSVG, VmwareSVG } from '@cloud-ru/uikit-product-icons';
 
 import { getPlatformIconComponent } from './Container';
 

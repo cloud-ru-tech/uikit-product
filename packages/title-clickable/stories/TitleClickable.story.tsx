@@ -1,6 +1,6 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
-import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
 import { Counter } from '@snack-uikit/counter';
 import { Tag } from '@snack-uikit/tag';
 import { ValueOf } from '@snack-uikit/utils';

@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { PromoTag, PromoTagProps } from '@snack-uikit/promo-tag';
 import { Tooltip, TooltipProps } from '@snack-uikit/tooltip';
 import { extractSupportProps } from '@snack-uikit/utils';

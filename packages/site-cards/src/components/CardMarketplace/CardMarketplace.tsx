@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import { AnchorHTMLAttributes, MouseEvent } from 'react';
 
-import { TagSpecial, TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { TagSpecial, TagSpecialProps } from '@cloud-ru/uikit-product-site-tag';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Card } from '@snack-uikit/card';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';

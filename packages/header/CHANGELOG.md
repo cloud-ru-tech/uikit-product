@@ -6,11 +6,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.1.2 (2026-01-29)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@16.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.58](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.22](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@16.2.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.26](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.29](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.58](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -21,7 +21,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Dependencies
 
-* **DOCDEV-2456:** reexported useLocalStorage in header pckg ([b1b5d66](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b1b5d6650736dcd7c06f0ee15840e4c19a7fabeb))
+* **DOCDEV-2456:** reexported useLocalStorage in header pckg ([b1b5d66](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b1b5d6650736dcd7c06f0ee15840e4c19a7fabeb))
 
 
 
@@ -32,7 +32,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **EVOVPC-2169:** add virtualip to service groups constant ([133fd82](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/133fd82ca67900a90dc8861ba6a5dbb1eb6c7119))
+* **EVOVPC-2169:** add virtualip to service groups constant ([133fd82](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/133fd82ca67900a90dc8861ba6a5dbb1eb6c7119))
 
 
 
@@ -43,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-7187:** add SSR safety checks for localStorage and navigator usage ([c2c7561](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c2c7561c9a2f5e3b1bd897b696b33ea309f39dfa))
+* **FF-7187:** add SSR safety checks for localStorage and navigator usage ([c2c7561](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c2c7561c9a2f5e3b1bd897b696b33ea309f39dfa))
 
 
 
@@ -52,11 +52,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.25 (2025-11-28)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@16.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.54](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.18](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@16.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.22](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.25](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.54](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -65,8 +65,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.24 (2025-11-28)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-drawer@0.9.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.21](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.24](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -77,7 +77,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-7638:** mobile-header search default open if has value ([9e958ab](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e958ab193f08eb8ee94f8602f128468ae331cb1))
+* **FF-7638:** mobile-header search default open if has value ([9e958ab](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e958ab193f08eb8ee94f8602f128468ae331cb1))
 
 
 
@@ -86,12 +86,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.22 (2025-11-24)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@15.1.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.53](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@8.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.17](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.1.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.20](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.23](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.53](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@8.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -100,12 +100,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.21 (2025-11-24)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@15.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.52](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@8.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.1.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.19](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.22](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.52](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@8.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -116,7 +116,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PD-3377:** removed contributors ([121640f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
 
 
 
@@ -125,12 +125,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.19 (2025-11-13)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@15.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.50](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@7.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.1.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.17](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.20](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.50](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@7.0.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -141,7 +141,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PD-3377:** contributors update to publish all packages ([719fd3e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
 
 
 
@@ -150,7 +150,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.17 (2025-11-12)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
 
 
 
@@ -159,12 +159,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.16 (2025-11-12)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@15.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.48](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@7.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.1.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.15](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.18](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.48](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@7.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -173,11 +173,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.15 (2025-11-12)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@15.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.47](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.10](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.17](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.47](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -186,12 +186,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.14 (2025-11-07)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@15.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.46](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@6.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.0.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.46](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@6.2.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -200,11 +200,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.13 (2025-10-06)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@15.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.45](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.0.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.15](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.45](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -213,11 +213,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.12 (2025-10-06)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@15.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.44](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.0.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.44](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -226,11 +226,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.11 (2025-10-03)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@15.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.43](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.0.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.10](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.43](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -239,12 +239,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.10 (2025-09-30)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@15.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@6.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.42](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@6.2.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -253,11 +253,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.9 (2025-09-26)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@15.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.41](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -266,11 +266,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.8 (2025-09-25)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@14.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.6.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.10](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.40](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -279,11 +279,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.7 (2025-09-18)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@14.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.5.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.39](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -292,12 +292,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.6 (2025-09-17)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@14.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.38](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@6.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.4.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.38](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@6.2.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -306,7 +306,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.5 (2025-09-16)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.8.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
 
 
 
@@ -315,11 +315,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 5.0.4 (2025-09-11)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.53](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@14.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-drawer@0.9.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.53](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.3.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@0.9.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.37](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -330,7 +330,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6875:** add missed data-test-id ([b9a5d49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b9a5d49dd260f3527ed9e3fbd7fc4ce223184730))
+* **FF-6875:** add missed data-test-id ([b9a5d49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b9a5d49dd260f3527ed9e3fbd7fc4ce223184730))
 
 
 
@@ -341,7 +341,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Dependencies
 
-* **FF-7117:** up snack field deps ([465eb49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/465eb49b46a72ebb8a43d851f101cb7c0827e151))
+* **FF-7117:** up snack field deps ([465eb49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/465eb49b46a72ebb8a43d851f101cb7c0827e151))
 
 
 
@@ -352,7 +352,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-11:** fix border style ([ef16ea4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ef16ea4c0b6fc55a91a4657f96fe8682a02876aa))
+* **FF-11:** fix border style ([ef16ea4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ef16ea4c0b6fc55a91a4657f96fe8682a02876aa))
 
 
 
@@ -363,19 +363,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6875:** fix favorite order ([19b64e7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/19b64e75c9eb458b9b2244a0744e50fe96b1758f))
-* **FF-6875:** fix header height ([574dd9f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/574dd9f02ed48074da3cf2de495c47e31bfa95b0))
+* **FF-6875:** fix favorite order ([19b64e7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/19b64e75c9eb458b9b2244a0744e50fe96b1758f))
+* **FF-6875:** fix header height ([574dd9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/574dd9f02ed48074da3cf2de495c47e31bfa95b0))
 
 
 ### Features
 
-* remove old package ([11648f3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/11648f3e383070f1bd18a2cea480af15280b3a0f))
+* remove old package ([11648f3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/11648f3e383070f1bd18a2cea480af15280b3a0f))
 
 
 ### BREAKING CHANGES
 
 
-* **FF-6875:** refactor header ([1f5344b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1f5344b142c9725d63b19962a688a4400d4ae015))
+* **FF-6875:** refactor header ([1f5344b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1f5344b142c9725d63b19962a688a4400d4ae015))
 
 
 
@@ -383,11 +383,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.17 (2025-09-02)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.52](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@14.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.52](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.3.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.24](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.36](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -396,11 +396,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.16 (2025-09-01)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.51](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@14.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.35](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.51](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.2.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.23](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.35](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -409,11 +409,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.15 (2025-08-20)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.50](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@14.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.34](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.50](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.1.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.22](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.34](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -422,12 +422,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.14 (2025-08-19)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@14.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@6.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.49](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.1.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.21](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.33](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@6.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -436,11 +436,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.13 (2025-08-15)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.48](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@14.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.48](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.20](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.32](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -449,8 +449,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.12 (2025-08-14)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-chips@0.8.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.19](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -461,7 +461,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **VMWDEV-2712:** breadcrumbs state racing ([fd45dc2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fd45dc22acd9eed809ac7031942fbd6012b253ae))
+* **VMWDEV-2712:** breadcrumbs state racing ([fd45dc2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fd45dc22acd9eed809ac7031942fbd6012b253ae))
 
 
 
@@ -472,7 +472,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-7011:** condition to remove 0 when no cards available in drawer ([02fd642](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/02fd642f27ab617938492f86adaff35d2afb2fdb))
+* **FF-7011:** condition to remove 0 when no cards available in drawer ([02fd642](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/02fd642f27ab617938492f86adaff35d2afb2fdb))
 
 
 
@@ -481,8 +481,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.9 (2025-08-07)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-chips@0.8.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.18](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -491,12 +491,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.8 (2025-08-04)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.47](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@14.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.31](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@6.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.47](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.0.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.17](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.31](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@6.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -505,12 +505,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.7 (2025-08-04)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.46](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@14.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@6.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.46](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.30](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@6.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -519,7 +519,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.6 (2025-07-28)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-chips@0.8.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.15](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
 
 
 
@@ -528,11 +528,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.5 (2025-07-25)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.45](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@14.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.45](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.29](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -541,12 +541,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.4 (2025-07-17)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.44](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@13.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@5.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.44](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@13.0.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.28](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@5.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -555,8 +555,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.3 (2025-07-17)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-chips@0.8.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -565,12 +565,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.2 (2025-07-16)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.43](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@13.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@5.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.43](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@13.0.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.27](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@5.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -579,11 +579,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.9.1 (2025-07-15)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@13.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.42](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@13.0.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.10](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.26](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -594,7 +594,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-2556:** add closeOnPopstate prop ([f6d2000](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f6d2000a7f29c976732ac53b759cbd342bde6bd7))
+* **PDS-2556:** add closeOnPopstate prop ([f6d2000](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f6d2000a7f29c976732ac53b759cbd342bde6bd7))
 
 
 
@@ -605,7 +605,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6964:** down fuzzy threshold ([ac29483](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ac29483beeab95a5b5d5320b79822fa6cb9d8d7a))
+* **FF-6964:** down fuzzy threshold ([ac29483](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ac29483beeab95a5b5d5320b79822fa6cb9d8d7a))
 
 
 
@@ -614,11 +614,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.8.5 (2025-07-01)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@13.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.48](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.41](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@13.0.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.48](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.25](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -627,11 +627,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.8.4 (2025-06-27)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@13.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.47](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.40](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@13.0.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.47](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.24](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -640,12 +640,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.8.3 (2025-06-27)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@13.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.46](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@4.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.39](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@13.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.46](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.23](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@4.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -656,7 +656,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6687:** raise sort state to avoid state conflicts with multiple tabs ([2e9fbc0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2e9fbc0493398c31bb231fa140833ee383ac5317))
+* **FF-6687:** raise sort state to avoid state conflicts with multiple tabs ([2e9fbc0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2e9fbc0493398c31bb231fa140833ee383ac5317))
 
 
 
@@ -667,7 +667,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-00:** add search hot-spot open delay ([e3c608e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e3c608e2071bd63a4c7bb7d0f7006c0b4be194a1))
+* **FF-00:** add search hot-spot open delay ([e3c608e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e3c608e2071bd63a4c7bb7d0f7006c0b4be194a1))
 
 
 
@@ -678,7 +678,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **FF-6844:** header search filter precision setting ([89a5700](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/89a5700b5d42011c68207496ad4ea4584a7d73e8))
+* **FF-6844:** header search filter precision setting ([89a5700](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/89a5700b5d42011c68207496ad4ea4584a7d73e8))
 
 
 
@@ -689,8 +689,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6726:** add data-test-ids ([ba3acef](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ba3aceffde0c16ac0a0bf062a86a8c46232d0688))
-* **FF-6726:** reuse ProductSelectTrigger component in DrawerMenuDesktop ([236bb51](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/236bb5108c5b47d8712cf9d0db2abefd1f852a56))
+* **FF-6726:** add data-test-ids ([ba3acef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ba3aceffde0c16ac0a0bf062a86a8c46232d0688))
+* **FF-6726:** reuse ProductSelectTrigger component in DrawerMenuDesktop ([236bb51](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/236bb5108c5b47d8712cf9d0db2abefd1f852a56))
 
 
 
@@ -701,7 +701,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PDS-2461:** header current project is visible by default in selector ([34dea75](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/34dea75dffbc1526224f81152ef1a32e5ab48a3f))
+* **PDS-2461:** header current project is visible by default in selector ([34dea75](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/34dea75dffbc1526224f81152ef1a32e5ab48a3f))
 
 
 
@@ -710,11 +710,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.7.3 (2025-06-20)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@12.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.44](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.37](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@12.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.44](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.21](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -725,7 +725,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **ONB-3885:** update package versions and props edit ([ed6471e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ed6471e108401fc1aa09ac2eee851707ab0ae340))
+* **ONB-3885:** update package versions and props edit ([ed6471e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ed6471e108401fc1aa09ac2eee851707ab0ae340))
 
 
 
@@ -734,11 +734,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.7.1 (2025-06-20)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@12.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.36](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@12.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.42](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.20](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -749,7 +749,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **FF-6790:** native anchors in header lists ([680dfb5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/680dfb5411fe8f40c24ef0405a4c6530557de587))
+* **FF-6790:** native anchors in header lists ([680dfb5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/680dfb5411fe8f40c24ef0405a4c6530557de587))
 
 
 
@@ -760,12 +760,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6771:** closeDropdown onPlatformChange on mobile, drawer links padding, hide project select if not passed ([cd8e4a9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cd8e4a9922bfa2f1e70d281aa0ba82f6b269f579))
+* **FF-6771:** closeDropdown onPlatformChange on mobile, drawer links padding, hide project select if not passed ([cd8e4a9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cd8e4a9922bfa2f1e70d281aa0ba82f6b269f579))
 
 
 ### Features
 
-* **FF-6725:** split platform props ([0d39384](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0d393845e2f37086e53def7e7b3d0348c35bc838))
+* **FF-6725:** split platform props ([0d39384](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0d393845e2f37086e53def7e7b3d0348c35bc838))
 
 
 
@@ -776,7 +776,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6784:** change projects sort to last visited if only one catalog available ([2b67c8a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2b67c8a616fa81192199785e28b4b340801d52ce))
+* **FF-6784:** change projects sort to last visited if only one catalog available ([2b67c8a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2b67c8a616fa81192199785e28b4b340801d52ce))
 
 
 
@@ -787,7 +787,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **FF-6790:** hide platforms filter label on mobile ([c0d9ad4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c0d9ad47fcdf685c82acb07e60b8988c0d4ff35e))
+* **FF-6790:** hide platforms filter label on mobile ([c0d9ad4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c0d9ad47fcdf685c82acb07e60b8988c0d4ff35e))
 
 
 
@@ -798,7 +798,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6725:** project selector avatar color ([e6dc03f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e6dc03f728f21ca7d620dfe2fe0a5bd9d2c998ec))
+* **FF-6725:** project selector avatar color ([e6dc03f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e6dc03f728f21ca7d620dfe2fe0a5bd9d2c998ec))
 
 
 
@@ -809,7 +809,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **FF-6784:** add new sort and platforms in project selector ([61320b2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/61320b236324dc08142fbbf285c7d57a08cda823))
+* **FF-6784:** add new sort and platforms in project selector ([61320b2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/61320b236324dc08142fbbf285c7d57a08cda823))
 
 
 
@@ -820,7 +820,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-2197:** improved header items search ([cb702f4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cb702f469005468a9488360433cb8ea90245cbb7))
+* **PDS-2197:** improved header items search ([cb702f4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cb702f469005468a9488360433cb8ea90245cbb7))
 
 
 
@@ -829,11 +829,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.2.7 (2025-06-06)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.35](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@11.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.35](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.9.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.41](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.19](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -844,7 +844,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PDS-2003:** use open/close state from props ([5e3995e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5e3995ed14530ef4e2af3ff6ef6a3a3e5a7f180c))
+* **PDS-2003:** use open/close state from props ([5e3995e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5e3995ed14530ef4e2af3ff6ef6a3a3e5a7f180c))
 
 
 
@@ -855,8 +855,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6687:** project selector divider style order ([b9654f5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b9654f5e25253314de04a4001cfe41b835542c05))
-* **FF-6687:** project sort ignore undefined ([d48d17b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d48d17bc5a60cd9ed3ccf2f5bdefdcb258858fdb))
+* **FF-6687:** project selector divider style order ([b9654f5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b9654f5e25253314de04a4001cfe41b835542c05))
+* **FF-6687:** project sort ignore undefined ([d48d17b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d48d17bc5a60cd9ed3ccf2f5bdefdcb258858fdb))
 
 
 
@@ -865,7 +865,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.2.4 (2025-05-29)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-chips@0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.8.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
 
 
 
@@ -876,7 +876,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6613:** projects sort fix, search animation timing, disable project search by catalog ([5926712](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/59267121cffa84ff3c366461867055c38b62b6a7))
+* **FF-6613:** projects sort fix, search animation timing, disable project search by catalog ([5926712](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/59267121cffa84ff3c366461867055c38b62b6a7))
 
 
 
@@ -885,11 +885,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.2.2 (2025-05-28)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.34](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@11.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.7.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.34](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.8.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.7.18](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.40](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.18](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -898,7 +898,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.2.1 (2025-05-27)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-chips@0.7.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.7.17](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
 
 
 
@@ -909,7 +909,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **FF-6743:** add callback for projectsSortChange ([16cf873](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/16cf873e4746d8fd0d3dd7f373fcac459a85f4ac))
+* **FF-6743:** add callback for projectsSortChange ([16cf873](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/16cf873e4746d8fd0d3dd7f373fcac459a85f4ac))
 
 
 
@@ -920,8 +920,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6556:** add tests for header ([174ee24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/174ee2444eb50811278990ff0bee12bd73988dc3))
-* **FF-6556:** close mobile notification panel on link click ([f7dc510](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f7dc5108da1d6209f1222c721e12974343cb18fd))
+* **FF-6556:** add tests for header ([174ee24](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/174ee2444eb50811278990ff0bee12bd73988dc3))
+* **FF-6556:** close mobile notification panel on link click ([f7dc510](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f7dc5108da1d6209f1222c721e12974343cb18fd))
 
 
 
@@ -932,12 +932,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6613:** header elements data-test-id ([c6e2596](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c6e2596876557b950ac3d3cb83c9d8815b26a277))
+* **FF-6613:** header elements data-test-id ([c6e2596](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c6e2596876557b950ac3d3cb83c9d8815b26a277))
 
 
 ### Features
 
-* **FF-6613:** header organizations actions ([b3f8859](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b3f885915bfbaefce6dca279a45e03aefde604bc))
+* **FF-6613:** header organizations actions ([b3f8859](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3f885915bfbaefce6dca279a45e03aefde604bc))
 
 
 
@@ -946,11 +946,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 4.0.1 (2025-05-16)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@11.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-chips@0.7.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.33](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.7.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@0.7.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.39](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.17](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -962,7 +962,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### BREAKING CHANGES
 
 
-* **FF-6490:** new navigation ([ac61101](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ac611013d65a7a9012c61a27a8c603c44e28cba2))
+* **FF-6490:** new navigation ([ac61101](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ac611013d65a7a9012c61a27a8c603c44e28cba2))
 
 
 
@@ -970,9 +970,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 3.3.1 (2025-05-14)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@11.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.32](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.6.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -983,7 +983,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-2077:** add system notifications ([d61edad](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d61edad74a78e7a727b8661b3984aa87a2ab698f))
+* **PDS-2077:** add system notifications ([d61edad](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d61edad74a78e7a727b8661b3984aa87a2ab698f))
 
 
 
@@ -994,7 +994,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **FF-6590:** add search metric ([5a1723e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5a1723e2d6f5def843ecbd98c4097e7c2ea57aab))
+* **FF-6590:** add search metric ([5a1723e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5a1723e2d6f5def843ecbd98c4097e7c2ea57aab))
 
 
 
@@ -1003,9 +1003,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 3.1.1 (2025-04-30)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.31](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@11.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.31](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.5.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.15](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -1016,7 +1016,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-2101:** changed space ([03efeed](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03efeedfe269446e16f7ea1994deef9d32cb13fb))
+* **PDS-2101:** changed space ([03efeed](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03efeedfe269446e16f7ea1994deef9d32cb13fb))
 
 
 
@@ -1027,7 +1027,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **MKP-2025:** remove promoTag from MKP banner ([481d4dd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/481d4ddbd4c35887b749b9b7ec816d0d86bd6abf))
+* **MKP-2025:** remove promoTag from MKP banner ([481d4dd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/481d4ddbd4c35887b749b9b7ec816d0d86bd6abf))
 
 
 
@@ -1036,9 +1036,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 3.0.1 (2025-04-15)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@11.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.30](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.4.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -1050,7 +1050,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### BREAKING CHANGES
 
 
-* **RM-2108:** Remove financialMenu prop in the header component, add new financeButton prop with ReactNode type ([5cb005a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5cb005ae79734df4b7982474ac9f777fafd73399))
+* **RM-2108:** Remove financialMenu prop in the header component, add new financeButton prop with ReactNode type ([5cb005a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5cb005ae79734df4b7982474ac9f777fafd73399))
 
 
 
@@ -1058,10 +1058,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.39.4 (2025-04-09)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@11.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.29](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.3.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.28](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -1070,10 +1070,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.39.3 (2025-04-01)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@11.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.28](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.2.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.27](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -1084,7 +1084,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PDS-2028:** inconsistent last header breadcrumb behavior fixed ([15fd15f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/15fd15f9b3013b1eacd4d6476ebda30ffd5d0543))
+* **PDS-2028:** inconsistent last header breadcrumb behavior fixed ([15fd15f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/15fd15f9b3013b1eacd4d6476ebda30ffd5d0543))
 
 
 
@@ -1093,10 +1093,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.39.1 (2025-03-27)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@11.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.27](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.26](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -1107,7 +1107,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-1716:** vendor logo & custom user menu for vendors services ([f26fb05](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f26fb057072d1f2658356a2332ace65957becfd7))
+* **PDS-1716:** vendor logo & custom user menu for vendors services ([f26fb05](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f26fb057072d1f2658356a2332ace65957becfd7))
 
 
 
@@ -1116,10 +1116,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.38.6 (2025-03-21)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@11.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.26](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.25](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.10](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -1130,7 +1130,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6326:** changed translation flow ([b3b6bb4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
 
 
 
@@ -1139,10 +1139,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.38.4 (2025-03-20)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@11.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.25](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.24](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -1151,10 +1151,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.38.3 (2025-03-18)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.24](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.7.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.23](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -1163,10 +1163,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.38.2 (2025-03-14)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.23](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.6.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.22](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -1175,10 +1175,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.38.1 (2025-03-13)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.5.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.22](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.5.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.21](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -1189,7 +1189,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-1852:** add logo dev/stage for header ([61e963b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/61e963b03d49339d7bd74bc0758c420bf0eefb21))
+* **PDS-1852:** add logo dev/stage for header ([61e963b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/61e963b03d49339d7bd74bc0758c420bf0eefb21))
 
 
 
@@ -1200,7 +1200,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6306:** fix unhandled error undefined ([14bdfdd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/14bdfddc0f0528360e797b66e60bd752683d1c1b))
+* **FF-6306:** fix unhandled error undefined ([14bdfdd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/14bdfddc0f0528360e797b66e60bd752683d1c1b))
 
 
 
@@ -1211,7 +1211,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **LKP-1479:** change text for referral banner ([cdbc58b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cdbc58bc6668a3c989b03bce8b129b106b367a73))
+* **LKP-1479:** change text for referral banner ([cdbc58b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cdbc58bc6668a3c989b03bce8b129b106b367a73))
 
 
 
@@ -1220,10 +1220,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.36.2 (2025-03-05)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.21](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.5.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.20](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -1232,10 +1232,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.36.1 (2025-03-04)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.20](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.4.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.19](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -1246,7 +1246,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **LKP-1440:** change referral reward ([9e407b1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e407b116701782872a0bf4f6097c7a2b47b7b1d))
+* **LKP-1440:** change referral reward ([9e407b1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e407b116701782872a0bf4f6097c7a2b47b7b1d))
 
 
 
@@ -1255,10 +1255,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.35.1 (2025-02-28)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-title-clickable@0.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.19](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.3.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.18](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@0.0.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
 
 
 
@@ -1269,7 +1269,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-1183:** add titleClickable and hideProductSelect prop for header ([ba87f76](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ba87f76f66abd4ba2e13b9078a2c3cd12b6138b2))
+* **PDS-1183:** add titleClickable and hideProductSelect prop for header ([ba87f76](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ba87f76f66abd4ba2e13b9078a2c3cd12b6138b2))
 
 
 
@@ -1280,7 +1280,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6287:** add data-attributes for drawer banners ([ce8a7a5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ce8a7a50c46e85d1d47428f0cb5cac3d2e8caa5d))
+* **FF-6287:** add data-attributes for drawer banners ([ce8a7a5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ce8a7a50c46e85d1d47428f0cb5cac3d2e8caa5d))
 
 
 
@@ -1291,7 +1291,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **AICCORE-3612:** added access request for ws ([2b8020e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2b8020ece4c578f72efe5638154681057f61f638))
+* **AICCORE-3612:** added access request for ws ([2b8020e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2b8020ece4c578f72efe5638154681057f61f638))
 
 
 
@@ -1302,7 +1302,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **RM-2855:** Header (financial menu) - fix mobile text sizes & margin on safari & hide spinner ([8a49a64](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8a49a64ad1a64e21e087630da8e9999dc9481530))
+* **RM-2855:** Header (financial menu) - fix mobile text sizes & margin on safari & hide spinner ([8a49a64](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8a49a64ad1a64e21e087630da8e9999dc9481530))
 
 
 
@@ -1313,7 +1313,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-4704:** make list always flex, besides style order ([5607c2b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5607c2b7d907803700ba6e224487d19a23c6a380))
+* **FF-4704:** make list always flex, besides style order ([5607c2b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5607c2b7d907803700ba6e224487d19a23c6a380))
 
 
 
@@ -1324,7 +1324,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-4704:** add virtualization to project selector ([4747903](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4747903d376d9e73f98ed48099b835dc5bc269db))
+* **FF-4704:** add virtualization to project selector ([4747903](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4747903d376d9e73f98ed48099b835dc5bc269db))
 
 
 
@@ -1332,10 +1332,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.36 (2025-02-06)</small>
 
-* fix(PDS-1495): Header - fixed wide divider in the mobile financial menu ([f1f08ce](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f1f08ce))
-* fix(PDS-1495): Header - removed gap between date and status indicator ([c625eb1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c625eb1))
-* fix(PDS-1495): Header - the mobile version of financialMenu is aligned with the desktop version ([8a9fe36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8a9fe36))
-* fix(PDS-1552): Header - use adaptive tooltip in financial menu row ([1d31c4d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1d31c4d))
+* fix(PDS-1495): Header - fixed wide divider in the mobile financial menu ([f1f08ce](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f1f08ce))
+* fix(PDS-1495): Header - removed gap between date and status indicator ([c625eb1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c625eb1))
+* fix(PDS-1495): Header - the mobile version of financialMenu is aligned with the desktop version ([8a9fe36](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8a9fe36))
+* fix(PDS-1552): Header - use adaptive tooltip in financial menu row ([1d31c4d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1d31c4d))
 
 
 
@@ -1344,10 +1344,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## <small>2.33.35 (2025-02-05)</small>
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.2.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.8.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.17](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.8.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -1356,9 +1356,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## <small>2.33.34 (2025-02-05)</small>
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.2.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.15](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -1366,8 +1366,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.33 (2025-02-04)</small>
 
-* fix(PDS-1519): Header - the content of financial menu button is hidden when loading ([5af70a5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5af70a5))
-* feat(PDS-1519): Header - added loader for financialMenu ([9c3ad4f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9c3ad4f))
+* fix(PDS-1519): Header - the content of financial menu button is hidden when loading ([5af70a5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5af70a5))
+* feat(PDS-1519): Header - added loader for financialMenu ([9c3ad4f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9c3ad4f))
 
 
 
@@ -1375,10 +1375,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.32 (2025-01-23)</small>
 
-* fix(PDS-1412): Header - deleted the link from title and added the link text to the section when ther ([cf2cf4f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cf2cf4f))
-* fix(PDS-1412): Header - show the title as a link when there is no agreement ([3b11950](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3b11950))
-* fix(PDS-1412): Header - updated the link text in financial menu ([48afb0e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/48afb0e))
-* feat(PDS-1412): added the display of the agreement on the desktop financial menu ([a096911](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a096911))
+* fix(PDS-1412): Header - deleted the link from title and added the link text to the section when ther ([cf2cf4f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cf2cf4f))
+* fix(PDS-1412): Header - show the title as a link when there is no agreement ([3b11950](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3b11950))
+* fix(PDS-1412): Header - updated the link text in financial menu ([48afb0e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/48afb0e))
+* feat(PDS-1412): added the display of the agreement on the desktop financial menu ([a096911](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a096911))
 
 
 
@@ -1386,8 +1386,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.31 (2025-01-17)</small>
 
-* fix(PDS-1284): header - added balance display setting ([955c219](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/955c219))
-* fix(PDS-1284): header - logic of disabling the promo code button has been implemented ([c2d3288](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c2d3288))
+* fix(PDS-1284): header - added balance display setting ([955c219](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/955c219))
+* fix(PDS-1284): header - logic of disabling the promo code button has been implemented ([c2d3288](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c2d3288))
 
 
 
@@ -1395,7 +1395,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.30 (2025-01-14)</small>
 
-* feat(PDS-972): add referral banner and alert ([b054a7f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b054a7f))
+* feat(PDS-972): add referral banner and alert ([b054a7f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b054a7f))
 
 
 
@@ -1403,7 +1403,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.29 (2025-01-09)</small>
 
-* feat(LK-4922): pass notifications settings prop to Header ([2242e22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2242e22))
+* feat(LK-4922): pass notifications settings prop to Header ([2242e22](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2242e22))
 
 
 
@@ -1412,9 +1412,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## <small>2.33.28 (2025-01-09)</small>
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.2.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.15](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -1422,7 +1422,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.27 (2024-12-27)</small>
 
-* chore(FF-5734): eslint fixes ([d82234d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d82234d))
+* chore(FF-5734): eslint fixes ([d82234d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d82234d))
 
 
 
@@ -1431,10 +1431,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## <small>2.33.26 (2024-12-26)</small>
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.2.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.8.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.10](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.8.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -1443,10 +1443,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## <small>2.33.25 (2024-12-26)</small>
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.2.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.8.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.8.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -1454,7 +1454,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.24 (2024-12-17)</small>
 
-* fix(PDS-1272): Disable bonus button when user has negative balance ([560f81a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/560f81a))
+* fix(PDS-1272): Disable bonus button when user has negative balance ([560f81a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/560f81a))
 
 
 
@@ -1463,9 +1463,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## <small>2.33.23 (2024-12-17)</small>
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.2.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.8.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.8.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -1474,9 +1474,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## <small>2.33.22 (2024-12-16)</small>
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.2.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.8.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.10](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.8.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -1484,8 +1484,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.21 (2024-12-13)</small>
 
-* fix(PDS-1155): apply onSelectOpenChange in mobile header ([d943b09](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d943b09))
-* feat(PDS-1155): add organization selection in mobile view ([9d2acf5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9d2acf5))
+* fix(PDS-1155): apply onSelectOpenChange in mobile header ([d943b09](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d943b09))
+* feat(PDS-1155): add organization selection in mobile view ([9d2acf5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9d2acf5))
 
 
 
@@ -1494,8 +1494,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## <small>2.33.20 (2024-12-11)</small>
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -1503,8 +1503,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.19 (2024-12-11)</small>
 
-* fix(PDS-1222): Change text for getting welcome grant component ([29b154b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/29b154b))
-* fix(PDS-1222): Remove CostControl icon in popup Finance menu ([9721caf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9721caf))
+* fix(PDS-1222): Change text for getting welcome grant component ([29b154b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/29b154b))
+* fix(PDS-1222): Remove CostControl icon in popup Finance menu ([9721caf](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9721caf))
 
 
 
@@ -1512,7 +1512,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.18 (2024-12-05)</small>
 
-* feat(FF-5698): user menu whats new item ([1057bcc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1057bcc))
+* feat(FF-5698): user menu whats new item ([1057bcc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1057bcc))
 
 
 
@@ -1521,8 +1521,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## <small>2.33.17 (2024-12-04)</small>
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -1530,7 +1530,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.16 (2024-12-04)</small>
 
-* feat(FF-5823): setting item as link ([e93e6cb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e93e6cb))
+* feat(FF-5823): setting item as link ([e93e6cb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e93e6cb))
 
 
 
@@ -1538,7 +1538,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.15 (2024-12-02)</small>
 
-* feat(PDS-1039)!: new marketplace entry point, remove pinnedCards ([ac94db1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ac94db1))
+* feat(PDS-1039)!: new marketplace entry point, remove pinnedCards ([ac94db1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ac94db1))
 
 
 
@@ -1546,12 +1546,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.14 (2024-11-29)</small>
 
-* fix(RM-2613): added a tag and a starter grant button in the mobile financial menu ([7bd3ee1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7bd3ee1))
-* fix(RM-2613): added starter grant name ([4ba9ccf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4ba9ccf))
-* feat(RM-2613): added a tag and a starter grant button in the financial menu ([21aa197](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/21aa197))
-* feat(RM-2613): update tag package on header ([6ff80cc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6ff80cc))
-* chore(FF-5944): fixed stories paths for tests ([4319822](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4319822))
-* chore(FF-5944): renamed snack uikit category to console ([411a818](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/411a818))
+* fix(RM-2613): added a tag and a starter grant button in the mobile financial menu ([7bd3ee1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7bd3ee1))
+* fix(RM-2613): added starter grant name ([4ba9ccf](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4ba9ccf))
+* feat(RM-2613): added a tag and a starter grant button in the financial menu ([21aa197](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/21aa197))
+* feat(RM-2613): update tag package on header ([6ff80cc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6ff80cc))
+* chore(FF-5944): fixed stories paths for tests ([4319822](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4319822))
+* chore(FF-5944): renamed snack uikit category to console ([411a818](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/411a818))
 
 
 
@@ -1559,7 +1559,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.13 (2024-11-25)</small>
 
-* feat(PDS-976): add tag for organizations, popupText and title ([0680985](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0680985))
+* feat(PDS-976): add tag for organizations, popupText and title ([0680985](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0680985))
 
 
 
@@ -1568,8 +1568,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## <small>2.33.12 (2024-11-25)</small>
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -1577,7 +1577,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.11 (2024-11-21)</small>
 
-* feat(PDS-955): bring back favorites ([e2d651a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e2d651a))
+* feat(PDS-955): bring back favorites ([e2d651a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e2d651a))
 
 
 
@@ -1585,7 +1585,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.10 (2024-11-17)</small>
 
-* deps(FF-00): up deps ([9e2378c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e2378c))
+* deps(FF-00): up deps ([9e2378c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e2378c))
 
 
 
@@ -1593,7 +1593,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.9 (2024-11-14)</small>
 
-* fix(PDS-991): scroll to selected item in project selector ([9e9fe31](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e9fe31))
+* fix(PDS-991): scroll to selected item in project selector ([9e9fe31](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e9fe31))
 
 
 
@@ -1601,7 +1601,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.8 (2024-11-14)</small>
 
-* deps(FF-5678): up deps classnames/uncontrollable ([17b3e6e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/17b3e6e))
+* deps(FF-5678): up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e))
 
 
 
@@ -1609,7 +1609,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.7 (2024-11-13)</small>
 
-* fix(PDS-967): scroll for menu links categories ([a644bf0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a644bf0))
+* fix(PDS-967): scroll for menu links categories ([a644bf0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a644bf0))
 
 
 
@@ -1617,7 +1617,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.6 (2024-11-08)</small>
 
-* Revert "feat(PDS-955): add favorites prop" ([82c8853](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/82c8853))
+* Revert "feat(PDS-955): add favorites prop" ([82c8853](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/82c8853))
 
 
 
@@ -1625,7 +1625,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.5 (2024-11-08)</small>
 
-* feat(RM-2456): Add grants in header component ([e10df37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e10df37))
+* feat(RM-2456): Add grants in header component ([e10df37](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e10df37))
 
 
 
@@ -1634,9 +1634,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## <small>2.33.4 (2024-11-07)</small>
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.8.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -1644,8 +1644,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.3 (2024-11-06)</small>
 
-* deps(PDS-955): up snack-uikit deps ([8e7bbb9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e7bbb9))
-* feat(PDS-955): add favorites prop ([8b3ee1d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8b3ee1d))
+* deps(PDS-955): up snack-uikit deps ([8e7bbb9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e7bbb9))
+* feat(PDS-955): add favorites prop ([8b3ee1d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8b3ee1d))
 
 
 
@@ -1653,8 +1653,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.33.2 (2024-11-05)</small>
 
-* deps(FF-5830): up snack-uikit & some common deps ([03aefe0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03aefe0))
-* fix(FF-5830): make component ssr-safe ([f3001c6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f3001c6))
+* deps(FF-5830): up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0))
+* fix(FF-5830): make component ssr-safe ([f3001c6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f3001c6))
 
 
 
@@ -1663,8 +1663,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.33.1 (2024-11-01)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.7.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.7.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -1675,7 +1675,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-5836](https://jira.sbercloud.tech/browse/FF-5836):** support cjs syntax ([d44abd0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
 
 
 
@@ -1684,9 +1684,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.32.1 (2024-10-30)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@10.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.6.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.7.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -1697,7 +1697,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-5782](https://jira.sbercloud.tech/browse/FF-5782):** dart v3 use/forward approach ([eb0c4b3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
 
 
 
@@ -1705,7 +1705,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.31.4 (2024-10-23)</small>
 
-* fix: safari icon hidden issue ([d80343f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d80343f))
+* fix: safari icon hidden issue ([d80343f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d80343f))
 
 
 
@@ -1713,7 +1713,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.31.3 (2024-10-16)</small>
 
-* fix(PDS-885)!: hotSpot prop is boolean ([56c334e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/56c334e))
+* fix(PDS-885)!: hotSpot prop is boolean ([56c334e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/56c334e))
 
 
 
@@ -1721,7 +1721,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.31.2 (2024-10-16)</small>
 
-* fix(PDS-755): error icon in Notifications ([e7bf537](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e7bf537))
+* fix(PDS-755): error icon in Notifications ([e7bf537](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e7bf537))
 
 
 
@@ -1729,7 +1729,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>2.31.1 (2024-10-15)</small>
 
-* fix(PDS-886): brand logo within product header ([11a42f9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/11a42f9))
+* fix(PDS-886): brand logo within product header ([11a42f9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/11a42f9))
 
 
 
@@ -1740,12 +1740,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[RM-2435](https://jira.sbercloud.tech/browse/RM-2435):** Change finance drop list item icon to another one ([84ed3fc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/84ed3fc909b2092d3d8291035f9b0d8d878d87a2))
+* **RM-2435:** Change finance drop list item icon to another one ([84ed3fc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/84ed3fc909b2092d3d8291035f9b0d8d878d87a2))
 
 
 ### Features
 
-* **[PDS-884](https://jira.sbercloud.tech/browse/PDS-884):** correct cloud logo for both modifications ([55e13e0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/55e13e092592d5575f5cf37939d74ddc5d994bde))
+* **PDS-884:** correct cloud logo for both modifications ([55e13e0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/55e13e092592d5575f5cf37939d74ddc5d994bde))
 
 
 
@@ -1754,8 +1754,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.30.3 (2024-10-15)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.5.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@9.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.5.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@9.5.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -1764,8 +1764,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.30.2 (2024-10-03)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.5.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@9.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.5.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@9.4.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -1776,7 +1776,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[PDS-838](https://jira.sbercloud.tech/browse/PDS-838):** added tag to workspace list in header ([e980e07](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e980e07d1e87c4db3338887b06e5fed5e9d83585))
+* **PDS-838:** added tag to workspace list in header ([e980e07](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e980e07d1e87c4db3338887b06e5fed5e9d83585))
 
 
 
@@ -1787,7 +1787,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[ONB-3001](https://jira.sbercloud.tech/browse/ONB-3001):** add onMainMenuClick prop ([ca21cdb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ca21cdb72a0471c9f8bb8e6bf27cbad5b3164ba4))
+* **ONB-3001:** add onMainMenuClick prop ([ca21cdb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ca21cdb72a0471c9f8bb8e6bf27cbad5b3164ba4))
 
 
 
@@ -1798,7 +1798,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-5522](https://jira.sbercloud.tech/browse/FF-5522):** add custom logo to header ([ffc0cb7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ffc0cb73ce5644653fa3d8bad1aa0b79c4daa80c))
+* **FF-5522:** add custom logo to header ([ffc0cb7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ffc0cb73ce5644653fa3d8bad1aa0b79c4daa80c))
 
 
 
@@ -1809,7 +1809,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4988](https://jira.sbercloud.tech/browse/FF-4988):** stylelint deprecation warnings ([a21bc05](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a21bc05bf1e843e58193d01aaf81b066c2e24cd7))
+* **FF-4988:** stylelint deprecation warnings ([a21bc05](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a21bc05bf1e843e58193d01aaf81b066c2e24cd7))
 
 
 
@@ -1818,8 +1818,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.28.2 (2024-09-25)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.5.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@9.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.5.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@9.3.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -1830,7 +1830,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Dependencies
 
-* **[PDS-611](https://jira.sbercloud.tech/browse/PDS-611):** up deps ([c30ac4c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
 
 
 
@@ -1841,7 +1841,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-5361](https://jira.sbercloud.tech/browse/FF-5361):** add adaptive component versions ([0e1ddce](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0e1ddceda6085479ea8365f2b034b326da366fbb))
+* **FF-5361:** add adaptive component versions ([0e1ddce](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0e1ddceda6085479ea8365f2b034b326da366fbb))
 
 
 
@@ -1852,12 +1852,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-5443](https://jira.sbercloud.tech/browse/FF-5443):** add disableMainMenu prop for mobile header ([5741a18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5741a18d3014fe48b083e9692712e5669855420a))
+* **FF-5443:** add disableMainMenu prop for mobile header ([5741a18](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5741a18d3014fe48b083e9692712e5669855420a))
 
 
 ### Features
 
-* **[FF-5429](https://jira.sbercloud.tech/browse/FF-5429):** node 22 support ([ed0f067](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ed0f0672279c8a34cfe4df174d3757d2e93b175f))
+* **FF-5429:** node 22 support ([ed0f067](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ed0f0672279c8a34cfe4df174d3757d2e93b175f))
 
 
 
@@ -1868,7 +1868,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-5572](https://jira.sbercloud.tech/browse/FF-5572):** add disabled state for menu button ([974abb3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/974abb3cd551043015954ff4bd5548bace0ecb5c))
+* **FF-5572:** add disabled state for menu button ([974abb3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/974abb3cd551043015954ff4bd5548bace0ecb5c))
 
 
 
@@ -1879,7 +1879,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[LK-4553](https://jira.sbercloud.tech/browse/LK-4553):** add organization actions ([b0cd60c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b0cd60c317fd1d41071acb3b58e9279d9fcb57df))
+* **LK-4553:** add organization actions ([b0cd60c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b0cd60c317fd1d41071acb3b58e9279d9fcb57df))
 
 
 
@@ -1890,7 +1890,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-00:** fix search bg color ([3078188](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3078188c7cfff67f8c35f002533b029c8710acb9))
+* **FF-00:** fix search bg color ([3078188](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3078188c7cfff67f8c35f002533b029c8710acb9))
 
 
 
@@ -1899,7 +1899,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.24.1 (2024-09-07)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.5.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.5.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
 
 
 
@@ -1910,7 +1910,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[AICCORE-1782](https://jira.sbercloud.tech/browse/AICCORE-1782):** added logic for ws create ([4e8c9a5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4e8c9a595f876348fb7cbce30cfad65d44fcf8e5))
+* **AICCORE-1782:** added logic for ws create ([4e8c9a5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4e8c9a595f876348fb7cbce30cfad65d44fcf8e5))
 
 
 
@@ -1921,7 +1921,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[RM-2327](https://jira.sbercloud.tech/browse/RM-2327):** add bonus tooltip link ([04ee480](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/04ee480c9fca1e153d23357693b1d4e459cc398f))
+* **RM-2327:** add bonus tooltip link ([04ee480](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/04ee480c9fca1e153d23357693b1d4e459cc398f))
 
 
 
@@ -1932,7 +1932,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-5415](https://jira.sbercloud.tech/browse/FF-5415):** remove beta label ([ad04154](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ad04154ebdbf20793106a15e0934e8467c9b9bb3))
+* **FF-5415:** remove beta label ([ad04154](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ad04154ebdbf20793106a15e0934e8467c9b9bb3))
 
 
 
@@ -1943,12 +1943,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-00:** fix header search ([ec25787](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ec25787cb9aaf5550ff872dd0832f48a77f8a5a0))
+* **FF-00:** fix header search ([ec25787](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ec25787cb9aaf5550ff872dd0832f48a77f8a5a0))
 
 
 ### Features
 
-* **FF-00:** add balance into mobile header ([1ed0f2f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1ed0f2fd74fa1b19a41956e9a7b7f76dd61121fd))
+* **FF-00:** add balance into mobile header ([1ed0f2f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1ed0f2fd74fa1b19a41956e9a7b7f76dd61121fd))
 
 
 
@@ -1957,7 +1957,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.20.3 (2024-08-28)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@9.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@9.2.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -1968,7 +1968,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-0000:** fix mobile vh/vw ([f7ddc8e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f7ddc8e22398e55878a06985e6d3b5b48b814c57))
+* **FF-0000:** fix mobile vh/vw ([f7ddc8e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f7ddc8e22398e55878a06985e6d3b5b48b814c57))
 
 
 
@@ -1977,8 +1977,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.20.1 (2024-08-23)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@9.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@9.1.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.5.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -1989,8 +1989,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[PDS-459](https://jira.sbercloud.tech/browse/PDS-459):** add divider items to settings ([844113d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/844113d38af4e0871c2937f131209aa7bd018606))
-* **[PDS-459](https://jira.sbercloud.tech/browse/PDS-459):** add profileItemWrapRender prop ([c204e26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c204e262dd0d3bed56c1b00327fc53f5585c29f7))
+* **PDS-459:** add divider items to settings ([844113d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/844113d38af4e0871c2937f131209aa7bd018606))
+* **PDS-459:** add profileItemWrapRender prop ([c204e26](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c204e262dd0d3bed56c1b00327fc53f5585c29f7))
 
 
 
@@ -2001,7 +2001,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[PDS-534](https://jira.sbercloud.tech/browse/PDS-534):** add hotspot for product list ([48b38cf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/48b38cfb1828ebf10e498a47e0c6ea136915f414))
+* **PDS-534:** add hotspot for product list ([48b38cf](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/48b38cfb1828ebf10e498a47e0c6ea136915f414))
 
 
 
@@ -2012,7 +2012,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[RM-2214](https://jira.sbercloud.tech/browse/RM-2214):** added label prop for bonuses in financial menu ([ad2f034](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ad2f03421b52848d2b2f8a6eadaa2d932fd87f00))
+* **RM-2214:** added label prop for bonuses in financial menu ([ad2f034](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ad2f03421b52848d2b2f8a6eadaa2d932fd87f00))
 
 
 
@@ -2023,7 +2023,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[RM-2000](https://jira.sbercloud.tech/browse/RM-2000):** added a callback for opening a tooltip in the financial menu ([4109ba1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4109ba1b26eb78e2439336712da63dc3e1911061))
+* **RM-2000:** added a callback for opening a tooltip in the financial menu ([4109ba1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4109ba1b26eb78e2439336712da63dc3e1911061))
 
 
 
@@ -2032,7 +2032,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.16.3 (2024-07-31)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@9.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@9.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2041,7 +2041,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.16.2 (2024-07-31)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@9.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@9.0.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2052,7 +2052,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-3789](https://jira.sbercloud.tech/browse/FF-3789):** updated typescript to v5 ([1e50951](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1e50951d88db18b69a760d38a6a8bf93335dcd1c))
+* **FF-3789:** updated typescript to v5 ([1e50951](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1e50951d88db18b69a760d38a6a8bf93335dcd1c))
 
 
 
@@ -2063,7 +2063,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-5156](https://jira.sbercloud.tech/browse/FF-5156):** add themeMode to userMenu ([301e622](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/301e6224c504023b9ef90086c3719c71d39c97da))
+* **FF-5156:** add themeMode to userMenu ([301e622](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/301e6224c504023b9ef90086c3719c71d39c97da))
 
 
 
@@ -2072,8 +2072,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.15.4 (2024-07-19)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@9.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@9.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.4.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -2082,7 +2082,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.15.3 (2024-07-19)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@9.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@9.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2091,7 +2091,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.15.2 (2024-07-17)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@8.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@8.1.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2100,7 +2100,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.15.1 (2024-07-17)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@8.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@8.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2111,7 +2111,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-235](https://jira.sbercloud.tech/browse/FF-235):** swap menu & logo; fix search animation ([bd59275](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bd59275c0d1fa356dfebe67813de030ffb48c798))
+* **FF-235:** swap menu & logo; fix search animation ([bd59275](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/bd59275c0d1fa356dfebe67813de030ffb48c798))
 
 
 
@@ -2120,7 +2120,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.14.4 (2024-06-19)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@8.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@8.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2129,7 +2129,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.14.3 (2024-06-19)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@7.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@7.0.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2138,7 +2138,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.14.2 (2024-06-18)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@7.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@7.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2149,7 +2149,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[PDS-120](https://jira.sbercloud.tech/browse/PDS-120):** update platform icons ([c5041b6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c5041b6d80ca24db7633689f44f500ee48b69e1f))
+* **PDS-120:** update platform icons ([c5041b6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c5041b6d80ca24db7633689f44f500ee48b69e1f))
 
 
 
@@ -2160,7 +2160,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[PDS-83](https://jira.sbercloud.tech/browse/PDS-83):** redesign header ([3ec38b4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3ec38b4344b31aac223d2797408abdbcc5d5047e))
+* **PDS-83:** redesign header ([3ec38b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3ec38b4344b31aac223d2797408abdbcc5d5047e))
 
 
 
@@ -2171,7 +2171,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-5062](https://jira.sbercloud.tech/browse/FF-5062):** update breadcrumbs dependency ([5c58ea5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5c58ea59d47a5d7c86bc075ac92eb581c73d716b))
+* **FF-5062:** update breadcrumbs dependency ([5c58ea5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5c58ea59d47a5d7c86bc075ac92eb581c73d716b))
 
 
 
@@ -2182,7 +2182,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-5042](https://jira.sbercloud.tech/browse/FF-5042):** breadcrumbs component ([5a9c2ab](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5a9c2abe9aae23198a0477c50e3aa10cee75d343))
+* **FF-5042:** breadcrumbs component ([5a9c2ab](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5a9c2abe9aae23198a0477c50e3aa10cee75d343))
 
 
 
@@ -2191,7 +2191,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.13.2 (2024-05-31)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@6.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@6.6.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2202,7 +2202,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-5004](https://jira.sbercloud.tech/browse/FF-5004):** clickable platform crumb ([751c7df](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/751c7df14e6dc55c2730e2466c30c3e7e402d104))
+* **FF-5004:** clickable platform crumb ([751c7df](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/751c7df14e6dc55c2730e2466c30c3e7e402d104))
 
 
 
@@ -2213,7 +2213,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[PDS-150](https://jira.sbercloud.tech/browse/PDS-150):** financial menu added ([8b92f54](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8b92f54b1d2b7690c560477a09b2438b31ef5488))
+* **PDS-150:** financial menu added ([8b92f54](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8b92f54b1d2b7690c560477a09b2438b31ef5488))
 
 
 
@@ -2222,7 +2222,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.12.1 (2024-05-29)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@6.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@6.5.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2233,7 +2233,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[CORESERV-4247](https://jira.sbercloud.tech/browse/CORESERV-4247):** add hotspot to footerLinks ([79dfeb9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/79dfeb9113c6e42e6ba786a33849863e2cb6fa3b))
+* **CORESERV-4247:** add hotspot to footerLinks ([79dfeb9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/79dfeb9113c6e42e6ba786a33849863e2cb6fa3b))
 
 
 
@@ -2244,7 +2244,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4916](https://jira.sbercloud.tech/browse/FF-4916):** breadcrumbs truncate ([63142b7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/63142b7901ce9191f346bc55e0fc458365bb8bbe))
+* **FF-4916:** breadcrumbs truncate ([63142b7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/63142b7901ce9191f346bc55e0fc458365bb8bbe))
 
 
 
@@ -2253,7 +2253,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.11.5 (2024-05-08)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@6.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@6.4.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2262,7 +2262,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.11.4 (2024-04-24)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@6.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@6.3.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2273,8 +2273,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Dependencies
 
-* **[FF-4699](https://jira.sbercloud.tech/browse/FF-4699):** change product -> snack divider ([bd49fc6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bd49fc619626923b0278b7b72221ad1aca7800f8))
-* **[FF-4699](https://jira.sbercloud.tech/browse/FF-4699):** upd dev deps ([53b4e9c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/53b4e9cd8b27cba3fa94c82fa2d51bf89ee7e9b7))
+* **FF-4699:** change product -> snack divider ([bd49fc6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/bd49fc619626923b0278b7b72221ad1aca7800f8))
+* **FF-4699:** upd dev deps ([53b4e9c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/53b4e9cd8b27cba3fa94c82fa2d51bf89ee7e9b7))
 
 
 
@@ -2283,7 +2283,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.11.2 (2024-04-18)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.5.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.5.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
 
 
 
@@ -2292,7 +2292,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.11.1 (2024-04-04)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-card-predefined@0.5.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-card-predefined@0.5.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
 
 
 
@@ -2303,7 +2303,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-4645](https://jira.sbercloud.tech/browse/FF-4645):** add id props and proper test-ids ([c2d9a41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c2d9a417533924e7a944c55d587dd25233576595))
+* **FF-4645:** add id props and proper test-ids ([c2d9a41](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c2d9a417533924e7a944c55d587dd25233576595))
 
 
 
@@ -2314,7 +2314,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[LKP-660](https://jira.sbercloud.tech/browse/LKP-660):** hide divider if there are no organizations ([3619215](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3619215b5842b68eb816ea4b3c7c047fbd3a71e4))
+* **LKP-660:** hide divider if there are no organizations ([3619215](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3619215b5842b68eb816ea4b3c7c047fbd3a71e4))
 
 
 
@@ -2325,7 +2325,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-4604](https://jira.sbercloud.tech/browse/FF-4604):** add product selectro single mode ([b670d06](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b670d06968dfcf0420018f658d1375d36dfa6589))
+* **FF-4604:** add product selectro single mode ([b670d06](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b670d06968dfcf0420018f658d1375d36dfa6589))
 
 
 
@@ -2334,7 +2334,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.9.2 (2024-03-26)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@6.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@6.2.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2343,7 +2343,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.9.1 (2024-03-26)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@6.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@6.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2354,7 +2354,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[LK-3431](https://jira.sbercloud.tech/browse/LK-3431):** changed invite popover behavior ([cd488b1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cd488b1056ad313de898d3d0a9388f11a6e0c349))
+* **LK-3431:** changed invite popover behavior ([cd488b1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cd488b1056ad313de898d3d0a9388f11a6e0c349))
 
 
 
@@ -2365,7 +2365,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4630](https://jira.sbercloud.tech/browse/FF-4630):** hide project action list on scroll ([cb90eb4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cb90eb4ca366f3e1c9f2e7b3ad32edb23dbadd1f))
+* **FF-4630:** hide project action list on scroll ([cb90eb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cb90eb4ca366f3e1c9f2e7b3ad32edb23dbadd1f))
 
 
 
@@ -2376,8 +2376,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4582](https://jira.sbercloud.tech/browse/FF-4582):** add project and organization middle truncate, workspaces fit the content ([f85e6fc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f85e6fc1bd6f23dd7b39b1827ef31340eb22c8c8))
-* **[FF-4582](https://jira.sbercloud.tech/browse/FF-4582):** close drawer selector on platform change ([8d18fc6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8d18fc6fd4d59a46fa19a04b8d106bc0c97652a1))
+* **FF-4582:** add project and organization middle truncate, workspaces fit the content ([f85e6fc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f85e6fc1bd6f23dd7b39b1827ef31340eb22c8c8))
+* **FF-4582:** close drawer selector on platform change ([8d18fc6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8d18fc6fd4d59a46fa19a04b8d106bc0c97652a1))
 
 
 
@@ -2388,7 +2388,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-4578](https://jira.sbercloud.tech/browse/FF-4578):** add pinned cards to mobile header ([de32424](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/de324249c474a9f0b4f6045acc17df020329653d))
+* **FF-4578:** add pinned cards to mobile header ([de32424](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/de324249c474a9f0b4f6045acc17df020329653d))
 
 
 
@@ -2399,7 +2399,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4582](https://jira.sbercloud.tech/browse/FF-4582):** fix selector color ([8365e00](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8365e0098ff0c696b6be143edd5a17ade9719022))
+* **FF-4582:** fix selector color ([8365e00](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8365e0098ff0c696b6be143edd5a17ade9719022))
 
 
 
@@ -2410,7 +2410,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4559](https://jira.sbercloud.tech/browse/FF-4559):** truncate long group label ([1dc06fe](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1dc06fe0e7b7bf7cafbdeec0f4088edf812a4814))
+* **FF-4559:** truncate long group label ([1dc06fe](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1dc06fe0e7b7bf7cafbdeec0f4088edf812a4814))
 
 
 
@@ -2421,35 +2421,35 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4401](https://jira.sbercloud.tech/browse/FF-4401):** fix card width ([4c2afe0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4c2afe045f1919f1c886b668e8ec1485870724ca))
-* **[FF-4485](https://jira.sbercloud.tech/browse/FF-4485):** back close drawer ([2cd51ce](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2cd51ce479cde4ed36d134061834fa83f119ce20))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** add empty state for workspaces ([ee37f6d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ee37f6d4761c23945dfeed0c53abcf26099d6fa0))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** add empty state to mobile ([bf290e8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bf290e8b3dee0afaa6bb72f42d46eda1380fd4dd))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** fix breadcrumb mobile ([a28ca96](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a28ca96097977e63c362c23509ad7b2d4f85fcb3))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** fix icon and logo color ([1791490](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1791490b91dd8a022cc453f343a86fc42a90c873))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** hide add organization button on mobile if prop not passed ([49d19f2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/49d19f254ce9ea19d3672089829bb75086f3af04))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** hide links on 33% ([a65aec9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a65aec9d2f89d7103929ec58bddb3fc47d968867))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** highlight selected card in links in drawer ([056cb1c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/056cb1c8db626200c8c66c8f82fe229bc12473f4))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** notifications onCardsRead call, icons ([d0fc233](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0fc2330627c8af3a4698512910ffd45374b7af5))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** square avatar for organizations ([52801a6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/52801a698d8109e69fcd475fc9f7185f06f8f27b))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** texts for no data screens in selectors ([e61d55c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e61d55cca6447bf0a704a06dd74e31c408da81f6))
-* **[FF-4550](https://jira.sbercloud.tech/browse/FF-4550):** fix search message ([d7cb713](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d7cb713407858a20c9bafe9470a13e7a692f8d80))
-* **FF-0000:** card grid display ([e578d91](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e578d918386628c4adb97b2b1abe62f4c65effe6))
+* **FF-4401:** fix card width ([4c2afe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4c2afe045f1919f1c886b668e8ec1485870724ca))
+* **FF-4485:** back close drawer ([2cd51ce](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2cd51ce479cde4ed36d134061834fa83f119ce20))
+* **FF-4490:** add empty state for workspaces ([ee37f6d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ee37f6d4761c23945dfeed0c53abcf26099d6fa0))
+* **FF-4490:** add empty state to mobile ([bf290e8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/bf290e8b3dee0afaa6bb72f42d46eda1380fd4dd))
+* **FF-4490:** fix breadcrumb mobile ([a28ca96](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a28ca96097977e63c362c23509ad7b2d4f85fcb3))
+* **FF-4490:** fix icon and logo color ([1791490](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1791490b91dd8a022cc453f343a86fc42a90c873))
+* **FF-4490:** hide add organization button on mobile if prop not passed ([49d19f2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/49d19f254ce9ea19d3672089829bb75086f3af04))
+* **FF-4490:** hide links on 33% ([a65aec9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a65aec9d2f89d7103929ec58bddb3fc47d968867))
+* **FF-4490:** highlight selected card in links in drawer ([056cb1c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/056cb1c8db626200c8c66c8f82fe229bc12473f4))
+* **FF-4490:** notifications onCardsRead call, icons ([d0fc233](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d0fc2330627c8af3a4698512910ffd45374b7af5))
+* **FF-4490:** square avatar for organizations ([52801a6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/52801a698d8109e69fcd475fc9f7185f06f8f27b))
+* **FF-4490:** texts for no data screens in selectors ([e61d55c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e61d55cca6447bf0a704a06dd74e31c408da81f6))
+* **FF-4550:** fix search message ([d7cb713](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d7cb713407858a20c9bafe9470a13e7a692f8d80))
+* **FF-0000:** card grid display ([e578d91](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e578d918386628c4adb97b2b1abe62f4c65effe6))
 
 
 ### Features
 
-* **[FF-4400](https://jira.sbercloud.tech/browse/FF-4400):** always show bar; remove 30% rule ([7a502b1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7a502b10841a4cf65ddd348d5a762898fdb68405))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** add external link icon to notifications, add source arg to onOrganizationChange, add close event listeners ([00fb660](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/00fb660d9fae96c826c915673e90311bc4ad3127))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** add hidden prop to platforms, bold username in menu, add onClose to drawerMenu ([a23d9d8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a23d9d81982c329388411cffbc08c1110d2a8510))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** add loading props and skeleton in selector ([0ef36e5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0ef36e568e2f4ce3d1654a5e3b75b61a2578d58c))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** add on select open handler ([1747841](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/17478410040bf4266879c15c82695b1104e980f9))
-* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** platform is optional, add showMainMenu prop ([dc8dd34](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dc8dd34d17fb0013a26c5fd5e09c3c5774f25f0e))
-* **[FF-4507](https://jira.sbercloud.tech/browse/FF-4507):** add prop to empty project list state ([3c8e7e4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3c8e7e46b559671042d96e68dec2a07bb29af109))
-* **[FF-4507](https://jira.sbercloud.tech/browse/FF-4507):** add selector trigger skeleton ([dc061cd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dc061cdef6baecb51dedcee5030e391bdde38e62))
-* **[FF-4525](https://jira.sbercloud.tech/browse/FF-4525):** remove drawer close ([74b477e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74b477ef914846b30facbcbb62b4dcd1730b49db))
-* **[FF-4525](https://jira.sbercloud.tech/browse/FF-4525):** remove drawer close ([04d7b6a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/04d7b6a30095564ce9fa6b4b81a220194384cc90))
-* **[ONB-1994](https://jira.sbercloud.tech/browse/ONB-1994):** open project menu without outsideClick ([d0a0089](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0a008923af103b706ea6a8c725e32d4d7f69ba5))
+* **FF-4400:** always show bar; remove 30% rule ([7a502b1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7a502b10841a4cf65ddd348d5a762898fdb68405))
+* **FF-4490:** add external link icon to notifications, add source arg to onOrganizationChange, add close event listeners ([00fb660](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/00fb660d9fae96c826c915673e90311bc4ad3127))
+* **FF-4490:** add hidden prop to platforms, bold username in menu, add onClose to drawerMenu ([a23d9d8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a23d9d81982c329388411cffbc08c1110d2a8510))
+* **FF-4490:** add loading props and skeleton in selector ([0ef36e5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0ef36e568e2f4ce3d1654a5e3b75b61a2578d58c))
+* **FF-4490:** add on select open handler ([1747841](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17478410040bf4266879c15c82695b1104e980f9))
+* **FF-4490:** platform is optional, add showMainMenu prop ([dc8dd34](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dc8dd34d17fb0013a26c5fd5e09c3c5774f25f0e))
+* **FF-4507:** add prop to empty project list state ([3c8e7e4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3c8e7e46b559671042d96e68dec2a07bb29af109))
+* **FF-4507:** add selector trigger skeleton ([dc061cd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dc061cdef6baecb51dedcee5030e391bdde38e62))
+* **FF-4525:** remove drawer close ([74b477e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/74b477ef914846b30facbcbb62b4dcd1730b49db))
+* **FF-4525:** remove drawer close ([04d7b6a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/04d7b6a30095564ce9fa6b4b81a220194384cc90))
+* **ONB-1994:** open project menu without outsideClick ([d0a0089](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d0a008923af103b706ea6a8c725e32d4d7f69ba5))
 
 
 
@@ -2458,7 +2458,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.6.3 (2024-03-15)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@6.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@6.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2467,7 +2467,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.6.2 (2024-03-12)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@6.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@6.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2478,8 +2478,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4485](https://jira.sbercloud.tech/browse/FF-4485):** add missing icons ([b4724e6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b4724e6520e726ce5242fca59a645f2df10f6330))
-* **[FF-4485](https://jira.sbercloud.tech/browse/FF-4485):** hide projects if workspaces passed ([33ecd61](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/33ecd6171d020d70258ddc9fd12a3f3d57e3a55a))
+* **FF-4485:** add missing icons ([b4724e6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b4724e6520e726ce5242fca59a645f2df10f6330))
+* **FF-4485:** hide projects if workspaces passed ([33ecd61](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/33ecd6171d020d70258ddc9fd12a3f3d57e3a55a))
 
 
 
@@ -2490,12 +2490,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4358](https://jira.sbercloud.tech/browse/FF-4358):** decor icon for service card ([f991157](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f99115790ebf7571eee314b880516041ac8088f9))
+* **FF-4358:** decor icon for service card ([f991157](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f99115790ebf7571eee314b880516041ac8088f9))
 
 
 ### Features
 
-* **[FF-4358](https://jira.sbercloud.tech/browse/FF-4358):** add platform icons and select design minor fixes ([95d6509](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/95d650972f4b094c76be369d86eb9afcbde3566b))
+* **FF-4358:** add platform icons and select design minor fixes ([95d6509](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/95d650972f4b094c76be369d86eb9afcbde3566b))
 
 
 
@@ -2506,13 +2506,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4473](https://jira.sbercloud.tech/browse/FF-4473):** drawer small width ([452795a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/452795a5ab109df216a6d112486f0e8d4e2af65e))
-* **[FF-4473](https://jira.sbercloud.tech/browse/FF-4473):** notifications count ([f48632f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f48632f77f43eba4a47cf98d7011d963762db123))
+* **FF-4473:** drawer small width ([452795a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/452795a5ab109df216a6d112486f0e8d4e2af65e))
+* **FF-4473:** notifications count ([f48632f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f48632f77f43eba4a47cf98d7011d963762db123))
 
 
 ### Features
 
-* **[FF-4473](https://jira.sbercloud.tech/browse/FF-4473):** update cards ([ffe4620](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ffe462025509dfed36af2efcb1ad119ffbda81db))
+* **FF-4473:** update cards ([ffe4620](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ffe462025509dfed36af2efcb1ad119ffbda81db))
 
 
 
@@ -2521,7 +2521,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 2.4.2 (2024-03-07)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@5.32.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.32.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -2532,7 +2532,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4473](https://jira.sbercloud.tech/browse/FF-4473):** update list package to truncate long organization name in userMenu ([8a6442e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8a6442e0af14418429eafb3e24fb80988ad95f99))
+* **FF-4473:** update list package to truncate long organization name in userMenu ([8a6442e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8a6442e0af14418429eafb3e24fb80988ad95f99))
 
 
 
@@ -2543,13 +2543,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4321](https://jira.sbercloud.tech/browse/FF-4321):** add invites to mobile header, update bellIcon ([9e4e60a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e4e60a08f659b2b98b81eb83fe6eead1c8eb3e7))
-* **[FF-4321](https://jira.sbercloud.tech/browse/FF-4321):** userMenu and settings droplist width ([a5c305a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a5c305a6f15df7462f8f2c64b9a26d68e8a95465))
+* **FF-4321:** add invites to mobile header, update bellIcon ([9e4e60a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e4e60a08f659b2b98b81eb83fe6eead1c8eb3e7))
+* **FF-4321:** userMenu and settings droplist width ([a5c305a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a5c305a6f15df7462f8f2c64b9a26d68e8a95465))
 
 
 ### Features
 
-* **[FF-4321](https://jira.sbercloud.tech/browse/FF-4321):** filter out new organizations from select, ability not to pass organizations ([0aa0643](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0aa0643aaa03ded6b0f169a2259554e6f07e5597))
+* **FF-4321:** filter out new organizations from select, ability not to pass organizations ([0aa0643](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0aa0643aaa03ded6b0f169a2259554e6f07e5597))
 
 
 
@@ -2560,12 +2560,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4321](https://jira.sbercloud.tech/browse/FF-4321):** invite popover clicks ([02915a9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/02915a9f61336d1ef4844a13eec437c86d31659c))
+* **FF-4321:** invite popover clicks ([02915a9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/02915a9f61336d1ef4844a13eec437c86d31659c))
 
 
 ### Features
 
-* **[FF-4321](https://jira.sbercloud.tech/browse/FF-4321):** add id's for onboarding, add custom events to trigger project selector and main menu ([765e6a5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/765e6a58b22be28931f76e2c74b609c924735510))
+* **FF-4321:** add id's for onboarding, add custom events to trigger project selector and main menu ([765e6a5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/765e6a58b22be28931f76e2c74b609c924735510))
 
 
 
@@ -2576,13 +2576,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4429](https://jira.sbercloud.tech/browse/FF-4429):** filter allProducts if children is hidden ([fb7a4f5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fb7a4f53168b81f1526d6670cb426deae6fb4f08))
+* **FF-4429:** filter allProducts if children is hidden ([fb7a4f5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fb7a4f53168b81f1526d6670cb426deae6fb4f08))
 
 
 ### Features
 
-* **[FF-4429](https://jira.sbercloud.tech/browse/FF-4429):** add invites counter, badge and popover ([aa9efd5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/aa9efd525db6e3ffc8258c0f61ade60bf00d0a3a))
-* **[FF-4429](https://jira.sbercloud.tech/browse/FF-4429):** remove projects folder heading when only one folder ([781053e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/781053e731ba81d8ab4ec96b77b725544709f631))
+* **FF-4429:** add invites counter, badge and popover ([aa9efd5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/aa9efd525db6e3ffc8258c0f61ade60bf00d0a3a))
+* **FF-4429:** remove projects folder heading when only one folder ([781053e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/781053e731ba81d8ab4ec96b77b725544709f631))
 
 
 
@@ -2593,7 +2593,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Dependencies
 
-* **[FF-4401](https://jira.sbercloud.tech/browse/FF-4401):** up card deps ([59508f6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/59508f62c7464630b7a1b6b81ec9b1a621fb0118))
+* **FF-4401:** up card deps ([59508f6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/59508f62c7464630b7a1b6b81ec9b1a621fb0118))
 
 
 
@@ -2604,7 +2604,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-4385](https://jira.sbercloud.tech/browse/FF-4385):** add workspaces to selector ([98b414f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/98b414fe1d5cc912a6fbf1c52050534a8dc254cf))
+* **FF-4385:** add workspaces to selector ([98b414f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/98b414fe1d5cc912a6fbf1c52050534a8dc254cf))
 
 
 
@@ -2615,19 +2615,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-4425](https://jira.sbercloud.tech/browse/FF-4425):** drawer width with disabled right section ([655e9ac](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/655e9acc70ad0c70746c711ed8ee9cd267c73cf8))
+* **FF-4425:** drawer width with disabled right section ([655e9ac](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/655e9acc70ad0c70746c711ed8ee9cd267c73cf8))
 
 
 ### Features
 
-* **[FF-4425](https://jira.sbercloud.tech/browse/FF-4425):** add hidden prop to allProducts and items ([91c9179](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/91c917999c14694a39c59419d656d5c84419fe38))
-* **[FF-4425](https://jira.sbercloud.tech/browse/FF-4425):** disable projects search close on blur if not empty ([5a2209f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5a2209f8ed94c7f9cda58d225de4401d13d718cd))
+* **FF-4425:** add hidden prop to allProducts and items ([91c9179](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/91c917999c14694a39c59419d656d5c84419fe38))
+* **FF-4425:** disable projects search close on blur if not empty ([5a2209f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5a2209f8ed94c7f9cda58d225de4401d13d718cd))
 
 
 ### BREAKING CHANGES
 
 
-* **[FF-4425](https://jira.sbercloud.tech/browse/FF-4425):** changed prop onProjectAdd to projectAddButton, add closeDropdown on some actions ([c9be206](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c9be20606dd6f50eacc37a582914011179bc4bae))
+* **FF-4425:** changed prop onProjectAdd to projectAddButton, add closeDropdown on some actions ([c9be206](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c9be20606dd6f50eacc37a582914011179bc4bae))
 
 
 
@@ -2637,7 +2637,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-4318](https://jira.sbercloud.tech/browse/FF-4318):** add groups hightlight ([af78979](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/af789799929a242ebb6c694df60b9f8f08c2e397))
+* **FF-4318:** add groups hightlight ([af78979](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/af789799929a242ebb6c694df60b9f8f08c2e397))
 
 
 
@@ -2648,7 +2648,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-4367](https://jira.sbercloud.tech/browse/FF-4367):** add onLogoClick prop ([5a03ac8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5a03ac8bbb5f0b94061b5f17bdc8063f2f3c240c))
+* **FF-4367:** add onLogoClick prop ([5a03ac8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5a03ac8bbb5f0b94061b5f17bdc8063f2f3c240c))
 
 
 
@@ -2659,7 +2659,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-4237](https://jira.sbercloud.tech/browse/FF-4237):** fix actions and search ([f308c33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f308c333a441ff95b6c3568638957b096065afc5))
+* **FF-4237:** fix actions and search ([f308c33](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f308c333a441ff95b6c3568638957b096065afc5))
 
 
 
@@ -2670,10 +2670,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-4075](https://jira.sbercloud.tech/browse/FF-4075):** add droplist to projects select items ([dee03dd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dee03dd9d13731095f48e02351a26fab69a130ab))
-* **[FF-4075](https://jira.sbercloud.tech/browse/FF-4075):** add mobile header, notifications update ([949a54e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/949a54eb63a99513ee9773e4927dd68ad46fe02a))
-* **[FF-4075](https://jira.sbercloud.tech/browse/FF-4075):** add prop hidden to filter links ([0bee611](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0bee6119580b78e08b5ecb0216a84a63e7b320b8))
-* **[FF-4317](https://jira.sbercloud.tech/browse/FF-4317):** add sticky search ([48479fb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/48479fbdb07f653617c70244dcb05686c3f53657))
+* **FF-4075:** add droplist to projects select items ([dee03dd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dee03dd9d13731095f48e02351a26fab69a130ab))
+* **FF-4075:** add mobile header, notifications update ([949a54e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/949a54eb63a99513ee9773e4927dd68ad46fe02a))
+* **FF-4075:** add prop hidden to filter links ([0bee611](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0bee6119580b78e08b5ecb0216a84a63e7b320b8))
+* **FF-4317:** add sticky search ([48479fb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/48479fbdb07f653617c70244dcb05686c3f53657))
 
 
 
@@ -2682,7 +2682,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.7.1 (2024-02-15)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-search@0.3.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.3.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
 
 
 
@@ -2693,7 +2693,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[LK-3034](https://jira.sbercloud.tech/browse/LK-3034):** added header profile and MenuItem badge ([841f939](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/841f939a1bf6a56746440ee796706c638d23e231))
+* **LK-3034:** added header profile and MenuItem badge ([841f939](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/841f939a1bf6a56746440ee796706c638d23e231))
 
 
 
@@ -2704,7 +2704,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Dependencies
 
-* **[FF-3643](https://jira.sbercloud.tech/browse/FF-3643):** up deps ([0eefbc6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0eefbc6217e9a3f5fbda4afd072884a84f0f7793))
+* **FF-3643:** up deps ([0eefbc6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0eefbc6217e9a3f5fbda4afd072884a84f0f7793))
 
 
 
@@ -2713,12 +2713,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.6.2 (2024-01-23)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.2.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.4.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.30.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.3.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.10.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.2.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.4.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.30.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.3.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.2.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.10.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -2727,16 +2727,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.6.1 (2024-01-22)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.4.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-divider@2.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
-* [@sbercloud/uikit-product-dropdown@0.20.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-scroll@1.5.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.3.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip-private@1.3.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.10.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.2.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.4.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-divider@2.1.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.20.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-scroll@1.5.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.3.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip-private@1.3.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.2.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.10.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.3.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -2747,12 +2747,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-3910](https://jira.sbercloud.tech/browse/FF-3910):** update figma-tokens ([d0a6a63](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0a6a63f8982cc84a6840a575bb8e4b65c471c87))
+* **FF-3910:** update figma-tokens ([d0a6a63](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d0a6a63f8982cc84a6840a575bb8e4b65c471c87))
 
 
 ### Features
 
-* **[FF-3910](https://jira.sbercloud.tech/browse/FF-3910):** add MVP of ProductHeader ([88a34d6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/88a34d6067f94d913e4d763aab3a291fffcffe03))
+* **FF-3910:** add MVP of ProductHeader ([88a34d6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/88a34d6067f94d913e4d763aab3a291fffcffe03))
 
 
 
@@ -2761,12 +2761,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.5.4 (2024-01-15)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.4.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.29.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.3.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.10.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.2.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.4.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.29.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.3.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.2.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.10.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -2775,10 +2775,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.5.3 (2023-12-26)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-button@5.4.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.3.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.10.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.4.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.3.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.2.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.10.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -2787,12 +2787,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.5.2 (2023-12-07)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.4.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.28.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.3.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.10.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.2.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.4.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.28.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.3.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.1.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.10.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -2801,12 +2801,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.5.1 (2023-12-05)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.4.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.27.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.3.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.10.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.2.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.4.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.27.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.3.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.1.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.10.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -2817,7 +2817,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-3747](https://jira.sbercloud.tech/browse/FF-3747):** header root icon hover colour ([788b9d8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/788b9d8d5bea60a2794c8788902ebf1e46b27d09))
+* **FF-3747:** header root icon hover colour ([788b9d8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/788b9d8d5bea60a2794c8788902ebf1e46b27d09))
 
 
 
@@ -2826,7 +2826,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.4.3 (2023-11-14)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-dropdown@0.20.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.20.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
 
 
 
@@ -2835,7 +2835,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.4.2 (2023-11-13)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-truncate-string@0.10.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.10.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -2846,7 +2846,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-3625](https://jira.sbercloud.tech/browse/FF-3625):** domain selector placement ([3bdfbdb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3bdfbdb6073b89c98598babdfba1ecb2e421af06))
+* **FF-3625:** domain selector placement ([3bdfbdb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3bdfbdb6073b89c98598babdfba1ecb2e421af06))
 
 
 
@@ -2857,7 +2857,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-3625](https://jira.sbercloud.tech/browse/FF-3625):** title and icon props are optional ([f3384e5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f3384e5a57f686a258fe8fca6cf75b9f42e86f96))
+* **FF-3625:** title and icon props are optional ([f3384e5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f3384e5a57f686a258fe8fca6cf75b9f42e86f96))
 
 
 
@@ -2866,12 +2866,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.3.2 (2023-10-30)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.4.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.26.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.3.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.10.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.2.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.4.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.26.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.3.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.1.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.10.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -2880,17 +2880,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.3.1 (2023-10-25)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-divider@2.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
-* [@sbercloud/uikit-product-dropdown@0.19.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-scroll@1.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-theme@0.39.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip-private@1.3.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.10.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.2.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.4.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-divider@2.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.19.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-scroll@1.5.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.3.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-theme@0.39.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip-private@1.3.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.1.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.10.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.3.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -2901,7 +2901,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-3478](https://jira.sbercloud.tech/browse/FF-3478):** add deps graph addon ([0f59586](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+* **FF-3478:** add deps graph addon ([0f59586](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
 
 
 
@@ -2912,7 +2912,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-2821](https://jira.sbercloud.tech/browse/FF-2821):** added stylelint config and refactored styles ([f201954](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f201954303601b6dc5873b2ce2ee0928bc84a253))
+* **FF-2821:** added stylelint config and refactored styles ([f201954](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f201954303601b6dc5873b2ce2ee0928bc84a253))
 
 
 
@@ -2921,12 +2921,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.35 (2023-10-05)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-button@5.3.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-dropdown@0.18.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.56](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip-private@1.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.9.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.20](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.18.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.56](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip-private@1.3.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.0.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.9.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -2935,12 +2935,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.34 (2023-09-29)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.43](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.24.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.55](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.9.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.43](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.19](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.24.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.55](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.0.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.9.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -2951,7 +2951,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[AICE-9209](https://jira.sbercloud.tech/browse/AICE-9209):** fix createWorkspaceButton selection ([254e901](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/254e901efdefd5c477cc0fe5885bb7b380f42858))
+* **AICE-9209:** fix createWorkspaceButton selection ([254e901](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/254e901efdefd5c477cc0fe5885bb7b380f42858))
 
 
 
@@ -2960,7 +2960,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.32 (2023-09-25)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.42](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
 
 
 
@@ -2969,12 +2969,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.31 (2023-09-12)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-button@5.3.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-dropdown@0.18.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.54](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip-private@1.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.9.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.18](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.18.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.54](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip-private@1.3.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.0.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.9.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -2983,7 +2983,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.30 (2023-09-12)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-search@0.2.53](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.53](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
 
 
 
@@ -2992,12 +2992,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.29 (2023-09-08)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.23.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.52](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.9.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.41](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.17](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.23.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.52](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.0.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.9.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3008,7 +3008,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[LK-2377](https://jira.sbercloud.tech/browse/LK-2377):** TruncateStringEnd loop tooltip changing ([cac53a4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cac53a471d880c7ee0d41a302c9fc5f196afb03b))
+* **LK-2377:** TruncateStringEnd loop tooltip changing ([cac53a4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cac53a471d880c7ee0d41a302c9fc5f196afb03b))
 
 
 
@@ -3019,7 +3019,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[LK-2377](https://jira.sbercloud.tech/browse/LK-2377):** truncate project description ([c9f9397](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c9f939723323d31e0e610eef28fc2a5f292da7db))
+* **LK-2377:** truncate project description ([c9f9397](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c9f939723323d31e0e610eef28fc2a5f292da7db))
 
 
 
@@ -3028,7 +3028,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.26 (2023-09-07)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-truncate-string@0.9.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.9.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3039,7 +3039,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-2852](https://jira.sbercloud.tech/browse/FF-2852):** add undefined for title in HeaderToolBarItem ([461a523](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/461a523346627f9f413933ee000d45fa6a693bb4))
+* **FF-2852:** add undefined for title in HeaderToolBarItem ([461a523](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/461a523346627f9f413933ee000d45fa6a693bb4))
 
 
 
@@ -3048,7 +3048,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.24 (2023-08-31)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-search@0.2.51](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.51](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
 
 
 
@@ -3057,12 +3057,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.23 (2023-08-23)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.22.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.50](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.9.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.40](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.22.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.50](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.0.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.9.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3071,12 +3071,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.22 (2023-08-23)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.21.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.9.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.39](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.15](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.21.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.49](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.0.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.9.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3085,12 +3085,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.21 (2023-08-21)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.38](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.20.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.48](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.9.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.38](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.20.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.48](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.0.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.9.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3099,12 +3099,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.20 (2023-07-26)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.19.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.47](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.9.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.37](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.19.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.47](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.9.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3113,7 +3113,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.19 (2023-07-19)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-search@0.2.46](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.46](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
 
 
 
@@ -3122,10 +3122,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.18 (2023-07-18)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-button@5.3.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.45](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.45](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.9.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3134,7 +3134,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.17 (2023-07-11)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-search@0.2.44](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.44](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
 
 
 
@@ -3143,7 +3143,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.16 (2023-07-03)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-dropdown@0.18.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.18.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
 
 
 
@@ -3152,12 +3152,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.15 (2023-06-29)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.19.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.43](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.8.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.36](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.19.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.43](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.1.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.8.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3166,13 +3166,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.14 (2023-06-27)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.35](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-dropdown@0.18.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.18.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.35](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.10](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.18.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.18.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.42](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.1.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.8.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3181,12 +3181,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.13 (2023-06-23)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.34](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.17.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.34](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.17.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.41](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.1.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.8.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3195,10 +3195,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.12 (2023-06-21)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-button@5.3.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.40](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.8.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3207,12 +3207,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.11 (2023-06-20)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.17.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.7.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.33](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.17.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.39](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.30](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.7.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3221,12 +3221,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.10 (2023-06-15)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.16.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.38](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.7.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.32](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.16.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.38](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.29](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.7.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3235,7 +3235,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.9 (2023-06-13)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-truncate-string@0.7.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.7.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3244,13 +3244,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.8 (2023-06-08)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-button@5.3.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-divider@2.0.45](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
-* [@sbercloud/uikit-product-dropdown@0.17.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip-private@1.2.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.7.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-divider@2.0.45](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.17.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.37](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip-private@1.2.29](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.28](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.7.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3259,7 +3259,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.7 (2023-06-06)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-search@0.2.36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.36](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
 
 
 
@@ -3268,12 +3268,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.6 (2023-06-05)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.31](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.15.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.35](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.7.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.31](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.15.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.35](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.27](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.7.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3282,17 +3282,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.5 (2023-06-02)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-divider@2.0.44](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
-* [@sbercloud/uikit-product-dropdown@0.17.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-scroll@1.4.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.34](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-theme@0.37.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip-private@1.2.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.7.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.30](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-divider@2.0.44](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.17.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-scroll@1.4.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.34](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-theme@0.37.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip-private@1.2.28](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.26](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.7.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.2.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -3301,12 +3301,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.4 (2023-06-01)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.14.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.7.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.29](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.14.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.33](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.25](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.7.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3315,8 +3315,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.3 (2023-05-31)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-button@5.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.32](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
 
 
 
@@ -3325,7 +3325,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.2 (2023-05-30)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-truncate-string@0.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.7.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3334,8 +3334,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.2.1 (2023-05-29)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-button@5.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.31](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.31](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
 
 
 
@@ -3346,7 +3346,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[FF-2331](https://jira.sbercloud.tech/browse/FF-2331):** update tokens ([74fcd39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74fcd39abaf03b1e5f5feed1e7bc668daf1471dd))
+* **FF-2331:** update tokens ([74fcd39](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/74fcd39abaf03b1e5f5feed1e7bc668daf1471dd))
 
 
 
@@ -3357,7 +3357,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-2331](https://jira.sbercloud.tech/browse/FF-2331):** remove wrong color tokens ([5880a3a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5880a3a396c5de7df7ce354b81933a62668b546c))
+* **FF-2331:** remove wrong color tokens ([5880a3a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5880a3a396c5de7df7ce354b81933a62668b546c))
 
 
 
@@ -3366,16 +3366,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.1.10 (2023-05-05)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.2.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-divider@2.0.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
-* [@sbercloud/uikit-product-dropdown@0.17.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-scroll@1.4.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip-private@1.2.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.6.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.26](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.2.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-divider@2.0.41](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.17.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-scroll@1.4.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.28](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip-private@1.2.25](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.22](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.6.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.2.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -3386,7 +3386,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-2221](https://jira.sbercloud.tech/browse/FF-2221):** use tokens for header & menu background/border color ([b6253c0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b6253c04e13ed6d198d4c0ed33eb85d3f76f219f))
+* **FF-2221:** use tokens for header & menu background/border color ([b6253c0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6253c04e13ed6d198d4c0ed33eb85d3f76f219f))
 
 
 
@@ -3395,12 +3395,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.1.8 (2023-04-24)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.2.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.13.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.6.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.25](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.2.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.13.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.27](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.21](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.6.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3409,12 +3409,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.1.7 (2023-04-20)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.2.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.12.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.6.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.24](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.2.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.12.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.26](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.20](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.6.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3423,12 +3423,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.1.6 (2023-04-14)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.2.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.11.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.6.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.23](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.2.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.11.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.25](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.19](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.6.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3437,12 +3437,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.1.5 (2023-04-13)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.2.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.6.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.22](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.2.10](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.10.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.24](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.18](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.6.10](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3451,12 +3451,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.1.4 (2023-04-12)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.2.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.9.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.6.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.21](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.2.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.9.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.23](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.17](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.6.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3467,7 +3467,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **[FF-2142](https://jira.sbercloud.tech/browse/FF-2142):** add classname to mobile menu ([d04d1bd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d04d1bdf233b90d857e3053a06b5a032244e20ca))
+* **FF-2142:** add classname to mobile menu ([d04d1bd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d04d1bdf233b90d857e3053a06b5a032244e20ca))
 
 
 
@@ -3476,12 +3476,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.1.2 (2023-04-11)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.2.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.6.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.20](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.2.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.9.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.22](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.6.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3490,12 +3490,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.1.1 (2023-04-03)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.2.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.6.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.19](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.2.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.8.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.21](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.15](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.6.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3506,7 +3506,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **[RM-506](https://jira.sbercloud.tech/browse/RM-506):** added bonuses and tooltip to HeaderBalanceTooltip ([26765d3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/26765d3cc30f1fc200b9791f0a7aa5f37448479c))
+* **RM-506:** added bonuses and tooltip to HeaderBalanceTooltip ([26765d3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/26765d3cc30f1fc200b9791f0a7aa5f37448479c))
 
 
 
@@ -3515,7 +3515,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.0.9 (2023-03-24)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-dropdown@0.17.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.17.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
 
 
 
@@ -3524,12 +3524,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.0.8 (2023-03-13)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.6.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.18](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.2.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.7.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.20](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.6.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 
 
@@ -3538,17 +3538,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.0.7 (2023-03-08)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-divider@2.0.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
-* [@sbercloud/uikit-product-dropdown@0.16.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-scroll@1.4.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip-private@1.2.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.6.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.17](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.2.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-divider@2.0.40](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.16.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.6.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-scroll@1.4.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.19](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip-private@1.2.24](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.6.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.2.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -3557,17 +3557,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.0.6 (2023-03-06)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-divider@2.0.39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
-* [@sbercloud/uikit-product-dropdown@0.16.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-scroll@1.4.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-theme@0.35.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip-private@1.2.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.6.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.2.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-divider@2.0.39](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.16.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-scroll@1.4.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.18](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-theme@0.35.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip-private@1.2.23](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.6.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.1.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -3576,64 +3576,64 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 1.0.5 (2023-02-01)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.2.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-divider@2.0.42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
-* [@sbercloud/uikit-product-dropdown@0.17.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-scroll@1.4.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-theme@0.35.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip-private@1.2.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.6.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.27](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.2.15](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-divider@2.0.42](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.17.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-scroll@1.4.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.29](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-theme@0.35.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip-private@1.2.26](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.23](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.6.15](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.2.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## 1.0.4 (2023-01-26)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.2.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-divider@2.0.43](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
-* [@sbercloud/uikit-product-dropdown@0.17.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-scroll@1.4.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-theme@0.36.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip-private@1.2.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@3.0.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.6.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.28](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.2.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-divider@2.0.43](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.17.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-scroll@1.4.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.30](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-theme@0.36.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip-private@1.2.27](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@3.0.24](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.6.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.2.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## 1.0.3 (2023-01-25)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.1.44](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.3.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-divider@2.0.46](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
-* [@sbercloud/uikit-product-dropdown@0.18.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-scroll@1.4.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.2.57](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-theme@0.38.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip-private@1.3.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.9.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.1.44](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.3.21](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-divider@2.0.46](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@cloud-ru/uikit-product-dropdown@0.18.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-scroll@1.4.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.2.57](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-theme@0.38.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip-private@1.3.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.0.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.9.10](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.2.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
-## [1.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-header@1.0.1...@sbercloud/uikit-product-header@1.0.2) (2023-01-12)
+## [1.0.2](https://gitverse.ru/cloud-ru-tech/uikit-product/compare/@cloud-ru/uikit-product-header@1.0.1...@cloud-ru/uikit-product-header@1.0.2) (2023-01-12)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-avatar@1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
-* [@sbercloud/uikit-product-button@5.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
-* [@sbercloud/uikit-product-icons@5.25.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-search@0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
-* [@sbercloud/uikit-product-tooltip@4.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-truncate-string@0.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@cloud-ru/uikit-product-avatar@1.2.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@cloud-ru/uikit-product-button@5.4.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@5.25.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-search@0.3.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@cloud-ru/uikit-product-tooltip@4.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-truncate-string@0.10.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 ## 1.0.1 (2022-12-19)
 
 ### Bug Fixes
 
-- **[FF-1362](https://jira.sbercloud.tech/browse/FF-1362):** extract header to a separate stable package ([80af29d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/80af29d1b4251a3d01e1b236d51c39e2aa19ddff))
-- **[FF-1362](https://jira.sbercloud.tech/browse/FF-1362):** use colors from common variables for project selector ([795ac39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/795ac3988c683184f6a6a8af9c6b4bc4a50040c4))
+- **FF-1362:** extract header to a separate stable package ([80af29d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/80af29d1b4251a3d01e1b236d51c39e2aa19ddff))
+- **FF-1362:** use colors from common variables for project selector ([795ac39](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/795ac3988c683184f6a6a8af9c6b4bc4a50040c4))
 
 ## CHANGELOG
 

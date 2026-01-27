@@ -1,5 +1,5 @@
-import { RepeatSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { RepeatSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { ButtonFunction } from '@snack-uikit/button';
 
 import styles from '../styles.module.scss';

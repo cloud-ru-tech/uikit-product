@@ -8,7 +8,7 @@ export const installIconsPackage = () => {
   const iconsPackageVersion = getPackageJson(path.resolve(__dirname, '../../packages/icons'))?.version ?? 'latest';
 
   shell.exec('rm -rf ./packages/icons');
-  shell.exec(`pnpm add @sbercloud/uikit-product-icons@${iconsPackageVersion} -w -D`);
+  shell.exec(`pnpm add @cloud-ru/uikit-product-icons@${iconsPackageVersion} -w -D`);
   shell.exec('pnpm install --frozen-lockfile=false');
 
   return () => {

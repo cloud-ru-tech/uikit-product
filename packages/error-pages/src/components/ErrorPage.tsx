@@ -1,9 +1,9 @@
 import cn from 'classnames';
 import { useMemo } from 'react';
 
-import { CloudFullLogoSVG, MailInterfaceSVG, MlSpaceFullLogoSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { CloudFullLogoSVG, MailInterfaceSVG, MlSpaceFullLogoSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 import { Link } from '@snack-uikit/link';
 import { Tag } from '@snack-uikit/tag';

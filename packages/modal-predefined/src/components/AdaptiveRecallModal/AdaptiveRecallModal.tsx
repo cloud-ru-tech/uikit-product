@@ -1,4 +1,4 @@
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 import { MobileRecallModal } from '../MobileRecallModal';
 import { RecallModal, RecallModalProps } from '../RecallModal';

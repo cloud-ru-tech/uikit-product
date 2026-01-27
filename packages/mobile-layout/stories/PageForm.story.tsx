@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 
-import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
-import { MobileStepper } from '@sbercloud/uikit-product-mobile-stepper';
+import { PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
+import { MobileStepper } from '@cloud-ru/uikit-product-mobile-stepper';
 import { Typography } from '@snack-uikit/typography';
 
 import componentChangelog from '../CHANGELOG.md';

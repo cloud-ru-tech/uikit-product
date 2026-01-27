@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { ReactNode } from 'react';
 
-import { MobileDrawerCustom } from '@sbercloud/uikit-product-mobile-drawer';
+import { MobileDrawerCustom } from '@cloud-ru/uikit-product-mobile-drawer';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
 import { CONTENT_ALIGN, TEST_IDS } from '../../constants';

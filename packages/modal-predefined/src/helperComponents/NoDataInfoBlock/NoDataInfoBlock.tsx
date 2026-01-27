@@ -1,4 +1,4 @@
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { InfoBlock } from '@snack-uikit/info-block';
 
 import styles from './styles.module.scss';

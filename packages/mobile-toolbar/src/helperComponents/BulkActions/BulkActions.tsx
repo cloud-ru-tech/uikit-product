@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { MobileDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
-import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { MobileDroplist } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { MobileTooltip } from '@cloud-ru/uikit-product-mobile-tooltip';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Counter } from '@snack-uikit/counter';
 import { useDynamicList } from '@snack-uikit/utils';

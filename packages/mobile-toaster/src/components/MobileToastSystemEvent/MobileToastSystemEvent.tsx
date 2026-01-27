@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { MouseEvent, useMemo } from 'react';
 import { ToastContentProps as RtToastContentProps } from 'react-toastify';
 
-import { CrossSVG } from '@sbercloud/uikit-product-icons';
+import { CrossSVG } from '@cloud-ru/uikit-product-icons';
 import { Link } from '@snack-uikit/link';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';

@@ -1,4 +1,4 @@
-import { PlusSVG, TrashSVG } from '@sbercloud/uikit-product-icons';
+import { PlusSVG, TrashSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 
 import { ProductContext, useProductContext } from '../../../contexts';

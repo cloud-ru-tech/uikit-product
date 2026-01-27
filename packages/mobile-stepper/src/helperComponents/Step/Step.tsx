@@ -1,4 +1,4 @@
-import { CheckSVG, CrossSVG } from '@sbercloud/uikit-product-icons';
+import { CheckSVG, CrossSVG } from '@cloud-ru/uikit-product-icons';
 import { Sun } from '@snack-uikit/loaders';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 

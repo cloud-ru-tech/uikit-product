@@ -1,4 +1,4 @@
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { AccordionPrimary, AccordionProps } from '@snack-uikit/accordion';
 
 import { MobileAccordionPrimary } from '../MobileAccordionPrimary';

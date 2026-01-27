@@ -1,4 +1,4 @@
-import { CardInfo, CardInfoProps } from '@sbercloud/uikit-product-site-cards';
+import { CardInfo, CardInfoProps } from '@cloud-ru/uikit-product-site-cards';
 import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';

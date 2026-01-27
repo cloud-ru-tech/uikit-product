@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 
-import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
+import { FiltersState } from '@cloud-ru/uikit-product-mobile-chips';
 import { useValueControl } from '@snack-uikit/utils';
 
 import { MobileTableProps } from '../../types';

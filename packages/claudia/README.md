@@ -5,7 +5,7 @@
 
 ## Installation
 
-`pnpm add @sbercloud/uikit-product-claudia`
+`pnpm add @cloud-ru/uikit-product-claudia`
 
 [Changelog](./CHANGELOG.md)
 

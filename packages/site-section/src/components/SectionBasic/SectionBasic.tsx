@@ -1,10 +1,10 @@
 import cn from 'classnames';
 import { MouseEvent, MouseEventHandler, ReactNode, useState } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { AdaptiveFieldSelect, FieldSelectProps } from '@sbercloud/uikit-product-mobile-fields';
-import { Layout } from '@sbercloud/uikit-product-site-layout';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { AdaptiveFieldSelect, FieldSelectProps } from '@cloud-ru/uikit-product-mobile-fields';
+import { Layout } from '@cloud-ru/uikit-product-site-layout';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ButtonOutline } from '@snack-uikit/button';
 import { Pagination, PaginationProps } from '@snack-uikit/pagination';
 import { Tabs } from '@snack-uikit/tabs';

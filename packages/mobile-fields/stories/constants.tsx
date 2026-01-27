@@ -1,6 +1,6 @@
 import { ArgTypes } from '@storybook/react';
 
-import * as Icons from '@sbercloud/uikit-product-icons';
+import * as Icons from '@cloud-ru/uikit-product-icons';
 
 import { VALIDATION_STATE } from '../src/constants';
 

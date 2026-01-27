@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
+import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
 
 import styles from './styles.module.scss';
 

@@ -1,10 +1,10 @@
 import cn from 'classnames';
 import { useMemo } from 'react';
 
-import { CloudMoveSVG, HeadphonesSVG, UsersSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { CardBasic, CardBasicProps } from '@sbercloud/uikit-product-site-cards';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { CloudMoveSVG, HeadphonesSVG, UsersSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { CardBasic, CardBasicProps } from '@cloud-ru/uikit-product-site-cards';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
 

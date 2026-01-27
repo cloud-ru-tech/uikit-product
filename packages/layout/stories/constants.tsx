@@ -1,4 +1,4 @@
-import * as Icons from '@sbercloud/uikit-product-icons';
+import * as Icons from '@cloud-ru/uikit-product-icons';
 
 export const ICONS = Object.fromEntries(
   (Object.keys(Icons) as Array<keyof typeof Icons>).map(key => {

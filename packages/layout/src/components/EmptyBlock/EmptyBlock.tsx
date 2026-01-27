@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { InfoBlock, InfoBlockProps } from '@snack-uikit/info-block';
 
 import styles from './styles.module.scss';

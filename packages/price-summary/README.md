@@ -1,7 +1,7 @@
 # Price Summary
 
 ## Installation
-`npm i @sbercloud/uikit-product-price-summary`
+`npm i @cloud-ru/uikit-product-price-summary`
 
 [Changelog](./CHANGELOG.md)
 

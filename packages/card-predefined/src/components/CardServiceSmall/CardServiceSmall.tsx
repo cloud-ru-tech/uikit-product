@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { JSXElementConstructor, KeyboardEventHandler, MouseEventHandler, useRef } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { PromoTagPredefined, PromoTagPredefinedProps } from '@sbercloud/uikit-product-promo-tag-predefined';
+import { PromoTagPredefined, PromoTagPredefinedProps } from '@cloud-ru/uikit-product-promo-tag-predefined';
 import { Card, CardProps } from '@snack-uikit/card';
 import { PromoTag } from '@snack-uikit/promo-tag';
 import { Favorite } from '@snack-uikit/toggles';

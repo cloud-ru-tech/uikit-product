@@ -1,6 +1,6 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
-import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
+import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -8,8 +8,6 @@ import componentReadme from '../README.md';
 import { Calculator, CALCULATOR_TYPE, CalculatorProps, CATALOG_CONFIG } from '../src';
 import { getFetcherFn, getOnDownloadFileClick, getOnShareClick } from '../src/services';
 import src from './bg.webp';
-
-const DEFAULT_BACKEND_HOST = 'https://api.dev.site.sbercloud.dev';
 
 const meta: Meta = {
   title: 'Console/Calculator',
@@ -59,7 +57,7 @@ export const calculator: StoryObj<CalculatorProps & { backendHost: string }> = {
     calculatorType: CALCULATOR_TYPE.Main,
     layoutType: LAYOUT_TYPE.Desktop,
     bgImage: src,
-    backendHost: DEFAULT_BACKEND_HOST,
+    backendHost: '',
   },
   argTypes: {
     backendHost: {

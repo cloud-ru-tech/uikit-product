@@ -1,4 +1,4 @@
-import { SiteVideoProps } from '@sbercloud/uikit-product-site-media';
+import { SiteVideoProps } from '@cloud-ru/uikit-product-site-media';
 import { ValueOf } from '@snack-uikit/utils';
 
 import { SECTION_COLORS } from './constants';

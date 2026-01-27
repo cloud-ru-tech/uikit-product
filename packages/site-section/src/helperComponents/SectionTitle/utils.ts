@@ -1,4 +1,4 @@
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { TypographyProps } from '@snack-uikit/typography';
 
 import { Size } from './types';

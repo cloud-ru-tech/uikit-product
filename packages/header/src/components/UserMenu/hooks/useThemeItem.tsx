@@ -1,8 +1,8 @@
 import { ReactNode, useCallback, useMemo, useState } from 'react';
 
-import { ChevronRightSVG, DaySVG, LaptopPhoneSVG, NightSVG, ThemeContrastSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
+import { ChevronRightSVG, DaySVG, LaptopPhoneSVG, NightSVG, ThemeContrastSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
 import { DroplistProps, List } from '@snack-uikit/list';
 
 import { THEME_MODE, ThemeMode, ThemeProps } from '../types';

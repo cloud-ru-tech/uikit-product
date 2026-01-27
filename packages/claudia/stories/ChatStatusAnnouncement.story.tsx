@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import cn from 'classnames';
 
-import { PasswordLockSVG, PlaceholderSVG } from '@sbercloud/uikit-product-icons';
-import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
+import { PasswordLockSVG, PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
+import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

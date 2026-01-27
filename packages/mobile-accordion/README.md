@@ -1,7 +1,7 @@
 # Mobile Accordion
 
 ## Installation
-`npm i @sbercloud/uikit-product-mobile-accordion`
+`npm i @cloud-ru/uikit-product-mobile-accordion`
 
 [Changelog](./CHANGELOG.md)
 

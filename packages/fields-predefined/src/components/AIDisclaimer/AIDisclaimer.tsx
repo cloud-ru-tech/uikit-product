@@ -1,5 +1,5 @@
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 import styles from './styles.module.scss';
 

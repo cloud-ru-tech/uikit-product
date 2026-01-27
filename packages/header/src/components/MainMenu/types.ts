@@ -1,6 +1,6 @@
 import { JSXElementConstructor, MouseEvent, MouseEventHandler, ReactNode } from 'react';
 
-import { CardServiceSmallProps } from '@sbercloud/uikit-product-card-predefined';
+import { CardServiceSmallProps } from '@cloud-ru/uikit-product-card-predefined';
 import { ListProps } from '@snack-uikit/list';
 
 import { SearchProps } from './Search/types';

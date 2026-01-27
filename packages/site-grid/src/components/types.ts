@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 type ColumnConfig = {
   /** Количество колонок для текущего layout */

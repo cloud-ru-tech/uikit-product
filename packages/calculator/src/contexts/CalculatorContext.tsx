@@ -1,6 +1,6 @@
 import { createContext, PropsWithChildren, useContext, useState } from 'react';
 
-import { LAYOUT_TYPE, LayoutType } from '@sbercloud/uikit-product-utils';
+import { LAYOUT_TYPE, LayoutType } from '@cloud-ru/uikit-product-utils';
 
 import { CalculatorProps } from '../components';
 import { getDefaultValues } from '../components/Controls/utils';

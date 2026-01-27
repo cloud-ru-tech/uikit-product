@@ -1,5 +1,5 @@
-import { CardBanner, CardBannerProps } from '@sbercloud/uikit-product-card-predefined';
-import { BlockBasic, BlockBasicProps, EmptyBlock, EmptyBlockProps } from '@sbercloud/uikit-product-layout';
+import { CardBanner, CardBannerProps } from '@cloud-ru/uikit-product-card-predefined';
+import { BlockBasic, BlockBasicProps, EmptyBlock, EmptyBlockProps } from '@cloud-ru/uikit-product-layout';
 import {
   PageCatalog,
   PageCatalogProps,
@@ -7,8 +7,8 @@ import {
   PageFormProps,
   PageServices,
   PageServicesProps,
-} from '@sbercloud/uikit-product-page-layout';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+} from '@cloud-ru/uikit-product-page-layout';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 import { DesktopActions } from '../../helperComponents';
 import { MobileBlockBasic } from '../MobileBlockBasic';

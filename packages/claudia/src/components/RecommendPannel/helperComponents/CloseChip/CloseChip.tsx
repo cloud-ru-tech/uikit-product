@@ -1,8 +1,8 @@
 import { ReactNode, useRef, useState } from 'react';
 
-import { MoreInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { MobileDropdown } from '@sbercloud/uikit-product-mobile-dropdown';
-import { LAYOUT_TYPE, LayoutType } from '@sbercloud/uikit-product-utils';
+import { MoreInterfaceSVG } from '@cloud-ru/uikit-product-icons';
+import { MobileDropdown } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { LAYOUT_TYPE, LayoutType } from '@cloud-ru/uikit-product-utils';
 import { Dropdown } from '@snack-uikit/dropdown';
 import { Typography } from '@snack-uikit/typography';
 

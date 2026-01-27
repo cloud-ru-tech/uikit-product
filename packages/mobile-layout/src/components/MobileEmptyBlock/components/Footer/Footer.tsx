@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import { MobileTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
+import { MobileTooltipProps } from '@cloud-ru/uikit-product-mobile-tooltip';
 import { ButtonFilled, ButtonFilledProps, ButtonTonal, ButtonTonalProps } from '@snack-uikit/button';
 
 import { useButtonWithTooltip } from './hooks';

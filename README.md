@@ -1,14 +1,14 @@
-# Cloud uikit [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![coverage](https://git.sbercloud.tech/sbercloud-ui/uikit-product/badges/master/coverage.svg?job=test-coverage-stable&key_text=stable-coverage&&key_width=100/coverage.svg)](https://git.sbercloud.tech/sbercloud-ui/uikit-product/badges/master/coverage.svg?job=test-coverage-stable&key_text=stable-coverage&&key_width=100)
+# Cloud uikit [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![coverage](https://gitverse.ru/cloud-ru-tech/uikit-product/badges/master/coverage.svg?job=test-coverage-stable&key_text=stable-coverage&&key_width=100/coverage.svg)](https://gitverse.ru/cloud-ru-tech/uikit-product/badges/master/coverage.svg?job=test-coverage-stable&key_text=stable-coverage&&key_width=100)
 
 Cloud uikit - библиотека компонентов (бизнес), в которой каждый компонент это отдельный npm-пакет, со своей версионностью и зависимостями.
 
 # Storybook
 
-[Storybook [Latest master].](https://frontend.cp.sbercloud.tech/product/)
+[Storybook [Latest master].](https://cloud-ru-tech.github.io/uikit-product/)
 
 # Snack uikit
 
-[Snack Storybook [Latest master].](https://frontend.cp.sbercloud.tech/snack/)
+[Snack Storybook [Latest master].](https://cloud-ru-tech.github.io/snack-uikit/)
 
 # Design
 
@@ -26,58 +26,19 @@ Cloud uikit - библиотека компонентов (бизнес), в к�
 ![Chrome](./packages/icons/svgs/color/logos/GoogleChromeLogo.svg)
 ![Firefox](./packages/icons/svgs/color/logos/FirefoxLogo.svg)
 
-# Installation
-
-1. Получить доступ к @sbercloud/uikit-product
-2. Создать `.npmrc` в корневой директории
-   содержание `.npmrc`:
-   `@sbercloud:registry=https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/`
-3. При использовании `linaria` Добавить в `linaria.config.js` секцию:
-
-```ts
-import path from 'path';
-
-import shaker from '@linaria/shaker';
-
-function escapeRegex(string: string) {
-  return string.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-}
-
-const sep = escapeRegex(path.sep);
-
-const pathRegExp = new RegExp(`@sbercloud${sep}uikit.+${sep}dist${sep}esm`);
-
-export const defaultLinariaConfig = (uniqueString: string): Record<string, unknown> => ({
-  evaluate: true,
-  displayName: true,
-  classNameSlug: (hash: string, title: string) => `${title}-${uniqueString}-${hash}`,
-  rules: [
-    {
-      action: shaker,
-    },
-    {
-      test: (filePath: string): boolean => !Boolean(pathRegExp.test(filePath)) && /node_modules/.test(filePath),
-      action: 'ignore',
-    },
-  ],
-});
-```
-
-4. Установить необходимый пакет, например `npm i @sbercloud/uikit-product-button`.
-
 # Styling:
 
 ## Import style:
 
 1. Импортируем ConfigProvider:
-   `import { ConfigProvider } from "@sbercloud/uikit-product-utils";`
+   `import { ConfigProvider } from "@cloud-ru/uikit-product-utils";`
 2. Оборачиваем проект: в theme передаем тему (deprecated), а в brand – брэнд по умолчанию:
    `<ConfigProvider theme={ConfigProvider.themes.Purple} brand={ConfigProvider.brand.Cloud}>...</ConfigProvider>`
 
 ## Change brand
 
 1. Импортируем hook useBrand:
-   `import { useBrand } from "@sbercloud/uikit-product-utils";`
+   `import { useBrand } from "@cloud-ru/uikit-product-utils";`
 
 2. Используем callback для смены темы:
 
@@ -89,7 +50,7 @@ changeBrand(Brand.MLSpace);
 ## Change theme (deprecated)
 
 1. Импортируем hook useTheme:
-   `import { useTheme } from "@sbercloud/uikit-product-utils";`
+   `import { useTheme } from "@cloud-ru/uikit-product-utils";`
 
 2. Используем callback для смены темы:
 
@@ -105,18 +66,16 @@ changeTheme(Themes.Purple);
 # Changelog
 
 Change log разбит по пакетам.
-Вы можете посмотреть changelog либо в [Storybook](https://frontend.cp.sbercloud.tech/product/) или в `package` необходимого пакета
+Вы можете посмотреть changelog либо в [Storybook](https://cloud-ru-tech.github.io/uikit-product/) или в `package` необходимого пакета
 
 # Questions
 
 Появились вопросы?
 Возможно ответ на ваши вопросы содержится в [Contribution Guide](CONTRIBUTING.md).
 
-В противном случае можно их задать в [ff-support канал](https://mm.sbercloud.tech/default/channels/ff-support)
-
 # Issue Processes
 
-1. Создан [новый issue](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/issues/new)
+1. Создан [новый issue](https://gitverse.ru/cloud-ru-tech/uikit-product/-/issues/new)
 2. Issue рассмотрен на грумминге
    > Участники грумминга: Core team + Review team
    >
@@ -132,7 +91,7 @@ Change log разбит по пакетам.
 
 # Team Duty
 
-`Core team` - Трифонов Михаил, Ахременко Григорий, Белов Алексей, Козлова Анна, Хлупин Сергей, Безматерных Дмитрий, Ершов Никита
+`Core team` - Ахременко Григорий, Белов Алексей, Козлова Анна, Хлупин Сергей, Ершов Никита
 
 > Несет ответственность за техническую часть проекта.
 >

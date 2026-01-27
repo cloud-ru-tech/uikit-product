@@ -1,7 +1,7 @@
 # Site Cards
 
 ## Installation
-`npm i @sbercloud/uikit-product-site-cards`
+`npm i @cloud-ru/uikit-product-site-cards`
 
 [Changelog](./CHANGELOG.md)
 

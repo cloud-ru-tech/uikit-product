@@ -1,4 +1,4 @@
-import { CrossSVG } from '@sbercloud/uikit-product-icons';
+import { CrossSVG } from '@cloud-ru/uikit-product-icons';
 
 import { TEST_IDS } from '../../constants';
 import styles from './styles.module.scss';

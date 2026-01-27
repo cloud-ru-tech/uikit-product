@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import { useMemo, useState } from 'react';
 
-import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
-import { MobileDroplist, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
+import { ChevronDownSVG, ChevronUpSVG } from '@cloud-ru/uikit-product-icons';
+import { MobileDroplist, MobileDroplistProps } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 

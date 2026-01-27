@@ -1,7 +1,7 @@
 import { MouseEvent, ReactNode, useMemo } from 'react';
 
-import { ChevronLeftSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { ChevronLeftSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { ItemProps } from '@snack-uikit/list';
 import { Tooltip } from '@snack-uikit/tooltip';
 

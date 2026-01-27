@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-quota",
+  "name": "@cloud-ru/uikit-product-quota",
   "title": "Quota",
   "version": "0.6.16",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/quota",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/quota",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/quota"
   },
   "author": {
@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button-predefined": "0.7.16",
-    "@sbercloud/uikit-product-icons": "16.2.0",
-    "@sbercloud/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-button-predefined": "0.7.16",
+    "@cloud-ru/uikit-product-icons": "16.2.0",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/scroll": "0.9.3",
     "@snack-uikit/skeleton": "0.6.2",
@@ -46,6 +46,6 @@
     "classnames": "2.5.1"
   },
   "peerDependencies": {
-    "@sbercloud/uikit-product-locale": "*"
+    "@cloud-ru/uikit-product-locale": "*"
   }
 }

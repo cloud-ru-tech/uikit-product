@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
-import * as Icons from '@sbercloud/uikit-product-icons';
+import * as Icons from '@cloud-ru/uikit-product-icons';
 import { ButtonFilled } from '@snack-uikit/button';
 import { FieldSlider } from '@snack-uikit/fields';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';

@@ -1,7 +1,7 @@
 # Button Predefined
 
 ## Installation
-`npm i @sbercloud/uikit-product-button-predefined`
+`npm i @cloud-ru/uikit-product-button-predefined`
 
 [Changelog](./CHANGELOG.md)
 

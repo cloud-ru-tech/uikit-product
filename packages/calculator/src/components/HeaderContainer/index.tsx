@@ -1,6 +1,6 @@
 import { forwardRef, ReactNode } from 'react';
 
-import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
+import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 
 import { useCalculatorContext } from '../../contexts';
 import styles from './styles.module.scss';

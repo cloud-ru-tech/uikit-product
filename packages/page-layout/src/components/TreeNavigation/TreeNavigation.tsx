@@ -2,8 +2,8 @@ import cn from 'classnames';
 import { ReactNode, useMemo } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { BurgerSVG, CloseSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { BurgerSVG, CloseSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { ButtonSimple } from '@snack-uikit/button';
 import { Status, StatusProps } from '@snack-uikit/status';
 import { TreeNodeProps } from '@snack-uikit/tree';

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { FiltersState } from '@cloud-ru/uikit-product-mobile-chips';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { PaginationState, ServerTable as DesktopTable, ServerTableProps } from '@snack-uikit/table';
 import { useValueControl } from '@snack-uikit/utils';
 

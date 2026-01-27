@@ -1,7 +1,7 @@
 # Mobile Table
 
 ## Installation
-`npm i @sbercloud/uikit-product-mobile-table`
+`npm i @cloud-ru/uikit-product-mobile-table`
 
 [Changelog](./CHANGELOG.md)
 

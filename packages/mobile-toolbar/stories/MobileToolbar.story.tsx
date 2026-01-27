@@ -2,7 +2,7 @@ import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useEffect, useRef } from 'react';
 
-import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 import { toaster } from '@snack-uikit/toaster';
 import { extractSupportProps } from '@snack-uikit/utils';

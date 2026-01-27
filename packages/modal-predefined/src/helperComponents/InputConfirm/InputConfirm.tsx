@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 
-import { CopyButton } from '@sbercloud/uikit-product-copy-line';
+import { CopyButton } from '@cloud-ru/uikit-product-copy-line';
 import { FieldText } from '@snack-uikit/fields';
 import { TruncateString } from '@snack-uikit/truncate-string';
 

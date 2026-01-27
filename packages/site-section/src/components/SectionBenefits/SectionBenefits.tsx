@@ -1,8 +1,8 @@
 import { MouseEvent, useMemo, useState } from 'react';
 
-import { CardBasic, CardInfo, CardProduct } from '@sbercloud/uikit-product-site-cards';
-import { Grid, GridProps } from '@sbercloud/uikit-product-site-grid';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { CardBasic, CardInfo, CardProduct } from '@cloud-ru/uikit-product-site-cards';
+import { Grid, GridProps } from '@cloud-ru/uikit-product-site-grid';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import { SectionButton, SectionTitleProps } from '../../helperComponents';

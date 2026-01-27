@@ -1,6 +1,6 @@
 import { JSXElementConstructor } from 'react';
 
-import { DownloadSVG, PlaySVG } from '@sbercloud/uikit-product-icons';
+import { DownloadSVG, PlaySVG } from '@cloud-ru/uikit-product-icons';
 
 import { HERO_EVENT_BUTTONS } from '../../constants';
 import { HeroButtonType } from './types';

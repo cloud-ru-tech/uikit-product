@@ -1,4 +1,4 @@
-import { Markdown } from '@sbercloud/uikit-product-markdown';
+import { Markdown } from '@cloud-ru/uikit-product-markdown';
 import { Scroll } from '@snack-uikit/scroll';
 import { Typography } from '@snack-uikit/typography';
 

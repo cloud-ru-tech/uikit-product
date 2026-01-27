@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-config-selector",
+  "name": "@cloud-ru/uikit-product-config-selector",
   "title": "Config Selector",
   "version": "1.1.6",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/config-selector",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/config-selector",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/config-selector"
   },
   "author": {

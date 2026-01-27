@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-site-csat",
+  "name": "@cloud-ru/uikit-product-site-csat",
   "title": "Site Csat",
   "version": "0.2.8",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-csat",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/site-csat",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/site-csat"
   },
   "author": {
@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "16.2.0",
-    "@sbercloud/uikit-product-mobile-modal": "0.9.29",
-    "@sbercloud/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-icons": "16.2.0",
+    "@cloud-ru/uikit-product-mobile-modal": "0.9.29",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/button": "0.19.15",
     "@snack-uikit/chips": "0.28.4",
     "@snack-uikit/fields": "0.48.7",

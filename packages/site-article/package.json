@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-site-article",
+  "name": "@cloud-ru/uikit-product-site-article",
   "title": "Site Article",
   "version": "0.3.0",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-article",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/site-article",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/site-article"
   },
   "author": {
@@ -36,8 +36,8 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "15.0.0",
-    "@sbercloud/uikit-product-utils": "6.2.0",
+    "@cloud-ru/uikit-product-icons": "16.1.1",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/list": "0.32.5",
     "@snack-uikit/typography": "0.8.11",

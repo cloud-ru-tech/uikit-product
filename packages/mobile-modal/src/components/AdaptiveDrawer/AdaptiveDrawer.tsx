@@ -1,4 +1,4 @@
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Drawer, DrawerCustom, DrawerProps } from '@snack-uikit/drawer';
 
 import { SIZE } from '../../constants';

@@ -1,7 +1,7 @@
 import { ReactNode, useState } from 'react';
 
-import { MoreSVG } from '@sbercloud/uikit-product-icons';
-import { BaseItemProps, MobileDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
+import { MoreSVG } from '@cloud-ru/uikit-product-icons';
+import { BaseItemProps, MobileDroplist } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Tag } from '@snack-uikit/tag';
 

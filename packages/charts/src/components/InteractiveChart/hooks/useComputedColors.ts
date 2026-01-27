@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { useTheme } from '@sbercloud/uikit-product-utils';
+import { useTheme } from '@cloud-ru/uikit-product-utils';
 import { useLayoutEffect } from '@snack-uikit/utils';
 
 import { COLOR_CONTAINER_CLASSNAME, OTHER_COLORS, SERIES_COLORS, SeriesColorMap } from '../../../constants/colors';

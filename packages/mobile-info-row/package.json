@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-mobile-info-row",
+  "name": "@cloud-ru/uikit-product-mobile-info-row",
   "title": "Mobile Info Row",
   "version": "0.6.32",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/mobile-info-row",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/mobile-info-row",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/mobile-info-row"
   },
   "author": {
@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-info-row": "0.9.1",
-    "@sbercloud/uikit-product-mobile-tooltip": "0.5.5",
-    "@sbercloud/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-info-row": "0.9.1",
+    "@cloud-ru/uikit-product-mobile-tooltip": "0.5.5",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/button": "0.19.15",
     "@snack-uikit/divider": "3.2.9",
     "@snack-uikit/skeleton": "0.6.8",
@@ -46,6 +46,6 @@
     "classnames": "2.5.1"
   },
   "peerDependencies": {
-    "@sbercloud/uikit-product-locale": "*"
+    "@cloud-ru/uikit-product-locale": "*"
   }
 }

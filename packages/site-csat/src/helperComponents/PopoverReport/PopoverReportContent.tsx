@@ -1,4 +1,4 @@
-import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { CloseInterfaceSVG } from '@cloud-ru/uikit-product-icons';
 import { Typography } from '@snack-uikit/typography';
 
 import { onSubmitVariables } from '../../types';

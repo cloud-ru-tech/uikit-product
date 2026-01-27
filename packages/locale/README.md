@@ -1,7 +1,7 @@
 # Locale
 
 ## Installation
-`npm i @sbercloud/uikit-product-locale`
+`npm i @cloud-ru/uikit-product-locale`
 
 [Changelog](./CHANGELOG.md)
 

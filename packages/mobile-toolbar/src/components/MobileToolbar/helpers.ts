@@ -1,4 +1,4 @@
-import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
+import { FiltersState } from '@cloud-ru/uikit-product-mobile-chips';
 
 import { MobileToolbarProps } from './MobileToolbar';
 import { ToolbarBulkActionProps } from './types';

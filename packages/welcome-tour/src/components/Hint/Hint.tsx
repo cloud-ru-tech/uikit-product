@@ -1,7 +1,7 @@
 import { MouseEvent } from 'react';
 import { TooltipRenderProps } from 'react-joyride';
 
-import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { CloseInterfaceSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFilled, ButtonSimple } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
 

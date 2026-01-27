@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { useMemo } from 'react';
 
-import { extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps } from '@cloud-ru/uikit-product-utils';
 
 import { getColumnsStyles } from '../helpers';
 import styles from './styles.module.scss';

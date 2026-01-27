@@ -49,7 +49,6 @@ footers other than BREAKING CHANGE: <description> may be provided and follow a c
 - `test:e2e:firefox` - запуск playwright тестов в Firefox
 - `test:local` - запускает playwright в UI режиме
 - `test:unit` - запуск unit тестов
-- `transform:scope` - команда запуска скриптов по изменению скоупов у пакетов с приватного `@sbercloud/` на публичный `@cloud-ru/` для публикации в публичный npm + ссылок с gitlab на gitverse зеркало
 
 ## Структура проекта
 

@@ -1,6 +1,6 @@
 import { ForwardRefExoticComponent } from 'react';
 
-import { MobileTooltip, MobileTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
+import { MobileTooltip, MobileTooltipProps } from '@cloud-ru/uikit-product-mobile-tooltip';
 
 export function useButtonWithTooltip<T extends Record<string, unknown>>({
   Button,

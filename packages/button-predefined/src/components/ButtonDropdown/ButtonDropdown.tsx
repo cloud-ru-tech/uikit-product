@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
-import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
-import { AdaptiveDropdown, AdaptiveDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
-import { excludeSupportProps, extractSupportProps, WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { ChevronDownSVG, ChevronUpSVG } from '@cloud-ru/uikit-product-icons';
+import { AdaptiveDropdown, AdaptiveDroplist } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { excludeSupportProps, extractSupportProps, WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { ButtonFunction, ButtonFunctionProps } from '@snack-uikit/button';
 import { DropdownProps } from '@snack-uikit/dropdown';
 import { DroplistProps } from '@snack-uikit/list';

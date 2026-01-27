@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import { extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps } from '@cloud-ru/uikit-product-utils';
 import { CollapseBlockSecondaryProps } from '@snack-uikit/accordion';
 
 import { CollapseBlockHeaderContainer, CollapseBlockPrivate } from '../../helperComponents';

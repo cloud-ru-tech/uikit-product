@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 
-import { HorizontalMenuCloseSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { HorizontalMenuCloseSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { ButtonSimple } from '@snack-uikit/button';
 import { Tree, TreeNodeProps } from '@snack-uikit/tree';
 import { Typography } from '@snack-uikit/typography';

@@ -1,5 +1,5 @@
-import { InfoRow, InfoRowProps } from '@sbercloud/uikit-product-info-row';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { InfoRow, InfoRowProps } from '@cloud-ru/uikit-product-info-row';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 import { MobileInfoRow, MobileInfoRowProps } from '../MobileInfoRow';
 

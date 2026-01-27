@@ -1,6 +1,6 @@
 import { JSXElementConstructor } from 'react';
 
-import { MobileTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
+import { MobileTooltipProps } from '@cloud-ru/uikit-product-mobile-tooltip';
 import { ValueOf, WithSupportProps } from '@snack-uikit/utils';
 
 import { SELECTION_MODE } from './constants';

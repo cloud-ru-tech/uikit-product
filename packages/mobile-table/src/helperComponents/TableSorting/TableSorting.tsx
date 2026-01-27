@@ -1,8 +1,8 @@
 import { SortingState, Table } from '@tanstack/react-table';
 import { useState } from 'react';
 
-import { ArrowDownSVG, ArrowUpSVG, SortSVG } from '@sbercloud/uikit-product-icons';
-import { MobileDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
+import { ArrowDownSVG, ArrowUpSVG, SortSVG } from '@cloud-ru/uikit-product-icons';
+import { MobileDroplist } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { ButtonFunction } from '@snack-uikit/button';
 import { ColumnDefinition } from '@snack-uikit/table';
 

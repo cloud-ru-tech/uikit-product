@@ -6,8 +6,8 @@ import {
   MobileQuestionTooltipProps,
   MobileTooltip,
   MobileTooltipProps,
-} from '@sbercloud/uikit-product-mobile-tooltip';
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+} from '@cloud-ru/uikit-product-mobile-tooltip';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ButtonTonal, ButtonTonalProps } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { SkeletonContextProvider, SkeletonText, WithSkeleton } from '@snack-uikit/skeleton';

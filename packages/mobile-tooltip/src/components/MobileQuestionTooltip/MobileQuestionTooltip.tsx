@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { QuestionSVG } from '@sbercloud/uikit-product-icons';
+import { QuestionSVG } from '@cloud-ru/uikit-product-icons';
 
 import { MobileTooltip, MobileTooltipProps } from '../MobileTooltip';
 import { SIZE, SIZES_MAP, TRIGGER, TRIGGER_MAP } from './constants';

@@ -1,6 +1,6 @@
 import { ComponentType, forwardRef, RefAttributes } from 'react';
 
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 export function getAdaptiveFieldProps<T extends WithLayoutType<{ autoFocus?: boolean }>>({ layoutType, autoFocus }: T) {
   const isMobile = layoutType === 'mobile';

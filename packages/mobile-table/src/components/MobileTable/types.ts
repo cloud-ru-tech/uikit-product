@@ -1,5 +1,5 @@
-import { FiltersState, MobileChipChoiceRowProps } from '@sbercloud/uikit-product-mobile-chips';
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { FiltersState, MobileChipChoiceRowProps } from '@cloud-ru/uikit-product-mobile-chips';
+import { WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { TableProps } from '@snack-uikit/table';
 
 export type MobileTableProps<TData extends object, TFilters extends FiltersState = Record<string, unknown>> = Pick<

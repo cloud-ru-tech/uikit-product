@@ -1,7 +1,7 @@
 # Info Row
 
 ## Installation
-`npm i @sbercloud/uikit-product-info-row`
+`npm i @cloud-ru/uikit-product-info-row`
 
 ## Props
 

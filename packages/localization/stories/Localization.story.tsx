@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { Typography } from '@snack-uikit/typography';
 
 import componentChangelog from '../CHANGELOG.md';

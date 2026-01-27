@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { AdaptiveTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { AdaptiveTooltip } from '@cloud-ru/uikit-product-mobile-tooltip';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import {
   ButtonFilled,
   ButtonFilledProps,

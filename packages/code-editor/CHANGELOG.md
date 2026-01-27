@@ -8,7 +8,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PD-3377:** removed contributors ([121640f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
 
 
 
@@ -19,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PD-3377:** contributors update to publish all packages ([719fd3e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
 
 
 
@@ -27,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.3.6 (2025-11-12)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-code-editor
+**Note:** Version bump only for package @cloud-ru/uikit-product-code-editor
 
 
 
@@ -35,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.3.5 (2025-11-07)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-code-editor
+**Note:** Version bump only for package @cloud-ru/uikit-product-code-editor
 
 
 
@@ -43,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.3.4 (2025-09-30)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-code-editor
+**Note:** Version bump only for package @cloud-ru/uikit-product-code-editor
 
 
 
@@ -54,7 +54,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PDS-2227:** remove codeEditor copy tooltip ([b9614dc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b9614dceeb9b646b144ca2fcff4b0be07379086f))
+* **PDS-2227:** remove codeEditor copy tooltip ([b9614dc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b9614dceeb9b646b144ca2fcff4b0be07379086f))
 
 
 
@@ -65,7 +65,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PDS-2227:** markdown editor to snack ([2dfe69c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2dfe69c34011ff2ba1a5bc3c73b0cb12d61deaef))
+* **PDS-2227:** markdown editor to snack ([2dfe69c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2dfe69c34011ff2ba1a5bc3c73b0cb12d61deaef))
 
 
 
@@ -76,7 +76,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Dependencies
 
-* **FF-6240:** update loaders ([b56f38f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b56f38f22bcacbf3d879a39eeaa0ac8ca2578d3d))
+* **FF-6240:** update loaders ([b56f38f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b56f38f22bcacbf3d879a39eeaa0ac8ca2578d3d))
 
 
 
@@ -87,7 +87,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-2207:** Opportunity to get a shared monaco-editor ([836b609](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/836b6099b91e3abc428d0e0e9c3ade355de4d51e))
+* **PDS-2207:** Opportunity to get a shared monaco-editor ([836b609](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/836b6099b91e3abc428d0e0e9c3ade355de4d51e))
 
 
 
@@ -98,7 +98,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Dependencies
 
-* **PDS-2163:** Update code-editor deps. ([fd0ef18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fd0ef1818e1b3e19c989e009445e9882788b4961))
+* **PDS-2163:** Update code-editor deps. ([fd0ef18](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fd0ef1818e1b3e19c989e009445e9882788b4961))
 
 
 
@@ -109,7 +109,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6299:** Re-export code editor jsonschema type. ([b2a867b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b2a867bb855ae6a12630d23db9a28ef5753574ea))
+* **FF-6299:** Re-export code editor jsonschema type. ([b2a867b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b2a867bb855ae6a12630d23db9a28ef5753574ea))
 
 
 
@@ -120,7 +120,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **FF-6299:** Re-export code editor jsonschema type. ([3fe2abf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3fe2abf74ca3a0403191397405141ac40a8d0a2a))
+* **FF-6299:** Re-export code editor jsonschema type. ([3fe2abf](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3fe2abf74ca3a0403191397405141ac40a8d0a2a))
 
 
 
@@ -131,7 +131,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **FF-6299:** Add ProductCodeEditor package. ([8e8102d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e8102dea8c1ac16af6340f73013d4ce83bcf572))
+* **FF-6299:** Add ProductCodeEditor package. ([8e8102d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e8102dea8c1ac16af6340f73013d4ce83bcf572))
 
 
 

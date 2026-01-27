@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import React, { Dispatch, ReactNode, SetStateAction, useEffect } from 'react';
 
-import { CloseSVG } from '@sbercloud/uikit-product-icons';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { CloseSVG } from '@cloud-ru/uikit-product-icons';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 import { Wrapper } from '../../../Wrapper';
 import { bannerInfo } from '../../fixtures/bannerInfo';

@@ -1,4 +1,4 @@
-import { LayoutType } from '@sbercloud/uikit-product-utils';
+import { LayoutType } from '@cloud-ru/uikit-product-utils';
 
 export const getIconSize = (layoutType: LayoutType) => {
   switch (layoutType) {

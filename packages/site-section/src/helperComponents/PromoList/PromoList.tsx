@@ -1,6 +1,6 @@
-import { DecorCheckedSVG } from '@sbercloud/uikit-product-icons';
-import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { DecorCheckedSVG } from '@cloud-ru/uikit-product-icons';
+import { RichText } from '@cloud-ru/uikit-product-site-rich-text';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 import styles from './styles.module.scss';
 

@@ -1,4 +1,4 @@
-import { ConfigurationSVG } from '@sbercloud/uikit-product-icons';
+import { ConfigurationSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 
 import styles from './styles.module.scss';

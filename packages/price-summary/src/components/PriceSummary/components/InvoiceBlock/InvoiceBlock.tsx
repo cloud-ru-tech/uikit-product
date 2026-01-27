@@ -1,7 +1,7 @@
 import { useId } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { AccordionSecondary } from '@snack-uikit/accordion';
 import { Typography } from '@snack-uikit/typography';
 

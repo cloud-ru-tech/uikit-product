@@ -1,8 +1,8 @@
 import { ReactNode, useCallback, useMemo, useRef } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { MobileDropdown } from '@sbercloud/uikit-product-mobile-dropdown';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { MobileDropdown } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { Calendar, CalendarProps } from '@snack-uikit/calendar';
 import { Scroll } from '@snack-uikit/scroll';
 import { useValueControl } from '@snack-uikit/utils';

@@ -6,11 +6,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.17.1 (2026-01-29)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@16.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.12.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.5.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@16.2.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.32](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.12.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.29](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.5.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -21,7 +21,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **GIGAID-673:** fieldPhone browser paste ([0f3ed76](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f3ed76746a5499db194edc06c97f7987461262d))
+* **GIGAID-673:** fieldPhone browser paste ([0f3ed76](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0f3ed76746a5499db194edc06c97f7987461262d))
 
 
 
@@ -32,7 +32,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **AINFR-4337:** alert for secure password field ([b44c4dc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b44c4dc95160f4758070c33380581a1103c530a5))
+* **AINFR-4337:** alert for secure password field ([b44c4dc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b44c4dc95160f4758070c33380581a1103c530a5))
 
 
 
@@ -41,7 +41,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.15.3 (2025-12-24)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-fields@0.12.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.12.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
 
 
 
@@ -50,12 +50,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.15.2 (2025-12-17)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@16.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.31](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.12.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.5.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@8.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@16.1.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.31](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.12.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.28](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.5.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@8.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -64,11 +64,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.15.1 (2025-12-12)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@16.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.12.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.5.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@16.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.30](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.12.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.27](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.5.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -79,7 +79,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **AINFR-4597:** latin symbols for password and tooltip keys animation ([a3c533f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a3c533f05551ad665af52a5e6788a134c6dbb7b5))
+* **AINFR-4597:** latin symbols for password and tooltip keys animation ([a3c533f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a3c533f05551ad665af52a5e6788a134c6dbb7b5))
 
 
 
@@ -90,7 +90,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **UIIAAS-1251:** docs ([0226b84](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0226b8456be07d407c614979552ce88023eb8bd9))
+* **UIIAAS-1251:** docs ([0226b84](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0226b8456be07d407c614979552ce88023eb8bd9))
 
 
 
@@ -101,7 +101,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **UIIAAS-1251:** added FieldDescription & FieldName ([e03ba16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e03ba16f0bbe62d0c00e7e109727a4b49f13fc6b))
+* **UIIAAS-1251:** added FieldDescription & FieldName ([e03ba16](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e03ba16f0bbe62d0c00e7e109727a4b49f13fc6b))
 
 
 
@@ -110,11 +110,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.13.11 (2025-11-28)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@16.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.31](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.5.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@16.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.28](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.31](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.25](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.5.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -123,10 +123,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.13.10 (2025-11-28)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.27](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.30](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.24](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.5.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -135,12 +135,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.13.9 (2025-11-24)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@15.1.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.70](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@8.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.1.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.26](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.29](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.23](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.70](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@8.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -149,12 +149,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.13.8 (2025-11-24)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@15.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.69](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@8.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.1.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.25](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.28](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.22](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.69](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@8.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -165,7 +165,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **LK-6839:** repaint submitButton and textarea for Giga-helper ([49b1652](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/49b165277c94deea5ececcea54f41a1505424a99))
+* **LK-6839:** repaint submitButton and textarea for Giga-helper ([49b1652](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/49b165277c94deea5ececcea54f41a1505424a99))
 
 
 
@@ -176,7 +176,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PD-3377:** removed contributors ([121640f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
 
 
 
@@ -185,12 +185,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.13.5 (2025-11-13)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@15.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.67](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@7.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.1.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.23](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.26](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.20](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.67](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@7.0.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -201,7 +201,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PD-3377:** contributors update to publish all packages ([719fd3e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
 
 
 
@@ -210,12 +210,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.13.3 (2025-11-12)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@15.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.65](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@7.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.1.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.21](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.24](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.18](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.65](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@7.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -224,11 +224,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.13.2 (2025-11-12)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@15.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.64](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.20](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.23](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.17](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.64](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -237,12 +237,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.13.1 (2025-11-07)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@15.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.63](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@6.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.0.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.19](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.22](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.63](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@6.2.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -253,7 +253,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **GIGAID-449:** add export ([7886e7c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7886e7c6fd5fa5cc2cd4c3129e8fc3392785eba3))
+* **GIGAID-449:** add export ([7886e7c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7886e7c6fd5fa5cc2cd4c3129e8fc3392785eba3))
 
 
 
@@ -264,7 +264,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **CSS-0000:** fix select create props ([ed171da](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ed171da225e5b2c17c9f637c94faf6f5b7a3cf27))
+* **CSS-0000:** fix select create props ([ed171da](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ed171da225e5b2c17c9f637c94faf6f5b7a3cf27))
 
 
 
@@ -273,11 +273,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.12.8 (2025-10-06)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@15.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.62](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.0.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.18](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.21](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.15](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.62](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -286,11 +286,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.12.7 (2025-10-06)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@15.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.61](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.0.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.17](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.20](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.61](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -299,11 +299,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.12.6 (2025-10-03)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@15.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.60](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.0.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.19](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.60](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -314,7 +314,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6758:** typescript issues ([520f8f0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/520f8f0c18ce3c5e74d6e05e6b7b72afa7a69771))
+* **FF-6758:** typescript issues ([520f8f0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/520f8f0c18ce3c5e74d6e05e6b7b72afa7a69771))
 
 
 
@@ -323,11 +323,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.12.4 (2025-09-26)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@15.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.58](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@15.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.17](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.58](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -336,11 +336,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.12.3 (2025-09-25)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@14.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.57](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.6.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.16](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.10](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.57](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -349,11 +349,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.12.2 (2025-09-18)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@14.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.56](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.5.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.12](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.15](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.56](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -362,12 +362,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.12.1 (2025-09-17)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@14.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.55](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@6.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.4.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.55](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@6.2.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -378,7 +378,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-2689:** updated FieldAi placeholder, removed FieldAi tooltip ([37614a8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/37614a88c6fb674ed0124787553b3aeaba732fdd))
+* **PDS-2689:** updated FieldAi placeholder, removed FieldAi tooltip ([37614a8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/37614a88c6fb674ed0124787553b3aeaba732fdd))
 
 
 
@@ -389,7 +389,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **GIGAID-314:** paste country detection ([abc9633](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/abc9633cee7e62cc4f5bb82287adf9a1f565ee0a))
+* **GIGAID-314:** paste country detection ([abc9633](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/abc9633cee7e62cc4f5bb82287adf9a1f565ee0a))
 
 
 
@@ -398,11 +398,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.11.3 (2025-09-11)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@14.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.54](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.3.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.10](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.54](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -413,7 +413,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Dependencies
 
-* **FF-7117:** up snack field deps ([465eb49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/465eb49b46a72ebb8a43d851f101cb7c0827e151))
+* **FF-7117:** up snack field deps ([465eb49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/465eb49b46a72ebb8a43d851f101cb7c0827e151))
 
 
 
@@ -422,11 +422,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.11.1 (2025-09-02)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@14.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.53](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.3.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.11](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.53](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -437,7 +437,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **LK-5603:** add flag icons ([5729e4b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5729e4baec27a7b65675ec77bcf3d11a44c862a6))
+* **LK-5603:** add flag icons ([5729e4b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5729e4baec27a7b65675ec77bcf3d11a44c862a6))
 
 
 
@@ -446,11 +446,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.10.9 (2025-08-20)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@14.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.51](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.1.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.51](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -459,12 +459,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.10.8 (2025-08-19)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@14.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.50](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@6.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.1.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.50](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@6.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -473,11 +473,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.10.7 (2025-08-15)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@14.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.49](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -486,10 +486,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.10.6 (2025-08-14)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.48](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.48](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -498,9 +498,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.10.5 (2025-08-07)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.9.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -509,12 +509,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.10.4 (2025-08-04)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@14.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.47](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@6.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.0.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.47](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@6.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -523,12 +523,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.10.3 (2025-08-04)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@14.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.46](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@6.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.46](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@6.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -537,8 +537,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.10.2 (2025-07-28)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-dropdown@0.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.9.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
 
 
 
@@ -547,11 +547,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.10.1 (2025-07-25)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@14.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.8.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-fields@0.11.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.45](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@14.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.8.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@0.11.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.45](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -562,15 +562,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **FF-6921:** add adaptive versions of all fields ([5ff131f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5ff131f8c815c8dac4459ae6939af5a6ac1bca06))
-* **FF-6921:** add autoFocus property ([093e729](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/093e7296b0a23c53d032f1fdec20fa3a5f1db78f))
+* **FF-6921:** add adaptive versions of all fields ([5ff131f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5ff131f8c815c8dac4459ae6939af5a6ac1bca06))
+* **FF-6921:** add autoFocus property ([093e729](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/093e7296b0a23c53d032f1fdec20fa3a5f1db78f))
 
 
 ### BREAKING CHANGES
 
 
-* **FF-6921:** remove inputMode prop from FieldPhone ([6eb84ae](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6eb84ae12f53a69cb1a03049eb1660e5774f08d3))
-* **FF-6921:** extract layoutType property to the top level ([fafda71](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fafda71bb5a1ee751ffe86dd1a97878c1383e57e))
+* **FF-6921:** remove inputMode prop from FieldPhone ([6eb84ae](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6eb84ae12f53a69cb1a03049eb1660e5774f08d3))
+* **FF-6921:** extract layoutType property to the top level ([fafda71](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fafda71bb5a1ee751ffe86dd1a97878c1383e57e))
 
 
 
@@ -578,11 +578,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.9.10 (2025-07-17)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@13.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.8.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.44](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@5.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@13.0.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.8.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.44](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@5.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -591,8 +591,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.9.9 (2025-07-17)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-dropdown@0.8.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.8.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -601,11 +601,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.9.8 (2025-07-16)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@13.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.43](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@5.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@13.0.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.8.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.43](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@5.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -614,10 +614,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.9.7 (2025-07-15)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@13.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@13.0.4](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.8.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.8.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.42](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -628,7 +628,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Dependencies
 
-* **PDS-2556:** update @snack-uikit/fields ([21e360e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/21e360e7dc269fa59369bd21640d4ee4a46d8a6e))
+* **PDS-2556:** update @snack-uikit/fields ([21e360e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/21e360e7dc269fa59369bd21640d4ee4a46d8a6e))
 
 
 
@@ -637,10 +637,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.9.5 (2025-07-01)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@13.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.7.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.48](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@13.0.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.7.9](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.48](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.41](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -649,10 +649,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.9.4 (2025-06-27)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@13.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.7.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.47](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@13.0.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.7.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.47](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.40](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -661,11 +661,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.9.3 (2025-06-27)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@13.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.7.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.46](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@4.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@13.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.7.7](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.46](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.39](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@4.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -674,10 +674,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.9.2 (2025-06-24)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@13.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.7.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.45](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.38](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@13.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.7.6](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.45](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.38](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -688,7 +688,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **ONB-3885:** hide password text error and disable button ([b111c79](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b111c79ddd2bf467ec44ef0a54edf97fe05e6503))
+* **ONB-3885:** hide password text error and disable button ([b111c79](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b111c79ddd2bf467ec44ef0a54edf97fe05e6503))
 
 
 
@@ -699,12 +699,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6795:** fix password tooltip for mobile ([fd025dc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fd025dcbfda95dd8dc251130c6fda1223dddb073))
+* **FF-6795:** fix password tooltip for mobile ([fd025dc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fd025dcbfda95dd8dc251130c6fda1223dddb073))
 
 
 ### Features
 
-* **FF-6795:** new mobile field-ai ([9602b4d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9602b4dc4faa1052387ef2f6cd2f481308ce670c))
+* **FF-6795:** new mobile field-ai ([9602b4d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9602b4dc4faa1052387ef2f6cd2f481308ce670c))
 
 
 
@@ -715,7 +715,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **ONB-3885:** show field error and tooltip text edit ([8e6d718](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e6d718a2a654537e01b846913288dfa7d5aa7ba))
+* **ONB-3885:** show field error and tooltip text edit ([8e6d718](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e6d718a2a654537e01b846913288dfa7d5aa7ba))
 
 
 
@@ -724,10 +724,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.8.5 (2025-06-20)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@12.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.7.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.44](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@12.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.7.5](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.44](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.37](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -738,7 +738,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **ONB-3885:** update package versions and props edit ([ed6471e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ed6471e108401fc1aa09ac2eee851707ab0ae340))
+* **ONB-3885:** update package versions and props edit ([ed6471e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ed6471e108401fc1aa09ac2eee851707ab0ae340))
 
 
 
@@ -747,10 +747,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.8.3 (2025-06-20)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@12.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.7.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.35](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@12.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.7.3](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.42](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.35](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -761,7 +761,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6795:** change hint text size for touch devices ([6c98d87](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6c98d87caaabd02acdd0ba826d550bfdd9e3995b))
+* **FF-6795:** change hint text size for touch devices ([6c98d87](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6c98d87caaabd02acdd0ba826d550bfdd9e3995b))
 
 
 
@@ -772,7 +772,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6795:** hide support tooltip if not provided ([1a0bda5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1a0bda577a6a8839b7075dc2bd027619406eb764))
+* **FF-6795:** hide support tooltip if not provided ([1a0bda5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1a0bda577a6a8839b7075dc2bd027619406eb764))
 
 
 
@@ -783,7 +783,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **LK-5773:** ai password field tooltip position changed ([de44eeb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/de44eebf12bd776e9cee93180ad65e113933f7b4))
+* **LK-5773:** ai password field tooltip position changed ([de44eeb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/de44eebf12bd776e9cee93180ad65e113933f7b4))
 
 
 
@@ -794,7 +794,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **LK-5807:** added value prop to textarea, used forwardref, changed max and min rows, updated disabled prop usage ([3f6211b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3f6211b7b08df44154aea7508e3c86bfc034c672))
+* **LK-5807:** added value prop to textarea, used forwardref, changed max and min rows, updated disabled prop usage ([3f6211b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3f6211b7b08df44154aea7508e3c86bfc034c672))
 
 
 
@@ -805,7 +805,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-2401:** extend countries, add phone filter settings ([d36aeb3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d36aeb39412df10f46e2ab4c11086b6121a4ace9))
+* **PDS-2401:** extend countries, add phone filter settings ([d36aeb3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d36aeb39412df10f46e2ab4c11086b6121a4ace9))
 
 
 
@@ -816,7 +816,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Dependencies
 
-* **PDS-2368:** up @snack-uikit/fields ([36e12c6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/36e12c6e4af4810efea97171006c08cb2c4d1a7d))
+* **PDS-2368:** up @snack-uikit/fields ([36e12c6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/36e12c6e4af4810efea97171006c08cb2c4d1a7d))
 
 
 
@@ -825,10 +825,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.6.1 (2025-06-06)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@11.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-dropdown@0.7.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-tooltip@0.4.34](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.9.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@0.7.2](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.41](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@0.4.34](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 
@@ -839,7 +839,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-2225:** FieldAI and FieldChat ([7656767](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/76567674678d6003230e80e7e5968d29c34bf2ac))
+* **PDS-2225:** FieldAI and FieldChat ([7656767](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/76567674678d6003230e80e7e5968d29c34bf2ac))
 
 
 
@@ -850,7 +850,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-2255:** adaptive phone field ([960443f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/960443f7b962822c0e7871da663572d0ace4f945))
+* **PDS-2255:** adaptive phone field ([960443f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/960443f7b962822c0e7871da663572d0ace4f945))
 
 
 
@@ -859,8 +859,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.4.2 (2025-05-16)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@11.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.7.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.39](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -869,8 +869,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.4.1 (2025-05-14)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@11.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.38](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.6.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.38](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -881,7 +881,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **IAM-2109:** add permissions for Select Create ([ea7d23b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ea7d23b1117205966b7397ecf575505bca9a197c))
+* **IAM-2109:** add permissions for Select Create ([ea7d23b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ea7d23b1117205966b7397ecf575505bca9a197c))
 
 
 
@@ -890,8 +890,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.3.2 (2025-04-30)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@11.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.5.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.37](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -900,7 +900,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.3.1 (2025-04-24)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-mobile-modal@0.7.36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.36](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -911,7 +911,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-2086:** add nonceId for overlayscrollbars ([827a753](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/827a75357160288542ac1570311cfaa49eaebda1))
+* **PDS-2086:** add nonceId for overlayscrollbars ([827a753](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/827a75357160288542ac1570311cfaa49eaebda1))
 
 
 
@@ -920,8 +920,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.2.11 (2025-04-15)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@11.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.35](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.4.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.35](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -930,8 +930,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.2.10 (2025-04-09)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@11.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.34](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.3.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.34](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -942,7 +942,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **IAM-5156:** update types ([f1f4231](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f1f4231b75e4fbf1b86c13994dd4096b0e573863))
+* **IAM-5156:** update types ([f1f4231](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f1f4231b75e4fbf1b86c13994dd4096b0e573863))
 
 
 
@@ -951,8 +951,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.2.8 (2025-04-01)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@11.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.2.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.33](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -961,8 +961,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.2.7 (2025-03-27)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@11.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.1.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.32](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -971,8 +971,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.2.6 (2025-03-21)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@11.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.31](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.0.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.31](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -983,7 +983,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **FF-6326:** changed translation flow ([b3b6bb4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
 
 
 
@@ -992,8 +992,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.2.4 (2025-03-20)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@11.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@11.0.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.30](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -1002,8 +1002,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.2.3 (2025-03-18)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@10.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.7.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.29](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -1012,8 +1012,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.2.2 (2025-03-14)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@10.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.6.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.28](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -1022,8 +1022,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.2.1 (2025-03-13)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@10.5.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.5.1](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.27](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -1034,7 +1034,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **IAM-5041:** add scroll list countries prop ([0e6a52a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0e6a52a75a243ebe12f039fafacc421884ed3b7f))
+* **IAM-5041:** add scroll list countries prop ([0e6a52a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0e6a52a75a243ebe12f039fafacc421884ed3b7f))
 
 
 
@@ -1043,8 +1043,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.1.4 (2025-03-05)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@10.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.5.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.26](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -1053,8 +1053,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.1.3 (2025-03-04)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@10.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.4.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.25](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -1063,8 +1063,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## 0.1.2 (2025-02-28)
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@10.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-mobile-modal@0.7.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.3.0](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@0.7.24](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
 
 
 
@@ -1075,7 +1075,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **PDS-1681:** forwarding props ([0ed3b61](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0ed3b61220ca17b25d63588fe94012881245606f))
+* **PDS-1681:** forwarding props ([0ed3b61](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0ed3b61220ca17b25d63588fe94012881245606f))
 
 
 
@@ -1086,7 +1086,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-1634:** phone masks without parenthesis ([b929e87](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b929e8740b4c299b94a73f35dc09d348942f71d1))
+* **PDS-1634:** phone masks without parenthesis ([b929e87](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b929e8740b4c299b94a73f35dc09d348942f71d1))
 
 
 
@@ -1097,7 +1097,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Dependencies
 
-* **FF-4704:** up deps ([7da95ef](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
 
 
 
@@ -1108,8 +1108,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **PDS-1181:** add icon & docgen & update figma link ([0f01d84](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f01d84fee94660ea5c97405c57227bd7e76efa1))
-* **PDS-1181:** implement SelectCreate component ([a6e5123](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a6e5123f4628fd2d8d3c625a0fd763829fb62e78))
+* **PDS-1181:** add icon & docgen & update figma link ([0f01d84](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0f01d84fee94660ea5c97405c57227bd7e76efa1))
+* **PDS-1181:** implement SelectCreate component ([a6e5123](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a6e5123f4628fd2d8d3c625a0fd763829fb62e78))
 
 
 
@@ -1118,8 +1118,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## <small>0.0.3 (2025-02-05)</small>
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@10.2.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
-* [@sbercloud/uikit-product-utils@3.8.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.14](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@3.8.8](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
@@ -1128,7 +1128,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## <small>0.0.2 (2025-02-05)</small>
 
 ### Only dependencies have been changed
-* [@sbercloud/uikit-product-icons@10.2.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@10.2.13](https://gitverse.ru/cloud-ru-tech/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 
@@ -1136,4 +1136,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## <small>0.0.1 (2025-02-04)</small>
 
-- feat(PDS-159): added FieldPhone ([8ccdc01](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8ccdc01))
+- feat(PDS-159): added FieldPhone ([8ccdc01](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8ccdc01))

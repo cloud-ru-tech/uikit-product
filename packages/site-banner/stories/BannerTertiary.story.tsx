@@ -1,7 +1,7 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
-import { Layout } from '@sbercloud/uikit-product-site-layout';
-import { APPEARANCE_ERID, EridProps } from '@sbercloud/uikit-product-site-tag';
+import { Layout } from '@cloud-ru/uikit-product-site-layout';
+import { APPEARANCE_ERID, EridProps } from '@cloud-ru/uikit-product-site-tag';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

@@ -1,6 +1,6 @@
 import { MouseEvent, useMemo } from 'react';
 
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Typography, TypographyProps } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';

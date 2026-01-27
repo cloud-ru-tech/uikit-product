@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-localization",
+  "name": "@cloud-ru/uikit-product-localization",
   "title": "React Localization",
   "version": "0.13.14",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/localization",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/localization",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/localization"
   },
   "author": {
@@ -36,6 +36,6 @@
   },
   "scripts": {},
   "peerDependencies": {
-    "@sbercloud/uikit-product-locale": "*"
+    "@cloud-ru/uikit-product-locale": "*"
   }
 }

@@ -1,8 +1,8 @@
 import cn from 'classnames';
 
-import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { Table, TableProps } from '@sbercloud/uikit-product-site-table';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { RichText } from '@cloud-ru/uikit-product-site-rich-text';
+import { Table, TableProps } from '@cloud-ru/uikit-product-site-table';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 import { SectionBasic, SectionBasicProps } from '../SectionBasic';
 import styles from './styles.module.scss';

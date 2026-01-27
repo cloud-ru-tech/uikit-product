@@ -1,10 +1,10 @@
 import { memo, useCallback, useMemo } from 'react';
 
-import { PlusSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { AdaptiveFieldSelect } from '@sbercloud/uikit-product-mobile-fields';
-import { AdaptiveDrawer, AdaptiveModal, DrawerProps, ModalProps } from '@sbercloud/uikit-product-mobile-modal';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { PlusSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { AdaptiveFieldSelect } from '@cloud-ru/uikit-product-mobile-fields';
+import { AdaptiveDrawer, AdaptiveModal, DrawerProps, ModalProps } from '@cloud-ru/uikit-product-mobile-modal';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
 import { TooltipProps, WithTooltip } from '@snack-uikit/tooltip';

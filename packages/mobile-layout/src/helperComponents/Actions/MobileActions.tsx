@@ -1,10 +1,10 @@
 import { Children, isValidElement, useRef, useState } from 'react';
 
-import { ChevronDownSVG, KebabSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { AdaptiveDropdown, MobileDroplist, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
-import { MobileTooltip, WithMobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
-import { checkExceeded, QuotaCardProps, QuotaDropdownContent } from '@sbercloud/uikit-product-quota';
+import { ChevronDownSVG, KebabSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { AdaptiveDropdown, MobileDroplist, MobileDroplistProps } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { MobileTooltip, WithMobileTooltip } from '@cloud-ru/uikit-product-mobile-tooltip';
+import { checkExceeded, QuotaCardProps, QuotaDropdownContent } from '@cloud-ru/uikit-product-quota';
 import { ButtonOutline } from '@snack-uikit/button';
 import { Counter } from '@snack-uikit/counter';
 import { useDynamicList } from '@snack-uikit/utils';

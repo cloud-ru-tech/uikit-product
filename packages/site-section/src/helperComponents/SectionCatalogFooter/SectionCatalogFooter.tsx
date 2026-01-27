@@ -1,5 +1,5 @@
-import { ChevronRightSVG } from '@sbercloud/uikit-product-icons';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { ChevronRightSVG } from '@cloud-ru/uikit-product-icons';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { ButtonFunction, ButtonFunctionProps } from '@snack-uikit/button';
 
 import styles from './styles.module.scss';

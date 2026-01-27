@@ -1,4 +1,4 @@
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { QuestionTooltip, QuestionTooltipProps, TooltipProps, WithTooltip } from '@snack-uikit/tooltip';
 
 import { MobileQuestionTooltip } from '../MobileQuestionTooltip';

@@ -1,4 +1,4 @@
-import { AdvancedPlatformSVG } from '@sbercloud/uikit-product-icons';
+import { AdvancedPlatformSVG } from '@cloud-ru/uikit-product-icons';
 
 import { PLATFORM } from '../../../constants';
 import { Platform } from '../../../types';

@@ -1,6 +1,6 @@
 import { forwardRef, useState } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { ChipToggle } from '@snack-uikit/chips';
 import { Search } from '@snack-uikit/search';
 

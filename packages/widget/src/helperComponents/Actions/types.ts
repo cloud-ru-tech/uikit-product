@@ -1,4 +1,4 @@
-import { TooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
+import { TooltipProps } from '@cloud-ru/uikit-product-mobile-tooltip';
 import {
   ButtonFilledProps,
   ButtonFunctionProps,

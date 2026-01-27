@@ -1,7 +1,7 @@
 # SiteSelectorPlatformDropList
 
 ## Installation
-`pnpm add @sbercloud/uikit-product-site-selector-platform-drop-list`
+`pnpm add @cloud-ru/uikit-product-site-selector-platform-drop-list`
 
 [Changelog](./CHANGELOG.md)
 

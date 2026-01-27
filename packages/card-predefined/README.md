@@ -1,7 +1,7 @@
 # Card Predefined
 
 ## Installation
-`npm i @sbercloud/uikit-product-card-predefined`
+`npm i @cloud-ru/uikit-product-card-predefined`
 
 
 ## Props

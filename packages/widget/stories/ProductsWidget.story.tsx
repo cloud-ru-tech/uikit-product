@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { ReactNode } from 'react';
 
-import { CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
+import { CardServiceSmall } from '@cloud-ru/uikit-product-card-predefined';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

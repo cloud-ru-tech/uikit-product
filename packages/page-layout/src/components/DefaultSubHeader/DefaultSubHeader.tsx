@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { CopyLine, CopyLineProps } from '@sbercloud/uikit-product-copy-line';
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { CopyLine, CopyLineProps } from '@cloud-ru/uikit-product-copy-line';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { QuestionTooltip } from '@snack-uikit/tooltip';
 
 import styles from './styles.module.scss';

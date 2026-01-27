@@ -1,7 +1,7 @@
 # React Charts
 
 ## Installation
-`npm i @sbercloud/uikit-product-charts`
+`npm i @cloud-ru/uikit-product-charts`
 
 [Changelog](./CHANGELOG.md)
 

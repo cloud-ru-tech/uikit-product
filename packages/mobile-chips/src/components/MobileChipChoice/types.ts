@@ -10,7 +10,7 @@ import {
   NextListItemProps,
   SelectionMultipleState,
   SelectionSingleState,
-} from '@sbercloud/uikit-product-mobile-dropdown';
+} from '@cloud-ru/uikit-product-mobile-dropdown';
 import { TruncateStringProps } from '@snack-uikit/truncate-string';
 import { WithSupportProps } from '@snack-uikit/utils';
 

@@ -157,7 +157,7 @@ import {
   WallisAndFutunaSVG,
   YemenSVG,
   ZimbabweSVG,
-} from '@sbercloud/uikit-product-icons';
+} from '@cloud-ru/uikit-product-icons';
 
 export const RUSSIA_COUNTRY_CODE = {
   value: 'russia',

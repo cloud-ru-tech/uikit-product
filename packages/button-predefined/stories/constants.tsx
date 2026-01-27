@@ -1,6 +1,6 @@
 import { ArgTypes } from '@storybook/react';
 
-import * as Icons from '@sbercloud/uikit-product-icons';
+import * as Icons from '@cloud-ru/uikit-product-icons';
 import { BaseItemProps } from '@snack-uikit/list';
 
 import { APPEARANCE, HTML_TYPE, SIZE } from '../src/constants';

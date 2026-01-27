@@ -1,5 +1,5 @@
-import { SiteVideo } from '@sbercloud/uikit-product-site-media';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { SiteVideo } from '@cloud-ru/uikit-product-site-media';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 import { SectionTitle, SectionTitleProps } from '../../helperComponents';
 import { MediaContentProps, SectionColor } from '../../types';

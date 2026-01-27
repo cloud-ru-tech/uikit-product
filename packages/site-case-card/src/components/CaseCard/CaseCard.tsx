@@ -1,6 +1,6 @@
 import { MouseEvent } from 'react';
 
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Card } from '@snack-uikit/card';
 import { Skeleton } from '@snack-uikit/skeleton';
 import { Typography } from '@snack-uikit/typography';

@@ -1,7 +1,7 @@
 import { useDeferredValue } from 'react';
 
-import { KebabSVG } from '@sbercloud/uikit-product-icons';
-import { AdaptiveDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
+import { KebabSVG } from '@cloud-ru/uikit-product-icons';
+import { AdaptiveDroplist } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Card } from '@snack-uikit/card';
 

@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import { isValidElement, useCallback, useRef, useState } from 'react';
 
-import { PlaySVG } from '@sbercloud/uikit-product-icons';
-import { extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { PlaySVG } from '@cloud-ru/uikit-product-icons';
+import { extractSupportProps } from '@cloud-ru/uikit-product-utils';
 import { IconPredefined } from '@snack-uikit/icon-predefined';
 
 import styles from './styles.module.scss';

@@ -1,4 +1,4 @@
-import { ArrowRightSVG } from '@sbercloud/uikit-product-icons';
+import { ArrowRightSVG } from '@cloud-ru/uikit-product-icons';
 import { Card, CardProps } from '@snack-uikit/card';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';

@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 
-import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
-import { AdaptiveDroplist, AdaptiveDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { ChevronDownSVG, ChevronUpSVG } from '@cloud-ru/uikit-product-icons';
+import { AdaptiveDroplist, AdaptiveDroplistProps } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled, ButtonFilledProps, ButtonFunction, ButtonFunctionProps } from '@snack-uikit/button';
 import { useValueControl } from '@snack-uikit/utils';
 

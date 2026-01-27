@@ -1,7 +1,7 @@
 # Mobile Toolbar
 
 ## Installation
-`npm i @sbercloud/uikit-product-mobile-toolbar`
+`npm i @cloud-ru/uikit-product-mobile-toolbar`
 
 [Changelog](./CHANGELOG.md)
 

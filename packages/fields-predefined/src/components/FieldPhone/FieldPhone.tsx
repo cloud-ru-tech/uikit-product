@@ -3,9 +3,9 @@ import mergeRefs from 'merge-refs';
 import { ClipboardEventHandler, forwardRef, useEffect, useMemo, useRef, useState } from 'react';
 import { useIMask } from 'react-imask';
 
-import { AdaptiveDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
-import { AdaptiveFieldText, FieldTextProps } from '@sbercloud/uikit-product-mobile-fields';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { AdaptiveDroplist } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { AdaptiveFieldText, FieldTextProps } from '@cloud-ru/uikit-product-mobile-fields';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { useValueControl } from '@snack-uikit/utils';
 
 import { PLACEHOLDER_CHAR } from './constants';

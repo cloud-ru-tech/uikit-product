@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 
 export function useTextFieldValidation(target: string | undefined) {
   const { t } = useLocale('ModalPredefined');

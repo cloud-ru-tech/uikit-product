@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { useState } from 'react';
 
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Carousel, CarouselProps } from '@snack-uikit/carousel';
 
 import { Control, HeroSlide, HeroSlideProps, TabsRowHeroSlider } from './components';

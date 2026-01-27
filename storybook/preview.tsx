@@ -1,7 +1,5 @@
 import './styles.module.scss';
 
-import { Sprite, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
-import { LocaleProvider } from '@sbercloud/uikit-product-locale';
 import { GlobalTypes, Parameters } from '@storybook/csf';
 import { Preview } from '@storybook/react';
 import { themes, ThemeVars } from '@storybook/theming';
@@ -13,6 +11,8 @@ import {
   PARAM_KEY,
   withBrand,
 } from '@cloud-ru/ft-storybook-brand-addon';
+import { Sprite, SpriteSystemSVG } from '@cloud-ru/uikit-product-icons';
+import { LocaleProvider } from '@cloud-ru/uikit-product-locale';
 import { Alert } from '@snack-uikit/alert';
 import { Link } from '@snack-uikit/link';
 

@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-header",
+  "name": "@cloud-ru/uikit-product-header",
   "title": "Header",
   "version": "5.1.2",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/header",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/header",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/header"
   },
   "author": {
@@ -36,12 +36,12 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-card-predefined": "0.8.22",
-    "@sbercloud/uikit-product-icons": "16.2.0",
-    "@sbercloud/uikit-product-mobile-drawer": "0.9.26",
-    "@sbercloud/uikit-product-mobile-modal": "0.9.29",
-    "@sbercloud/uikit-product-title-clickable": "0.0.58",
-    "@sbercloud/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-card-predefined": "0.8.22",
+    "@cloud-ru/uikit-product-icons": "16.2.0",
+    "@cloud-ru/uikit-product-mobile-drawer": "0.9.26",
+    "@cloud-ru/uikit-product-mobile-modal": "0.9.29",
+    "@cloud-ru/uikit-product-title-clickable": "0.0.58",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/avatar": "0.8.14",
     "@snack-uikit/breadcrumbs": "0.11.22",
     "@snack-uikit/button": "0.19.16",
@@ -62,6 +62,6 @@
     "@types/lodash.debounce": "4.0.9"
   },
   "peerDependencies": {
-    "@sbercloud/uikit-product-locale": "*"
+    "@cloud-ru/uikit-product-locale": "*"
   }
 }

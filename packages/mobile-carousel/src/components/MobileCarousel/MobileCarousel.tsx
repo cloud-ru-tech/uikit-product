@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { useMemo, useState } from 'react';
 
-import { extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps } from '@cloud-ru/uikit-product-utils';
 import { CarouselProps } from '@snack-uikit/carousel';
 import { PaginationSlider } from '@snack-uikit/pagination';
 

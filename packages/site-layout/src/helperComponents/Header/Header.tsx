@@ -1,6 +1,6 @@
 import { CSSProperties, ReactNode } from 'react';
 
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 export type HeaderProps = WithSupportProps<{
   children: ReactNode;

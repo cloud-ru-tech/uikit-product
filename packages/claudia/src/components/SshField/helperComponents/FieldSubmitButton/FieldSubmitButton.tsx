@@ -1,5 +1,5 @@
-import { ArrowUpSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { ArrowUpSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { ButtonFilled } from '@snack-uikit/button';
 import { Tooltip } from '@snack-uikit/tooltip';
 

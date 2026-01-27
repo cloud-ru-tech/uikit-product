@@ -1,7 +1,7 @@
 # Switch Row
 
 ## Installation
-`npm i @sbercloud/uikit-product-switch-row`
+`npm i @cloud-ru/uikit-product-switch-row`
 
 [Changelog](./CHANGELOG.md)
 

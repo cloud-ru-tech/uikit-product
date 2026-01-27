@@ -1,7 +1,7 @@
 import { MouseEvent, ReactNode, useMemo } from 'react';
 
-import { MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
-import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
+import { MobileDroplistProps } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { MobileTooltip } from '@cloud-ru/uikit-product-mobile-tooltip';
 
 import { SidebarItem } from '../types';
 

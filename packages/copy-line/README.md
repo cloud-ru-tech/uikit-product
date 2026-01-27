@@ -1,7 +1,7 @@
 # Copy Line
 
 ## Installation
-`npm i @sbercloud/uikit-product-copy-line`
+`npm i @cloud-ru/uikit-product-copy-line`
 
 [Changelog](./CHANGELOG.md)
 

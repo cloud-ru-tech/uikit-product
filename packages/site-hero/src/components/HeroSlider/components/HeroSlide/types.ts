@@ -1,6 +1,6 @@
 import { HTMLAttributeAnchorTarget, MouseEventHandler } from 'react';
 
-import { EridProps } from '@sbercloud/uikit-product-site-tag';
+import { EridProps } from '@cloud-ru/uikit-product-site-tag';
 import { ValueOf } from '@snack-uikit/utils';
 
 import { HeroSlideMediaProps } from '../HeroSlideMedia';

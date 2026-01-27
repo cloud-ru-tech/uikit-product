@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-mobile-table",
+  "name": "@cloud-ru/uikit-product-mobile-table",
   "title": "Mobile Table",
   "version": "0.17.1",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/mobile-table",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/mobile-table",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/mobile-table"
   },
   "author": {
@@ -37,11 +37,11 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/ft-request-payload-transform": "0.3.0",
-    "@sbercloud/uikit-product-icons": "16.2.0",
-    "@sbercloud/uikit-product-mobile-chips": "0.8.48",
-    "@sbercloud/uikit-product-mobile-dropdown": "0.9.32",
-    "@sbercloud/uikit-product-mobile-toolbar": "0.5.1",
-    "@sbercloud/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-icons": "16.2.0",
+    "@cloud-ru/uikit-product-mobile-chips": "0.8.48",
+    "@cloud-ru/uikit-product-mobile-dropdown": "0.9.32",
+    "@cloud-ru/uikit-product-mobile-toolbar": "0.5.1",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/chips": "0.28.12",
     "@snack-uikit/figma-tokens": "18.0.1",
@@ -61,7 +61,7 @@
     "lodash.debounce": "4.0.8"
   },
   "peerDependencies": {
-    "@sbercloud/uikit-product-locale": "*"
+    "@cloud-ru/uikit-product-locale": "*"
   },
   "devDependencies": {
     "@types/lodash.debounce": "4.0.9"

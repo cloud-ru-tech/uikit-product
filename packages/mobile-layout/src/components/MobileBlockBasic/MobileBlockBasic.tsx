@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import { BlockBasic, BlockBasicProps } from '@sbercloud/uikit-product-layout';
+import { BlockBasic, BlockBasicProps } from '@cloud-ru/uikit-product-layout';
 
 import styles from './styles.module.scss';
 

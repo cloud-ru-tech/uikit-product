@@ -1,7 +1,7 @@
 # Mobile Fields
 
 ## Installation
-`npm i @sbercloud/uikit-product-mobile-fields`
+`npm i @cloud-ru/uikit-product-mobile-fields`
 
 [Changelog](./CHANGELOG.md)
 

@@ -2,6 +2,6 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-product-site-media`
+`npm i @cloud-ru/uikit-product-site-media`
 
 [Changelog](./CHANGELOG.md)

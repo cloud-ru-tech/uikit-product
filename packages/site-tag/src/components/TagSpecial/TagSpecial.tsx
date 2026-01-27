@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { PromoTag } from '@snack-uikit/promo-tag';
 
 import { Tooltip } from '../../helperComponents';

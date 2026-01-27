@@ -3,8 +3,8 @@ import mergeRefs from 'merge-refs';
 import { FocusEvent, forwardRef, KeyboardEvent, MouseEvent, useCallback, useEffect, useMemo, useRef } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { CalendarSVG } from '@sbercloud/uikit-product-icons';
-import { MobileDropdown } from '@sbercloud/uikit-product-mobile-dropdown';
+import { CalendarSVG } from '@cloud-ru/uikit-product-icons';
+import { MobileDropdown } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { Calendar, CalendarProps } from '@snack-uikit/calendar';
 import { FieldDecorator, FieldDecoratorProps } from '@snack-uikit/fields';
 import {

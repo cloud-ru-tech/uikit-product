@@ -1,9 +1,9 @@
 import { CellContext, Row } from '@tanstack/react-table';
 import { MouseEvent, MouseEventHandler, useCallback, useMemo, useState } from 'react';
 
-import { MoreSVG } from '@sbercloud/uikit-product-icons';
-import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
-import { isBaseItemProps, MobileDroplist, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
+import { MoreSVG } from '@cloud-ru/uikit-product-icons';
+import { FiltersState } from '@cloud-ru/uikit-product-mobile-chips';
+import { isBaseItemProps, MobileDroplist, MobileDroplistProps } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { ButtonFunction } from '@snack-uikit/button';
 
 import { MobileTableProps } from '../../components';

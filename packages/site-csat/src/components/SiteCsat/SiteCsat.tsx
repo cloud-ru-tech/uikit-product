@@ -1,4 +1,4 @@
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { CheckFilledSVG } from '@snack-uikit/icons';
 import { Spinner } from '@snack-uikit/loaders';
 import { Typography } from '@snack-uikit/typography';

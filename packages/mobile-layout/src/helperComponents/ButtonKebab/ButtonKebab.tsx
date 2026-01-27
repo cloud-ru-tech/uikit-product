@@ -1,6 +1,6 @@
-import { KebabSVG } from '@sbercloud/uikit-product-icons';
-import { AdaptiveDroplist, AdaptiveDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { KebabSVG } from '@cloud-ru/uikit-product-icons';
+import { AdaptiveDroplist, AdaptiveDroplistProps } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { ButtonOutline, ButtonOutlineProps } from '@snack-uikit/button';
 import { useValueControl } from '@snack-uikit/utils';
 

@@ -1,7 +1,7 @@
 # Site Article
 
 ## Installation
-`npm i @sbercloud/uikit-product-site-article`
+`npm i @cloud-ru/uikit-product-site-article`
 
 [Changelog](./CHANGELOG.md)
 

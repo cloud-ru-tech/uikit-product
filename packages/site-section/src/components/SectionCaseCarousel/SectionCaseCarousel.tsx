@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { CaseCard, CaseCardProps } from '@sbercloud/uikit-product-site-case-card';
+import { CaseCard, CaseCardProps } from '@cloud-ru/uikit-product-site-case-card';
 
 import { LimitedSectionCarouselProps, SectionCarousel } from '../../helperComponents';
 import { getCarouselProps } from './utils';

@@ -1,4 +1,4 @@
-import { RichText } from '@sbercloud/uikit-product-site-rich-text';
+import { RichText } from '@cloud-ru/uikit-product-site-rich-text';
 import { Typography } from '@snack-uikit/typography';
 
 import { AppearanceType } from '../HeroSlide/types';

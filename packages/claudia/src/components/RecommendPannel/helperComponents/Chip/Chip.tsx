@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { forwardRef, MouseEventHandler } from 'react';
 
-import { LAYOUT_TYPE, LayoutType } from '@sbercloud/uikit-product-utils';
+import { LAYOUT_TYPE, LayoutType } from '@cloud-ru/uikit-product-utils';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';
 

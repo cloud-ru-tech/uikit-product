@@ -1,8 +1,8 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useMemo } from 'react';
 
-import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
-import { CardInfoProps, CardProductProps } from '@sbercloud/uikit-product-site-cards';
+import { PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
+import { CardInfoProps, CardProductProps } from '@cloud-ru/uikit-product-site-cards';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

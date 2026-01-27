@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-locale",
+  "name": "@cloud-ru/uikit-product-locale",
   "title": "Locale",
   "version": "0.25.0",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/locale",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/locale",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/locale"
   },
   "author": {
@@ -37,7 +37,7 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/common-translations": "1.3.2",
-    "@snack-uikit/locale": "0.15.3",
+    "@snack-uikit/locale": "0.15.5",
     "lodash.get": "4.4.2",
     "lodash.merge": "4.6.2",
     "lodash.set": "4.3.2"

@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { Brand, Themes, useTheme, useBrand } from '@sbercloud/uikit-product-utils';
+import { Brand, Themes, useTheme, useBrand } from '@cloud-ru/uikit-product-utils';
 
 export function useThemeModification() {
   const { theme } = useTheme();

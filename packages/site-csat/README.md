@@ -1,7 +1,7 @@
 # Sitecsat
 
 ## Installation
-`npm i @sbercloud/uikit-product-sitecsat`
+`npm i @cloud-ru/uikit-product-sitecsat`
 
 [Changelog](./CHANGELOG.md)
 

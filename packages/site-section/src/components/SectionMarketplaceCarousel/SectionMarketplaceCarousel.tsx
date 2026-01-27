@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { CardMarketplace, CardMarketplaceProps } from '@sbercloud/uikit-product-site-cards';
+import { CardMarketplace, CardMarketplaceProps } from '@cloud-ru/uikit-product-site-cards';
 
 import { LimitedSectionCarouselProps, SectionCarousel } from '../../helperComponents';
 import { getCarouselProps } from './utils';

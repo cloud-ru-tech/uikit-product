@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-site-hero",
+  "name": "@cloud-ru/uikit-product-site-hero",
   "title": "Site Hero",
   "version": "1.3.3",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-hero",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/site-hero",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/site-hero"
   },
   "author": {
@@ -36,14 +36,14 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button-predefined": "0.7.16",
-    "@sbercloud/uikit-product-icons": "16.2.0",
-    "@sbercloud/uikit-product-site-layout": "0.5.2",
-    "@sbercloud/uikit-product-site-media": "0.3.1",
-    "@sbercloud/uikit-product-site-navbar": "0.3.2",
-    "@sbercloud/uikit-product-site-rich-text": "0.2.17",
-    "@sbercloud/uikit-product-site-tag": "0.4.1",
-    "@sbercloud/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-button-predefined": "0.7.16",
+    "@cloud-ru/uikit-product-icons": "16.2.0",
+    "@cloud-ru/uikit-product-site-layout": "0.5.2",
+    "@cloud-ru/uikit-product-site-media": "0.3.1",
+    "@cloud-ru/uikit-product-site-navbar": "0.3.2",
+    "@cloud-ru/uikit-product-site-rich-text": "0.2.17",
+    "@cloud-ru/uikit-product-site-tag": "0.4.1",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/breadcrumbs": "0.10.24",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/carousel": "0.6.9",
@@ -54,6 +54,6 @@
     "classnames": "2.5.1"
   },
   "peerDependencies": {
-    "@sbercloud/uikit-product-locale": "*"
+    "@cloud-ru/uikit-product-locale": "*"
   }
 }

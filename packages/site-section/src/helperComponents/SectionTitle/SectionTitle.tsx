@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
-import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { RichText } from '@cloud-ru/uikit-product-site-rich-text';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Link, PickLinkProps } from '@snack-uikit/link';
 import { Typography } from '@snack-uikit/typography';
 

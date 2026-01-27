@@ -1,7 +1,7 @@
 import { StoryObj } from '@storybook/react';
 import { useMemo } from 'react';
 
-import * as Icons from '@sbercloud/uikit-product-icons';
+import * as Icons from '@cloud-ru/uikit-product-icons';
 
 import { IconElement, IconProps } from '../src/helperComponents/Icon';
 import styles from './styles.module.scss';

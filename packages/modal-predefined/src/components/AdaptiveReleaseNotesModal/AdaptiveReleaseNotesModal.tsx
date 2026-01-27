@@ -1,4 +1,4 @@
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 import { ReleaseNotesModalProps } from '../../types';
 import { MobileReleaseNotesModal } from '../MobileReleaseNotesModal';

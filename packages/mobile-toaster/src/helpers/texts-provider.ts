@@ -1,4 +1,4 @@
-import { createTextProvider, LanguageCodeType } from '@sbercloud/uikit-product-utils';
+import { createTextProvider, LanguageCodeType } from '@cloud-ru/uikit-product-utils';
 
 export enum Texts {
   CloseAll = 'closeAll',

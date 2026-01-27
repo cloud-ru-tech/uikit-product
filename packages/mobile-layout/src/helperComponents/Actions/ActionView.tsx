@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
-import { AdaptiveTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
-import { QuotaDropdown, QuotaDropdownProps } from '@sbercloud/uikit-product-quota';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { AdaptiveTooltip } from '@cloud-ru/uikit-product-mobile-tooltip';
+import { QuotaDropdown, QuotaDropdownProps } from '@cloud-ru/uikit-product-quota';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import {
   ButtonFilled,
   ButtonFilledProps,

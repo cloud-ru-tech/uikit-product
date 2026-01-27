@@ -1,4 +1,4 @@
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Carousel, CarouselProps } from '@snack-uikit/carousel';
 
 import { MobileCarousel } from '../MobileCarousel';

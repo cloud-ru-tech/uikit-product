@@ -1,6 +1,6 @@
-import { CardSuggest, CardSuggestProps } from '@sbercloud/uikit-product-card-predefined';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { CardSuggest, CardSuggestProps } from '@cloud-ru/uikit-product-card-predefined';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Link, LinkProps } from '@snack-uikit/link';
 import { Typography } from '@snack-uikit/typography';
 

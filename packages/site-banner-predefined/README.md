@@ -1,7 +1,7 @@
 # Site Banner Predefined
 
 ## Installation
-`npm i @sbercloud/uikit-product-site-banner-predefined`
+`npm i @cloud-ru/uikit-product-site-banner-predefined`
 
 [Changelog](./CHANGELOG.md)
 

@@ -1,7 +1,7 @@
 # Quota
 
 ## Installation
-`npm i @sbercloud/uikit-product-quota`
+`npm i @cloud-ru/uikit-product-quota`
 
 [Changelog](./CHANGELOG.md)
 

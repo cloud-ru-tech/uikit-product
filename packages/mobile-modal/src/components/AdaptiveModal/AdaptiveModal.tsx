@@ -1,4 +1,4 @@
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Modal, ModalCustom, ModalProps } from '@snack-uikit/modal';
 
 import { SIZE } from '../../constants';

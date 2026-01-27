@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 
-import { ChevronLeftSVG, ChevronRightSVG } from '@sbercloud/uikit-product-icons';
+import { ChevronLeftSVG, ChevronRightSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Carousel, CarouselProps } from '@snack-uikit/carousel';
 import { FieldDecorator } from '@snack-uikit/fields';

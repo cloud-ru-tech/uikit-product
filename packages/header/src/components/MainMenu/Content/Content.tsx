@@ -1,8 +1,8 @@
 import { MouseEvent, ReactElement, ReactNode, useCallback, useMemo } from 'react';
 
-import { CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { TitleClickable } from '@sbercloud/uikit-product-title-clickable';
+import { CardServiceSmall } from '@cloud-ru/uikit-product-card-predefined';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { TitleClickable } from '@cloud-ru/uikit-product-title-clickable';
 
 import { LinksGroup } from '../types';
 import styles from './styles.module.scss';

@@ -1,8 +1,8 @@
 import cn from 'classnames';
 
-import { InfoFilledSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { InfoFilledSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { LinkProps } from '@snack-uikit/link';
 import { Typography } from '@snack-uikit/typography';

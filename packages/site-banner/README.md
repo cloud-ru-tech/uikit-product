@@ -1,7 +1,7 @@
 # Site Banner
 
 ## Installation
-`npm i @sbercloud/uikit-product-site-banner`
+`npm i @cloud-ru/uikit-product-site-banner`
 
 [Changelog](./CHANGELOG.md)
 

@@ -2,8 +2,8 @@ import cn from 'classnames';
 import React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
-import { NumberFormatter } from '@sbercloud/uikit-product-localization';
-import { error, extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { NumberFormatter } from '@cloud-ru/uikit-product-localization';
+import { error, extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { themeVars } from '@snack-uikit/figma-tokens';
 
 import styles from './styles.module.scss';

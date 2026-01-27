@@ -1,9 +1,9 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useMemo } from 'react';
 
-import { CardMarketplaceProps } from '@sbercloud/uikit-product-site-cards';
-import { SectionMarketplaceCarousel, SectionMarketplaceCarouselProps } from '@sbercloud/uikit-product-site-section';
-import { LayoutType } from '@sbercloud/uikit-product-utils';
+import { CardMarketplaceProps } from '@cloud-ru/uikit-product-site-cards';
+import { SectionMarketplaceCarousel, SectionMarketplaceCarouselProps } from '@cloud-ru/uikit-product-site-section';
+import { LayoutType } from '@cloud-ru/uikit-product-utils';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

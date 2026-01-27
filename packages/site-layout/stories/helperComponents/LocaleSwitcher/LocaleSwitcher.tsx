@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 
-import { InternetSVG } from '@sbercloud/uikit-product-icons';
+import { InternetSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Droplist } from '@snack-uikit/list';
 

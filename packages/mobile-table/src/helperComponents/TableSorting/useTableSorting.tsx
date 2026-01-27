@@ -1,9 +1,9 @@
 import { Header, SortingState, Table } from '@tanstack/react-table';
 import { ReactNode, useCallback, useMemo } from 'react';
 
-import { ArrowDownSVG, ArrowUpSVG, UpdateSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { MobileDroplistProps, SelectionSingleState } from '@sbercloud/uikit-product-mobile-dropdown';
+import { ArrowDownSVG, ArrowUpSVG, UpdateSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { MobileDroplistProps, SelectionSingleState } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { ColumnDefinition } from '@snack-uikit/table';
 
 import styles from './styles.module.scss';

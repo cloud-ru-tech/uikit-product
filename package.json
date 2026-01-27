@@ -1,10 +1,10 @@
 {
   "name": "uikit-product",
   "description": "Cloud.ru Product Uikit",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git"
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git"
   },
   "license": "Apache-2.0",
   "scripts": {
@@ -32,7 +32,6 @@
     "test:e2e:firefox": "playwright test --project=firefox --pass-with-no-tests",
     "test:local": "cross-env TEST_LOCAL=true playwright test --ui",
     "test:unit": "ts-node scripts/run-unit-tests",
-    "transform:scope": "ts-node scripts/format-package-prefix && ts-node scripts/format-repo-urls",
     "install:themes": "ts-node scripts/install-additional-themes"
   },
   "devDependencies": {
@@ -138,8 +137,7 @@
   "pnpm": {
     "overrides": {
       "react": "18.2.0",
-      "react-dom": "18.2.0",
-      "xlsx": "https://pkg.sbercloud.tech/artifactory/api/npm/proxies-sheetjs/xlsx-0.20.3/xlsx-0.20.3.tgz"
+      "react-dom": "18.2.0"
     }
   }
 }

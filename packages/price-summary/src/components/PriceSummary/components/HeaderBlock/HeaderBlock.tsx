@@ -1,4 +1,4 @@
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { PromoTag, PromoTagProps } from '@snack-uikit/promo-tag';
 import { Typography } from '@snack-uikit/typography';
 

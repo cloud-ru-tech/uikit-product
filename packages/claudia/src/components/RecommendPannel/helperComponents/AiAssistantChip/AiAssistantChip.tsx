@@ -1,7 +1,7 @@
 import { forwardRef, MouseEventHandler, RefObject } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { LAYOUT_TYPE, LayoutType } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { LAYOUT_TYPE, LayoutType } from '@cloud-ru/uikit-product-utils';
 import { Link } from '@snack-uikit/link';
 import { Tooltip } from '@snack-uikit/tooltip';
 import { Typography } from '@snack-uikit/typography';

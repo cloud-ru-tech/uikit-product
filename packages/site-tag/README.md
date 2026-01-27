@@ -1,7 +1,7 @@
 # Site Tag
 
 ## Installation
-`npm i @sbercloud/uikit-product-site-tag`
+`npm i @cloud-ru/uikit-product-site-tag`
 
 [Changelog](./CHANGELOG.md)
 

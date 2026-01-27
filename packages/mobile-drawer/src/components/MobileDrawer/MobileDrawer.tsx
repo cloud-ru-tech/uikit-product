@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { MobileTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
+import { MobileTooltipProps } from '@cloud-ru/uikit-product-mobile-tooltip';
 import {
   ButtonFilled,
   ButtonFilledProps,

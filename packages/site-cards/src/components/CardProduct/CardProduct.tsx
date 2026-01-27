@@ -1,8 +1,8 @@
 import { AnchorHTMLAttributes } from 'react';
 
-import { ArrowLinksSVG } from '@sbercloud/uikit-product-icons';
-import { TagSpecial, TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { ArrowLinksSVG } from '@cloud-ru/uikit-product-icons';
+import { TagSpecial, TagSpecialProps } from '@cloud-ru/uikit-product-site-tag';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Card, CardProps } from '@snack-uikit/card';
 import { TruncateString } from '@snack-uikit/truncate-string';

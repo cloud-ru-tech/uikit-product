@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-mobile-toaster",
+  "name": "@cloud-ru/uikit-product-mobile-toaster",
   "title": "Mobile Toaster",
   "version": "0.1.36",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/mobile-toaster",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/mobile-toaster",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/mobile-toaster"
   },
   "author": {
@@ -36,8 +36,8 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "16.2.0",
-    "@sbercloud/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-icons": "16.2.0",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/link": "0.17.9",
     "@snack-uikit/loaders": "0.9.8",
     "@snack-uikit/toaster": "0.11.14",
@@ -45,5 +45,8 @@
     "@snack-uikit/utils": "3.10.1",
     "classnames": "2.5.1",
     "react-toastify": "10.0.6"
+  },
+  "peerDependencies": {
+    "@cloud-ru/uikit-product-locale": "*"
   }
 }

@@ -1,9 +1,9 @@
 import { ReactNode, useMemo, useState } from 'react';
 
-import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
-import { AdaptiveDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
-import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { ChevronDownSVG, ChevronUpSVG } from '@cloud-ru/uikit-product-icons';
+import { AdaptiveDroplist } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { DroplistProps } from '@snack-uikit/list';
 import { Typography } from '@snack-uikit/typography';
 

@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { CardMedia, CardMediaProps } from '@sbercloud/uikit-product-site-cards';
+import { CardMedia, CardMediaProps } from '@cloud-ru/uikit-product-site-cards';
 
 import { LimitedSectionCarouselProps, SectionCarousel } from '../../helperComponents';
 import { getCarouselProps } from './utils';

@@ -1,4 +1,4 @@
-import { MobileDrawerCustom, MobileDrawerCustomProps } from '@sbercloud/uikit-product-mobile-drawer';
+import { MobileDrawerCustom, MobileDrawerCustomProps } from '@cloud-ru/uikit-product-mobile-drawer';
 import { WithSupportProps } from '@snack-uikit/utils';
 
 import { MODE, SIZE } from '../../constants';

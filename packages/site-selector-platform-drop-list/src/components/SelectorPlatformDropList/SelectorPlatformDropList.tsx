@@ -1,7 +1,7 @@
 import { ReactNode, useMemo } from 'react';
 
-import { CloudSVG } from '@sbercloud/uikit-product-icons';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { CloudSVG } from '@cloud-ru/uikit-product-icons';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 import { SelectorPlatformDropListPrivate } from '../../helperComponents';
 import { Item, MultipleSelectorPlatformDropListProps, SingleSelectorPlatformDropListProps } from '../../types';

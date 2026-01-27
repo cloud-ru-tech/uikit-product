@@ -1,7 +1,7 @@
 # Markdown
 
 ## Installation
-`npm i @sbercloud/uikit-product-markdown`
+`npm i @cloud-ru/uikit-product-markdown`
 
 [Changelog](./CHANGELOG.md)
 

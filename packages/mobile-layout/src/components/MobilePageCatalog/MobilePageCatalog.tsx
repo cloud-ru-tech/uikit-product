@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { PropsWithChildren } from 'react';
 
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 import { ActionsProps, Headline, HeadlineProps, MobileActions } from '../../helperComponents';
 import styles from './styles.module.scss';

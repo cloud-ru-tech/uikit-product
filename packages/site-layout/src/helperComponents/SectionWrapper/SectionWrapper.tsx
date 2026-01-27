@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { forwardRef, ReactNode } from 'react';
 
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 import styles from './styles.module.scss';
 

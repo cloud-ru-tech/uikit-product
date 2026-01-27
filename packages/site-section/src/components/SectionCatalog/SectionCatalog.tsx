@@ -1,9 +1,9 @@
 import cn from 'classnames';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { CardProduct, CardProductProps } from '@sbercloud/uikit-product-site-cards';
-import { Grid } from '@sbercloud/uikit-product-site-grid';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { CardProduct, CardProductProps } from '@cloud-ru/uikit-product-site-cards';
+import { Grid } from '@cloud-ru/uikit-product-site-grid';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Tabs } from '@snack-uikit/tabs';
 
 import { SectionCatalogFooter, SectionCatalogFooterProps } from '../../helperComponents';

@@ -1,7 +1,7 @@
 # Load Status
 
 ## Installation
-`npm i @sbercloud/uikit-product-load-status`
+`npm i @cloud-ru/uikit-product-load-status`
 
 [Changelog](./CHANGELOG.md)
 

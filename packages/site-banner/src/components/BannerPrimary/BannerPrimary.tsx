@@ -1,5 +1,5 @@
-import { TagSpecial, TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
-import { LAYOUT_TYPE, LayoutType } from '@sbercloud/uikit-product-utils';
+import { TagSpecial, TagSpecialProps } from '@cloud-ru/uikit-product-site-tag';
+import { LAYOUT_TYPE, LayoutType } from '@cloud-ru/uikit-product-utils';
 import { PromoTag } from '@snack-uikit/promo-tag';
 
 import { BannerCommon, BannerCommonProps } from '../../helperComponents/BannerCommon';

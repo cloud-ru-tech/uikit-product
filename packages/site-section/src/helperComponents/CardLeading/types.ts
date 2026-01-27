@@ -1,4 +1,4 @@
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 export type CardLeadingItem = WithSupportProps<{
   /** Заголовок карточки, значение */

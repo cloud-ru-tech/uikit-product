@@ -1,4 +1,4 @@
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';

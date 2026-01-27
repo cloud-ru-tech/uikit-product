@@ -1,7 +1,7 @@
 # Mobile Carousel
 
 ## Installation
-`npm i @sbercloud/uikit-product-mobile-carousel`
+`npm i @cloud-ru/uikit-product-mobile-carousel`
 
 [Changelog](./CHANGELOG.md)
 

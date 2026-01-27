@@ -1,7 +1,7 @@
 import { ReactNode, useCallback, useRef } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { MobileDropdown } from '@sbercloud/uikit-product-mobile-dropdown';
+import { MobileDropdown } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { useValueControl } from '@snack-uikit/utils';
 
 import { CHIP_CHOICE_TEST_IDS, SIZE } from '../../../constants';

@@ -1,4 +1,4 @@
-import { CSS_BREAKPOINTS, WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { CSS_BREAKPOINTS, WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 import styles from './styles.module.scss';
 

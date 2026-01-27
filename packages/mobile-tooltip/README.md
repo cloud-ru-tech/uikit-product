@@ -1,7 +1,7 @@
 # Mobile Tooltip
 
 ## Installation
-`npm i @sbercloud/uikit-product-mobile-tooltip`
+`npm i @cloud-ru/uikit-product-mobile-tooltip`
 
 [Changelog](./CHANGELOG.md)
 

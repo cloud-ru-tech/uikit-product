@@ -1,8 +1,8 @@
 import { Children, isValidElement, ReactNode, useMemo, useState } from 'react';
 
-import { ButtonDropdown, ButtonDropdownProps } from '@sbercloud/uikit-product-button-predefined';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { ButtonDropdown, ButtonDropdownProps } from '@cloud-ru/uikit-product-button-predefined';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 import { checkExceeded } from '../../utils';
 import { QuotaCardProps } from '../QuotaCard';

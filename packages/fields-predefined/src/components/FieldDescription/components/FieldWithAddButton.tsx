@@ -1,8 +1,8 @@
 import { RefObject, useEffect, useState } from 'react';
 
-import { PlusSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { FieldTextAreaProps } from '@sbercloud/uikit-product-mobile-fields';
+import { PlusSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { FieldTextAreaProps } from '@cloud-ru/uikit-product-mobile-fields';
 import { ButtonFunction } from '@snack-uikit/button';
 
 export function FieldWithAddButton({

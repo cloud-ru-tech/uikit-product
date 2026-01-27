@@ -1,4 +1,4 @@
-import { ArrowUpSVG } from '@sbercloud/uikit-product-icons';
+import { ArrowUpSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonTonal } from '@snack-uikit/button';
 import { Tooltip } from '@snack-uikit/tooltip';
 

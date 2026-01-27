@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Favorite } from '@snack-uikit/toggles';
 
 import styles from './styles.module.scss';

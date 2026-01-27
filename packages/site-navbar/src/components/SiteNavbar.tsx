@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Divider } from '@snack-uikit/divider';
 
 import { NavbarItem, NavbarItemProps } from '../helperComponents';

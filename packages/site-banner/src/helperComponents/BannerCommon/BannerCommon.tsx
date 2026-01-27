@@ -6,10 +6,10 @@ import {
   ButtonPromoOutline,
   ButtonPromoOutlineProps,
   ButtonPromoProps,
-} from '@sbercloud/uikit-product-button-predefined';
-import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { Erid, EridProps } from '@sbercloud/uikit-product-site-tag';
-import { WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+} from '@cloud-ru/uikit-product-button-predefined';
+import { RichText } from '@cloud-ru/uikit-product-site-rich-text';
+import { Erid, EridProps } from '@cloud-ru/uikit-product-site-tag';
+import { WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import { ColorWrapper, ColorWrapperProps } from '../ColorWrapper';

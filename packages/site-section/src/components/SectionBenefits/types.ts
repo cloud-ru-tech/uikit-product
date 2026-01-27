@@ -1,4 +1,4 @@
-import { CardBasicProps, CardInfoProps, CardProductProps } from '@sbercloud/uikit-product-site-cards';
+import { CardBasicProps, CardInfoProps, CardProductProps } from '@cloud-ru/uikit-product-site-cards';
 
 import { SectionBasicProps } from '../SectionBasic';
 

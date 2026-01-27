@@ -1,7 +1,7 @@
 import { MouseEventHandler } from 'react';
 
-import { BannerPrimary } from '@sbercloud/uikit-product-site-banner';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { BannerPrimary } from '@cloud-ru/uikit-product-site-banner';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 export type FreeCoursesAndCertificationProps = WithLayoutType<{
   href?: string;

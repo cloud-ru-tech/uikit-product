@@ -2,10 +2,10 @@ import cn from 'classnames';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { CrossSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { MobileDroplist, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
-import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
+import { CrossSVG, PlusSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { MobileDroplist, MobileDroplistProps } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { MobileTooltip } from '@cloud-ru/uikit-product-mobile-tooltip';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';

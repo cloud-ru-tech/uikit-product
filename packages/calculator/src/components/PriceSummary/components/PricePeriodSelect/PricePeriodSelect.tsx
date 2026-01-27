@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
-import { AdaptiveDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
+import { ChevronDownSVG, ChevronUpSVG } from '@cloud-ru/uikit-product-icons';
+import { AdaptiveDroplist } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Tooltip } from '@snack-uikit/tooltip';
 

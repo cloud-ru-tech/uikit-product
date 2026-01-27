@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
-import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Spinner } from '@snack-uikit/loaders';
 import { Popover } from '@snack-uikit/popover';
 import { Typography } from '@snack-uikit/typography';

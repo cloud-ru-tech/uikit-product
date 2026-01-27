@@ -1,4 +1,4 @@
-import { ChevronLeftSVG, ChevronRightSVG } from '@sbercloud/uikit-product-icons';
+import { ChevronLeftSVG, ChevronRightSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonOutline } from '@snack-uikit/button';
 
 import styles from './styles.module.scss';

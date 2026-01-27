@@ -1,7 +1,7 @@
 # Mobile Dropdown
 
 ## Installation
-`npm i @sbercloud/uikit-product-mobile-dropdown`
+`npm i @cloud-ru/uikit-product-mobile-dropdown`
 
 [Changelog](./CHANGELOG.md)
 

@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-charts",
+  "name": "@cloud-ru/uikit-product-charts",
   "title": "React Charts",
   "version": "0.13.19",
   "sideEffects": [
@@ -21,10 +21,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/charts",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/charts",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/charts"
   },
   "author": {
@@ -38,8 +38,8 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/ft-formatters": "1.0.1",
-    "@sbercloud/uikit-product-localization": "0.13.14",
-    "@sbercloud/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-localization": "0.13.14",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/divider": "3.2.3",
     "@snack-uikit/link": "0.15.13",
     "@snack-uikit/scroll": "0.9.3",

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps } from '@cloud-ru/uikit-product-utils';
 
 import styles from './styles.module.scss';
 

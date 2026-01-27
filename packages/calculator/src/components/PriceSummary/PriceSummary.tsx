@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import { useDeferredValue, useMemo, useRef } from 'react';
 
-import { PlusSVG } from '@sbercloud/uikit-product-icons';
-import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
+import { PlusSVG } from '@cloud-ru/uikit-product-icons';
+import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled } from '@snack-uikit/button';
 import { Scroll } from '@snack-uikit/scroll';
 import { Tag } from '@snack-uikit/tag';

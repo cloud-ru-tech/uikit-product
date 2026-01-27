@@ -1,4 +1,4 @@
-import { ArrowLinksSVG } from '@sbercloud/uikit-product-icons';
+import { ArrowLinksSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 import { Link } from '@snack-uikit/link';
 

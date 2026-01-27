@@ -1,10 +1,10 @@
 import cn from 'classnames';
 import { useState } from 'react';
 
-import { ChevronRightSVG, KebabSVG } from '@sbercloud/uikit-product-icons';
-import { MobileDropdown, MobileDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
-import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
-import { PageFormProps } from '@sbercloud/uikit-product-page-layout';
+import { ChevronRightSVG, KebabSVG } from '@cloud-ru/uikit-product-icons';
+import { MobileDropdown, MobileDroplist } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
+import { PageFormProps } from '@cloud-ru/uikit-product-page-layout';
 import { ButtonFilled, ButtonFunction, ButtonOutline, ButtonSimple } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
 import { extractSupportProps, ValueOf } from '@snack-uikit/utils';

@@ -1,7 +1,7 @@
 # Title Clickable
 
 ## Installation
-`npm i @sbercloud/uikit-product-title-clickable`
+`npm i @cloud-ru/uikit-product-title-clickable`
 
 [Changelog](./CHANGELOG.md)
 

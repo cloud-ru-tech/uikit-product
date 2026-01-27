@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { KeyboardEventHandler, ReactNode } from 'react';
 
-import { extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Switch } from '@snack-uikit/toggles';
 import { Tooltip } from '@snack-uikit/tooltip';
 

@@ -1,7 +1,7 @@
 import cn from 'classnames';
 
-import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { RichText } from '@cloud-ru/uikit-product-site-rich-text';
+import { WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Typography, TypographyProps } from '@snack-uikit/typography';
 
 import { BenefitItem, BenefitItemProps } from '../../helperComponents';

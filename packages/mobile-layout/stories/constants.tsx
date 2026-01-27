@@ -1,4 +1,4 @@
-import * as Icons from '@sbercloud/uikit-product-icons';
+import * as Icons from '@cloud-ru/uikit-product-icons';
 
 import { SidebarSelectProps } from '../src/helperComponents';
 

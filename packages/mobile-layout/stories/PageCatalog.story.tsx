@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { PlaceholderSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
-import { QuotaCard } from '@sbercloud/uikit-product-quota';
-import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
+import { PlaceholderSVG, PlusSVG } from '@cloud-ru/uikit-product-icons';
+import { QuotaCard } from '@cloud-ru/uikit-product-quota';
+import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

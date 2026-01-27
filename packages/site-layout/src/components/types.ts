@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 export type LayoutProps = WithSupportProps<{
   /** Слот под основной контент, рекомендуется использовать helper компоненты Layout.Header, Layout.Footer, etc. */

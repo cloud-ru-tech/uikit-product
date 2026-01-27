@@ -1,5 +1,5 @@
-import { CrossSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { CrossSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { InfoBlock } from '@snack-uikit/info-block';
 
 import { ReleaseNotesModalProps } from '../../types';

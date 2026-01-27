@@ -1,7 +1,7 @@
 import { AnchorHTMLAttributes, MouseEvent } from 'react';
 
-import { WatchSVG } from '@sbercloud/uikit-product-icons';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { WatchSVG } from '@cloud-ru/uikit-product-icons';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Tag, TagProps } from '@snack-uikit/tag';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';

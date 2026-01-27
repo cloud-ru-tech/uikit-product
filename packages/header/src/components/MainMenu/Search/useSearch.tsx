@@ -1,7 +1,7 @@
 import Fuse from 'fuse.js';
 import { useMemo, useState } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 
 import { InnerLink, LinksGroup } from '../types';
 import { SearchFunction, SearchProps } from './types';

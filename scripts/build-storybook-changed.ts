@@ -13,7 +13,7 @@ const prepareIconsPackage = (needToCompileIcons: boolean) => {
 
   if (!iconsAlreadyCompiled && needToCompileIcons) {
     logInfo('Icons package is changed. Compiling...');
-    shell.exec('pnpm -F @sbercloud/uikit-product-icons run compile');
+    shell.exec('pnpm -F @cloud-ru/uikit-product-icons run compile');
 
     return undefined;
   }

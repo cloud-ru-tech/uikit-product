@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { ReactNode } from 'react';
 
-import { MobileQuestionTooltip, MobileQuestionTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
+import { MobileQuestionTooltip, MobileQuestionTooltipProps } from '@cloud-ru/uikit-product-mobile-tooltip';
 import { Typography } from '@snack-uikit/typography';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 

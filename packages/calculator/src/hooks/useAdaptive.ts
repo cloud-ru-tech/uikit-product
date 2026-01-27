@@ -1,4 +1,4 @@
-import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
+import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 
 import { useCalculatorContext } from '../contexts';
 

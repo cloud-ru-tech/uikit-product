@@ -37,7 +37,7 @@ export const packageJson = ({
   packageRootFolderName: string;
 }) => {
   const config = {
-    name: `@sbercloud/${globConfig.name}-${packageName}`,
+    name: `@cloud-ru/${globConfig.name}-${packageName}`,
     title: `${packageTitle}`,
     version: '0.0.0',
     sideEffects: ['*.css', '*.woff', '*.woff2'],
@@ -97,7 +97,7 @@ export const readme = ({
   const readmeContent = `# ${packageTitle}
 
 ## Installation
-\`pnpm add @sbercloud/${globConfig.name}-${packageName}\`
+\`pnpm add @cloud-ru/${globConfig.name}-${packageName}\`
 
 [Changelog](./CHANGELOG.md)
 

@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import { ExitSVG } from '@sbercloud/uikit-product-icons';
+import { ExitSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 

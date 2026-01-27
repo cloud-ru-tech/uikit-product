@@ -18,7 +18,7 @@ import {
   SnatSVG,
   SparkSVG,
   TrinoSVG,
-} from '@sbercloud/uikit-product-icons';
+} from '@cloud-ru/uikit-product-icons';
 
 import { PLATFORM } from '../../../constants';
 import { CatalogConfig } from '../../../types';

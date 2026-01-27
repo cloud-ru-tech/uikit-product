@@ -1,6 +1,6 @@
 import { ReactNode, useState } from 'react';
 
-import { MinusSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
+import { MinusSVG, PlusSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 import { InputPrivate } from '@snack-uikit/input-private';
 

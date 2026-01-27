@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { MobileDrawerCustom } from '@sbercloud/uikit-product-mobile-drawer';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { MobileDrawerCustom } from '@cloud-ru/uikit-product-mobile-drawer';
 import { Avatar } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { BaseItemProps, Droplist, List, ListProps } from '@snack-uikit/list';

@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
-import { HomeOutlineInterfaceSVG, RefreshInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { HomeOutlineInterfaceSVG, RefreshInterfaceSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { isBrowser } from '@snack-uikit/utils';
 
 import { ErrorType } from './constants';

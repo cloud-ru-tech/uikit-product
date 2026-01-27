@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-price-summary",
+  "name": "@cloud-ru/uikit-product-price-summary",
   "title": "Price Summary",
   "version": "0.5.15",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/price-summary",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/price-summary",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/price-summary"
   },
   "author": {
@@ -37,10 +37,10 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/ft-formatters": "1.0.1",
-    "@sbercloud/uikit-product-button-predefined": "0.7.16",
-    "@sbercloud/uikit-product-icons": "16.2.0",
-    "@sbercloud/uikit-product-mobile-tooltip": "0.5.5",
-    "@sbercloud/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-button-predefined": "0.7.16",
+    "@cloud-ru/uikit-product-icons": "16.2.0",
+    "@cloud-ru/uikit-product-mobile-tooltip": "0.5.5",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/accordion": "0.10.5",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/icons": "0.26.3",
@@ -54,6 +54,6 @@
     "classnames": "2.5.1"
   },
   "peerDependencies": {
-    "@sbercloud/uikit-product-locale": "*"
+    "@cloud-ru/uikit-product-locale": "*"
   }
 }

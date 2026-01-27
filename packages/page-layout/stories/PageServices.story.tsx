@@ -2,7 +2,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import { HeaderProps } from 'page-layout/src/components/PageSidebar/types';
 import { MouseEvent, useMemo, useState } from 'react';
 
-import { PlaceholderSVG, StarSVG } from '@sbercloud/uikit-product-icons';
+import { PlaceholderSVG, StarSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Status } from '@snack-uikit/status';
 

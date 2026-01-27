@@ -1,6 +1,6 @@
 import { MouseEventHandler } from 'react';
 
-import { ArrowRightSVG, CrossSVG } from '@sbercloud/uikit-product-icons';
+import { ArrowRightSVG, CrossSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonTonal } from '@snack-uikit/button';
 import { Card, CardProps } from '@snack-uikit/card';
 import { TruncateString } from '@snack-uikit/truncate-string';

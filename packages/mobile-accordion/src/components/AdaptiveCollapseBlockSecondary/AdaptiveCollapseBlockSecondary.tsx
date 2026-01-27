@@ -1,4 +1,4 @@
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { AccordionSecondary, CollapseBlockSecondaryProps } from '@snack-uikit/accordion';
 
 import { MobileCollapseBlockSecondary } from '../MobileCollapseBlockSecondary';

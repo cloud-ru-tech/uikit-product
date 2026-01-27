@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { forwardRef, PropsWithChildren, useEffect, useState } from 'react';
 
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { extractSupportProps } from '@snack-uikit/utils';
 
 import { Headline, HeadlineProps } from '../Headline';

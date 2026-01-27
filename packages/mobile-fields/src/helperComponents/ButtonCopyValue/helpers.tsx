@@ -1,4 +1,4 @@
-import { CheckSVG, CopySVG } from '@sbercloud/uikit-product-icons';
+import { CheckSVG, CopySVG } from '@cloud-ru/uikit-product-icons';
 import { BUTTON_SIZE, ButtonSize } from '@snack-uikit/input-private';
 
 type GetIconProps = {

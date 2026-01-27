@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { ItemId, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
+import { ItemId, MobileDroplistProps } from '@cloud-ru/uikit-product-mobile-dropdown';
 
 import { ItemContent } from '../../../helperComponents';
 import { BaseOption, ContentRenderProps, FilterOption } from '../types';

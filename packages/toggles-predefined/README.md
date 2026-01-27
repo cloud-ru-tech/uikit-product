@@ -1,7 +1,7 @@
 # Toggles
 
 ## Installation
-`npm i @sbercloud/uikit-product-toggles-predefined`
+`npm i @cloud-ru/uikit-product-toggles-predefined`
 
 [Changelog](./CHANGELOG.md)
 

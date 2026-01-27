@@ -2,7 +2,7 @@
 import { render } from 'react-dom';
 import { Id, toast, ToastOptions as RtToastOptions } from 'react-toastify';
 
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { dismissToast, openToast, toaster, ToastUpload, ToastUploadProps, updateToast } from '@snack-uikit/toaster';
 import { isBrowser } from '@snack-uikit/utils';
 

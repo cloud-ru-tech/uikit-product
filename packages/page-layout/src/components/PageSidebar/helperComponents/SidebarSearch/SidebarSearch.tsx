@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { Search } from '@snack-uikit/search';
 
 import { useSearchContext } from '../../contexts';

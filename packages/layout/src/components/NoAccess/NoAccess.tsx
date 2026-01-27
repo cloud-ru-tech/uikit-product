@@ -1,8 +1,8 @@
 import cn from 'classnames';
 
-import { LockSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { LockSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { InfoBlock } from '@snack-uikit/info-block';
 
 import { BlockBasic } from '../BlockBasic';

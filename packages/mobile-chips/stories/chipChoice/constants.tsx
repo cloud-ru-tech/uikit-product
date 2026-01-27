@@ -1,6 +1,6 @@
 import { ArgTypes } from '@storybook/react';
 
-import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
 import { Tag } from '@snack-uikit/tag';
 
 import { FilterOption } from '../../src';

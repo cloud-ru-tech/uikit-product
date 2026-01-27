@@ -1,7 +1,7 @@
 # Mobile Chips
 
 ## Installation
-`npm i @sbercloud/uikit-product-mobile-chips`
+`npm i @cloud-ru/uikit-product-mobile-chips`
 
 [Changelog](./CHANGELOG.md)
 

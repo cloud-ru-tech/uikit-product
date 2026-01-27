@@ -1,5 +1,5 @@
-import { CheckSVG, CrossSVG, PlaceholderSVG, TrashSVG } from '@sbercloud/uikit-product-icons';
-import { mobileToaster } from '@sbercloud/uikit-product-mobile-toaster';
+import { CheckSVG, CrossSVG, PlaceholderSVG, TrashSVG } from '@cloud-ru/uikit-product-icons';
+import { mobileToaster } from '@cloud-ru/uikit-product-mobile-toaster';
 
 import { FilterRow } from '../src/components/MobileToolbar/types';
 import { TEST_IDS } from '../src/constants';

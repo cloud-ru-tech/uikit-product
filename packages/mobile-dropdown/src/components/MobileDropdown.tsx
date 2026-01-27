@@ -1,7 +1,7 @@
 import { cloneElement, isValidElement, MouseEvent, PropsWithChildren, ReactNode, useMemo } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { MobileModalCustom, MobileModalCustomProps } from '@sbercloud/uikit-product-mobile-modal';
+import { MobileModalCustom, MobileModalCustomProps } from '@cloud-ru/uikit-product-mobile-modal';
 import { WithSupportProps } from '@snack-uikit/utils';
 
 import styles from './styles.module.scss';

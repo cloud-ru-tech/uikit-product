@@ -3,7 +3,7 @@ import { scaleLinear } from 'd3-scale';
 import { useCallback, useMemo, useRef, useState } from 'react';
 import { HeatMapGrid } from 'react-grid-heatmap';
 
-import { extractSupportProps, useTheme, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useTheme, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Divider } from '@snack-uikit/divider';
 import { themeVars } from '@snack-uikit/figma-tokens';
 import { useLayoutEffect } from '@snack-uikit/utils';
@@ -36,7 +36,7 @@ export function HeatMapChart({ data, options, className, ...rest }: WithSupportP
   const isLegendEnabled = legend?.show ?? true;
   const colorContainerRef = useRef<HTMLDivElement>(null);
 
-  // TODO https://jira.sbercloud.tech/browse/FF-6024
+  // TODO FF-6024
   const { theme } = useTheme();
 
   const [colorRange, setColorRange] = useState(['#ffffff', '#000000']);

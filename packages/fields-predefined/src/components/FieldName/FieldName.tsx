@@ -2,9 +2,9 @@ import mergeRefs from 'merge-refs';
 import { FocusEvent, forwardRef, useMemo, useRef, useState } from 'react';
 import { string, ValidationError } from 'yup';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { AdaptiveFieldText } from '@sbercloud/uikit-product-mobile-fields';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { AdaptiveFieldText } from '@cloud-ru/uikit-product-mobile-fields';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { runAfterRerender } from '@snack-uikit/input-private';
 
 import { useCustomFieldValidation } from '../../hooks';

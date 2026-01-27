@@ -1,9 +1,9 @@
 import { forwardRef } from 'react';
 
-import { AttachmentSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { FieldTextAreaProps } from '@sbercloud/uikit-product-mobile-fields';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { AttachmentSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { FieldTextAreaProps } from '@cloud-ru/uikit-product-mobile-fields';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { FileUpload } from '@snack-uikit/drop-zone';
 import { Scroll } from '@snack-uikit/scroll';

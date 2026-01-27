@@ -8,7 +8,7 @@ import { CSSProperties, useMemo } from 'react';
 import uPlot from 'uplot';
 import UPlotReact from 'uplot-react';
 
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 import {
   CHART_OTHER_COLORS,

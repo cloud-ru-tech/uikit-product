@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useRef, useState } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Carousel } from '@snack-uikit/carousel';
 import { WithSkeleton } from '@snack-uikit/skeleton';

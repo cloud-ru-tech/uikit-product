@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { useCallback, useState } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { VerticalMenuCloseSVG, VerticalMenuOpenSVG } from '@sbercloud/uikit-product-icons';
+import { VerticalMenuCloseSVG, VerticalMenuOpenSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonElevated } from '@snack-uikit/button';
 import { List, ListProps } from '@snack-uikit/list';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';

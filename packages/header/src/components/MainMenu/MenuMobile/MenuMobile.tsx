@@ -1,5 +1,5 @@
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { MobileDrawerCustom } from '@sbercloud/uikit-product-mobile-drawer';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { MobileDrawerCustom } from '@cloud-ru/uikit-product-mobile-drawer';
 import { isBaseItemProps, List } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';
 import { useValueControl } from '@snack-uikit/utils';

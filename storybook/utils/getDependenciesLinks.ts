@@ -24,7 +24,7 @@ export const getDependenciesLinks = () => {
       const uikitComponents = dependenciesNames.filter(dep => dep.includes(repositoryName));
 
       uikitComponents.forEach(component => {
-        const name = component.replace('@sbercloud/uikit-product-', '');
+        const name = component.replace('@cloud-ru/uikit-product-', '');
 
         links[pkgName] ??= [];
         links[pkgName].push(name);

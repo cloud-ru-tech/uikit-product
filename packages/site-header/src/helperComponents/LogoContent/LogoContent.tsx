@@ -1,4 +1,4 @@
-import { CloudFullLogoSVG } from '@sbercloud/uikit-product-icons';
+import { CloudFullLogoSVG } from '@cloud-ru/uikit-product-icons';
 import { Typography } from '@snack-uikit/typography';
 
 import { AdditionalLogoText, Logo } from '../../components/SiteHeaderBasic';

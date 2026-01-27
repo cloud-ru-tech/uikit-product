@@ -1,7 +1,7 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
-import { EvolutionComputeSVG, PlaceholderSVG } from '@sbercloud/uikit-product-icons';
-import { TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
+import { EvolutionComputeSVG, PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
+import { TagSpecialProps } from '@cloud-ru/uikit-product-site-tag';
 import { toaster } from '@snack-uikit/toaster';
 
 import componentChangelog from '../CHANGELOG.md';

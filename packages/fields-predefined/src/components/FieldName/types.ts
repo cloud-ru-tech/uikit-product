@@ -1,7 +1,7 @@
 import { ControllerProps, FieldValues } from 'react-hook-form';
 import { StringSchema, ValidationError } from 'yup';
 
-import { FieldTextProps } from '@sbercloud/uikit-product-mobile-fields';
+import { FieldTextProps } from '@cloud-ru/uikit-product-mobile-fields';
 
 export type BaseFieldNameProps = Omit<
   FieldTextProps,

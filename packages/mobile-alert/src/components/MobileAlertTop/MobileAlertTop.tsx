@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { MouseEventHandler, ReactNode, RefObject, useCallback, useRef, useState } from 'react';
 
-import { ChevronDownSVG, ChevronUpSVG, CrossSVG } from '@sbercloud/uikit-product-icons';
+import { ChevronDownSVG, ChevronUpSVG, CrossSVG } from '@cloud-ru/uikit-product-icons';
 import { Link, LinkProps } from '@snack-uikit/link';
 import { extractSupportProps, isBrowser, useLayoutEffect, WithSupportProps } from '@snack-uikit/utils';
 

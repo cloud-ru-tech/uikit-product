@@ -1,14 +1,14 @@
 import cn from 'classnames';
 import { Fragment } from 'react';
 
-import { ButtonPromoOutline, ButtonPromoOutlineProps } from '@sbercloud/uikit-product-button-predefined';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { Layout } from '@sbercloud/uikit-product-site-layout';
-import { SiteVideo, SiteVideoProps } from '@sbercloud/uikit-product-site-media';
-import { SiteNavbar, SiteNavbarProps } from '@sbercloud/uikit-product-site-navbar';
-import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { TagSpecial, TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { ButtonPromoOutline, ButtonPromoOutlineProps } from '@cloud-ru/uikit-product-button-predefined';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { Layout } from '@cloud-ru/uikit-product-site-layout';
+import { SiteVideo, SiteVideoProps } from '@cloud-ru/uikit-product-site-media';
+import { SiteNavbar, SiteNavbarProps } from '@cloud-ru/uikit-product-site-navbar';
+import { RichText } from '@cloud-ru/uikit-product-site-rich-text';
+import { TagSpecial, TagSpecialProps } from '@cloud-ru/uikit-product-site-tag';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
 import { ButtonFilled, ButtonFilledProps, ButtonOutline, ButtonOutlineProps } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';

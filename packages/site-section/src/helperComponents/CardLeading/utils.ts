@@ -1,4 +1,4 @@
-import { LayoutType } from '@sbercloud/uikit-product-utils';
+import { LayoutType } from '@cloud-ru/uikit-product-utils';
 import { TypographyProps } from '@snack-uikit/typography';
 
 export const getValueTypographyProps = (layoutType: LayoutType): Pick<TypographyProps, 'purpose' | 'size'> => {

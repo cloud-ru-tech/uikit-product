@@ -1,7 +1,7 @@
 # Site Navbar
 
 ## Installation
-`npm i @sbercloud/uikit-product-site-navbar`
+`npm i @cloud-ru/uikit-product-site-navbar`
 
 [Changelog](./CHANGELOG.md)
 

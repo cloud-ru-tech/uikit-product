@@ -1,8 +1,8 @@
 import cn from 'classnames';
 
-import { Layout } from '@sbercloud/uikit-product-site-layout';
-import { SiteVideo } from '@sbercloud/uikit-product-site-media';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { Layout } from '@cloud-ru/uikit-product-site-layout';
+import { SiteVideo } from '@cloud-ru/uikit-product-site-media';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled, ButtonFilledProps } from '@snack-uikit/button';
 
 import { SECTION_COLORS } from '../../constants';

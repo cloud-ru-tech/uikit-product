@@ -19,8 +19,7 @@ export type ProductLocaleProviderProps<
   AT extends AdditionalTranslations,
 > = LocaleProviderProps<D> & {
   /**
-   * Общий словарь переводов из @sbercloud/spa-core/bootstrap
-   * @example import { additionalTranslationsResources } from "@sbercloud/spa-core/bootstrap"
+   * Общий словарь переводов
    */
   additionalTranslationsResources: AT;
 };

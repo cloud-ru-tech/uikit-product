@@ -1,4 +1,4 @@
-import { QuestionTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
+import { QuestionTooltipProps } from '@cloud-ru/uikit-product-mobile-tooltip';
 
 export enum PricePeriod {
   Year = 'year',

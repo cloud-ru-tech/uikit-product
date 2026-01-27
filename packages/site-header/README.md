@@ -1,7 +1,7 @@
 # Siteheader
 
 ## Installation
-`npm i @sbercloud/uikit-product-site-header`
+`npm i @cloud-ru/uikit-product-site-header`
 
 [Changelog](./CHANGELOG.md)
 

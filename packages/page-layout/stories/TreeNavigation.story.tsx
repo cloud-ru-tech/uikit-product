@@ -1,6 +1,6 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
-import { CarSVG, RocketInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { CarSVG, RocketInterfaceSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 import { TreeNodeProps } from '@snack-uikit/tree';
 

@@ -1,2 +1,2 @@
 export * from './components';
-export { useLocalStorage } from '@sbercloud/uikit-product-utils';
+export { useLocalStorage } from '@cloud-ru/uikit-product-utils';

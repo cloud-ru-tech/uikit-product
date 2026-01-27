@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useMemo } from 'react';
 
-import { AdaptiveFieldSelect } from '@sbercloud/uikit-product-mobile-fields';
+import { AdaptiveFieldSelect } from '@cloud-ru/uikit-product-mobile-fields';
 import { BaseOptionProps, FieldSelectSingleProps } from '@snack-uikit/fields';
 
 import { useCalculatorContext } from '../../../contexts';

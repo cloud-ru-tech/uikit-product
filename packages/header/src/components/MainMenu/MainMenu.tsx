@@ -1,4 +1,4 @@
-import { MainMenuSVG } from '@sbercloud/uikit-product-icons';
+import { MainMenuSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 import { useValueControl } from '@snack-uikit/utils';
 

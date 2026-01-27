@@ -1,5 +1,5 @@
-import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { RichText } from '@cloud-ru/uikit-product-site-rich-text';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';

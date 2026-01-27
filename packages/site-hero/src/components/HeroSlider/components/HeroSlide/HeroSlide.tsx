@@ -1,9 +1,9 @@
 import cn from 'classnames';
 
-import { ButtonPromo } from '@sbercloud/uikit-product-button-predefined';
-import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { Erid } from '@sbercloud/uikit-product-site-tag';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { ButtonPromo } from '@cloud-ru/uikit-product-button-predefined';
+import { RichText } from '@cloud-ru/uikit-product-site-rich-text';
+import { Erid } from '@cloud-ru/uikit-product-site-tag';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
 

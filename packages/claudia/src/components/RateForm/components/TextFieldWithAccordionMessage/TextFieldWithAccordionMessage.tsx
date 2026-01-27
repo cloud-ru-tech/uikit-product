@@ -1,7 +1,7 @@
 import { KeyboardEventHandler, useRef, useState } from 'react';
 
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
-import { ChevronUpInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { themeVars } from '@cloud-ru/figma-tokens-cloud-platform';
+import { ChevronUpInterfaceSVG } from '@cloud-ru/uikit-product-icons';
 import { Divider } from '@snack-uikit/divider';
 import { FieldTextArea } from '@snack-uikit/fields';
 import { Typography } from '@snack-uikit/typography';

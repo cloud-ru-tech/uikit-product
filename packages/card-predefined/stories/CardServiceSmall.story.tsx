@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useMemo } from 'react';
 
-import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
-import { PromoTagPredefinedProps } from '@sbercloud/uikit-product-promo-tag-predefined';
+import { PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
+import { PromoTagPredefinedProps } from '@cloud-ru/uikit-product-promo-tag-predefined';
 import { PromoTagProps } from '@snack-uikit/promo-tag';
 
 import { BADGE } from '../../../storybook/constants';

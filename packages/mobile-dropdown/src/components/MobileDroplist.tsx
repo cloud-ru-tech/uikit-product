@@ -1,6 +1,6 @@
 import { cloneElement, isValidElement, useMemo, useRef } from 'react';
 
-import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
+import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
 import { DroplistProps, List, ListProps } from '@snack-uikit/list';
 import { useValueControl } from '@snack-uikit/utils';
 

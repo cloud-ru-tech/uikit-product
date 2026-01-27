@@ -1,8 +1,8 @@
-import { copyToClipboard } from '@cloud-ru/ft-copy-to-clipboard';
 import { MouseEventHandler, useEffect, useRef, useState } from 'react';
 
-import { CheckSVG, CopySVG } from '@sbercloud/uikit-product-icons';
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { copyToClipboard } from '@cloud-ru/ft-copy-to-clipboard';
+import { CheckSVG, CopySVG } from '@cloud-ru/uikit-product-icons';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ButtonFunction, ButtonFunctionProps } from '@snack-uikit/button';
 
 export type CopyButtonProps = WithSupportProps<{

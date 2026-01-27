@@ -1,8 +1,8 @@
 import { forwardRef, useState } from 'react';
 
-import { SearchSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
+import { SearchSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
 import { ButtonElevated } from '@snack-uikit/button';
 import { List } from '@snack-uikit/list';
 import { Search } from '@snack-uikit/search';

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { LazyProductCodeEditor } from '@sbercloud/uikit-product-code-editor';
+import { LazyProductCodeEditor } from '@cloud-ru/uikit-product-code-editor';
 
 import styles from './styles.module.scss';
 

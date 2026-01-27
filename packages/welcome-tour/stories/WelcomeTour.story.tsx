@@ -82,7 +82,7 @@ function Template() {
         Some text
       </div>
       <div id='test-2' style={{ width: 400, padding: 10 }}>
-        SberCloud UIK
+        Cloud.ru UIKit
       </div>
       <div id='test-3' style={{ width: 400, padding: 10 }}>
         Welcome tour component

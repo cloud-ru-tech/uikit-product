@@ -1,4 +1,4 @@
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Dropdown, DropdownProps } from '@snack-uikit/dropdown';
 
 import { MobileDropdown, MobileDropdownProps } from '../MobileDropdown';

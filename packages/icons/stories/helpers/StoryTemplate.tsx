@@ -1,5 +1,5 @@
 import { StoryFn } from '@storybook/react';
-import React, { useCallback, useMemo, useState } from 'react';
+import { FunctionComponent, useCallback, useMemo, useState } from 'react';
 
 import { Card } from '@snack-uikit/card';
 import { FieldText } from '@snack-uikit/fields';
@@ -10,10 +10,9 @@ import { QuestionTooltip } from '@snack-uikit/tooltip';
 import { Typography } from '@snack-uikit/typography';
 
 import { generateDataTestId } from '../../utils/generateDataTestId';
-import { svgExport } from './downloader';
 import styles from './styles.module.scss';
 
-type IconDictionary = Record<string, React.FunctionComponent<{ size?: number; fill?: string; id?: string }>>;
+type IconDictionary = Record<string, FunctionComponent<{ size?: number; fill?: string; id?: string }>>;
 
 export function getTemplate(MonochromeIcons: IconDictionary, ThemedIcons?: IconDictionary): StoryFn {
   const fullCount = Object.keys(MonochromeIcons).length;
@@ -23,21 +22,13 @@ export function getTemplate(MonochromeIcons: IconDictionary, ThemedIcons?: IconD
     const [search, setSearch] = useState('');
     const [selectedIcon, setSelectedIcon] = useState<{
       iconName: string;
-      Icon: React.FunctionComponent<{ size?: number; fill?: string }>;
+      Icon: FunctionComponent<{ size?: number; fill?: string }>;
       dataAttribute: string;
     } | null>(null);
 
     const Icons = showThemed && ThemedIcons ? ThemedIcons : MonochromeIcons;
 
     const onCloseHandler = useCallback(() => setSelectedIcon(null), []);
-
-    const downloadAsPngHandler = () => {
-      const { iconName } = selectedIcon || {};
-
-      if (iconName) {
-        svgExport({ id: iconName, fileName: iconName });
-      }
-    };
 
     const filteredIcons = useMemo(
       () => Object.entries(Icons).filter(([key]) => key.toLowerCase().includes(search)),
@@ -116,7 +107,7 @@ export function getTemplate(MonochromeIcons: IconDictionary, ThemedIcons?: IconD
 
                   <FieldText
                     label='Import'
-                    value={`import { ${selectedIcon.iconName} } from '@sbercloud/uikit-product-icons';`}
+                    value={`import { ${selectedIcon.iconName} } from '@cloud-ru/uikit-product-icons';`}
                     readonly
                     inputMode='text'
                   />
@@ -125,8 +116,8 @@ export function getTemplate(MonochromeIcons: IconDictionary, ThemedIcons?: IconD
                 </div>
               }
               approveButton={{
-                label: 'download as png',
-                onClick: downloadAsPngHandler,
+                label: 'Закрыть',
+                onClick: onCloseHandler,
               }}
             />
           )}

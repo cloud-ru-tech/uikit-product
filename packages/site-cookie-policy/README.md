@@ -2,7 +2,7 @@
 
 ## Installation
 
-`pnpm add @sbercloud/uikit-product-site-cookie-policy`
+`pnpm add @cloud-ru/uikit-product-site-cookie-policy`
 
 [Changelog](./CHANGELOG.md)
 

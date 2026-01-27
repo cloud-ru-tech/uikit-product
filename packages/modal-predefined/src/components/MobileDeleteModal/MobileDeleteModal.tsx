@@ -1,8 +1,8 @@
 import { ReactNode } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { MobileModalCustom, MobileModalCustomProps } from '@sbercloud/uikit-product-mobile-modal';
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { MobileModalCustom, MobileModalCustomProps } from '@cloud-ru/uikit-product-mobile-modal';
+import { WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 
 import { TEST_IDS } from '../../constants';

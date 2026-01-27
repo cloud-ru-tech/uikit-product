@@ -1,5 +1,5 @@
-import { PlusSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { PlusSVG } from '@cloud-ru/uikit-product-icons';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { ButtonFunction } from '@snack-uikit/button';
 import { WithTooltip } from '@snack-uikit/tooltip';
 

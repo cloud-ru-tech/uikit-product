@@ -13,8 +13,8 @@ import {
   useState,
 } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
 import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
 import { FieldDecorator } from '@snack-uikit/fields';
 import { InputPrivate } from '@snack-uikit/input-private';

@@ -1,5 +1,5 @@
-import { ButtonPromoOutline } from '@sbercloud/uikit-product-button-predefined';
-import { BurgerSVG, CloseSVG } from '@sbercloud/uikit-product-icons';
+import { ButtonPromoOutline } from '@cloud-ru/uikit-product-button-predefined';
+import { BurgerSVG, CloseSVG } from '@cloud-ru/uikit-product-icons';
 
 import { Appearance } from '../../components/SiteHeaderBasic';
 import styles from './styles.module.scss';

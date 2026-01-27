@@ -1,4 +1,4 @@
-import { AlarmFilledSVG, CheckFilledSVG, CrossFilledSVG, InfoFilledSVG } from '@sbercloud/uikit-product-icons';
+import { AlarmFilledSVG, CheckFilledSVG, CrossFilledSVG, InfoFilledSVG } from '@cloud-ru/uikit-product-icons';
 
 import { ToastSystemEventAppearance } from './types';
 

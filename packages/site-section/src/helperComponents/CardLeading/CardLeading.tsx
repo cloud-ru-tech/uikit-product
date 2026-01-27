@@ -1,4 +1,4 @@
-import { extractSupportProps, WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';

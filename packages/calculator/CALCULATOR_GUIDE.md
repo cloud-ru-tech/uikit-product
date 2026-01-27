@@ -15,7 +15,7 @@
 
 ## Обзор системы
 
-Калькулятор продуктов (`@sbercloud/uikit-product-calculator`) — это система для расчета стоимости облачных продуктов. Калькулятор позволяет:
+Калькулятор продуктов (`@cloud-ru/uikit-product-calculator`) — это система для расчета стоимости облачных продуктов. Калькулятор позволяет:
 
 - Отображать каталог платформ и продуктов
 - Настраивать формы конфигурации продуктов
@@ -141,7 +141,7 @@ your-platform/
 **`platform.tsx`**
 
 ```typescript
-import { YourPlatformSVG } from '@sbercloud/uikit-product-icons';
+import { YourPlatformSVG } from '@cloud-ru/uikit-product-icons';
 import { PLATFORM } from '../../../constants';
 import { Platform } from '../../../types';
 
@@ -285,7 +285,7 @@ export const YOUR_PLATFORM_PRODUCT = {
 **`products.ts`**
 
 ```typescript
-import { YourProductSVG } from '@sbercloud/uikit-product-icons';
+import { YourProductSVG } from '@cloud-ru/uikit-product-icons';
 import { PLATFORM } from '../../../constants';
 import { CatalogConfig } from '../../../types';
 import { YOUR_PLATFORM_PRODUCT } from './constants';

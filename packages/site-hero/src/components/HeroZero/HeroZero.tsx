@@ -1,8 +1,8 @@
 import cn from 'classnames';
 
-import { Layout } from '@sbercloud/uikit-product-site-layout';
-import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { Layout } from '@cloud-ru/uikit-product-site-layout';
+import { RichText } from '@cloud-ru/uikit-product-site-rich-text';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Breadcrumbs, Item } from '@snack-uikit/breadcrumbs';
 import { ButtonFilled, ButtonFilledProps } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';

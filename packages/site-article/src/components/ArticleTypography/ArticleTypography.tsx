@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { createElement, ReactNode } from 'react';
 
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 import styles from './styles.module.scss';
 

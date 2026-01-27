@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { FieldTextAreaProps } from '@sbercloud/uikit-product-mobile-fields';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { FieldTextAreaProps } from '@cloud-ru/uikit-product-mobile-fields';
 import { Scroll } from '@snack-uikit/scroll';
 
 import { FieldSubmitButton } from '../../../../helperComponents/FieldSubmitButton';

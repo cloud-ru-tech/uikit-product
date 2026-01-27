@@ -1,4 +1,4 @@
-import { LayoutType } from '@sbercloud/uikit-product-utils';
+import { LayoutType } from '@cloud-ru/uikit-product-utils';
 
 import { CalculatorContextProvider } from '../../contexts';
 import { CalculatorType, CatalogConfig, FetcherFn, FormValues, PlatformType, ProductState, State } from '../../types';

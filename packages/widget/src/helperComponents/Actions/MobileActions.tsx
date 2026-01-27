@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react';
 
-import { KebabSVG } from '@sbercloud/uikit-product-icons';
-import { MobileDroplist, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
-import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
+import { KebabSVG } from '@cloud-ru/uikit-product-icons';
+import { MobileDroplist, MobileDroplistProps } from '@cloud-ru/uikit-product-mobile-dropdown';
+import { MobileTooltip } from '@cloud-ru/uikit-product-mobile-tooltip';
 import { ButtonOutline } from '@snack-uikit/button';
 import { useDynamicList } from '@snack-uikit/utils';
 

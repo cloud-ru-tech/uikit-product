@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { WithSkeleton } from '@snack-uikit/skeleton';
 import { TruncateString } from '@snack-uikit/truncate-string';
 

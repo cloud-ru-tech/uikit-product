@@ -1,7 +1,7 @@
 # Site Rich Text
 
 ## Installation
-`npm i @sbercloud/uikit-product-site-rich-text`
+`npm i @cloud-ru/uikit-product-site-rich-text`
 
 [Changelog](./CHANGELOG.md)
 

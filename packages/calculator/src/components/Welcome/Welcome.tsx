@@ -1,5 +1,5 @@
-import { PlusSVG } from '@sbercloud/uikit-product-icons';
-import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
+import { PlusSVG } from '@cloud-ru/uikit-product-icons';
+import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled } from '@snack-uikit/button';
 import { FieldStepper } from '@snack-uikit/fields';
 import { Typography } from '@snack-uikit/typography';

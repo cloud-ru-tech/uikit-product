@@ -1,6 +1,6 @@
 import { MouseEventHandler, useEffect, useRef, useState } from 'react';
 
-import { CheckFilledSVG, DownloadSVG, HeadphonesSVG, LinkSVG } from '@sbercloud/uikit-product-icons';
+import { CheckFilledSVG, DownloadSVG, HeadphonesSVG, LinkSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonTonal } from '@snack-uikit/button';
 import { Tooltip } from '@snack-uikit/tooltip';
 

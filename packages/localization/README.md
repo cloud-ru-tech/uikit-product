@@ -1,7 +1,7 @@
 # React Localization
 
 ## Installation
-`npm i @sbercloud/uikit-product-localization`
+`npm i @cloud-ru/uikit-product-localization`
 
 [Changelog](./CHANGELOG.md)
 

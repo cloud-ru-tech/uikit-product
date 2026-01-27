@@ -1,4 +1,4 @@
-import { ChevronDownSVG, PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { ChevronDownSVG, PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
 
 import styles from './styles.module.scss';

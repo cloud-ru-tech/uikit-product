@@ -11,10 +11,10 @@ import {
 import cn from 'classnames';
 import { useCallback, useEffect, useMemo } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
-import { MobileToolbar, MobileToolbarProps } from '@sbercloud/uikit-product-mobile-toolbar';
-import { extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { FiltersState } from '@cloud-ru/uikit-product-mobile-chips';
+import { MobileToolbar, MobileToolbarProps } from '@cloud-ru/uikit-product-mobile-toolbar';
+import { extractSupportProps } from '@cloud-ru/uikit-product-utils';
 import { SkeletonContextProvider } from '@snack-uikit/skeleton';
 import {
   getPinnedGroups,

@@ -1,7 +1,7 @@
 # Mobile Stepper
 
 ## Installation
-`npm i @sbercloud/uikit-product-mobile-stepper`
+`npm i @cloud-ru/uikit-product-mobile-stepper`
 
 [Changelog](./CHANGELOG.md)
 

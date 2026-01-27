@@ -1,7 +1,7 @@
 import { Dispatch, MouseEvent, SetStateAction } from 'react';
 
-import { QuestionSVG } from '@sbercloud/uikit-product-icons';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { QuestionSVG } from '@cloud-ru/uikit-product-icons';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { QuestionTooltip } from '@snack-uikit/tooltip';
 
 import { TooltipMobile } from '../../types';

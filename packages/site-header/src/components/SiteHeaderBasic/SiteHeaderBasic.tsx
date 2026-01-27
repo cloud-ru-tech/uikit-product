@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import { MouseEvent, ReactNode, useRef } from 'react';
 
-import { Layout } from '@sbercloud/uikit-product-site-layout';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { Layout } from '@cloud-ru/uikit-product-site-layout';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 import { ButtonBurger, LogoContent, MobileMenu } from '../../helperComponents';
 import { useHeaderPosition } from '../../hooks';

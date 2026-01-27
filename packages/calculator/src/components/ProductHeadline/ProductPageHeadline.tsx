@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
+import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 import { ButtonTonal } from '@snack-uikit/button';
 import { FieldStepper } from '@snack-uikit/fields';
 import { IconPredefined } from '@snack-uikit/icon-predefined';

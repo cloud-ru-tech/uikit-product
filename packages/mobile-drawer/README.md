@@ -1,7 +1,7 @@
 # Mobile Drawer
 
 ## Installation
-`npm i @sbercloud/uikit-product-mobile-drawer`
+`npm i @cloud-ru/uikit-product-mobile-drawer`
 
 [Changelog](./CHANGELOG.md)
 

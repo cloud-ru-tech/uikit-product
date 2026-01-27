@@ -2,19 +2,19 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-product-code-editor`
+`npm i @cloud-ru/uikit-product-code-editor`
 
 [Changelog](./CHANGELOG.md)
 
 ## Описание
 
-ProductCodeEditor - обертка над компонентом [snack-uikit/CodeEditor](https://git.sbercloud.tech/sbercloud-ui/tokens-design-system/snack-uikit/-/tree/master/packages/code-editor?ref_type=heads).
+ProductCodeEditor - обертка над компонентом [snack-uikit/CodeEditor](https://github.com/cloud-ru-tech/snack-uikit/tree/master/packages/code-editor).
 
 ## Назначение
 
 CodeEditor использует для своей работы `monaco-editor`, который передается синхронно. Если его не передать самостоятельно, то он попробует скачать его с внешнего `cdn`.
 
-`monaco-editor` и все его плагины, которые требуются в продукте, настроен в единственном месте - [container](https://git.sbercloud.tech/cp/front/container). Текущий пакет знает об этом месте и может в режиме `async` скачать `monaco-editor` и установить его для `snack-uikit/CodeEditor`
+`monaco-editor` и все его плагины, которые требуются в продукте, настроен в единственном месте - `container`. Текущий пакет знает об этом месте и может в режиме `async` скачать `monaco-editor` и установить его для `snack-uikit/CodeEditor`
 
 ## Использование
 
@@ -26,7 +26,7 @@ Async функция, которая вернет `lazy` совместимый 
 
 ```tsx
 import { Suspense, lazy } from 'react';
-import { AsyncProductCodeEditor } from '@sbercloud/uikit-product-code-editor';
+import { AsyncProductCodeEditor } from '@cloud-ru/uikit-product-code-editor';
 
 const Editor = lazy(() => AsyncProductCodeEditor());
 
@@ -46,7 +46,7 @@ const MyComponent = () => {
 Готовый пресет, который сам обернет `snack-uikit/CodeEditor` в `Suspense` и выполнит `lazy`
 
 ```tsx
-import { LazyProductCodeEditor, type LazyProductCodeEditorProps } from '@sbercloud/uikit-product-code-editor';
+import { LazyProductCodeEditor, type LazyProductCodeEditorProps } from '@cloud-ru/uikit-product-code-editor';
 
 const MyComponent = (props: LazyProductCodeEditorProps) => {
   return <LazyProductCodeEditor {...props} />;

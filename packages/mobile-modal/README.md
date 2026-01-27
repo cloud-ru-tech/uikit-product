@@ -1,7 +1,7 @@
 # Mobile Modal
 
 ## Installation
-`npm i @sbercloud/uikit-product-mobile-modal`
+`npm i @cloud-ru/uikit-product-mobile-modal`
 
 [Changelog](./CHANGELOG.md)
 

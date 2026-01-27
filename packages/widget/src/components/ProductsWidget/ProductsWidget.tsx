@@ -1,8 +1,8 @@
 import { ReactNode, useMemo } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-import { AdaptiveCarousel, CarouselProps } from '@sbercloud/uikit-product-mobile-carousel';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { AdaptiveCarousel, CarouselProps } from '@cloud-ru/uikit-product-mobile-carousel';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import { COLUMN_SIZE, MOBILE_COLUMN_SIZE, MOBILE_ROW_SIZE, ROW_SIZE } from './constants';

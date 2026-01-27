@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 
-import { MobileAccordionPrimary } from '@sbercloud/uikit-product-mobile-accordion';
+import { MobileAccordionPrimary } from '@cloud-ru/uikit-product-mobile-accordion';
 import { Divider } from '@snack-uikit/divider';
 import { Switch } from '@snack-uikit/toggles';
 

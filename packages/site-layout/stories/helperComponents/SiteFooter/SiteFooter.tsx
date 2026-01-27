@@ -1,7 +1,7 @@
 import cn from 'classnames';
 
-import { CloudFullLogoSVG } from '@sbercloud/uikit-product-icons';
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { CloudFullLogoSVG } from '@cloud-ru/uikit-product-icons';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Divider } from '@snack-uikit/divider';
 import { Typography } from '@snack-uikit/typography';
 

@@ -1,10 +1,10 @@
 import cn from 'classnames';
 import { ReactNode } from 'react';
 
-import { ButtonPromo, ButtonPromoProps } from '@sbercloud/uikit-product-button-predefined';
-import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { Erid, EridProps } from '@sbercloud/uikit-product-site-tag';
-import { LAYOUT_TYPE, LayoutType, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { ButtonPromo, ButtonPromoProps } from '@cloud-ru/uikit-product-button-predefined';
+import { RichText } from '@cloud-ru/uikit-product-site-rich-text';
+import { Erid, EridProps } from '@cloud-ru/uikit-product-site-tag';
+import { LAYOUT_TYPE, LayoutType, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Typography, TypographyProps } from '@snack-uikit/typography';
 
 import { ColorWrapper, ColorWrapperProps } from '../../helperComponents/ColorWrapper';

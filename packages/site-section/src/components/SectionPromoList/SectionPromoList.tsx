@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
 import { PromoList, PromoListProps } from '../../helperComponents';
 import { SectionBasic } from '../SectionBasic';

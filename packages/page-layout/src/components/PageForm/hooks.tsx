@@ -1,6 +1,6 @@
 import { ForwardRefExoticComponent } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
+import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { Tooltip, TooltipProps } from '@snack-uikit/tooltip';
 
 import { ButtonPrimaryVariant, ButtonSecondaryVariant } from './types';

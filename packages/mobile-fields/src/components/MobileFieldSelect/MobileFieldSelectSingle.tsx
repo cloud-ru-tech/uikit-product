@@ -14,7 +14,7 @@ import {
   useState,
 } from 'react';
 
-import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
+import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
 import { FieldDecorator } from '@snack-uikit/fields';
 import { InputPrivate } from '@snack-uikit/input-private';
 import { kindFlattenItems, List, ListProps, SelectionSingleValueType } from '@snack-uikit/list';

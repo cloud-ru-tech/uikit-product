@@ -1,6 +1,6 @@
 import { CellContext, HeaderContext } from '@tanstack/react-table';
 
-import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
+import { FiltersState } from '@cloud-ru/uikit-product-mobile-chips';
 import { Status, StatusProps } from '@snack-uikit/status';
 
 import { MobileTableProps } from '../../components';

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { CellContext, HeaderContext, RowSelectionState } from '@tanstack/react-table';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { TrashSVG } from '@sbercloud/uikit-product-icons';
+import { TrashSVG } from '@cloud-ru/uikit-product-icons';
 import { TagRow, TagRowProps } from '@snack-uikit/tag';
 import { toaster } from '@snack-uikit/toaster';
 

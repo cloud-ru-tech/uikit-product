@@ -1,7 +1,7 @@
 import debounce from 'lodash.debounce';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-import { extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Carousel } from '@snack-uikit/carousel';
 
 import { SectionBasic } from '../../components';

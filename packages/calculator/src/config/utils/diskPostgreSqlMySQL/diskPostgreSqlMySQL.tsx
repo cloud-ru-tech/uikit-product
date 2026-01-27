@@ -1,4 +1,4 @@
-import { QuestionRoundSVG } from '@sbercloud/uikit-product-icons';
+import { QuestionRoundSVG } from '@cloud-ru/uikit-product-icons';
 import { Tooltip } from '@snack-uikit/tooltip';
 import { ValueOf } from '@snack-uikit/utils';
 

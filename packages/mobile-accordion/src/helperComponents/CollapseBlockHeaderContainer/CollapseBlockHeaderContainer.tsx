@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useRef, useState } from 'react';
 
-import { ChevronDownSVG } from '@sbercloud/uikit-product-icons';
+import { ChevronDownSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 
 import { TEST_IDS } from '../../testIds';

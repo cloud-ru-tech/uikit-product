@@ -8,7 +8,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **SITE-10433:** update component site-cookie ([6471e9e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6471e9ec8830b2dbdac7b77c87c53980159626cd))
+* **SITE-10433:** update component site-cookie ([6471e9e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6471e9ec8830b2dbdac7b77c87c53980159626cd))
 
 
 
@@ -19,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **DOCDEV-2456:** addded cookie policy component ([44c003f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/44c003f613e7590f209061cf0a0f5f9f9a1b9dbf))
+* **DOCDEV-2456:** addded cookie policy component ([44c003f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/44c003f613e7590f209061cf0a0f5f9f9a1b9dbf))
 
 
 
@@ -30,4 +30,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **DOCDEV-2456:** addded cookie policy component ([a169b0b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a169b0b922ed400848ebc631b6d779fd9a43bdcd))
+* **DOCDEV-2456:** addded cookie policy component ([a169b0b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a169b0b922ed400848ebc631b6d779fd9a43bdcd))

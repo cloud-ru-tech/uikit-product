@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-product-mobile-modal",
+  "name": "@cloud-ru/uikit-product-mobile-modal",
   "title": "Mobile Modal",
   "version": "0.9.29",
   "sideEffects": [
@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/mobile-modal",
+  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/mobile-modal",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
     "directory": "packages/mobile-modal"
   },
   "author": {
@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-mobile-drawer": "0.9.26",
-    "@sbercloud/uikit-product-mobile-tooltip": "0.5.5",
-    "@sbercloud/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-mobile-drawer": "0.9.26",
+    "@cloud-ru/uikit-product-mobile-tooltip": "0.5.5",
+    "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/button": "0.19.15",
     "@snack-uikit/drawer": "0.13.2",
     "@snack-uikit/link": "0.17.9",
