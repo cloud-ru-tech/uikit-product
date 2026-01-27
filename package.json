@@ -48,6 +48,8 @@
     "@cloud-ru/ft-storybook-deps-graph-addon": "2.0.4",
     "@cloud-ru/ft-storybook-readme-addon": "2.0.5",
     "@geometricpanda/storybook-addon-badges": "2.0.5",
+    "@linaria/postcss-linaria": "6.2.0",
+    "@linaria/stylelint-config-standard-linaria": "6.2.0",
     "@playwright/test": "1.47.2",
     "@snack-uikit/alert": "0.16.21",
     "@snack-uikit/avatar": "0.8.18",

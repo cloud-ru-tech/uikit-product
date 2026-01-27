@@ -49,6 +49,12 @@ importers:
       '@geometricpanda/storybook-addon-badges':
         specifier: 2.0.5
         version: 2.0.5(@storybook/blocks@8.6.15(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(storybook@8.6.15(prettier@3.8.1)))(@storybook/components@8.6.15(storybook@8.6.15(prettier@3.8.1)))(@storybook/core-events@8.6.15(storybook@8.6.15(prettier@3.8.1)))(@storybook/manager-api@8.3.6(storybook@8.6.15(prettier@3.8.1)))(@storybook/preview-api@8.6.15(storybook@8.6.15(prettier@3.8.1)))(@storybook/theming@8.6.15(storybook@8.6.15(prettier@3.8.1)))(@storybook/types@8.6.14(storybook@8.6.15(prettier@3.8.1)))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@linaria/postcss-linaria':
+        specifier: 6.2.0
+        version: 6.2.0(postcss@8.5.6)
+      '@linaria/stylelint-config-standard-linaria':
+        specifier: 6.2.0
+        version: 6.2.0(postcss@8.5.6)
       '@playwright/test':
         specifier: 1.47.2
         version: 1.47.2
@@ -3694,6 +3700,16 @@ packages:
   '@lerna/create@8.1.2':
     resolution: {integrity: sha512-GzScCIkAW3tg3+Yn/MKCH9963bzG+zpjGz2NdfYDlYWI7p0f/SH46v1dqpPpYmZ2E/m3JK8HjTNNNL8eIm8/YQ==}
     engines: {node: '>=18.0.0'}
+
+  '@linaria/postcss-linaria@6.2.0':
+    resolution: {integrity: sha512-PvmhOZA1oGLuwq810RsusCDGs5MceRe0P+l1NjT2zO9JVvnMU7IdobItWiZdzStgobCNWkrVsEnCWcbDnFeZzg==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      postcss: ^8.4.31
+
+  '@linaria/stylelint-config-standard-linaria@6.2.0':
+    resolution: {integrity: sha512-I9lPM/PCCyhaHryXdh+92ShbwQp/6rVwbTz0dGL7hcYShGpy3DSmieTNOl1O0tv6waVg5Gpx+QUi6RvtAg0MRA==}
+    engines: {node: '>=16.0.0'}
 
   '@lit-labs/react@1.2.1':
     resolution: {integrity: sha512-DiZdJYFU0tBbdQkfwwRSwYyI/mcWkg3sWesKRsHUd4G+NekTmmeq9fzsurvcKTNVa0comNljwtg4Hvi1ds3V+A==}
@@ -12249,6 +12265,11 @@ packages:
     peerDependencies:
       stylelint: ^14.10.0
 
+  stylelint-config-standard@28.0.0:
+    resolution: {integrity: sha512-q/StuowDdDmFCravzGHAwgS9pjX0bdOQUEBBDIkIWsQuYGgYz/xsO8CM6eepmIQ1fc5bKdDVimlJZ6MoOUcJ5Q==}
+    peerDependencies:
+      stylelint: ^14.11.0
+
   stylelint-scss@4.7.0:
     resolution: {integrity: sha512-TSUgIeS0H3jqDZnby1UO1Qv3poi1N8wUYIJY6D1tuUq2MN3lwp/rITVo0wD+1SWTmRm0tNmGO0b7nKInnqF6Hg==}
     peerDependencies:
@@ -14843,6 +14864,25 @@ snapshots:
       - encoding
       - supports-color
       - typescript
+
+  '@linaria/postcss-linaria@6.2.0(postcss@8.5.6)':
+    dependencies:
+      '@babel/generator': 7.28.5
+      '@babel/parser': 7.28.5
+      '@babel/traverse': 7.28.5
+      postcss: 8.5.6
+      stylelint: 14.16.1
+    transitivePeerDependencies:
+      - supports-color
+
+  '@linaria/stylelint-config-standard-linaria@6.2.0(postcss@8.5.6)':
+    dependencies:
+      '@linaria/postcss-linaria': 6.2.0(postcss@8.5.6)
+      stylelint: 14.16.1
+      stylelint-config-standard: 28.0.0(stylelint@14.16.1)
+    transitivePeerDependencies:
+      - postcss
+      - supports-color
 
   '@lit-labs/react@1.2.1': {}
 
@@ -27482,6 +27522,11 @@ snapshots:
   stylelint-config-recommended@9.0.0(stylelint@14.16.1):
     dependencies:
       stylelint: 14.16.1
+
+  stylelint-config-standard@28.0.0(stylelint@14.16.1):
+    dependencies:
+      stylelint: 14.16.1
+      stylelint-config-recommended: 9.0.0(stylelint@14.16.1)
 
   stylelint-scss@4.7.0(stylelint@14.16.1):
     dependencies:
