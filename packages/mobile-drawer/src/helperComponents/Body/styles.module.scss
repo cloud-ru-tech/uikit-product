@@ -1,4 +1,4 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
 
 .drawerBody {
   @include styles-tokens-drawer.composite-var(styles-tokens-drawer.$drawer-body);

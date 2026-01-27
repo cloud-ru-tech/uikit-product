@@ -1,19 +1,17 @@
 export enum Themes {
-  Purple = 'purple',
-  PurpleDark = 'purpleDark',
   Green = 'green',
   GreenDark = 'greenDark',
+  Purple = 'purple',
+  PurpleDark = 'purpleDark',
 }
 
 export enum Brand {
   Cloud = 'Cloud',
   CloudDark = 'CloudDark',
-  MLSpace = 'MLSpace',
-  MLSpaceDark = 'MLSpaceDark',
+  Gitverse = 'Gitverse',
+  GitverseDark = 'GitverseDark',
   Site = 'Site',
   SiteDark = 'SiteDark',
-  Admin = 'Admin',
-  AdminDark = 'AdminDark',
   GigaId = 'GigaId',
   GigaIdDark = 'GigaIdDark',
 }

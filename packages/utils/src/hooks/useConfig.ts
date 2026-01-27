@@ -1,10 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-import AdminBrandThemes from '@sbercloud/figma-tokens-admin/build/css/brand.module.css';
-import CloudBrandThemes from '@sbercloud/figma-tokens-cloud-platform/build/css/brand.module.css';
-import GigaIdBrandThemes from '@sbercloud/figma-tokens-giga-id/build/css/brand.module.css';
-import MLSpaceBrandThemes from '@sbercloud/figma-tokens-mlspace/build/css/brand.module.css';
-import SiteBrandThemes from '@sbercloud/figma-tokens-web/build/css/brand.module.css';
+import CloudBrandThemes from '@cloud-ru/figma-tokens-cloud-platform/build/css/brand.module.css';
+import GigaIdBrandThemes from '@cloud-ru/figma-tokens-giga-id/build/css/brand.module.css';
+import GitverseBrandThemes from '@cloud-ru/figma-tokens-gitverse/build/css/brand.module.css';
+import SiteBrandThemes from '@cloud-ru/figma-tokens-web/build/css/brand.module.css';
 import { isBrowser, useLayoutEffect } from '@snack-uikit/utils';
 
 import { POST_MESSAGE_KEY } from '../constants/environment';
@@ -21,17 +20,15 @@ type UseConfigProps = {
 const themeMap = {
   [Themes.Green]: CloudBrandThemes.light,
   [Themes.GreenDark]: CloudBrandThemes.dark,
-  [Themes.Purple]: MLSpaceBrandThemes.light,
-  [Themes.PurpleDark]: MLSpaceBrandThemes.dark,
+  [Themes.Purple]: GitverseBrandThemes.light,
+  [Themes.PurpleDark]: GitverseBrandThemes.dark,
 };
 
 const brandMap = {
   [Brand.Cloud]: CloudBrandThemes.light,
   [Brand.CloudDark]: CloudBrandThemes.dark,
-  [Brand.MLSpace]: MLSpaceBrandThemes.light,
-  [Brand.MLSpaceDark]: MLSpaceBrandThemes.dark,
-  [Brand.Admin]: AdminBrandThemes.light,
-  [Brand.AdminDark]: AdminBrandThemes.dark,
+  [Brand.Gitverse]: GitverseBrandThemes.light,
+  [Brand.GitverseDark]: GitverseBrandThemes.dark,
   [Brand.Site]: SiteBrandThemes.light,
   [Brand.SiteDark]: SiteBrandThemes.dark,
   [Brand.GigaId]: GigaIdBrandThemes.light,

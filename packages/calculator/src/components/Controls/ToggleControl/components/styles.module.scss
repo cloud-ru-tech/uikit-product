@@ -1,5 +1,5 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as element;
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-accordion' as accordion;
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as element;
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-accordion' as accordion;
 
 .description {
   @include accordion.composite-var(accordion.$sans-body-m);

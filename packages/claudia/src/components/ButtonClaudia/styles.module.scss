@@ -1,6 +1,6 @@
-@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-button-buttonFilled' as buttonFilled;
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
-@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element';
+@use '@cloud-ru/figma-tokens-web/build/scss/components/styles-tokens-button-buttonFilled' as buttonFilled;
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+@use '@cloud-ru/figma-tokens-web/build/scss/components/styles-tokens-element';
 
 $sizes: 'xs', 's', 'm', 'l';
 $variants: 'label-only', 'icon-only', 'icon-after';

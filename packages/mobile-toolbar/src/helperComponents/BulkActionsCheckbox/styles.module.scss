@@ -1,5 +1,5 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toolbar' as toolbar;
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as element;
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toolbar' as toolbar;
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as element;
 
 .checkboxWrapper {
   @include toolbar.composite-var(toolbar.$toolbar-checkbox);

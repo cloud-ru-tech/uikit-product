@@ -1,4 +1,4 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 .description {
   @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-m);

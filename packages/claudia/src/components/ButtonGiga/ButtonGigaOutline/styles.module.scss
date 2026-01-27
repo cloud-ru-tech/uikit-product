@@ -1,8 +1,8 @@
 /* stylelint-disable color-no-hex */
 // TODO: refactor styles to use tokens
-@use '@sbercloud/figma-tokens-giga-id/build/scss/components/styles-tokens-button-buttonOutline' as buttonOutline;
-@use '@sbercloud/figma-tokens-giga-id/build/scss/styles-theme-variables' as stv;
-@use '@sbercloud/figma-tokens-giga-id/build/scss/components/styles-tokens-element';
+@use '@cloud-ru/figma-tokens-giga-id/build/scss/components/styles-tokens-button-buttonOutline' as buttonOutline;
+@use '@cloud-ru/figma-tokens-giga-id/build/scss/styles-theme-variables' as stv;
+@use '@cloud-ru/figma-tokens-giga-id/build/scss/components/styles-tokens-element';
 
 $sizes: 'xs', 's', 'm', 'l';
 $variants: 'label-only', 'icon-only', 'icon-after';

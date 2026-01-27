@@ -2366,6 +2366,9 @@ importers:
       '@cloud-ru/figma-tokens-giga-id':
         specifier: '*'
         version: 19.0.2
+      '@cloud-ru/figma-tokens-gitverse':
+        specifier: '*'
+        version: 19.0.2
       '@cloud-ru/figma-tokens-web':
         specifier: '*'
         version: 19.0.2
@@ -3037,6 +3040,9 @@ packages:
 
   '@cloud-ru/figma-tokens-giga-id@19.0.2':
     resolution: {integrity: sha512-8HjQjTFaDG6wOHHctbduvn+XhCfMIPQuiDxX4JaHXOPX5FKtsPQ6+dMmMiWDAuB9UlAHlJ8fK2ZntTWcinFdyA==}
+
+  '@cloud-ru/figma-tokens-gitverse@19.0.2':
+    resolution: {integrity: sha512-ieUjAfsVINEqv2c+cD+0ZPhRIqYjM6NQ9K8PUZqLoolD97vhSc29Cry+2SPtypTEuF0ng2rx2z5XSNqVUYTkNw==}
 
   '@cloud-ru/figma-tokens-web@19.0.2':
     resolution: {integrity: sha512-Pa7YiSK0YMf3aqhnQbxrX9bh/MTYLG4fmp6mYKZl9BCVZ7EZuHcKtMm3BLz9GsXAco8qH8ykN9srB0ioAP3Vqw==}
@@ -14041,6 +14047,8 @@ snapshots:
   '@cloud-ru/figma-tokens-cloud-platform@19.0.2': {}
 
   '@cloud-ru/figma-tokens-giga-id@19.0.2': {}
+
+  '@cloud-ru/figma-tokens-gitverse@19.0.2': {}
 
   '@cloud-ru/figma-tokens-web@19.0.2': {}
 

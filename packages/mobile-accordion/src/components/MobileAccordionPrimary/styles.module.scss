@@ -1,4 +1,4 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-accordion';
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-accordion';
 
 .accordionPrimary {
   --accordion-header-padding-horizontal: #{styles-tokens-accordion.$dimension-2m};

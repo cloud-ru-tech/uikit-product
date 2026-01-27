@@ -1,6 +1,6 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toolbar' as toolbar;
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as element;
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as vars;
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toolbar' as toolbar;
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as element;
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as vars;
 
 .bulkActionsContainer {
   position: relative;

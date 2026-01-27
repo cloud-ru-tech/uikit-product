@@ -1,6 +1,6 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ft;
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields' as ft-fields;
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ft-element;
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ft;
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields' as ft-fields;
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ft-element;
 
 .input {
   @include ft.composite-var(ft-fields.$fields-single-line-container-s);

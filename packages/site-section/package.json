@@ -60,10 +60,10 @@
     "uncontrollable": "8.0.4"
   },
   "devDependencies": {
-    "@sbercloud/figma-tokens-cloud-platform": "17.7.6",
     "@types/lodash.debounce": "4.0.9"
   },
   "peerDependencies": {
+    "@cloud-ru/figma-tokens-cloud-platform": "*",
     "@sbercloud/uikit-product-locale": "*",
     "@snack-uikit/figma-tokens": "*"
   }

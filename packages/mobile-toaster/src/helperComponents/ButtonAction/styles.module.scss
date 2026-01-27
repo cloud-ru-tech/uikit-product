@@ -1,5 +1,5 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toaster-toasterSystemEvent';
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toaster-toasterSystemEvent';
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 .buttonAction {
   @include styles-tokens-toaster-toasterSystemEvent.composite-var(

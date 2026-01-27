@@ -60,27 +60,23 @@
     "@types/ua-parser-js": "0.7.39"
   },
   "peerDependencies": {
-    "@sbercloud/figma-tokens-admin": "*",
-    "@sbercloud/figma-tokens-cloud-platform": "*",
-    "@sbercloud/figma-tokens-giga-id": "*",
-    "@sbercloud/figma-tokens-mlspace": "*",
-    "@sbercloud/figma-tokens-web": "*",
+    "@cloud-ru/figma-tokens-cloud-platform": "*",
+    "@cloud-ru/figma-tokens-giga-id": "*",
+    "@cloud-ru/figma-tokens-gitverse": "*",
+    "@cloud-ru/figma-tokens-web": "*",
     "@snack-uikit/figma-tokens": "*"
   },
   "peerDependenciesMeta": {
-    "@sbercloud/figma-tokens-admin": {
+    "@cloud-ru/figma-tokens-cloud-platform": {
       "optional": true
     },
-    "@sbercloud/figma-tokens-cloud-platform": {
+    "@cloud-ru/figma-tokens-giga-id": {
       "optional": true
     },
-    "@sbercloud/figma-tokens-giga-id": {
+    "@cloud-ru/figma-tokens-gitverse": {
       "optional": true
     },
-    "@sbercloud/figma-tokens-mlspace": {
-      "optional": true
-    },
-    "@sbercloud/figma-tokens-web": {
+    "@cloud-ru/figma-tokens-web": {
       "optional": true
     }
   }

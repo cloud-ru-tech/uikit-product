@@ -3,7 +3,7 @@ import { Brand, LanguageCodeType, Themes } from '../types';
 export const DEFAULT = {
   LANGUAGE: LanguageCodeType.ruRU,
   BRAND: Brand.Cloud,
-  THEME: Themes.Purple,
+  THEME: Themes.Green,
 };
 
 export enum POST_MESSAGE_KEY {

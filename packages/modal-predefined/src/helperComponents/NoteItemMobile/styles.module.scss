@@ -1,5 +1,5 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
 
 .noteItemWrapper {
   margin-right: calc(#{styles-tokens-drawer.$dimension-0m} - #{styles-tokens-drawer.$dimension-1m});

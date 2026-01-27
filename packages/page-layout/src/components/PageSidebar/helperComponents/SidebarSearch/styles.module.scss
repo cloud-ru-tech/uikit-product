@@ -1,5 +1,5 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
-@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element';
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@cloud-ru/figma-tokens-web/build/scss/components/styles-tokens-element';
 
 .searchItem {
   background-color: styles-theme-variables.$sys-neutral-background;
