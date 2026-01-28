@@ -3,6 +3,7 @@ import { WORKING_HOURS_ITEMS, WorkingHoursSpecification } from '../../../../cons
 import { getMaxWorkingHoursAmount, getNumeralWord } from '../../../utils';
 
 const StorageSizeItem = {
+  Size1TB: '1',
   Size3TB: '3',
   Size5TB: '5',
   Size10TB: '10',
@@ -11,6 +12,10 @@ const StorageSizeItem = {
 };
 
 const storageSizeItems = [
+  {
+    label: '1 ТБ',
+    value: StorageSizeItem.Size1TB,
+  },
   {
     label: '3 ТБ',
     value: StorageSizeItem.Size3TB,
