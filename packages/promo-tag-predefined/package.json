@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-promo-tag-predefined",
   "title": "PromoTag Predefined",
-  "version": "0.2.11",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",

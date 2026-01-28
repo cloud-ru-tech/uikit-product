@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-tag",
   "title": "Site Tag",
-  "version": "0.4.1",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",

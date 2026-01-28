@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-toggles-predefined",
   "title": "Toggles Predefined",
-  "version": "0.8.18",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",

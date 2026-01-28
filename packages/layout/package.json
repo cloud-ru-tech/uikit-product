@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-layout",
   "title": "Info",
-  "version": "0.19.73",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",

@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-page-layout",
   "title": "Page Layout",
-  "version": "0.23.3",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-copy-line": "0.7.73",
+    "@cloud-ru/uikit-product-copy-line": "1.0.0",
     "@cloud-ru/uikit-product-icons": "16.2.0",
     "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/button": "0.19.13",

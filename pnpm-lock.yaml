@@ -7,7 +7,6 @@ settings:
 overrides:
   react: 18.2.0
   react-dom: 18.2.0
-  xlsx: https://pkg.sbercloud.tech/artifactory/api/npm/proxies-sheetjs/xlsx-0.20.3/xlsx-0.20.3.tgz
 
 importers:
 
@@ -305,7 +304,7 @@ importers:
         specifier: 16.2.0
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 0.9.32
+        specifier: 1.0.0
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -341,16 +340,16 @@ importers:
         specifier: 16.2.0
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-accordion':
-        specifier: 0.4.32
+        specifier: 1.0.0
         version: link:../mobile-accordion
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 0.9.32
+        specifier: 1.0.0
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 0.12.5
+        specifier: 1.0.0
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 0.9.29
+        specifier: 1.0.0
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -438,7 +437,7 @@ importers:
         specifier: 16.2.0
         version: link:../icons
       '@cloud-ru/uikit-product-promo-tag-predefined':
-        specifier: 0.2.11
+        specifier: 1.0.0
         version: link:../promo-tag-predefined
       '@snack-uikit/button':
         specifier: 0.19.16
@@ -474,7 +473,7 @@ importers:
         specifier: 1.0.1
         version: 1.0.1
       '@cloud-ru/uikit-product-localization':
-        specifier: 0.13.14
+        specifier: 1.0.0
         version: link:../localization
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -553,13 +552,13 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 0.9.32
+        specifier: 1.0.0
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 0.12.5
+        specifier: 1.0.0
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 0.5.5
+        specifier: 1.0.0
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -700,16 +699,16 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 0.9.32
+        specifier: 1.0.0
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 0.12.5
+        specifier: 1.0.0
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 0.9.29
+        specifier: 1.0.0
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 0.5.5
+        specifier: 1.0.0
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -770,7 +769,7 @@ importers:
   packages/header:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 0.8.22
+        specifier: 1.0.0
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 16.2.0
@@ -779,13 +778,13 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-drawer':
-        specifier: 0.9.26
+        specifier: 1.0.0
         version: link:../mobile-drawer
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 0.9.29
+        specifier: 1.0.0
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-title-clickable':
-        specifier: 0.0.58
+        specifier: 1.0.0
         version: link:../title-clickable
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1001,7 +1000,7 @@ importers:
   packages/markdown:
     dependencies:
       '@cloud-ru/uikit-product-code-editor':
-        specifier: 0.3.8
+        specifier: 1.0.0
         version: link:../code-editor
       '@snack-uikit/markdown':
         specifier: 0.5.41
@@ -1016,7 +1015,7 @@ importers:
         specifier: 16.2.0
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 0.5.5
+        specifier: 1.0.0
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1099,10 +1098,10 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 0.9.32
+        specifier: 1.0.0
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 0.5.5
+        specifier: 1.0.0
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1154,7 +1153,7 @@ importers:
         specifier: 16.2.0
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 0.5.5
+        specifier: 1.0.0
         version: link:../mobile-tooltip
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1188,7 +1187,7 @@ importers:
   packages/mobile-dropdown:
     dependencies:
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 0.9.29
+        specifier: 1.0.0
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1215,10 +1214,10 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 0.9.32
+        specifier: 1.0.0
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 0.9.29
+        specifier: 1.0.0
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1276,13 +1275,13 @@ importers:
   packages/mobile-info-row:
     dependencies:
       '@cloud-ru/uikit-product-info-row':
-        specifier: 0.9.1
+        specifier: 1.0.0
         version: link:../info-row
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 0.5.5
+        specifier: 1.0.0
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1306,31 +1305,31 @@ importers:
   packages/mobile-layout:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 0.8.22
+        specifier: 1.0.0
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 16.2.0
         version: link:../icons
       '@cloud-ru/uikit-product-layout':
-        specifier: 0.19.73
+        specifier: 1.0.0
         version: link:../layout
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 0.9.32
+        specifier: 1.0.0
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 0.9.29
+        specifier: 1.0.0
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 0.5.5
+        specifier: 1.0.0
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-page-layout':
-        specifier: 0.23.3
+        specifier: 1.0.0
         version: link:../page-layout
       '@cloud-ru/uikit-product-quota':
-        specifier: 0.6.16
+        specifier: 1.0.0
         version: link:../quota
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1363,10 +1362,10 @@ importers:
   packages/mobile-modal:
     dependencies:
       '@cloud-ru/uikit-product-mobile-drawer':
-        specifier: 0.9.26
+        specifier: 1.0.0
         version: link:../mobile-drawer
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 0.5.5
+        specifier: 1.0.0
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1435,13 +1434,13 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-chips':
-        specifier: 0.8.48
+        specifier: 1.0.0
         version: link:../mobile-chips
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 0.9.32
+        specifier: 1.0.0
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-toolbar':
-        specifier: 0.5.1
+        specifier: 1.0.0
         version: link:../mobile-toolbar
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1547,13 +1546,13 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-chips':
-        specifier: 0.8.48
+        specifier: 1.0.0
         version: link:../mobile-chips
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 0.9.32
+        specifier: 1.0.0
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 0.5.5
+        specifier: 1.0.0
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1616,7 +1615,7 @@ importers:
   packages/modal-predefined:
     dependencies:
       '@cloud-ru/uikit-product-copy-line':
-        specifier: 0.7.73
+        specifier: 1.0.0
         version: link:../copy-line
       '@cloud-ru/uikit-product-icons':
         specifier: 16.2.0
@@ -1625,16 +1624,16 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-markdown':
-        specifier: 0.1.10
+        specifier: 1.0.0
         version: link:../markdown
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 0.9.29
+        specifier: 1.0.0
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-switch-row':
-        specifier: 0.6.17
+        specifier: 1.0.0
         version: link:../switch-row
       '@cloud-ru/uikit-product-toggles-predefined':
-        specifier: 0.8.18
+        specifier: 1.0.0
         version: link:../toggles-predefined
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1673,7 +1672,7 @@ importers:
   packages/page-layout:
     dependencies:
       '@cloud-ru/uikit-product-copy-line':
-        specifier: 0.7.73
+        specifier: 1.0.0
         version: link:../copy-line
       '@cloud-ru/uikit-product-icons':
         specifier: 16.2.0
@@ -1733,7 +1732,7 @@ importers:
         specifier: 1.0.1
         version: 1.0.1
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 0.7.16
+        specifier: 1.0.0
         version: link:../button-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 16.2.0
@@ -1742,7 +1741,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 0.5.5
+        specifier: 1.0.0
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1802,7 +1801,7 @@ importers:
   packages/quota:
     dependencies:
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 0.7.16
+        specifier: 1.0.0
         version: link:../button-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 16.2.0
@@ -1845,7 +1844,7 @@ importers:
     dependencies:
       '@cloud-ru/uikit-product-icons':
         specifier: 16.1.1
-        version: link:../icons
+        version: 16.1.1(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
         version: link:../utils
@@ -1868,13 +1867,13 @@ importers:
   packages/site-banner:
     dependencies:
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 0.7.16
+        specifier: 1.0.0
         version: link:../button-predefined
       '@cloud-ru/uikit-product-site-rich-text':
-        specifier: 0.2.17
+        specifier: 1.0.0
         version: link:../site-rich-text
       '@cloud-ru/uikit-product-site-tag':
-        specifier: 0.4.1
+        specifier: 1.0.0
         version: link:../site-tag
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1895,7 +1894,7 @@ importers:
   packages/site-banner-predefined:
     dependencies:
       '@cloud-ru/uikit-product-site-banner':
-        specifier: 0.5.1
+        specifier: 1.0.0
         version: link:../site-banner
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1907,10 +1906,10 @@ importers:
         specifier: 16.2.0
         version: link:../icons
       '@cloud-ru/uikit-product-site-rich-text':
-        specifier: 0.2.17
+        specifier: 1.0.0
         version: link:../site-rich-text
       '@cloud-ru/uikit-product-site-tag':
-        specifier: 0.4.1
+        specifier: 1.0.0
         version: link:../site-tag
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -1979,7 +1978,7 @@ importers:
         specifier: 16.2.0
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 0.9.29
+        specifier: 1.0.0
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -2027,16 +2026,16 @@ importers:
         specifier: '*'
         version: 19.0.2
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 0.7.10
-        version: 0.7.10(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 1.0.0
+        version: link:../button-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 16.2.0
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 0.9.29
+        specifier: 1.0.0
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-site-layout':
-        specifier: 0.5.2
+        specifier: 1.0.0
         version: link:../site-layout
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -2066,7 +2065,7 @@ importers:
   packages/site-hero:
     dependencies:
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 0.7.16
+        specifier: 1.0.0
         version: link:../button-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 16.2.0
@@ -2075,19 +2074,19 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-site-layout':
-        specifier: 0.5.2
+        specifier: 1.0.0
         version: link:../site-layout
       '@cloud-ru/uikit-product-site-media':
-        specifier: 0.3.1
+        specifier: 1.0.0
         version: link:../site-media
       '@cloud-ru/uikit-product-site-navbar':
-        specifier: 0.3.2
+        specifier: 1.0.0
         version: link:../site-navbar
       '@cloud-ru/uikit-product-site-rich-text':
-        specifier: 0.2.17
+        specifier: 1.0.0
         version: link:../site-rich-text
       '@cloud-ru/uikit-product-site-tag':
-        specifier: 0.4.1
+        specifier: 1.0.0
         version: link:../site-tag
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -2180,28 +2179,28 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 0.12.5
+        specifier: 1.0.0
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-site-cards':
-        specifier: 0.14.1
+        specifier: 1.0.0
         version: link:../site-cards
       '@cloud-ru/uikit-product-site-case-card':
-        specifier: 0.5.1
+        specifier: 1.0.0
         version: link:../site-case-card
       '@cloud-ru/uikit-product-site-grid':
-        specifier: 0.1.10
+        specifier: 1.0.0
         version: link:../site-grid
       '@cloud-ru/uikit-product-site-layout':
-        specifier: 0.5.2
+        specifier: 1.0.0
         version: link:../site-layout
       '@cloud-ru/uikit-product-site-media':
-        specifier: 0.3.1
+        specifier: 1.0.0
         version: link:../site-media
       '@cloud-ru/uikit-product-site-rich-text':
-        specifier: 0.2.17
+        specifier: 1.0.0
         version: link:../site-rich-text
       '@cloud-ru/uikit-product-site-table':
-        specifier: 0.2.18
+        specifier: 1.0.0
         version: link:../site-table
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -2256,10 +2255,10 @@ importers:
         specifier: 16.2.0
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 0.9.32
+        specifier: 1.0.0
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 0.9.29
+        specifier: 1.0.0
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -2277,7 +2276,7 @@ importers:
   packages/site-table:
     dependencies:
       '@cloud-ru/uikit-product-site-rich-text':
-        specifier: 0.2.17
+        specifier: 1.0.0
         version: link:../site-rich-text
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -2419,7 +2418,7 @@ importers:
   packages/widget:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 0.8.22
+        specifier: 1.0.0
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 16.2.0
@@ -2428,16 +2427,16 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-carousel':
-        specifier: 0.2.0
+        specifier: 1.0.0
         version: link:../mobile-carousel
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 0.9.32
+        specifier: 1.0.0
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 0.5.5
+        specifier: 1.0.0
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-title-clickable':
-        specifier: 0.0.58
+        specifier: 1.0.0
         version: link:../title-clickable
       '@cloud-ru/uikit-product-utils':
         specifier: 8.1.0
@@ -3121,26 +3120,11 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0
 
-  '@cloud-ru/uikit-product-button-predefined@0.7.10':
-    resolution: {integrity: sha512-4nHwD+wIaMZc1xttC1WwBbIdWULKrZTJeFr/epW9KhmQh4dVI/SYbiKlTeWEvwwi52ecs4JZ3lpUv0osMArcLA==}
+  '@cloud-ru/uikit-product-icons@16.1.1':
+    resolution: {integrity: sha512-mSVQ907O1Q7r9/g9JzrWBrtmcFLdC/CfFghl2QBmcxPvKn6N0X5RuqUmiRp14TjYeI2SbDSZfIcRZ3em6hxqnA==}
 
-  '@cloud-ru/uikit-product-icons@15.1.6':
-    resolution: {integrity: sha512-zndlZtQ9ZYX24IiQbvlGIrfKfa/p2sUVOhUErcLTCrylezvxcsY3usskfwtw3M2akyHX3WUC/cc/ZE4y2GLqyg==}
-
-  '@cloud-ru/uikit-product-mobile-drawer@0.9.20':
-    resolution: {integrity: sha512-qa94Nepk86rIgCJcXdjyZtJN6n+0LmJNqntcjOKLwXBzWjtydw209UGIN+bjhrPDaFA//YeHWmaZt3mHlmioAw==}
-
-  '@cloud-ru/uikit-product-mobile-dropdown@0.9.26':
-    resolution: {integrity: sha512-ZgUrxOtUS0pTezc8mO9OSbvfH/VZXmKRwHXGvczAJa+w94EN1X7QsgqYm41yjzo29F3hCsKSUSHuYqfXRRlWDQ==}
-
-  '@cloud-ru/uikit-product-mobile-modal@0.9.23':
-    resolution: {integrity: sha512-zX5rPkN5ilOp3rr+6VajmBX+gsls0vFyZz8ZaQJrKwcZYG53KqXZJ+hS8uLB6P3UmOilS7EFvc34PrI2m7XlRQ==}
-
-  '@cloud-ru/uikit-product-mobile-tooltip@0.4.70':
-    resolution: {integrity: sha512-1/ubnrl07/Olfz0IJD/pfEUpHX+V1FW8x4Of+1PO4oZvOA2iP7S/h6NXeMQt8+Y6mT4uS+XwXSF0wmBdcOyihw==}
-
-  '@cloud-ru/uikit-product-utils@8.0.1':
-    resolution: {integrity: sha512-CahoHIocfIsH2SMd2sWxMAm83AsnMlF58lK8kb0pGrT8h/SHqeRiyc1iBj38NLnoZPS8e3VTyUv7Lw5HUpojHA==}
+  '@cloud-ru/uikit-product-utils@8.1.0':
+    resolution: {integrity: sha512-UJ4r/3HXmSbt7PmrZ5T6qH/+ejyqh8fjzw0zlcw9I5yFztgtBzBYDN3cw1Cc/c350AXFIPkEINIwqp+ZvEQAOA==}
     peerDependencies:
       '@cloud-ru/figma-tokens-cloud-platform': '*'
       '@cloud-ru/figma-tokens-giga-id': '*'
@@ -3813,49 +3797,42 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@napi-rs/nice-linux-arm64-musl@1.1.1':
     resolution: {integrity: sha512-+2Rzdb3nTIYZ0YJF43qf2twhqOCkiSrHx2Pg6DJaCPYhhaxbLcdlV8hCRMHghQ+EtZQWGNcS2xF4KxBhSGeutg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@napi-rs/nice-linux-ppc64-gnu@1.1.1':
     resolution: {integrity: sha512-4FS8oc0GeHpwvv4tKciKkw3Y4jKsL7FRhaOeiPei0X9T4Jd619wHNe4xCLmN2EMgZoeGg+Q7GY7BsvwKpL22Tg==}
     engines: {node: '>= 10'}
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@napi-rs/nice-linux-riscv64-gnu@1.1.1':
     resolution: {integrity: sha512-HU0nw9uD4FO/oGCCk409tCi5IzIZpH2agE6nN4fqpwVlCn5BOq0MS1dXGjXaG17JaAvrlpV5ZeyZwSon10XOXw==}
     engines: {node: '>= 10'}
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@napi-rs/nice-linux-s390x-gnu@1.1.1':
     resolution: {integrity: sha512-2YqKJWWl24EwrX0DzCQgPLKQBxYDdBxOHot1KWEq7aY2uYeX+Uvtv4I8xFVVygJDgf6/92h9N3Y43WPx8+PAgQ==}
     engines: {node: '>= 10'}
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@napi-rs/nice-linux-x64-gnu@1.1.1':
     resolution: {integrity: sha512-/gaNz3R92t+dcrfCw/96pDopcmec7oCcAQ3l/M+Zxr82KT4DljD37CpgrnXV+pJC263JkW572pdbP3hP+KjcIg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@napi-rs/nice-linux-x64-musl@1.1.1':
     resolution: {integrity: sha512-xScCGnyj/oppsNPMnevsBe3pvNaoK7FGvMjT35riz9YdhB2WtTG47ZlbxtOLpjeO9SqqQ2J2igCmz6IJOD5JYw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@napi-rs/nice-openharmony-arm64@1.1.1':
     resolution: {integrity: sha512-6uJPRVwVCLDeoOaNyeiW0gp2kFIM4r7PL2MczdZQHkFi9gVlgm+Vn+V6nTWRcu856mJ2WjYJiumEajfSm7arPQ==}
@@ -3974,28 +3951,24 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@nx/nx-linux-arm64-musl@18.3.5':
     resolution: {integrity: sha512-r18qd7pUrl1haAZ/e9Q+xaFTsLJnxGARQcf/Y76q+K2psKmiUXoRlqd3HAOw43KTllaUJ5HkzLq2pIwg3p+xBw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@nx/nx-linux-x64-gnu@18.3.5':
     resolution: {integrity: sha512-vYrikG6ff4I9cvr3Ysk3y3gjQ9cDcvr3iAr+4qqcQ4qVE+OLL2++JDS6xfPvG/TbS3GTQpyy2STRBwiHgxTeJw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@nx/nx-linux-x64-musl@18.3.5':
     resolution: {integrity: sha512-6np86lcYy3+x6kkW/HrBHIdNWbUu/MIsvMuNH5UXgyFs60l5Z7Cocay2f7WOaAbTLVAr0W7p4RxRPamHLRwWFA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@nx/nx-win32-arm64-msvc@18.3.5':
     resolution: {integrity: sha512-H3p2ZVhHV1WQWTICrQUTplOkNId0y3c23X3A2fXXFDbWSBs0UgW7m55LhMcA9p0XZ7wDHgh+yFtVgu55TXLjug==}
@@ -4098,42 +4071,36 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@parcel/watcher-linux-arm-musl@2.5.1':
     resolution: {integrity: sha512-6E+m/Mm1t1yhB8X412stiKFG3XykmgdIOqhjWj+VL8oHkKABfu/gjFj8DvLrYVHSBNC+/u5PeNrujiSQ1zwd1Q==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@parcel/watcher-linux-arm64-glibc@2.5.1':
     resolution: {integrity: sha512-LrGp+f02yU3BN9A+DGuY3v3bmnFUggAITBGriZHUREfNEzZh/GO06FF5u2kx8x+GBEUYfyTGamol4j3m9ANe8w==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@parcel/watcher-linux-arm64-musl@2.5.1':
     resolution: {integrity: sha512-cFOjABi92pMYRXS7AcQv9/M1YuKRw8SZniCDw0ssQb/noPkRzA+HBDkwmyOJYp5wXcsTrhxO0zq1U11cK9jsFg==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@parcel/watcher-linux-x64-glibc@2.5.1':
     resolution: {integrity: sha512-GcESn8NZySmfwlTsIur+49yDqSny2IhPeZfXunQi48DMugKeZ7uy1FX83pO0X22sHntJ4Ub+9k34XQCX+oHt2A==}
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@parcel/watcher-linux-x64-musl@2.5.1':
     resolution: {integrity: sha512-n0E2EQbatQ3bXhcH2D1XIAANAcTZkQICBPVaxMeaCVBtOpBZpWJuf7LwyWPSBDITb7In8mqQgJ7gH8CILCURXg==}
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@parcel/watcher-win32-arm64@2.5.1':
     resolution: {integrity: sha512-RFzklRvmc3PkjKjry3hLF9wD7ppR4AKcWNzH7kXR7GUe0Igb3Nz8fyPwtZCSquGrhU5HhUNDr/mKBqj7tqA2Vw==}
@@ -4215,28 +4182,24 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@resvg/resvg-js-linux-arm64-musl@2.6.2':
     resolution: {integrity: sha512-3h3dLPWNgSsD4lQBJPb4f+kvdOSJHa5PjTYVsWHxLUzH4IFTJUAnmuWpw4KqyQ3NA5QCyhw4TWgxk3jRkQxEKg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@resvg/resvg-js-linux-x64-gnu@2.6.2':
     resolution: {integrity: sha512-IVUe+ckIerA7xMZ50duAZzwf1U7khQe2E0QpUxu5MBJNao5RqC0zwV/Zm965vw6D3gGFUl7j4m+oJjubBVoftw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@resvg/resvg-js-linux-x64-musl@2.6.2':
     resolution: {integrity: sha512-UOf83vqTzoYQO9SZ0fPl2ZIFtNIz/Rr/y+7X8XRX1ZnBYsQ/tTb+cj9TE+KHOdmlTFBxhYzVkP2lRByCzqi4jQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@resvg/resvg-js-win32-arm64-msvc@2.6.2':
     resolution: {integrity: sha512-7C/RSgCa+7vqZ7qAbItfiaAWhyRSoD4l4BQAbVDqRRsRgY+S+hgS3in0Rxr7IorKUpGE69X48q6/nOAuTJQxeQ==}
@@ -4294,67 +4257,56 @@ packages:
     resolution: {integrity: sha512-dV3T9MyAf0w8zPVLVBptVlzaXxka6xg1f16VAQmjg+4KMSTWDvhimI/Y6mp8oHwNrmnmVl9XxJ/w/mO4uIQONA==}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.53.5':
     resolution: {integrity: sha512-wIGYC1x/hyjP+KAu9+ewDI+fi5XSNiUi9Bvg6KGAh2TsNMA3tSEs+Sh6jJ/r4BV/bx/CyWu2ue9kDnIdRyafcQ==}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.53.5':
     resolution: {integrity: sha512-Y+qVA0D9d0y2FRNiG9oM3Hut/DgODZbU9I8pLLPwAsU0tUKZ49cyV1tzmB/qRbSzGvY8lpgGkJuMyuhH7Ma+Vg==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.53.5':
     resolution: {integrity: sha512-juaC4bEgJsyFVfqhtGLz8mbopaWD+WeSOYr5E16y+1of6KQjc0BpwZLuxkClqY1i8sco+MdyoXPNiCkQou09+g==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-loong64-gnu@4.53.5':
     resolution: {integrity: sha512-rIEC0hZ17A42iXtHX+EPJVL/CakHo+tT7W0pbzdAGuWOt2jxDFh7A/lRhsNHBcqL4T36+UiAgwO8pbmn3dE8wA==}
     cpu: [loong64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-ppc64-gnu@4.53.5':
     resolution: {integrity: sha512-T7l409NhUE552RcAOcmJHj3xyZ2h7vMWzcwQI0hvn5tqHh3oSoclf9WgTl+0QqffWFG8MEVZZP1/OBglKZx52Q==}
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-gnu@4.53.5':
     resolution: {integrity: sha512-7OK5/GhxbnrMcxIFoYfhV/TkknarkYC1hqUw1wU2xUN3TVRLNT5FmBv4KkheSG2xZ6IEbRAhTooTV2+R5Tk0lQ==}
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-musl@4.53.5':
     resolution: {integrity: sha512-GwuDBE/PsXaTa76lO5eLJTyr2k8QkPipAyOrs4V/KJufHCZBJ495VCGJol35grx9xryk4V+2zd3Ri+3v7NPh+w==}
     cpu: [riscv64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-s390x-gnu@4.53.5':
     resolution: {integrity: sha512-IAE1Ziyr1qNfnmiQLHBURAD+eh/zH1pIeJjeShleII7Vj8kyEm2PF77o+lf3WTHDpNJcu4IXJxNO0Zluro8bOw==}
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.53.5':
     resolution: {integrity: sha512-Pg6E+oP7GvZ4XwgRJBuSXZjcqpIW3yCBhK4BcsANvb47qMvAbCjR6E+1a/U2WXz1JJxp9/4Dno3/iSJLcm5auw==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.53.5':
     resolution: {integrity: sha512-txGtluxDKTxaMDzUduGP0wdfng24y1rygUMnmlUJ88fzCCULCLn7oE5kb2+tRB+MWq1QDZT6ObT5RrR8HFRKqg==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-openharmony-arm64@4.53.5':
     resolution: {integrity: sha512-3DFiLPnTxiOQV993fMc+KO8zXHTcIjgaInrqlG8zDp1TlhYl6WgrOHuJkJQ6M8zHEcntSJsUp1XFZSY8C1DYbg==}
@@ -4395,21 +4347,6 @@ packages:
         optional: true
       zen-observable:
         optional: true
-
-  '@sbercloud/figma-tokens-admin@17.1.0':
-    resolution: {integrity: sha512-Rs+60uLkq5xDryNUlCbGoaGanYRjGz4+2zwYVXN/ohHPhGmu6YbpR6QDJDKVcXleE+EMhOu7/dHkxkYLZ83TZw==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-admin/-/@sbercloud/figma-tokens-admin-17.1.0.tgz}
-
-  '@sbercloud/figma-tokens-cloud-platform@17.7.6':
-    resolution: {integrity: sha512-NF5vHF3sLQBnyRge6cukG72cGWfa+SFWz15T3HA+RlOuJWk6oMrMX1s9rGGLG7E6w3ym3ZDtU1tZW+f3MhqRcA==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-cloud-platform/-/@sbercloud/figma-tokens-cloud-platform-17.7.6.tgz}
-
-  '@sbercloud/figma-tokens-giga-id@19.0.1':
-    resolution: {integrity: sha512-hPqOGxUHXLcvYHpjBbDQg0MvRHZctBz3ndwZffgMS6GOnOsRVdZ69S8SnERrfgDh12gGiUWzfFajosdnUDMqNg==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-giga-id/-/@sbercloud/figma-tokens-giga-id-19.0.1.tgz}
-
-  '@sbercloud/figma-tokens-mlspace@17.7.4':
-    resolution: {integrity: sha512-fhqkaEMXA+CDLQ9E19R8LBjojn3KFmswo4bAN7qeEvJhf4CxMX0P3xVa+CTVzpCuzQWj0JZKsOXHO8zOkiXFSA==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-mlspace/-/@sbercloud/figma-tokens-mlspace-17.7.4.tgz}
-
-  '@sbercloud/figma-tokens-web@19.0.1':
-    resolution: {integrity: sha512-V5MvFtAuRqnGTEEd0mq/tYPaCarFF+y9aFTaKEGymw12WjfFOgGjbUamvxd1Om7iDxNTpCPJ/SvGimoYl2H/hg==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-web/-/@sbercloud/figma-tokens-web-19.0.1.tgz}
 
   '@sigstore/bundle@1.1.0':
     resolution: {integrity: sha512-PFutXEy0SmQxYI4texPw3dd2KewuNqv7OuK1ZFtY2fM754yhvG2KdgwIhRnoEE2uHdtdGNQ8s0lb94dW9sELog==}
@@ -6205,49 +6142,41 @@ packages:
     resolution: {integrity: sha512-34gw7PjDGB9JgePJEmhEqBhWvCiiWCuXsL9hYphDF7crW7UgI05gyBAi6MF58uGcMOiOqSJ2ybEeCvHcq0BCmQ==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-arm64-musl@1.11.1':
     resolution: {integrity: sha512-RyMIx6Uf53hhOtJDIamSbTskA99sPHS96wxVE/bJtePJJtpdKGXO1wY90oRdXuYOGOTuqjT8ACccMc4K6QmT3w==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@unrs/resolver-binding-linux-ppc64-gnu@1.11.1':
     resolution: {integrity: sha512-D8Vae74A4/a+mZH0FbOkFJL9DSK2R6TFPC9M+jCWYia/q2einCubX10pecpDiTmkJVUH+y8K3BZClycD8nCShA==}
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-riscv64-gnu@1.11.1':
     resolution: {integrity: sha512-frxL4OrzOWVVsOc96+V3aqTIQl1O2TjgExV4EKgRY09AJ9leZpEg8Ak9phadbuX0BA4k8U5qtvMSQQGGmaJqcQ==}
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-riscv64-musl@1.11.1':
     resolution: {integrity: sha512-mJ5vuDaIZ+l/acv01sHoXfpnyrNKOk/3aDoEdLO/Xtn9HuZlDD6jKxHlkN8ZhWyLJsRBxfv9GYM2utQ1SChKew==}
     cpu: [riscv64]
     os: [linux]
-    libc: [musl]
 
   '@unrs/resolver-binding-linux-s390x-gnu@1.11.1':
     resolution: {integrity: sha512-kELo8ebBVtb9sA7rMe1Cph4QHreByhaZ2QEADd9NzIQsYNQpt9UkM9iqr2lhGr5afh885d/cB5QeTXSbZHTYPg==}
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-x64-gnu@1.11.1':
     resolution: {integrity: sha512-C3ZAHugKgovV5YvAMsxhq0gtXuwESUKc5MhEtjBpLoHPLYM+iuwSj3lflFwK3DPm68660rZ7G8BMcwSro7hD5w==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@unrs/resolver-binding-linux-x64-musl@1.11.1':
     resolution: {integrity: sha512-rV0YSoyhK2nZ4vEswT/QwqzqQXw5I6CjoaYMOX0TqBlWhojUf8P94mvI7nuJTeaCkkds3QE4+zS8Ko+GdXuZtA==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@unrs/resolver-binding-wasm32-wasi@1.11.1':
     resolution: {integrity: sha512-5u4RkfxJm+Ng7IWgkzi3qrFOvLvQYnPBmjmZQ8+szTK/b31fQCnleNl1GgEt7nIsZRIf5PLhPwT0WM+q45x/UQ==}
@@ -13154,8 +13083,8 @@ packages:
   xhr@2.6.0:
     resolution: {integrity: sha512-/eCGLb5rxjx5e3mF1A7s+pLlR6CGyqWN91fv1JgER5mVWg1MZmlhBvy9kjcsOdRk8RrIujotWyJamfyrp+WIcA==}
 
-  xlsx@https://pkg.sbercloud.tech/artifactory/api/npm/proxies-sheetjs/xlsx-0.20.3/xlsx-0.20.3.tgz:
-    resolution: {tarball: https://pkg.sbercloud.tech/artifactory/api/npm/proxies-sheetjs/xlsx-0.20.3/xlsx-0.20.3.tgz}
+  xlsx@https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz:
+    resolution: {tarball: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz}
     version: 0.20.3
     engines: {node: '>=0.8'}
     hasBin: true
@@ -14209,34 +14138,10 @@ snapshots:
       - '@types/react'
       - supports-color
 
-  '@cloud-ru/uikit-product-button-predefined@0.7.10(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@cloud-ru/uikit-product-icons@16.1.1(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)':
     dependencies:
-      '@cloud-ru/uikit-product-icons': 15.1.6(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)
-      '@cloud-ru/uikit-product-mobile-dropdown': 0.9.26(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@cloud-ru/uikit-product-utils': 8.0.1(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)
-      '@snack-uikit/button': 0.19.16(react@18.2.0)
-      '@snack-uikit/dropdown': 0.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@snack-uikit/list': 0.25.0(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@snack-uikit/loaders': 0.9.4(react@18.2.0)
-      '@snack-uikit/utils': 4.0.0(react@18.2.0)
-      classnames: 2.5.1
-      uncontrollable: 8.0.4(react@18.2.0)
-    transitivePeerDependencies:
-      - '@sbercloud/figma-tokens-admin'
-      - '@sbercloud/figma-tokens-cloud-platform'
-      - '@sbercloud/figma-tokens-giga-id'
-      - '@sbercloud/figma-tokens-mlspace'
-      - '@sbercloud/figma-tokens-web'
-      - '@snack-uikit/figma-tokens'
-      - '@snack-uikit/locale'
-      - '@types/react'
-      - react
-      - react-dom
-
-  '@cloud-ru/uikit-product-icons@15.1.6(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)':
-    dependencies:
-      '@cloud-ru/uikit-product-utils': 8.0.1(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)
-      '@snack-uikit/icons': 0.27.3
+      '@cloud-ru/uikit-product-utils': 8.1.0(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)
+      '@snack-uikit/icons': 0.27.4
     transitivePeerDependencies:
       - '@cloud-ru/figma-tokens-cloud-platform'
       - '@cloud-ru/figma-tokens-giga-id'
@@ -14245,104 +14150,12 @@ snapshots:
       - '@snack-uikit/figma-tokens'
       - react
 
-  '@cloud-ru/uikit-product-mobile-drawer@0.9.20(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
-    dependencies:
-      '@cloud-ru/uikit-product-icons': 15.1.6(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)
-      '@cloud-ru/uikit-product-mobile-tooltip': 0.4.70(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@snack-uikit/button': 0.19.15(react@18.2.0)
-      '@snack-uikit/scroll': 0.10.4(react@18.2.0)
-      '@snack-uikit/typography': 0.8.10(react@18.2.0)
-      '@snack-uikit/utils': 4.0.0(react@18.2.0)
-      classnames: 2.5.1
-      merge-refs: 1.3.0(@types/react@18.2.79)
-      rc-drawer: 6.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      uncontrollable: 8.0.4(react@18.2.0)
-    transitivePeerDependencies:
-      - '@sbercloud/figma-tokens-admin'
-      - '@sbercloud/figma-tokens-cloud-platform'
-      - '@sbercloud/figma-tokens-giga-id'
-      - '@sbercloud/figma-tokens-mlspace'
-      - '@sbercloud/figma-tokens-web'
-      - '@snack-uikit/figma-tokens'
-      - '@types/react'
-      - react
-      - react-dom
-
-  '@cloud-ru/uikit-product-mobile-dropdown@0.9.26(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
-    dependencies:
-      '@cloud-ru/uikit-product-mobile-modal': 0.9.23(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@cloud-ru/uikit-product-utils': 8.0.1(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)
-      '@snack-uikit/dropdown': 0.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@snack-uikit/list': 0.32.1(@snack-uikit/locale@0.15.5)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@snack-uikit/utils': 3.10.1(react@18.2.0)
-      uncontrollable: 8.0.4(react@18.2.0)
-    transitivePeerDependencies:
-      - '@sbercloud/figma-tokens-admin'
-      - '@sbercloud/figma-tokens-cloud-platform'
-      - '@sbercloud/figma-tokens-giga-id'
-      - '@sbercloud/figma-tokens-mlspace'
-      - '@sbercloud/figma-tokens-web'
-      - '@snack-uikit/figma-tokens'
-      - '@snack-uikit/locale'
-      - '@types/react'
-      - react
-      - react-dom
-
-  '@cloud-ru/uikit-product-mobile-modal@0.9.23(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
-    dependencies:
-      '@cloud-ru/uikit-product-mobile-drawer': 0.9.20(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@cloud-ru/uikit-product-mobile-tooltip': 0.4.70(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@cloud-ru/uikit-product-utils': 8.0.1(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)
-      '@snack-uikit/button': 0.19.15(react@18.2.0)
-      '@snack-uikit/drawer': 0.13.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@snack-uikit/link': 0.17.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@snack-uikit/loaders': 0.9.8(react@18.2.0)
-      '@snack-uikit/modal': 0.19.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@snack-uikit/typography': 0.8.10(react@18.2.0)
-      '@snack-uikit/utils': 3.10.1(react@18.2.0)
-      classnames: 2.5.1
-    transitivePeerDependencies:
-      - '@sbercloud/figma-tokens-admin'
-      - '@sbercloud/figma-tokens-cloud-platform'
-      - '@sbercloud/figma-tokens-giga-id'
-      - '@sbercloud/figma-tokens-mlspace'
-      - '@sbercloud/figma-tokens-web'
-      - '@snack-uikit/figma-tokens'
-      - '@types/react'
-      - react
-      - react-dom
-
-  '@cloud-ru/uikit-product-mobile-tooltip@0.4.70(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
-    dependencies:
-      '@cloud-ru/uikit-product-icons': 15.1.6(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)
-      '@cloud-ru/uikit-product-utils': 8.0.1(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)
-      '@snack-uikit/popover-private': 0.14.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@snack-uikit/tooltip': 0.18.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@snack-uikit/utils': 3.10.1(react@18.2.0)
-      classnames: 2.5.1
-      uncontrollable: 8.0.4(react@18.2.0)
-    transitivePeerDependencies:
-      - '@sbercloud/figma-tokens-admin'
-      - '@sbercloud/figma-tokens-cloud-platform'
-      - '@sbercloud/figma-tokens-giga-id'
-      - '@sbercloud/figma-tokens-mlspace'
-      - '@sbercloud/figma-tokens-web'
-      - '@snack-uikit/figma-tokens'
-      - react
-      - react-dom
-
-  '@cloud-ru/uikit-product-utils@8.0.1(@sbercloud/figma-tokens-admin@17.1.0)(@sbercloud/figma-tokens-cloud-platform@17.7.6)(@sbercloud/figma-tokens-giga-id@19.0.1)(@sbercloud/figma-tokens-mlspace@17.7.4)(@sbercloud/figma-tokens-web@19.0.1)(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)':
+  '@cloud-ru/uikit-product-utils@8.1.0(@snack-uikit/figma-tokens@19.0.2)(react@18.2.0)':
     dependencies:
       '@cloud-ru/ft-debug-mode': 1.0.1
       '@snack-uikit/figma-tokens': 19.0.2
       '@snack-uikit/utils': 3.5.0(react@18.2.0)
       ua-parser-js: 1.0.39
-    optionalDependencies:
-      '@sbercloud/figma-tokens-admin': 17.1.0
-      '@sbercloud/figma-tokens-cloud-platform': 17.7.6
-      '@sbercloud/figma-tokens-giga-id': 19.0.1
-      '@sbercloud/figma-tokens-mlspace': 17.7.4
-      '@sbercloud/figma-tokens-web': 19.0.1
     transitivePeerDependencies:
       - react
 
@@ -15511,21 +15324,6 @@ snapshots:
       rxjs: 6.6.7
     transitivePeerDependencies:
       - zenObservable
-
-  '@sbercloud/figma-tokens-admin@17.1.0':
-    optional: true
-
-  '@sbercloud/figma-tokens-cloud-platform@17.7.6':
-    optional: true
-
-  '@sbercloud/figma-tokens-giga-id@19.0.1':
-    optional: true
-
-  '@sbercloud/figma-tokens-mlspace@17.7.4':
-    optional: true
-
-  '@sbercloud/figma-tokens-web@19.0.1':
-    optional: true
 
   '@sigstore/bundle@1.1.0':
     dependencies:
@@ -18150,7 +17948,7 @@ snapshots:
       copy-to-clipboard: 3.3.3
       lodash.debounce: 4.0.8
       uncontrollable: 8.0.4(react@18.2.0)
-      xlsx: https://pkg.sbercloud.tech/artifactory/api/npm/proxies-sheetjs/xlsx-0.20.3/xlsx-0.20.3.tgz
+      xlsx: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
     transitivePeerDependencies:
       - '@types/react'
       - react
@@ -28569,7 +28367,7 @@ snapshots:
       parse-headers: 2.0.6
       xtend: 4.0.2
 
-  xlsx@https://pkg.sbercloud.tech/artifactory/api/npm/proxies-sheetjs/xlsx-0.20.3/xlsx-0.20.3.tgz: {}
+  xlsx@https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz: {}
 
   xml-name-validator@5.0.0: {}
 

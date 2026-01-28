@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-grid",
   "title": "Site Grid",
-  "version": "0.1.10",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",

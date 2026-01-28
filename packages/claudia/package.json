@@ -37,9 +37,9 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/uikit-product-icons": "16.2.0",
-    "@cloud-ru/uikit-product-mobile-dropdown": "0.9.32",
-    "@cloud-ru/uikit-product-mobile-fields": "0.12.5",
-    "@cloud-ru/uikit-product-mobile-tooltip": "0.5.5",
+    "@cloud-ru/uikit-product-mobile-dropdown": "1.0.0",
+    "@cloud-ru/uikit-product-mobile-fields": "1.0.0",
+    "@cloud-ru/uikit-product-mobile-tooltip": "1.0.0",
     "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/divider": "3.2.3",

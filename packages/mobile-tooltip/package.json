@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-mobile-tooltip",
   "title": "Mobile Tooltip",
-  "version": "0.5.5",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",

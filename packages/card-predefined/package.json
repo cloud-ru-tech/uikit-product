@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-card-predefined",
   "title": "Card Predefined",
-  "version": "0.8.22",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -37,7 +37,7 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/uikit-product-icons": "16.2.0",
-    "@cloud-ru/uikit-product-promo-tag-predefined": "0.2.11",
+    "@cloud-ru/uikit-product-promo-tag-predefined": "1.0.0",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/card": "0.16.19",
     "@snack-uikit/promo-tag": "0.7.1",

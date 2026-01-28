@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-mobile-info-row",
   "title": "Mobile Info Row",
-  "version": "0.6.32",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,8 +36,8 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-info-row": "0.9.1",
-    "@cloud-ru/uikit-product-mobile-tooltip": "0.5.5",
+    "@cloud-ru/uikit-product-info-row": "1.0.0",
+    "@cloud-ru/uikit-product-mobile-tooltip": "1.0.0",
     "@cloud-ru/uikit-product-utils": "8.1.0",
     "@snack-uikit/button": "0.19.15",
     "@snack-uikit/divider": "3.2.9",

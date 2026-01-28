@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-case-card",
   "title": "Site-case-card",
-  "version": "0.5.1",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
