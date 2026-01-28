@@ -4,16 +4,17 @@ import path from 'path';
 import shell from 'shelljs';
 
 import { logError, logInfo } from './utils/console';
+import { execAsync } from './utils/execAsync';
 import { getChangedPackages } from './utils/getChangedPackages';
 import { installIconsPackage } from './utils/installIconsPackage';
 import { isMainBranch } from './utils/isMainBranch';
 
-const prepareIconsPackage = (needToCompileIcons: boolean) => {
+const prepareIconsPackage = async (needToCompileIcons: boolean) => {
   const iconsAlreadyCompiled = existsSync(path.resolve(__dirname, '../packages/icons/dist'));
 
   if (!iconsAlreadyCompiled && needToCompileIcons) {
     logInfo('Icons package is changed. Compiling...');
-    shell.exec('pnpm -F @cloud-ru/uikit-product-icons run compile');
+    await execAsync('pnpm -F @cloud-ru/uikit-product-icons run compile');
 
     return undefined;
   }
@@ -25,7 +26,7 @@ const prepareIconsPackage = (needToCompileIcons: boolean) => {
   return undefined;
 };
 
-const buildStorybookForChangedPackages = () => {
+const buildStorybookForChangedPackages = async () => {
   logInfo('Building Storybook...');
 
   const changedPackages = getChangedPackages();
@@ -35,7 +36,7 @@ const buildStorybookForChangedPackages = () => {
   const packageNames = changedPackages.map(packagePath => packagePath.split('/').pop()).filter(Boolean);
 
   const needToCompileIcons = packageNames.includes('icons') || !packageNames.length || isOnMainBranch;
-  const revertIconsPackage = prepareIconsPackage(needToCompileIcons);
+  const revertIconsPackage = await prepareIconsPackage(needToCompileIcons);
 
   let storybookBuildEnvPrefix = '';
 
