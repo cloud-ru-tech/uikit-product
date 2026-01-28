@@ -8,8 +8,8 @@
 
 1. Выделяем в Figma все иконки на странице, экспортируем в формате .svg, получаем .zip архив со структурой `Interface/{SIZE}/{Icon Name}.svg`
 2. Переименовываем корневую папку в `interface-icons-systems`, чтобы получилось `interface-icons-system/{SIZE}/{Icon Name}.svg`
-3. Очищаем директорию `./packages/icons/import` или убеждаемся, что в ней не осталось папок с прошлого импорта
-4. Копируем корневую папку в `./packages/icons/import`, чтобы получилось `./packages/icons/import/interface-icons-system`
+3. Очищаем директорию `./packages/icons/scripts/import` или убеждаемся, что в ней не осталось папок с прошлого импорта
+4. Копируем корневую папку в `./packages/icons/scripts/import`, чтобы получилось `./packages/icons/scripts/import/interface-icons-system`
 5. Запускаем скрипт `import:icons-interface-system` из `./packages/icons/package.json`
 6. Готово
 
@@ -21,8 +21,8 @@
 
 1. Выделяем в Figma все иконки на странице, экспортируем в формате .svg, получаем .zip архив со структурой `Interface/S/{Icon Name}.svg`
 2. Переименовываем корневую папку в `interface-icons-product`, чтобы получилось `interface-icons-product/S/{Icon Name}.svg`
-3. Очищаем директорию `./packages/icons/import` или убеждаемся, что в ней не осталось папок с прошлого импорта
-4. Копируем корневую папку в `./packages/icons/import`, чтобы получилось `./packages/icons/import/interface-icons-product`
+3. Очищаем директорию `./packages/icons/scripts/import` или убеждаемся, что в ней не осталось папок с прошлого импорта
+4. Копируем корневую папку в `./packages/icons/scripts/import`, чтобы получилось `./packages/icons/scripts/import/interface-icons-product`
 5. Запускаем скрипт `import:icons-interface-product` из `./packages/icons/package.json`
 6. Готово
 
