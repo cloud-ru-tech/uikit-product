@@ -395,6 +395,7 @@ export const en_GB = {
     Products: { title: 'Platform services' },
     dataErrorTitle: 'Could not load data',
     dataErrorDescription: 'Try to refresh the widget',
+    updateWidget: 'Update',
   },
   Claudia: {
     AiAssistantChip: {

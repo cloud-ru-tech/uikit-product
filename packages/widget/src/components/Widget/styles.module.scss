@@ -16,6 +16,15 @@
   justify-content: space-between;
   gap: styles-theme-variables.$dimension-1m;
   min-width: 0;
+
+  &[data-mobile] {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &[data-loading] {
+    gap: calc(styles-theme-variables.$dimension-1m + styles-theme-variables.$dimension-050m);
+  }
 }
 
 .titleClickable {
@@ -36,6 +45,17 @@
   gap: styles-theme-variables.$dimension-050m;
 }
 
+.controlWrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: styles-theme-variables.$dimension-1m;
+
+  &[data-mobile] {
+    width: 100%;
+  }
+}
+
 .actionsWide {
   justify-content: flex-end;
 }
@@ -49,6 +69,7 @@
 .skeletonHeader {
   flex: 1;
   min-width: 0;
+  width: 100%;
 }
 
 .skeletonActions {

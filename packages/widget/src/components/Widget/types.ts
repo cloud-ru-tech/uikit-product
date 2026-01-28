@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { MouseEventHandler, ReactNode } from 'react';
 
 import { TitleClickableProps } from '@cloud-ru/uikit-product-title-clickable';
 import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
@@ -23,6 +23,8 @@ export type WidgetErrorStateProps = {
   errorTitle?: string;
   errorDescription?: string;
   errorIcon?: InfoBlockProps['icon'];
+  updateButtonLabel?: string;
+  onClickUpdate: MouseEventHandler<HTMLElement>;
 };
 
 export type WidgetProps = WithLayoutType<
@@ -30,6 +32,8 @@ export type WidgetProps = WithLayoutType<
     header: WidgetHeaderProps;
     children: ReactNode;
     actions?: Action[];
+    actionsChildren?: ReactNode;
+    controlChildren?: ReactNode;
     wide?: boolean;
     state?: WidgetState;
     loadingState?: WidgetLoadingStateProps;

@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { useMemo } from 'react';
 
 import { PlaceholderSVG, PlusSVG } from '@cloud-ru/uikit-product-icons';
+import { ButtonTonal } from '@snack-uikit/button';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
 import { Skeleton } from '@snack-uikit/skeleton';
 import { ValueOf } from '@snack-uikit/utils';
@@ -37,11 +38,16 @@ type StoryProps = Omit<WidgetProps, 'header'> & {
   headerHref: string;
   state: ValueOf<typeof STATE_VARIANT>;
   showActions?: boolean;
+  showCustomAction?: boolean;
+  showControlChildren?: boolean;
   headerVariant: ValueOf<typeof HEADER_VARIANT>;
   avatarName: string;
   avatarSubtitle: string;
   useCustomLoadingContent?: boolean;
 };
+
+// Иконка  ломает сторю если передать напрямую в пропс экшена
+const icon = <PlusSVG />;
 
 function Template({
   headerTitle,
@@ -50,6 +56,8 @@ function Template({
   headerHref,
   state,
   wide,
+  showCustomAction,
+  showControlChildren,
   showActions,
   headerVariant,
   avatarName,
@@ -57,6 +65,7 @@ function Template({
   useCustomLoadingContent,
   ...args
 }: StoryProps) {
+  const isMobile = useMemo(() => args.layoutType === 'mobile', [args.layoutType]);
   const header = useMemo<WidgetProps['header']>(() => {
     if (headerVariant === HEADER_VARIANT.avatar) {
       return {
@@ -74,9 +83,8 @@ function Template({
       title: headerTitle,
       icon: showHeaderIcon ? headerIcon : undefined,
       href: headerHref,
-      fullWidth: !wide ? true : undefined,
     };
-  }, [headerVariant, headerTitle, showHeaderIcon, headerIcon, headerHref, wide, avatarName, avatarSubtitle]);
+  }, [headerVariant, headerTitle, showHeaderIcon, headerIcon, headerHref, avatarName, avatarSubtitle]);
 
   const actions = useMemo(() => {
     if (!showActions) return undefined;
@@ -104,7 +112,7 @@ function Template({
         variant: 'outline' as const,
         label: 'Primary action',
         appearance: 'neutral' as const,
-        icon: <PlusSVG />,
+        icon: icon,
       },
     ];
   }, [showActions]);
@@ -134,6 +142,7 @@ function Template({
     return {
       errorTitle: 'Не удалось получить данные',
       errorDescription: 'Попробуйте обновить виджет',
+      onClickUpdate: () => alert('update'),
     };
   }, [state]);
 
@@ -145,6 +154,12 @@ function Template({
         actions={actions}
         state={state}
         wide={wide}
+        actionsChildren={
+          showCustomAction ? <ButtonTonal fullWidth label='Custom action' size={isMobile ? 'm' : 's'} /> : undefined
+        }
+        controlChildren={
+          showControlChildren ? <ButtonTonal fullWidth label='Control' size={isMobile ? 'm' : 's'} /> : undefined
+        }
         loadingState={loadingState}
         errorState={errorState}
       />
@@ -165,6 +180,8 @@ The maximum height of the modal window can be equal to the height of the browser
     showHeaderIcon: true,
     state: STATE_VARIANT.default,
     wide: true,
+    showCustomAction: true,
+    showControlChildren: true,
     showActions: true,
     headerVariant: HEADER_VARIANT.title,
     avatarName: 'Denis Villeneuve',

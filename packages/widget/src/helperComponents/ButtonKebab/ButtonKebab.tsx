@@ -1,3 +1,5 @@
+import { useMemo } from 'react';
+
 import { KebabSVG } from '@cloud-ru/uikit-product-icons';
 import { AdaptiveDroplist, AdaptiveDroplistProps } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
@@ -12,6 +14,8 @@ export type ButtonKebabProps = WithLayoutType<{
 export function ButtonKebab({ layoutType, button, list }: ButtonKebabProps) {
   const [open, onOpenChange] = useValueControl<boolean>({ onChange: list.onOpenChange, value: list.open });
 
+  const size = useMemo(() => (layoutType === 'mobile' ? 'm' : 's'), [layoutType]);
+
   return (
     <AdaptiveDroplist
       {...list}
@@ -23,9 +27,9 @@ export function ButtonKebab({ layoutType, button, list }: ButtonKebabProps) {
         value: 'null',
       }}
       placement='bottom-end'
-      size='s'
+      size={size}
     >
-      <ButtonOutline {...button} icon={<KebabSVG />} appearance='neutral' />
+      <ButtonOutline {...button} icon={<KebabSVG />} appearance='neutral' size={size} />
     </AdaptiveDroplist>
   );
 }
