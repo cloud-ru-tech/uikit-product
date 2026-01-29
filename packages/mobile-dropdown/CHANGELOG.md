@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.32 (2026-01-29)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-mobile-modal@0.9.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+
+
+
+
+
 ## 0.9.31 (2025-12-17)
 
 ### Only dependencies have been changed

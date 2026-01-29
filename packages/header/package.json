@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-header",
   "title": "Header",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,11 +36,11 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-card-predefined": "0.8.21",
-    "@sbercloud/uikit-product-icons": "16.1.1",
-    "@sbercloud/uikit-product-mobile-drawer": "0.9.25",
-    "@sbercloud/uikit-product-mobile-modal": "0.9.28",
-    "@sbercloud/uikit-product-title-clickable": "0.0.57",
+    "@sbercloud/uikit-product-card-predefined": "0.8.22",
+    "@sbercloud/uikit-product-icons": "16.2.0",
+    "@sbercloud/uikit-product-mobile-drawer": "0.9.26",
+    "@sbercloud/uikit-product-mobile-modal": "0.9.29",
+    "@sbercloud/uikit-product-title-clickable": "0.0.58",
     "@sbercloud/uikit-product-utils": "8.1.0",
     "@snack-uikit/avatar": "0.8.14",
     "@snack-uikit/breadcrumbs": "0.11.22",

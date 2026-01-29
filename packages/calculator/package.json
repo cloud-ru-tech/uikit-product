@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-calculator",
   "title": "Calculator",
-  "version": "0.40.0",
+  "version": "0.40.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -37,11 +37,11 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/ft-copy-to-clipboard": "0.1.0",
-    "@sbercloud/uikit-product-icons": "16.1.1",
-    "@sbercloud/uikit-product-mobile-accordion": "0.4.31",
-    "@sbercloud/uikit-product-mobile-dropdown": "0.9.31",
-    "@sbercloud/uikit-product-mobile-fields": "0.12.4",
-    "@sbercloud/uikit-product-mobile-modal": "0.9.28",
+    "@sbercloud/uikit-product-icons": "16.2.0",
+    "@sbercloud/uikit-product-mobile-accordion": "0.4.32",
+    "@sbercloud/uikit-product-mobile-dropdown": "0.9.32",
+    "@sbercloud/uikit-product-mobile-fields": "0.12.5",
+    "@sbercloud/uikit-product-mobile-modal": "0.9.29",
     "@sbercloud/uikit-product-utils": "8.1.0",
     "@snack-uikit/alert": "0.15.12",
     "@snack-uikit/button": "0.19.7",

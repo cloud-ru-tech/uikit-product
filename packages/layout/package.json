@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-layout",
   "title": "Info",
-  "version": "0.19.72",
+  "version": "0.19.73",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "16.1.1",
+    "@sbercloud/uikit-product-icons": "16.2.0",
     "@sbercloud/uikit-product-utils": "8.1.0",
     "@snack-uikit/info-block": "0.6.13",
     "classnames": "2.5.1"

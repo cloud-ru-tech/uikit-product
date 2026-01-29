@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 16.2.0 (2026-01-29)
+
+
+### Features
+
+* **PDS-3279:** add new logos ([386043a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/386043a63ab04c5bfc30b06f13e4717053069d26))
+* **PDS-3346:** add new icons ([082be0c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/082be0c8c8f569af9c1c0ee60e1ff7f5ebf2ea11))
+
+
+
+
+
 ## 16.1.1 (2025-12-17)
 
 ### Only dependencies have been changed
