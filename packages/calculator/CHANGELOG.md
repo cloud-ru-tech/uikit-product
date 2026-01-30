@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.40.2 (2026-01-30)
+
+
+### Bug Fixes
+
+* **SITE-10288:** fix text ARENADATA_DB calculator ([92af2c3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/92af2c3fa4746edfcdfc58450eeb6d583bc6f359))
+
+
+
+
+
 ## 0.40.1 (2026-01-29)
 
 ### Only dependencies have been changed
