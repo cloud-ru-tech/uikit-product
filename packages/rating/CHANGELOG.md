@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.1 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7841:** update repo links ([1893c4a](https://github.com/cloud-ru-tech/uikit-product/commit/1893c4a3e600069f98ab37c728e167937faa3440))
+
+
+
+
+
 # 2.0.0 (2026-02-02)
 
 
@@ -1029,7 +1040,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.3.30](https://gitverse.ru/cloud-ru-tech/uikit-product/compare/@cloud-ru/uikit-product-rating@0.3.29...@cloud-ru/uikit-product-rating@0.3.30) (2022-08-23)
 
-**Note:** Version bump only for package @cloud-ru/uikit-product-rating
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-utils@9.0.1]($PUBLIC_PROJECT_URL/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.3.29](https://gitverse.ru/cloud-ru-tech/uikit-product/compare/@cloud-ru/uikit-product-rating@0.3.28...@cloud-ru/uikit-product-rating@0.3.29) (2022-08-15)
 

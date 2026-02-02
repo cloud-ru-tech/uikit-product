@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-mobile-accordion",
   "title": "Mobile Accordion",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "17.0.0",
-    "@cloud-ru/uikit-product-mobile-tooltip": "1.1.0",
-    "@cloud-ru/uikit-product-utils": "9.0.0",
+    "@cloud-ru/uikit-product-icons": "17.0.1",
+    "@cloud-ru/uikit-product-mobile-tooltip": "1.1.1",
+    "@cloud-ru/uikit-product-utils": "9.0.1",
     "@snack-uikit/accordion": "0.11.11",
     "@snack-uikit/button": "0.19.15",
     "@snack-uikit/toggles": "0.13.20",

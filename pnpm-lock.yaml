@@ -301,13 +301,13 @@ importers:
   packages/button-predefined:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.16
@@ -337,22 +337,22 @@ importers:
         specifier: 0.1.0
         version: 0.1.0
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-accordion':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../mobile-accordion
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/alert':
         specifier: 0.15.12
@@ -434,10 +434,10 @@ importers:
   packages/card-predefined:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-promo-tag-predefined':
-        specifier: 2.0.0
+        specifier: 2.0.1
         version: link:../promo-tag-predefined
       '@snack-uikit/button':
         specifier: 0.19.16
@@ -473,10 +473,10 @@ importers:
         specifier: 1.0.1
         version: 1.0.1
       '@cloud-ru/uikit-product-localization':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../localization
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/divider':
         specifier: 3.2.3
@@ -546,22 +546,22 @@ importers:
   packages/claudia:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.16
@@ -645,10 +645,10 @@ importers:
         specifier: 0.1.0
         version: 0.1.0
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -666,13 +666,13 @@ importers:
   packages/error-pages:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -693,25 +693,25 @@ importers:
   packages/fields-predefined:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/attachment':
         specifier: 0.4.10
@@ -769,25 +769,25 @@ importers:
   packages/header:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-drawer':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-drawer
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-title-clickable':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../title-clickable
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/avatar':
         specifier: 0.8.14
@@ -842,7 +842,7 @@ importers:
   packages/icons:
     dependencies:
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/icons':
         specifier: 0.27.4
@@ -903,7 +903,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -927,13 +927,13 @@ importers:
   packages/layout:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/info-block':
         specifier: 0.6.13
@@ -945,10 +945,10 @@ importers:
   packages/load-status:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/figma-tokens':
         specifier: '*'
@@ -1000,7 +1000,7 @@ importers:
   packages/markdown:
     dependencies:
       '@cloud-ru/uikit-product-code-editor':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../code-editor
       '@snack-uikit/markdown':
         specifier: 0.5.41
@@ -1012,13 +1012,13 @@ importers:
   packages/mobile-accordion:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/accordion':
         specifier: 0.11.11
@@ -1046,10 +1046,10 @@ importers:
   packages/mobile-alert:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/alert':
         specifier: 0.16.17
@@ -1070,7 +1070,7 @@ importers:
   packages/mobile-carousel:
     dependencies:
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/carousel':
         specifier: 0.6.4
@@ -1092,19 +1092,19 @@ importers:
   packages/mobile-chips:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1150,10 +1150,10 @@ importers:
   packages/mobile-drawer:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../mobile-tooltip
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1187,10 +1187,10 @@ importers:
   packages/mobile-dropdown:
     dependencies:
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/dropdown':
         specifier: 0.5.2
@@ -1208,19 +1208,19 @@ importers:
   packages/mobile-fields:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1275,16 +1275,16 @@ importers:
   packages/mobile-info-row:
     dependencies:
       '@cloud-ru/uikit-product-info-row':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../info-row
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1305,34 +1305,34 @@ importers:
   packages/mobile-layout:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-layout':
-        specifier: 2.0.0
+        specifier: 2.0.1
         version: link:../layout
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-page-layout':
-        specifier: 2.0.0
+        specifier: 2.0.1
         version: link:../page-layout
       '@cloud-ru/uikit-product-quota':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../quota
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -1362,13 +1362,13 @@ importers:
   packages/mobile-modal:
     dependencies:
       '@cloud-ru/uikit-product-mobile-drawer':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-drawer
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1398,10 +1398,10 @@ importers:
   packages/mobile-stepper:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/loaders':
         specifier: 0.9.8
@@ -1428,22 +1428,22 @@ importers:
         specifier: 0.3.0
         version: 0.3.0
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-chips':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-chips
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-toolbar':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-toolbar
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.16
@@ -1504,13 +1504,13 @@ importers:
   packages/mobile-toaster:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/link':
         specifier: 0.17.9
@@ -1540,22 +1540,22 @@ importers:
         specifier: 0.3.0
         version: 0.3.0
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-chips':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-chips
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1591,10 +1591,10 @@ importers:
   packages/mobile-tooltip:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/popover-private':
         specifier: 0.14.5
@@ -1615,28 +1615,28 @@ importers:
   packages/modal-predefined:
     dependencies:
       '@cloud-ru/uikit-product-copy-line':
-        specifier: 2.0.0
+        specifier: 2.0.1
         version: link:../copy-line
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-markdown':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../markdown
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-switch-row':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../switch-row
       '@cloud-ru/uikit-product-toggles-predefined':
-        specifier: 2.0.0
+        specifier: 2.0.1
         version: link:../toggles-predefined
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -1672,16 +1672,16 @@ importers:
   packages/page-layout:
     dependencies:
       '@cloud-ru/uikit-product-copy-line':
-        specifier: 2.0.0
+        specifier: 2.0.1
         version: link:../copy-line
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.13
@@ -1732,19 +1732,19 @@ importers:
         specifier: 1.0.1
         version: 1.0.1
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 1.1.1
+        specifier: 1.1.2
         version: link:../button-predefined
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/accordion':
         specifier: 0.10.5
@@ -1786,7 +1786,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/promo-tag':
         specifier: 0.7.8
@@ -1801,16 +1801,16 @@ importers:
   packages/quota:
     dependencies:
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 1.1.1
+        specifier: 1.1.2
         version: link:../button-predefined
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -1831,7 +1831,7 @@ importers:
   packages/rating:
     dependencies:
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/toggles':
         specifier: 0.13.5
@@ -1843,10 +1843,10 @@ importers:
   packages/site-article:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.16
@@ -1867,16 +1867,16 @@ importers:
   packages/site-banner:
     dependencies:
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 1.1.1
+        specifier: 1.1.2
         version: link:../button-predefined
       '@cloud-ru/uikit-product-site-rich-text':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-rich-text
       '@cloud-ru/uikit-product-site-tag':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-tag
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/promo-tag':
         specifier: 0.7.1
@@ -1894,25 +1894,25 @@ importers:
   packages/site-banner-predefined:
     dependencies:
       '@cloud-ru/uikit-product-site-banner':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../site-banner
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
 
   packages/site-cards:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-site-rich-text':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-rich-text
       '@cloud-ru/uikit-product-site-tag':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-tag
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.16
@@ -1939,7 +1939,7 @@ importers:
         specifier: '*'
         version: 19.0.2
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/card':
         specifier: 0.20.4
@@ -1954,7 +1954,7 @@ importers:
   packages/site-cookie-policy:
     dependencies:
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -1975,13 +1975,13 @@ importers:
         specifier: '*'
         version: 19.0.2
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.15
@@ -2014,7 +2014,7 @@ importers:
   packages/site-grid:
     dependencies:
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       classnames:
         specifier: 2.5.1
@@ -2026,19 +2026,19 @@ importers:
         specifier: '*'
         version: 19.0.2
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 1.1.1
+        specifier: 1.1.2
         version: link:../button-predefined
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-site-layout':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-layout
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/alert':
         specifier: 0.16.17
@@ -2065,31 +2065,31 @@ importers:
   packages/site-hero:
     dependencies:
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 1.1.1
+        specifier: 1.1.2
         version: link:../button-predefined
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-site-layout':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-layout
       '@cloud-ru/uikit-product-site-media':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-media
       '@cloud-ru/uikit-product-site-navbar':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-navbar
       '@cloud-ru/uikit-product-site-rich-text':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-rich-text
       '@cloud-ru/uikit-product-site-tag':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-tag
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/breadcrumbs':
         specifier: 0.10.24
@@ -2119,7 +2119,7 @@ importers:
   packages/site-layout:
     dependencies:
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       classnames:
         specifier: 2.5.1
@@ -2128,10 +2128,10 @@ importers:
   packages/site-media:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/icon-predefined':
         specifier: 0.7.5
@@ -2143,7 +2143,7 @@ importers:
   packages/site-navbar:
     dependencies:
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/divider':
         specifier: 3.2.3
@@ -2161,7 +2161,7 @@ importers:
   packages/site-rich-text:
     dependencies:
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       classnames:
         specifier: 2.5.1
@@ -2173,37 +2173,37 @@ importers:
         specifier: '*'
         version: 19.0.2
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-site-cards':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-cards
       '@cloud-ru/uikit-product-site-case-card':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-case-card
       '@cloud-ru/uikit-product-site-grid':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-grid
       '@cloud-ru/uikit-product-site-layout':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-layout
       '@cloud-ru/uikit-product-site-media':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-media
       '@cloud-ru/uikit-product-site-rich-text':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-rich-text
       '@cloud-ru/uikit-product-site-table':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-table
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/accordion':
         specifier: 0.11.0
@@ -2252,16 +2252,16 @@ importers:
   packages/site-selector-platform-drop-list:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/list':
         specifier: 0.32.7
@@ -2276,10 +2276,10 @@ importers:
   packages/site-table:
     dependencies:
       '@cloud-ru/uikit-product-site-rich-text':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../site-rich-text
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/scroll':
         specifier: 0.9.4
@@ -2291,7 +2291,7 @@ importers:
   packages/site-tag:
     dependencies:
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/promo-tag':
         specifier: 0.7.1
@@ -2306,7 +2306,7 @@ importers:
   packages/switch-row:
     dependencies:
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/toggles':
         specifier: 0.13.5
@@ -2327,7 +2327,7 @@ importers:
   packages/title-clickable:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@snack-uikit/avatar':
         specifier: 0.8.4
@@ -2351,7 +2351,7 @@ importers:
   packages/toggles-predefined:
     dependencies:
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/card':
         specifier: 0.19.0
@@ -2397,7 +2397,7 @@ importers:
   packages/welcome-tour:
     dependencies:
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@snack-uikit/button':
         specifier: 0.19.7
@@ -2418,28 +2418,28 @@ importers:
   packages/widget:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
-        specifier: 17.0.0
+        specifier: 17.0.1
         version: link:../icons
       '@cloud-ru/uikit-product-locale':
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-carousel':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../mobile-carousel
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.0.1
+        specifier: 2.0.2
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-tooltip':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-title-clickable':
-        specifier: 1.1.0
+        specifier: 1.1.1
         version: link:../title-clickable
       '@cloud-ru/uikit-product-utils':
-        specifier: 9.0.0
+        specifier: 9.0.1
         version: link:../utils
       '@snack-uikit/button':
         specifier: 0.19.16

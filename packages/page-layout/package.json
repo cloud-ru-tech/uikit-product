@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-page-layout",
   "title": "Page Layout",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-copy-line": "2.0.0",
-    "@cloud-ru/uikit-product-icons": "17.0.0",
-    "@cloud-ru/uikit-product-utils": "9.0.0",
+    "@cloud-ru/uikit-product-copy-line": "2.0.1",
+    "@cloud-ru/uikit-product-icons": "17.0.1",
+    "@cloud-ru/uikit-product-utils": "9.0.1",
     "@snack-uikit/button": "0.19.13",
     "@snack-uikit/icon-predefined": "0.7.3",
     "@snack-uikit/list": "0.26.0",
