@@ -1,4 +1,4 @@
-@import '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
 
 $page-padding: 24px;
 $main-content-padding: 8px;
@@ -18,13 +18,13 @@ $content-gap: 16px;
   align-items: flex-start;
   gap: 40px;
   padding: $main-content-padding $page-padding;
-  background-color: $sys-neutral-background;
-  border-bottom: 1px solid $sys-neutral-decor-default;
+  background-color: stv.$sys-neutral-background;
+  border-bottom: 1px solid stv.$sys-neutral-decor-default;
   box-sizing: border-box;
 }
 
 .description {
-  color: $sys-neutral-text-support;
+  color: stv.$sys-neutral-text-support;
 }
 
 .body {
@@ -39,7 +39,7 @@ $content-gap: 16px;
   border-radius: 12px;
   padding: $content-gap;
   height: max-content;
-  background: $sys-neutral-background1-level;
+  background: stv.$sys-neutral-background1-level;
 }
 
 .main {
@@ -73,7 +73,7 @@ $content-gap: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: $sans-title-l-line-height;
+  height: stv.$sans-title-l-line-height;
 }
 
 .icon {
