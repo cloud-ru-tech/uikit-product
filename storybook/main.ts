@@ -23,6 +23,11 @@ const isTestServer = Boolean(process.env.TEST_SERVER);
 
 const needToCompileIcons = process.env.STORYBOOK_PACKAGE_NAME?.includes('icons');
 
+const STATIC_DIRS = [
+  { from: '../storybook/assets', to: '/storybook/assets' },
+  { from: '../storybook/assets', to: '/assets' },
+];
+
 const mainConfig: StorybookConfig = {
   stories: [WELCOME, STATISTICS, ...STORIES],
   addons: [
@@ -53,8 +58,8 @@ const mainConfig: StorybookConfig = {
     ...(process.env.CUSTOM_STORYBOOK_ADDONS?.split(' ') ?? []),
   ],
   staticDirs: needToCompileIcons
-    ? [{ from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }]
-    : [],
+    ? [...STATIC_DIRS, { from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }]
+    : STATIC_DIRS,
   framework: '@storybook/react-webpack5',
   typescript: {
     check: true,

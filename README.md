@@ -1,4 +1,4 @@
-# Cloud uikit [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![coverage](https://gitverse.ru/cloud-ru-tech/uikit-product/badges/master/coverage.svg?job=test-coverage-stable&key_text=stable-coverage&&key_width=100/coverage.svg)](https://gitverse.ru/cloud-ru-tech/uikit-product/badges/master/coverage.svg?job=test-coverage-stable&key_text=stable-coverage&&key_width=100)
+# Cloud uikit [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
 Cloud uikit - библиотека компонентов (бизнес), в которой каждый компонент это отдельный npm-пакет, со своей версионностью и зависимостями.
 
@@ -16,15 +16,15 @@ Cloud uikit - библиотека компонентов (бизнес), в к�
 
 # Browser support
 
-![Chrome](./packages/icons/svgs/color/logos/GoogleChromeLogo.svg)
-![Firefox](./packages/icons/svgs/color/logos/FirefoxLogo.svg)
-![Chromium](./packages/icons/svgs/color/logos/ChromiumLogo.svg)
-![Safari](./packages/icons/svgs/color/logos/SafariBrowserLogo.svg)
+![Chrome](storybook/assets/GoogleChromeLogo.svg)
+![Firefox](storybook/assets/FirefoxLogo.svg)
+![Chromium](storybook/assets/ChromiumLogo.svg)
+![Safari](storybook/assets/SafariBrowserLogo.svg)
 
 # Automation testing
 
-![Chrome](./packages/icons/svgs/color/logos/GoogleChromeLogo.svg)
-![Firefox](./packages/icons/svgs/color/logos/FirefoxLogo.svg)
+![Chrome](storybook/assets/GoogleChromeLogo.svg)
+![Firefox](storybook/assets/FirefoxLogo.svg)
 
 # Styling:
 

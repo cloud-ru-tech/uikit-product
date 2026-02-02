@@ -79,7 +79,7 @@ const brandInfo: Partial<ThemeVars> = {
   base: 'light',
   brandTitle: 'Cloud.ru',
   brandUrl: '/',
-  brandImage: './packages/icons/svgs/color/logos/CloudFullLogoLight.svg',
+  brandImage: 'storybook/assets/CloudFullLogoLight.svg',
   brandTarget: '_self',
 };
 
@@ -112,14 +112,14 @@ const parameters: Parameters = {
       ...brandInfo,
       base: 'dark',
       appPreviewBg: 'transparent',
-      brandImage: './packages/icons/svgs/color/logos/CloudFullLogoDark.svg',
+      brandImage: 'storybook/assets/CloudFullLogoDark.svg',
     },
     // Override the default light theme
     light: {
       ...themes.normal,
       ...brandInfo,
       base: 'light',
-      brandImage: './packages/icons/svgs/color/logos/CloudFullLogoLight.svg',
+      brandImage: 'storybook/assets/CloudFullLogoLight.svg',
     },
   },
 };
