@@ -19,11 +19,17 @@ type StoryProps = CopyLineProps & {
   contentType: 'string' | 'link';
 };
 
-function Template({ differentValueToCopy, valueToCopy, contentType, content, ...args }: StoryProps) {
+const LINK_SIZES = {
+  s: 'm',
+  xs: 's',
+} as const;
+
+function Template({ differentValueToCopy, valueToCopy, contentType, content, size = 's', ...args }: StoryProps) {
   return (
     <div className={styles.wrapper}>
       <CopyLine
         {...args}
+        size={size}
         content={
           contentType === 'string' ? (
             content
@@ -35,7 +41,7 @@ function Template({ differentValueToCopy, valueToCopy, contentType, content, ...
                 e.preventDefault();
                 e.stopPropagation();
               }}
-              size='m'
+              size={LINK_SIZES[size]}
             />
           )
         }
@@ -71,6 +77,13 @@ export const copyLine: StoryObj<StoryProps> = {
     differentValueToCopy: {
       name: '[STORIES]: different value to copy',
       type: 'boolean',
+    },
+    size: {
+      options: ['xs', 's'],
+      defaultValue: 's',
+      control: {
+        type: 'radio',
+      },
     },
   },
 

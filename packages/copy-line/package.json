@@ -40,7 +40,7 @@
     "@cloud-ru/uikit-product-icons": "17.0.1",
     "@cloud-ru/uikit-product-utils": "9.0.1",
     "@snack-uikit/button": "0.19.7",
-    "@snack-uikit/truncate-string": "0.6.9",
+    "@snack-uikit/truncate-string": "0.7.7",
     "@snack-uikit/utils": "3.7.0",
     "classnames": "2.5.1"
   }
