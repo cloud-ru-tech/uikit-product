@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.1 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7969:** chrome 144 drawer scrolling issue ([131891b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/131891b4d6b82ebe38f06e6bb53d6d73df68b07a))
+
+
+
+
+
 # 2.0.0 (2026-02-02)
 
 

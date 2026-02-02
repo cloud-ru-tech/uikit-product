@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-hero",
   "title": "Site Hero",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-button-predefined": "1.1.0",
+    "@cloud-ru/uikit-product-button-predefined": "1.1.1",
     "@cloud-ru/uikit-product-icons": "17.0.0",
     "@cloud-ru/uikit-product-site-layout": "1.1.0",
     "@cloud-ru/uikit-product-site-media": "1.1.0",

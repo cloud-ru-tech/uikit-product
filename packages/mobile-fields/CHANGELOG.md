@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.1 (2026-02-02)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-mobile-dropdown@2.0.1]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@2.0.1]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-modal/CHANGELOG.md)
+
+
+
+
+
 # 2.0.0 (2026-02-02)
 
 

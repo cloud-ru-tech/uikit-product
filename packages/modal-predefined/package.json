@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-modal-predefined",
   "title": "Modal Predefined",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -39,7 +39,7 @@
     "@cloud-ru/uikit-product-copy-line": "2.0.0",
     "@cloud-ru/uikit-product-icons": "17.0.0",
     "@cloud-ru/uikit-product-markdown": "1.1.0",
-    "@cloud-ru/uikit-product-mobile-modal": "2.0.0",
+    "@cloud-ru/uikit-product-mobile-modal": "2.0.1",
     "@cloud-ru/uikit-product-switch-row": "1.1.0",
     "@cloud-ru/uikit-product-toggles-predefined": "2.0.0",
     "@cloud-ru/uikit-product-utils": "9.0.0",
