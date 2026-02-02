@@ -30,7 +30,7 @@ $drawer-background-color: (
   z-index: initial !important; /* stylelint-disable-line declaration-no-important */
 
   &,
-  & * {
+  & [data-overlayscrollbars-contents] {
     overscroll-behavior-y: contain;
   }
 
