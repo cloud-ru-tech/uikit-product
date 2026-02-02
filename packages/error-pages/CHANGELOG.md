@@ -3,6 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* change padding to margin on logo to prevent height collapse ([8ef03fc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8ef03fc88d0cc7e1fb68ae67918a513e864bc633))
+* **FF-1142:** all props are optional, mainPageUrl has default ([df3126c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/df3126c062092b68271ccde312663d8e59925704))
+* **FF-2821:** added stylelint config and refactored styles ([f201954](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f201954303601b6dc5873b2ce2ee0928bc84a253))
+* **FF-2926:** Added tokens package for Error Pages component ([4139306](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4139306214fcaa2f24fdbe82e0654f2d18cfd451))
+* **FF-3910:** update figma-tokens ([d0a6a63](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d0a6a63f8982cc84a6840a575bb8e4b65c471c87))
+* **FF-4988:** stylelint deprecation warnings ([a21bc05](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a21bc05bf1e843e58193d01aaf81b066c2e24cd7))
+* **FF-5383:** update snack packages versions ([3fc6a2f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3fc6a2f940db810e5c514c7fb3d30350b291c61b))
+* **FF-5801:** remove linaria from repo ([f9e6b49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f9e6b492cf5892c50a1d78cebc89b48ace01b6b2))
+* **FF-5801:** sync gear-wheel rotation ([1a86e7a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1a86e7a139723a8722a14422317e5d2580e1699e))
+* **FF-5830:** make component ssr-safe ([f3001c6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f3001c6e83c15094b8ac123d00568da35e449b64))
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **LK-1550:** align image properly ([1daac29](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1daac29f4cf4fb6df039b3640341d4014efbe90e))
+* **LK-1550:** change elements positioning ([4983c65](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4983c65de37bebd1787261b3eb5d2a42dcb132d6))
+* PageUnavailable replace reload button with mainPage button ([5b8d5b0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5b8d5b060deb34749b16c6fca763162ccedd7972))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-83:** update deps ([491b47d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/491b47d42acd8cb179b0d66c616033d61fe95d7e))
+
+
+### Features
+
+* **FF-1142:** package has been created ([e385da4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e385da4664835b32d1a7a1302402ee890472e2d7))
+* **FF-1305:** add offline fallback page ([7383fbf](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7383fbf77c89a445a0ac64bf51bd51e0ac08b3aa))
+* **FF-1358:** add errorType Redirect ([1a4f4a6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1a4f4a63df227b850e86444f9a08369ccbcdcdfc))
+* **FF-2146:** build on tokens & snack-ui ([4530bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4530bb46bcf901de49fd9ac75a2aa0d7a2bd46e0))
+* **FF-3478:** add deps graph addon ([0f59586](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* hide mainPage button on PageNotFound type, change buttons layout ([4c391dc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4c391dcb057bacde9b59131dd28981286b748b52))
+* **LK-1550:** change gear wheels and rotation period ([587f03c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/587f03c9342a39e9e383a22e0b50e4ff87d25bba))
+* new title and back link for FrontendError type ([f6c07da](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f6c07da6b15ae47ec9c43f57a5275a67f8bd816c))
+* **PDS-2788:** add optional prop for hide main button ([d7f932d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d7f932d5db428188adba388d5005a75e3440f836))
+
+
+### BREAKING CHANGES
+
+
+* **FF-3643:** migrate ErrorPages to snack ([e1dfe09](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e1dfe093c8e161f7a7259935218abfb0564b5c2e))
+* logoVariant None by default ([3f08a91](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3f08a9192ae608c78d384a61e1bc7df0482324fd))
+
+
+
+
 ## 0.13.17 (2026-01-29)
 
 ### Only dependencies have been changed

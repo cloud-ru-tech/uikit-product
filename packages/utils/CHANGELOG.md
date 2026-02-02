@@ -3,6 +3,111 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 9.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* adds uikit prefix to package name in createTextProvider function ([f59eeb9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f59eeb9dbe63be95b826981bd0c417e58ccf7dae))
+* changelog ([dcd676b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dcd676b7b6af88e24012586e07787579f7d5aacb))
+* correct links to changed repository ([b1e05f0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b1e05f081150fb34fff897ebde16c265c953e2b4))
+* **FF-00:** apply theme from the initial render ([0a0fa65](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0a0fa65130894f14e7fbc170da1551d34e3ba832))
+* **FF-00:** fix on ssr ([58dff37](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/58dff37d0cf6e2f83b1a3c24bab2b313fd65b22e))
+* **FF-2270:** update types ([cd843f1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cd843f1db5c1aac401a27c2d67b314e81f5ddda3))
+* **FF-2821:** added stylelint config and refactored styles ([f201954](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f201954303601b6dc5873b2ce2ee0928bc84a253))
+* **FF-3789:** updated typescript to v5 ([1e50951](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1e50951d88db18b69a760d38a6a8bf93335dcd1c))
+* **FF-5734:** eslint fixes ([4ba62cc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4ba62cce879119e53d38e4e91f51c1147cbdd46b))
+* **FF-574:** alert utilities log when condition true ([e4347db](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e4347dbc1195834736a94a218024ebecaf633a20))
+* **FF-5801:** remove linaria from repo ([f9e6b49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f9e6b492cf5892c50a1d78cebc89b48ace01b6b2))
+* **FF-5830:** make component ssr-safe ([f3001c6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f3001c6e83c15094b8ac123d00568da35e449b64))
+* **FF-5846:** getting rid of circular import ([f78432a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f78432a0c63bb6f33e1d586fb183dcddc068f5d0))
+* **FF-5970:** admin and site figma tokens added to utils peerdeps ([3601836](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/36018364bcdf3a4af9b8fcaf85844728da83bd1f))
+* **FF-6924:** rename standalone mode to pwa ([330528d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/330528de63df47f2a72dfa269337d3714b1176c1))
+* **FF-7076:** missing constant usage ([307581a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/307581a22bc5f3b4829ce947f203c055bb1873fd))
+* **FF-7187:** add SSR safety checks for localStorage and navigator usage ([c2c7561](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c2c7561c9a2f5e3b1bd897b696b33ea309f39dfa))
+* **FF-7533:** mobile layout type for small tablets ([22fc805](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/22fc805273e29253c6e54f2587d121999744b1ff))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* fix console errors on JSON.parse failures ([dc9ff96](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dc9ff9688fc339521c9283eee3573489933a7068))
+* get rid of window.navigator ([0a8381f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0a8381ff716d057791300fcb9b7cf14923b06aa4))
+* got rid of the typography deprecated usages ([98a9e66](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/98a9e66aafaaf5e9a9663dc9a73d82572b90fb93))
+* improved type declarations, linaria core/react peerDeps version is ^3.0.0-beta.13 ([942799a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/942799aa59ae420fb90d00b0d379f30af3d01394))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** move token deps back to peers ([1b99749](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1b99749040515e23e094f814dbf46291a317c3ae))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** replaced tokens import to snack-uikit scoped package ([dd13d3b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dd13d3b7134a4b0d4696830dcd78c0e790700d09))
+* **PD-3377:** updated deps with public scopes ([5c0544a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5c0544acf7db65fb6fe1fbde10ac21721d9046fb))
+* **PDS-1115:** getCustomStore compatibility with next ([b525773](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b52577364f4209cdc695ec1e183dbeb8ae391c02))
+* peer dependencies block has been deleted ([b5786ad](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b5786ad13fef6adcbeecf23a52702cbbf0c81535))
+* renaming packages ([6c4e34d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6c4e34d4b5b8aa4a3386187b996f4856e642d0b5))
+* repository.directory field has been added ([82e2345](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/82e2345880c4011971b193ebd87eedbb1c804ea6))
+* republish all packages ([b7ce3da](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b7ce3da1966f2f099d5d47aa13d62058cfa6fc98))
+* use dev alerts from 'ft-debug-mode' package ([25bce9a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/25bce9a7f03ef8d98b6b31dff3f0a8219310e533))
+* window custom store decorated via react hook ([8ac326d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8ac326dccdbd8a0cf02a4cea49c1c36a904a47fa))
+
+
+### Dependencies
+
+* **FF-4699:** change product -> snack divider ([bd49fc6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/bd49fc619626923b0278b7b72221ad1aca7800f8))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+
+
+### Features
+
+* (AICE-4932) add reset default styles ([f0195ff](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f0195ffa2e281fc6b47247fc5fd8a39e9c293fb2))
+* (AICE-5510) add shadow styles ([b3c8d9e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3c8d9e356ace8d91cd1976c864ff20abda855c6))
+* `keyboardSelectHandler` utility ([7423696](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/742369639c5d24a7ea1ba0a37312a5ed033102e1))
+* `useForceUpdate` and `useForceUpdateOnPageLoadedCompletely` hooks ([5523c0a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5523c0a4db6e39678659742d6c95ee033392412e))
+* add breakpoints constants to utils ([83a90e8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/83a90e8a917e8cdaa11bfd5295410e88f09f93e4))
+* added extractDataProps function (AICDC-4028) ([917d1bb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/917d1bb05304db1d7a7f4ba7f32e5523a9a6e655))
+* added useComponentSize hook ([2bf57bf](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2bf57bfc8797ab775c5196a83254ffd09ecdef04))
+* adds createTextProvider utility ([1595d05](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1595d054b975e1196259b23329daae89d838db66))
+* **AICE-5511:** introduce `useUniqueId` hook ([a0927d5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a0927d5979dd8bca44b4b8226fc1b9c096c3bbd1))
+* **AICE-5896:** introduce `uniqueId` utility ([5f79747](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5f79747a2ff7ad7156111c8ed875cc100464126e))
+* button icon ([22d9559](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/22d9559d586e0f9a04279994d1fd2aa0f872d6ab))
+* create ConfigProvider ([26d5984](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/26d59843449706d51f6b3448414b6409ef7773dd))
+* create ConfigProvider ([24c5cef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/24c5cef7fb415a1e306c96d5c29f336259088634))
+* data-test-* props extractor ([3f53737](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3f53737060a94fb9ca65d0c2e684ce28ab378b2c))
+* **DOCDEV-2456:** moved useLocalStorage to utils pckg ([9809058](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/98090588fc37da109dd01b9f2b89f0fe776df565))
+* downloadFile util function ([6c543dc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6c543dc3e17267e6e0c1c80071d39e2403d8f0f5))
+* exclude props util ([b043bee](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b043bee2f67a071ce44a37ef916df3f347e333c7))
+* extracting copy-to-clipboard functionality into utils ([3a9b50f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3a9b50f8384279beb0cc27c79441e346f697bee1))
+* **FF-0000:** remove legacy packages with linaria ([29a468e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/29a468ea525ff94f3516a5baea0618a0fe6ffb7e))
+* **FF-149:** alert utility ([1a8be4b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1a8be4b965efc0d177a6f844e74de7b71cd1d9a6))
+* **FF-1803:** add support for tokens from new uikit ([6683f17](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6683f176f80aceadf8458af10d21b3fd55a7f4eb))
+* **FF-1803:** extract useConfig hook ([adc776e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/adc776e078ea234d26639b4aef3d59d6e1d21e0f))
+* **FF-3478:** add deps graph addon ([0f59586](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+* **FF-5149:** add ForThemeMode component and useForThemeMode hook ([4d88452](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4d88452e8142e1359dc702e048586ac1f5d8e5b5))
+* **FF-5375:** add hooks/utils for adaptiveness ([2c5a3cc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2c5a3cc2bec030525f81dd5b02c1b7aee653bb32))
+* **FF-5392:** css optimization ([79cc390](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/79cc390d1d49b0434b75f8e1ae893e7c7f9f450b))
+* **FF-544:** added useMatchMedia hook ([d4c8640](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d4c8640974cbd81c7a144040495b2c9dbec1c85c))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **FF-7104:** provide os info in getUserAgentInfo ([d988a08](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d988a08a181f081874be9ec924342481ed39f1e1))
+* **FF-725:** introduce useEventHandler hook ([eca33bf](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eca33bf3f5ba836a610358f03de28bcfa73551cd))
+* introduce `LOADING_WHEEL` animation ([4931f85](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4931f85b0df1fc3e450cc03f91597d9e68720f3c))
+* **PDS-1181:** add text provider hook ([c897d17](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c897d1730042acf6c663a2d8ef659d57fe92f862))
+* **PDS-2823:** add gigaid theme ([8462ec9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8462ec987bc53db6c16fc3624e5d593845f2119c))
+* truncate string tool ([75112c2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/75112c2fdbab4ea92ba3288050376f7caae6fa12))
+* utils first stable version (AICD-1813) ([ed13c42](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ed13c421ac564f6a5b155780ce473c78eb94aacc))
+
+
+### BREAKING CHANGES
+
+
+* **FF-7631:** special entry for useConfig ([21d4aea](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/21d4aea1e3ea05b517f66080af8f2eefaf999cfb))
+* **PD-3377:** moved figma-tokens to optionalDependencies ([f53a77c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f53a77c9dce4a5623dc5eb19232e1d6bae940c37))
+* **FF-7076:** extract all data and aria attributes with single helper, remove unused helpers ([2c9e8c4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2c9e8c446c05b6dcc933e1e3987608ee815b5175))
+* **FF-6924:** getMatchMedia renamed to getAdaptiveMatchMedia; useMatchMedia renamed to useAdaptiveMatchMedia; add getMatchMediaGeneric, useMatchMediaGeneric, getDisplayMode, useDisplayMode ([7a094b9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7a094b99a7b7f98691f936019a2231dc1529fa2b))
+* **EVODNS-1479:** clean utils export ([c7183c1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c7183c1e987fd9e0f57c46a76313d6258914624b))
+* **FF-5970:** replaced themes with brand in utils and storybook ([e28224c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e28224c95262b85c9e76424d8ce630ad6820a989))
+* remove logMode handling, now it uses '@sbercloud/ft-debug-mode' ([5b28fe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5b28fe0c91961a0d20f54295daaa699b1f7c4970))
+* packages moved to https://git.sbercloud.tech/sbercloud-ui/frontend-tools ([6930cbe](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6930cbe2ac9e201d1f4d374b359bd916111de2b9))
+* button has been implemented according to design system ([1383a53](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1383a53e463723fde1148ffeb41e8b9669d71bad))
+
+
+
+
 # 8.1.0 (2025-12-17)
 
 

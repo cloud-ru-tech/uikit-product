@@ -3,6 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-00:** fix autocomplete search ([2a0ccb5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2a0ccb5d00560636868f0f22430b35b894fcb1a8))
+* **FF-4988:** stylelint deprecation warnings ([a21bc05](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a21bc05bf1e843e58193d01aaf81b066c2e24cd7))
+* **FF-5186:** fix scroll & drag behavior ([ef63b33](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ef63b3397ab062e060b448f8eddf40fc42fd0550))
+* **FF-5186:** hide empty header if label is missing ([3d654c8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3d654c862cc2b0d3e0750a10b8a3ce7991f865a0))
+* **FF-5189:** add localization ([d401c7c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d401c7c1ed3ae9c66905736179dd699430481cca))
+* **FF-5429:** eslint errors ([8fba980](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8fba980dc29cca17a2ac680e779aa9b10bbc8972))
+* **FF-5734:** eslint fixes ([4ba62cc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4ba62cce879119e53d38e4e91f51c1147cbdd46b))
+* **FF-5830:** make component ssr-safe ([f3001c6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f3001c6e83c15094b8ac123d00568da35e449b64))
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-6921:** enhance mobile ux ([fd023fe](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fd023fe20b8ebad5e30dabe6a2db57ef96d4b5a7))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1047:** remove inner scroll refs ([5d762d0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5d762d01cdfc0f248e7534237cf4035cb01deb46))
+* **PDS-2121:** fix addOptionByEnter prop ([8c6a0df](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8c6a0df31037a74e758823213c1b80cc7e3ed23e))
+* **PDS-2417:** close drower by taping on selected item ([601feac](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/601feac9b9a4e926897e9c0175d86f41d8feb566))
+* **PDS-3335:** FieldSelect disabled tag background-color ([8e169bd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e169bd5f5c2857c661b1bb819742e0173e744d0))
+* **PDS-559:** use mobile droplist instead of dropdown ([849cc13](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/849cc13668a5c9234039262a28f1278c0fb276f8))
+* **PDS-632:** add valueControl to multiple ([92ed778](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/92ed77847bc0219ddad8a92a31f73174299d18e4))
+
+
+### Dependencies
+
+* **FF-00:** up deps ([9e2378c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e2378cef18622b7cbe30fdd43cfa80b1a2eb485))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5186:** up snack deps ([de10652](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/de10652ca4f8ac2a5f11dc2c0f9bb01e17f30c3c))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **FF-7117:** up snack field deps ([465eb49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/465eb49b46a72ebb8a43d851f101cb7c0827e151))
+* **PDS-2368:** up @snack-uikit/fields ([36e12c6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/36e12c6e4af4810efea97171006c08cb2c4d1a7d))
+* **PDS-2556:** update @snack-uikit/fields ([21e360e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/21e360e7dc269fa59369bd21640d4ee4a46d8a6e))
+* **PDS-2643:** up snack deps ([fa8ff9c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fa8ff9c0cdd79346185f219073c34872cc0fdfb7))
+* **PDS-559:** up snack deps ([e0a0fbd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e0a0fbd952420dd0031e3e4f8adef8c50375f31d))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-955:** up snack-uikit deps ([8e7bbb9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e7bbb9ae9cef8da37932e45fa76038e59ee2f98))
+
+
+### Features
+
+* **FF-5148:** add mobile-fields package ([7213b4e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7213b4e2661ef43cdf1763c8d61ba7d721a53f0e))
+* **FF-5188:** add field date ([84d5c21](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/84d5c21b197cca82dbe336d813c8fc7f565f5c5b))
+* **FF-5188:** hide search on fieldSelect/chips with low 5 items ([97f1533](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/97f1533dc11b9254e9928dd7a1c826f1f8bddb39))
+* **FF-5361:** add adaptive component versions ([0e1ddce](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0e1ddceda6085479ea8365f2b034b326da366fbb))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **FF-6921:** add adaptive versions of all fields ([5ff131f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5ff131f8c815c8dac4459ae6939af5a6ac1bca06))
+* **FF-6921:** add autoFocus property ([093e729](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/093e7296b0a23c53d032f1fdec20fa3a5f1db78f))
+* **GIGAID-164:** pass "inputMode" for MobileFieldDate ([5fb8f6c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5fb8f6cc959a2c0d143cab75ca1010db76c410a2))
+* **HYCL-000:** add test-id to mobile field select ([db17f2d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/db17f2df0cd0fa528051f653b10563223cd445f0))
+* **HYCL-4391:** support for list virtualization in fields select ([9be879e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9be879ec4b8558366c9f654c73cd68400e3302d2))
+* **PDS-2417:** add fuzzySearchEnable prop ([7c19538](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7c1953805d5dae995b189d750e31cc4768465288))
+* **PDS-592:** mobile adaptation for select ([6018004](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/60180042f3db66569ce31ba79135f7cde4b8702d))
+* **UIIAAS-1251:** added FieldDescription & FieldName ([e03ba16](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e03ba16f0bbe62d0c00e7e109727a4b49f13fc6b))
+
+
+### BREAKING CHANGES
+
+
+* **FF-5830:** add date-time mode to field-date, change value type to Date in field-date, add postfix/prefix in field-select ([1f2dd7a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1f2dd7a4e84f6bec8f3c23cd4686eaf15e6c9994))
+
+
+
+
 ## 0.12.5 (2026-01-29)
 
 ### Only dependencies have been changed

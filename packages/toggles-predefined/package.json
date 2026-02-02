@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-toggles-predefined",
   "title": "Toggles Predefined",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-utils": "9.0.0",
     "@snack-uikit/card": "0.19.0",
     "@snack-uikit/toggles": "0.13.14",
     "classnames": "2.5.1"

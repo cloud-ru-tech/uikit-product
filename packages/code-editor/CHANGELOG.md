@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-6299:** Re-export code editor jsonschema type. ([b2a867b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b2a867bb855ae6a12630d23db9a28ef5753574ea))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-2227:** markdown editor to snack ([2dfe69c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2dfe69c34011ff2ba1a5bc3c73b0cb12d61deaef))
+* **PDS-2227:** remove codeEditor copy tooltip ([b9614dc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b9614dceeb9b646b144ca2fcff4b0be07379086f))
+
+
+### Dependencies
+
+* **FF-6240:** update loaders ([b56f38f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b56f38f22bcacbf3d879a39eeaa0ac8ca2578d3d))
+* **PDS-2163:** Update code-editor deps. ([fd0ef18](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fd0ef1818e1b3e19c989e009445e9882788b4961))
+
+
+### Features
+
+* **FF-6299:** Add ProductCodeEditor package. ([8e8102d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e8102dea8c1ac16af6340f73013d4ce83bcf572))
+* **FF-6299:** Re-export code editor jsonschema type. ([3fe2abf](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3fe2abf74ca3a0403191397405141ac40a8d0a2a))
+* **PDS-2207:** Opportunity to get a shared monaco-editor ([836b609](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/836b6099b91e3abc428d0e0e9c3ade355de4d51e))
+
+
+
+
+
 ## 0.3.8 (2025-11-13)
 
 

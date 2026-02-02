@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+
+
+### Features
+
+* **PDS-1711:** add site-banner-predefined package ([89b4e1f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/89b4e1f7ade0b102f901d1bcf478fb2a2139c5c1))
+* **PDS-1801:** add EducationBadge to site-banner-predefined package ([e5d5073](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e5d5073f454b3eee1209d04e78c27f9d1688373f))
+* **PDS-1827:** remove banner ([97cfb43](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/97cfb4370be126ead6e9265f1d6af87d95019d74))
+
+
+
+
+
 ## 0.3.69 (2026-01-29)
 
 ### Only dependencies have been changed

@@ -3,6 +3,66 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-3789:** updated typescript to v5 ([1e50951](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1e50951d88db18b69a760d38a6a8bf93335dcd1c))
+* **FF-3910:** update figma-tokens ([d0a6a63](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d0a6a63f8982cc84a6840a575bb8e4b65c471c87))
+* **FF-4159:** EmptyBlock max-width value ([9a8c834](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9a8c83496bd2adc4a8b28c1218e3e8877c540992))
+* **FF-4241:** add export HeadLine ([98c8950](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/98c8950dca94dfe4e886a7a947404b3ab42edf3d))
+* **FF-5801:** remove linaria from repo ([f9e6b49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f9e6b492cf5892c50a1d78cebc89b48ace01b6b2))
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-15:** fix styles EmptyBlock ([5601b18](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5601b18fdf985834029e386a4aa927a15eada90a))
+* **PDS-96:** make primary button not required for empty block ([f3319a7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f3319a71ab7ac01caca58f4f6eed0a9f937e5a21))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-0000:** up deps ([46cd547](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/46cd547f094543c16f21c6040de9c56adfd4f6a4))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+
+
+### Features
+
+* **AICE-7933:** added new NoAccess component ([0c83848](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0c8384800de65913dc910f55270bcd2aec3bd342))
+* **DPS-0000:** upd InfoGroup typing ([b19d12c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b19d12c9cc4e9b333cedf7c32d4455efb76581a6))
+* **DPS-4142:** review fixes ([6d3938a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6d3938a7cac0f3d8cd31bbaee55cb26c014054aa))
+* **DPS-4572:** add BlockInfo, LabelInfo and InfoRow components ([b226d21](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b226d2107c0afa29ea25aa5296e378fa0bfa9e9f))
+* **DPS-7013:** added medium size for LabelInfo ([0a02ccf](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0a02ccf26dd5a9fd257e171d740ffa1e0b3566ee))
+* **DPS-7602:** InfoGroup: added default value. LabelInfo & Accordion: added more props for tooltip. ([005ac56](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/005ac56d9d9eaf39c163fd8f995d52c8738862e9))
+* **FF-00:** add tooltip for buttons in EmptyBlock ([86f331c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/86f331ce7a1ceb235e4aed648a8f44e5a3af37ab))
+* **FF-2638:** add BlockBasic ([049f1b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/049f1b3e3b03cd7ca4889661829abc7b500f53a9))
+* **FF-3478:** add deps graph addon ([0f59586](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+* **FF-4124:** add Widget component ([947e6ea](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/947e6eaef2d7626df1c5146c43fb1cd8a8b0ee32))
+* **FF-4128:** add page layout components ([e93f2d5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e93f2d5828791f4a60970dd35d6b1f0800f87266))
+* **FF-4159:** add EmptyBlock ([6b4ef7e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6b4ef7e12ba06dbb44ff73260aaeddf8c34655e2))
+* **FF-4163:** add info-group ([fb7c2e6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fb7c2e6d270e15c482c1ca913bebfa11ed714d33))
+* **FF-4653:** move NoAccess to snack ([33219a2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/33219a2ae31c2e209d81993b8e9da0e9724b459e))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **PDS-18:** add footer to page form ([7f267e6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7f267e67e1da3cab34da82a702fa3c3a6cb278df))
+
+
+### BREAKING CHANGES
+
+
+* **FF-4401:** remove Widget from package, it moved to widget package ([5cb1902](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5cb190234fbfefae7009eab2c5c1a128180795d7))
+* **FF-0001:** move Pages to Page Layout package; move InfoStroke to Info Row package ([f810c1d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f810c1d95c843ef4a1b0bc23e9a048d043d2ee5c))
+* **DPS-5312:** changes for accordion and InfoGroup ([bb8698b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/bb8698b0502d426fdac990e6064b20055d14e702))
+
+
+
+
 ## 0.19.73 (2026-01-29)
 
 ### Only dependencies have been changed

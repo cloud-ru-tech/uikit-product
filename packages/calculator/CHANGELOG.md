@@ -3,6 +3,101 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-5734:** eslint fixes ([4ba62cc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4ba62cce879119e53d38e4e91f51c1147cbdd46b))
+* **FF-6758:** typescript issues ([520f8f0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/520f8f0c18ce3c5e74d6e05e6b7b72afa7a69771))
+* **FF-7187:** add SSR safety checks for localStorage and navigator usage ([c2c7561](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c2c7561c9a2f5e3b1bd897b696b33ea309f39dfa))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **ONB-3308:** scroll to top of calculator while product change ([93c3e65](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/93c3e65cc685befbc10fe7f5f73bd00680fc29c3))
+* **ONB-3344:** change input tabs to slider for vcpu ([cf22878](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cf22878ae051143d90452a84f3cf04212d47d1bb))
+* **ONB-3344:** changed icon for postgre ([09831e6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/09831e6346afd798377ffbbe78d1f2d15ee93479))
+* **ONB-3437:** pass analytic props to welcome page ([830547e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/830547e553c283b6492fc6138db145c5e6be5dd3))
+* **ONB-3458:** delete unused tabs ([331fb13](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/331fb13e439d211dbec731b45d25c0a54340e06e))
+* **ONB-3531:** changed category naming in catalog ([4467d05](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4467d05d81ae4c6d6e7b1d7f11d3204540c4c426))
+* **ONB-3564:** change button color ([9fc9941](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9fc9941f276c6b8a8c46b46181a144d9ace7dee1))
+* **ONB-3656:** arenadata link fix ([4e5ebde](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4e5ebde96c05c7e3229bb9aac0d09cda588898a9))
+* **ONB-3904:** postgres config fix ([9d18f10](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9d18f10586fa4d580ab231b8f96543eaf5e101b8))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** updated deps with public scopes ([5c0544a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5c0544acf7db65fb6fe1fbde10ac21721d9046fb))
+* **PDS-1286:** calculator icon update ([35cb3b0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/35cb3b0d30849e1f10228d5d753c3c09cb1878b6))
+* **SITE-10071:** fix analytics calculator ([f6ab725](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f6ab7258da24afd4303cb8198c2f9e5108024ae3))
+* **SITE-10288:** fix text ARENADATA_DB calculator ([92af2c3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/92af2c3fa4746edfcdfc58450eeb6d583bc6f359))
+* **SITE-9684:** update icons ([fff9d35](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fff9d35b0eb758d4d1d7b869a53e5f71c3f9026a))
+* **SITE-9760:** update calculator ([947662a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/947662ad87aad401fafa2dc10f98c18038d47c91))
+* **SITE-9760:** update calculator Artifact Registry ([5e2a511](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5e2a511c5195219d1bee28739c128e5de1cbad66))
+* **SITE-9911:** fix calculator spark ([608844f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/608844f99b7d0103166e0aab43c059c6c9095a42))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-6881:** up carousel ([8b15ad2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8b15ad20732fa5ed739ed28eeeca6a088386d810))
+* **FF-7117:** up snack field deps ([465eb49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/465eb49b46a72ebb8a43d851f101cb7c0827e151))
+* **PDS-2368:** up @snack-uikit/fields ([36e12c6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/36e12c6e4af4810efea97171006c08cb2c4d1a7d))
+* **PDS-2556:** update @snack-uikit/fields ([21e360e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/21e360e7dc269fa59369bd21640d4ee4a46d8a6e))
+
+
+### Features
+
+* **AICNTB-2466:** evo notebooks calculator ([1aa1ffd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1aa1ffdf55e4f392ab5d3c35b33cb6e7c7c37530))
+* **DOCDEV-1330:** added erid right section props for BannerTertiary ([bd3ca8e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/bd3ca8e7a3ee6a374e16d01abf75a05e7bced683))
+* **FF-5681:** add calclucalor ([007661e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/007661e9c73b6660b732f16033a09553dfe5668c))
+* **FF-6484:** add custom headers to calculator getFetcherFn ([9c00800](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9c00800bc85cdb16dd850d10aeb622c5ea131337))
+* **ONB-0000:** add evo cloud server gpu ([eda5c5d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eda5c5d83be704a10292fbc0590a149d9ad12f28))
+* **ONB-0000:** fix types ([afc489c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/afc489c0e8e8765d64115a1ec43880df2dffb70d))
+* **ONB-2882:** add ability to connect evo container apps to console ([5c7d87b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5c7d87bd666ec762acf4eba25b2477c7d406d7ee))
+* **ONB-3282:** add network disk to evo bare metal ([1e584f8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1e584f85dcea879cf6b45d1575e9235f958b5291))
+* **ONB-3307:** add truncated title of product ([68f0476](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/68f0476a41309ab2e9343ad3ff6314d380be7bdf))
+* **ONB-3309:** data-test-id for calculator ([265ecf9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/265ecf9ead1c0632d95137387998aa7d017602a7))
+* **ONB-3344:** slider component for calculator ([e3cf426](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e3cf4264ef05542aa843c01ef35d08977cf2bc9c))
+* **ONB-3408:** add evolution container apps calc ([430d7c6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/430d7c6104bf08cd7ba14263cb0473d968d976ce))
+* **ONB-3437:** fix price summary block ([e4474b7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e4474b7696c99c17d221795c00e4fa87577360ec))
+* **ONB-3437:** new welcome page calculator ([2fd0e6c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2fd0e6c36c5dfb7955b5a87b8fa0cfd95526a25d))
+* **ONB-3453:** evo postgre sql new flavors ([6d4c773](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6d4c77344f214c3d768fb735899a365e4505cc1c))
+* **ONB-3495:** add ability to connect evo cloud server gpu to console ([4ef98d7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4ef98d77c17ae28ad40a7a30726ec4f2332b697e))
+* **ONB-3529:** change block`s label, add tooltip ([b6c4c77](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6c4c77af89e500f666fb9d9e79a502ad804e0b0))
+* **ONB-3543:** migrate calc configs to uikit ([6d7488f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6d7488f8774d0d5f1b8dae13f2acd755e7fb7015))
+* **ONB-3566:** remove os in virtual data center ([1af927a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1af927ad7a166a89eb5cbf9b5484efd1ef4c3b56))
+* **ONB-3579:** change dms kafka product ([d1df06b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d1df06bef6d25836a40e4d7f36d534c2cb199bac))
+* **ONB-3612:** remove disclaimer ([59e9366](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/59e936673b4ae147b897cc5bab60b6b3307c1a9b))
+* **ONB-3656:** new product arenadata evl ([d00afeb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d00afebcb3591a0ef46b817b34f3643756656e21))
+* **ONB-3694:** articfact registry calc ([a9a4cc9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a9a4cc97e8b8716e41e047e18436ca88157bfc4f))
+* **ONB-3742:** new product vdi ([20c6f79](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/20c6f79e58c0bd1f6b06045f1697bebb644f370f))
+* **ONB-3760:** new calculators snat and publicIp ([4b1b393](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4b1b393f177a8a911f01dc54446adbf90d12a99f))
+* **ONB-3764:** calc ml inference ([dac517b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dac517b88696acad3ccc70326bceb1126c44495b))
+* **ONB-3854:** calculator welcome screen small desktop media queries ([ac6b85d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ac6b85ddded104965e88c1250cd814b3811d0992))
+* **SITE-10045:** update calculator EvolutionCloudServer and VmWareVirtualDataCenter ([e0ce8a4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e0ce8a4bd4b8a8a20596100d7033611f45a1c4c1))
+* **SITE-10150:** add new calculator EVOLUTION_DNS ([197f047](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/197f0478db06bf409cfa6b0e17dee8edd1009914))
+* **SITE-10152:** update calculator EvolutionCloudServer ([02950fe](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/02950fe7a29317203a4e3240f8897fec5fc03969))
+* **SITE-10160:** add new calculator EvolutionManagedBI ([902f499](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/902f4992291ee2e7ea04cc49f9d0ba7befb802e6))
+* **SITE-10168:** update href clear .html calculator ([2320288](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2320288e40de54899b7ec51c231b4d71d50de745))
+* **SITE-10199:** update calculator info and fox scroll calculator ([396c783](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/396c78336370e1c87d565e8b16bc5445d636cb28))
+* **SITE-10288:** update ARENADATA_DB calculator ([dcb0fb0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dcb0fb0281feed130abd4bd2177b816e04bedf0b))
+* **SITE-10338:** update gap site components ([9afded2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9afded24fb470672c8f92be51ecb3fa147ba7bf1))
+* **SITE-10410:** update calculator ([881e1d8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/881e1d80f5b63e94facee9958b8fc59ad8113f15))
+* **SITE-10509:** update calculator VM_WARE_VIRTUAL_WORKSPACES ([9be7f90](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9be7f9066c013dfbea10dddb4c7656fcd6d61956))
+* **SITE-9111:** update title calculator ([99edca2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/99edca2e97a47a5442606d6ce8194c76be4c1480))
+* **SITE-9519:** add new calculator evo trino ([0f0e45c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0f0e45cbd0400208ffba7e8dba515452a0c43ce7))
+* **SITE-9523:** add new calculator metastore ([3428da0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3428da0ec6ae339d800bbf954568b5d45ee60ac4))
+* **SITE-9532:** add new calculator redis ([e0b9dae](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e0b9daed88474faa390a03c6509604138598f7da))
+* **SITE-9691:** update vmWareVirtualMachinesBackup calculator ([285dac5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/285dac552f9ecf6a92ad2b859c2e97a96235c010))
+* **SITE-9728:** update calculator analytic ([8162843](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8162843ec50b05212d5a00d9a04745c49f26fd72))
+* **SITE-9757:** add new calculator ([9d640a2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9d640a2d2cfcf089d0b11d088b1a5af328667bde))
+* **SITE-9757:** add new calculator ([0009025](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0009025c70305fe90b4200777f05cd553109f38d))
+* **SITE-9784:** update calculators ([09d8ead](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/09d8ead56a7d21b61c7274c294cede585c95c409))
+* **SITE-9969:** add new calculator Load Balancer ([3014938](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3014938f4720501b75b2400f8eb8c9ae6d87211e))
+
+
+
+
+
 ## 0.40.2 (2026-01-30)
 
 

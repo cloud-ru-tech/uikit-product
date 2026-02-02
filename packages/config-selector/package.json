@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-config-selector",
   "title": "Config Selector",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "sideEffects": [
     "*.css",
     "*.woff",

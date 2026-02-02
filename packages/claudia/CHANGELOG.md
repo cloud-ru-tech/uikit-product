@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.13.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **AINFR-4525:** returned rebased data ([7768586](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/776858629fc7a3a0f774a5b2825d1a727b7266e4))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** replaced tokens import to snack-uikit scoped package ([dd13d3b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dd13d3b7134a4b0d4696830dcd78c0e790700d09))
+
+
+### Features
+
+* **AINFR-0000:** fix types ([a5510f2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a5510f2700b08a73ff2e69bdbd1e2084f9886052))
+* **AINFR-0000:** fix types ([a451034](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a451034aeaa0e43362a4f24283012001d5c848d3))
+* **AINFR-4454:** new component rate block for claudia ([234e89a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/234e89accd3018b17979ccd3bab1944ccb30806e))
+* **AINFR-4472:** add recommend-pannel component ([adbe198](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/adbe198934b2f53be1706bf48e2b09f0844b34d4))
+* **AINFR-4472:** fix mobile dropdown size and text ([fd8c297](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fd8c2975f895ba9efaad8b98f0bd770457095295))
+* **AINFR-4472:** fix mobile dropdown size and text ([6b1e1ae](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6b1e1aedbfdb0476f21c4714732ffe7da77cd032))
+* **AINFR-4479:** add new ssh field ([f78a07e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f78a07ebc576bcceb51851109c371d5ebe08e737))
+* **AINFR-4479:** add onCancel ([e3dbed9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e3dbed92b1435c7d53b51d2da1cbf64c86674b5a))
+* **AINFR-4499:** move packages to claudia section ([2f741e4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2f741e45b4212d070392cab231e537b7a666ea90))
+* **AINFR-4525:** new button giga ([2661a39](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2661a39f95aa2384b251cf6faf75f867a5099be9))
+* **AINFR-4587:** add new ssh validation rules ([cf6ad31](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cf6ad31b9549c73de2346a63fcd489fa2f39068f))
+* **AINFR-4628:** vibe ops scenario ([65bdd10](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/65bdd107b6d0cbd4b6162c5bae5d0a4b6ccc0b88))
+* **LK-6854:** add giga-chat icons ([e263f6a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e263f6af80876b53450082b20ec01f3a05503221))
+* **RM-3714:** replace claudia button by giga for recommend panel ([9114db7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9114db7e67cc17a4e134b3d3b7a12055b6d5edae))
+
+
+
+
+
 ## 1.12.3 (2026-01-29)
 
 ### Only dependencies have been changed

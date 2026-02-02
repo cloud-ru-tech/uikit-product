@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-3789:** updated typescript to v5 ([1e50951](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1e50951d88db18b69a760d38a6a8bf93335dcd1c))
+* **FF-5801:** remove linaria from repo ([f9e6b49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f9e6b492cf5892c50a1d78cebc89b48ace01b6b2))
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-6881:** remove infinite scroll on mobile ([3007866](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/30078668fa391ebe0408b339a4b716ed40d2d6cb))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **ONB-2670:** fix max height for card ([e508d72](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e508d722c6ea25b20bc7865bac21d22ded372aea))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+
+
+### Dependencies
+
+* **FF-00:** up deps ([9e2378c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e2378cef18622b7cbe30fdd43cfa80b1a2eb485))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5560:** up deps ([3059e71](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3059e713dd8b753294774694689ea5fb65209d6b))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-83:** update deps ([491b47d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/491b47d42acd8cb179b0d66c616033d61fe95d7e))
+* **PDS-92:** up carousel version ([a534b37](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a534b37b305e8b73789620b796a7efb98c80c456))
+
+
+### Features
+
+* **FF-4401:** add widget ([0fc3205](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0fc3205928d1154af10b0c2d659a8af78f946e95))
+* **FF-5361:** add adaptive component versions ([0e1ddce](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0e1ddceda6085479ea8365f2b034b326da366fbb))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **FF-6881:** use mobile carousel ([f03ecc6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f03ecc66c58dd2372a0c6994aa4cae353b550ab6))
+* **LK-3579:** optional more link ([23b542c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/23b542cf39ee5a383f73923c6abc8fa5a153e1ad))
+* **PDS-2199:** add carousel props arrow and pagination ([cf39f89](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cf39f898ba4de4359868d8f34394b9e60b081ae1))
+
+
+### BREAKING CHANGES
+
+
+* **PDS-2942:** update widget component, helpers and story ([c7082e6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c7082e6de768399c8820a6945a307f509aee32b8))
+* **PDS-685:** mobile adaptation for solution and product widgets; products property replaced with cards property in ProductWidget ([f23c1a6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f23c1a6ec2ff1d243ffdb1b33dd72d97c82f93cf))
+* **FF-4401:** remove Widget from package, it moved to widget package ([5cb1902](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5cb190234fbfefae7009eab2c5c1a128180795d7))
+
+
+
+
 ## 0.9.15 (2026-01-29)
 
 ### Only dependencies have been changed

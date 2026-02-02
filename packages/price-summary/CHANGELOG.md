@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-00:** improved price summary story ([4e775d6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4e775d68fad8d699ff1916d21c1cb63877eea614))
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-6758:** typescript issues ([520f8f0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/520f8f0c18ce3c5e74d6e05e6b7b72afa7a69771))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** updated deps with public scopes ([5c0544a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5c0544acf7db65fb6fe1fbde10ac21721d9046fb))
+* **PDS-1584:** replaced unsupported character ([c8938f6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c8938f6e727a0b89064b11da8c838e84f11125a7))
+* **PDS-37:** fixed render for zero and undefined values ([6e1cf8b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6e1cf8b25cd2208b431589a8528e90931876fcbd))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-6240:** update loaders ([b56f38f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b56f38f22bcacbf3d879a39eeaa0ac8ca2578d3d))
+
+
+### Features
+
+* **PDS-1899:** add hide price parameter ([fca7ad5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fca7ad555b9d46136ccbb2b8f1ab513b271e9cee))
+* **PDS-3063:** PriceSummary, edit layout component ([35134c1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/35134c150f3746709d27be5c201e443b83b0cedc))
+* **PDS-3063:** PriceSummary, fix after design review ([2278e84](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2278e84f46017f3ad088c5da7859e95e9c7558c2))
+* **PDS-3063:** PriceSummary, optional label for displaying a separate discount line ([09b3fcc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/09b3fcc9b7c09ce3951c40824fd25f6419b64036))
+* **PDS-3125:** add tooltip support to invoice item labels ([9175dd4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9175dd428014a9d87f1fea7f3e53b2cbd9ad5538))
+* **PDS-3130:** price-summary. add support for "from" price prefix in total value display ([74c2aed](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/74c2aed9c60e85f44700f08d5c5aa9bedd70fd95))
+* **PDS-37:** price summary components ([fc148bb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fc148bbb2a26b1e490fae8a48cf172274236b581))
+
+
+### BREAKING CHANGES
+
+
+* **PDS-1899:** add hint appearance, hint link, no price changes ([0d1623b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0d1623b422e1e961fd79177b083ac2558498fac1))
+* **PDS-1491:** added year period, periodOptions is a required prop ([1ad4c5d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1ad4c5d3a43ca250e017309f31401bb54810a454))
+
+
+
+
 ## 0.5.15 (2026-01-29)
 
 ### Only dependencies have been changed

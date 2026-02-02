@@ -3,6 +3,77 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* changelog ([dcd676b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dcd676b7b6af88e24012586e07787579f7d5aacb))
+* correct links to changed repository ([b1e05f0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b1e05f081150fb34fff897ebde16c265c953e2b4))
+* **FF-2821:** added stylelint config and refactored styles ([f201954](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f201954303601b6dc5873b2ce2ee0928bc84a253))
+* **FF-2828:** fix pieChart display ([b7a1897](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b7a189794b325668e1b7f9b81a9ab4dc35cbf31a))
+* **FF-5152:** PieChart title color ([fe1cdca](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fe1cdca1b01c9a3b53480ee8b1d54c26f995704b))
+* **FF-5338:** classname for pie chart ([d13bc42](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d13bc42acceef99a202cb26b29f1e9fb186287b2))
+* **FF-5407:** scroll for pie chart legends ([1c8a8be](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1c8a8be714248a1fb768dd6af6fb4ee8313bd332))
+* **FF-5801:** fix heat map chart colors ([bf360bc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/bf360bcf0cbe90e951a5a003a50bd8bdd86cabf2))
+* **FF-5801:** remove all predefined chart colors ([451fa9a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/451fa9abdf5064b8888157065a7e18ac13b88443))
+* **FF-5801:** remove linaria from repo ([f9e6b49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f9e6b492cf5892c50a1d78cebc89b48ace01b6b2))
+* **FF-6045:** deps updated to resolve vulnerabilities ([2003088](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/20030888871d178626abb931248f2c5b6f8f6066))
+* **FF-682:** update @sbercloud/ft-all-linters-pack version and fix eslint errors ([8e1bca6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e1bca684734d8b82b87c18cf639050e21ef007e))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* first stable version of typography ([9fce874](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9fce8747d03be516626d638ddd34a59a4ce9433a))
+* got rid of the typography deprecated usages ([98a9e66](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/98a9e66aafaaf5e9a9663dc9a73d82572b90fb93))
+* **HYCL-2303:** fix boxPlot chart selector id ([73a7451](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/73a74510570c4d46984349385536bb20c2a26d2b))
+* **HYCL-2303:** fix bug with closure element ([3605f5c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3605f5c7a320d2f96c0c992b1c5966c5780e8750))
+* **HYCL-2482:** fix shadowWidth in boxPlotPlugin ([1da6644](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1da6644ceb4c71e759e0051952cc7f0dd8675f28))
+* improved type declarations, linaria core/react peerDeps version is ^3.0.0-beta.13 ([942799a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/942799aa59ae420fb90d00b0d379f30af3d01394))
+* minor/patch third-party dependency actualization ([3648504](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/364850414e3a9967417d2dabff30547cfccc5d87))
+* not major deps update ([0d82e8b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0d82e8b783994f96fded6b5c4147c2351c70c07a))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** replaced tokens import to snack-uikit scoped package ([dd13d3b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dd13d3b7134a4b0d4696830dcd78c0e790700d09))
+* **PD-3377:** updated charts deps ([dc59df5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dc59df5e99fb0c31a277244ca5de51a3c97e5c34))
+* **PD-3377:** updated deps with public scopes ([5c0544a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5c0544acf7db65fb6fe1fbde10ac21721d9046fb))
+* **PDS-0000:** add hover show/hide behavior for copyButton in line; add forgotten props ([ff0d97a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ff0d97a052ef0e53ed6fe144ab7d58a9366ae93c))
+* peer dependencies block has been deleted ([b5786ad](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b5786ad13fef6adcbeecf23a52702cbbf0c81535))
+* renaming packages ([6c4e34d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6c4e34d4b5b8aa4a3386187b996f4856e642d0b5))
+* repository.directory field has been added ([82e2345](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/82e2345880c4011971b193ebd87eedbb1c804ea6))
+* republish all packages ([b7ce3da](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b7ce3da1966f2f099d5d47aa13d62058cfa6fc98))
+* safe dependencies update ([cb66b4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cb66b4c7dd7666e4c0d3721a0b9a6953ab4885e7))
+* updated truncateString usage ([9d1eeb2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9d1eeb203cb66dec84275e38fb84537fead3b423))
+
+
+### Dependencies
+
+* **FF-4699:** change product -> snack divider ([bd49fc6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/bd49fc619626923b0278b7b72221ad1aca7800f8))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* minor update ([2e583c5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2e583c5881a6534205a2659c2ebcd6582d3076df))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+
+
+### Features
+
+* add heatmap chart ([43dbd9a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/43dbd9a6d5cc3e05272899f8a2f6f0d4e621bc67))
+* adds className prop to charts ([7c50f43](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7c50f43a9ef1933a658bc308f1439fd27f3520b9))
+* adds custom props to override styles and cellRender ([da71f07](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/da71f077c76dad160f0651d3af88023f053c150c))
+* **FF-0000:** remove legacy packages with linaria ([29a468e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/29a468ea525ff94f3516a5baea0618a0fe6ffb7e))
+* **FF-3478:** add deps graph addon ([0f59586](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+* **FF-5338:** pie chart segment click functionality ([edee45d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/edee45d44942a2a0caf4ebc8485a05a18b5a504c))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **FF-6232:** added color prop to legend ([3e8c495](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3e8c4951cdc17b14bef4dab8f8eace615ed4b7d8))
+* **FF-950:** introduce bagel chart component ([1ec8bf9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1ec8bf9857b24f662dbb4526f2b77f5ea31f5674))
+* package has been renamed to @sbercloud/uikit-react-charts ([686647f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/686647f3c810de536753519a6a2525dff3d4185f))
+* Pie Chart added (AICD-1689) ([7b02a6b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7b02a6b61a466242058c4b17d046924ca82121b3))
+* utils first stable version (AICD-1813) ([ed13c42](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ed13c421ac564f6a5b155780ce473c78eb94aacc))
+
+
+
+
+
 ## 0.13.19 (2025-12-17)
 
 ### Only dependencies have been changed
@@ -679,7 +750,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.8.19](https://gitverse.ru/cloud-ru-tech/uikit-product/compare/@cloud-ru/uikit-product-charts@0.8.18...@cloud-ru/uikit-product-charts@0.8.19) (2022-05-18)
 
-**Note:** Version bump only for package @cloud-ru/uikit-product-charts
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-localization@1.1.0]($PUBLIC_PROJECT_URL/blob/master/packages/localization/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@9.0.0]($PUBLIC_PROJECT_URL/blob/master/packages/utils/CHANGELOG.md)
 
 ## 0.8.18 (2022-05-16)
 

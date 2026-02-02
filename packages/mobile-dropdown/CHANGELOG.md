@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1047:** remove inner scroll refs ([5d762d0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5d762d01cdfc0f248e7534237cf4035cb01deb46))
+* **PDS-1183:** view search input for empty state ([87e4867](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/87e4867e932ff9985d42995d1c2d8588a71939c0))
+* **PDS-2643:** up snack deps, export prop typings for adaptive components ([62193bd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/62193bddb7eff923cae48de90206374d82dc80a3))
+
+
+### Dependencies
+
+* **FF-00:** up deps ([9e2378c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e2378cef18622b7cbe30fdd43cfa80b1a2eb485))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5186:** up snack deps ([de10652](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/de10652ca4f8ac2a5f11dc2c0f9bb01e17f30c3c))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-559:** up snack deps ([e0a0fbd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e0a0fbd952420dd0031e3e4f8adef8c50375f31d))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-955:** up snack-uikit deps ([8e7bbb9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e7bbb9ae9cef8da37932e45fa76038e59ee2f98))
+
+
+### Features
+
+* **FF-5148:** add mobile-dropdown package ([65555bb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/65555bbd9ea1cb7dff127c97ca5d9ff0e1b26977))
+* **FF-5189:** upd mobile list ([51c0092](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/51c0092f3795ab8f65774dcd0a7e42847166d49e))
+* **FF-5361:** add adaptive component versions ([0e1ddce](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0e1ddceda6085479ea8365f2b034b326da366fbb))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **FF-6923:** add mobile adaptivity ([336583e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/336583ed16eb0d42e1649a350c32cf33a54a3ac9))
+* **PDS-1081:** up deps, add virtualized prop ([8917f50](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8917f50b0fb47a7236946a99306c14790a497088))
+* **PDS-2255:** adaptive phone field ([960443f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/960443f7b962822c0e7871da663572d0ace4f945))
+* **PDS-2556:** add closeOnPopstate prop ([f6d2000](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f6d2000a7f29c976732ac53b759cbd342bde6bd7))
+* **PDS-559:** export list helpres ([4a2ae51](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4a2ae517ccf4920ac569bd2a0a716785f49309e8))
+
+
+### BREAKING CHANGES
+
+
+* **PDS-559:** change api of mobile-dropdown, add mobile-droplist ([1c68e3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1c68e3eebe5f821cc17906821c583bb5c46c259b))
+
+
+
+
 ## 0.9.32 (2026-01-29)
 
 ### Only dependencies have been changed

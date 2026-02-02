@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-4183:** bump card version ([68926ca](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/68926ca571f449072bcf1ccc0f8b21b56cb61b48))
+* **FF-4490:** add checked property for CardServiceSmall ([fbd85fd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fbd85fd4618928f5308f5775980fd7e298a8e753))
+* **FF-5383:** update snack packages versions ([3fc6a2f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3fc6a2f940db810e5c514c7fb3d30350b291c61b))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **LK-3391:** card banner image size ([3c30b1f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3c30b1f1e76f0e2e274fcba96fe48879280bac22))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** updated deps for card-predefined ([898f0e4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/898f0e4e00f96d225d38d5c73d8d6952e0daff6d))
+* **PDS-92:** add stopPropagation on onClose; add event to onClose ([f3c243b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f3c243bc78f4e86b5cd5c9032602cdfdbd499284))
+* **PDS-955:** allow to click on favorite when link is provided ([05461d8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/05461d8ff857cda2ac1d3170a7b7e170eb6609fb))
+
+
+### Dependencies
+
+* **FF-00:** up card version ([2919160](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2919160de0c7c28480e38c1f64475dbd470d1410))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-83:** update deps ([491b47d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/491b47d42acd8cb179b0d66c616033d61fe95d7e))
+
+
+### Features
+
+* **FF-4133:** add card-predefined package ([55282c0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/55282c0718b18862ed73e765afbfaae6e39bf51a))
+* **FF-4473:** add href prop to cards, cardSuggest promoBadge ([47470e9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/47470e9ee3fe2f03d45557807825db06084873fa))
+* **FF-4478:** add disable props ([66c2097](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/66c2097c715b393ea8c1cf6a92f461a3aed6498c))
+* **FF-4478:** set promoBadge absolute position in CardServiceSmall; add outline prop ([f607b84](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f607b849704d0779cea29451dcc59ef189ab8626))
+* **FF-4578:** add size prop ([1373c4d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1373c4df3a77979fd33b423597fc6174d3da2c83))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **PDS-2672:** add ability to pass predefined promo tag to card-service-small ([efeb1c3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/efeb1c318289fb1ea2587a044c035890e200763d))
+* **PDS-955:** add favorite toggle to card-service-small ([46521e1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/46521e19f9e35233f5f85f8033e24f97932efa3b))
+* **PSD-15:** add disabled/truncate prop to CardServiceSmall; add onClose cb to CardBanner ([a23979c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a23979c9a137a6632c9f3c15200d3da5fc87c36b))
+
+
+
+
+
 ## 0.8.22 (2026-01-29)
 
 ### Only dependencies have been changed

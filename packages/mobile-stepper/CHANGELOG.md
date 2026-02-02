@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **ONB-2187:** export adaptive from package ([810eabd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/810eabd70f65a6b88cbc372fd7b735ccd27f1282))
+* **ONB-2187:** fix contexts for adaptive stepper ([e23f22a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e23f22af39a954d6607153b9d4c438f442092421))
+* **ONB-2187:** step width fix ([fb1ab5d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fb1ab5d517fc7952d5f4f321921cf9e0b05a094d))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-2643:** up snack deps, export prop typings for adaptive components ([62193bd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/62193bddb7eff923cae48de90206374d82dc80a3))
+* safari icon hidden issue ([d80343f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d80343fc9a685730874968bee7656b9fe388d91e))
+
+
+### Dependencies
+
+* **FF-00:** up deps ([9e2378c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e2378cef18622b7cbe30fdd43cfa80b1a2eb485))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **FF-6240:** update loaders ([b56f38f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b56f38f22bcacbf3d879a39eeaa0ac8ca2578d3d))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+
+
+### Features
+
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **ONB-2187:** stepper mobile component ([a8d8d46](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a8d8d4675774b3667f88d21c558aa1a09404bfbb))
+* **PDS-848:** mobile stepper ([81777b9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/81777b9fb50d6edf01db9414526682868e4742dc))
+
+
+
+
+
 ## 0.3.75 (2026-01-29)
 
 ### Only dependencies have been changed

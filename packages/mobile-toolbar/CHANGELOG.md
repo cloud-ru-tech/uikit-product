@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-4704:** make type for filters in generic non required ([a16d1e5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a16d1e5ad15085035301533f74f35c39e442f534))
+* **FF-6758:** typescript issues ([520f8f0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/520f8f0c18ce3c5e74d6e05e6b7b72afa7a69771))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-7117:** up snack field deps ([465eb49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/465eb49b46a72ebb8a43d851f101cb7c0827e151))
+
+
+### Features
+
+* **FF-6788:** add initialOpen prop ([e7e7712](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e7e7712f87c8b4348e95a8d4350213ae461023ad))
+* **FF-7319:** persist state functionality in mobile toolbar ([95099d3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/95099d3de3883152d2eb8066537c4bb8ad74ed92))
+* **PDS-1081:** add mobile toolbar initial version ([226ce69](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/226ce6901f6570a4f9cc8665188991bce1a95594))
+* **PDS-2643:** add AdaptiveToolbar component ([5606e63](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5606e63adeaffc837c3bfe89dfe95de46b3c945c))
+* **PDS-2843:** new way of bulk actions display ([347f8c2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/347f8c24dbed37a63573af0782c5384169c335a8))
+
+
+### BREAKING CHANGES
+
+
+* **FF-6484:** up deps ([578fdbb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/578fdbbb604085655bd316308440976db38d25ce))
+
+
+
+
 ## 0.5.1 (2026-01-29)
 
 ### Only dependencies have been changed

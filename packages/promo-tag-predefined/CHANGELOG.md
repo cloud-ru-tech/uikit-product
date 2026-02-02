@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **LK-4987:** height of tooltip wrapper ([d9379ad](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d9379ad1a387223d1058499caa14f01a7902efa9))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+
+
+### Features
+
+* **LK-4987:** add PromoTag Predefined ([8716c3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8716c3e6041368fd3fd2d9995546b1dbb9988a7b))
+
+
+### BREAKING CHANGES
+
+
+* **PDS-2672:** remove PreviewPromoTag, add PromoTagPredefined component ([380be44](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/380be447e379f99272f186365c187c4952c749b0))
+
+
+
+
 ## 0.2.11 (2025-12-17)
 
 ### Only dependencies have been changed

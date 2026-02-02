@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-3910:** update figma-tokens ([d0a6a63](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d0a6a63f8982cc84a6840a575bb8e4b65c471c87))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **ONB-277:** fixed type for incoming change state function ([92cfd52](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/92cfd52a4856041cc64684af8956e2f487c19502))
+* **ONB-463:** changed types and added disable scroll prop ([044ebbf](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/044ebbf55dfc62d08eccbe168a581df8af0d4dad))
+* **ONB-593:** welcome-tour backdrop changed to static ([de8bc81](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/de8bc81eb564f731055d3ae667189993d521384d))
+* **ONB-655:** fixing scroll ([0b5147b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0b5147b58151a8e0127656fd415f39b375d08e57))
+* **ONB-929:** changed data-test-id for close button ([a50bd1c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a50bd1c57fbcfa8359467dd4cdd5d0f6352bd606))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** replaced tokens import to snack-uikit scoped package ([dd13d3b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dd13d3b7134a4b0d4696830dcd78c0e790700d09))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+
+
+### Features
+
+* **FF-0000:** remove legacy packages with linaria ([29a468e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/29a468ea525ff94f3516a5baea0618a0fe6ffb7e))
+* **FF-3478:** add deps graph addon ([0f59586](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **ONB-1182:** change step type ([4c23040](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4c23040057a43314c10d79069b1813cbd2a4973f))
+* **ONB-1278:** added new prop for welcome tour ([c4031dd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c4031dd64a26f5ab3f2a724e86928f3753ea3fbd))
+* **ONB-1720:** migrate welcome tour to snack ui ([11e0613](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/11e06135ada134597e5f06248aaee233ba97598b))
+* **ONB-277:** add new component welcome tour ([cd355da](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cd355da13e0d9c9bd7b9eb4eff347d8b622208bb))
+* **ONB-558:** fixing style for steps without content ([fdf0156](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fdf01561ef4d9606203161fb020bd80402e0812c))
+* **ONB-783:** added data-test-ids for elements in welcome tour ([08023d6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/08023d6290994102823cc3c13d9e6aee4bb7564c))
+
+
+### BREAKING CHANGES
+
+
+* **ONB-593:** added callback props to buttons in welcome tour ([e83180b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e83180b4b0fdc3152ba4cf1135a9f778723f935f))
+
+
+
+
 ## 0.10.72 (2026-01-29)
 
 ### Only dependencies have been changed

@@ -3,6 +3,80 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-4988:** stylelint deprecation warnings ([a21bc05](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a21bc05bf1e843e58193d01aaf81b066c2e24cd7))
+* **FF-5148:** add sort icon ([18f4a5d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/18f4a5d2c8fb3bdb4c124924da4d9a1b59537793))
+* **FF-5148:** layout buttons are updated on props change ([94d2741](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/94d274156e1397fd8744387a1b1d0df97a3a62da))
+* **FF-5186:** fix incorrect button position calculation when actions are changed ([e218e45](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e218e451996d60813850f72cef8830aeaaa92bb8))
+* **FF-5830:** make component ssr-safe ([f3001c6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f3001c6e83c15094b8ac123d00568da35e449b64))
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-6758:** typescript issues ([520f8f0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/520f8f0c18ce3c5e74d6e05e6b7b72afa7a69771))
+* **FF-6923:** disabling search for less then 5 items in mobile sidebar ([70aa56f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/70aa56fdc0107c5532ce021f1bf730f3b1a7e99f))
+* **FF-7390:** add hasSearch prop to sidebar props ([93c720f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/93c720f956ecdb964d872c880f25af12e57db6a2))
+* **FF-7390:** up items limit ([1c77a4e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1c77a4e761fd1dab2610ef6eaf85a99e317af459))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-2121:** add mousewheel condition into click on links in sidebar ([a694671](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a694671c5dd07cf393ef68340f5b23747b34e87e))
+* **PDS-2643:** remove actions container if all of them are hidden ([54b2cf2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/54b2cf2d08503219e4354c8c6b2c8f639d38468a))
+* **PDS-3214:** MobilePageServices links in hidden items kebab ([8a8334e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8a8334e6a69ab3752b5681b6ca960383a84d3afa))
+* **PDS-559:** use mobile droplist instead of dropdown ([849cc13](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/849cc13668a5c9234039262a28f1278c0fb276f8))
+* **PDS-559:** use mobile-tooltip ([b479f3b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b479f3beab5f60f795e69de2340a55abb4acddba))
+* **PDS-848:** fix deisabled sidebar item view ([e2dcbed](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e2dcbedfdbe1ed815e4519e6c29c3988ec6dc552))
+
+
+### Dependencies
+
+* **FF-00:** up deps ([9e2378c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e2378cef18622b7cbe30fdd43cfa80b1a2eb485))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5186:** up snack deps ([de10652](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/de10652ca4f8ac2a5f11dc2c0f9bb01e17f30c3c))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-559:** up snack deps ([e0a0fbd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e0a0fbd952420dd0031e3e4f8adef8c50375f31d))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-955:** up snack-uikit deps ([8e7bbb9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e7bbb9ae9cef8da37932e45fa76038e59ee2f98))
+
+
+### Features
+
+* **EVODBAAS-4061:** add placement prop for tooltips in page sidebar ([9f28e67](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9f28e673b9b42948d65f9923b25454591346be43))
+* **EVOSCV-1832:** added additional props in mobile actions ([06d5c21](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/06d5c21ec691f76cefeffc0e31ab993439c6bbb1))
+* **FF-5148:** add mobile-layout package ([ab11808](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ab11808cfbd8135b4d9b021227ed1f7550c9bab3))
+* **FF-5148:** add MobileEmptyBlock ([7682fa6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7682fa642482297b647fff2925a200641a1a7fe4))
+* **FF-5186:** add mobile-page-form ([8996200](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/89962009c91ea71aa46f6379e9ac83603e0d9418))
+* **FF-5187:** add afterContent to mobile page services ([ace5da7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ace5da70b45a0e021421c939760185dcfa77ccfc))
+* **FF-5361:** add adaptive component versions ([0e1ddce](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0e1ddceda6085479ea8365f2b034b326da366fbb))
+* **FF-5498:** add data-test-id in mobile and page layout ([74ec82e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/74ec82ef221775af3da71321d1d257aa76c1b96e))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **FF-6923:** add maxVisibleItems for mobile actions on page services ([f91e7d5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f91e7d55325da06dd9c9afdfaf06453ed3cbc6db))
+* **FF-7359:** add optional prop buttonType for droplist action in PageServices ([11fffe1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/11fffe16f3cebe35afb335f0817f3886fdfd58d6))
+* **FF-7390:** add group items into sidebar ([5ac5579](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5ac5579e86b3c05b18cb89c59ead86b6782858b2))
+* **FF-7418:** add MobilePageCatalog component with adaptive layout support ([1cdd7d9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1cdd7d9fe2d977d1cb85bf822b4c9daa6ddd674d))
+* **PDS-1183:** add collapsed list and search for MobilePageServices ([ea462cf](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ea462cf24d13bb2350b4908f1675a99b684d882f))
+* **PDS-2643:** add AdaptivePageServices component ([3fbdcc7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3fbdcc7d61139a8b243840b447ed8e09a37ecbab))
+* **PDS-670:** added margin-top to subheader ([bf802f4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/bf802f4f9f580c30b0279735d104929771fec5d0))
+* **PDS-685:** add mobile card banner ([de39207](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/de39207320cf5b15001c26645d0ca4dcf698551c))
+* **PDS-799:** added footerItems ([a79fab2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a79fab221491e76bba6dd2bb0b7464468adf5825))
+* **PDS-840:** add stepper & sideBlock into PageForm/MobilePageForm ([7f7c55d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7f7c55d8039caf451aaa9840030927caed2ac844))
+
+
+### BREAKING CHANGES
+
+
+* **FF-6958:** add dropdown/droplist/kebab/quota action variant; move to right side kebab action on mobile ([d26f391](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d26f3910b7107c24b9a3fb02141d6c20718625e4))
+* **PDS-2121:** open link on new window with cmd, href is required ([9d280d9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9d280d9881d444150a10e175da6fedb3b88b1da3))
+* **PDS-308:** add before/after Headline nodes; remove prefix ([6cc718c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6cc718c8786de7d9dad87d7fbf2a13933d3af1cc))
+
+
+
+
 ## 0.20.22 (2026-01-29)
 
 ### Only dependencies have been changed

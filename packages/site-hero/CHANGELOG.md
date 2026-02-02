@@ -3,6 +3,63 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-6220:** pass layoutType to site-video ([1b13377](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1b1337745b7c9c15295a2910a037a75399a23de7))
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1105:** hero zero padding, colors and layout updates ([6c41c42](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6c41c42be51d096eca70d72b01b08b8888dedcf3))
+* **PDS-1112:** hero event flexible category prop and optional format, audience props ([34ef553](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/34ef55339bcd7d3c42f453f82da7d87df144947e))
+* **PDS-1359:** site hero minor refactoring ([d67554c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d67554cf828544d699805dccbaf7cac0a281f6de))
+* **PDS-1381:** site hero background color minor improvement ([656e274](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/656e274540377f077ffa08c97fa334b6246efc21))
+* **PDS-1809:** h1 tag in hero ([a8e07f2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a8e07f2dd6411f222a139b375f1a82fbf51c8569))
+* **PDS-1861:** add pre-wrap for HeroMain title ([2ca165b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2ca165b24b88736499322360350d19011550cc62))
+* **PDS-1903:** update z-index for hero main ([e74b444](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e74b4443cb4ff655f6337cf5472a61bb83980df8))
+* **PDS-1946:** add prop for text alignment ([1ed765a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1ed765a1c4488093299e4d70c95d5a44487f4119))
+* **PDS-1946:** add topPosition prop in SiteNavbar ([b63ad37](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b63ad37335454c46868af5bd9151c7384832e309))
+* **PDS-1946:** contentAlign for HeroZero ([e71ca72](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e71ca72b762f567a74445c2c42897856a7112c15))
+* **PDS-1946:** default backgroundColor, richText for title and description in HeroMain ([b100148](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b100148cf283067e04132e37aea9fc3a2cc30d96))
+* **PDS-1946:** replace predefined tags in HeroMain with TagSpecial ([8912e09](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8912e099402df87b35c485c3d456e2904205f8c7))
+* **SITE-10072:** redesign HeroSlider ([30b951b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/30b951b16af801e5215907a9644b9b4e82eac3ce))
+* **SITE-10411:** add missing HeroSlider styles ([fdc9edf](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fdc9edf140c657c6857ba9496fafe81e8ae0e32e))
+* **SITE-10515:** update hero slider carousel deps ([0deb215](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0deb215e38183435ac4f12d38aaaff80e929c1ba))
+* **SITE-8603:** HeroEvent place link style fix ([d498545](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d4985454bf9f58bc7ec2835779f3dccc683a381b))
+* **SITE-9133:** HeroZero fix tag ([6746d44](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6746d44ca0a1aead0a44c03295fe33a3d96967e7))
+* **SITE-9165:** HeroSlide image width ([2b11dd1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2b11dd1bbb2b82b707e47917e3f811851c7e03b3))
+* **UIIAAS-1251:** docs ([0226b84](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0226b8456be07d407c614979552ce88023eb8bd9))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-6881:** up carousel ([8b15ad2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8b15ad20732fa5ed739ed28eeeca6a088386d810))
+
+
+### Features
+
+* **FF-6220:** hero slider ([c255bbc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c255bbc349a0fbbe866c45ed5de978abd488ebc3))
+* **PDS-1105:** hero zero ([7495377](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/74953773f3e82d421452ea9e186bc71d0872db46))
+* **PDS-1106:** add hero event ([3aba245](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3aba245273589ce28bd6687ceba1f926e51f3e19))
+* **PDS-1359:** site HeroMain ([4668a3b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4668a3b168eb3cb3faa585a9a2291b277d7f4338))
+* **PDS-2014:** change platforms prop in HeroMain ([044dc14](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/044dc143bd2da308d9643a7fb3b748bffdd74a3a))
+* **PDS-2016:** add video in HeroMain ([f371dd1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f371dd1841b515df2faf92ac00ef47ae098d712f))
+* **PDS-2240:** rename the site-video package to site-media ([a00fe35](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a00fe3542164d33ff10467f990f7abfe45b451d4))
+* **SITE-10320:** edit hero main ([a85a31d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a85a31d49635867e75ae1dffec8ecb510d95a71e))
+* **SITE-10338:** update gap site components ([9afded2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9afded24fb470672c8f92be51ecb3fa147ba7bf1))
+* **SITE-10394:** add border radius ([5e950bc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5e950bce806fab0a3213eef811a7ebcb411f1860))
+* **SITE-10424:** edit styles ([c699b5b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c699b5bd4db41da4bdf613a5bf4a508d4fb065bd))
+
+
+
+
+
 ## 1.3.3 (2026-01-29)
 
 ### Only dependencies have been changed

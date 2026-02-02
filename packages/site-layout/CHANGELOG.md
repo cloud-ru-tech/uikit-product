@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7076:** remove unnecessary extractDataProps usage ([d6b87c7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d6b87c77c0b24309dfe1e1abd7834197fd5a1abe))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1105:** changed layout sectionwrapper dom element to section ([135a528](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/135a528548cf3fde6f163a7a3fc9c85e35665eb7))
+* **PDS-1105:** site layout content wrapper full width ([d044add](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d044add8eff516d02c32ddded27b54b55be1c43b))
+* **PDS-1106:** fix some styles ([1a47066](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1a4706620a02b65ef67f970959607248a4ce6f00))
+* **PDS-1112:** site layout header wrapper improvement ([1ab8ea1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1ab8ea1c80f23e31fa338ced8fe1f913302e13f0))
+* **PDS-1381:** data attributes support for site layout sectionWrapper ([7997f3d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7997f3dfd29cdb49364f839a1cbe18e3fb3e737b))
+
+
+### Features
+
+* **PDS-1090:** site layout ([0af17b6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0af17b670ef093e477ccc811fdc9de8b59bfaf40))
+* **PDS-1701:** add id prop ([359c2d4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/359c2d41920891e8b1e8dbcecb0da9580b3bf54a))
+* **SITE-10318:** edit layout content wrapper style ([174419a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/174419a9bfa32f8c16aa6765f809dc8c4946ea8e))
+* **SITE-10318:** edit layout styles ([d4db088](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d4db088946220586887d3ea7fd2bfe6cf7fc6bd0))
+* **SITE-10382:** add prop for full width content container ([f7ebb0c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f7ebb0cc6ae7240b14b65105fab589e230a336da))
+* **SITE-9111:** update title calculator ([99edca2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/99edca2e97a47a5442606d6ce8194c76be4c1480))
+
+
+
+
+
 ## 0.5.2 (2025-12-17)
 
 ### Only dependencies have been changed

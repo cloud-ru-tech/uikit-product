@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1946:** add topPosition prop in SiteNavbar ([b63ad37](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b63ad37335454c46868af5bd9151c7384832e309))
+* **PDS-1946:** return text in onItemClick handler for SiteNavbar ([149f53a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/149f53a66d8444edf2a8aa762ab10850380cad37))
+
+
+### Features
+
+* **PDS-1616:** site navbar ([ba733c9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ba733c9dd783cb64c3a0cb37d5a2877b84a96fc7))
+* **PDS-1616:** site-navbar props update ([fcba50c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fcba50c5ac604d183eca997a6017f6a2d6fe46ea))
+* **SITE-10320:** edit hero main ([a85a31d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a85a31d49635867e75ae1dffec8ecb510d95a71e))
+
+
+
+
+
 ## 0.3.2 (2025-12-17)
 
 ### Only dependencies have been changed

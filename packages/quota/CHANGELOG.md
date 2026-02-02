@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-6958:** update props quota dropdown ([ab39dc6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ab39dc6f8e4b8a4e1029f39f36822f45146546c3))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-2121:** proper package for icons, remove unused ([70ab7f2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/70ab7f2ccf209831da9417c04f9e7f87ecd9a215))
+* **PDS-876:** quota card limit error ([d12d663](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d12d663111336c5d9f38d912f323b09230e2a3c4))
+
+
+### Dependencies
+
+* **FF-00:** up deps ([9e2378c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e2378cef18622b7cbe30fdd43cfa80b1a2eb485))
+* **FF-00:** up deps ([7622f81](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7622f81c02e726a758eb8cc49f54967b9e1288e4))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+
+
+### Features
+
+* **AICJOBS-3074:** add custom type to QuotaUnitType ([934e71b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/934e71b46ff0e04b4123e4ac9ace67be7d3b3520))
+* **AICJOBS-3074:** add custom type to QuotaUnitType ([3d4c2cc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3d4c2cc4e3081451f76d5a500c6f8f75c64f17fe))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **PDS-1095:** update quota component ([a19c746](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a19c7468fbdd5f8dd82042ba2c2ff97c8ba3eede))
+* **PDS-32:** add quota ([4ed2d70](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4ed2d70caea792ca5dbad8dd8ccd0a63df119e1d))
+
+
+### BREAKING CHANGES
+
+
+* **FF-6958:** add layoutType; add export utils & QuotaContent ([045e306](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/045e306495f7c7bdd46ab279b87f7121880b2cfb))
+
+
+
+
 ## 0.6.16 (2026-01-29)
 
 ### Only dependencies have been changed

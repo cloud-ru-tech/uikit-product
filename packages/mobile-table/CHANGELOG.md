@@ -3,6 +3,70 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-00000:** fix loading & noData state conflict ([bf6c5da](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/bf6c5daa3b3454bc6ab94776ea70feb2295612a4))
+* **FF-4704:** make type for filters in generic non required ([a16d1e5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a16d1e5ad15085035301533f74f35c39e442f534))
+* **FF-5186:** add more contrast between label and value ([8ec261d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8ec261db0368370310a94e13dfc045e0bb30503d))
+* **FF-5186:** add word-break for text content ([75512af](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/75512af978d4c5248bf564cab9e7463527048fb0))
+* **FF-5186:** decrease number of items in pagination ([04a36a3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/04a36a3bbb065dcce7f5939f507bb946e1dcbaf0))
+* **FF-6923:** typings ([bdddcb2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/bdddcb257758b4d4f3a23a4f8792ca2f6159b31c))
+* **FF-7578:** fix status column ([a1314f5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a1314f5c6017dc3ab34aa63067031ab466e7d7dc))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-3244:** update deps versions ([52abf44](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/52abf44209b4f9ed6750e447cadb4b9ec31420ab))
+
+
+### Dependencies
+
+* **FF-0000:** up snack deps for mobile table ([8e251fd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e251fd0815222ba6f70f40a6e716b57583b01a7))
+* **FF-00:** up deps ([9e2378c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e2378cef18622b7cbe30fdd43cfa80b1a2eb485))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5186:** up snack deps ([de10652](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/de10652ca4f8ac2a5f11dc2c0f9bb01e17f30c3c))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-3156:** up table ([8f97cb9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8f97cb9096de5a4d74ffe587d6dd708975b7ba6e))
+* **PDS-559:** up snack deps ([e0a0fbd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e0a0fbd952420dd0031e3e4f8adef8c50375f31d))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-955:** up snack-uikit deps ([8e7bbb9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e7bbb9ae9cef8da37932e45fa76038e59ee2f98))
+
+
+### Features
+
+* **EVOSCV-1833:** added mobile server table ([867fd20](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/867fd205fffc27a2b99a5b454051cbba6e5f3ec8))
+* **FF-5189:** add sorting to table ([9d6980c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9d6980cd8adc49494c52b1f14ae38e96f9f425d9))
+* **FF-5361:** add adaptive component versions ([0e1ddce](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0e1ddceda6085479ea8365f2b034b326da366fbb))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **FF-6788:** add initialOpen prop ([e7e7712](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e7e7712f87c8b4348e95a8d4350213ae461023ad))
+* **FF-7319:** mobile table persistent filters state and structure refactoring ([80e26a3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/80e26a317a9b25eb8af327329a4b14d47e6b8b60))
+* **FF-7473:** add disabled state and HideToggler support for row selection in mobile table ([f0f7517](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f0f7517d45ef8f5580865951790238426b96fc16))
+* **FF-7560:** add status column support to mobile table ([2589830](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2589830b331efbc93ca22cbf91009a1e1be0745f))
+* **FF-7560:** add table sorting and column settings support to mobile table ([f6c47c0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f6c47c0bce3f47ad2098b21d9520d244f32f31a2))
+* **IAM-5889:** up @snack-uikit/table deps ([8f56ef4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8f56ef440f8b8b9b17f953352deed0071f7d7ddb))
+* **PDS-2651:** add row selection ([b90f82f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b90f82fc34bcb5546b05d43bf0e398040e288a09))
+* **PDS-2651:** fix selectionMode multiple name, add bulkActions ([e3445fe](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e3445fea9d0bd96140c52b7391f0fd0263b29643))
+* **PDS-2843:** new way of bulk actions display ([347f8c2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/347f8c24dbed37a63573af0782c5384169c335a8))
+* **PDS-559:** add mobile-table package ([5b2f39b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5b2f39b4c817e6e39ad4e0a9612789d6bf12a9ce))
+* **UIIAAS-1251:** added FieldDescription & FieldName ([e03ba16](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e03ba16f0bbe62d0c00e7e109727a4b49f13fc6b))
+
+
+### BREAKING CHANGES
+
+
+* **PDS-2643:** rename types - TableProps -> AdaptiveTableProps, ServerTableProps -> AdaptiveServerTableProps; up snack deps, export desktop typings for table & server table ([b5fe447](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b5fe447165b96612353557dd544e1a8868b19e19))
+* **FF-6484:** up deps ([578fdbb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/578fdbbb604085655bd316308440976db38d25ce))
+* **PDS-1081:** use filter props from toolbar for columnFilters ([f2292aa](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f2292aadfa442a6af701d3607227c6723ec5219c))
+
+
+
+
 ## 0.17.1 (2026-01-29)
 
 ### Only dependencies have been changed

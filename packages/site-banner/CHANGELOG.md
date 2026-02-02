@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-6220:** replaced site-banner local erid with the one from site-tag package ([8a956bd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8a956bd64088ba99229b565595b89d964485e3c7))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1797:** upd target of buttons and styles ([11e4743](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/11e4743f1ef953184e629104a4d169522f5fbb46))
+* **PDS-1831:** remove min-width ([c6c63c6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c6c63c6b2becb10019b460004d3a665c78cefbe7))
+* **SITE-9316:** BannerTertiary tablet layout styles ([7625399](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/76253995ea2b89ac5822608421ea733c65809c74))
+
+
+### Features
+
+* **DOCDEV-1330:** added erid right section props for BannerTertiary ([bd3ca8e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/bd3ca8e7a3ee6a374e16d01abf75a05e7bced683))
+* **PDS-1711:** add site-banner package ([53ecd7e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/53ecd7e9e4c9cf7007275fe185560e63304ad448))
+* **PDS-1711:** add site-banner-predefined package ([89b4e1f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/89b4e1f7ade0b102f901d1bcf478fb2a2139c5c1))
+* **SITE-10394:** add border radius ([5e950bc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5e950bce806fab0a3213eef811a7ebcb411f1860))
+* **SITE-10478:** add border radius for banner primary ([a6accec](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a6accecb766c5ef90ae767b6f39dc2acfb5acfa1))
+
+
+### BREAKING CHANGES
+
+
+* **PDS-1391:** add BannerSecondary and BannerTertiary ([1c1ee33](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1c1ee3362aa9b5fbb29ae3e5a99961d5fea4a78c))
+
+
+
+
 ## 0.5.1 (2026-01-29)
 
 ### Only dependencies have been changed

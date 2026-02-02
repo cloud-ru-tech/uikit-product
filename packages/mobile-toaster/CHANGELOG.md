@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-5734:** eslint fixes ([4ba62cc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4ba62cce879119e53d38e4e91f51c1147cbdd46b))
+* **FF-6589:** update deps in order to fix vulnerability ([906ed2c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/906ed2c63ff40dcfec6770fb9a19769909a6dac9))
+* **FF-7318:** bug with double animation in safari and ios ([dee5dbc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dee5dbccd02b809e49a8d02df13e395ed7c740df))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1215:** add -mobile prefix to toaster styles ([41aa826](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/41aa8264ee0cc84634cdbf82f0d4273a9eba9b89))
+* **PDS-773:** css classes priority ([5ab2b37](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5ab2b3745939823e0e37ad1c5586ae75876e17dd))
+* **PDS-773:** on mobile scrolling not working ([b863114](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b863114907f293826cb586bdac58c89c57d1f65b))
+* **PDS-773:** scroll container position and styling ([ded5686](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ded5686fa3344fb8fd3ca963a8c4e7d8a409c3c2))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-6240:** update loaders ([b56f38f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b56f38f22bcacbf3d879a39eeaa0ac8ca2578d3d))
+* **PDS-2643:** up snack deps ([fa8ff9c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fa8ff9c0cdd79346185f219073c34872cc0fdfb7))
+
+
+### Features
+
+* **PDS-441:** toaster upload ([e292bb9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e292bb911845f2d958358a92db71bd3c129bdff9))
+* **PDS-543:** userAction mobile version ([094c906](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/094c9061932139e146e880cbc2f3aa14aeb45d87))
+* **PDS-773:** add mobile-toaster ([f9bb25d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f9bb25d0091cdd2248a1b4002ca3178bcec3746a))
+
+
+
+
+
 ## 0.1.36 (2026-01-29)
 
 ### Only dependencies have been changed

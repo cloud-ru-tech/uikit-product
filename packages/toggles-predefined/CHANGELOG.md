@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **AICNTB-1503:** exctractSupportProps moved to Card component ([b3a0e32](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3a0e32583c2d121c676273221b1054d0a1e6fd6))
+* **FF-5383:** update snack packages versions ([3fc6a2f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3fc6a2f940db810e5c514c7fb3d30350b291c61b))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **RAG-1030:** truncate prop in toggle-card ([5e78074](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5e78074cbfdb5f37874d109df552a81184afdc34))
+* **SVP-11371:** change metadata to description ([2c6206c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2c6206cb99bc899015ea9c742fb72c284b58f077))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-83:** update deps ([491b47d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/491b47d42acd8cb179b0d66c616033d61fe95d7e))
+* **PDS-955:** up snack-uikit deps ([8e7bbb9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e7bbb9ae9cef8da37932e45fa76038e59ee2f98))
+
+
+### Features
+
+* **FF-3643:** add toggles ([0020648](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/00206481d1149012773ab3a754804664f3cd95c4))
+* **FF-4183:** add truncate propery ([dd465c5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dd465c5eedc08c375239cb1e6e4aefaf82feb0d6))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **FF-6410:** add name prop to toggle card ([d72116f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d72116f2c7dcfbea7fad264c73716fef343440a4))
+* **SVP-11371:** re-export useToggleGroup hook ([ab62b13](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ab62b133ce92c8e46f82140967cd172576f6fa31))
+* **SVP-12821:** toggle card promoBadge prop ([725abe8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/725abe8d64ffb333e9dbd6005d9f37ed6c951b42))
+
+
+### BREAKING CHANGES
+
+
+* **PDS-28:** remove SwitchRow ([4a754c2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4a754c20f8b6a1fd54e885434433d003b1790ed6))
+
+
+
+
 ## 0.8.18 (2026-01-20)
 
 

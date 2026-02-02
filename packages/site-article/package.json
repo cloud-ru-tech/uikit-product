@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-article",
   "title": "Site Article",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -37,7 +37,7 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/uikit-product-icons": "16.1.1",
-    "@cloud-ru/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-utils": "9.0.0",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/list": "0.32.5",
     "@snack-uikit/typography": "0.8.11",

@@ -3,6 +3,60 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-00:** fix onClick call ([b8465df](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b8465dfbed7d77a7a4a18c2a33357e99dba9d007))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1643:** remove site-tag size usage ([60836b1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/60836b1d4bfa5cfbbc32ba097d289f5535f90a0f))
+* **PDS-1770:** styles ([ac686d1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ac686d150e3592696845a5ab9e6558afaf9c7958))
+* **PDS-1897:** add outline prop for CardProduct ([ddef9b5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ddef9b52d7be0fc918f016b66fa99a1992fb126a))
+* **PDS-1903:** add truncate to card product description ([fd20ae4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fd20ae446bd19185371aa5df927f52041da59fcf))
+* **PDS-1932:** add richText for title in CardInfo and CardBasic ([f423d6d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f423d6d7244e9fdeca23b285c95f2f7f99d8f079))
+* **PDS-1946:** cardPartner image size ([515e551](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/515e551bf9dbb5d42abf1e956801b9ea501193c6))
+* **PDS-1946:** optional href prop for cardInfo ([e99b662](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e99b6626317d302ecbf5fcc80c77d76d88a4b17c))
+* **PDS-2007:** rich-text in CardPartner description ([39da8ba](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/39da8baccfccf445ac2fcc6ba60239f2bc3b2046))
+* **PDS-2016:** add outline prop to CardInfo ([51a6f5d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/51a6f5deeae1a3b2438a8239badc5ac4c7cea556))
+* **PDS-2016:** tag div for description in CardInfo and CardBasic ([b5e167e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b5e167e087646de00a513ebb2fc9f58ad0b98a3c))
+* **SITE-9175:** update CardBasic ([28fa632](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/28fa6324d2c10ee8ee510edfceb4102e97ba1daf))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+
+
+### Features
+
+* **PDS-1116:** add CardList ([1a5eeef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1a5eeef6db9aed49c18859e53984453ac6784bd0))
+* **PDS-1116:** add site-cards ([b64139c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b64139c45d473fb7c0ed24cc6789d613915a6ffc))
+* **PDS-1416:** add CardBasic and CardInfo ([56e4866](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/56e4866e50bc2758fbe557224b230adbe6b558ca))
+* **PDS-1437:** add card product ([d609135](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d60913578fd1f9a4bef4e2c9b28937f103df46a7))
+* **PDS-1513:** section carousel, case, clients, marketplace ([c849d32](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c849d32ce17cebc69c9aed2f926fdb2021b40a83))
+* **PDS-1531:** add card media ([4c8824c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4c8824c346ae274432af3221589db99d548847d5))
+* **PDS-1535:** add card-marketplace ([76a6a9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/76a6a9fc72b858e1f110e62a17618e4ec11b54e5))
+* **PDS-1539:** add CardPartner, add reusable hook useCardInteractions ([120aa7e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/120aa7e90227a9aef8a3f09ca93f94fc7adc8f98))
+* **PDS-1578:** add card-case ([aa3f86f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/aa3f86fc8385f59405bdce83c0cecc47e0a5a543))
+* **PDS-1618:** export helpers for cards ([0bf27cd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0bf27cdd44dd89a00a16dde8b71819a7874c70bc))
+* **PDS-1897:** add img as icon in CardProduct icon, disabled text-decoration on link ([7e4fbc7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7e4fbc73dcdcedccbe22781f07bbef82ab959f53))
+* **PDS-2066:** add outline to case card ([e365118](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e3651187b0eabdd11a01d73ce0de519ee6c7091b))
+* **PDS-2067:** set card media time prop optional ([8a695ad](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8a695ade6db51cc75f15d9f09bbcd3989f647172))
+* **PDS-2079:** remove TagPredefined and usage ([d0f8d2f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d0f8d2f590c09da1bf113b89372d0642ccf8b20d))
+* **SITE-10137:** update card product ([8f3b8e9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8f3b8e996c1d32e685ee3f2510a65f3a912eca9e))
+* **SITE-10394:** add border radius ([5e950bc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5e950bce806fab0a3213eef811a7ebcb411f1860))
+* **SITE-10441:** add border radius & fix padding bottom ([786639b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/786639b497ad7de71551f6dbbaab1b5b81facb85))
+* **SITE-9351:** add alt image for card media ([7c93b0e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7c93b0e0ef242d011b7c86c802b8136953581e64))
+
+
+
+
+
 ## 0.14.1 (2026-01-29)
 
 ### Only dependencies have been changed

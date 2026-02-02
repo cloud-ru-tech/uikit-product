@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-mobile-stepper",
   "title": "Mobile Stepper",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,8 +36,8 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "16.2.0",
-    "@cloud-ru/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-icons": "17.0.0",
+    "@cloud-ru/uikit-product-utils": "9.0.0",
     "@snack-uikit/loaders": "0.9.8",
     "@snack-uikit/stepper": "0.8.32",
     "@snack-uikit/truncate-string": "0.7.0",

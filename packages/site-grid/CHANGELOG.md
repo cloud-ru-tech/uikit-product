@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1377:** grid columns amount is now maxAmount ([fd90492](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fd9049205510ab67db87e8cb385bfb44e4cc5434))
+
+
+### Features
+
+* **PDS-1110:** grid component ([d4e3c55](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d4e3c55496fa05e399740957771e296c46d09fd3))
+* **SITE-9927:** add new value for grid gap ([3f1a8af](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3f1a8af9ababe2a2952cba6eafc1d56166002386))
+
+
+
+
+
 ## 0.1.10 (2025-12-17)
 
 ### Only dependencies have been changed

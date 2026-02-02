@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-2668:** fixed configSelector minWidth ([f7cd4f1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f7cd4f1b295807a3daaf1349890580bc2bb61922))
+
+
+### Features
+
+* **PDS-2668:** Config Selector redesign ([d381e02](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d381e02955aad9081ff1518b8959a0e2cfd1a568))
+
+
+
+
+
 ## 1.1.6 (2025-11-13)
 
 

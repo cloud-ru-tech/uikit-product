@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **SITE-10304:** update text site-selection-platform-text ([1365d3d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1365d3df7a9186c146fa755619f9b2fe320fe430))
+* **SITE-10317:** update icon site-selection-platform-text ([c2968f5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c2968f5733823a65facb1e95c9eb1a5d09b5adc8))
+* **SITE-10317:** update scss site-selection-platform-text ([69cb7e5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/69cb7e5c3f60f0db9699f94610a19b2bbe2b26c3))
+
+
+### Features
+
+* **SITE-10015:** add new component site-selector-platform-drop-list ([e76885f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e76885f0e40518790fdea43f23c054862a91f212))
+
+
+
+
+
 ## 0.1.12 (2026-01-29)
 
 ### Only dependencies have been changed
@@ -94,7 +115,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.4 (2025-11-25)
 
-**Note:** Version bump only for package @cloud-ru/uikit-product-site-selector-platform-drop-list
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-icons@17.0.0]($PUBLIC_PROJECT_URL/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@2.0.0]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@2.0.0]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@9.0.0]($PUBLIC_PROJECT_URL/blob/master/packages/utils/CHANGELOG.md)
 
 
 

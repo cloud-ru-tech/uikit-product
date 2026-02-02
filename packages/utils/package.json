@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-utils",
   "title": "Utils",
-  "version": "8.1.0",
+  "version": "9.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",

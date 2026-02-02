@@ -3,6 +3,75 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **CSS-0000:** fix select create props ([ed171da](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ed171da225e5b2c17c9f637c94faf6f5b7a3cf27))
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-6758:** typescript issues ([520f8f0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/520f8f0c18ce3c5e74d6e05e6b7b72afa7a69771))
+* **FF-6795:** change hint text size for touch devices ([6c98d87](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6c98d87caaabd02acdd0ba826d550bfdd9e3995b))
+* **FF-6795:** fix password tooltip for mobile ([fd025dc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fd025dcbfda95dd8dc251130c6fda1223dddb073))
+* **FF-6795:** hide support tooltip if not provided ([1a0bda5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1a0bda577a6a8839b7075dc2bd027619406eb764))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **GIGAID-314:** paste country detection ([abc9633](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/abc9633cee7e62cc4f5bb82287adf9a1f565ee0a))
+* **IAM-5156:** update types ([f1f4231](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f1f4231b75e4fbf1b86c13994dd4096b0e573863))
+* **LK-5807:** added value prop to textarea, used forwardref, changed max and min rows, updated disabled prop usage ([3f6211b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3f6211b7b08df44154aea7508e3c86bfc034c672))
+* **LK-6839:** repaint submitButton and textarea for Giga-helper ([49b1652](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/49b165277c94deea5ececcea54f41a1505424a99))
+* **ONB-3885:** hide password text error and disable button ([b111c79](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b111c79ddd2bf467ec44ef0a54edf97fe05e6503))
+* **ONB-3885:** show field error and tooltip text edit ([8e6d718](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e6d718a2a654537e01b846913288dfa7d5aa7ba))
+* **ONB-3885:** update package versions and props edit ([ed6471e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ed6471e108401fc1aa09ac2eee851707ab0ae340))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1681:** forwarding props ([0ed3b61](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0ed3b61220ca17b25d63588fe94012881245606f))
+* **UIIAAS-1251:** docs ([0226b84](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0226b8456be07d407c614979552ce88023eb8bd9))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-7117:** up snack field deps ([465eb49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/465eb49b46a72ebb8a43d851f101cb7c0827e151))
+* **PDS-2368:** up @snack-uikit/fields ([36e12c6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/36e12c6e4af4810efea97171006c08cb2c4d1a7d))
+* **PDS-2556:** update @snack-uikit/fields ([21e360e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/21e360e7dc269fa59369bd21640d4ee4a46d8a6e))
+
+
+### Features
+
+* **AINFR-4337:** alert for secure password field ([b44c4dc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b44c4dc95160f4758070c33380581a1103c530a5))
+* **AINFR-4597:** latin symbols for password and tooltip keys animation ([a3c533f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a3c533f05551ad665af52a5e6788a134c6dbb7b5))
+* **FF-6795:** new mobile field-ai ([9602b4d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9602b4dc4faa1052387ef2f6cd2f481308ce670c))
+* **FF-6921:** add adaptive versions of all fields ([5ff131f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5ff131f8c815c8dac4459ae6939af5a6ac1bca06))
+* **FF-6921:** add autoFocus property ([093e729](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/093e7296b0a23c53d032f1fdec20fa3a5f1db78f))
+* **GIGAID-449:** add export ([7886e7c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7886e7c6fd5fa5cc2cd4c3129e8fc3392785eba3))
+* **GIGAID-673:** fieldPhone browser paste ([0f3ed76](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0f3ed76746a5499db194edc06c97f7987461262d))
+* **IAM-2109:** add permissions for Select Create ([ea7d23b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ea7d23b1117205966b7397ecf575505bca9a197c))
+* **IAM-5041:** add scroll list countries prop ([0e6a52a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0e6a52a75a243ebe12f039fafacc421884ed3b7f))
+* **LK-5603:** add flag icons ([5729e4b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5729e4baec27a7b65675ec77bcf3d11a44c862a6))
+* **LK-5773:** ai password field tooltip position changed ([de44eeb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/de44eebf12bd776e9cee93180ad65e113933f7b4))
+* **PDS-1181:** add icon & docgen & update figma link ([0f01d84](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0f01d84fee94660ea5c97405c57227bd7e76efa1))
+* **PDS-1181:** implement SelectCreate component ([a6e5123](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a6e5123f4628fd2d8d3c625a0fd763829fb62e78))
+* **PDS-159:** added FieldPhone ([8ccdc01](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8ccdc015afbc0525fc12f45c83feedd3d7867b74))
+* **PDS-1634:** phone masks without parenthesis ([b929e87](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b929e8740b4c299b94a73f35dc09d348942f71d1))
+* **PDS-2086:** add nonceId for overlayscrollbars ([827a753](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/827a75357160288542ac1570311cfaa49eaebda1))
+* **PDS-2225:** FieldAI and FieldChat ([7656767](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/76567674678d6003230e80e7e5968d29c34bf2ac))
+* **PDS-2255:** adaptive phone field ([960443f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/960443f7b962822c0e7871da663572d0ace4f945))
+* **PDS-2401:** extend countries, add phone filter settings ([d36aeb3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d36aeb39412df10f46e2ab4c11086b6121a4ace9))
+* **PDS-2689:** updated FieldAi placeholder, removed FieldAi tooltip ([37614a8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/37614a88c6fb674ed0124787553b3aeaba732fdd))
+* **UIIAAS-1251:** added FieldDescription & FieldName ([e03ba16](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e03ba16f0bbe62d0c00e7e109727a4b49f13fc6b))
+
+
+### BREAKING CHANGES
+
+
+* **FF-6921:** remove inputMode prop from FieldPhone ([6eb84ae](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6eb84ae12f53a69cb1a03049eb1660e5774f08d3))
+* **FF-6921:** extract layoutType property to the top level ([fafda71](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fafda71bb5a1ee751ffe86dd1a97878c1383e57e))
+
+
+
+
 ## 0.17.1 (2026-01-29)
 
 ### Only dependencies have been changed

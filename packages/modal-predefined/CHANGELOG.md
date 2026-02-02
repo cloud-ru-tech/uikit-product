@@ -3,6 +3,73 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **CORESERV-5502:** Add onClose param to onDelete props in DeleteModal. ([5c7239e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5c7239e3ea6b2f58b94910976b3de486e9ca5044))
+* **EVOSCV-0000:** hide optional body in delete modal ([f804045](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f804045af134235d18ade25bbd67625da2c66241))
+* **FF-00:** change cancel button to outline ([6de595e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6de595ee7dde05131d6680304b10741e60bde19c))
+* **FF-5152:** upd modal package ([7ae7bb8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7ae7bb804c600cba52929dd2523bdc305b5bca70))
+* **FF-5186:** add word-break for text content ([75512af](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/75512af978d4c5248bf564cab9e7463527048fb0))
+* **FF-6322:** make size 380px for release note illustration ([f126c6c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f126c6c21f2253b4919d3571de6e211fce4f1deb))
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-6529:** disable swipe if only one slide available in ReleaseNotesModal ([7c3d626](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7c3d6269076820eb0b1624e65f18375950bc0869))
+* **FF-6536:** pass onSlideChange to other controls in ReleaseNotesModal ([74fb1ba](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/74fb1ba39d0ece1e6eda1c5873918bcc72474852))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1047:** remove inner scroll refs ([5d762d0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5d762d01cdfc0f248e7534237cf4035cb01deb46))
+* **PDS-1047:** return swipe behavior ([f9096ae](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f9096ae89eb28b58f043b60ea46a6faf8df47b1d))
+* **PDS-1559:** up deps for modal-predefined ([da89c96](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/da89c969098035fc3f2770b0260ec37e1860595e))
+* **PDS-2643:** up snack deps, export prop typings for adaptive components ([62193bd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/62193bddb7eff923cae48de90206374d82dc80a3))
+* **UIIAAS-1251:** docs ([0226b84](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0226b8456be07d407c614979552ce88023eb8bd9))
+
+
+### Dependencies
+
+* **FF-00:** up deps ([9e2378c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e2378cef18622b7cbe30fdd43cfa80b1a2eb485))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **FF-6452:** up deps ([87e6547](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/87e6547cedefa35eef02157f498cc30aadf1c0f5))
+* **FF-6881:** up carousel ([8b15ad2](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8b15ad20732fa5ed739ed28eeeca6a088386d810))
+* **FF-7117:** up snack field deps ([465eb49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/465eb49b46a72ebb8a43d851f101cb7c0827e151))
+* **PDS-2368:** up @snack-uikit/fields ([36e12c6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/36e12c6e4af4810efea97171006c08cb2c4d1a7d))
+* **PDS-2556:** update @snack-uikit/fields ([21e360e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/21e360e7dc269fa59369bd21640d4ee4a46d8a6e))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-955:** up snack-uikit deps ([8e7bbb9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e7bbb9ae9cef8da37932e45fa76038e59ee2f98))
+
+
+### Features
+
+* **FF-00:** add autogenerate docs ([b5017d4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b5017d482cc9095a500ba66709febc758fe78769))
+* **FF-00:** add subtitle to delete modal ([1e8efcb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1e8efcbe99ad4cb837c1ada7bc549e0867beea28))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **FF-5986:** no data state and error state scenarios for release notes modal ([ad6ae7b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ad6ae7b68e2b8424325aa4f1ac412c6e5e34906e))
+* **FF-6536:** add onSlideChange prop to ReleaseNotesModal ([310ce2f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/310ce2fecc910b94cd1825e0dcc5a2154f58060d))
+* **HYCL-000:** add data-test-id to delete-modal ([21a3940](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/21a3940227a382a6f3282bd254d5661eb145d45c))
+* **HYCL-000:** synchronized the data-test-id with the desktop version ([b26c585](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b26c5852479fc9ea376b7224f0233f9c5bfd3dfa))
+* **LK-5919:** up deps, fix xss ([9947f42](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9947f421f5a78231d96e4c947f973ad232aa665e))
+* **PDS-1033:** create RecallModal component ([5efdaf1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5efdaf1a5d012737fe78227a2a60616fb4848350))
+* **PDS-804:** release news modal ([bb03252](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/bb032524a2bd3a66b381335a7489766134061247))
+* **SVP-11371:** init package, add delete modal ([f2b5151](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f2b515185960c768b3365b6801b162bbc3b36d6e))
+* **UIIAAS-904:** added confirmText variant in deleteModalPredefined ([ec9a72e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ec9a72eb647eae193fb2049956ad478ff82a0842))
+
+
+### BREAKING CHANGES
+
+
+* **PDS-804:** relocated mobile delete modal from mobile-modal package to modal-predefined package ([4356ac6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4356ac6ff232b7e080df16e21dd18f6b959dc2dd))
+* **FF-0000:** Remove onClose handler after submit from DeleteModal ([b4de35c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b4de35c1121d2f1cdd54206de241c02cceed5764))
+
+
+
+
 ## 0.9.16 (2026-01-29)
 
 ### Only dependencies have been changed

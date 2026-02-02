@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-2440:** fixes after eslint update ([df8d91b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/df8d91bb99fc72a01d184327033619580c827b38))
+* **FF-5801:** remove linaria from repo ([f9e6b49](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f9e6b492cf5892c50a1d78cebc89b48ace01b6b2))
+* **FF-682:** update @sbercloud/ft-all-linters-pack version and fix eslint errors ([8e1bca6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e1bca684734d8b82b87c18cf639050e21ef007e))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* peer dependencies block has been deleted ([b5786ad](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b5786ad13fef6adcbeecf23a52702cbbf0c81535))
+* renaming packages ([6c4e34d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6c4e34d4b5b8aa4a3386187b996f4856e642d0b5))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+
+
+### Features
+
+* add className, types, rename component ([7f76095](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7f76095de9fe753767674128d98405b99a37deac))
+* add rating bar unstable component ([4682148](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4682148d42e1e9da724b1137b98e0efce6413e14))
+* **FF-3478:** add deps graph addon ([0f59586](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+* **FF-4717:** move to snack ([58ad02b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/58ad02ba19e7ea1831843ef32f0864b629e90757))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+
+
+### BREAKING CHANGES
+
+
+* refactor SUNNY_YELLOW, BERRY_RED, GRACE, GRADIENT colors ([9d7e7e8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9d7e7e88764ad5967433c125e9e896e0952308a4))
+
+
+
+
 ## 0.6.27 (2025-12-17)
 
 ### Only dependencies have been changed
@@ -984,7 +1024,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.3.31](https://gitverse.ru/cloud-ru-tech/uikit-product/compare/@cloud-ru/uikit-product-rating@0.3.30...@cloud-ru/uikit-product-rating@0.3.31) (2022-09-08)
 
-**Note:** Version bump only for package @cloud-ru/uikit-product-rating
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-utils@9.0.0]($PUBLIC_PROJECT_URL/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.3.30](https://gitverse.ru/cloud-ru-tech/uikit-product/compare/@cloud-ru/uikit-product-rating@0.3.29...@cloud-ru/uikit-product-rating@0.3.30) (2022-08-23)
 

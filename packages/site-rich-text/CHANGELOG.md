@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+
+
+### Features
+
+* **PDS-1420:** add site rich text ([57d3f00](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/57d3f008510de89dc73d6d56f9b0f8ce2cbae998))
+* **PDS-1535:** add data-test-id ([6f0c2c7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6f0c2c7ced1aa63e599d1325f8cb03c0f2ba2a61))
+* **PDS-2016:** allow rich-text to pass ReactNode ([645cb2d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/645cb2d07b4b3bae420af3e848f007865d1acd51))
+
+
+
+
+
 ## 0.2.17 (2025-12-17)
 
 ### Only dependencies have been changed

@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+
+
+### Features
+
+* **PDS-2240:** add ImageCover ([9e31dc9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e31dc99e8e3ed5af1255d1fdfad26a55aa56c82))
+* **PDS-2240:** rename the site-video package to site-media ([a00fe35](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a00fe3542164d33ff10467f990f7abfe45b451d4))
+* **SITE-10394:** add border radius ([5e950bc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5e950bce806fab0a3213eef811a7ebcb411f1860))
+* **SITE-10441:** add border radius & fix padding bottom ([786639b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/786639b497ad7de71551f6dbbaab1b5b81facb85))
+
+
+
+
+
 ## 0.3.1 (2026-01-29)
 
 ### Only dependencies have been changed

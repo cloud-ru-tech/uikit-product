@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-quota",
   "title": "Quota",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-button-predefined": "1.0.0",
-    "@cloud-ru/uikit-product-icons": "16.2.0",
-    "@cloud-ru/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-button-predefined": "1.1.0",
+    "@cloud-ru/uikit-product-icons": "17.0.0",
+    "@cloud-ru/uikit-product-utils": "9.0.0",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/scroll": "0.9.3",
     "@snack-uikit/skeleton": "0.6.2",

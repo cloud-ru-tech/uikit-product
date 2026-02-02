@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-0000:** fix mobile vh/vw ([f7ddc8e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f7ddc8e22398e55878a06985e6d3b5b48b814c57))
+* **FF-5148:** fix mobile default befavior on swipe ([18a5494](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/18a5494461c8018a4a4d9acb4c433b75693223cb))
+* **FF-5186:** fix scroll & drag behavior ([ef63b33](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ef63b3397ab062e060b448f8eddf40fc42fd0550))
+* **FF-5188:** remove touch handlers with swipeDisabled ([0e12ab1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0e12ab153223f9a81dab94f53c6ef77f1e7cb2cc))
+* **FF-5734:** eslint fixes ([4ba62cc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4ba62cce879119e53d38e4e91f51c1147cbdd46b))
+* **FF-6758:** typescript issues ([520f8f0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/520f8f0c18ce3c5e74d6e05e6b7b72afa7a69771))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3376:** mobile drawer deps update ([8498f07](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8498f07d7e968256f91faaf1f8426c96351586d9))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1015:** fix broken drag events with enabled swipe ([7c88c23](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7c88c23efbdf3d35d5ee1bf622adb46a6e8e5feb))
+* **PDS-1027:** add padding absolute into drawer body ([6d4d921](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6d4d921178b3ec0d531cc9ad75843da752d31451))
+* **PDS-1047:** freeze available direction for swipe ([9546bda](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9546bda52a353f88d17f45b0651f73a3ce53532a))
+* **PDS-1047:** prevent page refresh on swipe for ios ([2ee5aeb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2ee5aeba81158ce0223bdf07b1ebdbde2efa46ac))
+* **PDS-1047:** prevent swipe when interacting with slider ([e58e3ae](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e58e3ae646f5e8067ca00f7af219b692ec577996))
+* **PDS-1047:** remove paddingAbsolute from scroll container ([27c457e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/27c457eeed3559fb65b9e0e45c40b7d374ff8ac8))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5186:** up snack deps ([de10652](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/de10652ca4f8ac2a5f11dc2c0f9bb01e17f30c3c))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-2643:** up snack deps ([fa8ff9c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fa8ff9c0cdd79346185f219073c34872cc0fdfb7))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+
+
+### Features
+
+* **FF-5148:** add mobile-drawer package ([9126e24](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9126e24ff2c1f03aceb4e0dab4ed672b089a906f))
+* **FF-5186:** add mobile-drawer ([a50bb74](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a50bb7418ff06c4afd8b2eed7236ad92dc373ffd))
+* **FF-5186:** add modalMode property ([0eb0e35](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0eb0e35eba17459789ea50fbb4918178dad7dc59))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **FF-7104:** enable mode prop, add outline prop ([0b9bc15](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0b9bc15e9925197bb035e834922c707d50890f61))
+* **PDS-2556:** add closeOnPopstate prop ([f6d2000](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f6d2000a7f29c976732ac53b759cbd342bde6bd7))
+* **PDS-2594:** add closeWatcher ([a3c5cae](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a3c5caeb57bb7e94771454bfff6fad91808c752d))
+* **PDS-559:** add swipeEnabled property ([5cce53b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5cce53b8b0408a07d81582385a6fc9bb42fb9170))
+
+
+### BREAKING CHANGES
+
+
+* **PDS-1047:** new swipe behavior, remove scrollRef prop ([baca26e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/baca26e469836dbd10956ba8d7620ded6740c402))
+
+
+
+
 ## 0.9.26 (2026-01-29)
 
 ### Only dependencies have been changed

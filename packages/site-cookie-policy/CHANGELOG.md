@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+
+
+### Features
+
+* **DOCDEV-2456:** addded cookie policy component ([44c003f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/44c003f613e7590f209061cf0a0f5f9f9a1b9dbf))
+* **SITE-10433:** update component site-cookie ([6471e9e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/6471e9ec8830b2dbdac7b77c87c53980159626cd))
+
+
+
+
+
 # 1.2.0 (2025-12-22)
 
 

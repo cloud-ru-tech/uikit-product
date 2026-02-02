@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **SITE-9238:** update chips ([0cfc6fc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0cfc6fcac4205761d6a5beeb1b381535db16dd60))
+* **SITE-9238:** update chips in site-csat ([b23c266](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b23c26656986ee9e52166bd0093dbbd24ee6eb37))
+* **SITE-9910:** fix SiteCsatPopover onCheckChips ([2c5114f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2c5114fc01c0c98e6372b401fd3bfb62ae1d1436))
+* **SITE-9926:** fix packages for csat ([717d34b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/717d34bd4e773cb83d383f5887c0d71d09f6fef2))
+
+
+### Features
+
+* **SITE-10171:** update component Site-csat for a/b test ([8061656](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8061656f79946d2987b7fe407aa98b6c6e033263))
+* **SITE-9873:** add new Site-Csat component ([0695380](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0695380bc2fea8c2c72754f620610d2a69315154))
+* **SITE-9873:** add new Site-Csat component ([fbdfe14](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/fbdfe148f0e94225d2ca00a6cb4db632f699fa6d))
+
+
+
+
+
 ## 0.2.8 (2026-01-29)
 
 ### Only dependencies have been changed

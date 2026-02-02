@@ -3,6 +3,69 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **CORESERV-5502:** Add onClose param to onDelete props in DeleteModal. ([5c7239e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5c7239e3ea6b2f58b94910976b3de486e9ca5044))
+* **FF-00:** remove zero gap with empty content ([765933a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/765933a209da70087a167c98cdc74078148a3a5c))
+* **FF-5152:** upd modal package ([7ae7bb8](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7ae7bb804c600cba52929dd2523bdc305b5bca70))
+* **FF-5186:** fix scroll & drag behavior ([ef63b33](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ef63b3397ab062e060b448f8eddf40fc42fd0550))
+* **FF-5186:** hide close button ([d733bb7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d733bb720fcd4d397cce0c0a4a88eeb00c6ee687))
+* **FF-5188:** back swiveEnabledProp ([8b2052d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8b2052d1bac48112579fc3de7fb4237bc01ba2de))
+* **FF-5188:** remove touch handlers with swipeDisabled ([0e12ab1](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0e12ab153223f9a81dab94f53c6ef77f1e7cb2cc))
+* **FF-5734:** eslint fixes ([4ba62cc](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4ba62cce879119e53d38e4e91f51c1147cbdd46b))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1027:** fix footer approvebtn ([5dd4723](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5dd4723e8d9535352a94a7150dd85a83cf2c87c3))
+* **PDS-2643:** up snack deps, export prop typings for adaptive components ([62193bd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/62193bddb7eff923cae48de90206374d82dc80a3))
+* **PDS-559:** prevent swipe on scroll ([88f8cbf](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/88f8cbf46c4c33c28b5724199117f4a8d0eb9ae8))
+* **PDS-559:** use mobile-tooltip ([b479f3b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b479f3beab5f60f795e69de2340a55abb4acddba))
+* **PDS-804:** enable close button for mobile modal custom ([46145eb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/46145ebf6b1c58e6fabb07e19fbaed8e71a841a7))
+
+
+### Dependencies
+
+* **FF-00:** up deps ([9e2378c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e2378cef18622b7cbe30fdd43cfa80b1a2eb485))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5186:** up snack deps ([de10652](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/de10652ca4f8ac2a5f11dc2c0f9bb01e17f30c3c))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-559:** up snack deps ([e0a0fbd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e0a0fbd952420dd0031e3e4f8adef8c50375f31d))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-955:** up snack-uikit deps ([8e7bbb9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e7bbb9ae9cef8da37932e45fa76038e59ee2f98))
+
+
+### Features
+
+* **FF-00:** add subtitle to delete modal ([1e8efcb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1e8efcbe99ad4cb837c1ada7bc549e0867beea28))
+* **FF-5148:** add delete modal ([c54c7e5](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c54c7e5d84374e9f290044c0ae71605586e0e065))
+* **FF-5148:** add mobile-layout package ([ab11808](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ab11808cfbd8135b4d9b021227ed1f7550c9bab3))
+* **FF-5148:** add mobile-modal package ([39daed7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/39daed7d7aa32ba7397d24bae3ad771a5b4306ac))
+* **FF-5186:** add mode property ([4f9a73c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4f9a73ce5569e97fe7f23c2f4295470e182aa43d))
+* **FF-5361:** add adaptive component versions ([0e1ddce](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0e1ddceda6085479ea8365f2b034b326da366fbb))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **PDS-1559:** loading and custom loading state for mobile modal ([1865e4d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/1865e4d53fa02dd17780fc4d34125418d9436eb6))
+* **PDS-2556:** add closeOnPopstate prop ([f6d2000](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f6d2000a7f29c976732ac53b759cbd342bde6bd7))
+
+
+### BREAKING CHANGES
+
+
+* **PDS-1047:** remove swipeEnabled prop ([275d83a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/275d83a7d54aa7103499de75e587379a44c2b912))
+* **PDS-1047:** new swipe behavior, remove scrollRef prop ([baca26e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/baca26e469836dbd10956ba8d7620ded6740c402))
+* **PDS-804:** relocated mobile delete modal from mobile-modal package to modal-predefined package ([4356ac6](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/4356ac6ff232b7e080df16e21dd18f6b959dc2dd))
+* **FF-0000:** Remove onClose handler after submit from DeleteModal ([b4de35c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b4de35c1121d2f1cdd54206de241c02cceed5764))
+* **FF-5186:** remove swipeEnabled property ([893700f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/893700f97c2db996a1f36428529a87b347523a17))
+
+
+
+
 ## 0.9.29 (2026-01-29)
 
 ### Only dependencies have been changed

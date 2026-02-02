@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-mobile-modal",
   "title": "Mobile Modal",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-mobile-drawer": "1.0.0",
-    "@cloud-ru/uikit-product-mobile-tooltip": "1.0.0",
-    "@cloud-ru/uikit-product-utils": "8.1.0",
+    "@cloud-ru/uikit-product-mobile-drawer": "2.0.0",
+    "@cloud-ru/uikit-product-mobile-tooltip": "1.1.0",
+    "@cloud-ru/uikit-product-utils": "9.0.0",
     "@snack-uikit/button": "0.19.15",
     "@snack-uikit/drawer": "0.13.2",
     "@snack-uikit/link": "0.17.9",

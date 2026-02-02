@@ -3,6 +3,61 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-4988:** stylelint deprecation warnings ([a21bc05](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a21bc05bf1e843e58193d01aaf81b066c2e24cd7))
+* **FF-5189:** add localization ([d401c7c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d401c7c1ed3ae9c66905736179dd699430481cca))
+* **FF-6290:** multi value reset ([9a1382c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9a1382cc3e20f58cecb690efc3a522c9ac36ed57))
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-6490:** hide modal footer in MobileChipChoiceSingle ([f3b4f14](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f3b4f14880f73a37f8d023743ff15012e32efd2d))
+* **FF-6613:** close MobileChipChoiceSingle if clicked on selected element ([0690b05](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0690b05fea8e710e1e4c643fd1c56ab7f7aa770c))
+* **FF-7560:** add searchable prop into chips ([8c30e4e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8c30e4ef1395d4de5d2522dddb15432efc635446))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1672:** hide pinned filters divider if no elements is on the right ([d5205b9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d5205b9f8c5eeeb2790f91df1fba89f4ef964c90))
+* **PDS-2643:** up snack deps, export prop typings for adaptive components ([62193bd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/62193bddb7eff923cae48de90206374d82dc80a3))
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5186:** up snack deps ([de10652](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/de10652ca4f8ac2a5f11dc2c0f9bb01e17f30c3c))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-6240:** update loaders ([b56f38f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b56f38f22bcacbf3d879a39eeaa0ac8ca2578d3d))
+* **FF-7560:** add types deps into chips ([ff4eb37](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ff4eb37448671e27d129441b042090f997f4b1c5))
+* **PDS-559:** up snack deps ([e0a0fbd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e0a0fbd952420dd0031e3e4f8adef8c50375f31d))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-955:** up snack-uikit deps ([8e7bbb9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8e7bbb9ae9cef8da37932e45fa76038e59ee2f98))
+
+
+### Features
+
+* **FF-5188:** hide search on fieldSelect/chips with low 5 items ([97f1533](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/97f1533dc11b9254e9928dd7a1c826f1f8bddb39))
+* **FF-5189:** add footer to chip multiple ([ae0b1b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ae0b1b368ea02bbdaa8a98631f394a2b4f9188a7))
+* **FF-5189:** upd mobile list ([51c0092](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/51c0092f3795ab8f65774dcd0a7e42847166d49e))
+* **FF-5361:** add adaptive component versions ([0e1ddce](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0e1ddceda6085479ea8365f2b034b326da366fbb))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5830:** add date-time & month modes to chip-choice ([56eda07](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/56eda0764906db7e34d188f1c5fc010042fba380))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **PDS-1685:** add truncate to chips ([67156ba](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/67156bab207032fff6b43fabf4119fd566c3e800))
+* **PDS-559:** add mobile-chips package ([3cfcca9](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/3cfcca9c9696a88e31547d5fbb5ec73600b969dc))
+
+
+### BREAKING CHANGES
+
+
+* **FF-6484:** up deps ([578fdbb](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/578fdbbb604085655bd316308440976db38d25ce))
+* **PDS-1081:** add chip choice time, replace showClearButton with onClearButtonClick in individual chip, add autoApply & disable fuzzy search props, change chip choice row behavior ([8685e47](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/8685e474d243e22c45733d72e4ad0eb3593f4475))
+
+
+
+
 ## 0.8.48 (2026-01-29)
 
 ### Only dependencies have been changed

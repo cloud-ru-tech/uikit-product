@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PD-3377:** updated deps with public scopes ([5c0544a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/5c0544acf7db65fb6fe1fbde10ac21721d9046fb))
+* **PDS-0000:** add hover show/hide behavior for copyButton in line; add forgotten props ([ff0d97a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ff0d97a052ef0e53ed6fe144ab7d58a9366ae93c))
+* **PDS-9:** copy from content by default ([ba80736](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ba80736c1ff31685384c1f7bc499308a0d840cd7))
+
+
+### Dependencies
+
+* **FF-00:** up deps ([9e2378c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e2378cef18622b7cbe30fdd43cfa80b1a2eb485))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-83:** update deps ([491b47d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/491b47d42acd8cb179b0d66c616033d61fe95d7e))
+
+
+### Features
+
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **LK-4553:** add adaptive for CopyLine ([669e96e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/669e96ed7d88811f60838e3f412834791110649c))
+* **PDS-0000:** change content prop to ReactNode ([b62243b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b62243b600d498e450dabfb76d1eeb96c4e141e4))
+* **PDS-14:** add copy-line/copy-button ([0c060d0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0c060d0262f202f1e58ab3755686081b5b346661))
+* **PDS-9:** add onClick property ([0016294](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/00162941a4d40aca119845bb24305cd8f1e13f8d))
+
+
+### BREAKING CHANGES
+
+
+* **FF-5361:** remove mobile version, add copyButtonHideStrategy prop ([853e548](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/853e5489be973fc834aea8e00bc3e619be5b9059))
+
+
+
+
 ## 0.7.73 (2026-01-29)
 
 ### Only dependencies have been changed

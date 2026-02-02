@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **CORESERV-5760:** add overflow anywhere to InfoRow component ([634ea19](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/634ea191c938767a472d0fad99c54f6535956765))
+* **FF-4649:** strong content width ([81f3c10](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/81f3c10f63feaed581d4f7fdb699d7c3295934d6))
+* **FF-6326:** changed translation flow ([b3b6bb4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-1071:** fixed width of info-row ([4646714](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/464671431fbab765a6b824393a09f3ed65ea9e5f))
+
+
+### Dependencies
+
+* **FF-00:** up deps ([9e2378c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e2378cef18622b7cbe30fdd43cfa80b1a2eb485))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+* **PDS-83:** update deps ([491b47d](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/491b47d42acd8cb179b0d66c616033d61fe95d7e))
+
+
+### Features
+
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **PDS-0000:** add label truncate prop ([d5e80ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d5e80ef5be19e45ca51f228abf3efc08924b3136))
+* **PDS-0000:** add no data placeholder to InfoGroup ([0ff96be](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0ff96be13da6a90717641271130b5be0e4272bb0))
+* **PDS-0000:** InfoGroup no data placeholder with empty string, empty array and object ([d5d8e18](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d5d8e18e8c11227b842111a8bc4d7942b55a9007))
+* **PDS-1071:** add width prop to info-row ([608207a](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/608207a0bd5682cc6d6793b657890e8b3683ff96))
+* **PDS-116:** add loading prop on InfoRow, add InfoGroup component ([2663588](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/2663588d792caa4922f4457c377029375bbb3ff8))
+* **PDS-14:** add InfoRow ([c6c46ed](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c6c46ed9190a203c73eb1fc801922db66b3607f0))
+* **PDS-2967:** add two columns view for InfoGroup ([ca818a4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ca818a48ad21a28bb204342407fbcc498f505cb8))
+* **PDS-729:** changed paddings in InfoRow ([e436908](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/e436908a28a0699040340ca27229853b029d053b))
+
+
+
+
+
 ## 0.9.1 (2025-12-17)
 
 ### Only dependencies have been changed

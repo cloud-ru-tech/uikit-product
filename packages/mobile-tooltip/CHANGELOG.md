@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-0000:** fix mobile vh/vw ([f7ddc8e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/f7ddc8e22398e55878a06985e6d3b5b48b814c57))
+* **FF-5186:** stop propagation of onClick event for question-tooltip, add margins and stretch tooltip for the whole screen ([a85a360](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/a85a3601156c609495d30a0013eeecbf55194468))
+* **FF-7846:** replace tokens usage ([b690050](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b6900500e2f2c73e184f8b67f689f4a42571a154))
+* **FF-7861:** massive scope update ([b93fa9f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b93fa9fed13a579f5f02efc16ea43d8bedbd5aca))
+* **FF-7861:** update all 0 versions to 1 ([737c2b4](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/737c2b494d48be5132554ae9f03c960a8cbe3a34))
+* **ONB-3885:** update package versions and props edit ([ed6471e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/ed6471e108401fc1aa09ac2eee851707ab0ae340))
+* **PD-3377:** contributors update to publish all packages ([719fd3e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/719fd3e1249e247443b125c47ea408d92c8395c3))
+* **PD-3377:** removed contributors ([121640f](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/121640f7b88b20a728a6ad2c39de8841532bb308))
+* **PDS-2643:** up snack deps, export prop typings for adaptive components ([62193bd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/62193bddb7eff923cae48de90206374d82dc80a3))
+* **PDS-623:** fix margins for fallback tooltip placement ([502dcb7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/502dcb7a2bf8a2e3e24d4cd20e65ed9b2badf7d5))
+* **PDS-685:** fix mobile tooltip margins ([b8ebebd](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/b8ebebd55f2b41aab113d32321a1b27b1f5c1190))
+
+
+### Dependencies
+
+* **FF-00:** up deps ([9e2378c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/9e2378cef18622b7cbe30fdd43cfa80b1a2eb485))
+* **FF-4704:** up deps ([7da95ef](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+* **FF-5678:** up deps classnames/uncontrollable ([17b3e6e](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/17b3e6e7d705fd0f013e7027c4fab244522866e4))
+* **FF-5830:** up snack-uikit & some common deps ([03aefe0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/03aefe0681240d2cffdbbdbbbc026da74d723dfd))
+* **PDS-611:** up deps ([c30ac4c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+
+
+### Features
+
+* **FF-5361:** add adaptive component versions ([0e1ddce](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/0e1ddceda6085479ea8365f2b034b326da366fbb))
+* **FF-5782:** dart v3 use/forward approach ([eb0c4b3](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-5836:** support cjs syntax ([d44abd0](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **PDS-3214:** add WithMobileTooltip HOC ([d64e42b](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/d64e42b76123b86bc50824052b7a4fa8e342d061))
+* **PDS-559:** add mobile-tooltip package ([dcc63b7](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/dcc63b73d990c431578a96b0b17da8701e6ddc59))
+
+
+
+
+
 ## 0.5.5 (2026-01-29)
 
 ### Only dependencies have been changed
