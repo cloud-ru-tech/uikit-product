@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
+import { useDarkMode } from 'storybook-dark-mode';
 
 import { Markdown } from '../../../storybook/stories/components/markdown/Markdown';
 import Doc from '../README.md';
@@ -9,7 +10,9 @@ const meta: Meta = {
 export default meta;
 
 function Template() {
-  return <Markdown md={Doc} />;
+  const isDark = useDarkMode();
+
+  return <Markdown md={Doc} darkMode={isDark} />;
 }
 
 export const CodeEditor: StoryObj = {
