@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.1 (2026-02-02)
+
+
+### Bug Fixes
+
+* **FF-7861:** deps version mismatch ([cc4fe9c](https://gitverse.ru/cloud-ru-tech/uikit-product/commits/cc4fe9cb87656feecfb35c822eed100024c07458))
+
+
+
+
+
 # 1.1.0 (2026-02-02)
 
 
