@@ -43,10 +43,8 @@ function Template({ ...args }: ConfigProviderProps) {
         <div className={styles.configBody}>
           <ButtonFilled onClick={() => changeBrand(Brand.Cloud)} label='Cloud' />
           <ButtonFilled onClick={() => changeBrand(Brand.CloudDark)} label='Cloud Dark' />
-          <ButtonFilled onClick={() => changeBrand(Brand.MLSpace)} label='MLSpace' />
-          <ButtonFilled onClick={() => changeBrand(Brand.MLSpaceDark)} label='MLSpace Dark' />
-          <ButtonFilled onClick={() => changeBrand(Brand.Admin)} label='Admin' />
-          <ButtonFilled onClick={() => changeBrand(Brand.AdminDark)} label='Admin Dark' />
+          <ButtonFilled onClick={() => changeBrand(Brand.Gitverse)} label='Gitverse' />
+          <ButtonFilled onClick={() => changeBrand(Brand.GitverseDark)} label='Gitverse Dark' />
           <ButtonFilled onClick={() => changeBrand(Brand.Site)} label='Site' />
           <ButtonFilled onClick={() => changeBrand(Brand.SiteDark)} label='Site Dark' />
           <ButtonFilled onClick={() => changeBrand(Brand.GigaId)} label='GigaId' />
