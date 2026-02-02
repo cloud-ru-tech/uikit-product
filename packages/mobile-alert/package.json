@@ -20,10 +20,10 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/packages/mobile-alert",
+  "homepage": "https://github.com/cloud-ru-tech/uikit-product/-/tree/master/packages/mobile-alert",
   "repository": {
     "type": "git",
-    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git",
+    "url": "https://github.com/cloud-ru-tech/uikit-product.git",
     "directory": "packages/mobile-alert"
   },
   "author": {

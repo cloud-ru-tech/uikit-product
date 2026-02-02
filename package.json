@@ -1,10 +1,10 @@
 {
   "name": "uikit-product",
   "description": "Cloud.ru Product Uikit",
-  "homepage": "https://gitverse.ru/cloud-ru-tech/uikit-product/-/tree/master/",
+  "homepage": "https://cloud-ru-tech.github.io/uikit-product/",
   "repository": {
     "type": "git",
-    "url": "https://gitverse.ru/cloud-ru-tech/uikit-product.git"
+    "url": "https://github.com/cloud-ru-tech/uikit-product/tree/master"
   },
   "license": "Apache-2.0",
   "scripts": {
