@@ -7,6 +7,8 @@ import { execAsync } from './utils/execAsync';
 import { getAllPackageFolders } from './utils/getAllPackageFolders';
 import { getChangedPackages } from './utils/getChangedPackages';
 
+const PACKAGE_NAME_PREFIX = '@cloud-ru/uikit-product-';
+
 async function buildAllPackages() {
   const start = performance.now();
   logDebug(`Building packages...`);
@@ -22,7 +24,7 @@ async function buildAllPackages() {
   const rejectedResults = results.filter(result => result.status === 'rejected');
 
   if (rejectedResults.length > 0) {
-    console.info('Failed to build packages');
+    logError('Failed to build packages');
     console.info(rejectedResults.map(result => result.reason?.stdout).join('\n'));
     shell.exit(1);
   }
@@ -70,7 +72,7 @@ function buildPackagesWithLerna(packagesToBuild: string[]): boolean {
   }
 
   // Формируем scope для lerna
-  const scopes = packagesToBuild.map(packageName => `--scope=@cloud-ru/uikit-product-${packageName}`).join(' ');
+  const scopes = packagesToBuild.map(packageName => `--scope=${PACKAGE_NAME_PREFIX}${packageName}`).join(' ');
 
   logInfo(`Building ${packagesToBuild.length} packages: ${packagesToBuild.join(', ')}`);
 
@@ -104,6 +106,50 @@ function createFilteredTsConfig(tsConfigPath: string, packageNames: string[]): R
   return tsConfig;
 }
 
+function getPackageDependencies(packageName: string): string[] {
+  const packageJsonPath = `./packages/${packageName}/package.json`;
+
+  try {
+    const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf8'));
+    const allDeps = {
+      ...packageJson.dependencies,
+      ...packageJson.peerDependencies,
+    };
+
+    // Извлекаем только зависимости из монорепо (@cloud-ru/uikit-product-*)
+    const monorepoDeps = Object.keys(allDeps)
+      .filter(dep => dep.startsWith(PACKAGE_NAME_PREFIX))
+      .map(dep => dep.replace(PACKAGE_NAME_PREFIX, ''));
+
+    return monorepoDeps;
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Обновляет tsconfig пакета, добавляя references только на пакеты из списка для сборки
+ */
+function updatePackageTsConfig(packageName: string, format: 'esm' | 'cjs', packagesToBuild: string[]) {
+  const tsConfigPath = `./packages/${packageName}/tsconfig.${format}.json`;
+  const originalContent = JSON.parse(readFileSync(tsConfigPath, 'utf8'));
+
+  const dependencies = getPackageDependencies(packageName);
+
+  // Фильтруем только те зависимости, которые есть в списке для сборки
+  const referencesToAdd = dependencies
+    .filter(dep => packagesToBuild.includes(dep))
+    .map(dep => ({ path: `../${dep}/tsconfig.${format}.json` }));
+
+  if (referencesToAdd.length > 0) {
+    originalContent.references = referencesToAdd;
+
+    const tsConfigContent = JSON.stringify(originalContent, null, 2);
+
+    writeFileSync(tsConfigPath, tsConfigContent);
+  }
+}
+
 /**
  * Собирает конкретный формат (ESM или CJS) с фильтрацией по пакетам
  */
@@ -117,13 +163,19 @@ async function buildFormatWithFilter(
   // Создаем временную конфигурацию с фильтрацией
   const tempConfig = createFilteredTsConfig(configFilePath, packageNames);
 
-  // Записываем временную конфигурацию
+  // Записываем временную конфигурацию корневого файла
   writeFileSync(configFilePath, JSON.stringify(tempConfig, null, 2));
+
+  // Записываем временную конфигурацию пакетов
+  for (const packageName of packageNames) {
+    updatePackageTsConfig(packageName, format, packageNames);
+  }
 
   const result = await execAsync(`tspc -b ${configFilePath}`);
 
-  // Откатываем временный файл
+  // Откатываем все временные файлы
   shell.exec(`git checkout ${configFilePath}`);
+  shell.exec(`git checkout packages/*/tsconfig.${format}.json`);
 
   if (result.code === 0) {
     return result;
