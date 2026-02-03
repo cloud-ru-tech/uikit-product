@@ -26,6 +26,7 @@
 .widgetContent {
   color: styles-theme-variables.$sys-neutral-text-main;
   min-height: 0;
+  height: 100%;
 }
 
 .actionsWrapper {
@@ -57,4 +58,7 @@
   width: 100%;
 }
 
-
+.infoBlock {
+  height: 100%;
+  justify-content: center;
+}

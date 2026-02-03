@@ -53,6 +53,7 @@ export function Widget({
         return (
           <InfoBlock
             size='m'
+            className={styles.infoBlock}
             icon={errorState?.errorIcon ?? { icon: CrossSVG, appearance: 'neutral', decor: true }}
             title={errorState?.errorTitle || t('dataErrorTitle')}
             description={errorState?.errorDescription || t('dataErrorDescription')}
