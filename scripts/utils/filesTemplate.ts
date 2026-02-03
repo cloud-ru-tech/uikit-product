@@ -54,6 +54,9 @@ export const packageJson = ({
       url: globConfig.repository.url,
       directory: `packages/${packageRootFolderName}`,
     },
+    publishConfig: {
+      access: 'public',
+    },
     author: `${user} <${email}>`,
     contributors: [`${user} <${email}>`],
     license: 'Apache-2.0',
