@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-02-04)
+
+
+### Features
+
+* **FF-4718:** add FieldMask ([a7ba12c](https://github.com/cloud-ru-tech/uikit-product/commit/a7ba12c3daa1ce4d64e16f599f97be6a5fc9b018))
+
+
+
+
+
 ## 2.0.2 (2026-02-02)
 
 

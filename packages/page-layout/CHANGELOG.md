@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.2 (2026-02-04)
+
+
+### Bug Fixes
+
+* **FF-7934:** tokens import ([4b12736](https://github.com/cloud-ru-tech/uikit-product/commit/4b12736d3d4e45cbcfba58277f03627692b723dd))
+
+
+
+
+
 ## 2.0.1 (2026-02-02)
 
 
