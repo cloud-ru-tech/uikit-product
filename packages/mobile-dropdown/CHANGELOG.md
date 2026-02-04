@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-02-04)
+
+
+### Features
+
+* **DOCDEV-2352:** updated site-selector-platform-drop-list component ([17adee5](https://github.com/cloud-ru-tech/uikit-product/commit/17adee5f0373e481f98f726fe0d1b4862442f2cc))
+
+
+
+
+
 ## 2.0.2 (2026-02-02)
 
 
