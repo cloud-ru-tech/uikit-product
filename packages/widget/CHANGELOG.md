@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-02-04)
+
+
+### Features
+
+* **LK-7109:** error alert position centered ([ae9739b](https://github.com/cloud-ru-tech/uikit-product/commit/ae9739bf3bae7ec2dec03e07e2e5052a3a8db565))
+
+
+
+
+
 ## 2.0.2 (2026-02-02)
 
 
