@@ -1,5 +1,4 @@
 import { enTranslations } from '@cloud-ru/common-translations';
-
 import { Dictionary } from '@snack-uikit/locale';
 
 export const en_GB = {
@@ -406,12 +405,21 @@ export const en_GB = {
     SshField: {
       placeholder: 'Copy and paste SSH key or attach a file',
       chatStatusAnnouncement: {
-        content: {
+        ssh: {
           option1: 'You have entered SSH key entry mode',
           option2: 'Giga does not store your SSH keys',
           option3: 'Secure SSH key entry mode',
         },
+        password: {
+          option1: 'You have entered password entry mode',
+          option2: 'Giga-Helper does not store your passwords',
+          option3: 'Secure password entry mode',
+        },
+        vmAgent: {
+          option: 'You have entered VM management mode',
+        },
         cancel: 'Cancel',
+        newSession: 'New session',
       },
       dropZone: {
         title: 'Release to upload the key',

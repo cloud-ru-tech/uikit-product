@@ -7,8 +7,7 @@ import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { ChatStatusAnnouncement } from '../src/components/ChatStatusAnnouncement';
-import { ChatStatusAnnouncementProps } from '../src/components/ChatStatusAnnouncement/types';
+import { ChatStatusAnnouncement, ChatStatusAnnouncementProps } from '../src/components/ChatStatusAnnouncement';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
@@ -19,32 +18,45 @@ export default meta;
 
 type StoryProps = ChatStatusAnnouncementProps;
 
-const Template = ({ ...props }: StoryProps) => (
-  <div>
-    <div className={cn(styles.wrapper, styles.chatStatusAnnouncementWrapper)}>
-      <ChatStatusAnnouncement {...props} content='Single row description' />
+const Template = ({ ...props }: StoryProps) => {
+  const { layoutType, actionLabel, appearance, icon } = props;
 
-      <ChatStatusAnnouncement
-        {...props}
-        content={[
-          {
-            content: 'Animated description 1',
-          },
-          {
-            content: 'Animated accent description 2',
-            shouldFocusOnHover: true,
-          },
-          {
-            content: 'Animated very loooooooooooooooooooooooooooooong description 3',
-          },
-          {
-            content: 'Animated description 4',
-          },
-        ]}
-      />
+  return (
+    <div>
+      <div className={cn(styles.wrapper, styles.chatStatusAnnouncementWrapper)}>
+        <ChatStatusAnnouncement
+          icon={icon}
+          actionLabel={actionLabel}
+          appearance={appearance}
+          layoutType={layoutType}
+          content='Single row description'
+        />
+
+        <ChatStatusAnnouncement
+          icon={icon}
+          actionLabel={actionLabel}
+          appearance={appearance}
+          layoutType={layoutType}
+          items={[
+            {
+              content: 'Animated description 1',
+            },
+            {
+              content: 'Animated accent description 2',
+              shouldFocusOnHover: true,
+            },
+            {
+              content: 'Animated very loooooooooooooooooooooooooooooong description 3',
+            },
+            {
+              content: 'Animated description 4',
+            },
+          ]}
+        />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export const chatStatusAnnouncement: StoryObj<StoryProps> = {
   render: Template,

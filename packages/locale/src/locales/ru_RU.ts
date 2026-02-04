@@ -406,12 +406,21 @@ export const ru_RU: typeof en_GB = {
     SshField: {
       placeholder: 'Скопируйте и вставьте SSH-ключ или прикрепите файл',
       chatStatusAnnouncement: {
-        content: {
+        ssh: {
           option1: 'Вы перешли в режим ввода SSH-ключа',
           option2: 'Гига не хранит ваши SSH-ключи',
           option3: 'Безопасный режим ввода SSH-ключа',
         },
+        password: {
+          option1: 'Вы перешли в режим ввода пароля',
+          option2: 'Гига-помощник не хранит ваши пароли',
+          option3: 'Безопасный режим ввода пароля',
+        },
+        vmAgent: {
+          option: 'Вы перешли в режим управления ВМ',
+        },
         cancel: 'Отменить',
+        newSession: 'Новая сессия',
       },
       dropZone: {
         title: 'Отпустите, чтобы загрузить ключ',

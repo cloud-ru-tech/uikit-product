@@ -1,65 +1,66 @@
 import cn from 'classnames';
 import { useEffect, useRef, useState } from 'react';
 
-import { PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
 import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
-import { TruncateString } from '@snack-uikit/truncate-string';
-import { Typography } from '@snack-uikit/typography';
 
-import { ANIMATION_INTERVAL } from './constants';
+import { ANIMATION_DELAY_INTERVAL, ANIMATION_INTERVAL, APPEARANCE } from './constants';
 import { AlertButton } from './helperComponents/AlertButton';
+import { AnimatedItem } from './helperComponents/AnimatedItem';
 import styles from './styled.module.scss';
 import { ChatStatusAnnouncementProps } from './types';
-import { getContent, isReactNode } from './utils';
+import { getContent } from './utils';
 
 export function ChatStatusAnnouncement({
   content,
+  items,
   contentClassName,
   onActionClick,
   actionLabel,
   icon,
   layoutType,
   className,
+  appearance = APPEARANCE.blue,
 }: ChatStatusAnnouncementProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimationEnded, setAnimationEnded] = useState(false);
   const [mouseEntered, setMouseEntered] = useState(false);
   const hoverRef = useRef<NodeJS.Timeout>();
-  const totalTextItems = getContent(content);
+  const totalTextItems = getContent(content || items);
   const isMobile = layoutType === LAYOUT_TYPE.Mobile;
 
   useEffect(() => () => clearTimeout(hoverRef.current));
 
   // запуск основной анимации
   useEffect(() => {
-    if (isReactNode(content) || isAnimationEnded || content.length <= 1) return;
+    // тут проверка на items, потому что totalTextItems имеет дополненный айтем, на который потом происходит фокус
+    if (isAnimationEnded || !items || items.length <= 1) return;
 
     let interval: NodeJS.Timeout;
 
-    if (currentIndex === content.length - 1) {
+    if (currentIndex === items.length - 1) {
       interval = setInterval(() => {
         setAnimationEnded(true);
-      }, ANIMATION_INTERVAL);
+      }, ANIMATION_DELAY_INTERVAL);
       return;
     }
 
     interval = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % content.length);
-    }, ANIMATION_INTERVAL);
+      setCurrentIndex(prevIndex => (prevIndex + 1) % items.length);
+    }, ANIMATION_DELAY_INTERVAL);
 
     return () => clearInterval(interval);
-  }, [currentIndex, content, isAnimationEnded]);
+  }, [currentIndex, isAnimationEnded, items]);
 
   // запуск анимации по ховеру
   useEffect(() => {
-    if (!isAnimationEnded || totalTextItems.length === 1) return;
+    if (!isAnimationEnded || totalTextItems.length === 1 || items?.length === totalTextItems.length) return;
 
     const runForwardAnimation = () => {
       if (hoverRef.current) clearTimeout(hoverRef.current);
 
       if (currentIndex === totalTextItems.length - 1) return;
 
-      hoverRef.current = setTimeout(() => setCurrentIndex(prev => prev + 1), 300);
+      hoverRef.current = setTimeout(() => setCurrentIndex(prev => prev + 1), ANIMATION_INTERVAL);
     };
 
     const runBackwardAnimation = () => {
@@ -67,7 +68,7 @@ export function ChatStatusAnnouncement({
 
       if (currentIndex <= totalTextItems.length - 2) return;
 
-      hoverRef.current = setTimeout(() => setCurrentIndex(prev => prev - 1), 300);
+      hoverRef.current = setTimeout(() => setCurrentIndex(prev => prev - 1), ANIMATION_INTERVAL);
     };
 
     if (mouseEntered) {
@@ -75,7 +76,7 @@ export function ChatStatusAnnouncement({
       return;
     }
     runBackwardAnimation();
-  }, [currentIndex, isAnimationEnded, mouseEntered, totalTextItems.length]);
+  }, [currentIndex, isAnimationEnded, items?.length, mouseEntered, totalTextItems.length]);
 
   const onMouseEnter = () => setMouseEntered(true);
 
@@ -85,29 +86,28 @@ export function ChatStatusAnnouncement({
     <div
       className={cn(styles.fieldAdvice, className)}
       data-mobile={isMobile || undefined}
+      data-appearance={appearance}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       <div className={styles.descriptionContainer}>
-        {icon ?? <PlaceholderSVG size={16} />}
+        {icon}
+
         <div className={styles.animationContainer}>
-          {totalTextItems.map((item, index) => {
-            const currentTextNextOrPreviousStyle =
-              index === (currentIndex - 1 + totalTextItems.length) % totalTextItems.length
-                ? styles.textBlockPrevious
-                : styles.textBlockNext;
-
-            const currentTextStyle = index === currentIndex ? styles.textBlockCurrent : currentTextNextOrPreviousStyle;
-
-            return (
-              <Typography.SansBodyS key={index} className={cn(styles.textBlock, currentTextStyle, contentClassName)}>
-                <TruncateString text={String(item.content)} />
-              </Typography.SansBodyS>
-            );
-          })}
+          {totalTextItems.map((item, index) => (
+            <AnimatedItem
+              key={index}
+              content={item.content}
+              itemIndex={index}
+              currentIndex={currentIndex}
+              totalTextItemsLength={totalTextItems.length}
+              contentClassName={contentClassName}
+            />
+          ))}
         </div>
       </div>
-      <AlertButton onClick={onActionClick} text={actionLabel} layoutType={layoutType} />
+
+      <AlertButton appearance={appearance} onClick={onActionClick} text={actionLabel} layoutType={layoutType} />
     </div>
   );
 }

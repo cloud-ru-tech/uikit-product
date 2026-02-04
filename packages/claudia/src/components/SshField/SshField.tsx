@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { DragEvent, forwardRef, KeyboardEventHandler, useState } from 'react';
 
-import { AttachmentSVG, EyeClosedSVG, EyeSVG, PasswordLockSVG } from '@cloud-ru/uikit-product-icons';
+import { AttachmentSVG, EyeClosedSVG, EyeSVG } from '@cloud-ru/uikit-product-icons';
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import {
   AdaptiveFieldTextArea,
@@ -11,10 +11,9 @@ import {
 import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { DropZone, FileUpload } from '@snack-uikit/drop-zone';
-import { themeVars } from '@snack-uikit/figma-tokens';
 import { Tooltip } from '@snack-uikit/tooltip';
 
-import { ChatStatusAnnouncement } from '../ChatStatusAnnouncement';
+import { ChatStatusAnnouncementSsh } from '../ChatStatusAnnouncement/components';
 import { MobileFieldAi } from './components/MobileFieldAi';
 import { DropZoneContent } from './helperComponents/DropZoneContent';
 import { FieldSubmitButton } from './helperComponents/FieldSubmitButton';
@@ -146,18 +145,7 @@ export const SshField = forwardRef<HTMLTextAreaElement, SshFieldProps>(
     return (
       <div className={cn(styles.wrapper, className)} onDragOver={handleDragOver} onDragLeave={handleDragLeave}>
         <WithSshValidation layoutType={layoutType} sshValidation={sshValidation}>
-          <ChatStatusAnnouncement
-            className={styles.chatStatus}
-            layoutType={layoutType}
-            icon={<PasswordLockSVG size={16} color={themeVars.sys.neutral.textSupport} />}
-            content={[
-              { content: t('SshField.chatStatusAnnouncement.content.option1') },
-              { content: t('SshField.chatStatusAnnouncement.content.option2'), shouldFocusOnHover: true },
-              { content: t('SshField.chatStatusAnnouncement.content.option3') },
-            ]}
-            actionLabel={t('SshField.chatStatusAnnouncement.cancel')}
-            onActionClick={onCancel}
-          />
+          <ChatStatusAnnouncementSsh className={styles.chatStatus} layoutType={layoutType} onActionClick={onCancel} />
           {isDragOver ? (
             <DropZone
               description={<DropZoneContent />}

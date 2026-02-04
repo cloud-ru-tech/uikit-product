@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { ReactNode } from 'react';
 
-import { themeVars } from '@cloud-ru/figma-tokens-cloud-platform';
+import { themeVars } from '@snack-uikit/figma-tokens';
 import { CrossSVG } from '@snack-uikit/icons';
 import { Spinner } from '@snack-uikit/loaders';
 import { Typography } from '@snack-uikit/typography';

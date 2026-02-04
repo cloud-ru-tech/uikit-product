@@ -32,21 +32,27 @@ export function isReactNode(value: unknown): value is ReactNode {
   return false;
 }
 
-export const getContent = (textContent: ChatStatusAnnouncementProps['content']): TextItem[] => {
-  if (isReactNode(textContent))
+const isContentType = (
+  value: ChatStatusAnnouncementProps['items'] | ChatStatusAnnouncementProps['content'],
+): value is ChatStatusAnnouncementProps['content'] => isReactNode(value);
+
+export const getContent = (
+  items: ChatStatusAnnouncementProps['items'] | ChatStatusAnnouncementProps['content'],
+): TextItem[] => {
+  if (isContentType(items))
     return [
       {
-        content: textContent,
+        content: items,
       },
     ];
 
-  if (textContent.length === 1) return textContent;
+  if (items.length === 1) return items;
 
-  const alertTextElement = textContent.find(item => item.shouldFocusOnHover);
+  const alertTextElement = items.find(item => item.shouldFocusOnHover);
 
-  if (!alertTextElement) return textContent;
+  if (!alertTextElement) return items;
 
-  const totalTextItems = [...textContent, { content: alertTextElement.content }];
+  const totalTextItems = [...items, { content: alertTextElement.content }];
 
   return totalTextItems;
 };

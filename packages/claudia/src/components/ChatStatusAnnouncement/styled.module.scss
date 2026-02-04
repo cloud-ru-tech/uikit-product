@@ -1,5 +1,7 @@
 @use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
 
+$appearances: 'blue', 'red', 'neutral', 'primary', 'green', 'orange';
+
 .fieldAdvice {
   display: flex;
   justify-content: space-between;
@@ -11,6 +13,13 @@
   border: 1px solid stv.$sys-blue-decor-activated;
   background-color: stv.$sys-blue-decor-default;
   box-sizing: border-box;
+
+  @each $appearance in $appearances {
+    &[data-appearance='#{$appearance}'] {
+      border: 1px solid stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'decor-activated');
+      background-color: stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'decor-default');
+    }
+  }
 
   &[data-mobile] {
     height: 44px;

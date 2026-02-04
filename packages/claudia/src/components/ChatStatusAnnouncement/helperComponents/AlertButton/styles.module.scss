@@ -1,5 +1,7 @@
 @use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
 
+$appearances: 'blue', 'red', 'neutral', 'primary', 'green', 'orange';
+
 .alertButton {
   cursor: pointer;
 
@@ -19,9 +21,13 @@
 }
 
 .text {
-  color: stv.$sys-blue-text-support;
+  @each $appearance in $appearances {
+    &[data-appearance='#{$appearance}'] {
+      color: stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'text-support');
 
-  &:hover {
-    color: stv.$sys-blue-text-main;
+      &:hover {
+        color: stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'text-main');
+      }
+    }
   }
 }

@@ -102,11 +102,36 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | actionLabel* | `string` | - |  |
-| content* | `string \| TextItem[]` | - |  |
 | icon | `ReactElement<any, string \| JSXElementConstructor<any>>` | - |  |
+| content | `ReactNode` | - |  |
+| items | `TextItem[]` | - |  |
 | contentClassName | `string` | - |  |
-| onActionClick | `() => void` | - |  |
+| onActionClick | `(() => void) \| (() => void)` | - |  |
 | className | `string` | - | CSS-класс |
+| appearance | enum Appearance: `"blue"`, `"red"`, `"neutral"`, `"primary"`, `"green"`, `"orange"` | blue |  |
+## ChatStatusAnnouncementPassword
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| onActionClick* | `() => void` | - |  |
+| className | `string` | - | CSS-класс |
+## ChatStatusAnnouncementSsh
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| onActionClick* | `() => void` | - |  |
+| className | `string` | - | CSS-класс |
+## ChatStatusAnnouncementVmAgent
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| onActionClick* | `() => void` | - |  |
+| className | `string` | - | CSS-класс |
+| vmName | `string` | - |  |
+| ip | `string` | - |  |
 ## RateForm
 ### Props
 | name | type | default value | description |

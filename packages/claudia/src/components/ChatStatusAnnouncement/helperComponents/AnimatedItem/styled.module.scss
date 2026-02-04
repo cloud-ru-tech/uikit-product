@@ -1,0 +1,25 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.textBlock {
+  position: absolute;
+  padding: 0 8px 0 0;
+  box-sizing: border-box;
+  transition: all 0.7s ease-in-out;
+  will-change: transform, opacity;
+  width: 100%;
+}
+
+.textBlockCurrent {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.textBlockPrevious {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.textBlockNext {
+  opacity: 0;
+  transform: translateY(50px);
+}
