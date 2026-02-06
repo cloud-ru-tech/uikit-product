@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-02-06)
+
+
+### Features
+
+* **PDS-3427:** add sizes for copyline ([8956a5f](https://github.com/cloud-ru-tech/uikit-product/commit/8956a5fac20b1002224f22aba0930b525a643722))
+
+
+
+
+
 ## 2.0.1 (2026-02-02)
 
 
