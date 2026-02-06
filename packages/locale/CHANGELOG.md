@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-02-06)
+
+
+### Features
+
+* **AINFR-4749:** add appearance, add product component chat status announcement ([8efc0df](https://github.com/cloud-ru-tech/uikit-product/commit/8efc0df7cbb19943940823a6201c333c3ee87ee3))
+
+
+
+
+
 ## 2.0.1 (2026-02-02)
 
 
