@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-widget",
   "title": "Widget",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -41,7 +41,7 @@
     "@cloud-ru/uikit-product-mobile-carousel": "1.1.1",
     "@cloud-ru/uikit-product-mobile-dropdown": "2.1.0",
     "@cloud-ru/uikit-product-mobile-tooltip": "1.1.1",
-    "@cloud-ru/uikit-product-title-clickable": "1.1.1",
+    "@cloud-ru/uikit-product-title-clickable": "1.2.0",
     "@cloud-ru/uikit-product-utils": "9.0.1",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/info-block": "0.6.33",

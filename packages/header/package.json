@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-header",
   "title": "Header",
-  "version": "6.0.2",
+  "version": "6.0.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -40,7 +40,7 @@
     "@cloud-ru/uikit-product-icons": "17.0.1",
     "@cloud-ru/uikit-product-mobile-drawer": "2.0.2",
     "@cloud-ru/uikit-product-mobile-modal": "2.0.2",
-    "@cloud-ru/uikit-product-title-clickable": "1.1.1",
+    "@cloud-ru/uikit-product-title-clickable": "1.2.0",
     "@cloud-ru/uikit-product-utils": "9.0.1",
     "@snack-uikit/avatar": "0.8.14",
     "@snack-uikit/breadcrumbs": "0.11.22",

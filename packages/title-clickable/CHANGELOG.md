@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2026-02-06)
+
+
+### Features
+
+* **PDS-3392:** add hover style for title clickable and add button for widget error state ([bc16460](https://github.com/cloud-ru-tech/uikit-product/commit/bc1646059678073ab7cc9394ac2ea4b03e0c4d90))
+
+
+
+
+
 ## 1.1.1 (2026-02-02)
 
 
