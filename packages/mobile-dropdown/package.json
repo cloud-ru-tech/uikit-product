@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-mobile-dropdown",
   "title": "Mobile Dropdown",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-mobile-modal": "2.0.2",
+    "@cloud-ru/uikit-product-mobile-modal": "2.0.3",
     "@cloud-ru/uikit-product-utils": "9.0.1",
     "@snack-uikit/dropdown": "0.5.2",
     "@snack-uikit/list": "0.32.1",

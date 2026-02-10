@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-banner-predefined",
   "title": "Site Banner Predefined",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-site-banner": "2.0.3",
+    "@cloud-ru/uikit-product-site-banner": "2.0.4",
     "@cloud-ru/uikit-product-utils": "9.0.1"
   }
 }

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 17.0.2 (2026-02-10)
+
+
+### Bug Fixes
+
+* **PDS-3534:** quota icon fix ([137b550](https://github.com/cloud-ru-tech/uikit-product/commit/137b550bf12b4f446a2968613530b1f76363cd50))
+
+
+
+
+
 ## 17.0.1 (2026-02-02)
 
 
