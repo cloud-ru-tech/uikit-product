@@ -15,7 +15,7 @@ export function CookiePolicyDescription() {
       <Link
         insideText
         href={LINKS.cookie}
-        textMode='on-accent'
+        textMode='accent'
         appearance='neutral'
         size='s'
         target='_blank'
@@ -25,7 +25,7 @@ export function CookiePolicyDescription() {
       <Link
         insideText
         href={LINKS.policy}
-        textMode='on-accent'
+        textMode='accent'
         appearance='neutral'
         size='s'
         target='_blank'

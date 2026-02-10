@@ -1,13 +1,16 @@
 @use '@cloud-ru/figma-tokens-web/build/scss/styles-theme-variables' as ds;
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
 
 .cookiePolicyWrapper {
-  background: ds.$sys-graphite-accent-default;
+  background: ds.$sys-neutral-background2-level;
   width: 100%;
   max-width: 1219px;
   padding: 24px;
   display: flex;
   overflow: hidden;
   border-radius: 4px;
+  box-shadow: styles-theme-variables.$box-shadow-elevation-level3;
 
   &[data-layout-type='tablet'] {
     padding: 16px;
@@ -21,7 +24,7 @@
 }
 
 .cookiePolicyDescription {
-  color: ds.$sys-neutral-on-accent;
+  color: ds.$sys-neutral-text-main;
 }
 
 .cookiePolicyDescriptionWithButton {
