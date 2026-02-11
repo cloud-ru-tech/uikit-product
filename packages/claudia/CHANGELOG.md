@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.15.0 (2026-02-11)
+
+
+### Features
+
+* **AINFR-4749:** fix text color, add animation ([99a6802](https://github.com/cloud-ru-tech/uikit-product/commit/99a6802c7fca7f8ee4439b8964e9fff39aab2261))
+
+
+
+
+
 ## 1.14.1 (2026-02-10)
 
 ### Only dependencies have been changed
