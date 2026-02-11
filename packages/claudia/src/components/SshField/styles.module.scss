@@ -5,8 +5,20 @@
   flex-direction: column;
 }
 
+@keyframes slide-up {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
 .chatStatus {
-  transform: translate(0px, 10px);
+  animation: slide-up 0.3s ease forwards;
   border-radius: 4px;
 }
 
