@@ -1,6 +1,7 @@
 export * from './AdvancedCloudBackup';
 export * from './AdvancedCloudContainerEngine';
 export * from './AdvancedCloudServer';
+export * from './AdvancedCloudTable';
 export * from './AdvancedDataAsYouUse';
 export * from './AdvancedDataLakeInsight';
 export * from './AdvancedDataWarehouseService';

@@ -2,6 +2,7 @@ import {
   CloudBackupAndRecoverySVG,
   CloudContainerEngineSVG,
   CloudSearchServiceSVG,
+  CloudTableSVG,
   DataLakeInsightSVG,
   DataWarehouseServiceSVG,
   DistributedCacheServiceForMemcachedSVG,
@@ -27,6 +28,7 @@ import {
   CLOUD_BACKUP_FORM_CONFIG,
   CLOUD_CONTAINER_ENGINE_FORM_CONFIG,
   CLOUD_SERVER_FORM_CONFIG,
+  CLOUD_TABLE_FORM_CONFIG,
   DATA_AS_YOU_USE_FORM_CONFIG,
   DATA_LAKE_INSIGHT_FORM_CONFIG,
   DATA_WAREHOUSE_SERVICE_FORM_CONFIG,
@@ -252,6 +254,17 @@ export const ADVANCED_PRODUCTS: CatalogConfig['products'] = {
     formConfig: CLOUD_SERVER_FORM_CONFIG,
     icon: ElasticCloudServerSVG,
     enableChangeProductQuantity: true,
+  },
+
+  [ADVANCED_PRODUCT.AdvancedCloudTable]: {
+    id: ADVANCED_PRODUCT.AdvancedCloudTable,
+    platform: PLATFORM.Advanced,
+    dataTestId: ADVANCED_PRODUCT.AdvancedCloudTable,
+    label: 'Advanced Cloud Table',
+    caption: 'Сервис хранения и анализа данных в облаке на базе HBase, Doris, ClickHouse',
+    formConfig: CLOUD_TABLE_FORM_CONFIG,
+    icon: CloudTableSVG,
+    enableChangeProductQuantity: false,
   },
 
   [ADVANCED_PRODUCT.AdvancedNetwork]: {

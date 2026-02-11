@@ -65,6 +65,7 @@ export const ADVANCED_CATALOG: CatalogConfig['catalog'] = {
         ADVANCED_PRODUCT.AdvancedDataLakeInsight,
         ADVANCED_PRODUCT.AdvancedDataAsYouUse,
         ADVANCED_PRODUCT.AdvancedElasticsearch,
+        ADVANCED_PRODUCT.AdvancedCloudTable,
       ],
     },
     {

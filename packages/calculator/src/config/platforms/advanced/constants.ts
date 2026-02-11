@@ -19,5 +19,6 @@ export const ADVANCED_PRODUCT = {
   AdvancedPostgreSqlDatabase: 'postgreSqlDatabase',
   AdvancedDocumentDatabase: 'documentDatabase',
   AdvancedCloudServer: 'cloudServer',
+  AdvancedCloudTable: 'advancedCloudtable',
   AdvancedNetwork: 'network',
 } as const;
