@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-02-12)
+
+
+### Bug Fixes
+
+* **PDS-3553:** pagination fix in mobile-table ([a175ba3](https://github.com/cloud-ru-tech/uikit-product/commit/a175ba3cb308feed828155a598a447bf4290d009))
+
+
+### Features
+
+* **PDS-3553:** unexpected sorting by default fixed ([8855d62](https://github.com/cloud-ru-tech/uikit-product/commit/8855d6238592c2ff9e36208f812c50a6abe98e4b))
+
+
+
+
+
 ## 2.0.4 (2026-02-10)
 
 ### Only dependencies have been changed
