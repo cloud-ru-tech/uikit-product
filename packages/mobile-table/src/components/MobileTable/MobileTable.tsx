@@ -198,7 +198,12 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
     },
     pageCount,
     onPaginationChange,
+
+    defaultColumn: {
+      enableSorting: false,
+    },
     onSortingChange,
+
     onColumnOrderChange: enableColumnsOrderSortByDrag ? setColumnOrder : undefined,
     globalFilterFn: enableFuzzySearch ? fuzzyFilter : 'includesString',
 
@@ -268,10 +273,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
     ? 'multiple'
     : 'single';
 
-  const hasSortableColumns = useMemo(
-    () => columnDefinitions.some(column => column.enableSorting !== false),
-    [columnDefinitions],
-  );
+  const hasSortableColumns = useMemo(() => columnDefinitions.some(column => column.enableSorting), [columnDefinitions]);
 
   const shouldShowSorting = useMemo(
     () => Boolean(sortingProp) || hasSortableColumns,
