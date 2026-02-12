@@ -19,6 +19,7 @@ import { SkeletonContextProvider } from '@snack-uikit/skeleton';
 import {
   getPinnedGroups,
   PaginationState,
+  ToolbarCheckBoxMode,
   useColumnOrderByDrag,
   useColumnSettings,
   usePageReset,
@@ -80,6 +81,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
   bulkActions: bulkActionsProp,
   columnsSettings: columnsSettingsProp,
   savedState,
+  toolbarCheckBoxMode,
   ...rest
 }: MobileTableProps<TData, TFilters>) {
   const defaultPaginationState = useMemo(() => ({ pageIndex: 0, pageSize: DEFAULT_PAGE_SIZE }), []);
@@ -248,10 +250,13 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
         : undefined,
     [bulkActionsProp, enableSelection, table],
   );
+
+  const isAllRowsMode = toolbarCheckBoxMode === ToolbarCheckBoxMode.AllRows;
+
   const handleOnToolbarCheck = useCallback(() => {
     if (!loading && table.getTopRows().length) {
       const centerRows = table.getCenterRows();
-      const isSomeRowsSelected = table.getIsSomePageRowsSelected();
+      const isSomeRowsSelected = isAllRowsMode ? table.getIsSomeRowsSelected() : table.getIsSomePageRowsSelected();
       const isAllCenterRowsSelected = centerRows.every(row => row.getIsSelected());
 
       if (isAllCenterRowsSelected) {
@@ -264,10 +269,10 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
     }
 
     if (!loading && rowSelectionProp?.multiRow) {
-      table.toggleAllPageRowsSelected();
+      isAllRowsMode ? table.toggleAllRowsSelected() : table.toggleAllPageRowsSelected();
       return;
     }
-  }, [loading, rowSelectionProp?.multiRow, table]);
+  }, [isAllRowsMode, loading, rowSelectionProp?.multiRow, table]);
 
   const selectionMode: MobileToolbarProps<TFilters>['selectionMode'] = rowSelectionProp?.multiRow
     ? 'multiple'
@@ -292,6 +297,10 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
     onPaginationChange,
     autoResetPageIndex,
   });
+
+  const { checked, indeterminate } = isAllRowsMode
+    ? { checked: table.getIsAllRowsSelected(), indeterminate: table.getIsSomeRowsSelected() }
+    : { checked: table.getIsAllPageRowsSelected(), indeterminate: table.getIsSomePageRowsSelected() };
 
   return (
     <div className={cn(styles.tableWrapper, className)} {...extractSupportProps(rest)}>
@@ -338,8 +347,8 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
             selectedCount={table.getSelectedRowModel().rows.length}
             selectionMode={selectionMode}
             onCheck={enableSelection ? handleOnToolbarCheck : undefined}
-            checked={table.getIsAllPageRowsSelected()}
-            indeterminate={table.getIsSomePageRowsSelected()}
+            checked={checked}
+            indeterminate={indeterminate}
             persist={
               savedState?.id && savedState?.filterQueryKey
                 ? {

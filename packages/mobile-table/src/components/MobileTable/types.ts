@@ -33,6 +33,7 @@ export type MobileTableProps<TData extends object, TFilters extends FiltersState
   | 'savedState'
   | 'autoResetPageIndex'
   | 'toolbarAfter'
+  | 'toolbarCheckBoxMode'
 > &
   WithSupportProps<{
     headlineId?: string;
