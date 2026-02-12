@@ -68,9 +68,9 @@ export const SelectCreate = memo(function SelectCreate({
   const buttons = useMemo<Pick<ModalProps, 'approveButton' | 'cancelButton'>>(
     () => ({
       approveButton: { label: t('SelectCreate.buttonCreate'), onClick: handleCreate },
-      cancelButton: { label: t('SelectCreate.buttonCancel'), onClick: onClose },
+      cancelButton: { label: t('SelectCreate.buttonCancel'), onClick: handleClose },
     }),
-    [t, handleCreate, onClose],
+    [t, handleCreate, handleClose],
   );
 
   const formLayout = useMemo(() => {
