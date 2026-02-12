@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2026-02-12)
+
+
+### Features
+
+* **DOCDEV-2926:** updated site cookie policy component styles ([4c63181](https://github.com/cloud-ru-tech/uikit-product/commit/4c63181652c354a6765bc17c44b337e63580c41f))
+
+
+
+
+
 ## 1.3.1 (2026-02-02)
 
 
