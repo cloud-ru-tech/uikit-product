@@ -23,7 +23,6 @@ import {
   useColumnSettings,
   usePageReset,
 } from '@snack-uikit/table';
-import { useValueControl } from '@snack-uikit/utils';
 
 import { DEFAULT_PAGE_SIZE } from '../../constants';
 import {
@@ -36,7 +35,7 @@ import {
   TableSorting,
   useEmptyState,
 } from '../../helperComponents';
-import { useFilters, useLoadingTable } from './hooks';
+import { useFilters, useLoadingTable, useStateControl } from './hooks';
 import styles from './styles.module.scss';
 import { MobileTableProps } from './types';
 import {
@@ -85,14 +84,16 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
 }: MobileTableProps<TData, TFilters>) {
   const defaultPaginationState = useMemo(() => ({ pageIndex: 0, pageSize: DEFAULT_PAGE_SIZE }), []);
 
-  const [sorting = [], onSortingChange] = useValueControl<SortingState>(sortingProp ?? { defaultValue: [] });
-  const [globalFilter = '', onGlobalFilterChange] = useValueControl<string>(search ?? { defaultValue: '' });
-  const [pagination = defaultPaginationState, onPaginationChange] = useValueControl<PaginationState>(
-    paginationProp ?? { defaultValue: defaultPaginationState },
+  const { state: sorting, onStateChange: onSortingChange } = useStateControl<SortingState>(sortingProp, []);
+  const { state: globalFilter, onStateChange: onGlobalFilterChange } = useStateControl<string>(search, '');
+  const { state: pagination, onStateChange: onPaginationChange } = useStateControl<PaginationState>(
+    paginationProp,
+    defaultPaginationState,
   );
 
-  const [rowSelection = {}, onRowSelectionChange] = useValueControl<RowSelectionState>(
-    rowSelectionProp ?? { defaultValue: {} },
+  const { state: rowSelection = {}, onStateChange: onRowSelectionChange } = useStateControl<RowSelectionState>(
+    rowSelectionProp,
+    {},
   );
 
   const enableRowSelection = useCallback(
