@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2026-02-13)
+
+
+### Features
+
+* **EVODP-8477:** Added table toolbar checkbox selection options. ([b279016](https://github.com/cloud-ru-tech/uikit-product/commit/b279016a9a5427744ede9704579ca2db13293213))
+
+
+
+
+
 # 2.1.0 (2026-02-12)
 
 
