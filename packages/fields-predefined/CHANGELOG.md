@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.3 (2026-02-13)
+
+
+### Bug Fixes
+
+* **CSS-726:** fix on close behavior ([9628421](https://github.com/cloud-ru-tech/uikit-product/commit/9628421212c72fe8b3aa9e7937bf2f7d3102529d))
+
+
+
+
+
 ## 2.1.2 (2026-02-10)
 
 ### Only dependencies have been changed
