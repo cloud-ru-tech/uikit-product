@@ -410,6 +410,9 @@ export const ru_RU: typeof en_GB = {
       tooltipDescription: 'ИИ-помощник в облаке',
       documentationLink: 'Документация',
     },
+    VmAgentField: {
+      placeholder: 'Введите свой запрос',
+    },
     SshField: {
       placeholder: 'Скопируйте и вставьте SSH-ключ или прикрепите файл',
       chatStatusAnnouncement: {

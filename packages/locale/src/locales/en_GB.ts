@@ -409,6 +409,9 @@ export const en_GB = {
       tooltipDescription: 'AI assistant in the cloud',
       documentationLink: 'Documentation',
     },
+    VmAgentField: {
+      placeholder: 'Введите свой запрос',
+    },
     SshField: {
       placeholder: 'Copy and paste SSH key or attach a file',
       chatStatusAnnouncement: {
