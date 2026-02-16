@@ -23,7 +23,6 @@ export const siteCsatPopover: StoryObj<SiteCsatPopoverProps> = {
     onSetLike: () => {},
     layoutType: LAYOUT_TYPE.Desktop,
     label: 'Было полезно ?',
-    showNewAppearance: true,
     negativeFeedbackForm: {
       open: false,
       onSetOpen: () => {},

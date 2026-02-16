@@ -16,8 +16,6 @@ export type SiteCsatProps = WithLayoutType<{
   onSetLike: (flag: boolean) => void;
   /** Текст рядом с кнопками */
   label: string;
-  /** Выбор версии компонента, сделано для a/b тестирования, после тестирования этот prop удалится */
-  showNewAppearance?: boolean;
   /** Данные для заполнения формы фидбэка */
   dislikeCommentForm?: {
     /** Открыта или закрыт форма */
@@ -35,15 +33,7 @@ export type SiteCsatProps = WithLayoutType<{
   };
 }>;
 
-export function SiteCsat({
-  isLoading,
-  like,
-  onSetLike,
-  layoutType,
-  label,
-  dislikeCommentForm,
-  showNewAppearance,
-}: SiteCsatProps) {
+export function SiteCsat({ isLoading, like, onSetLike, layoutType, label, dislikeCommentForm }: SiteCsatProps) {
   return (
     <div className={styles.siteCsatBlock} data-layout-type={layoutType}>
       <div className={styles.csatFormBlock}>
@@ -60,12 +50,7 @@ export function SiteCsat({
             <Spinner />
           </div>
         ) : (
-          <LikeDislikeBlock
-            showNewAppearance={showNewAppearance}
-            dislikeEnabled={dislikeCommentForm?.dislikeEnabled}
-            like={like}
-            onSetLike={onSetLike}
-          />
+          <LikeDislikeBlock dislikeEnabled={dislikeCommentForm?.dislikeEnabled} like={like} onSetLike={onSetLike} />
         )}
         {like === false && !isLoading && dislikeCommentForm && dislikeCommentForm.open && (
           <Typography.SansBodyM className={styles.textSupport}>Поделитесь, что именно не так?</Typography.SansBodyM>

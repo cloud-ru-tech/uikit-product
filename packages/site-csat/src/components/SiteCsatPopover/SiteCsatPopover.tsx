@@ -26,8 +26,6 @@ export type SiteCsatPopoverProps = WithLayoutType<{
     /** Обработчик открытия или закрытия поповера */
     onSetOpen: (flag: boolean) => void;
   };
-  /** Выбор версии компонента, сделано для a/b тестирования, после тестирования этот prop удалится */
-  showNewAppearance?: boolean;
   /** Данные для заполнения формы фидбэка */
   dislikeCommentForm?: {
     /** Доступно ли нажатие на дизлайк */
@@ -51,7 +49,6 @@ export function SiteCsatPopover({
   negativeFeedbackForm,
   label,
   dislikeCommentForm,
-  showNewAppearance = false,
 }: SiteCsatPopoverProps) {
   const isMobile = layoutType === 'mobile';
 
@@ -105,17 +102,11 @@ export function SiteCsatPopover({
   return (
     <>
       <div className={styles.siteCsatPopoverBlock}>
-        {!isMobile &&
-          (showNewAppearance ? (
-            <Typography.SansTitleM className={styles.labelNewAppearance}>{title}</Typography.SansTitleM>
-          ) : (
-            <Typography.SansBodyM className={styles.label}>{label}</Typography.SansBodyM>
-          ))}
+        {!isMobile && <Typography.SansTitleM className={styles.label}>{title}</Typography.SansTitleM>}
         {loading ? (
           <Spinner className={styles.spinner} />
         ) : (
           <LikeDislikeBlock
-            showNewAppearance={showNewAppearance}
             dislikeEnabled={dislikeCommentForm?.dislikeEnabled}
             className={styles.likeDislikeBlock}
             onOpenClosePopover={handleOpenClosePopover}
