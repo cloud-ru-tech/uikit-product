@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-promo-tag-predefined",
   "title": "PromoTag Predefined",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-utils": "9.0.1",
+    "@cloud-ru/uikit-product-utils": "9.0.2",
     "@snack-uikit/promo-tag": "0.7.8",
     "@snack-uikit/tooltip": "0.18.4",
     "@snack-uikit/utils": "4.0.0"

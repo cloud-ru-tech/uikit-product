@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.5 (2026-02-16)
+
+
+### Bug Fixes
+
+* **FF-8052:** fix homepage link ([dffd09c](https://github.com/cloud-ru-tech/uikit-product/commit/dffd09c642edf4842eee02ccc4ec3e5894f4a29e))
+
+
+
+
+
 ## 2.0.4 (2026-02-10)
 
 ### Only dependencies have been changed

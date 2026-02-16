@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-layout",
   "title": "Info",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,8 +36,8 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "17.0.2",
-    "@cloud-ru/uikit-product-utils": "9.0.1",
+    "@cloud-ru/uikit-product-icons": "17.0.3",
+    "@cloud-ru/uikit-product-utils": "9.0.2",
     "@snack-uikit/info-block": "0.6.13",
     "classnames": "2.5.1"
   },

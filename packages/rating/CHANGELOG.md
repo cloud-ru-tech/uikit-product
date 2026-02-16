@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.2 (2026-02-16)
+
+
+### Bug Fixes
+
+* **FF-8052:** fix homepage link ([dffd09c](https://github.com/cloud-ru-tech/uikit-product/commit/dffd09c642edf4842eee02ccc4ec3e5894f4a29e))
+
+
+
+
+
 ## 2.0.1 (2026-02-02)
 
 
@@ -1045,7 +1056,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.3.29](https://gitverse.ru/cloud-ru-tech/uikit-product/compare/@cloud-ru/uikit-product-rating@0.3.28...@cloud-ru/uikit-product-rating@0.3.29) (2022-08-15)
 
-**Note:** Version bump only for package @cloud-ru/uikit-product-rating
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-utils@9.0.2]($PUBLIC_PROJECT_URL/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.3.28](https://gitverse.ru/cloud-ru-tech/uikit-product/compare/@cloud-ru/uikit-product-rating@0.3.27...@cloud-ru/uikit-product-rating@0.3.28) (2022-08-11)
 

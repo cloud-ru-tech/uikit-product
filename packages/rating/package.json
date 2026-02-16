@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-rating",
   "title": "React Rating",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-utils": "9.0.1",
+    "@cloud-ru/uikit-product-utils": "9.0.2",
     "@snack-uikit/toggles": "0.13.5",
     "classnames": "2.5.1"
   }
