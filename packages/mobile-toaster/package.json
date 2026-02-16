@@ -20,7 +20,7 @@
     "./CHANGELOG.md",
     "./LICENSE"
   ],
-  "homepage": "https://github.com/cloud-ru-tech/uikit-product/-/tree/master/packages/mobile-toaster",
+  "homepage": "https://github.com/cloud-ru-tech/uikit-product/tree/master/packages/mobile-toaster",
   "repository": {
     "type": "git",
     "url": "https://github.com/cloud-ru-tech/uikit-product.git",

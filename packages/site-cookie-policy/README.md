@@ -14,6 +14,9 @@ CookiePolicy — баннер для информирования пользов
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| className | `string` | - | Дополнительный className root элемента |
+| onClick | `() => void` | - | Событие клика на кнопку |
 
 
 [//]: DOCUMENTATION_SECTION_END

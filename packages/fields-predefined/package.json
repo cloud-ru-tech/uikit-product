@@ -10,7 +10,7 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://github.com/cloud-ru-tech/uikit-product/-/tree/master/packages/fields-predefined",
+  "homepage": "https://github.com/cloud-ru-tech/uikit-product/tree/master/packages/fields-predefined",
   "repository": {
     "type": "git",
     "url": "https://github.com/cloud-ru-tech/uikit-product.git",
