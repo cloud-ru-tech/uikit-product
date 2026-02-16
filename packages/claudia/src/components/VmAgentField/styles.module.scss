@@ -20,25 +20,8 @@
 .chatStatus {
   opacity: 0;
   transform: translateY(44px);
-  animation: slide-up 0.4s ease forwards;
+  animation: slide-up 0.4s ease-out forwards;
   animation-delay: 800ms;
-}
-
-.uploadTooltip {
-  display: flex;
-}
-
-.secured {
-  textarea {
-    -webkit-text-security: disc;
-    /* stylelint-disable-next-line property-no-unknown */
-    text-security: disc;
-  }
-}
-
-.dropZone {
-  height: 90px;
-  transform: translateZ(0);
 }
 
 .defaultText {

@@ -6,10 +6,10 @@ $appearances: 'blue', 'red', 'neutral', 'primary', 'green', 'orange';
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 4px 8px 0px 8px;
-  height: 38px;
-  max-height: 38px;
-  border-radius: 10px 10px 0 0;
+  padding: 8px 8px 20px 8px;
+  height: stv.$size-segmented-control-segment-l;
+  max-height: stv.$size-segmented-control-segment-l;
+  border-radius: 4px 4px 0 0;
   border: 1px solid stv.$sys-blue-decor-activated;
   background-color: stv.$sys-blue-decor-default;
   box-sizing: border-box;
@@ -17,7 +17,12 @@ $appearances: 'blue', 'red', 'neutral', 'primary', 'green', 'orange';
   @each $appearance in $appearances {
     &[data-appearance='#{$appearance}'] {
       border: 1px solid stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'decor-activated');
-      background-color: stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'decor-default');
+
+      background-color: stv.color-on-background-with-opacity(
+        transparent,
+        stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'decor-default'),
+        stv.$opacity-a048
+      );
     }
   }
 
@@ -54,7 +59,7 @@ $appearances: 'blue', 'red', 'neutral', 'primary', 'green', 'orange';
   position: absolute;
   padding: 0 8px 0 0;
   box-sizing: border-box;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.8s ease-in-out;
   will-change: transform, opacity;
 }
 

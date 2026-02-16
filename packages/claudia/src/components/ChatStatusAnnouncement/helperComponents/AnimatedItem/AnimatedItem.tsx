@@ -10,21 +10,11 @@ export type AnimatedItemProps = {
   content: ReactNode;
   itemIndex: number;
   currentIndex: number;
-  totalTextItemsLength: number;
   contentClassName?: string;
 };
 
-export function AnimatedItem({
-  content,
-  itemIndex,
-  totalTextItemsLength,
-  currentIndex,
-  contentClassName,
-}: AnimatedItemProps) {
-  const currentTextNextOrPreviousStyle =
-    itemIndex === (currentIndex - 1 + totalTextItemsLength) % totalTextItemsLength
-      ? styles.textBlockPrevious
-      : styles.textBlockNext;
+export function AnimatedItem({ content, itemIndex, currentIndex, contentClassName }: AnimatedItemProps) {
+  const currentTextNextOrPreviousStyle = itemIndex > currentIndex ? styles.textBlockNext : styles.textBlockPrevious;
 
   const currentTextStyle = itemIndex === currentIndex ? styles.textBlockCurrent : currentTextNextOrPreviousStyle;
 

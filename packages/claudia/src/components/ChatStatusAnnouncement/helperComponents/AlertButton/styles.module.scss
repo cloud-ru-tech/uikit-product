@@ -21,12 +21,20 @@ $appearances: 'blue', 'red', 'neutral', 'primary', 'green', 'orange';
 }
 
 .text {
+  padding: 4px 0px;
+
   @each $appearance in $appearances {
     &[data-appearance='#{$appearance}'] {
       color: stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'text-support');
 
-      &:hover {
-        color: stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'text-main');
+      @media (hover: hover) {
+        &:hover {
+          color: stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered');
+        }
+      }
+
+      &:active {
+        color: stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-pressed');
       }
     }
   }

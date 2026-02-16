@@ -5,23 +5,21 @@ import { useEffect, useState } from 'react';
 
 import { MobileDrawerCustom } from '@cloud-ru/uikit-product-mobile-drawer';
 import { ButtonFilled } from '@snack-uikit/button';
-import { Divider } from '@snack-uikit/divider';
-import { Typography } from '@snack-uikit/typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { SshField, SshFieldProps } from '../src';
-import { isTouchDevice } from '../src/components/SshField/utils/isTouchDevice';
+import { VmAgentField, VmAgentFieldProps } from '../src/components/VmAgentField';
+import { isTouchDevice } from '../src/components/VmAgentField/utils/isTouchDevice';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Console/Claudia/Fields/SshField',
-  component: SshField,
+  title: 'Console/Claudia/Fields/VmAgentField',
+  component: VmAgentField,
 };
 export default meta;
 
-type StoryProps = SshFieldProps;
+type StoryProps = VmAgentFieldProps;
 
 const onSubmit = (value: string) => window.alert(`Submitted: ${value}`);
 
@@ -56,19 +54,15 @@ const Template = ({ value: valueProp, ...args }: StoryProps) => {
               boxSizing: 'border-box',
             }}
           >
-            <Divider />
-
             <div
               style={{
                 padding: '8px 16px',
-                paddingRight: '6px',
               }}
             >
-              <SshField {...args} value={value} onChange={setValue} onSubmit={onSubmit} />
+              <VmAgentField {...args} value={value} onChange={setValue} onSubmit={onSubmit} />
             </div>
           </div>
         </MobileDrawerCustom>
-        <Typography.SansBodyM>{value}</Typography.SansBodyM>
       </>
     );
   }
@@ -79,17 +73,12 @@ const Template = ({ value: valueProp, ...args }: StoryProps) => {
         [styles.mobileWrapper]: isTouchDevice(args.layoutType),
       })}
     >
-      <SshField {...args} value={value} onChange={setValue} onSubmit={onSubmit} />
-      {value && (
-        <div className={styles.sshTextWrapper}>
-          <Typography.SansBodyM>{value}</Typography.SansBodyM>
-        </div>
-      )}
+      <VmAgentField {...args} value={value} onChange={setValue} onSubmit={onSubmit} />
     </div>
   );
 };
 
-export const sshField: StoryObj<StoryProps> = {
+export const vmAgentField: StoryObj<StoryProps> = {
   render: function Render({ ...props }) {
     const [args, setArgs] = useArgs<StoryProps>();
 
@@ -99,7 +88,10 @@ export const sshField: StoryObj<StoryProps> = {
 
     return <Template {...props} onChange={onChange} value={args.value} />;
   },
-  args: {},
+  args: {
+    vmIp: '255.255.255.255',
+    vmName: 'my-lovely-vm-name',
+  },
   argTypes: {},
   parameters: {
     readme: {

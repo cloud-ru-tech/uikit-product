@@ -17,12 +17,14 @@
     height: 40px;
   }
 
-  &:hover {
-    border: 1px solid stv.$sys-neutral-decor-hovered;
-  }
+  @media (hover: hover) {
+    &:hover {
+      border: 1px solid stv.$sys-neutral-decor-hovered;
+    }
 
-  &:hover .text {
-    color: stv.$sys-neutral-text-main;
+    &:hover .text {
+      color: stv.$sys-neutral-text-main;
+    }
   }
 
   &:focus {

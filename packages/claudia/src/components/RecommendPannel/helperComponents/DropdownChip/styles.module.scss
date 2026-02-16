@@ -49,8 +49,10 @@
     background-color: transparent;
   }
 
-  &:hover::before {
-    background-color: stv.$sys-neutral-accent-default;
-    opacity: 0.08;
+  @media (hover: hover) {
+    &:hover::before {
+      background-color: stv.$sys-neutral-accent-default;
+      opacity: stv.$opacity-a008;
+    }
   }
 }

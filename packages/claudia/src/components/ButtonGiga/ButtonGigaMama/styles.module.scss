@@ -103,22 +103,26 @@ $mama-filter-brightness-active: 0.7;
     }
   }
 
-  &:hover:not(:disabled):not([data-disabled]) {
-    @include label-color(stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'text-support'));
-    @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'text-support'));
+  &:not(:disabled):not([data-disabled]) {
+    @media (hover: hover) {
+      &:hover {
+        @include label-color(stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'text-support'));
+        @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', 'primary', 'text-support'));
 
-    box-shadow: $mama-box-shadow-hover;
+        box-shadow: $mama-box-shadow-hover;
 
-    &::before {
-      filter: brightness($mama-filter-brightness-hover);
-    }
+        &::before {
+          filter: brightness($mama-filter-brightness-hover);
+        }
 
-    .icon {
-      filter: brightness($mama-filter-brightness-hover);
-    }
+        .icon {
+          filter: brightness($mama-filter-brightness-hover);
+        }
 
-    .label {
-      filter: brightness($mama-filter-brightness-hover);
+        .label {
+          filter: brightness($mama-filter-brightness-hover);
+        }
+      }
     }
   }
 

@@ -1,0 +1,23 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
+
+.actionsFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 7px;
+}
+
+.actionsWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: ste.$dimension-050m;
+}
+
+.right {
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 8px;
+}

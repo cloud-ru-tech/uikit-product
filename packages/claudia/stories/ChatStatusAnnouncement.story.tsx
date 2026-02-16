@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import cn from 'classnames';
 
-import { PasswordLockSVG, PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
+import { PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
 import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -61,7 +61,7 @@ const Template = ({ ...props }: StoryProps) => {
 export const chatStatusAnnouncement: StoryObj<StoryProps> = {
   render: Template,
   args: {
-    icon: <PasswordLockSVG size={16} />,
+    icon: <PlaceholderSVG size={16} />,
     actionLabel: 'Action',
     onActionClick: () => alert('Action'),
     layoutType: LAYOUT_TYPE.Desktop,

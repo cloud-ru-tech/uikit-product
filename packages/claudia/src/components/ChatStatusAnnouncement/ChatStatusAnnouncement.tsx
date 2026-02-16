@@ -32,8 +32,7 @@ export function ChatStatusAnnouncement({
 
   // запуск основной анимации
   useEffect(() => {
-    // тут проверка на items, потому что totalTextItems имеет дополненный айтем, на который потом происходит фокус
-    if (isAnimationEnded || !items || items.length <= 1) return;
+    if (isAnimationEnded || !items || totalTextItems.length <= 1) return;
 
     let interval: NodeJS.Timeout;
 
@@ -45,11 +44,11 @@ export function ChatStatusAnnouncement({
     }
 
     interval = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % items.length);
+      setCurrentIndex(prevIndex => prevIndex + 1);
     }, ANIMATION_DELAY_INTERVAL);
 
     return () => clearInterval(interval);
-  }, [currentIndex, isAnimationEnded, items]);
+  }, [currentIndex, isAnimationEnded, items, totalTextItems.length]);
 
   // запуск анимации по ховеру
   useEffect(() => {
@@ -100,7 +99,6 @@ export function ChatStatusAnnouncement({
               content={item.content}
               itemIndex={index}
               currentIndex={currentIndex}
-              totalTextItemsLength={totalTextItems.length}
               contentClassName={contentClassName}
             />
           ))}

@@ -1,0 +1,57 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+$sizes: 'xs', 's';
+$width: (
+  'xs': 24px,
+  's': 32px,
+);
+
+.buttonVmAgent {
+  cursor: pointer;
+
+  position: relative;
+
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: max-content;
+  min-width: max-content;
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+  text-transform: none;
+
+  border: 0 solid transparent;
+  outline: 0;
+  outline-offset: 0;
+  border-radius: stv.$radius-button-s;
+  background-color: stv.simple-var(stv.$theme-variables, 'sys', 'orange', 'decor-default');
+
+  @each $size in $sizes {
+    &[data-size='#{$size}'] {
+      width: stv.simple-var($width, $size);
+      height: stv.simple-var($width, $size);
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: stv.simple-var(stv.$theme-variables, 'sys', 'orange', 'decor-hovered');
+    }
+  }
+
+  &:active {
+    background-color: stv.simple-var(stv.$theme-variables, 'sys', 'orange', 'decor-activated');
+  }
+
+  &[data-disabled='true'] {
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: stv.$sys-neutral-decor-disabled;
+    color: stv.$sys-neutral-text-light;
+  }
+}

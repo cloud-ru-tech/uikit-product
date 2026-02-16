@@ -137,6 +137,7 @@ export const SshField = forwardRef<HTMLTextAreaElement, SshFieldProps>(
             submitEnabled={isValueValid && !disabled}
             ref={ref}
             value={value}
+            onCancel={onCancel}
           />
         </WithSshValidation>
       );

@@ -1,17 +1,13 @@
 import cn from 'classnames';
 import { forwardRef } from 'react';
 
-import { AttachmentSVG } from '@cloud-ru/uikit-product-icons';
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { FieldTextAreaProps } from '@cloud-ru/uikit-product-mobile-fields';
 import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
-import { ButtonFunction } from '@snack-uikit/button';
-import { FileUpload } from '@snack-uikit/drop-zone';
 import { Scroll } from '@snack-uikit/scroll';
-import { Tooltip } from '@snack-uikit/tooltip';
 
-import { ChatStatusAnnouncementSsh } from '../../../ChatStatusAnnouncement';
-import { FieldSubmitButton } from '../../helperComponents/FieldSubmitButton';
+import { ChatStatusAnnouncementVmAgent } from '../../../ChatStatusAnnouncement';
+import { FieldSubmitButton } from '../../components/FieldSubmitButton';
 import { TextArea } from '../TextArea';
 import styles from './styles.module.scss';
 
@@ -20,20 +16,27 @@ type MobileFieldAiProps = WithLayoutType<
 > & {
   onSubmit(): void;
   submitEnabled: boolean;
-  onFileUpload(file: File): void;
   onCancel(): void;
+  vmIp?: string;
+  vmName?: string;
 };
 
 const MIN_ROWS = 1;
 const MAX_ROWS = 6;
 
 export const MobileFieldAi = forwardRef<HTMLTextAreaElement, MobileFieldAiProps>(
-  ({ onSubmit, value, submitEnabled, onFileUpload, className, layoutType, onCancel, ...props }, ref) => {
+  ({ onSubmit, value, submitEnabled, disabled, layoutType, onCancel, vmIp, vmName, className, ...props }, ref) => {
     const { t } = useLocale('Claudia');
 
     return (
       <div className={cn(styles.wrapper, className)}>
-        <ChatStatusAnnouncementSsh className={styles.chatStatus} layoutType={layoutType} onActionClick={onCancel} />
+        <ChatStatusAnnouncementVmAgent
+          className={styles.chatStatus}
+          layoutType={layoutType}
+          onActionClick={onCancel}
+          ip={vmIp}
+          vmName={vmName}
+        />
 
         <div
           className={styles.mobileInputWrapper}
@@ -47,28 +50,19 @@ export const MobileFieldAi = forwardRef<HTMLTextAreaElement, MobileFieldAiProps>
               ref={ref}
               value={value}
               minRows={MIN_ROWS}
-              placeholder={t('SshField.placeholder')}
+              placeholder={t('VmAgentField.placeholder')}
               spellCheck={true}
             />
           </Scroll>
 
           <div className={styles.mobileSubmitButtonWrapper}>
-            <Tooltip
-              disableSpanWrapper
-              tip={t('SshField.attachFileTooltip')}
-              hoverDelayOpen={600}
-              triggerClassName={styles.uploadTooltip}
-            >
-              <FileUpload mode='multiple' onFilesUpload={(files: File[]) => onFileUpload(files[0])}>
-                <ButtonFunction size={'s'} icon={<AttachmentSVG />} />
-              </FileUpload>
-            </Tooltip>
             <FieldSubmitButton
               showTooltip={false}
               className={styles.mobileSubmitButton}
               fullWidth={true}
               active={submitEnabled}
               handleClick={onSubmit}
+              disabled={disabled}
               size='s'
             />
           </div>

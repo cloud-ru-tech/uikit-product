@@ -23,9 +23,11 @@
   padding: 24px;
   gap: 16px;
 
-  &:hover {
-    .closeIcon {
-      opacity: 1;
+  @media (hover: hover) {
+    &:hover {
+      .closeIcon {
+        opacity: 1;
+      }
     }
   }
 
@@ -83,8 +85,10 @@
   height: 40px;
   width: 36px;
 
-  &:hover > .description {
-    opacity: 1;
+  @media (hover: hover) {
+    &:hover > .description {
+      opacity: 1;
+    }
   }
 }
 
@@ -92,9 +96,11 @@
   transition: all 0.2s ease;
   font-size: 32px;
 
-  &:hover {
-    /* stylelint-disable-next-line declaration-no-important */
-    font-size: 36px !important;
+  @media (hover: hover) {
+    &:hover {
+      /* stylelint-disable-next-line declaration-no-important */
+      font-size: 36px !important;
+    }
   }
 }
 
