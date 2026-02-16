@@ -101,6 +101,7 @@ export function HeaderItems({ linkItems, isMobileTabletView, activeLinkItemId }:
               target={linkItem.target}
               href={linkItem.href}
               onClick={linkItem.onClick}
+              icon={linkItem.icon}
             />
           </div>
         ))}
@@ -122,6 +123,7 @@ export function HeaderItems({ linkItems, isMobileTabletView, activeLinkItemId }:
               href={linkItem.href}
               onClick={linkItem.onClick}
               active={activeLinkItemId === linkItem.id}
+              icon={linkItem.icon}
             />
           </div>
         ))}

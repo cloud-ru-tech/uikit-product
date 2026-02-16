@@ -2,6 +2,7 @@ import cn from 'classnames';
 
 import { Typography } from '@snack-uikit/typography';
 
+import { Icon, IconProps } from '../Icon';
 import styles from './styles.module.scss';
 
 type LinkItemHeaderProps = {
@@ -11,13 +12,15 @@ type LinkItemHeaderProps = {
   withoutHover?: boolean;
   active?: boolean;
   onClick?: () => void;
+  icon?: IconProps['icon'] | null;
 };
 
-export function LinkItemHeader({ href, label, onClick, withoutHover, target, active }: LinkItemHeaderProps) {
+export function LinkItemHeader({ href, label, onClick, withoutHover, target, active, icon }: LinkItemHeaderProps) {
   if (href) {
     return (
       <a href={href} target={target} onClick={onClick} className={styles.item}>
         <Typography.SansTitleS>{label}</Typography.SansTitleS>
+        {icon && <Icon icon={icon} size='s' />}
       </a>
     );
   }
@@ -31,6 +34,7 @@ export function LinkItemHeader({ href, label, onClick, withoutHover, target, act
       })}
     >
       <Typography.SansTitleS>{label}</Typography.SansTitleS>
+      {icon && <Icon icon={icon} size='s' />}
     </button>
   );
 }

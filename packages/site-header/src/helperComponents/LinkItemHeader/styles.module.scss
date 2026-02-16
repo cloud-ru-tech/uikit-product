@@ -18,6 +18,9 @@
   color: ste.$sys-graphite-accent-default;
   transition: color 0.3s ease-in-out;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: ste.$dimension-050m;
 
   &:hover {
     color: ste.$sys-graphite-accent-hovered;

@@ -49,6 +49,7 @@ export function MoreButton({ linkItemsArray, activeItemId }: MoreButtonProps) {
                   onClickOpen();
                 }}
                 href={item.href}
+                icon={item.icon}
                 withoutHover
               />
             </div>

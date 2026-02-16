@@ -1,3 +1,5 @@
+import { IconProps } from '../../helperComponents/Icon';
+
 export type LinkItem = {
   /** id Элемента */
   id: string;
@@ -15,4 +17,6 @@ export type LinkItem = {
   dataAttributes?: {
     [key: string]: string;
   };
+  /** Иконка */
+  icon?: IconProps['icon'] | null;
 };

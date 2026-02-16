@@ -1,5 +1,6 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
+import { ScalableRightSVG } from '@cloud-ru/uikit-product-icons';
 import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -82,17 +83,18 @@ const MENU_ITEMS: LinkItem[] = [
   },
   {
     id: '3',
-    label: 'Документация',
-    href: '/docs',
-    target: '_blank',
-  },
-  {
-    id: '4',
     label: 'О компании',
   },
   {
-    id: '5',
+    id: '4',
     label: 'Для бизнеса',
+  },
+  {
+    id: '5',
+    label: 'Документация',
+    href: '/docs',
+    target: '_blank',
+    icon: ScalableRightSVG,
   },
 ];
 
