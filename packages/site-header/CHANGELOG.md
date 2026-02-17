@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2026-02-17)
+
+
+### Features
+
+* **SITE-10702:** add icon for header menu items ([e4b57e1](https://github.com/cloud-ru-tech/uikit-product/commit/e4b57e19cd9d0647f158a4431d46c9cb83fa958f))
+
+
+
+
+
 ## 1.2.2 (2026-02-16)
 
 
