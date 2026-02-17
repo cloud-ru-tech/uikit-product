@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-02-17)
+
+
+### Features
+
+* **PDS-3467:** add coveredByGrant to PriceSummary ([db3491f](https://github.com/cloud-ru-tech/uikit-product/commit/db3491f9e44be375ec8c8191e0ebed9f45d546db))
+* **PDS-3467:** add coveredByGrant to PriceSummary ([11bd338](https://github.com/cloud-ru-tech/uikit-product/commit/11bd338b9b77e0fec883770c6f10d957203bd4d0))
+
+
+
+
+
 ## 2.0.5 (2026-02-16)
 
 
