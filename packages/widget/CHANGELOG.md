@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.3 (2026-02-17)
+
+
+### Bug Fixes
+
+* **LK-3457:** fix error button size ([31a3917](https://github.com/cloud-ru-tech/uikit-product/commit/31a39171b0e6b22bf99fa25b5ca56c9b30f0a6f6))
+
+
+
+
+
 ## 2.2.2 (2026-02-16)
 
 
