@@ -65,7 +65,7 @@ export function Widget({
             description={errorState?.errorDescription || t('dataErrorDescription')}
             footer={
               <ButtonFilled
-                size='m'
+                size={isMobile ? 'm' : 's'}
                 label={errorState?.updateButtonLabel || t('updateWidget')}
                 appearance='neutral'
                 icon={<UpdateSVG />}
