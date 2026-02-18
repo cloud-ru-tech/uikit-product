@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.4.0 (2026-02-18)
+
+
+### Features
+
+* **AINFR-4749:** locales ([63dd440](https://github.com/cloud-ru-tech/uikit-product/commit/63dd440e5ca1ecaf004863f2616b50a303d7feda))
+
+
+
+
+
 # 2.3.0 (2026-02-17)
 
 

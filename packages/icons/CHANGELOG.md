@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 17.0.4 (2026-02-18)
+
+
+### Dependencies
+
+* **FF-8054:** up fast-xml-parser ([6e7aa84](https://github.com/cloud-ru-tech/uikit-product/commit/6e7aa8465f8a07e0f5ee24f8e8563c5ab740f3e9))
+
+
+
+
+
 ## 17.0.3 (2026-02-16)
 
 

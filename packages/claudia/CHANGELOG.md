@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.16.0 (2026-02-18)
+
+
+### Features
+
+* **AINFR-4749:** add VmAgentField, fix styles ChatStatusAnnouncement ([9bcf7d0](https://github.com/cloud-ru-tech/uikit-product/commit/9bcf7d04d589b4f4a8d59f3ba13c1857d9193b1d))
+
+
+
+
+
 ## 1.15.1 (2026-02-16)
 
 
