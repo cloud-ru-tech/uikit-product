@@ -120,6 +120,7 @@ export function HeaderItems({ linkItems, isMobileTabletView, activeLinkItemId }:
           >
             <LinkItemHeader
               label={linkItem.label}
+              target={linkItem.target}
               href={linkItem.href}
               onClick={linkItem.onClick}
               active={activeLinkItemId === linkItem.id}
