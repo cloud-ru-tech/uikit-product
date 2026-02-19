@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2026-02-19)
+
+
+### Features
+
+* **SITE-10751:** target prop for header nav ([f6ac123](https://github.com/cloud-ru-tech/uikit-product/commit/f6ac123a0473f254f6293b67fc01b073024b0a37))
+
+
+
+
+
 ## 1.3.1 (2026-02-18)
 
 ### Only dependencies have been changed
