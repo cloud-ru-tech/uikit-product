@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.3 (2026-02-20)
+
+
+### Dependencies
+
+* **PDS-3571:** update table version to latest ([21049c1](https://github.com/cloud-ru-tech/uikit-product/commit/21049c1d40b2a34fdcc43d8199230030a63e594c))
+
+
+
+
+
 ## 2.2.2 (2026-02-18)
 
 ### Only dependencies have been changed
