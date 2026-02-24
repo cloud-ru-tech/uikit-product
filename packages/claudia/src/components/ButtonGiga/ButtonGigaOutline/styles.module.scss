@@ -139,18 +139,20 @@ $outline-filter-brightness-active: 0.7;
       }
 
       @media (hover: hover) {
-        &:hover {
-          @include label-color(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
-          @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
+        &:not([data-disabled]):not(:disabled) {
+          &:hover {
+            @include label-color(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
+            @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
 
-          box-shadow: $outline-box-shadow-hover;
+            box-shadow: $outline-box-shadow-hover;
 
-          &::before {
-            filter: brightness($outline-filter-brightness-hover);
-          }
+            &::before {
+              filter: brightness($outline-filter-brightness-hover);
+            }
 
-          .icon {
-            filter: brightness($outline-filter-brightness-hover);
+            .icon {
+              filter: brightness($outline-filter-brightness-hover);
+            }
           }
         }
       }
@@ -161,18 +163,20 @@ $outline-filter-brightness-active: 0.7;
           @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
         }
 
-        &:active {
-          @include label-color(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-pressed'));
-          @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-pressed'));
+        &:not([data-disabled]):not(:disabled) {
+          &:active {
+            @include label-color(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-pressed'));
+            @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-pressed'));
 
-          box-shadow: $outline-box-shadow-active;
+            box-shadow: $outline-box-shadow-active;
 
-          &::before {
-            filter: brightness($outline-filter-brightness-active);
-          }
+            &::before {
+              filter: brightness($outline-filter-brightness-active);
+            }
 
-          .icon {
-            filter: brightness($outline-filter-brightness-active);
+            .icon {
+              filter: brightness($outline-filter-brightness-active);
+            }
           }
         }
 

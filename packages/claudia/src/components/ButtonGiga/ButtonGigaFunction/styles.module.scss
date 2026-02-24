@@ -101,12 +101,14 @@ $function-filter-brightness-active: 0.7;
       }
 
       @media (hover: hover) {
-        &:hover {
-          @include label-color(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
-          @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
+        &:not([data-disabled]):not(:disabled) {
+          &:hover {
+            @include label-color(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
+            @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
 
-          .icon {
-            filter: brightness($function-filter-brightness-hover);
+            .icon {
+              filter: brightness($function-filter-brightness-hover);
+            }
           }
         }
       }
@@ -117,12 +119,14 @@ $function-filter-brightness-active: 0.7;
           @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-hovered'));
         }
 
-        &:active {
-          @include label-color(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-pressed'));
-          @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-pressed'));
+        &:not([data-disabled]):not(:disabled) {
+          &:active {
+            @include label-color(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-pressed'));
+            @include icon-fill(stv.simple-var(stv.$theme-variables, 'sys', $appearance, 'accent-pressed'));
 
-          .icon {
-            filter: brightness($function-filter-brightness-active);
+            .icon {
+              filter: brightness($function-filter-brightness-active);
+            }
           }
         }
 
