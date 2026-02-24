@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2026-02-24)
+
+
+### Features
+
+* **SITE-10561:** edit styles for selector platform ([e04c428](https://github.com/cloud-ru-tech/uikit-product/commit/e04c42861d671c7fe6d8d8aea485eca1d9c0d367))
+
+
+
+
+
 ## 1.2.3 (2026-02-18)
 
 ### Only dependencies have been changed
