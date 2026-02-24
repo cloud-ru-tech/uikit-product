@@ -53,7 +53,11 @@
   color: ste.$sys-graphite-text-main;
 }
 
-.rowItem {
-  box-sizing: border-box;
+@media (hover: hover) {
+  .rowItem:not([data-inactive], [data-disabled]):hover {
+    &:before {
+      background-color: ste.$sys-primary-background;
+      opacity: 1;
+    }
+  }
 }
-
