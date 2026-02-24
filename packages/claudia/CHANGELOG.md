@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.17.0 (2026-02-24)
+
+
+### Features
+
+* **AINFR-4783:** fix hover and active buttons when disabled ([95d333a](https://github.com/cloud-ru-tech/uikit-product/commit/95d333a3802906e8990192207cb8eea08e50d1e1))
+
+
+
+
+
 # 1.16.0 (2026-02-18)
 
 
