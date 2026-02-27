@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-welcome-tour",
   "title": "Welcome Tour",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "17.0.4",
+    "@cloud-ru/uikit-product-icons": "17.0.5",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/pagination": "0.10.2",
     "@snack-uikit/typography": "0.8.4",

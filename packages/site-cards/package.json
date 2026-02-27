@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-cards",
   "title": "Site Cards",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "17.0.4",
+    "@cloud-ru/uikit-product-icons": "17.0.5",
     "@cloud-ru/uikit-product-site-rich-text": "1.1.2",
     "@cloud-ru/uikit-product-site-tag": "1.1.2",
     "@cloud-ru/uikit-product-utils": "9.0.2",

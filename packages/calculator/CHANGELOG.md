@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2026-02-27)
+
+
+### Features
+
+* **SITE-10634:** add new calculator Adv CloudTable ([74147ec](https://github.com/cloud-ru-tech/uikit-product/commit/74147ecaeb275d61774e9edee44d0fb05c6be6f5))
+
+
+
+
+
 ## 1.1.6 (2026-02-18)
 
 ### Only dependencies have been changed

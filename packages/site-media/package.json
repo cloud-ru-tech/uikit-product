@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-media",
   "title": "Site Media",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "17.0.4",
+    "@cloud-ru/uikit-product-icons": "17.0.5",
     "@cloud-ru/uikit-product-utils": "9.0.2",
     "@snack-uikit/icon-predefined": "0.7.5",
     "classnames": "2.5.1"

@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-csat",
   "title": "Site Csat",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,8 +36,8 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "17.0.4",
-    "@cloud-ru/uikit-product-mobile-modal": "2.0.5",
+    "@cloud-ru/uikit-product-icons": "17.0.5",
+    "@cloud-ru/uikit-product-mobile-modal": "2.0.6",
     "@cloud-ru/uikit-product-utils": "9.0.2",
     "@snack-uikit/button": "0.19.15",
     "@snack-uikit/chips": "0.28.4",
