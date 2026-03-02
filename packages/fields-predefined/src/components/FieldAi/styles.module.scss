@@ -63,7 +63,7 @@
 
 .submitButton {
   &:not([data-disabled]) {
-    background: radial-gradient(92.53% 92.53% at 65.87% 21.69%, #7cb5f2 15%, #5fd7c2 45%, #26d07c 65%);
+    background: radial-gradient(229.88% 112% at 37.5% 77.08%, #26D07C 19.86%, #5FD7C2 50.73%, #7CB5F2 89.88%);
   }
 }
 
@@ -74,15 +74,10 @@
       background:
         linear-gradient(var(--sys-neutral-background2-level), var(--sys-neutral-background2-level) 0) padding-box,
         radial-gradient(
-            92.53% 92.53% at 65.87% 21.69%,
-            #7cb5f2 8%,
-            #78b9ec 17%,
-            #70c6dd 28%,
-            #64d8c7 38%,
-            #5fd7c2 44%,
-            #54d5b3 51%,
-            #40d39c 58%,
-            #26d07c 66%
+            57.79% 100% at 50% 0%,
+            #7cb5f2 38%,
+            #5fd7c2 79%,
+            #26d07c 90%
           )
           border-box;
     }
