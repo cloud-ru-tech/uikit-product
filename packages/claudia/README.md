@@ -132,6 +132,20 @@
 | className | `string` | - | CSS-класс |
 | vmName | `string` | - |  |
 | ip | `string` | - |  |
+## ChipAnimated
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| onClick* | `MouseEventHandler<HTMLButtonElement>` | - |  |
+| tooltip* | `ChipAnimatedTooltipProps` | - |  |
+| label* | `string` | - |  |
+| icon | `ReactElement<any, string \| JSXElementConstructor<any>>` | - |  |
+| variant | enum Variant: `"default"`, `"accent"` | default |  |
+| disabled | `boolean` | - |  |
+| loading | `boolean` | - |  |
+| className | `string` | - | CSS-класс |
+| tabIndex | `number` | - |  |
+| isTouchDevice | `boolean` | - |  |
 ## RateForm
 ### Props
 | name | type | default value | description |
@@ -617,7 +631,7 @@
 | inputMode | enum InputMode: `"search"`, `"none"`, `"text"`, `"decimal"`, `"numeric"`, `"tel"`, `"email"`, `"url"` | - | Режим работы экранной клавиатуры |
 | caption | `string` | - | Подпись справа от лейбла |
 | hint | `string` | - | Подсказка внизу |
-| validationState | enum ValidationState: `"error"`, `"default"`, `"warning"`, `"success"` | - | Состояние валидации |
+| validationState | enum ValidationState: `"default"`, `"error"`, `"warning"`, `"success"` | - | Состояние валидации |
 | showHintIcon | `boolean` | - | Отображать иконку подсказки |
 | labelTooltipPlacement | enum Placement: `"left"`, `"left-start"`, `"left-end"`, `"right"`, `"right-start"`, `"right-end"`, `"top"`, `"top-start"`, `"top-end"`, `"bottom"`, `"bottom-start"`, `"bottom-end"` | top | Расположение подсказки лейбла |
 | error | `string` | - |  |

@@ -1,0 +1,356 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+@use '@snack-uikit/figma-tokens/build/scss/components/styles-tokens-element';
+
+@mixin chip-variant(
+  $bg1,
+  $bg2,
+  $bg,
+  $border-default,
+  $border-activated,
+  $border-disabled,
+  $text-main,
+  $text-support,
+  $text-light
+) {
+  border-color: $border-default;
+  background-color: $bg1;
+  color: $text-support;
+
+  .icon,
+  .iconRight {
+    color: $text-light;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: $border-default;
+      background-color: $bg2;
+      color: $text-main;
+    }
+  }
+
+  &:focus-visible {
+    @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-s);
+
+    outline-color: styles-tokens-element.$sys-available-complementary;
+    outline-offset: styles-tokens-element.$spacing-state-focus-offset;
+    border-color: $border-default;
+    background-color: $bg2;
+    color: $text-main;
+
+    .icon,
+    .iconRight {
+      color: $text-main;
+    }
+  }
+
+  &:active {
+    border-color: $border-activated;
+    background-color: $bg;
+    color: $text-main;
+
+    .icon,
+    .iconRight {
+      color: $text-light;
+    }
+  }
+
+  &[data-loading] {
+    cursor: progress;
+    border-color: $border-activated;
+    background-color: $bg;
+    color: $text-main;
+
+    .icon,
+    .spinner,
+    .iconRight {
+      color: $text-light;
+    }
+  }
+
+  &:disabled,
+  &[data-disabled] {
+    cursor: not-allowed;
+    border-color: $border-disabled;
+    background-color: $bg;
+    color: $text-light;
+
+    .icon,
+    .iconRight {
+      color: $text-light;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.chipAnimated {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 4px;
+  height: 32px;
+  border-radius: 16px;
+  border: 1px solid;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: 0;
+  outline-offset: 0;
+  white-space: nowrap;
+  width: max-content;
+  min-width: max-content;
+
+  &[data-touch] {
+    height: 40px;
+    border-radius: 20px;
+    padding: 8px;
+  }
+
+  .label {
+    padding: 0 4px;
+  }
+
+  .icon,
+  .iconRight,
+  .spinner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  .iconRight {
+    @media (hover: hover) {
+      &:hover {
+        &[data-variant='default'] {
+          color: stv.$sys-neutral-text-support;
+        }
+
+        &[data-variant='accent'] {
+          color: stv.$sys-orange-text-support;
+        }
+      }
+    }
+
+    &[data-tooltip-open] {
+      &[data-variant='default'] {
+        color: stv.$sys-neutral-text-support;
+      }
+
+      &[data-variant='accent'] {
+        color: stv.$sys-orange-text-support;
+      }
+    }
+  }
+
+  &[data-variant='default'] {
+    @include chip-variant(
+      stv.$sys-neutral-background1-level,
+      stv.$sys-neutral-background2-level,
+      stv.$sys-neutral-background,
+      stv.$sys-neutral-decor-default,
+      stv.$sys-neutral-decor-activated,
+      stv.$sys-neutral-decor-disabled,
+      stv.$sys-neutral-text-main,
+      stv.$sys-neutral-text-support,
+      stv.$sys-neutral-text-light
+    );
+  }
+
+  /* stylelint-disable no-descending-specificity */
+  &[data-variant='accent'] {
+    @include chip-variant(
+      stv.$sys-orange-background1-level,
+      stv.$sys-orange-background2-level,
+      stv.$sys-orange-background,
+      stv.$sys-orange-decor-default,
+      stv.$sys-orange-decor-activated,
+      stv.$sys-orange-decor-disabled,
+      stv.$sys-orange-text-main,
+      stv.$sys-orange-text-support,
+      stv.$sys-orange-text-light
+    );
+  }
+  /* stylelint-enable no-descending-specificity */
+}
+
+@keyframes tooltip-open-top {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  8% {
+    transform: translateY(48.1%);
+    opacity: 0.4;
+  }
+  16% {
+    transform: translateY(11.6%);
+    opacity: 0.9;
+  }
+  24% {
+    transform: translateY(-5.6%);
+    opacity: 1;
+  }
+  32% {
+    transform: translateY(-9.4%);
+    opacity: 1;
+  }
+  46% {
+    transform: translateY(-4.4%);
+    opacity: 1;
+  }
+  58% {
+    transform: translateY(-0.5%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0.5%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tooltip-open-bottom {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  8% {
+    transform: translateY(-48.1%);
+    opacity: 0.4;
+  }
+  16% {
+    transform: translateY(-11.6%);
+    opacity: 0.9;
+  }
+  24% {
+    transform: translateY(5.6%);
+    opacity: 1;
+  }
+  32% {
+    transform: translateY(9.4%);
+    opacity: 1;
+  }
+  46% {
+    transform: translateY(4.4%);
+    opacity: 1;
+  }
+  58% {
+    transform: translateY(0.5%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-0.5%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tooltip-close-top {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes tooltip-close-bottom {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.tooltipClip {
+  position: absolute;
+  left: 0;
+  overflow: hidden; /* stylelint-disable-line declaration-property-value-allowed-list */
+  pointer-events: none;
+
+  &[data-placement='top'] {
+    bottom: 50%;
+    padding-top: 10px;
+    margin-top: -10px;
+  }
+
+  &[data-placement='bottom'] {
+    top: 50%;
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+  }
+}
+
+.tooltip {
+  box-sizing: border-box;
+  animation-duration: 550ms;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  pointer-events: auto;
+
+  &[data-placement='top'] {
+    border-radius: 12px 12px 0 0;
+    padding: 8px 8px 24px 8px;
+    animation-name: tooltip-open-top;
+
+    &[data-closing] {
+      animation-name: tooltip-close-top;
+      animation-duration: 100ms;
+      animation-timing-function: ease-in;
+    }
+  }
+
+  &[data-placement='bottom'] {
+    border-radius: 0 0 12px 12px;
+    padding: 24px 8px 8px 8px;
+    display: flex;
+    align-items: flex-end;
+    animation-name: tooltip-open-bottom;
+
+    &[data-closing] {
+      animation-name: tooltip-close-bottom;
+      animation-duration: 100ms;
+      animation-timing-function: ease-in;
+    }
+  }
+
+  &[data-variant='default'] {
+    background-color: stv.$sys-neutral-background;
+    border: 1px solid stv.$sys-neutral-decor-default;
+    color: stv.$sys-neutral-text-support;
+
+    &[data-disabled] {
+      border-color: stv.$sys-neutral-decor-disabled;
+      color: stv.$sys-neutral-text-light;
+    }
+  }
+
+  &[data-variant='accent'] {
+    background-color: stv.$sys-orange-background;
+    border: 1px solid stv.$sys-orange-decor-default;
+    color: stv.$sys-orange-text-support;
+
+    &[data-disabled] {
+      border-color: stv.$sys-orange-decor-disabled;
+      color: stv.$sys-orange-text-light;
+    }
+  }
+}
