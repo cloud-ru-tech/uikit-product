@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2026-03-04)
+
+
+### Features
+
+* **LK-7220:** change ai field gradients ([0f5fac4](https://github.com/cloud-ru-tech/uikit-product/commit/0f5fac457b5ee213828ebf346ba5f676fd0095b3))
+
+
+
+
+
 ## 2.1.6 (2026-02-27)
 
 ### Only dependencies have been changed
