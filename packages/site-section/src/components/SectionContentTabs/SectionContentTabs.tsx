@@ -92,7 +92,7 @@ export function SectionContentTabs({
               markerPosition={isDesktop ? 'before' : 'after'}
               className={cn({ [styles.desktopTabs]: isDesktop })}
             >
-              {tabs.map(({ id, title, disabled, icon }) => (
+              {tabs.map(({ id, title, disabled, icon, onClick }) => (
                 <Tabs.Tab
                   key={id}
                   value={id}
@@ -105,6 +105,7 @@ export function SectionContentTabs({
                     </>
                   }
                   disabled={disabled}
+                  onClick={onClick}
                 />
               ))}
             </Tabs.TabBar>
