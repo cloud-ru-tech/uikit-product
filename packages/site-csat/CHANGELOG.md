@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2026-03-04)
+
+
+### Features
+
+* **SITE-10703:** update site-csat after a/b tests ([351c620](https://github.com/cloud-ru-tech/uikit-product/commit/351c620915adf68b17c6a569fed2dba86dc310fd))
+
+
+
+
+
 ## 1.1.6 (2026-02-27)
 
 ### Only dependencies have been changed
