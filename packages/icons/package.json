@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/icons": "0.27.4"
+    "@snack-uikit/icons": "0.27.7"
   },
   "devDependencies": {
     "@svgr/cli": "8.1.0",

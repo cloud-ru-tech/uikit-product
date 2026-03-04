@@ -11,58 +11,18 @@ Hero blocks for Site
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| button* | `HeroButtonProps` | - | Настройки кнопки |
-| breadcrumbs* | `Item[]` | - | Хлебные крошки для события |
-| image* | `string` | - | Ссылка на изображение |
-| place* | `Omit<PlaceProps, "title"> & { title?: string; }` | - | Место проведения события |
-| startsAt* | `string` | - | Начало события события |
-| title* | `string` | - | Заголовок события |
-| className | `string` | - | CSS - класснейм |
-| backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | neutral-background | Цвета фона |
-| category | `PromoTagProps` | - | Категория события |
-| format | enum Format: `"online"`, `"offline"`, `"hybrid"` | - | Формат проведения события |
-| audience | enum Audience: `"it"`, `"students"`, `"business"` | - | Аудитория, для которой проводится событие |
 ## HeroZero
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| title* | `string` | - | Название секции |
-| breadcrumbs* | `Item[]` | - | Хлебные крошки |
-| description | `string` | - | Описание секции |
-| buttons | `[ButtonFilledProps, ButtonFilledProps?]` | - | Массив с настройками кнопок ButtonFilled |
-| showBottomPadding | `boolean` | true | Наличие нижнего паддинга |
-| backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | neutral-background | Цвет фона |
-| contentAlign | "left" \| "center" | left | Выравнивание текста |
-| className | `string` | - | CSS - класснейм |
 ## HeroMain
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| breadcrumbs* | `Item[]` | - | Хлебные крошки для продукта |
-| description* | `string` | - | Описание продукта |
-| title* | `string` | - | Заголовок продукта |
-| image | `string` | - | Ссылка на изображение |
-| video | `VideoPlayerProps \| ReactNode` | - | Видео |
-| tags | `Pick<TagSpecialProps, "text" \| "appearance" \| "tip">[]` | [] | Тэги |
-| platforms | `Platform[]` | [] | Платформы |
-| handlePlatformClick | `(e: MouseEvent<HTMLAnchorElement, MouseEvent>, platform: Platform) => void` | - | Обработка клика по платформе |
-| backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | neutral-background1-level | Цвета фона |
-| buttons | `[Omit<ButtonFilledProps, "size" \| "appearance">, Omit<ButtonPromoOutlineProps, "size" \| "appearance">?, Omit<...>?]` | - | Массив с настройками кнопок ButtonFilled |
-| className | `string` | - | CSS - класснейм |
-| navbar | `Pick<SiteNavbarProps, "items" \| "active" \| "onItemClick" \| "topPosition">` | - | Navbar |
 ## HeroSlider
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| tabs* | `TabHeroSliderBase[]` | - | Заголовки для tabs |
-| items* | `HeroSlideProps[]` | - | Слайды карусели |
-| id | `string` | - |  |
-| className | `string` | - | CSS-класс |
-| state | `{ page: number; onChange(page: number): void; }` | - | Управление состоянием извне |
 
 
 [//]: DOCUMENTATION_SECTION_END

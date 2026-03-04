@@ -37,8 +37,8 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/carousel": "0.6.4",
-    "@snack-uikit/pagination": "0.10.18",
+    "@snack-uikit/carousel": "0.6.11",
+    "@snack-uikit/pagination": "0.10.24",
     "classnames": "2.5.1",
     "lodash.debounce": "4.0.8"
   },

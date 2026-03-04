@@ -1,6 +1,6 @@
 import 'uplot/dist/uPlot.min.css';
 
-import './styles.module.scss';
+import './interactive-chart.scss';
 
 import cn from 'classnames';
 import merge from 'lodash.merge';

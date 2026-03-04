@@ -13,17 +13,10 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| richText* | `string` | - |  |
 ## Quote
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| text* | `string` | - |  |
-| image | `string` | - |  |
-| name | `string` | - |  |
-| position | `string` | - |  |
 ## ImageArticle
 ### Props
 | name | type | default value | description |
@@ -34,29 +27,18 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| links* | `ArticleLink[]` | - |  |
 ## Products
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| products | `ArticleProduct[]` | - |  |
-| solutions | `ArticleProduct[]` | - |  |
 ## ArticleRichText
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| richText* | `string` | - |  |
 ## ArticleTypography
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| type* | "body" \| "bodyBold" \| "bodyLink" | - |  |
-| tag* | "span" \| "div" \| "p" | - |  |
-| className | `string` | - | CSS-класс |
 ## DropdownShare
 ### Props
 | name | type | default value | description |
@@ -67,9 +49,6 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| dropdownOptions* | `DropdownShareOption[]` | - |  |
-| releaseDate* | `string` | - |  |
 
 
 [//]: DOCUMENTATION_SECTION_END

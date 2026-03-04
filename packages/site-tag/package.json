@@ -38,7 +38,7 @@
   "dependencies": {
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/promo-tag": "0.7.1",
-    "@snack-uikit/tooltip": "0.16.2",
+    "@snack-uikit/tooltip": "0.18.10",
     "@snack-uikit/utils": "3.8.1"
   }
 }

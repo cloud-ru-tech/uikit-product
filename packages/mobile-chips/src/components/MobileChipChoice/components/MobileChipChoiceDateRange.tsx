@@ -72,7 +72,7 @@ export function MobileChipChoiceDateRange({
       content={
         <div className={styles.dateWrapper}>
           <Calendar
-            mode='range'
+            mode='date-range'
             size='l'
             value={selectedValue}
             onChangeValue={value => {

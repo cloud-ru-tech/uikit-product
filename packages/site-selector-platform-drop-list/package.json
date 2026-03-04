@@ -40,8 +40,8 @@
     "@cloud-ru/uikit-product-mobile-dropdown": "2.1.6",
     "@cloud-ru/uikit-product-mobile-modal": "2.0.8",
     "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/list": "0.32.7",
-    "@snack-uikit/tooltip": "0.18.5",
+    "@snack-uikit/list": "0.32.15",
+    "@snack-uikit/tooltip": "0.18.10",
     "@snack-uikit/typography": "0.8.11",
     "classnames": "2.5.1"
   }

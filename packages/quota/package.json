@@ -40,9 +40,9 @@
     "@cloud-ru/uikit-product-icons": "17.1.0",
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/button": "0.19.7",
-    "@snack-uikit/scroll": "0.9.3",
+    "@snack-uikit/scroll": "0.10.8",
     "@snack-uikit/skeleton": "0.6.2",
-    "@snack-uikit/truncate-string": "0.6.9",
+    "@snack-uikit/truncate-string": "0.7.9",
     "classnames": "2.5.1"
   },
   "peerDependencies": {

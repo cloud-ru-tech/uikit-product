@@ -1,4 +1,5 @@
 import './style.css';
+import './toaster.global.scss';
 
 import cn from 'classnames';
 import { MouseEvent, useState } from 'react';

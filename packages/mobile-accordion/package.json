@@ -39,9 +39,9 @@
     "@cloud-ru/uikit-product-icons": "17.1.0",
     "@cloud-ru/uikit-product-mobile-tooltip": "1.1.7",
     "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/accordion": "0.11.11",
+    "@snack-uikit/accordion": "0.11.21",
     "@snack-uikit/button": "0.19.15",
-    "@snack-uikit/toggles": "0.13.20",
+    "@snack-uikit/toggles": "0.13.26",
     "@snack-uikit/typography": "0.8.10",
     "classnames": "2.5.1",
     "lodash.debounce": "4.0.8"

@@ -41,7 +41,7 @@
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/dropdown": "0.4.5",
-    "@snack-uikit/list": "0.25.0",
+    "@snack-uikit/list": "0.32.15",
     "@snack-uikit/loaders": "0.9.4",
     "@snack-uikit/utils": "4.0.0",
     "classnames": "2.5.1",

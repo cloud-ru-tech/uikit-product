@@ -37,7 +37,7 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/toggles": "0.13.5",
+    "@snack-uikit/toggles": "0.13.26",
     "classnames": "2.5.1"
   }
 }

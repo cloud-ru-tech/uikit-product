@@ -39,7 +39,7 @@
     "@cloud-ru/uikit-product-icons": "17.1.0",
     "@cloud-ru/uikit-product-mobile-tooltip": "1.1.7",
     "@snack-uikit/button": "0.19.15",
-    "@snack-uikit/scroll": "0.10.4",
+    "@snack-uikit/scroll": "0.10.8",
     "@snack-uikit/typography": "0.8.10",
     "@snack-uikit/utils": "4.0.0",
     "classnames": "2.5.1",
