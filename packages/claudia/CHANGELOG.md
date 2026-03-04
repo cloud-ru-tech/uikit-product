@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.18.0 (2026-03-04)
+
+
+### Features
+
+* **AINFR-4619:** new component chip animated ([44edec5](https://github.com/cloud-ru-tech/uikit-product/commit/44edec5c75eaa6bb5cfe840c87fd9981ca30ae27))
+
+
+
+
+
 ## 1.17.1 (2026-02-27)
 
 ### Only dependencies have been changed
