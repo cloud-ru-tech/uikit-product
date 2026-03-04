@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.8 (2026-03-04)
+
+
+### Bug Fixes
+
+* **SITE-10810:** pass tab onClick prop to SectionContentTabs tab ([4c33bb9](https://github.com/cloud-ru-tech/uikit-product/commit/4c33bb9606d9dfb5fe571d364ffedddb2d38ba58))
+
+
+
+
+
 ## 1.1.7 (2026-02-27)
 
 ### Only dependencies have been changed
