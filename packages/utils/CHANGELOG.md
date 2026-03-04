@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 9.1.0 (2026-03-04)
+
+
+### Features
+
+* **FF-8108:** add brand-tools entry ([327b477](https://github.com/cloud-ru-tech/uikit-product/commit/327b477eae746c5e41c1c8ad0a5b48417df677a5))
+
+
+
+
+
 ## 9.0.2 (2026-02-16)
 
 

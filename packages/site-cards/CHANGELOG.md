@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.6 (2026-03-04)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-icons@17.0.6]($PUBLIC_PROJECT_URL/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-site-rich-text@1.1.3]($PUBLIC_PROJECT_URL/blob/master/packages/site-rich-text/CHANGELOG.md)
+* [@cloud-ru/uikit-product-site-tag@1.1.3]($PUBLIC_PROJECT_URL/blob/master/packages/site-tag/CHANGELOG.md)
+* [@cloud-ru/uikit-product-utils@9.1.0]($PUBLIC_PROJECT_URL/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## 1.1.5 (2026-02-27)
 
 ### Only dependencies have been changed
