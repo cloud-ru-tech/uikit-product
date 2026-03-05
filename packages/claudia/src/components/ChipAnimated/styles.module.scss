@@ -149,6 +149,26 @@
     }
   }
 
+  &[data-disabled] .iconRight {
+    @media (hover: hover) {
+      &:hover[data-variant='default'] {
+        color: stv.$sys-neutral-text-support;
+      }
+
+      &:hover[data-variant='accent'] {
+        color: stv.$sys-orange-text-support;
+      }
+    }
+
+    &[data-tooltip-open][data-variant='default'] {
+      color: stv.$sys-neutral-text-support;
+    }
+
+    &[data-tooltip-open][data-variant='accent'] {
+      color: stv.$sys-orange-text-support;
+    }
+  }
+
   &[data-variant='default'] {
     @include chip-variant(
       stv.$sys-neutral-background1-level,
@@ -180,102 +200,52 @@
   /* stylelint-enable no-descending-specificity */
 }
 
-@keyframes tooltip-open-top {
+@keyframes tooltip-open-scale {
   0% {
-    transform: translateY(100%);
+    transform: scaleY(0);
     opacity: 0;
   }
   8% {
-    transform: translateY(48.1%);
+    transform: scaleY(0.48);
     opacity: 0.4;
   }
   16% {
-    transform: translateY(11.6%);
+    transform: scaleY(0.88);
     opacity: 0.9;
   }
   24% {
-    transform: translateY(-5.6%);
+    transform: scaleY(1.056);
     opacity: 1;
   }
   32% {
-    transform: translateY(-9.4%);
+    transform: scaleY(1.094);
     opacity: 1;
   }
   46% {
-    transform: translateY(-4.4%);
+    transform: scaleY(1.044);
     opacity: 1;
   }
   58% {
-    transform: translateY(-0.5%);
+    transform: scaleY(1.005);
     opacity: 1;
   }
   80% {
-    transform: translateY(0.5%);
+    transform: scaleY(0.995);
     opacity: 1;
   }
   100% {
-    transform: translateY(0);
+    transform: scaleY(1);
     opacity: 1;
   }
 }
 
-@keyframes tooltip-open-bottom {
+@keyframes tooltip-close-scale {
   0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  8% {
-    transform: translateY(-48.1%);
-    opacity: 0.4;
-  }
-  16% {
-    transform: translateY(-11.6%);
-    opacity: 0.9;
-  }
-  24% {
-    transform: translateY(5.6%);
-    opacity: 1;
-  }
-  32% {
-    transform: translateY(9.4%);
-    opacity: 1;
-  }
-  46% {
-    transform: translateY(4.4%);
-    opacity: 1;
-  }
-  58% {
-    transform: translateY(0.5%);
-    opacity: 1;
-  }
-  80% {
-    transform: translateY(-0.5%);
+    transform: scaleY(1);
     opacity: 1;
   }
   100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes tooltip-close-top {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-}
-
-@keyframes tooltip-close-bottom {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100%);
+    transform: scaleY(0);
     opacity: 0;
   }
 }
@@ -283,7 +253,6 @@
 .tooltipClip {
   position: absolute;
   left: 0;
-  overflow: hidden; /* stylelint-disable-line declaration-property-value-allowed-list */
   pointer-events: none;
 
   &[data-placement='top'] {
@@ -300,33 +269,34 @@
 }
 
 .tooltip {
-  box-sizing: border-box;
   animation-duration: 550ms;
   animation-timing-function: linear;
   animation-fill-mode: both;
   pointer-events: auto;
 
   &[data-placement='top'] {
+    transform-origin: bottom center;
     border-radius: 12px 12px 0 0;
     padding: 8px 8px 24px 8px;
-    animation-name: tooltip-open-top;
+    animation-name: tooltip-open-scale;
 
     &[data-closing] {
-      animation-name: tooltip-close-top;
+      animation-name: tooltip-close-scale;
       animation-duration: 100ms;
       animation-timing-function: ease-in;
     }
   }
 
   &[data-placement='bottom'] {
+    transform-origin: top center;
     border-radius: 0 0 12px 12px;
     padding: 24px 8px 8px 8px;
     display: flex;
     align-items: flex-end;
-    animation-name: tooltip-open-bottom;
+    animation-name: tooltip-open-scale;
 
     &[data-closing] {
-      animation-name: tooltip-close-bottom;
+      animation-name: tooltip-close-scale;
       animation-duration: 100ms;
       animation-timing-function: ease-in;
     }

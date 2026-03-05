@@ -54,13 +54,13 @@ export function ChipAnimated({
   };
 
   const handleIconRightMouseEnter = () => {
-    if (!isTouchDevice && isInteractive) {
+    if (!isTouchDevice && !loading) {
       setTooltipState(TOOLTIP_STATE.Opening);
     }
   };
 
   const handleIconRightClick = (e: MouseEvent<HTMLSpanElement>) => {
-    if (isTouchDevice && isInteractive) {
+    if (isTouchDevice && !loading) {
       e.stopPropagation();
       setTooltipState(tooltipState === TOOLTIP_STATE.Hidden ? TOOLTIP_STATE.Opening : TOOLTIP_STATE.Closing);
     }
@@ -128,7 +128,6 @@ export function ChipAnimated({
         data-disabled={disabled || undefined}
         data-touch={isTouchDevice || undefined}
         aria-disabled={disabled || undefined}
-        disabled={!loading && disabled}
         onClick={handleClick}
         className={cn(styles.chipAnimated, className)}
       >
@@ -163,7 +162,7 @@ export function ChipAnimated({
           data-disabled={disabled || undefined}
           data-tooltip-open={isTooltipOpen || undefined}
           role={isTouchDevice ? 'button' : undefined}
-          tabIndex={isTouchDevice && isInteractive ? 0 : undefined}
+          tabIndex={isTouchDevice && !loading ? 0 : undefined}
           onMouseEnter={handleIconRightMouseEnter}
           onClick={handleIconRightClick}
         >

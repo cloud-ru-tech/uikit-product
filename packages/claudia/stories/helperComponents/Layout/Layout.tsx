@@ -15,5 +15,10 @@ export function TableColumn({ children }: PropsWithChildren) {
 }
 
 export function ControlledWrapper({ children }: PropsWithChildren) {
-  return <div className={styles.controlledWrapper}>Controlled: {children}</div>;
+  return (
+    <div className={styles.controlledWrapper}>
+      <span>Controlled:</span>
+      <div>{children}</div>
+    </div>
+  );
 }
