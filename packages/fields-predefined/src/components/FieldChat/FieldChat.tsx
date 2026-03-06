@@ -66,6 +66,7 @@ export function FieldChat({ handleSubmit: handleSubmitProp, value, layoutType, a
 
       <AdaptiveFieldTextArea
         {...props}
+        value={value}
         layoutType={layoutType}
         size={isMobile ? 'l' : 'm'}
         minRows={1}
