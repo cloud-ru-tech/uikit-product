@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.10 (2026-03-10)
+
+
+### Bug Fixes
+
+* **PDS-3447:** fix override elevated button bg ([eb9b290](https://github.com/cloud-ru-tech/uikit-product/commit/eb9b2905cc0abb1dcfc15ec0cf61751174fc3068))
+
+
+
+
+
 ## 2.0.9 (2026-03-10)
 
 ### Only dependencies have been changed
