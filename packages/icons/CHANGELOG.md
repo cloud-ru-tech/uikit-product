@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 17.1.0 (2026-03-10)
+
+
+### Features
+
+* **PDS-3591:** add evo magic bridge icon ([8a44219](https://github.com/cloud-ru-tech/uikit-product/commit/8a4421958aade6868251003ae50e9e33d355114d))
+
+
+
+
+
 ## 17.0.6 (2026-03-04)
 
 ### Only dependencies have been changed

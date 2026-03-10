@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-copy-line",
   "title": "Copy Line",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -37,7 +37,7 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/ft-copy-to-clipboard": "0.1.0",
-    "@cloud-ru/uikit-product-icons": "17.0.6",
+    "@cloud-ru/uikit-product-icons": "17.1.0",
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/truncate-string": "0.7.7",
