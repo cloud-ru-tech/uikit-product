@@ -14,7 +14,7 @@ export function ButtonBurger({ mobileMenuOpen, onClick, appearance }: ButtonBurg
   const icon = mobileMenuOpen ? <CloseSVG /> : <BurgerSVG />;
 
   if (appearance === 'neutral') {
-    return <ButtonPromoOutline icon={icon} size='s' appearance='secondary' />;
+    return <ButtonPromoOutline icon={icon} size='s' appearance='secondary' onClick={onClick} />;
   }
 
   return (
