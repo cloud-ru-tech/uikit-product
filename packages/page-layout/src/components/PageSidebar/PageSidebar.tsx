@@ -115,6 +115,7 @@ function PrivateSideBar({
           <div className={styles.toggler}>
             <ButtonElevated
               icon={open ? <VerticalMenuCloseSVG /> : <VerticalMenuOpenSVG />}
+              className={styles.button}
               onClick={() => toggleOpen()}
             />
           </div>

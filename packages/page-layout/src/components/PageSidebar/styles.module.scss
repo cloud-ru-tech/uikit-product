@@ -2,8 +2,8 @@
 
 $width: 256px;
 $catcherWidth: styles-theme-variables.$dimension-050m;
-$instantAnimation: left .15s ease-in-out;
-$delayedAnimation: left .15s .35s ease-in-out;
+$instantAnimation: left 0.15s ease-in-out;
+$delayedAnimation: left 0.15s 0.35s ease-in-out;
 $searchMargin: 52px;
 
 .wrapper {
@@ -19,7 +19,6 @@ $searchMargin: 52px;
     width: $width;
     display: flex;
     transition: $delayedAnimation;
-
 
     &[data-hover-off] {
       pointer-events: none;
@@ -98,4 +97,8 @@ $searchMargin: 52px;
     bottom: 8px;
     left: 8px;
   }
+}
+
+.button {
+  background-color: styles-theme-variables.$sys-neutral-background2-level !important; /* stylelint-disable-line declaration-no-important */
 }
