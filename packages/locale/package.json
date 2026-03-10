@@ -37,7 +37,7 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/common-translations": "1.3.2",
-    "@snack-uikit/locale": "0.15.5",
+    "@snack-uikit/locale": "0.16.0",
     "lodash": "4.18.1"
   },
   "devDependencies": {
