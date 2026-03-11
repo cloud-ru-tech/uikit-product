@@ -104,6 +104,12 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       ],
     },
     {
+      id: CATEGORY.Dataset,
+      label: 'Базы данных',
+      dataTestId: 'dataset',
+      visibleProducts: [EVOLUTION_PRODUCT.EvolutionManagedClickHouse],
+    },
+    {
       id: CATEGORY.ML,
       label: 'ML/AI Инструменты',
       dataTestId: 'ml',

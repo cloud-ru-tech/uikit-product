@@ -18,6 +18,7 @@ export const EVOLUTION_PRODUCT = {
   EvolutionManagedTrino: 'evolutionManagedTrino',
   EvolutionManagedBI: 'evolutionManagedBI',
   EvolutionManagedRedis: 'evolutionManagedRedis',
+  EvolutionManagedClickHouse: 'evolutionManagedClickhouse',
   EvolutionManagedSpark: 'evolutionManagedSpark',
   EvolutionLoadBalancer: 'evolutionLoadBalancer',
   EvolutionNotebooks: 'evolutionNotebooks',

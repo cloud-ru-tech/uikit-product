@@ -25,6 +25,7 @@ export const CATEGORY = {
   Containerization: 'containerization',
   Storage: 'storage',
   Database: 'database',
+  Dataset: 'dataset',
   Development: 'development',
   Analytic: 'analytic',
   ML: 'ml-ai-tools',

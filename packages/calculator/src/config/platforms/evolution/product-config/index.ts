@@ -19,4 +19,5 @@ export * from './EvolutionDNS';
 export * from './EvolutionLoadBalancer';
 export * from './EvolutionManagedBI';
 export * from './EvolutionManagedRedis';
+export * from './EvolutionManagedClickHouse';
 export * from './EvolutionManagedSpark';
