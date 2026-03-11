@@ -6,7 +6,7 @@ type WithMobileTooltipProps = {
 };
 
 export function WithMobileTooltip({ tooltip, children }: WithMobileTooltipProps) {
-  if (!tooltip) {
+  if (!tooltip?.tip) {
     return <>{children}</>;
   }
 
