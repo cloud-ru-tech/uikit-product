@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { MobileAccordionPrimary } from '@cloud-ru/uikit-product-mobile-accordion';
 import { Divider } from '@snack-uikit/divider';
@@ -25,8 +25,12 @@ export type ToggleObjectControl = {
    * @example 'eipIsNeeded'
    */
   switchKey: string;
+  /** Значение переключателя по умолчанию (true — открыт/включён по умолчанию) */
+  defaultSwitchValue?: boolean;
   /** Конфигурация тела аккордеона */
   control: FormControl;
+  /** Автоматически выключает переключатель, если массив по этому пути пуст */
+  switchOffWhenEmptyAccessorKey?: string;
 
   onChangeFn?: never;
 } & Pick<
@@ -40,24 +44,49 @@ type ToggleObjectControlUiProps = ToggleObjectControl & {
   watchedValues?: FormValues;
 };
 
+const ACCORDION_BLOCK_ID = 'key';
+
 export function ToggleObjectControlUi({
   decoratorProps,
   control,
   switchKey,
+  switchOffWhenEmptyAccessorKey,
   relateFn,
   watchedValues,
   uiProps,
 }: ToggleObjectControlUiProps) {
-  const [expanded, setExpanded] = useState<string | undefined>(undefined);
-
   const { value: valueProp, onChange: onChangeProp } = useProductContext();
+  const switchValue: boolean = getValue(valueProp, switchKey);
+  const [expanded, setExpanded] = useState<string | undefined>(() => (switchValue ? ACCORDION_BLOCK_ID : undefined));
+  const previousSwitchValue = useRef(switchValue);
+  const linkedArrayValue = switchOffWhenEmptyAccessorKey
+    ? getValue(valueProp, switchOffWhenEmptyAccessorKey)
+    : undefined;
+  const shouldSwitchOff = Array.isArray(linkedArrayValue) && linkedArrayValue.length === 0;
+
+  useEffect(() => {
+    if (!previousSwitchValue.current && switchValue) {
+      setExpanded(ACCORDION_BLOCK_ID);
+    }
+    previousSwitchValue.current = switchValue;
+  }, [switchValue]);
+
+  useEffect(() => {
+    if (!shouldSwitchOff || !switchValue) {
+      return;
+    }
+
+    setValue(valueProp, switchKey, false);
+    onChangeProp({ ...valueProp });
+  }, [onChangeProp, shouldSwitchOff, switchKey, switchValue, valueProp]);
+
   const { onAnalyticsClick } = useCalculatorContext();
 
   const { decoratorProps: relatedDecoratorProps, uiProps: relatedUiProps } = useMemo(
     () => relateFn?.(watchedValues ?? {}) ?? {},
     [relateFn, watchedValues],
   );
-  const value: boolean = getValue(valueProp, switchKey);
+  const value: boolean = switchValue;
   const onChange = (newValue: boolean) => {
     setValue(valueProp, switchKey, newValue);
     onChangeProp({ ...valueProp });
@@ -76,7 +105,7 @@ export function ToggleObjectControlUi({
       <AdaptiveAccordionPrimary selectionMode='single' expanded={expanded} onExpandedChange={setExpanded}>
         <AdaptiveAccordionPrimary.CollapseBlock
           outline
-          id='key'
+          id={ACCORDION_BLOCK_ID}
           header={<ObjectDecorator {...decoratorProps} {...relatedDecoratorProps} />}
           actions={
             <Switch
@@ -85,7 +114,7 @@ export function ToggleObjectControlUi({
               onChange={checked => {
                 onAnalyticsClick(String(checked), `toggle-object-control-ui`);
                 onChange(checked);
-                checked && setExpanded('key');
+                checked && setExpanded(ACCORDION_BLOCK_ID);
               }}
             />
           }

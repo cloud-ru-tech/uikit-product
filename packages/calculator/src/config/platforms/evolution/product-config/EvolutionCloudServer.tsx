@@ -158,20 +158,19 @@ const RAN_BY_MODEL_AND_GPU: { [model: string]: { [gpu: string]: number[] } } = {
   },
 };
 
+export const specificationItemsDisk = [
+  {
+    value: 'HDD',
+    label: 'HDD',
+  },
+  {
+    value: 'SSD',
+    label: 'SSD',
+  },
+];
+
 export const EVOLUTION_CLOUD_SERVER_FORM_CONFIG: FormConfig = {
-  ui: [
-    'alertStart',
-    'hasGpu',
-    ['gpuModel'],
-    'gpuCount',
-    'guaranteedPart',
-    ['os'],
-    ['vCpuCoreCount', 'ramAmount'],
-    ['systemDisk'],
-    'alertAdditional',
-    ['additionalDisks'],
-    'networkIsNeeded',
-  ],
+  ui: ['alertStart', 'vmSection', 'backupStorageSection', 'userImagesSection'],
   controls: {
     alertStart: {
       type: CONTROL.Alert,
@@ -189,204 +188,323 @@ export const EVOLUTION_CLOUD_SERVER_FORM_CONFIG: FormConfig = {
       accessorKey: 'start',
     },
 
-    hasGpu: {
-      type: CONTROL.Toggle,
-      accessorKey: 'hasGpu',
-      defaultValue: false,
-      decoratorProps: {
-        label: 'Графический процессор (GPU)',
-      },
-    },
-    gpuModel: {
-      type: CONTROL.SelectSingle,
-      accessorKey: 'gpuModel',
-      defaultValue: MODEL_ITEMS[0].value,
-      items: MODEL_ITEMS,
-      uiProps: {
-        visible: false,
-      },
-      decoratorProps: {
-        label: 'Модель GPU',
-      },
-      watchedControls: {
-        hasGpu: 'hasGpu',
-      },
-      relateFn: ({ hasGpu }) => ({
-        uiProps: {
-          visible: hasGpu,
-        },
-      }),
-    },
-    gpuCount: {
-      type: CONTROL.Slider,
-      accessorKey: 'gpuCount',
-      defaultValue: '1',
-      items: GPU_BY_MODEL[0],
-      decoratorProps: {
-        label: 'Количество GPU',
-      },
-      uiProps: {
-        visible: false,
-        step: 1,
-      },
-      watchedControls: {
-        hasGpu: 'hasGpu',
-        gpuModel: 'gpuModel',
-      },
-      relateFn: ({ hasGpu, gpuModel }) => ({
-        uiProps: {
-          visible: hasGpu,
-        },
-        items: GPU_BY_MODEL[gpuModel],
-      }),
-    },
-
-    guaranteedPart: {
-      decoratorProps: {
-        label: 'Гарантированная доля vCPU',
-        labelTooltip:
-          'Гарантированная доля vCPU определяет долю использования процессора, выделенную для виртуальной машины. Этот параметр известен также как переподписка vCPU (vCPU Overcommitment). При 100% гарантируется использование полной мощности виртуальных ядер процессора хоста виртуализации, выделенных виртуальной машине.',
-      },
-      type: CONTROL.Carousel,
-      accessorKey: 'guaranteedPart',
-      defaultValue: GuaranteedPartItem[10],
-      items: guaranteedPartCards,
-      watchedControls: {
-        hasGpu: 'hasGpu',
-      },
-      relateFn: ({ hasGpu }) => ({
-        items: hasGpu ? [guaranteedPartCards[guaranteedPartCards.length - 1]] : guaranteedPartCards,
-      }),
-    },
-
-    os: {
-      type: CONTROL.SelectSingle,
-      decoratorProps: {
-        label: 'Операционная система',
-      },
-      accessorKey: 'os',
-      defaultValue: 'Ubuntu 22.04',
-      items: generateBaseItems(osItems),
-    },
-
-    vCpuCoreCount: {
-      type: CONTROL.Slider,
-      accessorKey: 'vCpuCoreCount',
-      defaultValue: '1',
-      items: [1, 2, 4, 8],
-      decoratorProps: {
-        label: 'Количество ядер vCPU',
-        labelTooltip: 'Количество ядер vCPU',
-      },
-      watchedControls: {
-        guaranteedPart: 'guaranteedPart',
-        hasGpu: 'hasGpu',
-        gpuModel: 'gpuModel',
-        gpuCount: 'gpuCount',
-      },
-      relateFn: ({ guaranteedPart, hasGpu, gpuModel, gpuCount }) => {
-        const items = hasGpu
-          ? CPU_BY_MODEL_AND_GPU[gpuModel][String(gpuCount)]
-          : guaranteedPartToVCpuMap?.[guaranteedPart];
-
-        if (items?.length > 0) {
-          return {
-            items: items,
-          };
-        }
-      },
-    },
-    ramAmount: {
-      type: CONTROL.Segmented,
-      decoratorProps: {
-        label: 'Количество оперативной памяти (RAM)',
-      },
-      defaultValue: '1',
-      items: generateRamItems([1, 2]),
-      accessorKey: 'ramAmount',
-      watchedControls: {
-        guaranteedPart: 'guaranteedPart',
-        gpuModel: 'gpuModel',
-        hasGpu: 'hasGpu',
-        gpuCount: 'gpuCount',
-        vCpuCoreCount: 'vCpuCoreCount',
-      },
-      relateFn: ({ guaranteedPart, vCpuCoreCount, gpuModel, hasGpu, gpuCount }) => {
-        const items = hasGpu
-          ? RAN_BY_MODEL_AND_GPU[gpuModel][String(gpuCount)]
-          : guaranteedPartVCpuToRamMap?.[guaranteedPart]?.[vCpuCoreCount];
-
-        if (items?.length > 0) {
-          return {
-            items: generateRamItems(items),
-          };
-        }
-      },
-    },
-
-    systemDisk: getDisk({
-      space: {
-        label: 'Загрузочный диск',
-        accessorKey: 'evs.systemDisk.diskSpace',
-        defaultValue: 10,
-        uiProps: {
-          min: 10,
-          max: 4_096,
-        },
-      },
-      specification: {
-        accessorKey: 'evs.systemDisk.specification',
-        defaultValue: 'SSD',
-        uiProps: {
-          disabled: true,
-        },
-      },
-    }),
-
-    alertAdditional: {
-      type: 'alert',
-      uiProps: {
-        appearance: 'info',
-        outline: true,
-        description: 'Можно добавить до 7 дополнительных дисков',
-      },
-      accessorKey: 'risks',
-    },
-    additionalDisks: {
-      type: CONTROL.Array,
-      max: 7,
-      accessorKey: 'evs.additionalDisks',
-      defaultValue: [],
-      addText: 'Добавить диск',
-      ui: ['disk'],
+    vmSection: {
+      type: CONTROL.Object,
+      ui: ['vm'],
       controls: {
-        disk: getDisk({
-          space: {
-            label: 'Дополнительный диск',
-            accessorKey: 'diskSpace',
-            defaultValue: 10,
-            uiProps: {
-              min: 10,
-              max: 4_096,
+        vm: {
+          type: CONTROL.ToggleObject,
+          switchKey: 'vmEnabled',
+          defaultSwitchValue: true,
+          decoratorProps: {
+            label: 'Виртуальная машина',
+          },
+          control: {
+            type: 'object',
+            ui: [
+              'hasGpu',
+              ['gpuModel'],
+              'gpuCount',
+              'guaranteedPart',
+              ['os'],
+              ['vCpuCoreCount', 'ramAmount'],
+              ['systemDisk'],
+              'alertAdditional',
+              ['additionalDisks'],
+              'networkIsNeeded',
+            ],
+            controls: {
+              hasGpu: {
+                type: CONTROL.Toggle,
+                accessorKey: 'hasGpu',
+                defaultValue: false,
+                decoratorProps: {
+                  label: 'Графический процессор (GPU)',
+                },
+              },
+              gpuModel: {
+                type: CONTROL.SelectSingle,
+                accessorKey: 'gpuModel',
+                defaultValue: MODEL_ITEMS[0].value,
+                items: MODEL_ITEMS,
+                uiProps: {
+                  visible: false,
+                },
+                decoratorProps: {
+                  label: 'Модель GPU',
+                },
+                watchedControls: {
+                  hasGpu: 'hasGpu',
+                },
+                relateFn: ({ hasGpu }) => ({
+                  uiProps: {
+                    visible: hasGpu,
+                  },
+                }),
+              },
+              gpuCount: {
+                type: CONTROL.Slider,
+                accessorKey: 'gpuCount',
+                defaultValue: '1',
+                items: GPU_BY_MODEL[0],
+                decoratorProps: {
+                  label: 'Количество GPU',
+                },
+                uiProps: {
+                  visible: false,
+                  step: 1,
+                },
+                watchedControls: {
+                  hasGpu: 'hasGpu',
+                  gpuModel: 'gpuModel',
+                },
+                relateFn: ({ hasGpu, gpuModel }) => ({
+                  uiProps: {
+                    visible: hasGpu,
+                  },
+                  items: GPU_BY_MODEL[gpuModel],
+                }),
+              },
+              guaranteedPart: {
+                decoratorProps: {
+                  label: 'Гарантированная доля vCPU',
+                  labelTooltip:
+                    'Гарантированная доля vCPU определяет долю использования процессора, выделенную для виртуальной машины. Этот параметр известен также как переподписка vCPU (vCPU Overcommitment). При 100% гарантируется использование полной мощности виртуальных ядер процессора хоста виртуализации, выделенных виртуальной машине.',
+                },
+                type: CONTROL.Carousel,
+                accessorKey: 'guaranteedPart',
+                defaultValue: GuaranteedPartItem[10],
+                items: guaranteedPartCards,
+                watchedControls: {
+                  hasGpu: 'hasGpu',
+                },
+                relateFn: ({ hasGpu }) => ({
+                  items: hasGpu ? [guaranteedPartCards[guaranteedPartCards.length - 1]] : guaranteedPartCards,
+                }),
+              },
+              os: {
+                type: CONTROL.SelectSingle,
+                decoratorProps: {
+                  label: 'Операционная система',
+                },
+                accessorKey: 'os',
+                defaultValue: 'Ubuntu 22.04',
+                items: generateBaseItems(osItems),
+              },
+              vCpuCoreCount: {
+                type: CONTROL.Slider,
+                accessorKey: 'vCpuCoreCount',
+                defaultValue: '1',
+                items: [1, 2, 4, 8],
+                decoratorProps: {
+                  label: 'Количество ядер vCPU',
+                  labelTooltip: 'Количество ядер vCPU',
+                },
+                watchedControls: {
+                  guaranteedPart: 'guaranteedPart',
+                  hasGpu: 'hasGpu',
+                  gpuModel: 'gpuModel',
+                  gpuCount: 'gpuCount',
+                },
+                relateFn: ({ guaranteedPart, hasGpu, gpuModel, gpuCount }) => {
+                  const items = hasGpu
+                    ? CPU_BY_MODEL_AND_GPU[gpuModel][String(gpuCount)]
+                    : guaranteedPartToVCpuMap?.[guaranteedPart];
+
+                  if (items?.length > 0) {
+                    return {
+                      items: items,
+                    };
+                  }
+                },
+              },
+              ramAmount: {
+                type: CONTROL.Segmented,
+                decoratorProps: {
+                  label: 'Количество оперативной памяти (RAM)',
+                },
+                defaultValue: '1',
+                items: generateRamItems([1, 2]),
+                accessorKey: 'ramAmount',
+                watchedControls: {
+                  guaranteedPart: 'guaranteedPart',
+                  gpuModel: 'gpuModel',
+                  hasGpu: 'hasGpu',
+                  gpuCount: 'gpuCount',
+                  vCpuCoreCount: 'vCpuCoreCount',
+                },
+                relateFn: ({ guaranteedPart, vCpuCoreCount, gpuModel, hasGpu, gpuCount }) => {
+                  const items = hasGpu
+                    ? RAN_BY_MODEL_AND_GPU[gpuModel][String(gpuCount)]
+                    : guaranteedPartVCpuToRamMap?.[guaranteedPart]?.[vCpuCoreCount];
+
+                  if (items?.length > 0) {
+                    return {
+                      items: generateRamItems(items),
+                    };
+                  }
+                },
+              },
+              systemDisk: getDisk({
+                space: {
+                  label: 'Загрузочный диск',
+                  accessorKey: 'evs.systemDisk.diskSpace',
+                  defaultValue: 10,
+                  uiProps: {
+                    min: 10,
+                    max: 4_096,
+                  },
+                },
+                specification: {
+                  accessorKey: 'evs.systemDisk.specification',
+                  defaultValue: 'SSD',
+                  items: specificationItemsDisk,
+                },
+              }),
+              alertAdditional: {
+                type: 'alert',
+                uiProps: {
+                  appearance: 'info',
+                  outline: true,
+                  description: 'Можно добавить до 7 дополнительных дисков',
+                },
+                accessorKey: 'risks',
+              },
+              additionalDisks: {
+                type: CONTROL.Array,
+                max: 7,
+                accessorKey: 'evs.additionalDisks',
+                defaultValue: [],
+                addText: 'Добавить диск',
+                ui: ['disk'],
+                controls: {
+                  disk: getDisk({
+                    space: {
+                      label: 'Дополнительный диск',
+                      accessorKey: 'diskSpace',
+                      defaultValue: 10,
+                      uiProps: {
+                        min: 10,
+                        max: 4_096,
+                      },
+                    },
+                    specification: {
+                      accessorKey: 'specification',
+                      defaultValue: 'SSD',
+                      uiProps: {
+                        disabled: true,
+                      },
+                    },
+                  }),
+                },
+              },
+              networkIsNeeded: {
+                type: CONTROL.Toggle,
+                defaultValue: false,
+                accessorKey: 'networkIsNeeded',
+                decoratorProps: {
+                  label: 'Аренда публичного IP',
+                },
+              },
             },
           },
-          specification: {
-            accessorKey: 'specification',
-            defaultValue: 'SSD',
-            uiProps: {
-              disabled: true,
-            },
-          },
-        }),
+        },
       },
     },
 
-    networkIsNeeded: {
-      type: CONTROL.Toggle,
-      defaultValue: false,
-      accessorKey: 'networkIsNeeded',
-      decoratorProps: {
-        label: 'Аренда публичного IP',
+    backupStorageSection: {
+      type: CONTROL.Object,
+      ui: ['backupStorage'],
+      controls: {
+        backupStorage: {
+          type: CONTROL.ToggleObject,
+          switchKey: 'backupStorageEnabled',
+          switchOffWhenEmptyAccessorKey: 'evs.backupCopies',
+          decoratorProps: {
+            label: 'Хранение резервных копий',
+          },
+          control: {
+            type: 'object',
+            ui: [['backupCopies']],
+            controls: {
+              backupCopies: {
+                type: CONTROL.Array,
+                max: 10,
+                accessorKey: 'evs.backupCopies',
+                defaultValue: [{ diskSpace: 10, specification: 'SSD' }],
+                addText: 'Добавить резервную копию',
+                ui: ['backup'],
+                controls: {
+                  backup: {
+                    type: CONTROL.Object,
+                    ui: ['space'],
+                    controls: {
+                      space: {
+                        type: CONTROL.Stepper,
+                        decoratorProps: { label: 'Резервная копия' },
+                        accessorKey: 'diskSpace',
+                        defaultValue: 10,
+                        uiProps: {
+                          min: 10,
+                          max: 1024,
+                          postfix: 'ГБ',
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+
+    userImagesSection: {
+      type: CONTROL.Object,
+      ui: ['userImages'],
+      controls: {
+        userImages: {
+          type: CONTROL.ToggleObject,
+          switchKey: 'userImagesEnabled',
+          switchOffWhenEmptyAccessorKey: 'evs.userImages',
+          decoratorProps: {
+            label: 'Хранение пользовательских образов',
+          },
+          control: {
+            type: 'object',
+            ui: [['userImagesList']],
+            controls: {
+              userImagesList: {
+                type: CONTROL.Array,
+                max: 2,
+                accessorKey: 'evs.userImages',
+                defaultValue: [{ diskSpace: 10, specification: 'SSD' }],
+                addText: 'Добавить пользовательский образ',
+                ui: ['image'],
+                controls: {
+                  image: {
+                    type: CONTROL.Object,
+                    ui: ['space'],
+                    controls: {
+                      space: {
+                        type: CONTROL.Stepper,
+                        decoratorProps: { label: 'Пользовательский образ' },
+                        accessorKey: 'diskSpace',
+                        defaultValue: 10,
+                        uiProps: {
+                          min: 10,
+                          max: 150,
+                          postfix: 'ГБ',
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
       },
     },
 

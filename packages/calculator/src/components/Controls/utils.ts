@@ -21,7 +21,7 @@ export function getDefaultValues(controls: Record<string, FormControl>): FormVal
           }
 
           case CONTROL.ToggleObject: {
-            setValue(defaultValue, control.switchKey, false);
+            setValue(defaultValue, control.switchKey, control.defaultSwitchValue ?? false);
             internalGetDefaultValues({ _: control.control });
 
             break;
