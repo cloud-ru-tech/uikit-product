@@ -2,6 +2,7 @@ export enum LogoVariant {
   MLSpace = 'MLSpace',
   Cloud = 'Cloud',
   None = 'None',
+  Custom = 'Custom',
 }
 
 export enum ErrorType {
@@ -10,6 +11,7 @@ export enum ErrorType {
   PageNotFound = 'PageNotFound',
   Offline = 'Offline',
   Redirect = 'Redirect',
+  Custom = 'Custom',
 }
 
 export const COLORS = {

@@ -1,7 +1,7 @@
 import cn from 'classnames';
-import { useMemo } from 'react';
+import { ReactNode } from 'react';
 
-import { CloudFullLogoSVG, MailInterfaceSVG, MlSpaceFullLogoSVG } from '@cloud-ru/uikit-product-icons';
+import { MailInterfaceSVG } from '@cloud-ru/uikit-product-icons';
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
@@ -10,17 +10,49 @@ import { Tag } from '@snack-uikit/tag';
 import { isBrowser } from '@snack-uikit/utils';
 
 import { COLORS, ErrorType, LogoVariant } from './constants';
-import { useGetButtonPropsByErrorType, useGetContentByErrorType } from './hooks';
+import {
+  useGetButtonPropsByErrorType,
+  UseGetButtonPropsByErrorTypeParams,
+  useGetContentByErrorType,
+  useLogoNode,
+} from './hooks';
 import styles from './styles.module.scss';
+import type { ErrorPageCustomConfig, ErrorTypeConfig } from './types';
 
-export type ErrorPageProps = WithSupportProps<{
+type ErrorPageCommonProps = {
   className?: string;
   mainPageUrl?: string;
   onSupportCenterClick?(): void;
-  logoVariant?: LogoVariant;
-  errorType?: ErrorType;
   showMainButton?: boolean;
-}>;
+};
+
+type ErrorPageLogoProps =
+  | {
+      logoVariant: LogoVariant.Custom;
+      /**
+       * Кастомный логотип, используется только с `LogoVariant.Custom`.
+       */
+      logo?: ReactNode;
+    }
+  | {
+      logoVariant?: Exclude<LogoVariant, LogoVariant.Custom>;
+      logo?: never;
+    };
+
+type ErrorPageCustomProps =
+  | ({
+      errorType: ErrorType.Custom;
+      /**
+       * Объект с кастомными настройками, используется только для `ErrorType.Custom`.
+       */
+      custom?: ErrorPageCustomConfig;
+    } & ErrorTypeConfig)
+  | {
+      errorType?: Exclude<ErrorType, ErrorType.Custom>;
+      custom?: never;
+    };
+
+export type ErrorPageProps = WithSupportProps<ErrorPageCommonProps & ErrorPageLogoProps & ErrorPageCustomProps>;
 
 export function ErrorPage({
   className,
@@ -29,40 +61,29 @@ export function ErrorPage({
   logoVariant = LogoVariant.None,
   errorType = ErrorType.FrontendError,
   showMainButton = true,
+  logo,
+  custom,
   ...rest
 }: ErrorPageProps) {
   const { t } = useLocale('ErrorPage');
-  const content = useGetContentByErrorType(errorType);
-  const button = useGetButtonPropsByErrorType(errorType, mainPageUrl);
 
-  const hasMainPageLink = [ErrorType.FrontendError].includes(errorType);
-  const hasBackLink = [ErrorType.FrontendError, ErrorType.PageUnavailable].includes(errorType);
+  const content = useGetContentByErrorType({ errorType, custom } as ErrorTypeConfig);
+  const button = useGetButtonPropsByErrorType({ errorType, custom, mainPageUrl } as UseGetButtonPropsByErrorTypeParams);
+  const logoNode = useLogoNode(logoVariant, logo);
 
-  const logo = useMemo(() => {
-    switch (logoVariant) {
-      case LogoVariant.MLSpace:
-        return (
-          <div className={styles.logo}>
-            <MlSpaceFullLogoSVG />
-          </div>
-        );
-      case LogoVariant.Cloud:
-        return (
-          <div className={styles.logo}>
-            <CloudFullLogoSVG />
-          </div>
-        );
-      case LogoVariant.None:
-      default:
-        return null;
-    }
-  }, [logoVariant]);
+  const isCustomErrorType = errorType === ErrorType.Custom;
+
+  const hasMainPageLinkDefault = [ErrorType.FrontendError].includes(errorType);
+  const hasMainPageLink = isCustomErrorType ? custom?.showMainPageLink : hasMainPageLinkDefault;
+
+  const hasBackLinkDefault = [ErrorType.FrontendError, ErrorType.PageUnavailable].includes(errorType);
+  const hasBackLink = isCustomErrorType ? custom?.showBackLink : hasBackLinkDefault;
 
   return (
     <div className={cn(styles.wrapper, className)} {...extractSupportProps(rest)}>
       <div className={styles.leftSide}>
         <div className={styles.textContainer}>
-          {logo}
+          {logoNode}
 
           <h1 className={styles.title} data-user>
             {content.title}
@@ -72,7 +93,7 @@ export function ErrorPage({
             )}
           </h1>
 
-          <div className={styles.actionWrapper}>
+          <div className={isCustomErrorType ? custom?.actionWrapperClassName : undefined}>
             <span className={styles.actionsTitle}>{content.text}</span>
 
             <div className={styles.actionsLink}>
@@ -101,15 +122,7 @@ export function ErrorPage({
             />
           )}
           {showMainButton && (
-            <ButtonFilled
-              size='m'
-              className={styles.button}
-              label={button.text}
-              href={button.href}
-              target={button.href && '_self'}
-              onClick={button.onClick}
-              icon={button.icon}
-            />
+            <ButtonFilled size='m' className={styles.button} {...button} target={button.href && '_self'} />
           )}
         </div>
       </div>
