@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-claudia",
   "title": "Claudia",
-  "version": "1.18.2",
+  "version": "1.18.3",
   "sideEffects": [
     "*.css",
     "*.woff",

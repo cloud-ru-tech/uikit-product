@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.18.3 (2026-03-11)
+
+
+### Bug Fixes
+
+* **AINFR-4619:** tooltip gap effect fix ([09947f7](https://github.com/cloud-ru-tech/uikit-product/commit/09947f73d54ce6722d460d52b6a447310316314f))
+
+
+
+
+
 ## 1.18.2 (2026-03-10)
 
 ### Only dependencies have been changed
