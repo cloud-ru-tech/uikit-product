@@ -22,6 +22,7 @@ type BaseSelectorPlatformDropListProps = WithLayoutType<{
   /** Нижняя часть под списком droplist */
   footer?: ReactNode;
   loading?: boolean;
+  mobileModalBodyClassName?: string;
   triggerClassName?: string;
   /** Колбек отображения компонента. Срабатывает при изменении состояния open. */
   onOpenChange?: (isOpen: boolean) => void;

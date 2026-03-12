@@ -13,6 +13,16 @@ SiteSelectorPlatformDropList
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| onChange* | `((value: string[]) => void) \| ((value: string) => void)` | - | Controlled обработчик изменения состояния |
+| value* | `string \| string[]` | - | Controlled состояние |
+| mode* | "multiple" \| "single" | - | Режим выбора |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| items* | `Platform[]` | - | Список элементов droplist |
+| footer | `ReactNode` | - | Нижняя часть под списком droplist |
+| loading | `boolean` | - |  |
+| mobileModalBodyClassName | `string` | - |  |
+| triggerClassName | `string` | - |  |
+| onOpenChange | `(isOpen: boolean) => void` | - | Колбек отображения компонента. Срабатывает при изменении состояния open. |
 
 
 [//]: DOCUMENTATION_SECTION_END

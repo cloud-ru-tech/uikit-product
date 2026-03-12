@@ -16,14 +16,51 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| onDelete* | `(onClose: () => void) => void` | - | Колбек нажатия кнопки удаления @param onClose колбэк для закрытия модального окна |
+| onClose* | `() => void` | - | Колбек закрытия компонента. |
+| open* | `boolean` | - | Управляет состоянием показан/не показан. |
+| mode | enum Mode: `"regular"`, `"aggressive"`, `"forced"` | Mode.Regular | Режим отображения модального окна: <br> - __`Regular`__ -  есть кнопка закрытия, клик на оверлей и нажатие кнопки `Esc` закрывают модалку <br> - __`Aggressive`__ - есть кнопка закрытия, но выключен клик на оверлей и не работает закрытие по клавише `Esc` <br> - __`Forced`__ - закрыть модальное окно можно только по нажатию на кнопку действия в нижней части |
+| titleTooltip | `ReactNode` | - | Всплывающая подсказка для заголовка |
+| objectType | `string` | - | Тип удаляемого объекта. Отображается в заголовке модального окна |
+| deleting | `boolean` | - | Состояние загрузки кнопки удаления |
+| description | `ReactNode` | - | Описание |
+| confirmText | `string` | - | Текст для подтверждения удаления |
+| hideConfirmCopyButton | `boolean` | - | Скрыть кнопку копирования для текста подтверждения |
+| subtitle | `ReactNode` | - | Подзаголовок |
+| confirmTextVariant | "text" \| "name" | name | Тип текста подтверждения |
 ## MobileDeleteModal
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| onDelete* | `(onClose: () => void) => void` | - | Колбек нажатия кнопки удаления @param onClose колбэк для закрытия модального окна |
+| onClose* | `() => void` | - | Колбэк закрытия |
+| open* | `boolean` | - | Управление состоянием показан/не показан. |
+| mode | enum Mode: `"regular"`, `"aggressive"`, `"forced"` | Mode.Regular | Режим отображения модального окна: <br> - __`Regular`__ -  есть кнопка закрытия, клик на оверлей и нажатие кнопки `Esc` закрывают модалку <br> - __`Aggressive`__ - есть кнопка закрытия, но выключен клик на оверлей и не работает закрытие по клавише `Esc` <br> - __`Forced`__ - закрыть модальное окно можно только по нажатию на кнопку действия в нижней части |
+| titleTooltip | `ReactNode` | - | Всплывающая подсказка для заголовка |
+| objectType | `string` | - | Тип удаляемого объекта. Отображается в заголовке модального окна |
+| deleting | `boolean` | - | Состояние загрузки кнопки удаления |
+| description | `ReactNode` | - | Описание |
+| confirmText | `string` | - | Текст для подтверждения удаления |
+| hideConfirmCopyButton | `boolean` | - | Скрыть кнопку копирования для текста подтверждения |
+| subtitle | `ReactNode` | - | Подзаголовок |
+| confirmTextVariant | "text" \| "name" | name | Тип текста подтверждения |
 ## AdaptiveDeleteModal
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| onDelete* | `(onClose: () => void) => void` | - | Колбек нажатия кнопки удаления @param onClose колбэк для закрытия модального окна |
+| onClose* | `() => void` | - | Колбек закрытия компонента. |
+| open* | `boolean` | - | Управляет состоянием показан/не показан. |
+| mode | enum Mode: `"regular"`, `"aggressive"`, `"forced"` | Mode.Regular | Режим отображения модального окна: <br> - __`Regular`__ -  есть кнопка закрытия, клик на оверлей и нажатие кнопки `Esc` закрывают модалку <br> - __`Aggressive`__ - есть кнопка закрытия, но выключен клик на оверлей и не работает закрытие по клавише `Esc` <br> - __`Forced`__ - закрыть модальное окно можно только по нажатию на кнопку действия в нижней части |
+| titleTooltip | `ReactNode` | - | Всплывающая подсказка для заголовка |
+| objectType | `string` | - | Тип удаляемого объекта. Отображается в заголовке модального окна |
+| deleting | `boolean` | - | Состояние загрузки кнопки удаления |
+| description | `ReactNode` | - | Описание |
+| confirmText | `string` | - | Текст для подтверждения удаления |
+| hideConfirmCopyButton | `boolean` | - | Скрыть кнопку копирования для текста подтверждения |
+| subtitle | `ReactNode` | - | Подзаголовок |
+| confirmTextVariant | "text" \| "name" | - | Тип текста подтверждения |
 ## DefaultRecallModalBody
 ### Props
 | name | type | default value | description |
@@ -34,26 +71,82 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| onRecall* | `(onClose: () => void) => void` | - | Колбек нажатия кнопки отзыва @param onClose колбэк для закрытия модального окна |
+| onClose* | `() => void` | - | Колбек закрытия компонента. |
+| open* | `boolean` | - | Управляет состоянием показан/не показан. |
+| mode | enum Mode: `"regular"`, `"aggressive"`, `"forced"` | Mode.Regular | Режим отображения модального окна: <br> - __`Regular`__ -  есть кнопка закрытия, клик на оверлей и нажатие кнопки `Esc` закрывают модалку <br> - __`Aggressive`__ - есть кнопка закрытия, но выключен клик на оверлей и не работает закрытие по клавише `Esc` <br> - __`Forced`__ - закрыть модальное окно можно только по нажатию на кнопку действия в нижней части |
+| titleTooltip | `ReactNode` | - | Всплывающая подсказка для заголовка |
+| loading | `boolean` | - | Состояние загрузки кнопки отзыва |
+| description | `ReactNode` | - | Описание |
+| confirmText | `string` | - | Текст для подтверждения отзыва |
+| hideConfirmCopyButton | `boolean` | - | Скрыть кнопку копирования для текста подтверждения |
+| subtitle | `ReactNode` | - | Подзаголовок |
 ## MobileRecallModal
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| onRecall* | `(onClose: () => void) => void` | - | Колбек нажатия кнопки отзыва @param onClose колбэк для закрытия модального окна |
+| onClose* | `() => void` | - | Колбэк закрытия |
+| open* | `boolean` | - | Управление состоянием показан/не показан. |
+| mode | enum Mode: `"regular"`, `"aggressive"`, `"forced"` | Mode.Regular | Режим отображения модального окна: <br> - __`Regular`__ -  есть кнопка закрытия, клик на оверлей и нажатие кнопки `Esc` закрывают модалку <br> - __`Aggressive`__ - есть кнопка закрытия, но выключен клик на оверлей и не работает закрытие по клавише `Esc` <br> - __`Forced`__ - закрыть модальное окно можно только по нажатию на кнопку действия в нижней части |
+| titleTooltip | `ReactNode` | - | Всплывающая подсказка для заголовка |
+| loading | `boolean` | - | Состояние загрузки кнопки отзыва |
+| description | `ReactNode` | - | Описание |
+| confirmText | `string` | - | Текст для подтверждения отзыва |
+| hideConfirmCopyButton | `boolean` | - | Скрыть кнопку копирования для текста подтверждения |
+| subtitle | `ReactNode` | - | Подзаголовок |
 ## AdaptiveRecallModal
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| onRecall* | `(onClose: () => void) => void` | - | Колбек нажатия кнопки отзыва @param onClose колбэк для закрытия модального окна |
+| onClose* | `() => void` | - | Колбек закрытия компонента. |
+| open* | `boolean` | - | Управляет состоянием показан/не показан. |
+| mode | enum Mode: `"regular"`, `"aggressive"`, `"forced"` | Mode.Regular | Режим отображения модального окна: <br> - __`Regular`__ -  есть кнопка закрытия, клик на оверлей и нажатие кнопки `Esc` закрывают модалку <br> - __`Aggressive`__ - есть кнопка закрытия, но выключен клик на оверлей и не работает закрытие по клавише `Esc` <br> - __`Forced`__ - закрыть модальное окно можно только по нажатию на кнопку действия в нижней части |
+| titleTooltip | `ReactNode` | - | Всплывающая подсказка для заголовка |
+| loading | `boolean` | - | Состояние загрузки кнопки отзыва |
+| description | `ReactNode` | - | Описание |
+| confirmText | `string` | - | Текст для подтверждения отзыва |
+| hideConfirmCopyButton | `boolean` | - | Скрыть кнопку копирования для текста подтверждения |
+| subtitle | `ReactNode` | - | Подзаголовок |
 ## ReleaseNotesModal
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| items* | `NoteItemProps[]` | - | Массив новостей/заметок |
+| onClose* | `() => void` | - | Колбек закрытия компонента. |
+| open* | `boolean` | - | Управляет состоянием показан/не показан. |
+| loading | `boolean` | - | Состояние загрузки контента |
+| onReadLaterClick | `() => void` | - | Действие при клике по кнопке Ознакомиться позже |
+| dataError | `boolean` | - | Состояние ошибки получения данных |
+| onDataErrorRetryClick | `() => void` | - | Действие при клике по кнопке "Перезагрузить" на экране ошибки |
+| onSlideChange | `(slide: number) => void` | - | Действие при переключении слайда |
 ## MobileReleaseNotesModal
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| items* | `NoteItemProps[]` | - | Массив новостей/заметок |
+| onClose* | `() => void` | - | Колбек закрытия компонента. |
+| open* | `boolean` | - | Управляет состоянием показан/не показан. |
+| loading | `boolean` | - | Состояние загрузки контента |
+| onReadLaterClick | `() => void` | - | Действие при клике по кнопке Ознакомиться позже |
+| dataError | `boolean` | - | Состояние ошибки получения данных |
+| onDataErrorRetryClick | `() => void` | - | Действие при клике по кнопке "Перезагрузить" на экране ошибки |
+| onSlideChange | `(slide: number) => void` | - | Действие при переключении слайда |
 ## AdaptiveReleaseNotesModal
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| items* | `NoteItemProps[]` | - | Массив новостей/заметок |
+| onClose* | `() => void` | - | Колбек закрытия компонента. |
+| open* | `boolean` | - | Управляет состоянием показан/не показан. |
+| loading | `boolean` | - | Состояние загрузки контента |
+| onReadLaterClick | `() => void` | - | Действие при клике по кнопке Ознакомиться позже |
+| dataError | `boolean` | - | Состояние ошибки получения данных |
+| onDataErrorRetryClick | `() => void` | - | Действие при клике по кнопке "Перезагрузить" на экране ошибки |
+| onSlideChange | `(slide: number) => void` | - | Действие при переключении слайда |
 
 
 [//]: DOCUMENTATION_SECTION_END

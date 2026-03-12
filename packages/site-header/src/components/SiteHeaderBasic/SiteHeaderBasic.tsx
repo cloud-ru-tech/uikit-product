@@ -34,6 +34,8 @@ export type HeaderProps = WithSupportProps<
     className?: string;
     /** className основного хедера */
     mainHeaderClassName?: string;
+    /** className для body в мобильном меню */
+    mobileModalBodyClassName?: string;
     /** максимальная ширина контейнера */
     maxWidth?: number;
     /** Флаг открытия мобильного меню */
@@ -80,11 +82,11 @@ export function SiteHeaderBasic({
   appearance = 'none',
   logo,
   leftPartClassName,
+  mobileModalBodyClassName,
   ...rest
 }: HeaderProps) {
   const refHeader = useRef<HTMLDivElement>(null);
   const { showHeader, headerHeight } = useHeaderPosition(mobileMenuOpen, refHeader);
-
   const isMobileTabletView = layoutType === 'mobile' || layoutType === 'tablet';
   const isMobile = layoutType === 'mobile';
 
@@ -126,6 +128,7 @@ export function SiteHeaderBasic({
                       onClick={() => onSetMobileMenuOpen(!mobileMenuOpen)}
                     />
                     <MobileMenu
+                      mobileModalBodyClassName={mobileModalBodyClassName}
                       mobileConsultationButton={mobileConsultationButton}
                       mobileMenuContent={mobileMenuContent}
                       mobileMenuOpen={mobileMenuOpen}

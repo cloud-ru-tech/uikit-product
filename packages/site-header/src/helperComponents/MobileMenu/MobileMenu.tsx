@@ -9,6 +9,7 @@ type MobileMenuProps = {
   mobileMenuContent: ReactNode;
   mobileConsultationButton?: ReactNode;
   onClickForCloseMobileMenu: () => void;
+  mobileModalBodyClassName?: string;
 };
 
 export function MobileMenu({
@@ -16,11 +17,12 @@ export function MobileMenu({
   onClickForCloseMobileMenu,
   mobileMenuContent,
   mobileConsultationButton,
+  mobileModalBodyClassName,
 }: MobileMenuProps) {
   return (
     <MobileModalCustom open={mobileMenuOpen} onClose={onClickForCloseMobileMenu} className={styles.mobileMenu}>
       <MobileModalCustom.Header title='Меню' align='center' />
-      <MobileModalCustom.Body content={mobileMenuContent} />
+      <MobileModalCustom.Body className={mobileModalBodyClassName} content={mobileMenuContent} />
       {mobileConsultationButton && <MobileModalCustom.Footer actions={mobileConsultationButton} />}
     </MobileModalCustom>
   );

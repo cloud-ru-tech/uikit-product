@@ -15,31 +15,92 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| ref | `any` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
-| key | `any` | - |  |
+| href | `string` | - | Ссылка |
+| target | `HTMLAttributeAnchorTarget` | _blank | HTML-аттрибут target |
+| className | `string` | - | CSS-класс |
+| disabled | `boolean` | - | Флаг неактивности компонента |
+| icon | `ReactElement` | - | Иконка |
+| label | `string` | - | Текст кнопки |
+| loading | `boolean` | - | Флаг состояния загрузки |
+| onClick | `MouseEventHandler<HTMLElement>` | - | Колбек обработки клика |
+| onKeyDown | `KeyboardEventHandler<HTMLElement>` | - | Колбек обработки нажатия клавиши |
+| onFocus | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - | Колбек обработки фокуса |
+| onBlur | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - | Колбек обработки блюра |
+| size | enum Size: `"xs"`, `"s"`, `"m"`, `"l"` | s | Размер |
+| type | "submit" \| "reset" \| "button" | button | HTML-аттрибут type |
+| tabIndex | `number` | - | HTML-аттрибут tab-index |
+| fullWidth | `boolean` | - | Сделать кнопку во всю ширину |
+| ref | `LegacyRef<HTMLButtonElement \| HTMLAnchorElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
 ## ButtonGigaMama
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| ref | `any` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
-| key | `any` | - |  |
+| href | `string` | - | Ссылка |
+| target | `HTMLAttributeAnchorTarget` | _blank | HTML-аттрибут target |
+| className | `string` | - | CSS-класс |
+| disabled | `boolean` | - | Флаг неактивности компонента |
+| icon | `ReactElement` | - | Иконка |
+| label | `string` | - | Текст кнопки |
+| loading | `boolean` | - | Флаг состояния загрузки |
+| onClick | `MouseEventHandler<HTMLElement>` | - | Колбек обработки клика |
+| onKeyDown | `KeyboardEventHandler<HTMLElement>` | - | Колбек обработки нажатия клавиши |
+| onFocus | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - | Колбек обработки фокуса |
+| onBlur | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - | Колбек обработки блюра |
+| type | "submit" \| "reset" \| "button" | button | HTML-аттрибут type |
+| tabIndex | `number` | - | HTML-аттрибут tab-index |
+| fullWidth | `boolean` | - | Сделать кнопку во всю ширину |
+| ref | `LegacyRef<HTMLButtonElement \| HTMLAnchorElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
 ## ButtonGigaOutline
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| ref | `any` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
-| key | `any` | - |  |
+| iconPosition | enum IconPosition: `"before"`, `"after"` | before | Позиция иконки |
+| href | `string` | - | Ссылка |
+| target | `HTMLAttributeAnchorTarget` | _blank | HTML-аттрибут target |
+| className | `string` | - | CSS-класс |
+| disabled | `boolean` | - | Флаг неактивности компонента |
+| icon | `ReactElement` | - | Иконка |
+| label | `string` | - | Текст кнопки |
+| loading | `boolean` | - | Флаг состояния загрузки |
+| onClick | `MouseEventHandler<HTMLElement>` | - | Колбек обработки клика |
+| onKeyDown | `KeyboardEventHandler<HTMLElement>` | - | Колбек обработки нажатия клавиши |
+| onFocus | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - | Колбек обработки фокуса |
+| onBlur | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - | Колбек обработки блюра |
+| size | enum Size: `"xs"`, `"s"`, `"m"`, `"l"` | s | Размер |
+| type | "submit" \| "reset" \| "button" | button | HTML-аттрибут type |
+| tabIndex | `number` | - | HTML-аттрибут tab-index |
+| fullWidth | `boolean` | - | Сделать кнопку во всю ширину |
+| ref | `LegacyRef<HTMLButtonElement \| HTMLAnchorElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
 ## ButtonGigaFunction
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| ref | `any` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
-| key | `any` | - |  |
+| iconPosition | enum IconPosition: `"before"`, `"after"` | before |  |
+| href | `string` | - |  |
+| target | `HTMLAttributeAnchorTarget` | _blank |  |
+| className | `string` | - | CSS-класс |
+| disabled | `boolean` | - |  |
+| icon | `ReactElement<any, string \| JSXElementConstructor<any>>` | - |  |
+| label | `string` | - |  |
+| loading | `boolean` | - |  |
+| onClick | `MouseEventHandler<HTMLElement>` | - |  |
+| onKeyDown | `KeyboardEventHandler<HTMLElement>` | - |  |
+| onFocus | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - |  |
+| onBlur | `FocusEventHandler<HTMLButtonElement \| HTMLAnchorElement>` | - |  |
+| size | enum Size: `"xs"`, `"s"`, `"m"`, `"l"` | s |  |
+| type | "submit" \| "reset" \| "button" | button |  |
+| tabIndex | `number` | - |  |
+| fullWidth | `boolean` | - |  |
+| ref | `LegacyRef<HTMLButtonElement \| HTMLAnchorElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
 ## ChatStatusAnnouncement
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | `any` | - |  |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | actionLabel* | `string` | - |  |
 | icon | `ReactElement<any, string \| JSXElementConstructor<any>>` | - |  |
 | content | `ReactNode` | - |  |
@@ -52,21 +113,21 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | `LayoutType` | - |  |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | onActionClick* | `() => void` | - |  |
 | className | `string` | - | CSS-класс |
 ## ChatStatusAnnouncementSsh
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | `LayoutType` | - |  |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | onActionClick* | `() => void` | - |  |
 | className | `string` | - | CSS-класс |
 ## ChatStatusAnnouncementVmAgent
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | `LayoutType` | - |  |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | onActionClick* | `() => void` | - |  |
 | className | `string` | - | CSS-класс |
 | vmName | `string` | - |  |
@@ -533,8 +594,8 @@
 | onAnimationIterationCapture | `AnimationEventHandler<SVGSVGElement>` | - |  |
 | onTransitionEnd | `TransitionEventHandler<SVGSVGElement>` | - |  |
 | onTransitionEndCapture | `TransitionEventHandler<SVGSVGElement>` | - |  |
-| key | `any` | - |  |
-| ref | `any` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
+| ref | `LegacyRef<HTMLButtonElement \| HTMLAnchorElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 ## RecommendPanel
 ### Props
 | name | type | default value | description |
@@ -542,7 +603,7 @@
 | chips* | `ChipProps[]` | - |  |
 | size | enum Size: `"s"`, `"m"` | s |  |
 | type | enum ChipType: `"default"`, `"outline"` | default |  |
-| layoutType | `LayoutType` | - |  |
+| layoutType | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | onCloseClick | `() => void` | - |  |
 | onCloseChipLabel | `ReactNode` | - |  |
 | onAiAssistantClick | `() => void` | - |  |
@@ -552,14 +613,73 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| ref | `any` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
-| key | `any` | - |  |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| onCancel* | `() => void` | - | Колбек отмены действия |
+| onSubmit* | `(value: string) => void` | - | Колбек действия при отправке |
+| className | `string` | - | CSS-класс |
+| disabled | `boolean` | - | Является ли поле деактивированным |
+| onKeyDown | `KeyboardEventHandler<HTMLTextAreaElement>` | - | Колбек нажатия клавиши клавиатуры |
+| onFocus | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек получения фокуса |
+| onBlur | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек потери фокуса |
+| id | `string` | - | HTML-аттрибут id |
+| name | `string` | - | HTML-аттрибут name |
+| onChange | `(value: string, e?: ChangeEvent<HTMLTextAreaElement>) => void` | - | Колбек смены значения |
+| value | `string` | - | HTML-аттрибут value |
+| maxLength | `number` | - | Максимальное кол-во символов |
+| readonly | `boolean` | - | Является ли поле доступным только на чтение |
+| autoFocus | `boolean` | - | Включен ли авто-фокус |
+| inputMode | enum InputMode: `"search"`, `"none"`, `"text"`, `"decimal"`, `"numeric"`, `"tel"`, `"email"`, `"url"` | - | Режим работы экранной клавиатуры |
+| caption | `string` | - | Подпись справа от лейбла |
+| hint | `string` | - | Подсказка внизу |
+| validationState | enum ValidationState: `"default"`, `"error"`, `"warning"`, `"success"` | - | Состояние валидации |
+| showHintIcon | `boolean` | - | Отображать иконку подсказки |
+| labelTooltipPlacement | enum Placement: `"left"`, `"left-start"`, `"left-end"`, `"right"`, `"right-start"`, `"right-end"`, `"top"`, `"top-start"`, `"top-end"`, `"bottom"`, `"bottom-start"`, `"bottom-end"` | top | Расположение подсказки лейбла |
+| error | `string` | - |  |
+| minRows | `number` | 3 | Минимальное кол-во строк, до которого размер поля может быть увеличен |
+| maxRows | `number` | 1000 | Максимальное кол-во строк, до которого размер поля может быть увеличен |
+| resizable | `boolean` | - | Может ли ли пользователь изменять размеры поля (если св-во не включено, поле автоматически меняет свой размер) |
+| showCopyButton | `boolean` | - | Отображение кнопки Копировать для поля (актуально только для `readonly = true`) |
+| onCopyButtonClick | `() => void` | - | Колбек клика по кнопке Копировать для поля |
+| showClearButton | `boolean` | true | Отображение кнопки очистки поля |
+| allowMoreThanMaxLength | `boolean` | - | Можно ли вводить больше разрешённого кол-ва символов |
+| ref | `LegacyRef<HTMLButtonElement \| HTMLAnchorElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
 ## VmAgentField
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| ref | `any` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
-| key | `any` | - |  |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| onCancel* | `() => void` | - | Колбек отмены действия |
+| onSubmit* | `(value: string) => void` | - | Колбек действия при отправке |
+| className | `string` | - | CSS-класс |
+| disabled | `boolean` | - | Является ли поле деактивированным |
+| onKeyDown | `KeyboardEventHandler<HTMLTextAreaElement>` | - | Колбек нажатия клавиши клавиатуры |
+| onFocus | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек получения фокуса |
+| onBlur | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек потери фокуса |
+| id | `string` | - | HTML-аттрибут id |
+| name | `string` | - | HTML-аттрибут name |
+| onChange | `(value: string, e?: ChangeEvent<HTMLTextAreaElement>) => void` | - | Колбек смены значения |
+| value | `string` | - | HTML-аттрибут value |
+| maxLength | `number` | - | Максимальное кол-во символов |
+| readonly | `boolean` | - | Является ли поле доступным только на чтение |
+| autoFocus | `boolean` | - | Включен ли авто-фокус |
+| inputMode | enum InputMode: `"search"`, `"none"`, `"text"`, `"decimal"`, `"numeric"`, `"tel"`, `"email"`, `"url"` | - | Режим работы экранной клавиатуры |
+| caption | `string` | - | Подпись справа от лейбла |
+| hint | `string` | - | Подсказка внизу |
+| showHintIcon | `boolean` | - | Отображать иконку подсказки |
+| labelTooltipPlacement | enum Placement: `"left"`, `"left-start"`, `"left-end"`, `"right"`, `"right-start"`, `"right-end"`, `"top"`, `"top-start"`, `"top-end"`, `"bottom"`, `"bottom-start"`, `"bottom-end"` | top | Расположение подсказки лейбла |
+| error | `string` | - |  |
+| minRows | `number` | 3 | Минимальное кол-во строк, до которого размер поля может быть увеличен |
+| maxRows | `number` | 1000 | Максимальное кол-во строк, до которого размер поля может быть увеличен |
+| resizable | `boolean` | - | Может ли ли пользователь изменять размеры поля (если св-во не включено, поле автоматически меняет свой размер) |
+| showCopyButton | `boolean` | - | Отображение кнопки Копировать для поля (актуально только для `readonly = true`) |
+| onCopyButtonClick | `() => void` | - | Колбек клика по кнопке Копировать для поля |
+| showClearButton | `boolean` | true | Отображение кнопки очистки поля |
+| allowMoreThanMaxLength | `boolean` | - | Можно ли вводить больше разрешённого кол-ва символов |
+| vmIp | `string` | - | IP виртуальной машины |
+| vmName | `string` | - | Имя виртуальной машины |
+| ref | `LegacyRef<HTMLButtonElement \| HTMLAnchorElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
 ## ChatsSVG
 ### Props
 | name | type | default value | description |

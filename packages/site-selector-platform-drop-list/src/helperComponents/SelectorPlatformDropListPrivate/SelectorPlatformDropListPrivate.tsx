@@ -38,6 +38,7 @@ type BaseSelectorPlatformDropListPrivateProps = WithLayoutType<{
   /** Нижняя часть под списком droplist */
   footer?: ReactNode;
   loading?: boolean;
+  mobileModalBodyClassName?: string;
   triggerClassName?: string;
   /** Колбек отображения компонента. Срабатывает при изменении состояния open. */
   onOpenChange?: (isOpen: boolean) => void;
@@ -59,6 +60,7 @@ export function SelectorPlatformDropListPrivate({
   loading,
   triggerClassName,
   onOpenChange,
+  mobileModalBodyClassName,
 }: SelectorPlatformDropListPrivateProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [tooltipMobile, setTooltipMobile] = useState<TooltipMobile>({
@@ -142,7 +144,10 @@ export function SelectorPlatformDropListPrivate({
         <MobileModalCustom.Header
           title={<TitleWithGoBack onGoBack={handleCloseTooltipMobile} title='Облачная платформа' />}
         />
-        <MobileModalCustom.Body content={<Typography.SansBodyL>{tooltipMobile.text}</Typography.SansBodyL>} />
+        <MobileModalCustom.Body
+          className={mobileModalBodyClassName}
+          content={<Typography.SansBodyL>{tooltipMobile.text}</Typography.SansBodyL>}
+        />
       </MobileModalCustom>
     </>
   );

@@ -9,6 +9,14 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| description* | `string` | - | Описание, где выделенные слова помечаются тегом <mark></mark> |
+| img* | `string` | - | Ссылка на img логотип |
+| href | `string` | - | Ссылка переход по нажатию на карточку |
+| categories | `string[]` | - | Список категорий |
+| visibleCategories | `boolean` | true | Флаг показа или скрытия списка категорий |
+| loading | `boolean` | - | Состояние загрузки |
+| onClick | `(e: MouseEvent<HTMLDivElement \| HTMLAnchorElement, MouseEvent>) => void` | - | Событие клика на карточку |
 
 
 [//]: DOCUMENTATION_SECTION_END
