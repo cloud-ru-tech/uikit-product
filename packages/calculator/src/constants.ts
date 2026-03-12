@@ -26,6 +26,7 @@ export const CATEGORY = {
   Storage: 'storage',
   Database: 'database',
   Dataset: 'dataset',
+  Brokers: 'brokers',
   Development: 'development',
   Analytic: 'analytic',
   ML: 'ml-ai-tools',

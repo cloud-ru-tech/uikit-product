@@ -20,6 +20,7 @@ export const EVOLUTION_PRODUCT = {
   EvolutionManagedRedis: 'evolutionManagedRedis',
   EvolutionManagedClickHouse: 'evolutionManagedClickhouse',
   EvolutionManagedSpark: 'evolutionManagedSpark',
+  EvolutionManagedKafka: 'evolutionManagedKafka',
   EvolutionLoadBalancer: 'evolutionLoadBalancer',
   EvolutionNotebooks: 'evolutionNotebooks',
 } as const;

@@ -110,6 +110,12 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       visibleProducts: [EVOLUTION_PRODUCT.EvolutionManagedClickHouse],
     },
     {
+      id: CATEGORY.Brokers,
+      label: 'Брокеры сообщений',
+      dataTestId: 'brokers',
+      visibleProducts: [EVOLUTION_PRODUCT.EvolutionManagedKafka],
+    },
+    {
       id: CATEGORY.ML,
       label: 'ML/AI Инструменты',
       dataTestId: 'ml',
