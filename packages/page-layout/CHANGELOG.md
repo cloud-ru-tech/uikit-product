@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-03-13)
+
+
+### Features
+
+* **EVODP-8436:** Added selection feature to navigation menu. ([b0e7c55](https://github.com/cloud-ru-tech/uikit-product/commit/b0e7c55ec65fb490318bfd102e4af6b273fc3568))
+
+
+
+
+
 ## 2.0.10 (2026-03-10)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.13 (2026-03-13)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-page-layout@2.1.0]($PUBLIC_PROJECT_URL/blob/master/packages/page-layout/CHANGELOG.md)
+
+
+
+
+
 ## 2.0.12 (2026-03-10)
 
 ### Only dependencies have been changed
