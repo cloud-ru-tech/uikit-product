@@ -6,7 +6,7 @@ import { BurgerSVG, CloseSVG } from '@cloud-ru/uikit-product-icons';
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { ButtonSimple } from '@snack-uikit/button';
 import { Status, StatusProps } from '@snack-uikit/status';
-import { TreeNodeProps } from '@snack-uikit/tree';
+import { TreeNodeId, TreeNodeProps } from '@snack-uikit/tree';
 import { Typography } from '@snack-uikit/typography';
 
 import { ConditionalPopover, Menu } from './helper-components';
@@ -42,6 +42,10 @@ export type TreeNavigationProps = {
     enableShrinkMenuButton?: boolean;
     /** Открывать пункты меню по умолчанию */
     withDefaultOpenedMenuList?: boolean;
+    /** Выбранный элемент меню  */
+    selected?: TreeNodeId;
+    /** Колбэк, вызываемый при попытке изменить состояние селекта. */
+    onSelect?: (selectedKey: TreeNodeId | undefined, node: TreeNodeProps) => void;
   };
   /** Контентная часть страницы */
   content: ReactNode;
@@ -61,6 +65,8 @@ export function TreeNavigation({
     isMenuOpen,
     defaultMenuOpened,
     onMenuToggle,
+    selected,
+    onSelect,
   },
   content,
   mode,
@@ -75,9 +81,11 @@ export function TreeNavigation({
         menuTitle={menuTitle}
         enableShrinkMenuButton={enableShrinkMenuButton}
         withDefaultOpenedMenuList={withDefaultOpenedMenuList}
+        selected={selected}
+        onSelect={onSelect}
       />
     ),
-    [items, menuTitle, enableShrinkMenuButton, withDefaultOpenedMenuList],
+    [onSelect, selected, items, menuTitle, enableShrinkMenuButton, withDefaultOpenedMenuList],
   );
 
   return (

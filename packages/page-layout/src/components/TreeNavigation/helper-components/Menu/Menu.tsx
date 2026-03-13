@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'react';
 
-import { HorizontalMenuCloseSVG } from '@cloud-ru/uikit-product-icons';
+import { HorizontalMenuCloseSVG, HorizontalMenuOpenSVG } from '@cloud-ru/uikit-product-icons';
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { ButtonSimple } from '@snack-uikit/button';
-import { Tree, TreeNodeProps } from '@snack-uikit/tree';
+import { Tree, TreeNodeId, TreeNodeProps } from '@snack-uikit/tree';
 import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';
@@ -14,9 +14,18 @@ type MenuProps = {
   menuItems: TreeNodeProps[];
   enableShrinkMenuButton?: boolean;
   withDefaultOpenedMenuList?: boolean;
+  selected?: TreeNodeId;
+  onSelect?: (selectedKey: TreeNodeId | undefined, node: TreeNodeProps) => void;
 };
 
-export function Menu({ menuTitle, menuItems, enableShrinkMenuButton = true, withDefaultOpenedMenuList }: MenuProps) {
+export function Menu({
+  menuTitle,
+  menuItems,
+  enableShrinkMenuButton = true,
+  withDefaultOpenedMenuList,
+  selected,
+  onSelect,
+}: MenuProps) {
   const { t } = useLocale('PageLayout');
   const allExpandedNodes = useMemo(() => getExpandedNodes(menuItems), [menuItems]);
 
@@ -37,14 +46,21 @@ export function Menu({ menuTitle, menuItems, enableShrinkMenuButton = true, with
           {enableShrinkMenuButton && (
             <ButtonSimple
               label={isExpanded ? t('TreeNavigation.collapseAll') : t('TreeNavigation.expandAll')}
-              icon={<HorizontalMenuCloseSVG />}
+              icon={isExpanded ? <HorizontalMenuCloseSVG /> : <HorizontalMenuOpenSVG />}
               onClick={isExpanded ? handleCollapseAll : handleExpandAll}
             />
           )}
         </div>
       )}
 
-      <Tree data={menuItems} selectionMode='single' expandedNodes={expandedNodes} onExpand={setExpandedNodes} />
+      <Tree
+        data={menuItems}
+        selectionMode='single'
+        expandedNodes={expandedNodes}
+        onExpand={setExpandedNodes}
+        selected={selected}
+        onSelect={onSelect}
+      />
     </div>
   );
 }
