@@ -36,7 +36,7 @@ export function CheckItem({ label, checked, layoutType, shouldHide = false, anim
 
   return (
     <div className={styles.checkItem} data-layout-type={layoutType} data-animated={animated}>
-      <CheckSVG size={20} className={styles.icon} data-checked={checked} />
+      <CheckSVG size={16} className={styles.icon} data-checked={checked} />
       <Typography.SansBodyM className={styles.label} data-checked={checked}>
         {label}
       </Typography.SansBodyM>

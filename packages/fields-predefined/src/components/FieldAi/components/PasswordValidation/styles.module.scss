@@ -23,6 +23,8 @@
   &[data-layout-type='tablet'] {
     gap: 8px;
     @include ste.composite-var(ste.$sans-body-s);
+    padding: 8px 16px;
+
 
     .validationList {
       gap: 2px;
