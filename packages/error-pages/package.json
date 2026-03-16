@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-error-pages",
   "title": "Error Pages",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "17.1.0",
+    "@cloud-ru/uikit-product-icons": "17.1.1",
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/link": "0.17.18",

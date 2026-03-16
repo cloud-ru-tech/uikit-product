@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-header",
   "title": "Siteheader",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-button-predefined": "1.1.9",
-    "@cloud-ru/uikit-product-icons": "17.1.0",
-    "@cloud-ru/uikit-product-mobile-modal": "2.0.8",
+    "@cloud-ru/uikit-product-button-predefined": "1.1.10",
+    "@cloud-ru/uikit-product-icons": "17.1.1",
+    "@cloud-ru/uikit-product-mobile-modal": "2.0.9",
     "@cloud-ru/uikit-product-site-layout": "1.1.3",
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/alert": "0.16.26",
