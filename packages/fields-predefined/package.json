@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-fields-predefined",
   "title": "Fields Predefined",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "sideEffects": [
     "*.css",
     "*.woff",

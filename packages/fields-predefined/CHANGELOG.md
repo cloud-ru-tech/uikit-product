@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.3 (2026-03-16)
+
+
+### Bug Fixes
+
+* **MKP-3301:** update value inside component ([1041987](https://github.com/cloud-ru-tech/uikit-product/commit/1041987ea72267543c847cfd27f3d9f86c905ae5))
+
+
+
+
+
 ## 2.2.2 (2026-03-10)
 
 ### Only dependencies have been changed
