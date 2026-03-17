@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.9 (2026-03-17)
+
+
+### Bug Fixes
+
+* **IAM-6151:** correct condition for display tooltip ([f11173a](https://github.com/cloud-ru-tech/uikit-product/commit/f11173ab1d818b6d847021bcfc33acf7b59e98a6))
+
+
+
+
+
 ## 1.1.8 (2026-03-16)
 
 
