@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.5.1 (2026-03-17)
+
+
+### Bug Fixes
+
+* **SITE-10319:** fix site header burger button ([e3aa553](https://github.com/cloud-ru-tech/uikit-product/commit/e3aa553809584831641a05d99e95966f2768d64d))
+
+
+
+
+
 # 1.5.0 (2026-03-16)
 
 
