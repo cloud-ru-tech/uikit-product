@@ -195,6 +195,9 @@
     },
     {
       "path": "./site-cookie-policy/tsconfig.cjs.json"
+    },
+    {
+      "path": "./site-running-line/tsconfig.cjs.json"
     }
   ],
   "compilerOptions": {

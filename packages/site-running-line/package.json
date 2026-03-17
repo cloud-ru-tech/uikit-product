@@ -1,0 +1,42 @@
+{
+  "name": "@cloud-ru/uikit-product-site-running-line",
+  "title": "Site Running Line",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "Site Running Line",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md",
+    "./LICENSE"
+  ],
+  "homepage": "https://cloud-ru-tech.github.io/uikit-product/packages/site-running-line",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloud-ru-tech/uikit-product/tree/master",
+    "directory": "packages/site-running-line"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "daparfirov <daparfirov@cloud.ru>",
+  "contributors": [
+    "daparfirov <daparfirov@cloud.ru>"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {},
+  "dependencies": {
+    "@cloud-ru/figma-tokens-web": "19.0.2",
+    "classnames": "2.5.1"
+  }
+}

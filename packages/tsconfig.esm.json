@@ -195,6 +195,9 @@
     },
     {
       "path": "./site-cookie-policy/tsconfig.esm.json"
+    },
+    {
+      "path": "./site-running-line/tsconfig.esm.json"
     }
   ],
   "compilerOptions": {

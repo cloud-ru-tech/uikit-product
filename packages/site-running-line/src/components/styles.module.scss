@@ -1,0 +1,81 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/styles-theme-variables' as var;
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  user-select: none;
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.measure {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  visibility: hidden;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.track {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  width: max-content;
+  animation: marquee linear infinite;
+  animation-duration: 30s;
+  animation-play-state: var(--site-running-line-play-state, paused);
+  will-change: transform;
+
+  & > * {
+    flex-shrink: 0;
+  }
+}
+
+.wrapper:hover .track {
+  animation-play-state: paused;
+}
+
+.trackCopy {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  width: max-content;
+  min-width: max-content;
+  white-space: nowrap;
+
+  & > * {
+    flex-shrink: 0;
+  }
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 220px;
+}
+
+.separator {
+  flex-shrink: 0;
+  width: 1px;
+  height: 24px;
+  background-color: var.$sys-neutral-text-light;
+  margin: 0 34px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--site-running-line-shift, -50%));
+  }
+}
