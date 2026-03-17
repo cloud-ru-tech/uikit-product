@@ -18,6 +18,10 @@
 
 .priceCell {
   justify-self: end;
+
+  &[data-price-color='changed'] {
+    color: styles-theme-variables.$sys-green-accent-default;
+  }
 }
 
 .labelCell,

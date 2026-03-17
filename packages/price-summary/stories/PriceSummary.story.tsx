@@ -19,6 +19,9 @@ export default meta;
 type StoryProps = PriceSummaryProps & {
   showSingleGroup: boolean;
   showCoveredByGrantLabel: boolean;
+  showChangedPrice: boolean;
+  deltaType: 'increased' | 'decreased';
+  deltaValue: number;
 };
 
 const INVOICE_SAMPLE: InvoiceDetails[] = [
@@ -47,6 +50,7 @@ const INVOICE_SAMPLE: InvoiceDetails[] = [
         labelTooltip: 'label tooltip',
         quantity: 1,
         price: 9999999.99,
+        priceColor: 'changed',
         primary: false,
         bottomDivider: true,
       },
@@ -63,6 +67,7 @@ const INVOICE_SAMPLE: InvoiceDetails[] = [
         labelMaxLines: 1,
         quantity: 1,
         price: 9999999.99,
+        priceColor: 'changed',
         primary: true,
         coveredByGrant: true,
         topDivider: true,
@@ -81,6 +86,7 @@ const INVOICE_SAMPLE: InvoiceDetails[] = [
         labelMaxLines: 1,
         quantity: 1,
         price: 9999999.99,
+        priceColor: 'changed',
         primary: true,
         coveredByGrant: false,
       },
@@ -156,8 +162,22 @@ const INVOICE_SAMPLE: InvoiceDetails[] = [
   },
 ];
 
-const Template: StoryFn<StoryProps> = ({ showSingleGroup, showCoveredByGrantLabel, ...args }) => {
+const Template: StoryFn<StoryProps> = ({
+  showSingleGroup,
+  showCoveredByGrantLabel,
+  showChangedPrice,
+  deltaType,
+  deltaValue,
+  ...args
+}) => {
   const [_, setArgs] = useArgs();
+
+  const valueDelta = useMemo(() => {
+    if (!showChangedPrice) {
+      return undefined;
+    }
+    return { value: deltaValue, type: deltaType };
+  }, [showChangedPrice, deltaValue, deltaType]);
 
   const invoice = useMemo(() => {
     let _invoice = INVOICE_SAMPLE;
@@ -172,16 +192,31 @@ const Template: StoryFn<StoryProps> = ({ showSingleGroup, showCoveredByGrantLabe
       }));
     }
 
+    if (!showChangedPrice) {
+      _invoice = _invoice.map(invoice => ({
+        ...invoice,
+        items: invoice.items.map(item => ({
+          ...item,
+          priceColor: undefined,
+        })),
+      }));
+    }
+
     if (!showSingleGroup) {
       return _invoice;
     }
 
     return [_invoice[0]];
-  }, [showSingleGroup, showCoveredByGrantLabel]);
+  }, [showSingleGroup, showCoveredByGrantLabel, showChangedPrice]);
 
   return (
     <div style={{ maxWidth: 304 }}>
-      <PriceSummary {...args} onPeriodChanged={period => setArgs({ ...args, period })} invoice={invoice} />
+      <PriceSummary
+        {...args}
+        onPeriodChanged={period => setArgs({ ...args, period })}
+        invoice={invoice}
+        valueDelta={valueDelta}
+      />
     </div>
   );
 };
@@ -210,6 +245,9 @@ export const priceSummary: StoryObj<StoryProps> = {
     },
     showHintLink: true,
     showCoveredByGrantLabel: true,
+    showChangedPrice: false,
+    deltaType: 'increased',
+    deltaValue: 1000,
   },
   argTypes: {
     showSingleGroup: {
@@ -234,6 +272,25 @@ export const priceSummary: StoryObj<StoryProps> = {
         defaultValue: {
           summary: 'true',
         },
+      },
+    },
+    showChangedPrice: {
+      name: '[Stories]: showChangedPrice',
+      control: {
+        type: 'boolean',
+      },
+    },
+    deltaType: {
+      name: '[Stories]: deltaType',
+      control: {
+        type: 'select',
+      },
+      options: ['increased', 'decreased'],
+    },
+    deltaValue: {
+      name: '[Stories]: deltaValue',
+      control: {
+        type: 'number',
       },
     },
   },

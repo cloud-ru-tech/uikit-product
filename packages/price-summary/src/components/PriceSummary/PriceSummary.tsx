@@ -51,6 +51,7 @@ export function PriceSummary({
   hintTooltipText,
   hintLink,
   showHintLink,
+  valueDelta,
   ...rest
 }: PriceSummaryProps) {
   const { t } = useLocale('PriceSummary');
@@ -76,6 +77,7 @@ export function PriceSummary({
           hintTooltipText={hintTooltipText}
           hintLink={hintLink}
           showHintLink={showHintLink}
+          valueDelta={valueDelta}
         />
 
         {invoice?.length && (

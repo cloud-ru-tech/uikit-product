@@ -353,6 +353,8 @@ export const en_GB = {
       'The order contains services that can be paid with a grant. Payment will be debited in bonuses.',
     notCoveredByGrantTooltip:
       'The order contains services that cannot be paid with a grant. Payment will be debited in rubles.',
+    increasedPrice: 'increased by',
+    decreasedPrice: 'decreased by',
   },
   PromoTagPredefined: {
     connecting: 'Connecting',

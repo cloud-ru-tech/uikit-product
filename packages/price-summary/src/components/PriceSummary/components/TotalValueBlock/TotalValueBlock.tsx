@@ -9,7 +9,7 @@ import { Typography } from '@snack-uikit/typography';
 import { ValueOf } from '@snack-uikit/utils';
 
 import { formatCurrency } from '../../../../helpers';
-import { TotalSumType } from '../../../../types';
+import { PriceDeltaDetails, TotalSumType } from '../../../../types';
 import styles from './styles.module.scss';
 
 export const APPEARANCE_STATE = {
@@ -23,6 +23,7 @@ export type AppearanceState = ValueOf<typeof APPEARANCE_STATE>;
 
 export type TotalValueBlockProps = {
   value?: number;
+  valueDelta?: PriceDeltaDetails;
   totalSumType?: TotalSumType;
   hint?: string;
   hintAppearance?: AppearanceState;
@@ -66,6 +67,7 @@ export function TotalValueBlock({
   hintTooltipText,
   hintLink,
   showHintLink,
+  valueDelta,
 }: TotalValueBlockProps) {
   const { t } = useLocale('PriceSummary');
 
@@ -76,6 +78,12 @@ export function TotalValueBlock({
       <Typography.LightHeadlineS>
         {value !== undefined ? `${totalSumPrefix}${formatCurrency(Number(value))}` : 'N/A'}
       </Typography.LightHeadlineS>
+
+      {valueDelta && (
+        <Typography.SansBodyS className={styles.valueDelta}>
+          {`${t(`${valueDelta.type}Price`)} ${formatCurrency(valueDelta.value)}`}
+        </Typography.SansBodyS>
+      )}
 
       <Tooltip
         open={showHintTooltip && hintTooltipText ? undefined : false}

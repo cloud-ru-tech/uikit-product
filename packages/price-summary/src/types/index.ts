@@ -33,6 +33,7 @@ export type DiscountInvoiceItem = {
 export type BaseInvoiceItem = (PriceInvoiceItem | DiscountInvoiceItem) & {
   labelTooltip?: QuestionTooltipProps['tip'];
   price?: number;
+  priceColor?: 'default' | 'changed';
   hidePrice?: boolean;
   labelMaxLines?: number;
   quantity?: string | number;
@@ -57,4 +58,9 @@ export type InvoiceDetails = {
   quantity?: string | number;
   price?: number;
   items: InvoiceItem[];
+};
+
+export type PriceDeltaDetails = {
+  value: number;
+  type: 'increased' | 'decreased';
 };

@@ -42,7 +42,12 @@ export function InvoiceItemBlock({ item, index, layoutType, showCoveredByGrantLa
               <InvoiceItemLabelCell item={item} layoutType={layoutType} />
             </div>
 
-            <Typography.SansBodyS tag='div' className={styles.priceCell} data-secondary={isSecondary}>
+            <Typography.SansBodyS
+              tag='div'
+              className={styles.priceCell}
+              data-secondary={isSecondary}
+              data-price-color={item.priceColor ?? 'default'}
+            >
               {getPriceItem()}
             </Typography.SansBodyS>
           </>
