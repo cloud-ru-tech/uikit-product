@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-03-17)
+
+
+### Features
+
+* **PDS-3621:** vertical paddings changed to margins ([1d4f635](https://github.com/cloud-ru-tech/uikit-product/commit/1d4f6358c9f6008f1d4978ff20447a739d941e0c))
+
+
+
+
+
 ## 2.0.10 (2026-03-17)
 
 ### Only dependencies have been changed

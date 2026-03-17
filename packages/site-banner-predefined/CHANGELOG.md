@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.12 (2026-03-17)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-site-banner@2.0.12]($PUBLIC_PROJECT_URL/blob/master/packages/site-banner/CHANGELOG.md)
+
+
+
+
+
 ## 1.1.11 (2026-03-17)
 
 ### Only dependencies have been changed
