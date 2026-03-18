@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { useDeferredValue, useMemo, useRef } from 'react';
+import { ReactNode, useDeferredValue, useMemo, useRef } from 'react';
 
 import { PlusSVG } from '@cloud-ru/uikit-product-icons';
 import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
@@ -26,6 +26,7 @@ export enum SummaryAppearance {
 type PriceSummaryProps = {
   className?: string;
   appearance?: SummaryAppearance;
+  footerPrice?: ReactNode;
 };
 
 const PlatformSale = {
@@ -34,7 +35,7 @@ const PlatformSale = {
   [PLATFORM.VmWare]: 20,
 };
 
-export function PriceSummary({ className, appearance = SummaryAppearance.Default }: PriceSummaryProps) {
+export function PriceSummary({ className, appearance = SummaryAppearance.Default, footerPrice }: PriceSummaryProps) {
   const {
     layoutType,
     pricePeriod,
@@ -153,6 +154,7 @@ export function PriceSummary({ className, appearance = SummaryAppearance.Default
 
         <ProductListActions disabled={appearance === SummaryAppearance.Welcome} />
       </div>
+      {footerPrice}
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import { useCalculatorContext } from '../../contexts';
 import { Disclaimer } from '../Disclaimer';
 import { PriceSummary } from '../PriceSummary';
@@ -7,16 +9,17 @@ import styles from './styles.module.scss';
 
 type CalculatorContentProps = {
   bgImage?: string;
+  footerPrice?: ReactNode;
 };
 
-export function CalculatorContent({ bgImage }: CalculatorContentProps) {
+export function CalculatorContent({ bgImage, footerPrice }: CalculatorContentProps) {
   const { selectedProduct, layoutType } = useCalculatorContext();
   const isDesktop = layoutType === 'desktop';
 
   if (!selectedProduct) {
     return (
       <>
-        <Welcome image={bgImage} />
+        <Welcome image={bgImage} footerPrice={footerPrice} />
         <Disclaimer className={styles.disclaimer} />
       </>
     );
@@ -30,7 +33,7 @@ export function CalculatorContent({ bgImage }: CalculatorContentProps) {
         {isDesktop && <Disclaimer className={styles.disclaimer} />}
       </div>
 
-      <PriceSummary className={styles.priceSummary} />
+      <PriceSummary className={styles.priceSummary} footerPrice={footerPrice} />
 
       {!isDesktop && <Disclaimer />}
     </div>

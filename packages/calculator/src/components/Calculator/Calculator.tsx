@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import { LayoutType } from '@cloud-ru/uikit-product-utils';
 
 import { CalculatorContextProvider } from '../../contexts';
@@ -43,6 +45,8 @@ export type CalculatorProps = {
   initialActiveProduct?: string;
   /** Начальное состояние корзины */
   iniState?: Record<string, ProductState[]>;
+  /** Node под блоком цены */
+  footerPrice?: ReactNode;
 };
 
 export function Calculator({
@@ -59,6 +63,7 @@ export function Calculator({
 
   actions,
   onAnalyticsClick,
+  footerPrice,
 }: CalculatorProps) {
   return (
     <CalculatorContextProvider
@@ -71,7 +76,7 @@ export function Calculator({
       actions={actions}
       onAnalyticsClick={onAnalyticsClick}
     >
-      <CalculatorContent bgImage={bgImage} />
+      <CalculatorContent bgImage={bgImage} footerPrice={footerPrice} />
 
       <Catalog />
     </CalculatorContextProvider>

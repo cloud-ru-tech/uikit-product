@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import { PlusSVG } from '@cloud-ru/uikit-product-icons';
 import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled } from '@snack-uikit/button';
@@ -19,9 +21,9 @@ const WELCOME_STEPS = [
   'Подключите сразу или оставьте заявку',
 ];
 
-type WelcomeProps = { image?: string };
+type WelcomeProps = { image?: string; footerPrice?: ReactNode };
 
-export function Welcome({ image }: WelcomeProps) {
+export function Welcome({ image, footerPrice }: WelcomeProps) {
   const {
     setCatalogOpen,
     actions: { onStartClick },
@@ -131,7 +133,7 @@ export function Welcome({ image }: WelcomeProps) {
         data-tablet={isTablet || undefined}
         data-test-id={parseKeyToDataTest('welcome', 'summary')}
       >
-        <PriceSummary appearance={SummaryAppearance.Welcome} />
+        <PriceSummary appearance={SummaryAppearance.Welcome} footerPrice={footerPrice} />
       </div>
     </div>
   );

@@ -45,6 +45,18 @@ const Template: StoryFn<CalculatorProps & { backendHost: string }> = ({ ...args 
             onDownloadFileClick,
             onShareClick,
           }}
+          footerPrice={
+            <div
+              style={{
+                height: '200px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              Тестовый footerPrice
+            </div>
+          }
         />
       </div>
     </div>
