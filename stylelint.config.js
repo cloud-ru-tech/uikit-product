@@ -1,5 +1,9 @@
 module.exports = {
   extends: '@cloud-ru/ft-config-stylelint',
+  ignoreFiles: [
+    'packages/mobile-drawer/src/components/MobileDrawerCustom/motion.css',
+    'storybook/stories/components/markdown/theme/style.css',
+  ],
   overrides: [
     {
       files: ['**/*.{js,ts,jsx,tsx}'],
