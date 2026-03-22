@@ -14,11 +14,45 @@
   gap: styles-theme-variables.$dimension-2m;
 }
 
+.noteItemIllustrationSlot {
+  position: relative;
+  flex-shrink: 0;
+  width: 380px;
+  height: 380px;
+  border-radius: styles-theme-variables.$dimension-1m;
+  overflow: hidden;
+}
+
 .noteItemIllustration {
   border-radius: styles-theme-variables.$dimension-1m;
   width: 380px;
   height: 380px;
   object-fit: cover;
+  pointer-events: none;
+  display: block;
+}
+
+.noteItemIllustrationSlot .noteItemIllustration,
+.noteItemVideo {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+.noteItemVideo {
+  object-fit: cover;
+  pointer-events: none;
+  display: block;
+}
+
+.noteItemMediaSkeletonOverlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
   pointer-events: none;
 }
 

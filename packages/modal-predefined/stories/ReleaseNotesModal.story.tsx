@@ -8,9 +8,10 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { AdaptiveReleaseNotesModal, ReleaseNotesModalProps } from '../src/components';
-import sampleNewsImage1 from './assets/img/sample-news-1.jpg';
+import sampleNewsImage1 from './assets/img/sample-news-1.webp';
 import sampleNewsImage2 from './assets/img/sample-news-2.jpg';
 import sampleNewsImage3 from './assets/img/sample-news-3.jpg';
+import sampleNewsVideo from './assets/video/sample-news-1.mp4';
 import { LAYOUT_TYPE } from './constants';
 
 const meta: Meta = {
@@ -28,12 +29,11 @@ type StoryProps = ReleaseNotesModalProps & {
 
 const sampleNews: ReleaseNotesModalProps['items'] = [
   {
-    title: 'Тёмная тема',
+    title: 'Документация Advanced на русском языке',
     description:
-      'Мы рады сообщить, что в вашем личном кабинете теперь доступна новая функция — тёмная тема! Это обновление создано для того, чтобы сделать использование нашего сервиса еще более удобным и приятным для глаз.\n\n  ' +
-      'Для активации нужной темы зайдите на страницу профиля, перейдите в раздел "Тема интерфейса" и выберите подходящую тему. Мы уверены, что это нововведение сделает ваш опыт использования нашего сервиса еще более комфортным.\n\n  ' +
-      '[Настроить тему](https://cloud-ru-tech.github.io/snack-uikit/)',
+      'Теперь на портале есть [документация вендора](https://cloud.ru/docs/advanced/overview/advanced-en?source-platform=Advanced)\\\r\nна английском языке. А легко перевести ее на русский можно с помощью автоперевода. \r\n\r\nСкоро автоперевод станет доступен для всех документов платформы Cloud.ru Advanced, но уже сейчас добавлен в документацию сервисов [CCE](https://cloud.ru/docs/en/usermanual/cce/cce_productdesc_0001), [ECS](https://cloud.ru/docs/en/usermanual/ecs/en-us_topic_0013771112),\\\r\n[EVS](https://cloud.ru/docs/en/usermanual/evs/en-us_topic_0014580741), [OBS](https://cloud.ru/docs/en/usermanual/obs/en-us_topic_0045853681), [RDS](https://cloud.ru/docs/en/usermanual/rds/en-us_topic_dashboard), [VPC](https://cloud.ru/docs/en/usermanual/vpc/en-us_topic_0013748729), [IMS](https://cloud.ru/docs/en/usermanual/ims/en-us_topic_0013901609), [IAM](https://cloud.ru/docs/en/usermanual/iam/iam_01_0026), [VPN](https://cloud.ru/docs/en/usermanual/vpn/vpn_01_0031) и [API Gateway](https://cloud.ru/docs/en/usermanual/apig/apig_0080101651). \r\n\r\nЧтобы посмотреть, как работает автоперевод, перейдите к документации и нажмите **Перевести**.\r\n\r\nАвтоперевод находится в стадии тестирования.\\\r\nЕсли обнаружите ошибки, оставьте отзыв внизу страницы — это поможет нам улучшить документацию.',
     image: { src: sampleNewsImage1, alt: 'Intro' },
+    video: sampleNewsVideo,
   },
   {
     title: 'Доступность',

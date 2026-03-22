@@ -13,11 +13,49 @@
   padding-right: styles-tokens-drawer.$dimension-2m;
 }
 
+.noteItemIllustrationSlot {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  align-self: center;
+  aspect-ratio: 1 / 1;
+  border-radius: styles-theme-variables.$dimension-1m;
+  overflow: hidden;
+}
+
 .noteItemIllustration {
   width: 100%;
+  height: auto;
   pointer-events: none;
   max-width: 380px;
   align-self: center;
+  display: block;
+}
+
+.noteItemIllustrationSlot .noteItemIllustration {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.noteItemVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  display: block;
+}
+
+.noteItemMediaSkeletonOverlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  border-radius: inherit;
+  pointer-events: none;
 }
 
 .noteItemSkeletonWrapper {
