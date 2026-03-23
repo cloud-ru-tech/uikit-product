@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { MobileModalCustom, MobileModalCustomProps } from '@cloud-ru/uikit-product-mobile-modal';
@@ -60,17 +60,17 @@ export function MobileDeleteModal({
 
   const handleClose = () => {
     onClose();
-    reset();
   };
 
   const handleCancel = () => {
     onClose();
-    reset();
   };
 
   const handleDelete = handleSubmit(() => {
     onDelete(handleClose);
   });
+
+  useEffect(() => reset, [reset, open]);
 
   return (
     <MobileModalCustom {...restProps} open={open} onClose={handleClose}>

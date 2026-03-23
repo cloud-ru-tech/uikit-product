@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { WithSupportProps } from '@cloud-ru/uikit-product-utils';
@@ -61,17 +61,17 @@ export function DeleteModal({
 
   const handleClose = () => {
     onClose();
-    reset();
   };
 
   const handleCancel = () => {
     onClose();
-    reset();
   };
 
   const handleDelete = handleSubmit(() => {
     onDelete(handleClose);
   });
+
+  useEffect(() => reset, [reset, open]);
 
   return (
     <ModalCustom {...restProps} open={open} onClose={handleClose}>
