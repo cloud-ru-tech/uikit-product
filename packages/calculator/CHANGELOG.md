@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2026-03-23)
+
+
+### Features
+
+* **SITE-10806:** update calc evo compute ([0b40ec9](https://github.com/cloud-ru-tech/uikit-product/commit/0b40ec9ac96c180ba321ac13cfb9713064f0ec0c))
+* **SITE-10835:** add new footer for calculator price ([063da7a](https://github.com/cloud-ru-tech/uikit-product/commit/063da7ace0b49c8e72c0ae968c22cd741fbb699a))
+
+
+
+
+
 ## 1.3.2 (2026-03-17)
 
 ### Only dependencies have been changed
