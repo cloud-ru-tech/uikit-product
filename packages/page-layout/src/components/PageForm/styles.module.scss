@@ -39,6 +39,7 @@ $prefix-height: styles-theme-variables.simple-var(styles-theme-variables.$sans-h
   display: flex;
   align-items: center;
   margin-left: auto;
+  justify-content: flex-end;
 }
 
 .sideItems {

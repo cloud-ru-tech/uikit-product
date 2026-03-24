@@ -40,8 +40,10 @@ $prefix-height: styles-theme-variables.simple-var(styles-theme-variables.$sans-h
   border-top: solid 1px styles-theme-variables.$sys-neutral-decor-default;
   box-sizing: border-box;
   background-color: styles-theme-variables.$sys-neutral-background1-level;
-  padding: styles-theme-variables.$dimension-1m styles-theme-variables.$dimension-2m styles-theme-variables.$dimension-2m;
-  margin: calc(0px - styles-theme-variables.$dimension-1m) calc(0px - styles-theme-variables.$dimension-2m) calc(0px - styles-theme-variables.$dimension-2m);
+  padding: styles-theme-variables.$dimension-1m styles-theme-variables.$dimension-2m
+    styles-theme-variables.$dimension-2m;
+  margin: calc(0px - styles-theme-variables.$dimension-1m) calc(0px - styles-theme-variables.$dimension-2m)
+    calc(0px - styles-theme-variables.$dimension-2m);
 
   .actions {
     display: flex;
@@ -58,6 +60,7 @@ $prefix-height: styles-theme-variables.simple-var(styles-theme-variables.$sans-h
   display: flex;
   align-items: center;
   margin-left: auto;
+  justify-content: flex-end;
 }
 
 .priceSummary {
