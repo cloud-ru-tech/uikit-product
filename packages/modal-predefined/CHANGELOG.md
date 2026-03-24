@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.3 (2026-03-24)
+
+
+### Bug Fixes
+
+* **PDS-3586:** reset field stage on close modal ([51565ca](https://github.com/cloud-ru-tech/uikit-product/commit/51565ca3c9f69cd14821769b5157e05968e5bb48))
+
+
+
+
+
 ## 2.1.2 (2026-03-17)
 
 ### Only dependencies have been changed
