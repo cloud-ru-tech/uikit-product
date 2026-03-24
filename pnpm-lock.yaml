@@ -1329,7 +1329,7 @@ importers:
         specifier: 1.1.9
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-page-layout':
-        specifier: 2.1.1
+        specifier: 2.1.2
         version: link:../page-layout
       '@cloud-ru/uikit-product-quota':
         specifier: 2.0.12

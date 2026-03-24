@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.17 (2026-03-24)
+
+
+### Bug Fixes
+
+* **PDS-3581:** fix footer styles ([2317da4](https://github.com/cloud-ru-tech/uikit-product/commit/2317da49637e95157211ab7a6e420545d71c1f7b))
+
+
+
+
+
 ## 2.0.16 (2026-03-17)
 
 ### Only dependencies have been changed
