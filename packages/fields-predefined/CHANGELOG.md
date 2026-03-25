@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.3.3 (2026-03-25)
+
+
+### Bug Fixes
+
+* **AINFR-4801:** background for hint panel ([f0518d5](https://github.com/cloud-ru-tech/uikit-product/commit/f0518d53d4663870ec61e7a5397faf4e0383df74))
+
+
+
+
+
 ## 2.3.2 (2026-03-17)
 
 ### Only dependencies have been changed
