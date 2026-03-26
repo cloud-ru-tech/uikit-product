@@ -431,7 +431,7 @@ export const EVOLUTION_CLOUD_SERVER_FORM_CONFIG: FormConfig = {
                 type: CONTROL.Array,
                 max: 10,
                 accessorKey: 'evs.backupCopies',
-                defaultValue: [{ diskSpace: 10, specification: 'SSD' }],
+                defaultValue: [{ diskSpace: 1, specification: 'SSD' }],
                 addText: 'Добавить резервную копию',
                 ui: ['backup'],
                 controls: {
@@ -443,9 +443,9 @@ export const EVOLUTION_CLOUD_SERVER_FORM_CONFIG: FormConfig = {
                         type: CONTROL.Stepper,
                         decoratorProps: { label: 'Резервная копия' },
                         accessorKey: 'diskSpace',
-                        defaultValue: 10,
+                        defaultValue: 1,
                         uiProps: {
-                          min: 10,
+                          min: 1,
                           max: 1024,
                           postfix: 'ГБ',
                         },
@@ -479,7 +479,7 @@ export const EVOLUTION_CLOUD_SERVER_FORM_CONFIG: FormConfig = {
                 type: CONTROL.Array,
                 max: 2,
                 accessorKey: 'evs.userImages',
-                defaultValue: [{ diskSpace: 10, specification: 'SSD' }],
+                defaultValue: [{ diskSpace: 1, specification: 'SSD' }],
                 addText: 'Добавить пользовательский образ',
                 ui: ['image'],
                 controls: {
@@ -491,10 +491,10 @@ export const EVOLUTION_CLOUD_SERVER_FORM_CONFIG: FormConfig = {
                         type: CONTROL.Stepper,
                         decoratorProps: { label: 'Пользовательский образ' },
                         accessorKey: 'diskSpace',
-                        defaultValue: 10,
+                        defaultValue: 1,
                         uiProps: {
-                          min: 10,
-                          max: 150,
+                          min: 1,
+                          max: 300,
                           postfix: 'ГБ',
                         },
                       },
