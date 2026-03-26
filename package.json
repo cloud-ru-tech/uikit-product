@@ -36,9 +36,9 @@
   },
   "devDependencies": {
     "@cloud-ru/eslint-plugin-ssr-safe-react": "0.6.0",
-    "@cloud-ru/figma-tokens-cloud-platform": "19.0.2",
-    "@cloud-ru/figma-tokens-giga-id": "19.0.2",
-    "@cloud-ru/figma-tokens-web": "19.0.2",
+    "@cloud-ru/figma-tokens-cloud-platform": "19.0.4",
+    "@cloud-ru/figma-tokens-giga-id": "19.0.4",
+    "@cloud-ru/figma-tokens-web": "19.0.4",
     "@cloud-ru/ft-all-linters-pack": "1.0.10",
     "@cloud-ru/ft-config-vitest": "1.3.1",
     "@cloud-ru/ft-conventional-changelog-old": "npm:@cloud-ru/ft-conventional-changelog@1.1.0",

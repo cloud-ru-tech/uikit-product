@@ -16,14 +16,14 @@ importers:
         specifier: 0.6.0
         version: 0.6.0(eslint@9.39.2)
       '@cloud-ru/figma-tokens-cloud-platform':
-        specifier: 19.0.2
-        version: 19.0.2
+        specifier: 19.0.4
+        version: 19.0.4
       '@cloud-ru/figma-tokens-giga-id':
-        specifier: 19.0.2
-        version: 19.0.2
+        specifier: 19.0.4
+        version: 19.0.4
       '@cloud-ru/figma-tokens-web':
-        specifier: 19.0.2
-        version: 19.0.2
+        specifier: 19.0.4
+        version: 19.0.4
       '@cloud-ru/ft-all-linters-pack':
         specifier: 1.0.10
         version: 1.0.10(@types/eslint@9.6.1)(eslint@9.39.2)(lint-staged@16.2.7)(postcss@8.5.6)(prettier@3.8.1)(typescript@5.9.3)(vitest@4.0.18(@types/node@22.8.1)(jsdom@27.4.0)(less@4.5.1)(sass@1.97.3)(stylus@0.62.0)(terser@5.46.0)(yaml@2.8.2))
@@ -3073,14 +3073,23 @@ packages:
   '@cloud-ru/figma-tokens-cloud-platform@19.0.2':
     resolution: {integrity: sha512-jUsJjyHovoag22LmYo44HoeHMlPTHR8RoHLVOfnf07pvId6Yw0nBcfDW6Q8Z1IApUzrKT/NBKi/bRTJoz0CZbQ==}
 
+  '@cloud-ru/figma-tokens-cloud-platform@19.0.4':
+    resolution: {integrity: sha512-rw7ss9OVGqdHJL0UiqxLqsLz7szjHmYYcQ6+k8vhzegCM5FJ9MfHeD8qVF2/Pty/9SLVD6wsvIM9qzeb6H8RXQ==}
+
   '@cloud-ru/figma-tokens-giga-id@19.0.2':
     resolution: {integrity: sha512-8HjQjTFaDG6wOHHctbduvn+XhCfMIPQuiDxX4JaHXOPX5FKtsPQ6+dMmMiWDAuB9UlAHlJ8fK2ZntTWcinFdyA==}
+
+  '@cloud-ru/figma-tokens-giga-id@19.0.4':
+    resolution: {integrity: sha512-1gZJK6j5HK658Nz2oIli4BvRedWJIoqRdPdOxdTwKoDd3ot9smclUiaOCyUKs+a3WI22V6OnwTpm56M1NebCZg==}
 
   '@cloud-ru/figma-tokens-gitverse@19.0.3':
     resolution: {integrity: sha512-PuzD82YoH8cGUSEOvALdfpIdb1LEgGc3gIMTD/uPOcdBRMngpIri1uZhLCoT04OSZcVpbLS+poYMdqPY49YAvA==}
 
   '@cloud-ru/figma-tokens-web@19.0.2':
     resolution: {integrity: sha512-Pa7YiSK0YMf3aqhnQbxrX9bh/MTYLG4fmp6mYKZl9BCVZ7EZuHcKtMm3BLz9GsXAco8qH8ykN9srB0ioAP3Vqw==}
+
+  '@cloud-ru/figma-tokens-web@19.0.4':
+    resolution: {integrity: sha512-uNtXtd/jUTQbDPC+PbQH9OoB0g3/+AsPqSeWB21QpKI3UqNUk1CpMIa5ijiJxrlAqtpL86NINuXRIEIPFZw5aQ==}
 
   '@cloud-ru/ft-all-linters-pack@1.0.10':
     resolution: {integrity: sha512-rdC+0lkxmWzMw6+fKOXTfF2aOMN4PjO88wO4rbOH8okzHIo99Fqc9uTXPZHNJP+2slk81Vu1ZkxD13qt1MorGQ==}
@@ -13653,11 +13662,17 @@ snapshots:
 
   '@cloud-ru/figma-tokens-cloud-platform@19.0.2': {}
 
+  '@cloud-ru/figma-tokens-cloud-platform@19.0.4': {}
+
   '@cloud-ru/figma-tokens-giga-id@19.0.2': {}
+
+  '@cloud-ru/figma-tokens-giga-id@19.0.4': {}
 
   '@cloud-ru/figma-tokens-gitverse@19.0.3': {}
 
   '@cloud-ru/figma-tokens-web@19.0.2': {}
+
+  '@cloud-ru/figma-tokens-web@19.0.4': {}
 
   '@cloud-ru/ft-all-linters-pack@1.0.10(@types/eslint@9.6.1)(eslint@9.39.2)(lint-staged@16.2.7)(postcss@8.5.6)(prettier@3.8.1)(typescript@5.9.3)(vitest@4.0.18(@types/node@22.8.1)(jsdom@27.4.0)(less@4.5.1)(sass@1.97.3)(stylus@0.62.0)(terser@5.46.0)(yaml@2.8.2))':
     dependencies:
