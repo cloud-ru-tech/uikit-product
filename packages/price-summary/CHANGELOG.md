@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2026-03-27)
+
+
+### Features
+
+* **PDS-3659:** add changed price state for PriceSummary ([27465f8](https://github.com/cloud-ru-tech/uikit-product/commit/27465f83811522ad336976e116487777583fb386))
+
+
+
+
+
 ## 2.1.7 (2026-03-17)
 
 ### Only dependencies have been changed
