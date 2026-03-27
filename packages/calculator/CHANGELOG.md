@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.1 (2026-03-27)
+
+
+### Bug Fixes
+
+* **SITE-10609:** fix calculator ([c5be13f](https://github.com/cloud-ru-tech/uikit-product/commit/c5be13f015562ff4b3525c9f66286b7c0744888f))
+
+
+
+
+
 # 1.4.0 (2026-03-23)
 
 
