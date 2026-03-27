@@ -40,8 +40,8 @@
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/divider": "3.2.3",
     "@snack-uikit/skeleton": "0.6.2",
-    "@snack-uikit/tooltip": "0.18.10",
-    "@snack-uikit/truncate-string": "0.7.9",
+    "@snack-uikit/tooltip": "0.18.12",
+    "@snack-uikit/truncate-string": "0.7.11",
     "classnames": "2.5.1"
   },
   "peerDependencies": {

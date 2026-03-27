@@ -38,8 +38,8 @@
   "dependencies": {
     "@cloud-ru/uikit-product-icons": "17.1.1",
     "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/alert": "0.16.26",
-    "@snack-uikit/link": "0.17.18",
+    "@snack-uikit/alert": "0.16.28",
+    "@snack-uikit/link": "0.17.20",
     "@snack-uikit/loaders": "0.9.8",
     "@snack-uikit/utils": "3.10.1",
     "classnames": "2.5.1"

@@ -38,7 +38,7 @@
   "dependencies": {
     "@cloud-ru/uikit-product-icons": "17.1.1",
     "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/info-block": "0.6.38",
+    "@snack-uikit/info-block": "0.6.40",
     "classnames": "2.5.1"
   },
   "peerDependencies": {

@@ -39,8 +39,8 @@
     "@cloud-ru/uikit-product-icons": "17.1.1",
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/button": "0.19.7",
-    "@snack-uikit/link": "0.17.18",
-    "@snack-uikit/tag": "0.15.16",
+    "@snack-uikit/link": "0.17.20",
+    "@snack-uikit/tag": "0.15.18",
     "@snack-uikit/utils": "3.7.0",
     "classnames": "2.5.1"
   },

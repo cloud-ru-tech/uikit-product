@@ -40,10 +40,10 @@
     "@cloud-ru/uikit-product-mobile-tooltip": "1.1.9",
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/button": "0.19.15",
-    "@snack-uikit/drawer": "0.13.13",
-    "@snack-uikit/link": "0.17.18",
+    "@snack-uikit/drawer": "0.14.0",
+    "@snack-uikit/link": "0.17.20",
     "@snack-uikit/loaders": "0.9.8",
-    "@snack-uikit/modal": "0.19.10",
+    "@snack-uikit/modal": "0.19.12",
     "@snack-uikit/typography": "0.8.10",
     "@snack-uikit/utils": "3.10.1",
     "classnames": "2.5.1"

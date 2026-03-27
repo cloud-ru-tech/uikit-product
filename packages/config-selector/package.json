@@ -36,8 +36,8 @@
   },
   "scripts": {},
   "dependencies": {
-    "@snack-uikit/tooltip": "0.18.10",
-    "@snack-uikit/truncate-string": "0.7.9",
+    "@snack-uikit/tooltip": "0.18.12",
+    "@snack-uikit/truncate-string": "0.7.11",
     "@snack-uikit/utils": "3.9.0",
     "classnames": "2.5.1"
   }
