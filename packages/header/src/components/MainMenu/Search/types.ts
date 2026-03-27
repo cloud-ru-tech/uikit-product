@@ -1,3 +1,5 @@
+import { SearchProps as SearchPropsSnack } from '@snack-uikit/search';
+
 import { LinksGroup } from '../types';
 
 export type SearchHandler = (searchValue: string, items: LinksGroup[]) => LinksGroup[] | undefined;
@@ -7,7 +9,7 @@ export type SearchFunction = {
   handler: SearchHandler;
 };
 
-export type SearchProps = {
+export type SearchProps = Pick<SearchPropsSnack, 'onBlur' | 'onFocus'> & {
   searchValue: string;
   // Колбек на измение значения в поиске
   onSearchValueChange(value: string): void;

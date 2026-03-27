@@ -15,7 +15,7 @@ import { useSearchAnimation } from './hooks';
 import styles from './styles.module.scss';
 
 export const SearchMobile = forwardRef<HTMLDivElement, SearchProps>(
-  ({ searchValue, searchFn, searchFunctions, onChangeSearchFn, onSearchValueChange }, ref) => {
+  ({ searchValue, searchFn, searchFunctions, onChangeSearchFn, onSearchValueChange, onBlur, onFocus }, ref) => {
     const { t } = useLocale('Header');
 
     const [areSearchSettingsVisible, setAreSearchSettingsVisible] = useState<boolean>(false);
@@ -51,6 +51,8 @@ export const SearchMobile = forwardRef<HTMLDivElement, SearchProps>(
               placeholder={t('searchByServices')}
               value={searchValue}
               onChange={onSearchValueChange}
+              onBlur={onBlur}
+              onFocus={onFocus}
               data-test-id='header__drawer-menu__search'
               ref={newSearchRef}
               tabIndex={searchInputTabIndex}

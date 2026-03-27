@@ -1,4 +1,4 @@
-import { JSXElementConstructor, MouseEvent, MouseEventHandler, ReactNode } from 'react';
+import { JSXElementConstructor, MouseEvent, ReactNode } from 'react';
 
 import { CardServiceSmallProps } from '@cloud-ru/uikit-product-card-predefined';
 import { ListProps } from '@snack-uikit/list';
@@ -27,7 +27,7 @@ type TitleStatic = {
 
 type TitleClickable = {
   text: string;
-  onClick?: MouseEventHandler<HTMLAnchorElement>;
+  onClick?(e?: MouseEvent<HTMLElement>): void;
 };
 
 export type LinksGroupTitle = TitleStatic | TitleClickable;

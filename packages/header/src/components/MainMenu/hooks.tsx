@@ -79,7 +79,7 @@ export function useMenuItems({ search, serviceGroups, favorite }: UseMenuItemsPr
 
   const groupItems: BaseItemProps[] = groupWithFavorites
     .filter(group => group.items.length > 0)
-    .map(({ id, label: { text } }) => ({
+    .map(({ id, label: { text, onClick } }) => ({
       id,
       content: {
         option: text,
@@ -88,7 +88,7 @@ export function useMenuItems({ search, serviceGroups, favorite }: UseMenuItemsPr
         },
       },
 
-      onClick() {
+      onClick(e) {
         onSearchValueChange?.('');
 
         setTimeout(() => {
@@ -108,6 +108,8 @@ export function useMenuItems({ search, serviceGroups, favorite }: UseMenuItemsPr
             highlight(element);
           }, 500);
         }, 0);
+
+        onClick?.(e);
       },
     }));
 

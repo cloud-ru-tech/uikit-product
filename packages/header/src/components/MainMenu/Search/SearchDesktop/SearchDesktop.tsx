@@ -9,7 +9,7 @@ import { SearchProps } from '../types';
 import styles from './styles.module.scss';
 
 export const SearchDesktop = forwardRef<HTMLDivElement, SearchProps>(
-  ({ searchValue, searchFn, searchFunctions, onChangeSearchFn, onSearchValueChange }, ref) => {
+  ({ searchValue, searchFn, searchFunctions, onChangeSearchFn, onSearchValueChange, onBlur, onFocus }, ref) => {
     const { t } = useLocale('Header');
 
     const [areSearchSettingsVisible, setAreSearchSettingsVisible] = useState<boolean>(false);
@@ -22,6 +22,8 @@ export const SearchDesktop = forwardRef<HTMLDivElement, SearchProps>(
           placeholder={t('searchByServices')}
           value={searchValue}
           onChange={onSearchValueChange}
+          onBlur={onBlur}
+          onFocus={onFocus}
           data-test-id='header__drawer-menu__search'
           className={styles.search}
           postfix={<SearchSettingsButton onClick={() => setAreSearchSettingsVisible(prevOpen => !prevOpen)} />}
