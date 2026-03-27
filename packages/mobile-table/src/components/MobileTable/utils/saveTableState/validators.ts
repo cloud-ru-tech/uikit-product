@@ -1,5 +1,4 @@
 import { RequestPayloadParams } from '@cloud-ru/ft-request-payload-transform';
-
 import { ChipChoiceRowProps } from '@snack-uikit/chips';
 
 export const validatePaging = (value: unknown): value is RequestPayloadParams['pagination'] =>

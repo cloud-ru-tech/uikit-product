@@ -1,6 +1,6 @@
-import { RequestPayloadParams, SortDirection } from '@cloud-ru/ft-request-payload-transform';
 import { PaginationState, SortingState } from '@tanstack/react-table';
 
+import { RequestPayloadParams, SortDirection } from '@cloud-ru/ft-request-payload-transform';
 import { FiltersState } from '@snack-uikit/chips';
 import { formatFilterStateToRequestPayload, PersistedFilterState } from '@snack-uikit/toolbar';
 

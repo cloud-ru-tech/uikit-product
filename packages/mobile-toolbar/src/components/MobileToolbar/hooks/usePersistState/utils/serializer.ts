@@ -1,5 +1,4 @@
 import { createRequestPayload, RequestPayloadParams } from '@cloud-ru/ft-request-payload-transform';
-
 import { FiltersState } from '@snack-uikit/chips';
 import { isDateString } from '@snack-uikit/toolbar';
 
