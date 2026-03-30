@@ -19,4 +19,6 @@ export type SearchProps = Pick<SearchPropsSnack, 'onBlur' | 'onFocus'> & {
   onChangeSearchFn(id: string): void;
   // Выбранная функция (по id из searchFunctions)
   searchFn?: string;
+  // Колбек на отсутствие результатов поиска
+  onSearchNoResult?(value: string): void;
 };

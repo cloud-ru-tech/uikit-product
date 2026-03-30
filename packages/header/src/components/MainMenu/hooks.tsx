@@ -1,5 +1,5 @@
 import debounce from 'lodash.debounce';
-import { useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { BaseItemProps } from '@snack-uikit/list';
@@ -44,7 +44,7 @@ type UseMenuItemsProps = Pick<MainMenuProps, 'favorite' | 'serviceGroups' | 'sea
 export function useMenuItems({ search, serviceGroups, favorite }: UseMenuItemsProps) {
   const { t } = useLocale('Header');
 
-  const { searchValue = '', searchFn, searchFunctions, onSearchValueChange } = search || {};
+  const { searchValue = '', searchFn, searchFunctions, onSearchValueChange, onSearchNoResult } = search || {};
 
   const searchRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -127,6 +127,12 @@ export function useMenuItems({ search, serviceGroups, favorite }: UseMenuItemsPr
   const resultItems =
     (searchFn ? searchFnMap?.[searchFn] : searchFunctions?.[0]?.handler)?.(searchValue, itemsWithoutEmptyGroups) ||
     itemsWithoutEmptyGroups;
+
+  useEffect(() => {
+    if (searchValue && !resultItems.length) {
+      onSearchNoResult?.(searchValue);
+    }
+  }, [searchValue, resultItems.length, onSearchNoResult]);
 
   return {
     resultItems,
