@@ -38,20 +38,20 @@ $sizes: 's', 'm', 'l';
     max-height: calc(var(--max-rows) * var(--row-height) + var(--horizontal-scroll-bar-height));
   }
 
+  .textarea {
+    @include ste.composite-var(ste.$sans-body-l);
+
+    padding-right: calc(42px + ste.simple-var(ste.$fields-scroll-bar-width, 'width'));
+
+    &::placeholder {
+      color: ste.simple-var(ste.$sys-neutral-text-disabled);
+    }
+  }
+
   @each $size in $sizes {
     &[data-size='#{$size}'] {
       --row-height: #{ste.simple-var(ste.$theme-variables, 'sans', 'body', $size, 'line-height')};
       --horizontal-scroll-bar-height: #{ste.simple-var($scroll-bar-heights, $size)};
-
-      .textarea {
-        @include ste.composite-var(ste.$theme-variables, 'sans', 'body', $size);
-
-        padding-right: calc(42px + ste.simple-var(ste.$fields-scroll-bar-width, 'width'));
-
-        &::placeholder {
-          color: ste.simple-var(ste.$sys-neutral-text-disabled);
-        }
-      }
     }
   }
 }
