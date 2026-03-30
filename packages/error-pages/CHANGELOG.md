@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-03-30)
+
+
+### Features
+
+* **PDS-3611:** set up custom mode for ErrorPage ([17df651](https://github.com/cloud-ru-tech/uikit-product/commit/17df651602b3a398cfe48f6ae88c93983a9b0d67))
+
+
+
+
+
 ## 2.0.8 (2026-03-16)
 
 
