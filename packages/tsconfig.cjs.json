@@ -198,11 +198,19 @@
     },
     {
       "path": "./site-running-line/tsconfig.cjs.json"
+    },
+    {
+      "path": "./entities-table/tsconfig.cjs.json"
     }
   ],
   "compilerOptions": {
     "target": "es6",
-    "lib": ["es2017", "dom", "dom.iterable", "esnext"],
+    "lib": [
+      "es2017",
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "module": "CommonJS",
     "strict": true,
     "jsx": "react-jsx",
