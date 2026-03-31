@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-header",
   "title": "Header",
-  "version": "6.0.12",
+  "version": "6.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",

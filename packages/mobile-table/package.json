@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-mobile-table",
   "title": "Mobile Table",
-  "version": "2.2.9",
+  "version": "2.2.10",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -40,7 +40,7 @@
     "@cloud-ru/uikit-product-icons": "17.1.1",
     "@cloud-ru/uikit-product-mobile-chips": "2.0.12",
     "@cloud-ru/uikit-product-mobile-dropdown": "2.1.9",
-    "@cloud-ru/uikit-product-mobile-toolbar": "2.0.12",
+    "@cloud-ru/uikit-product-mobile-toolbar": "2.0.13",
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/chips": "0.28.16",

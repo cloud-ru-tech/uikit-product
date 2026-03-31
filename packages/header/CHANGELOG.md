@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.1.0 (2026-03-31)
+
+
+### Bug Fixes
+
+* **FF-8279:** add callbacks for search and pass missing onClick in menu items ([ef577b5](https://github.com/cloud-ru-tech/uikit-product/commit/ef577b5f358c0a286849faf315ec278afcef8363))
+
+
+### Features
+
+* **FF-8279:** add onSearchNoResult to header main-menu ([2d11f34](https://github.com/cloud-ru-tech/uikit-product/commit/2d11f349c6bdbfb3efe78c2b9163c9eafc0cd72e))
+
+
+
+
+
 ## 6.0.12 (2026-03-17)
 
 ### Only dependencies have been changed

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.13 (2026-03-31)
+
+**Note:** Version bump only for package @cloud-ru/uikit-product-mobile-toolbar
+
+
+
+
+
 ## 2.0.12 (2026-03-17)
 
 ### Only dependencies have been changed
