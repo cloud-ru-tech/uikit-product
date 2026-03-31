@@ -3,9 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.14 (2026-03-31)
+
+
+### Bug Fixes
+
+* **FF-8103:** dedupe onOpenChange from Floating UI in PopoverPrivate ([3ce49f4](https://github.com/cloud-ru-tech/uikit-product/commit/3ce49f4f993d48a97b97dc7cecc1402079cb41ff))
+
+
+
+
+
 ## 2.0.13 (2026-03-31)
 
-**Note:** Version bump only for package @cloud-ru/uikit-product-mobile-toolbar
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-mobile-chips@2.0.13]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@2.1.10]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@1.1.10]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-tooltip/CHANGELOG.md)
 
 
 

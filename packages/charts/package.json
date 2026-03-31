@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-charts",
   "title": "React Charts",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "sideEffects": [
     "*.css",
     "*.scss",
