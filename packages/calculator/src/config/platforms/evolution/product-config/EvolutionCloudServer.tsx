@@ -391,9 +391,7 @@ export const EVOLUTION_CLOUD_SERVER_FORM_CONFIG: FormConfig = {
                     specification: {
                       accessorKey: 'specification',
                       defaultValue: 'SSD',
-                      uiProps: {
-                        disabled: true,
-                      },
+                      items: specificationItemsDisk,
                     },
                   }),
                 },
