@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2026-03-31)
+
+
+### Features
+
+* **FF-7462:** add video into release modal ([0f9bedd](https://github.com/cloud-ru-tech/uikit-product/commit/0f9bedd7c9989b660131a24be5df70a75cb4ba25))
+
+
+
+
+
 ## 2.1.4 (2026-03-31)
 
 
