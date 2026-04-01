@@ -169,6 +169,14 @@ export const EVOLUTION_CLOUD_SERVER_FREE_TIER_FORM_CONFIG: FormConfig = {
     },
 
     // Hidden
+    vmEnabled: {
+      type: CONTROL.Toggle,
+      accessorKey: 'vmEnabled',
+      defaultValue: true,
+      decoratorProps: {
+        label: '',
+      },
+    },
     network: {
       type: CONTROL.Object,
       defaultValue: {
