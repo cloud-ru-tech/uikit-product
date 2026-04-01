@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.3 (2026-04-01)
+
+
+### Bug Fixes
+
+* **SITE-10609:** fix additional disk for calculator evo compute ([5adc3a0](https://github.com/cloud-ru-tech/uikit-product/commit/5adc3a0462fade814ac21fec92f51fe7c923e994))
+* **SITE-10980:** fix additional disk for calculator evo compute ([a3d2afc](https://github.com/cloud-ru-tech/uikit-product/commit/a3d2afc14189df5878e15fc9cdf24347847d547e))
+
+
+
+
+
 ## 1.4.2 (2026-03-31)
 
 
