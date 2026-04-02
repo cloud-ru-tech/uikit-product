@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.4 (2026-04-02)
+
+
+### Dependencies
+
+* **FF-8302:** up lodash to 4.18.1 ([8b91e2d](https://github.com/cloud-ru-tech/uikit-product/commit/8b91e2d5e71687e34a90fa9dc2a4bf88cf84e972))
+
+
+
+
+
 ## 1.4.3 (2026-04-01)
 
 

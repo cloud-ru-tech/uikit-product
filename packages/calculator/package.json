@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-calculator",
   "title": "Calculator",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -40,7 +40,7 @@
     "@cloud-ru/uikit-product-icons": "17.1.1",
     "@cloud-ru/uikit-product-mobile-accordion": "1.1.10",
     "@cloud-ru/uikit-product-mobile-dropdown": "2.1.10",
-    "@cloud-ru/uikit-product-mobile-fields": "2.0.13",
+    "@cloud-ru/uikit-product-mobile-fields": "2.0.14",
     "@cloud-ru/uikit-product-mobile-modal": "2.1.1",
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/alert": "0.16.28",
