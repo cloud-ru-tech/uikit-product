@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 17.2.0 (2026-04-03)
+
+
+### Features
+
+* **PDS-3684:** add evo prompt registry icon ([32a9cdc](https://github.com/cloud-ru-tech/uikit-product/commit/32a9cdccb631d9db90947ec41c9d7d98735764af))
+
+
+
+
+
 ## 17.1.1 (2026-03-16)
 
 

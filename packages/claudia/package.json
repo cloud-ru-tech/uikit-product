@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-claudia",
   "title": "Claudia",
-  "version": "1.19.4",
+  "version": "1.19.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,10 +36,10 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "17.1.1",
-    "@cloud-ru/uikit-product-mobile-dropdown": "2.1.10",
-    "@cloud-ru/uikit-product-mobile-fields": "2.0.14",
-    "@cloud-ru/uikit-product-mobile-tooltip": "1.1.10",
+    "@cloud-ru/uikit-product-icons": "17.2.0",
+    "@cloud-ru/uikit-product-mobile-dropdown": "2.1.11",
+    "@cloud-ru/uikit-product-mobile-fields": "2.0.15",
+    "@cloud-ru/uikit-product-mobile-tooltip": "1.1.11",
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/button": "0.19.16",
     "@snack-uikit/divider": "3.2.3",
