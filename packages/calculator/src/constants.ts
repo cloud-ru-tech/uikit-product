@@ -56,3 +56,18 @@ export const WORKING_HOURS_ITEMS = [
     label: 'Час',
   },
 ];
+
+export const WORKING_HOURS_PER_PERIOD_ITEMS = [
+  {
+    value: WorkingHoursSpecification.Month,
+    label: 'Каждый месяц',
+  },
+  {
+    value: WorkingHoursSpecification.Day,
+    label: 'Каждый день',
+  },
+  {
+    value: WorkingHoursSpecification.Hour,
+    label: 'Каждый час',
+  },
+];

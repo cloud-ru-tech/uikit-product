@@ -1,5 +1,5 @@
 import { CONTROL, FormConfig } from '../../../../components';
-import { WORKING_HOURS_ITEMS, WorkingHoursSpecification } from '../../../../constants';
+import { WORKING_HOURS_PER_PERIOD_ITEMS, WorkingHoursSpecification } from '../../../../constants';
 import { getMaxWorkingHoursAmount, getNumeralWord } from '../../../utils';
 
 const StorageSizeItem = {
@@ -77,7 +77,7 @@ export const EVOLUTION_ARENADATA_DB_FORM_CONFIG: FormConfig = {
         postfix: 'час',
       },
       decoratorProps: {
-        label: 'Время работы',
+        label: 'Время работы за период',
       },
       watchedControls: { period: 'workingHoursSpecification', workingHours: 'workingHours' },
       relateFn: ({ period, workingHours }) => {
@@ -103,7 +103,7 @@ export const EVOLUTION_ARENADATA_DB_FORM_CONFIG: FormConfig = {
       type: CONTROL.SelectSingle,
       accessorKey: 'workingHoursSpecification',
       defaultValue: WorkingHoursSpecification.Hour,
-      items: WORKING_HOURS_ITEMS,
+      items: WORKING_HOURS_PER_PERIOD_ITEMS,
       uiProps: {
         showClearButton: false,
         searchable: false,
@@ -111,10 +111,6 @@ export const EVOLUTION_ARENADATA_DB_FORM_CONFIG: FormConfig = {
       decoratorProps: {
         label: 'Период',
       },
-      onChangePeriod: (period, setValue) => {
-        setValue([['workingHoursSpecification', period]]);
-      },
-      canChangeWholePricePeriod: true,
     },
     licenseRent: {
       type: CONTROL.ToggleCards,

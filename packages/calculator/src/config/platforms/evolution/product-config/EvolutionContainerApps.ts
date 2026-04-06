@@ -1,5 +1,5 @@
 import { CONTROL, FormConfig } from '../../../../components';
-import { WORKING_HOURS_ITEMS, WorkingHoursSpecification } from '../../../../constants';
+import { WORKING_HOURS_PER_PERIOD_ITEMS, WorkingHoursSpecification } from '../../../../constants';
 import { generateInstanceConfigItems, getMaxWorkingHoursAmount, getNumeralWord } from '../../../utils';
 
 const configItems = generateInstanceConfigItems(
@@ -41,14 +41,14 @@ export const EVOLUTION_CONTAINER_APPS_CONFIG: FormConfig = {
         postfix: 'час',
       },
       decoratorProps: {
-        label: 'Время работы',
+        label: 'Время работы за период',
       },
       watchedControls: { period: 'workingHoursSpecification', workingHours: 'workingHours' },
       relateFn: ({ period, workingHours }) => {
         const maxWorkingHours = getMaxWorkingHoursAmount(period, {
           hour: 1,
           day: 24,
-          month: 744,
+          month: 720,
         });
         const isStepperDisabled = maxWorkingHours === 1;
 
@@ -67,7 +67,7 @@ export const EVOLUTION_CONTAINER_APPS_CONFIG: FormConfig = {
       type: CONTROL.SelectSingle,
       accessorKey: 'workingHoursSpecification',
       defaultValue: WorkingHoursSpecification.Hour,
-      items: WORKING_HOURS_ITEMS,
+      items: WORKING_HOURS_PER_PERIOD_ITEMS,
       uiProps: {
         showClearButton: false,
         searchable: false,
@@ -75,10 +75,6 @@ export const EVOLUTION_CONTAINER_APPS_CONFIG: FormConfig = {
       decoratorProps: {
         label: 'Период',
       },
-      onChangePeriod: (period, setValue) => {
-        setValue([['workingHoursSpecification', period]]);
-      },
-      canChangeWholePricePeriod: true,
     },
   },
 };
