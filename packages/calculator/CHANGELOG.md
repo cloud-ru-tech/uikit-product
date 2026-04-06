@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.5.0 (2026-04-06)
+
+
+### Features
+
+* **SITE-10671:** add new calculator Kafka ([4db2cf4](https://github.com/cloud-ru-tech/uikit-product/commit/4db2cf45738945e9ce761bf129874e4ed72c1936))
+* **SITE-10672:** add new calculator ClickHouse ([9c0a8e8](https://github.com/cloud-ru-tech/uikit-product/commit/9c0a8e8b80e5982a90d1c4e1a4b26f8293db4e6e))
+
+
+
+
+
 ## 1.4.5 (2026-04-03)
 
 ### Only dependencies have been changed
