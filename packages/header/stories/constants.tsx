@@ -139,6 +139,14 @@ export const SERVICE_GROUPS: LinksGroup[] = [
         aliases: ['magic router', 'магический маршрутизатор', 'маршрутизатор'],
       },
       {
+        id: 'magicBridge',
+        label: 'Magic Bridge',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        icon: PlaceholderSVG,
+        aliases: ['magic bridge', 'магический мост', 'bridge'],
+      },
+      {
         id: 'virtualIp',
         label: 'Virtual IP',
         onClick: EMPTY_ON_CLICK,
