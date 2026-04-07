@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.5.1 (2026-04-07)
+
+
+### Bug Fixes
+
+* **SITE-10957:** fix evo notebooks calculator ([fcc9f5d](https://github.com/cloud-ru-tech/uikit-product/commit/fcc9f5d525447d4a4fc3652dac2292142ec47a78))
+* **SITE-10957:** fix some calculators ([835e665](https://github.com/cloud-ru-tech/uikit-product/commit/835e6657512fdc2a7e9bcf5002839a67ff6bb2f1))
+
+
+
+
+
 # 1.5.0 (2026-04-06)
 
 
