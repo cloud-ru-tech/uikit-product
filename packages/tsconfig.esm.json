@@ -205,12 +205,8 @@
   ],
   "compilerOptions": {
     "target": "es6",
-    "lib": [
-      "es2017",
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["es2017", "dom", "dom.iterable", "esnext"],
+    "types": ["node"],
     "module": "es6",
     "strict": true,
     "jsx": "react-jsx",
