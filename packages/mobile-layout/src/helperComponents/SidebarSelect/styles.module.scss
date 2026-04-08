@@ -1,4 +1,4 @@
-@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .wrapper {
   @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-l);

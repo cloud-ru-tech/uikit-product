@@ -41,7 +41,7 @@ export function Calculator() {
 | actions* | `{ onPlatformSelect?(platform: string): void; onProductSelect?(productId: string): void; onProductDelete?(productId: string): void; onStartClick?(): void; onCatalogOpen?(): void; onConnectClick?(id: string, value: FormValues): void; onShareClick?(state: State): Promise<...>; onDownloadFileClick?(state: State): Promis...` | - | Колбеки на действия внутри калькулятора |
 | fetcherFn* | `FetcherFn` | - | Функция для запроса цен по продукту |
 | config* | `CatalogConfig` | - | Конфигурация платформ/продуктов/каталога |
-| layoutType | `LayoutType` | desktop | Тип устройства |
+| layoutType | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | desktop | Тип устройства |
 | calculatorType | enum CalculatorType: `"test"`, `"main"`, `"partners"`, `"product"`, `"additional"` | main | Тип калькулятора |
 | onAnalyticsClick | `(clickContent: string, uniqueId: string) => void` | - | Колбэк вызова при изменении любого контрола для аналитики |
 | bgImage | `string` | - | Изображение на заднем фоне в состоянии "пустой" корзины |
@@ -113,7 +113,7 @@ data-test-id
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| __@iterator@1094* | `() => StringIterator<string>` | - | Iterator |
+| __@iterator@925* | `() => StringIterator<string>` | - | Iterator |
 | toWellFormed* | `() => string` | - | Returns a string where all lone or out-of-order surrogates have been replaced by the Unicode replacement character (U+FFFD). |
 | isWellFormed* | `() => boolean` | - | Returns true if all leading surrogates and trailing surrogates appear paired and in order. |
 | at* | `(index: number) => string` | - | Returns a new String consisting of the single UTF-16 code unit located at the specified index. @param index The zero-based index of the desired code unit. A negative index will count back from the last item. |
