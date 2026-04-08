@@ -19,11 +19,11 @@ export type ProductsProps = WithLayoutType<{
 }>;
 
 export function Products(props: ProductsProps) {
-  const { layoutType, products, solutions } = props;
+  const { layoutType, products = [], solutions = [] } = props;
 
   return (
     <div className={styles.products} data-layout-type={layoutType}>
-      {products?.length && products.length > 0 && (
+      {products.length > 0 && (
         <div>
           <Typography.SansTitleM className={styles.label} tag='span'>
             Подключенные сервисы:
@@ -35,7 +35,7 @@ export function Products(props: ProductsProps) {
           </div>
         </div>
       )}
-      {solutions?.length && solutions.length > 0 && (
+      {solutions.length > 0 && (
         <div>
           <Typography.SansTitleM className={styles.label} tag='span'>
             Решения:
