@@ -6,6 +6,5 @@ module.exports = {
     '**/storybook/**/*.{css,scss}',
     '**/storybook-static/**',
     'packages/mobile-drawer/src/components/MobileDrawerCustom/motion.css',
-    'storybook/stories/components/markdown/theme/style.css',
   ],
 };
