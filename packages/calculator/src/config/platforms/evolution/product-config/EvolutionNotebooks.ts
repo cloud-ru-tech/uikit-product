@@ -1,10 +1,11 @@
 import { CONTROL, FormConfig } from '../../../../components';
-import { WORKING_HOURS_ITEMS, WorkingHoursSpecification } from '../../../../constants';
+import { WORKING_HOURS_PER_PERIOD_ITEMS, WorkingHoursSpecification } from '../../../../constants';
 import {
   DEFAULT_NOTEBOOKS_CONFIG_VALUE,
   getDefaultNotebooksConfigParams,
   getMaxWorkingHoursAmount,
   getNotebookConfigParamsByInstance,
+  getNumeralWord,
 } from '../../../utils';
 
 const DEFAULT_CONFIG_PARAMS = getDefaultNotebooksConfigParams();
@@ -85,19 +86,24 @@ export const EVOLUTION_NOTEBOOKS_CONFIG: FormConfig = {
       type: CONTROL.Stepper,
       accessorKey: 'workingHours',
       defaultValue: 1,
-      uiProps: { min: 1 },
-      decoratorProps: { label: 'Время работы' },
-      watchedControls: { period: 'workingHoursSpecification' },
-      relateFn: ({ period }) => {
+      uiProps: { min: 1, max: 1, postfix: 'час' },
+      decoratorProps: { label: 'Время работы за период' },
+      watchedControls: { period: 'workingHoursSpecification', workingHours: 'workingHours' },
+      relateFn: ({ period, workingHours }) => {
         const maxWorkingAmount = getMaxWorkingHoursAmount(period, {
-          hour: 24,
-          day: 31,
-          month: 12,
+          hour: 1,
+          day: 24,
+          month: 720,
         });
+        const isStepperDisabled = maxWorkingAmount === 1;
 
         return {
           uiProps: {
+            min: 1,
             max: maxWorkingAmount,
+            showHint: !isStepperDisabled,
+            disabled: isStepperDisabled,
+            postfix: getNumeralWord(workingHours, ['час', 'часа', 'часов']),
           },
         };
       },
@@ -106,13 +112,9 @@ export const EVOLUTION_NOTEBOOKS_CONFIG: FormConfig = {
       type: CONTROL.SelectSingle,
       accessorKey: 'workingHoursSpecification',
       defaultValue: WorkingHoursSpecification.Hour,
-      items: WORKING_HOURS_ITEMS,
+      items: WORKING_HOURS_PER_PERIOD_ITEMS,
       uiProps: { showClearButton: false, searchable: false },
       decoratorProps: { label: 'Период' },
-      onChangePeriod: (period, setValue) => {
-        setValue([['workingHoursSpecification', period]]);
-      },
-      canChangeWholePricePeriod: true,
     },
   },
 };
