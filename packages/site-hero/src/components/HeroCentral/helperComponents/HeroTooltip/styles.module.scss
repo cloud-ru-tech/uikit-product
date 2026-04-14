@@ -1,0 +1,18 @@
+.tooltipWrapper {
+  position: relative;
+  top: -10px;
+  display: inline-block;
+  width: fit-content;
+
+  &[data-layout-type='tablet'] {
+    top: -5px;
+  }
+
+  &[data-layout-type='mobile'] {
+    top: 0px;
+  }
+}
+
+.tooltip {
+  max-width: 274px;
+}

@@ -1,0 +1,49 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/styles-theme-variables' as var;
+
+.root {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  justify-content: center;
+  border-top: 1px solid var.$sys-invert-neutral-decor-default;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: visible;
+  max-width: 100%;
+  scrollbar-width: none;
+
+  &[data-layout-type='mobile'] {
+    justify-content: unset;
+  }
+}
+
+.item {
+  position: relative;
+  color: var.$sys-invert-neutral-text-main;
+  cursor: pointer;
+  padding: 0 10px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 20px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    display: block;
+    opacity: 0.08;
+    background: transparent;
+  }
+
+  &:hover {
+    &:before {
+      background: var.$sys-invert-neutral-accent-default;
+    }
+  }
+}

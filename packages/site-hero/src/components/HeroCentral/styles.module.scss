@@ -1,0 +1,98 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/styles-theme-variables' as ste;
+
+.root {
+  position: relative;
+  background: ste.$sys-neutral-background;
+}
+
+.sectionWrapper {
+  position: relative;
+}
+
+.titles {
+  margin-bottom: ste.$dimension-4m;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+
+  &[data-layout-type='tablet'] {
+    margin-bottom: ste.$dimension-2m;
+    gap: ste.$dimension-2m;
+  }
+
+  &[data-layout-type='mobile'] {
+    margin-bottom: ste.$dimension-2m;
+    gap: ste.$dimension-1m;
+  }
+}
+
+.subtitle {
+  color: ste.$sys-graphite-text-disabled;
+}
+
+.imageWrapper {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.wrapperContent {
+  position: relative;
+  max-width: 1216px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 40px;
+  box-sizing: border-box;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+  }
+
+  &[data-layout-type='desktopSmall'] {
+    padding: 40px 32px 0;
+  }
+
+  &[data-layout-type='tablet'] {
+    padding: 40px 32px 0;
+  }
+
+  &[data-layout-type='mobile'] {
+    padding: 24px 24px 0;
+  }
+}
+
+.content {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: ste.$sys-neutral-on-accent;
+
+  &[data-layout-type='desktop'],
+  &[data-layout-type='desktopSmall'] {
+    &.withoutAnchors {
+      margin-bottom: 56px;
+    }
+  }
+}
