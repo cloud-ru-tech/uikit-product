@@ -1,0 +1,65 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.tooltip {
+  display: block;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  padding: 8px;
+  background-color: var.$sys-neutral-background-opacity;
+  border-radius: 4px;
+  height: stretch;
+
+  &[data-exhausted='true'] {
+    background-color: var.$sys-red-background;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  column-gap: 4px;
+  flex: 1;
+}
+
+.title {
+  color: var.$sys-neutral-text-main;
+  align-self: flex-start;
+}
+
+.percent[data-family='sans'][data-purpose='label'][data-size='m'] {
+  font-weight: 400;
+  color: var.$sys-neutral-text-light;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 8px;
+}
+
+.label[data-family='sans'][data-purpose='label'][data-size='m'] {
+  color: var.$sys-neutral-text-light;
+  font-weight: 400;
+}
+
+.value[data-family='sans'][data-purpose='label'][data-size='l'] {
+  color: var.$sys-neutral-text-main;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.unit {
+  color: var.$sys-neutral-text-light;
+}

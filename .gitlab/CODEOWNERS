@@ -5,8 +5,12 @@
 [Site]
 packages/calculator/ @daparfirov @vaveschev @gabezobrazov @aaryabkov
 
-[Claudia]
-packages/claudia/ @dapanov @avsaulyak @evbibin @dvkrivyakov @akmorozov @isdesyatnikov
+[AI Infra] @avsaulyak @dapanov
+packages/claudia/
+
+[Core LK] @evbibin @dvkrivyakov @akmorozov @isdesyatnikov
+packages/quota/
+packages/claudia/
 
 [Lock file]
 pnpm-lock.yaml @anbelov @gaahremenko @mstrifonov @apkozlova @svhlupin @iabelyavskiy @niershov @dapanov @avsaulyak @daparfirov @vaveschev @gabezobrazov @aaryabkov

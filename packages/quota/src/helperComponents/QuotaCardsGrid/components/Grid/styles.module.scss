@@ -1,0 +1,11 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+
+  &[data-single='true'] {
+    grid-template-columns: 1fr;
+  }
+}

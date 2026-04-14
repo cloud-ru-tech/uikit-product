@@ -1,0 +1,18 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 128px;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 12px;
+}
+
+.projectWrapper {
+  min-width: 0;
+}
+
+.subtitle {
+  display: block;
+  color: var.$sys-neutral-text-light;
+}

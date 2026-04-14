@@ -1,5 +1,21 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss' as var;
+
 .wrapper {
   display: flex;
   justify-content: flex-end;
   padding: 8px;
+}
+
+.resizeWrapper {
+  resize: both;
+  overflow: auto;
+  width: 400px;
+  background-color: var.$sys-neutral-background;
+  border: 1px solid var.$sys-neutral-decor-default;
+  padding: 16px;
+  box-sizing: border-box;
+
+  &[data-card] {
+    background-color: var.$sys-neutral-background1-level;
+  }
 }

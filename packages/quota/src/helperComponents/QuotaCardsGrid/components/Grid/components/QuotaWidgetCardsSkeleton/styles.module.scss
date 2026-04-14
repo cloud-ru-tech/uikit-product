@@ -1,0 +1,10 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  background-color: var.$sys-neutral-background-opacity;
+  border-radius: 4px;
+}

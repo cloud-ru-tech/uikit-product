@@ -1,0 +1,20 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 216px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 8px;
+}
+
+.exhausted {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var.$sys-neutral-decor-default;
+}
