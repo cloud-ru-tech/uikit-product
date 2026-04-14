@@ -1,5 +1,4 @@
 import { TooltipProps } from '@cloud-ru/uikit-product-mobile-tooltip';
-import { QuotaDropdownProps } from '@cloud-ru/uikit-product-quota';
 import {
   ButtonFilledProps,
   ButtonFunctionProps,
@@ -11,12 +10,13 @@ import {
 import { ButtonDropdownProps } from '../ButtonDropdown';
 import { ButtonDroplistProps } from '../ButtonDroplist';
 import { ButtonKebabProps } from '../ButtonKebab';
+import { ButtonQuotaProps } from '../ButtonQuota';
 import { BUTTON_TYPE } from './constants';
 
 type ButtonDropdownPropsWithoutLayout = Omit<ButtonDropdownProps, 'layoutType'>;
 type ButtonKebabPropsWithoutLayout = Omit<ButtonKebabProps, 'layoutType'>;
 type ButtonDroplistWithoutLayout = Omit<ButtonDroplistProps, 'layoutType'>;
-type ButtonQuotaDropdownWithoutLayout = Omit<QuotaDropdownProps, 'layoutType'>;
+type ButtonQuotaDropdownWithoutLayout = Omit<ButtonQuotaProps, 'layoutType'>;
 
 export type Action = {
   tooltip?: TooltipProps;

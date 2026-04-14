@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 
 import { AdaptiveTooltip } from '@cloud-ru/uikit-product-mobile-tooltip';
-import { QuotaDropdown, QuotaDropdownProps } from '@cloud-ru/uikit-product-quota';
 import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import {
   ButtonFilled,
@@ -19,6 +18,7 @@ import {
 import { ButtonDropdown, ButtonDropdownProps } from '../ButtonDropdown';
 import { ButtonDroplist, ButtonDroplistProps } from '../ButtonDroplist';
 import { ButtonKebab, ButtonKebabProps } from '../ButtonKebab';
+import { ButtonQuota, ButtonQuotaProps } from '../ButtonQuota';
 import { BUTTON_TYPE } from './constants';
 import { Action } from './types';
 
@@ -72,7 +72,11 @@ export function ActionView({
 
     case BUTTON_TYPE.Quota: {
       return addTooltip(
-        <QuotaDropdown {...(buttonProps as QuotaDropdownProps)} {...commonProps} layoutType={layoutType} />,
+        <ButtonQuota
+          {...(buttonProps as ButtonQuotaProps)}
+          buttonProps={(buttonProps as ButtonQuotaProps).buttonProps ?? commonProps}
+          layoutType={layoutType}
+        />,
       );
     }
     default:

@@ -1,12 +1,11 @@
-import { Children, isValidElement, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { ChevronDownSVG, KebabSVG } from '@cloud-ru/uikit-product-icons';
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { AdaptiveDropdown, MobileDroplist, MobileDroplistProps } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { MobileTooltip, WithMobileTooltip } from '@cloud-ru/uikit-product-mobile-tooltip';
-import { checkExceeded, QuotaCardProps, QuotaDropdownContent } from '@cloud-ru/uikit-product-quota';
+import { QuotaWidgetMobile } from '@cloud-ru/uikit-product-quota';
 import { ButtonOutline } from '@snack-uikit/button';
-import { Counter } from '@snack-uikit/counter';
 import { useDynamicList } from '@snack-uikit/utils';
 
 import { ActionView } from './ActionView';
@@ -19,9 +18,10 @@ export function MobileActions({ items, maxVisibleItems }: ActionsProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isQuotaWidgetOpen, setIsQuotaWidgetOpen] = useState(false);
   const { visibleItems, hiddenItems } = useDynamicList({ parentContainerRef: containerRef, items, maxVisibleItems });
 
-  const { t: tQuota } = useLocale('Quota');
+  const { t: tQuota } = useLocale('MobileLayout');
 
   if (!hasVisibleActions(items)) {
     return null;
@@ -67,19 +67,6 @@ export function MobileActions({ items, maxVisibleItems }: ActionsProps) {
                   break;
                 }
                 case BUTTON_TYPE.Quota: {
-                  const quotaExceededCount = Children.toArray(action.children).reduce<number>(
-                    (count, child) =>
-                      isValidElement<QuotaCardProps>(child) &&
-                      !child?.props?.loading &&
-                      !child?.props?.unlimited &&
-                      checkExceeded((child?.props?.limit ?? 0) - (child?.props?.created ?? 0))
-                        ? count + 1
-                        : count,
-                    0,
-                  );
-
-                  const isQuotaExceededCountVisible = !action.dataError && quotaExceededCount > 0;
-
                   acc.push({
                     ...action,
                     type: 'group',
@@ -90,20 +77,17 @@ export function MobileActions({ items, maxVisibleItems }: ActionsProps) {
                         content: {
                           option: tQuota('quotas'),
                         },
-                        afterContent: (
-                          <>
-                            {isQuotaExceededCountVisible && (
-                              <Counter value={quotaExceededCount} appearance='red' size='m' />
-                            )}
-                            <ChevronDownSVG />
-                          </>
-                        ),
-
+                        onClick: () => setIsQuotaWidgetOpen(prev => !prev),
                         itemWrapRender: item => {
                           const content = (
-                            <AdaptiveDropdown content={<QuotaDropdownContent {...action} />} layoutType='mobile'>
+                            <>
                               {item}
-                            </AdaptiveDropdown>
+                              <QuotaWidgetMobile
+                                {...action}
+                                isOpen={isQuotaWidgetOpen}
+                                onClose={() => setIsQuotaWidgetOpen(false)}
+                              />
+                            </>
                           );
 
                           return action.tooltip ? (

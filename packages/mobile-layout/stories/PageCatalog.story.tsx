@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react';
 
 import { PlaceholderSVG, PlusSVG } from '@cloud-ru/uikit-product-icons';
-import { QuotaCard } from '@cloud-ru/uikit-product-quota';
 import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { AdaptivePageCatalog, AdaptivePageCatalogProps, MobilePageCatalog } from '../src';
+import { MOCK_QUOTAS } from './constants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
@@ -154,8 +154,12 @@ export const pageCatalog: StoryObj<PageCatalogStoryProps> = {
       },
       {
         variant: 'quota',
-        title: 'Квоты',
-        children: <QuotaCard title='Виртуальные машины' />,
+        quotas: MOCK_QUOTAS,
+        isLoading: false,
+        isError: false,
+        onRefresh: () => {},
+        projectName: 'my-project',
+        canEditQuota: true,
       },
     ],
     children: (

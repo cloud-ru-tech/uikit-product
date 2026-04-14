@@ -2,7 +2,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { useMemo, useState } from 'react';
 
 import { PlaceholderSVG, PlusSVG } from '@cloud-ru/uikit-product-icons';
-import { QuotaCard } from '@cloud-ru/uikit-product-quota';
 import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Status } from '@snack-uikit/status';
@@ -12,7 +11,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { AdaptivePageServices, AdaptivePageServicesProps, MobilePageServices } from '../src';
-import { SIDEBAR_ITEMS } from './constants';
+import { MOCK_QUOTAS, SIDEBAR_ITEMS } from './constants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
@@ -194,8 +193,12 @@ export const pageServices: StoryObj<PageServicesStoryProps> = {
       },
       {
         variant: 'quota',
-        title: 'Квоты',
-        children: <QuotaCard title='Виртуальные машины' />,
+        quotas: MOCK_QUOTAS,
+        isLoading: false,
+        isError: false,
+        onRefresh: () => {},
+        projectName: 'my-project',
+        canEditQuota: true,
       },
     ],
     beforeHeadline: <ButtonFunction icon={<PlaceholderSVG />} />,
