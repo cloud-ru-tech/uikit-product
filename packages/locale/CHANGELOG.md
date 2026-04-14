@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.6.0 (2026-04-14)
+
+
+### Features
+
+* **LK-7597:** added locales for quotas widget ([bb23ea7](https://github.com/cloud-ru-tech/uikit-product/commit/bb23ea741d2a3fd479bec33db62319c7366c5ba9))
+
+
+
+
+
 # 2.5.0 (2026-03-27)
 
 

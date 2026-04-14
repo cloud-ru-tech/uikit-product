@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.10 (2026-04-14)
+
+
+### Bug Fixes
+
+* **PROFCOMM-2703:** applied scss fixes ([7cbee1b](https://github.com/cloud-ru-tech/uikit-product/commit/7cbee1bd74a48a78184db8e164a7864c7e140449))
+
+
+
+
+
 ## 2.0.9 (2026-04-03)
 
 ### Only dependencies have been changed

@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-cookie-policy",
   "title": "Site Cookie Policy",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "sideEffects": [
     "*.css",
     "*.woff",

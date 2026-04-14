@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.2.0 (2026-04-14)
+
+
+### Features
+
+* **EVOVPC-2618:** magic bridge icon in consts ([adf143d](https://github.com/cloud-ru-tech/uikit-product/commit/adf143d64e99da45b175e5d2ff90f4e5100ecb6e))
+
+
+
+
+
 ## 6.1.2 (2026-04-03)
 
 ### Only dependencies have been changed
