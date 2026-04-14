@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.7.0 (2026-04-14)
+
+
+### Features
+
+* **LK-7542:** added quota widget ([40191bf](https://github.com/cloud-ru-tech/uikit-product/commit/40191bf2c69ce76ca8c67a3d6b61bfb7a7f318e7))
+
+
+
+
+
 # 2.6.0 (2026-04-14)
 
 
