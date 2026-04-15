@@ -15,7 +15,7 @@ import {
 } from 'react';
 
 import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
-import { FieldDecorator } from '@snack-uikit/fields';
+import { FieldDecorator, useFieldSelectSingleCustomOption } from '@snack-uikit/fields';
 import { InputPrivate } from '@snack-uikit/input-private';
 import { kindFlattenItems, List, ListProps, SelectionSingleValueType } from '@snack-uikit/list';
 import { extractSupportProps, isBrowser, useLayoutEffect, useValueControl } from '@snack-uikit/utils';
@@ -64,6 +64,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       prefix,
       postfix,
       addOptionByEnter = false,
+      addCustomOptionTriggers,
       open: openProp,
       onOpenChange,
       selectedOptionFormatter = defaultSelectedOptionFormatter,
@@ -141,20 +142,6 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       valueToCopy: selectedOptionFormatter(selectedItem),
     });
 
-    const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
-      if (!open && !buttonsRefs.filter(Boolean).includes(e.relatedTarget)) {
-        setInputValue('');
-
-        rest?.onBlur?.(e);
-      }
-    };
-
-    const commonHandleOnKeyDown = useHandleOnKeyDown({
-      inputKeyDownNavigationHandler,
-      onInputKeyDownProp,
-      setOpen,
-    });
-
     const handleSelectionChange = useCallback(
       (newValue?: SelectionSingleValueType) => {
         localRef.current?.focus();
@@ -166,6 +153,32 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       [setOpen, setValue],
     );
 
+    const { resolvedAddCustomOptionTriggers, tryCommitCustomOptionFromInput } = useFieldSelectSingleCustomOption({
+      addCustomOptionTriggers,
+      addOptionByEnter,
+      inputValue,
+      handleSelectionChange,
+    });
+
+    const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
+      if (!open && !buttonsRefs.filter(Boolean).includes(e.relatedTarget)) {
+        setInputValue('');
+
+        rest?.onBlur?.(e);
+      }
+    };
+
+    const handleSearchBlur = () => {
+      tryCommitCustomOptionFromInput('blur');
+      setInputValue('');
+    };
+
+    const commonHandleOnKeyDown = useHandleOnKeyDown({
+      inputKeyDownNavigationHandler,
+      onInputKeyDownProp,
+      setOpen,
+    });
+
     const handleOnKeyDown = (onKeyDown?: KeyboardEventHandler<HTMLElement>) => (e: KeyboardEvent<HTMLInputElement>) => {
       if (!open && prevInputValue.current !== inputValue) {
         setOpen(true);
@@ -174,10 +187,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       if (e.code === 'Enter') {
         e.stopPropagation();
         e.preventDefault();
-      }
-
-      if (addOptionByEnter && e.code === 'Enter' && inputValue !== '') {
-        handleSelectionChange(inputValue);
+        tryCommitCustomOptionFromInput('enter');
       }
 
       commonHandleOnKeyDown(onKeyDown)(e);
@@ -187,7 +197,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       if (!readonly && !disabled && isBrowser() && !buttonsRefs.includes(document.activeElement)) {
         setOpen(open);
 
-        if (!open) {
+        if (!open && !resolvedAddCustomOptionTriggers.includes('blur')) {
           setInputValue('');
         }
       }
@@ -222,6 +232,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
                   value: inputValue,
                   onChange: setInputValue,
                   onKeyDown: handleOnKeyDown(),
+                  onBlur: handleSearchBlur,
                 }
               : undefined
           }

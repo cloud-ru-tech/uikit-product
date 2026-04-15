@@ -1,6 +1,11 @@
 import { ReactElement, ReactNode } from 'react';
 
-import { FieldDecoratorProps } from '@snack-uikit/fields';
+import {
+  FieldDecoratorProps,
+  FieldSelectMultipleProps,
+  FieldSelectProps,
+  FieldSelectSingleProps,
+} from '@snack-uikit/fields';
 import { InputPrivateProps } from '@snack-uikit/input-private';
 import {
   AccordionItemProps,
@@ -122,25 +127,26 @@ type FiledSelectCommonProps = WithSupportProps<{
 
   autocomplete?: boolean;
 
-  addOptionByEnter?: boolean;
-
   open?: boolean;
 
   onOpenChange?(open: boolean): void;
 
   selectedOptionFormatter?: SelectedOptionFormatter;
 }> &
+  Pick<FieldSelectProps, 'addOptionByEnter'> &
   Pick<DroplistProps, 'dataError' | 'noDataState' | 'noResultsState' | 'errorDataState' | 'dataFiltered'>;
 
 export type MobileFieldSelectSingleProps = FieldSelectPrivateProps &
   Omit<SelectionSingleState, 'mode'> &
   WrapperProps &
-  FiledSelectCommonProps;
+  FiledSelectCommonProps &
+  Pick<FieldSelectSingleProps, 'addCustomOptionTriggers'>;
 
 export type MobileFieldSelectMultipleProps = FieldSelectPrivateProps & {
   removeByBackspace?: boolean;
 } & Omit<SelectionMultipleState, 'mode'> &
-  Omit<FiledSelectCommonProps, 'showCopyButton'>;
+  Omit<FiledSelectCommonProps, 'showCopyButton'> &
+  Pick<FieldSelectMultipleProps, 'addCustomOptionTriggers'>;
 
 export type MobileFieldSelectProps =
   | (MobileFieldSelectSingleProps & { selection?: 'single' })

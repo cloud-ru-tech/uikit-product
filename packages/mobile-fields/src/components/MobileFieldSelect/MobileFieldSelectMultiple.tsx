@@ -16,7 +16,12 @@ import {
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
 import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
-import { FieldDecorator } from '@snack-uikit/fields';
+import {
+  FieldDecorator,
+  getCustomOptionTriggerByCode,
+  shouldHandleCustomOptionTrigger,
+  useFieldSelectMultipleCustomOption,
+} from '@snack-uikit/fields';
 import { InputPrivate } from '@snack-uikit/input-private';
 import { ItemId, kindFlattenItems, List, ListProps, SelectionSingleValueType } from '@snack-uikit/list';
 import { Tag } from '@snack-uikit/tag';
@@ -65,6 +70,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
       postfix,
       removeByBackspace = false,
       addOptionByEnter = false,
+      addCustomOptionTriggers,
       open: openProp,
       onOpenChange,
       selectedOptionFormatter = defaultSelectedOptionFormatter,
@@ -92,14 +98,25 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
 
     const { flattenItems } = useMemo(() => kindFlattenItems({ items }), [items]);
 
-    const searchable =
-      (searchableProp && Object.values(flattenItems).length > 5) || autocomplete || Boolean(addOptionByEnter);
-
     const { inputValue, setInputValue, prevInputValue, updateInputValue } = useSearchInput({
       ...search,
       defaultValue: '',
       selectedOptionFormatter,
     });
+
+    const { resolvedAddCustomOptionTriggers, tryCommitCustomOptionFromInput } = useFieldSelectMultipleCustomOption({
+      addCustomOptionTriggers,
+      addOptionByEnter,
+      inputValue,
+      value,
+      setValue,
+      updateInputValue,
+    });
+
+    const searchable =
+      (searchableProp && Object.values(flattenItems).length > 5) ||
+      autocomplete ||
+      resolvedAddCustomOptionTriggers.length > 0;
 
     const prefixSettings = usePrefix({ prefix, disabled });
     const postfixSettings = usePostfix({ postfix, disabled });
@@ -136,6 +153,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
     });
 
     const handleItemDelete = useHandleDeleteItem(setValue);
+
     const handleOnKeyDown = (onKeyDown?: KeyboardEventHandler<HTMLElement>) => (e: KeyboardEvent<HTMLInputElement>) => {
       if (removeByBackspace && e.code === 'Backspace' && inputValue === '') {
         if (selectedItems?.length && !selectedItems.slice(-1)[0].disabled) {
@@ -146,12 +164,14 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
       if (e.code === 'Enter') {
         e.stopPropagation();
         e.preventDefault();
-      }
+        tryCommitCustomOptionFromInput('enter');
+      } else {
+        const customOptionTrigger = getCustomOptionTriggerByCode(e.code);
 
-      if (addOptionByEnter && e.code === 'Enter' && inputValue !== '') {
-        if (!(value ?? []).includes(inputValue)) {
-          setValue((value: SelectionSingleValueType[]) => (value ?? []).concat(inputValue));
-          updateInputValue();
+        if (shouldHandleCustomOptionTrigger(customOptionTrigger, resolvedAddCustomOptionTriggers)) {
+          e.stopPropagation();
+          e.preventDefault();
+          tryCommitCustomOptionFromInput(customOptionTrigger);
         }
       }
 
@@ -186,6 +206,10 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
       }
     };
 
+    const handleSearchBlur = () => {
+      tryCommitCustomOptionFromInput('blur');
+    };
+
     const searcher = useSearch(items, enableFuzzySearch);
     const result = autocomplete || !searchable || prevInputValue.current === inputValue ? items : searcher(inputValue);
 
@@ -205,6 +229,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
                   value: inputValue,
                   onChange: setInputValue,
                   onKeyDown: handleOnKeyDown(),
+                  onBlur: handleSearchBlur,
                 }
               : undefined
           }

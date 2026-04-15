@@ -3,6 +3,10 @@ import { useLayoutEffect, useState } from 'react';
 
 import { DaySVG } from '@cloud-ru/uikit-product-icons';
 import { Avatar } from '@snack-uikit/avatar';
+import {
+  FieldSelectMultipleAddCustomOptionTrigger,
+  FieldSelectSingleAddCustomOptionTrigger,
+} from '@snack-uikit/fields';
 import { SelectionSingleValueType } from '@snack-uikit/list';
 import { Tag } from '@snack-uikit/tag';
 
@@ -76,9 +80,19 @@ const MORE_OPTIONS: BaseOptionProps[] = [
 type StoryProps = MobileFieldSelectProps & {
   localeName: string;
   showMoreOptions: boolean;
+  singleAddCustomOptionTriggers?: FieldSelectSingleAddCustomOptionTrigger[];
+  multipleAddCustomOptionTriggers?: FieldSelectMultipleAddCustomOptionTrigger[];
 };
 
-const Template = ({ selection, showMoreOptions, value, size, ...args }: StoryProps) => {
+const Template = ({
+  selection,
+  showMoreOptions,
+  value,
+  size,
+  singleAddCustomOptionTriggers,
+  multipleAddCustomOptionTriggers,
+  ...args
+}: StoryProps) => {
   const [singleValue, setSingleValue] = useState<SelectionSingleValueType>();
 
   const [multipleValue, setMultipleValue] = useState<SelectionSingleValueType[]>([]);
@@ -100,6 +114,7 @@ const Template = ({ selection, showMoreOptions, value, size, ...args }: StoryPro
       {selection === 'single' && (
         <MobileFieldSelect
           {...args}
+          addCustomOptionTriggers={singleAddCustomOptionTriggers}
           defaultValue={undefined}
           value={singleValue}
           onChange={setSingleValue}
@@ -112,6 +127,7 @@ const Template = ({ selection, showMoreOptions, value, size, ...args }: StoryPro
       {selection === 'multiple' && (
         <MobileFieldSelect
           {...args}
+          addCustomOptionTriggers={multipleAddCustomOptionTriggers}
           defaultValue={undefined}
           value={multipleValue}
           onChange={setMultipleValue}
@@ -148,6 +164,9 @@ export const fieldSelect: StoryObj<StoryProps> = {
     showCopyButton: true,
     showClearButton: true,
     showMoreOptions: false,
+    addOptionByEnter: false,
+    singleAddCustomOptionTriggers: undefined,
+    multipleAddCustomOptionTriggers: undefined,
   },
 
   argTypes: {
@@ -160,6 +179,23 @@ export const fieldSelect: StoryObj<StoryProps> = {
     },
     value: {
       type: 'string',
+    },
+    singleAddCustomOptionTriggers: {
+      name: 'addCustomOptionTriggers',
+      options: ['enter', 'blur'],
+      control: 'multi-select',
+      if: { arg: 'selection', eq: 'single' },
+    },
+    multipleAddCustomOptionTriggers: {
+      name: 'addCustomOptionTriggers',
+      options: ['enter', 'blur', 'space', 'comma'],
+      control: 'multi-select',
+      if: { arg: 'selection', eq: 'multiple' },
+    },
+    addOptionByEnter: {
+      name: 'addOptionByEnter (deprecated)',
+      description: 'Используйте addCustomOptionTriggers. Сохраняется для обратной совместимости.',
+      type: 'boolean',
     },
   },
 
