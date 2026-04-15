@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2026-04-15)
+
+
+### Features
+
+* **SITE-10328:** hero central ([e3b2a54](https://github.com/cloud-ru-tech/uikit-product/commit/e3b2a54151b707912612f08b129ee3b7a1ce1a69))
+
+
+
+
+
 ## 1.5.4 (2026-04-03)
 
 ### Only dependencies have been changed
