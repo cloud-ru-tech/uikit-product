@@ -117,7 +117,7 @@ export const catalog: StoryObj<StoryProps> = {
           'Evolution Managed Trino',
           'Evolution Managed Metastore',
           'Evolution Managed Kafka®',
-          'Evolution Managed Redis®',
+          'Evolution Managed Redis',
           'Evolution Managed Spark',
         ]),
       },

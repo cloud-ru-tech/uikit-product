@@ -9,27 +9,19 @@ const nodeConfigItems = generateInstanceConfigItems([
 ]);
 
 const valueMasterReplica = 'Master/Replica';
-const valueCluster = 'Cluster';
 const valueStandalone = 'Standalone';
 
-const DEFAULT_ITEMS_SLIDER = [1, 2, 3, 4, 5];
+const hostsByStandalone = [1];
+const hostsByMasterReplica = [3];
 
 const shardQuantityItemsByInstantType: { [key: string]: number[] } = {
   [valueStandalone]: [1],
   [valueMasterReplica]: [1],
-  [valueCluster]: [3, 4, 5],
 };
 
-type ReplicaQuantityItemsByInstant = {
-  values: number[];
-  label: string;
-  visible?: boolean;
-};
-
-const replicaQuantityItemsByInstantType: { [key: string]: ReplicaQuantityItemsByInstant } = {
-  [valueStandalone]: { values: [0], label: 'Количество реплик', visible: false },
-  [valueMasterReplica]: { values: DEFAULT_ITEMS_SLIDER, label: 'Количество реплик' },
-  [valueCluster]: { values: DEFAULT_ITEMS_SLIDER, label: 'Количество реплик на шард' },
+const hostsByInstantType: { [key: string]: number[] } = {
+  [valueStandalone]: hostsByStandalone,
+  [valueMasterReplica]: hostsByMasterReplica,
 };
 
 const instanceTypePartCards = [
@@ -43,15 +35,10 @@ const instanceTypePartCards = [
     label: valueMasterReplica,
     description: 'Отказоустойчивый кластер высокой доступности',
   },
-  {
-    value: valueCluster,
-    label: valueCluster,
-    description: 'Отказоустойчивый кластер высокой доступности с шардированием',
-  },
 ];
 
 export const EVOLUTION_MANAGED_REDIS_CONFIG: FormConfig = {
-  ui: ['deploymentMode', 'instanceType', ['masterNodeConfig', 'shardQuantity'], ['replicaQuantity'], ['systemDisk']],
+  ui: ['deploymentMode', 'instanceType', 'masterNodeConfig', ['hostsQuantity', 'shardQuantity'], ['systemDisk']],
   controls: {
     deploymentMode: {
       type: CONTROL.Carousel,
@@ -78,12 +65,12 @@ export const EVOLUTION_MANAGED_REDIS_CONFIG: FormConfig = {
         if (value === valueStandalone) {
           setValue([
             ['instanceType', value],
-            ['replicaQuantity', '0'],
+            ['hostsQuantity', hostsByStandalone[0].toString()],
           ]);
         } else {
           setValue([
             ['instanceType', value],
-            ['replicaQuantity', '1'],
+            ['hostsQuantity', hostsByMasterReplica[0].toString()],
           ]);
         }
       },
@@ -99,12 +86,12 @@ export const EVOLUTION_MANAGED_REDIS_CONFIG: FormConfig = {
     },
     shardQuantity: {
       type: CONTROL.Segmented,
+      accessorKey: 'shardQuantity',
+      defaultValue: '1',
       decoratorProps: {
         label: 'Количество шардов',
       },
-      defaultValue: '1',
       items: generateCpuItems([1]),
-      accessorKey: 'shardQuantity',
       watchedControls: { instanceType: 'instanceType' },
       relateFn: ({ instanceType }) => {
         const items = shardQuantityItemsByInstantType[instanceType];
@@ -116,27 +103,23 @@ export const EVOLUTION_MANAGED_REDIS_CONFIG: FormConfig = {
         }
       },
     },
-    replicaQuantity: {
-      type: CONTROL.Slider,
-      accessorKey: 'replicaQuantity',
-      defaultValue: '0',
-      items: DEFAULT_ITEMS_SLIDER,
+    hostsQuantity: {
+      type: CONTROL.Segmented,
+      accessorKey: 'hostsQuantity',
+      defaultValue: '1',
       decoratorProps: {
-        label: 'Количество реплик',
+        label: 'Количество хостов',
       },
+      items: generateCpuItems([...hostsByStandalone, ...hostsByMasterReplica]),
       watchedControls: { instanceType: 'instanceType' },
       relateFn: ({ instanceType }) => {
-        const item = replicaQuantityItemsByInstantType[instanceType];
+        const items = hostsByInstantType[instanceType];
 
-        return {
-          items: item.values,
-          uiProps: {
-            visible: item.visible,
-          },
-          decoratorProps: {
-            label: item.label,
-          },
-        };
+        if (items?.length > 0) {
+          return {
+            items: generateCpuItems(items),
+          };
+        }
       },
     },
     systemDisk: getDisk({

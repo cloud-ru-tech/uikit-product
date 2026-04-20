@@ -607,7 +607,7 @@ export const catalogDataRaw = {
     },
     {
       id: '75fd8887-05b4-4600-840c-c9aa4baf96e7',
-      title: 'Evolution Managed Redis®',
+      title: 'Evolution Managed Redis',
       description: 'Управляемая база данных Redis®',
       customLink: '',
       slug: 'evolution-managed-redis',

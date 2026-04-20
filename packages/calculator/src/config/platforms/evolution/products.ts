@@ -130,7 +130,7 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
   [EVOLUTION_PRODUCT.EvolutionManagedRedis]: {
     id: EVOLUTION_PRODUCT.EvolutionManagedRedis,
     platform: PLATFORM.Evolution,
-    label: 'Evolution Managed Redis®',
+    label: 'Evolution Managed Redis',
     caption: 'Управляемая база данных Redis®',
     formConfig: EVOLUTION_MANAGED_REDIS_CONFIG,
     icon: RedisSVG,
