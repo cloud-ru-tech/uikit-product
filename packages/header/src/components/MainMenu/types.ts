@@ -35,6 +35,7 @@ export type LinksGroupTitle = TitleStatic | TitleClickable;
 export type LinksGroup = {
   id: string;
   label: LinksGroupTitle;
+  onClick?(e?: MouseEvent<HTMLElement>): void;
   hidden?: boolean;
   items: InnerLink[];
 };

@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 
 import { DrawerCustom } from '@snack-uikit/drawer';
 import { isBaseItemProps, List } from '@snack-uikit/list';
@@ -34,10 +34,14 @@ export function MenuDesktop({
   const isInitialEmptyCards = serviceGroups?.length === 0;
   const isNeedRightBlock = rightTop || !isInitialEmptyCards;
 
-  const settingItemsWithClassName = settingItems.filter(isBaseItemProps).map(item => ({
-    ...item,
-    className: styles.item,
-  }));
+  const settingItemsWithClassName = useMemo(
+    () =>
+      settingItems.filter(isBaseItemProps).map(item => ({
+        ...item,
+        className: styles.item,
+      })),
+    [settingItems],
+  );
 
   const groupItemsWithClass = useMemo(
     () =>
@@ -48,12 +52,14 @@ export function MenuDesktop({
     [groupItems],
   );
 
+  const handleCloseDrawer = useCallback(() => {
+    setOpen(false);
+  }, [setOpen]);
+
   return (
     <DrawerCustom
       open={open}
-      onClose={() => {
-        setOpen(false);
-      }}
+      onClose={handleCloseDrawer}
       size={isNeedRightBlock ? 'm' : 's'}
       position='left'
       className={styles.drawer}
@@ -80,14 +86,7 @@ export function MenuDesktop({
 
           {isInitialEmptyCards && settingItemsWithClassName.length > 0 && (
             <div className={cn(styles.list, styles.halfList)}>
-              <List
-                items={settingItems.filter(isBaseItemProps).map(item => ({
-                  ...item,
-                  className: styles.item,
-                }))}
-                size='m'
-                barHideStrategy='never'
-              />
+              <List items={settingItemsWithClassName} size='m' barHideStrategy='never' />
             </div>
           )}
         </div>
@@ -99,9 +98,7 @@ export function MenuDesktop({
 
               {!isInitialEmptyCards && (
                 <Content
-                  onClose={() => {
-                    setOpen(false);
-                  }}
+                  onClose={handleCloseDrawer}
                   className={styles.rightContent}
                   search={search && <SearchDesktop {...search} ref={searchRef} />}
                   searchValue={search && search.searchValue}

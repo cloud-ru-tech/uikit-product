@@ -79,7 +79,7 @@ export function useMenuItems({ search, serviceGroups, favorite }: UseMenuItemsPr
 
   const groupItems: BaseItemProps[] = groupWithFavorites
     .filter(group => group.items.length > 0)
-    .map(({ id, label: { text, onClick } }) => ({
+    .map(({ id, label: { text }, onClick: onGroupClickInSidebar }) => ({
       id,
       content: {
         option: text,
@@ -109,7 +109,7 @@ export function useMenuItems({ search, serviceGroups, favorite }: UseMenuItemsPr
           }, 500);
         }, 0);
 
-        onClick?.(e);
+        onGroupClickInSidebar?.(e);
       },
     }));
 
