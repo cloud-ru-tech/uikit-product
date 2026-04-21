@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-claudia",
   "title": "Claudia",
-  "version": "1.19.5",
+  "version": "1.19.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -38,7 +38,7 @@
   "dependencies": {
     "@cloud-ru/uikit-product-icons": "17.2.0",
     "@cloud-ru/uikit-product-mobile-dropdown": "2.1.11",
-    "@cloud-ru/uikit-product-mobile-fields": "2.0.15",
+    "@cloud-ru/uikit-product-mobile-fields": "2.1.0",
     "@cloud-ru/uikit-product-mobile-tooltip": "1.1.11",
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/button": "0.19.16",

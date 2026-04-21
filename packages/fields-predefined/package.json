@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-fields-predefined",
   "title": "Fields Predefined",
-  "version": "2.4.4",
+  "version": "2.4.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -34,7 +34,7 @@
   "dependencies": {
     "@cloud-ru/uikit-product-icons": "17.2.0",
     "@cloud-ru/uikit-product-mobile-dropdown": "2.1.11",
-    "@cloud-ru/uikit-product-mobile-fields": "2.0.15",
+    "@cloud-ru/uikit-product-mobile-fields": "2.1.0",
     "@cloud-ru/uikit-product-mobile-modal": "2.1.2",
     "@cloud-ru/uikit-product-mobile-tooltip": "1.1.11",
     "@cloud-ru/uikit-product-utils": "9.1.0",

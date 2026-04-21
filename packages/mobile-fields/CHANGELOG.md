@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-04-21)
+
+
+### Features
+
+* **IAM-6423:** support triggers for custom field option ([b4fb5ee](https://github.com/cloud-ru-tech/uikit-product/commit/b4fb5eea235d6f73cbb6d88640d250d30d5612ea))
+
+
+
+
+
 ## 2.0.15 (2026-04-03)
 
 ### Only dependencies have been changed

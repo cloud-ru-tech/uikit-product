@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-section",
   "title": "Site Section",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -37,7 +37,7 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/uikit-product-icons": "17.2.0",
-    "@cloud-ru/uikit-product-mobile-fields": "2.0.15",
+    "@cloud-ru/uikit-product-mobile-fields": "2.1.0",
     "@cloud-ru/uikit-product-site-cards": "1.1.10",
     "@cloud-ru/uikit-product-site-case-card": "1.2.2",
     "@cloud-ru/uikit-product-site-grid": "1.1.3",
