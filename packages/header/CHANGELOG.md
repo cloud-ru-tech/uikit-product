@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.2.1 (2026-04-22)
+
+
+### Bug Fixes
+
+* **FF-8412:** remove label onClick and add onClick to group ([6843562](https://github.com/cloud-ru-tech/uikit-product/commit/684356208bd31b9bb1308ac00e3edb47ba6c4f4c))
+
+
+
+
+
 # 6.2.0 (2026-04-14)
 
 
