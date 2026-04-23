@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.7.1 (2026-04-23)
+
+
+### Bug Fixes
+
+* **FF-8426:** replace legacy lodash packages with new one ([52aa612](https://github.com/cloud-ru-tech/uikit-product/commit/52aa61216297a22e6c1b33c19586e35d73adda51))
+
+
+
+
+
 # 2.7.0 (2026-04-14)
 
 
