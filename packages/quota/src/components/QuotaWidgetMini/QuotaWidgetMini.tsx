@@ -75,7 +75,6 @@ export function QuotaWidgetMini({
           isLoading={isLoading}
           isError={isError}
           onRefresh={onRefresh}
-          isMobile
         />
 
         {!isError && canEditQuota && !hideIncreaseQuotaButton && (
