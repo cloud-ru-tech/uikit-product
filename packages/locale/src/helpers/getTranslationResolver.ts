@@ -1,5 +1,5 @@
-import lodashGet from 'lodash.get';
-import lodashSet from 'lodash.set';
+import lodashGet from 'lodash/get';
+import lodashSet from 'lodash/set';
 
 import { AdditionalTranslations, CommonTranslationsKeysType } from './types';
 
