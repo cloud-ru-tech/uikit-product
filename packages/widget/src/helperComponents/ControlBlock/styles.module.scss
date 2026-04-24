@@ -1,0 +1,12 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.controlWrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var.$dimension-1m;
+
+  &[data-mobile] {
+    width: 100%;
+  }
+}

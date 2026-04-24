@@ -1,11 +1,11 @@
-@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
 
 .desktopActionsWrapper {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   flex-shrink: 0;
-  gap: styles-theme-variables.$dimension-1m;
+  gap: var.$dimension-1m;
   height: 100%;
 }
 
@@ -39,4 +39,22 @@
     flex-grow: 0;
     flex-shrink: 0;
   }
+}
+
+.actionsWrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var.$dimension-050m;
+
+  &[data-wide] {
+    justify-content: flex-end;
+  }
+}
+
+.skeletonActions {
+  display: flex;
+  align-items: center;
+  gap: var.$dimension-1m;
+  width: 100%;
 }
