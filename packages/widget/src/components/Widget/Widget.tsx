@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { MouseEvent as ReactMouseEvent, ReactNode } from 'react';
+import { MouseEvent, ReactNode } from 'react';
 
 import { CrossSVG, UpdateSVG } from '@cloud-ru/uikit-product-icons';
 import { useLocale } from '@cloud-ru/uikit-product-locale';
@@ -103,14 +103,14 @@ export function Widget({
     </div>
   );
 
-  const getPrimaryAction = (items: Action[]): Action | undefined => {
+  const getPrimaryAction = (items: Action[]): { action?: Action; index: number } => {
     const index = items.findIndex(a => a.variant !== BUTTON_TYPE.Droplist && a.variant !== BUTTON_TYPE.Kebab);
-    return index >= 0 ? items[index] : undefined;
+    return index >= 0 ? { action: items[index], index } : { index: -1 };
   };
 
-  const buildKebabItems = (items: Action[]): NonNullable<MobileDroplistProps['items']> =>
+  const buildKebabItems = (items: Action[], primaryActionIndex: number): NonNullable<MobileDroplistProps['items']> =>
     items.reduce<NonNullable<MobileDroplistProps['items']>>(
-      (acc, action) => {
+      (acc, action, index) => {
         if (action.variant === BUTTON_TYPE.Droplist || action.variant === BUTTON_TYPE.Kebab) {
           acc.push({
             type: 'group',
@@ -119,14 +119,17 @@ export function Widget({
             divider: acc.length > 0,
           });
         } else {
-          acc.push({
-            content: { option: action.label ?? '' },
-            beforeContent: action.icon,
-            onClick: (event: ReactMouseEvent<HTMLElement>) => {
-              action.onClick?.(event as never);
-            },
-          });
+          if (index !== primaryActionIndex) {
+            acc.push({
+              content: { option: action.label ?? '' },
+              beforeContent: action.icon,
+              onClick: (event: MouseEvent<HTMLElement>) => {
+                action.onClick?.(event as never);
+              },
+            });
+          }
         }
+
         return acc;
       },
       [] as NonNullable<MobileDroplistProps['items']>,
@@ -148,8 +151,8 @@ export function Widget({
       );
     }
 
-    const primaryAction = getPrimaryAction(actions);
-    const kebabItemsMobile = buildKebabItems(actions);
+    const { action: primaryAction, index: primaryActionIndex } = getPrimaryAction(actions);
+    const kebabItemsMobile = buildKebabItems(actions, primaryActionIndex);
 
     return (
       <div className={cn(styles.actionsWrapper)}>
