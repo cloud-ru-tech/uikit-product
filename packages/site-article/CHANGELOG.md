@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.4 (2026-04-27)
+
+
+### Bug Fixes
+
+* **SITE-10017:** fix site-article components styles ([4b351f9](https://github.com/cloud-ru-tech/uikit-product/commit/4b351f901a985ccc683e685d49ae347e399bae09))
+
+
+
+
+
 ## 1.2.3 (2026-04-27)
 
 ### Only dependencies have been changed
