@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 17.3.0 (2026-04-27)
+
+
+### Bug Fixes
+
+* **PROFCOMM-2703:** applied scss fixes ([7cbee1b](https://github.com/cloud-ru-tech/uikit-product/commit/7cbee1bd74a48a78184db8e164a7864c7e140449))
+
+
+### Features
+
+* **PDS-3694:** adds icons GigaIDELogo, GigaStudioLogo, OuroborosLogo ([317ff6d](https://github.com/cloud-ru-tech/uikit-product/commit/317ff6ddc5913fcb08024a7b89491028e1418d49))
+
+
+
+
+
 # 17.2.0 (2026-04-03)
 
 

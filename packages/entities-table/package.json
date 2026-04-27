@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-entities-table",
   "title": "Entities Table",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   "license": "Apache-2.0",
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-mobile-table": "2.2.12",
+    "@cloud-ru/uikit-product-mobile-table": "2.2.13",
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/utils": "4.0.1",
     "@tanstack/react-query": "4.36.1"

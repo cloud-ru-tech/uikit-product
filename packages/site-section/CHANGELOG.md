@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.8 (2026-04-27)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-icons@17.3.0]($PUBLIC_PROJECT_URL/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-fields@2.1.1]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@cloud-ru/uikit-product-site-cards@1.1.11]($PUBLIC_PROJECT_URL/blob/master/packages/site-cards/CHANGELOG.md)
+* [@cloud-ru/uikit-product-site-media@1.1.10]($PUBLIC_PROJECT_URL/blob/master/packages/site-media/CHANGELOG.md)
+
+
+
+
+
 ## 1.2.7 (2026-04-21)
 
 ### Only dependencies have been changed
