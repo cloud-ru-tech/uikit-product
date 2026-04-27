@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { forwardRef } from 'react';
 
 import { CrossFilledSVG } from '@cloud-ru/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@cloud-ru/uikit-product-utils';
@@ -23,18 +24,21 @@ export type LoadStatusProps = WithSupportProps<
   } & Pick<ProgressBarProps, 'progress' | 'size'>
 >;
 
-export function LoadStatus({
-  label,
-  value,
-  hint,
-  valueType = 'none',
-  progress,
-  size = 's',
-  appearanceByProgress = DEFAULT_APPEARANCE_BY_PROGRESS,
-  showErrorIcon,
-  className,
-  ...props
-}: LoadStatusProps) {
+export const LoadStatus = forwardRef<HTMLDivElement, LoadStatusProps>(function LoadStatus(
+  {
+    label,
+    value,
+    hint,
+    valueType = 'none',
+    progress,
+    size = 's',
+    appearanceByProgress = DEFAULT_APPEARANCE_BY_PROGRESS,
+    showErrorIcon,
+    className,
+    ...props
+  },
+  ref,
+) {
   const progressAppearance = getProgressBarColor(progress, appearanceByProgress);
 
   const isShowHeader = label || value || valueType !== 'none';
@@ -42,7 +46,7 @@ export function LoadStatus({
   const symbol = SYMBOL_BY_TYPE[valueType];
 
   return (
-    <div className={cn(styles.loadStatus, className)} {...extractSupportProps(props)}>
+    <div className={cn(styles.loadStatus, className)} ref={ref} {...extractSupportProps(props)}>
       {isShowHeader && (
         <div className={styles.header}>
           <Typography.SansBodyS>
@@ -65,4 +69,4 @@ export function LoadStatus({
       )}
     </div>
   );
-}
+});
