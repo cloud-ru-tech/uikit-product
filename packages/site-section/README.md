@@ -65,6 +65,7 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `ItemProps[]` | - | Выгоды |
+| id | `string` | - | id секции |
 | title | `string` | - | Заголовок |
 | titleTag | enum Tag: `"span"`, `"h1"`, `"h2"`, `"h3"`, `"h4"`, `"h5"`, `"h6"`, `"div"`, `"label"`, `"p"` | h3 | Тэг заголовка |
 | description | `string \| string[]` | - | Описание под баннером |

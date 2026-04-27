@@ -15,6 +15,8 @@ type ItemProps = Omit<BenefitItemProps, 'layoutType'>;
 export type SectionBenefitsBannerProps = WithSupportProps<
   WithLayoutType<
     {
+      /** id секции */
+      id?: string;
       /** Заголовок */
       title?: string;
       /** Тэг заголовка */
@@ -32,6 +34,7 @@ export type SectionBenefitsBannerProps = WithSupportProps<
 >;
 
 export function SectionBenefitsBanner({
+  id,
   title,
   titleTag = 'h3',
   items,
@@ -47,6 +50,7 @@ export function SectionBenefitsBanner({
 }: SectionBenefitsBannerProps) {
   return (
     <SectionBasic
+      id={id}
       layoutType={layoutType}
       className={className}
       backgroundColor={backgroundSectionColor ?? 'neutral-background'}
