@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2026-04-27)
+
+
+### Features
+
+* **SITE-11177:** add id to SectionBenefitsBanner ([6148634](https://github.com/cloud-ru-tech/uikit-product/commit/6148634bccebec4a774d6574cbfe418a0b195ac2))
+
+
+
+
+
 ## 1.2.8 (2026-04-27)
 
 ### Only dependencies have been changed
