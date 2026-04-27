@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.5.4 (2026-04-27)
+
+
+### Bug Fixes
+
+* **SITE-11154:** fix 500 error ([b9c69c6](https://github.com/cloud-ru-tech/uikit-product/commit/b9c69c6442ebcb622033e0242677862bc5d1f00f))
+
+
+
+
+
 ## 1.5.3 (2026-04-27)
 
 ### Only dependencies have been changed
