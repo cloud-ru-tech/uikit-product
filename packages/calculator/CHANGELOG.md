@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2026-04-28)
+
+
+### Features
+
+* **EVODBAAS-7563:** calculate hostsQuantity for Redis ([fead790](https://github.com/cloud-ru-tech/uikit-product/commit/fead790917457a29ece8158d658a6fe6a53bad7a))
+
+
+
+
+
 ## 1.5.4 (2026-04-27)
 
 
