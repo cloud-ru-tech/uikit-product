@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.5 (2026-04-28)
+
+
+### Bug Fixes
+
+* **SITE-11206:** fix article links padding on mobile devices ([c3507f2](https://github.com/cloud-ru-tech/uikit-product/commit/c3507f2ec5b4b9d5e3cb92bcd7da493f1cb6ff5e))
+
+
+
+
+
 ## 1.2.4 (2026-04-27)
 
 
