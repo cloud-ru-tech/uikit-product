@@ -35,7 +35,7 @@ export function ArticleLinks(props: ArticleLinksProps) {
   }, [layoutType]);
 
   return (
-    <div className={styles.articleLinks}>
+    <div className={styles.articleLinks} data-layout-type={layoutType}>
       <Typography className={styles.title} {...typographyProps} tag='div'>
         Содержание
       </Typography>
