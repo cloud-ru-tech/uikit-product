@@ -1329,7 +1329,7 @@ importers:
         specifier: 2.1.6
         version: link:../page-layout
       '@cloud-ru/uikit-product-quota':
-        specifier: 2.1.1
+        specifier: 2.1.2
         version: link:../quota
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0

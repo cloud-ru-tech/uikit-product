@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.2 (2026-04-28)
+
+
+### Bug Fixes
+
+* **LK-7501:** fixed quota widget mini height ([1f7621e](https://github.com/cloud-ru-tech/uikit-product/commit/1f7621eb5dbf6c1bd28119c3b1e2bb57edd62995))
+
+
+
+
+
 ## 2.1.1 (2026-04-27)
 
 ### Only dependencies have been changed
