@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2026-04-29)
+
+
+### Features
+
+* **RM-4210:** forwardRef for LoadStatus ([be75d10](https://github.com/cloud-ru-tech/uikit-product/commit/be75d10e508339b02378b1a2aaf4662aa8b18d97))
+
+
+
+
+
 ## 1.1.10 (2026-04-27)
 
 ### Only dependencies have been changed
