@@ -17,6 +17,7 @@
 | expandedDefault | `string \| string[]` | - |  |
 | onExpandedChange | `((value?: string) => void) \| ((value?: string[]) => void)` | - |  |
 | id | `string` | - | id секции |
+| description | `string` | - | Описание |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | outline | `boolean` | - | Внешний бордер для блоков |
 | className | `string` | - | CSS-класс |

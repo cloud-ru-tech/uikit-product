@@ -22,6 +22,7 @@ type StoryProps = SectionAccordionProps & WithLayoutType;
 const Template: StoryFn<StoryProps> = ({
   id,
   title,
+  description,
   items,
   selectionMode,
   layoutType,
@@ -33,6 +34,7 @@ const Template: StoryFn<StoryProps> = ({
     <SectionAccordion
       id={id}
       title={title}
+      description={description}
       items={items}
       selectionMode={selectionMode}
       layoutType={layoutType}
@@ -48,6 +50,7 @@ export const accordion: StoryObj<StoryProps> = {
   args: {
     id: 'section-accordion',
     title: 'Ответы на вопросы',
+    description: 'Описание',
     backgroundColor: SECTION_COLORS.NeutralBackground,
     layoutType: 'desktop',
     items: [

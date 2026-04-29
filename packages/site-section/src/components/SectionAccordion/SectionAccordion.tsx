@@ -29,6 +29,8 @@ export type SectionAccordionProps = WithSupportProps<
       id?: string;
       /** Название секции */
       title: string;
+      /** Описание */
+      description?: string;
       /** Массив айтемов */
       items: AccordionItem[];
       /** Цвет фона */
@@ -43,6 +45,7 @@ export type SectionAccordionProps = WithSupportProps<
 export function SectionAccordion({
   id,
   title,
+  description,
   items,
   selectionMode = 'multiple',
   layoutType,
@@ -57,6 +60,7 @@ export function SectionAccordion({
     <SectionBasic
       id={id}
       title={title}
+      description={description}
       layoutType={layoutType}
       backgroundColor={backgroundColor}
       {...extractSupportProps(rest)}
