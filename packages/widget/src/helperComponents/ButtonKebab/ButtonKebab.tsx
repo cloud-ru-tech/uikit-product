@@ -6,6 +6,8 @@ import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { ButtonOutline, ButtonOutlineProps } from '@snack-uikit/button';
 import { useValueControl } from '@snack-uikit/utils';
 
+import { WIDGET_TEST_IDS } from '../../components/Widget/testIds';
+
 export type ButtonKebabProps = WithLayoutType<{
   button?: Omit<ButtonOutlineProps, 'label' | 'icon'>;
   list: Pick<AdaptiveDroplistProps, 'items' | 'closeDroplistOnItemClick' | 'open' | 'onOpenChange' | 'className'>;
@@ -28,8 +30,15 @@ export function ButtonKebab({ layoutType, button, list }: ButtonKebabProps) {
       }}
       placement='bottom-end'
       size={size}
+      data-test-id={WIDGET_TEST_IDS.kebabDroplist}
     >
-      <ButtonOutline {...button} icon={<KebabSVG />} appearance='neutral' size={size} />
+      <ButtonOutline
+        {...button}
+        icon={<KebabSVG />}
+        appearance='neutral'
+        size={size}
+        data-test-id={WIDGET_TEST_IDS.kebabButton}
+      />
     </AdaptiveDroplist>
   );
 }

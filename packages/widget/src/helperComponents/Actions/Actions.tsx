@@ -3,6 +3,7 @@ import { MouseEvent } from 'react';
 import { AdaptiveDroplistProps, MobileDroplistProps } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { Skeleton } from '@snack-uikit/skeleton';
 
+import { WIDGET_TEST_IDS } from '../../components/Widget/testIds';
 import { WidgetProps } from '../../components/Widget/types';
 import { ButtonKebab } from '../ButtonKebab';
 import { ActionView } from './ActionView';
@@ -83,7 +84,7 @@ export function Actions({
 
   if (wide) {
     return (
-      <div data-wide={wide || undefined} className={styles.actionsWrapper}>
+      <div data-wide={wide || undefined} className={styles.actionsWrapper} data-test-id={WIDGET_TEST_IDS.actions}>
         {actionsChildren}
         {isMobile ? <MobileActions items={actions} /> : <DesktopActions items={actions} />}
       </div>
@@ -94,7 +95,7 @@ export function Actions({
   const kebabItemsMobile = buildKebabItems(actions, primaryActionIndex);
 
   return (
-    <div className={styles.actionsWrapper}>
+    <div className={styles.actionsWrapper} data-test-id={WIDGET_TEST_IDS.actions}>
       {actionsChildren}
       {primaryAction && (
         <ActionView
