@@ -11,7 +11,6 @@ export type MobileDroplistProps = Omit<MobileDropdownProps, 'content'> &
   Pick<DroplistProps, 'closeDroplistOnItemClick'> &
   ListProps & {
     label?: string;
-    virtualized?: boolean;
   };
 
 export function MobileDroplist({
@@ -25,6 +24,7 @@ export function MobileDroplist({
   footer,
   virtualized,
   closeDroplistOnItemClick,
+  scroll,
   ...rest
 }: MobileDroplistProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -51,8 +51,8 @@ export function MobileDroplist({
         selection={selection && { ...selection, onChange: handleSelectItem }}
         size='l'
         search={searchable ? search : undefined}
-        scrollRef={searchable || virtualized ? scrollRef : undefined}
-        scroll={virtualized}
+        scrollRef={searchable || virtualized || scroll ? scrollRef : undefined}
+        scroll={virtualized || scroll || undefined}
         virtualized={virtualized}
         {...rest}
       />
