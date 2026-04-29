@@ -50,6 +50,7 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
   virtualized,
   disableFuzzySearch = false,
   autoApply = true,
+  scroll = true,
   onApprove,
   onCancel,
   ...rest
@@ -174,6 +175,7 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
       }}
       label={label}
       search={searchable ? { value: searchValue, onChange: setSearchValue } : undefined}
+      scroll={scroll}
       virtualized={virtualized}
       footer={
         <div className={styles.footer}>

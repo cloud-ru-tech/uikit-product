@@ -102,6 +102,7 @@ export type ChipChoiceSelectCommonProps<T extends ContentRenderProps = ContentRe
 } & Pick<
     DroplistProps,
     | 'selection'
+    | 'scroll'
     | 'scrollRef'
     | 'scrollContainerRef'
     | 'noDataState'

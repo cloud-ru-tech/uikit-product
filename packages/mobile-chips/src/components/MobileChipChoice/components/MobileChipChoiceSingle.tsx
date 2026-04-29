@@ -36,6 +36,7 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
   open: openProp,
   onOpenChange,
   virtualized,
+  scroll = true,
   disableFuzzySearch = false,
   autoApply = true,
   onApprove,
@@ -158,6 +159,7 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
       }}
       search={searchable ? { value: searchValue, onChange: setSearchValue } : undefined}
       label={label}
+      scroll={scroll}
       virtualized={virtualized}
       footer={!autoApply && autoApplyFooter ? <div className={styles.footer}>{autoApplyFooter}</div> : undefined}
     >

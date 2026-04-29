@@ -1,6 +1,7 @@
 import { TimePickerProps } from '@snack-uikit/calendar';
 
-import { CustomContentRenderProps, MobileChipChoiceRowProps } from '../src';
+import { CustomContentRenderProps, FilterOption, MobileChipChoiceRowProps } from '../src';
+import { BASE_OPTIONS, FILTER_OPTIONS, MANY_BASE_OPTIONS } from './chipChoice/constants';
 import { STORY_TEST_IDS } from './testIds';
 
 export type Filters = {
@@ -129,3 +130,26 @@ export const filtersMock: MobileChipChoiceRowProps<Filters>['filters'] = [
     'data-test-id': STORY_TEST_IDS.MultipleManyOption,
   },
 ];
+
+export function getDefaultValueEntry(options: FilterOption[]) {
+  const first = options[0];
+  return first && 'value' in first ? first.value : undefined;
+}
+
+export function getOptions({
+  showManyOptions,
+  useBaseOptions,
+}: {
+  showManyOptions?: boolean;
+  useBaseOptions?: boolean;
+}) {
+  if (showManyOptions) {
+    return MANY_BASE_OPTIONS;
+  }
+
+  if (useBaseOptions) {
+    return BASE_OPTIONS;
+  }
+
+  return FILTER_OPTIONS;
+}

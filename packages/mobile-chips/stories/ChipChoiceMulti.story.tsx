@@ -5,13 +5,8 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { MobileChipChoice, MobileChipChoiceMultipleProps } from '../src';
 import { ChipChoiceStoryWrap } from './chipChoice/ChipChoiceStoryWrap';
-import {
-  BASE_OPTIONS,
-  CHIP_CHOICE_ARG_TYPES,
-  CHIP_CHOICE_STORY_ARGS,
-  ChipChoiceCustomStoryProps,
-  FILTER_OPTIONS,
-} from './chipChoice/constants';
+import { CHIP_CHOICE_ARG_TYPES, CHIP_CHOICE_STORY_ARGS, ChipChoiceCustomStoryProps } from './chipChoice/constants';
+import { getDefaultValueEntry, getOptions } from './helpers';
 
 const meta: Meta = {
   title: 'Mobile/Chips/ChipChoice',
@@ -19,34 +14,56 @@ const meta: Meta = {
 };
 export default meta;
 
-type StoryProps = MobileChipChoiceMultipleProps & ChipChoiceCustomStoryProps;
+type StoryProps = MobileChipChoiceMultipleProps &
+  ChipChoiceCustomStoryProps & {
+    showManyOptions?: boolean;
+  };
 
-const Template: StoryFn<StoryProps> = ({ useDefaultValue, useBaseOptions, showClickCounter, ...args }: StoryProps) => (
-  <ChipChoiceStoryWrap
-    defaultValue={useDefaultValue ? [BASE_OPTIONS[0].value] : undefined}
-    showClickCounter={showClickCounter}
-    chipControlled={({ increaseCounter, ...props }) => (
-      <MobileChipChoice.Multiple
-        {...args}
-        {...props}
-        options={useBaseOptions ? BASE_OPTIONS : FILTER_OPTIONS}
-        onClick={increaseCounter}
-        label={CHIP_CHOICE_STORY_ARGS.label}
-      />
-    )}
-  />
-);
+const Template: StoryFn<StoryProps> = ({
+  useDefaultValue,
+  useBaseOptions,
+  showManyOptions,
+  showClickCounter,
+  ...args
+}: StoryProps) => {
+  const options = getOptions({ useBaseOptions, showManyOptions });
+  const defaultEntry = getDefaultValueEntry(options);
+  const defaultValue = useDefaultValue && defaultEntry !== undefined ? [defaultEntry] : undefined;
+
+  return (
+    <ChipChoiceStoryWrap
+      defaultValue={defaultValue}
+      showClickCounter={showClickCounter}
+      chipControlled={({ increaseCounter, ...props }) => (
+        <MobileChipChoice.Multiple
+          {...args}
+          {...props}
+          options={options}
+          onClick={increaseCounter}
+          label={CHIP_CHOICE_STORY_ARGS.label}
+        />
+      )}
+    />
+  );
+};
 
 export const chipChoiceMulti: StoryObj<StoryProps> = {
   render: Template,
 
   args: {
     ...CHIP_CHOICE_STORY_ARGS,
+    showManyOptions: false,
     disableFuzzySearch: false,
     autoApply: true,
   },
 
-  argTypes: CHIP_CHOICE_ARG_TYPES,
+  argTypes: {
+    ...CHIP_CHOICE_ARG_TYPES,
+    showManyOptions: {
+      name: '[Stories]: Long options list (scroll)',
+      control: { type: 'boolean' },
+    },
+  },
 
   parameters: {
     readme: {

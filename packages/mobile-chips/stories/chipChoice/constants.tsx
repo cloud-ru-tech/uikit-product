@@ -65,6 +65,11 @@ export const BASE_OPTIONS: BaseOption[] = [
   { value: 'value5', label: 'Option 5' },
 ];
 
+export const MANY_BASE_OPTIONS: BaseOption[] = Array.from({ length: 45 }, (_, index) => ({
+  value: `long-list-value-${index + 1}`,
+  label: `Long list option ${index + 1}`,
+}));
+
 export const CHIP_CHOICE_STORY_ARGS = {
   label: 'Label Text',
   size: SIZE.S,
