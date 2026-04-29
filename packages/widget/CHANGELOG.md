@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.15 (2026-04-29)
+
+
+### Bug Fixes
+
+* **FF-8427:** add data-test-id and test for actions in kebab ([5829040](https://github.com/cloud-ru-tech/uikit-product/commit/5829040c1a3f5cbaa4f5415d87e9be58ea58fff7))
+* **FF-8427:** remove redundant action from kebab in Widget ([078d32b](https://github.com/cloud-ru-tech/uikit-product/commit/078d32b6b115e8dd0f685c2139017b2d2d7c838e))
+
+
+
+
+
 ## 2.2.14 (2026-04-27)
 
 ### Only dependencies have been changed
