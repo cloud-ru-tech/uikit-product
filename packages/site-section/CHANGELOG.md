@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2026-04-30)
+
+
+### Features
+
+* **EVODBAAS-7563:** calculate hostsQuantity for Redis ([fead790](https://github.com/cloud-ru-tech/uikit-product/commit/fead790917457a29ece8158d658a6fe6a53bad7a))
+* **SITE-11200:** add prop description for section accordion ([dc683df](https://github.com/cloud-ru-tech/uikit-product/commit/dc683dfc1d12f4560428dcdfbd9067c3f9c07288))
+
+
+
+
+
 # 1.3.0 (2026-04-27)
 
 
