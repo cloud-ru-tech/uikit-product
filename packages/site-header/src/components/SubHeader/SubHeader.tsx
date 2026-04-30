@@ -1,7 +1,9 @@
 import cn from 'classnames';
 
+import { MobileAlertTop } from '@cloud-ru/uikit-product-mobile-alert';
 import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { AlertTop, AlertTopProps } from '@snack-uikit/alert';
+import { Link } from '@snack-uikit/link';
 
 import styles from './styles.module.scss';
 
@@ -28,20 +30,28 @@ type SubHeaderProps = WithLayoutType<{
 }>;
 
 export function SubHeader({ bannerInfo, onCloseSubHeader, layoutType }: SubHeaderProps) {
+  const isDesktop = layoutType === 'desktop' || layoutType === 'desktopSmall';
+
+  const AlertComponent = isDesktop ? AlertTop : MobileAlertTop;
+
+  const description = bannerInfo.link ? (
+    <Link
+      href={bannerInfo.link}
+      text={bannerInfo.title}
+      size='m'
+      appearance={bannerInfo.color}
+      textMode='on-accent'
+      insideText
+    />
+  ) : (
+    bannerInfo.title
+  );
+
   return (
-    <div className={cn(styles.root, styles[bannerInfo.color])} data-layout-type={layoutType}>
-      <AlertTop
-        className={styles.subHeaderContainer}
-        title={!bannerInfo.link ? bannerInfo.title : undefined}
-        link={
-          bannerInfo.link
-            ? {
-                text: bannerInfo.title,
-                href: bannerInfo.link,
-              }
-            : undefined
-        }
-        description=''
+    <div className={cn(styles.root)} data-color={bannerInfo.color} data-layout-type={layoutType}>
+      <AlertComponent
+        className={cn({ [styles.subHeaderContainer]: isDesktop })}
+        description={description}
         icon={false}
         appearance={APPEARANCE_ALERT[bannerInfo.color]}
         onClose={onCloseSubHeader}
