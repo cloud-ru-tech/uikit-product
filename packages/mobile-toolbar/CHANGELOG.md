@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.17 (2026-04-30)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-mobile-chips@2.0.16]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@2.1.13]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+
+
+
+
+
 ## 2.0.16 (2026-04-27)
 
 ### Only dependencies have been changed

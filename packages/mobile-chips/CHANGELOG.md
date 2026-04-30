@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.16 (2026-04-30)
+
+
+### Bug Fixes
+
+* **PDS-3778:** mobile chip choice multiple scroll fixed without virtualized ([553d3eb](https://github.com/cloud-ru-tech/uikit-product/commit/553d3eba1806f9bdf7ac25ab7c385223d1b70450))
+
+
+
+
+
 ## 2.0.15 (2026-04-27)
 
 ### Only dependencies have been changed

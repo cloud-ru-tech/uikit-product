@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.13 (2026-04-30)
+
+
+### Bug Fixes
+
+* **PDS-3778:** fixed missing scroll without virtualized in mobile droplist ([fa9abb5](https://github.com/cloud-ru-tech/uikit-product/commit/fa9abb5b04bc609b3f6f06112baf16b266b7dfbd))
+
+
+
+
+
 ## 2.1.12 (2026-04-27)
 
 ### Only dependencies have been changed

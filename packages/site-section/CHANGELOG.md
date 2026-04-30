@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.1 (2026-04-30)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-mobile-fields@2.1.2]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-fields/CHANGELOG.md)
+
+
+
+
+
 # 1.4.0 (2026-04-30)
 
 
