@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2026-05-04)
+
+
+### Features
+
+* **PDS-3785:** added suppress header prop ([df11674](https://github.com/cloud-ru-tech/uikit-product/commit/df116741e1b44844fba7cb1cd0e43da75c6868e2))
+
+
+
+
+
 ## 2.2.14 (2026-04-30)
 
 ### Only dependencies have been changed
