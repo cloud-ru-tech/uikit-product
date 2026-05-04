@@ -13,6 +13,7 @@ type TableCardProps<TData extends object> = {
   table: Table<TData>;
   selection: 'multiple' | 'single' | 'none';
   selectionAppearance?: RowAppearance;
+  suppressHeader?: boolean;
 };
 
 export function TableCard<TData extends object>({
@@ -21,6 +22,7 @@ export function TableCard<TData extends object>({
   row,
   selection,
   selectionAppearance = RowAppearance.Disabled,
+  suppressHeader = false,
 }: TableCardProps<TData>) {
   const headerGroups = table.getHeaderGroups();
 
@@ -67,7 +69,9 @@ export function TableCard<TData extends object>({
 
               return (
                 <div className={styles.cardRow} key={header.id || index}>
-                  <div className={styles.cardRowHeader}>{flexRender(column.header, header.getContext())}</div>
+                  {!suppressHeader && (
+                    <div className={styles.cardRowHeader}>{flexRender(column.header, header.getContext())}</div>
+                  )}
                   <div className={styles.cardRowContent}>{flexRender(column.cell, cell.getContext())}</div>
                 </div>
               );

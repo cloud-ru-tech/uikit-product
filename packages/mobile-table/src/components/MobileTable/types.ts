@@ -6,6 +6,7 @@ export type MobileTableProps<TData extends object, TFilters extends FiltersState
   TableProps<TData, TFilters>,
   | 'data'
   | 'columnDefinitions'
+  | 'suppressHeader'
   | 'suppressPagination'
   | 'suppressToolbar'
   | 'suppressSearch'

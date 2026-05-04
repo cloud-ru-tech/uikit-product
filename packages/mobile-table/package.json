@@ -51,7 +51,7 @@
     "@snack-uikit/pagination": "0.10.24",
     "@snack-uikit/skeleton": "0.6.9",
     "@snack-uikit/status": "0.10.12",
-    "@snack-uikit/table": "0.38.5",
+    "@snack-uikit/table": "0.39.0",
     "@snack-uikit/toggles": "0.13.26",
     "@snack-uikit/toolbar": "0.14.22",
     "@snack-uikit/utils": "4.0.1",

@@ -53,6 +53,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
   columnDefinitions,
   headlineId,
   suppressPagination = false,
+  suppressHeader = false,
   suppressToolbar = false,
   suppressSearch = false,
   enableFuzzySearch = false,
@@ -381,7 +382,14 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
         {loading ? (
           <SkeletonContextProvider loading>
             {loadingTableRows.map((row, index) => (
-              <TableCard key={index} headlineId={headlineId} row={row} table={loadingTable} selection='none' />
+              <TableCard
+                key={index}
+                headlineId={headlineId}
+                row={row}
+                table={loadingTable}
+                selection='none'
+                suppressHeader={suppressHeader}
+              />
             ))}
           </SkeletonContextProvider>
         ) : (
@@ -394,6 +402,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
                 table={table}
                 selectionAppearance={rowSelectionProp?.appearance}
                 selection={enableSelection ? selectionMode : 'none'}
+                suppressHeader={suppressHeader}
               />
             ))}
 
