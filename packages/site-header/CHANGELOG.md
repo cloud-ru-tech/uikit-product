@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2026-05-06)
+
+
+### Features
+
+* **SITE-11137:** update SubHeader ([4b5ff55](https://github.com/cloud-ru-tech/uikit-product/commit/4b5ff5571b5e56c1fb27381fcfa802dc48be5057))
+
+
+
+
+
 ## 1.5.7 (2026-04-30)
 
 ### Only dependencies have been changed
