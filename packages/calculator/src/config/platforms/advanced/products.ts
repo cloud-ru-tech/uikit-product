@@ -27,6 +27,7 @@ import { ADVANCED_PRODUCT } from './constants';
 import {
   CLOUD_BACKUP_FORM_CONFIG,
   CLOUD_CONTAINER_ENGINE_FORM_CONFIG,
+  CLOUD_FIREWALL_FORM_CONFIG,
   CLOUD_SERVER_FORM_CONFIG,
   CLOUD_TABLE_FORM_CONFIG,
   DATA_AS_YOU_USE_FORM_CONFIG,
@@ -200,6 +201,17 @@ export const ADVANCED_PRODUCTS: CatalogConfig['products'] = {
     formConfig: CLOUD_BACKUP_FORM_CONFIG,
     icon: CloudBackupAndRecoverySVG,
     enableChangeProductQuantity: false,
+  },
+
+  [ADVANCED_PRODUCT.AdvancedCloudFirewall]: {
+    id: ADVANCED_PRODUCT.AdvancedCloudFirewall,
+    platform: PLATFORM.Advanced,
+    dataTestId: ADVANCED_PRODUCT.AdvancedCloudFirewall,
+    label: 'Advanced Cloud Firewall',
+    caption: 'Защита сетевого трафика облачной инфраструктуры',
+    formConfig: CLOUD_FIREWALL_FORM_CONFIG,
+    icon: PlaceholderSVG,
+    enableChangeProductQuantity: true,
   },
 
   [ADVANCED_PRODUCT.AdvancedCloudContainerEngine]: {

@@ -26,7 +26,11 @@ export const ADVANCED_CATALOG: CatalogConfig['catalog'] = {
       id: CATEGORY.Network,
       label: 'Сеть',
       dataTestId: 'network',
-      visibleProducts: [ADVANCED_PRODUCT.AdvancedNetwork, ADVANCED_PRODUCT.AdvancedElasticLoadBalance],
+      visibleProducts: [
+        ADVANCED_PRODUCT.AdvancedNetwork,
+        ADVANCED_PRODUCT.AdvancedElasticLoadBalance,
+        ADVANCED_PRODUCT.AdvancedCloudFirewall,
+      ],
     },
     {
       id: CATEGORY.Containerization,

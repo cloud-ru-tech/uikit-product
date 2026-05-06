@@ -14,6 +14,7 @@ export const ADVANCED_PRODUCT = {
   AdvancedScalableFile: 'scalableFile',
   AdvancedCloudBackup: 'cloudBackup',
   AdvancedCloudContainerEngine: 'cloudContainerEngine',
+  AdvancedCloudFirewall: 'advancedCloudFirewall',
   AdvancedElasticLoadBalance: 'elasticLoadBalance',
   AdvancedSqlDatabase: 'sqlDatabase',
   AdvancedPostgreSqlDatabase: 'postgreSqlDatabase',

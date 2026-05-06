@@ -1,4 +1,5 @@
 export * from './AdvancedCloudBackup';
+export * from './AdvancedCloudFirewall';
 export * from './AdvancedCloudContainerEngine';
 export * from './AdvancedCloudServer';
 export * from './AdvancedCloudTable';
