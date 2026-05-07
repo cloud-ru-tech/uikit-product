@@ -1,8 +1,0 @@
-@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
-
-.validationContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  background-color: ste.$sys-neutral-background1-level;
-}
