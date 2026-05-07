@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.7.0 (2026-05-07)
+
+
+### Features
+
+* **SITE-11087:** update calc notebooks ([3709f40](https://github.com/cloud-ru-tech/uikit-product/commit/3709f40bb7aeb272e45b92fd8968ab7e51ee562c))
+
+
+
+
+
 ## 1.6.1 (2026-04-30)
 
 ### Only dependencies have been changed
