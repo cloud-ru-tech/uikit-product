@@ -98,6 +98,8 @@ export const heroCentral: StoryObj<StoryProps> = {
     layoutType: LAYOUT_TYPE.Desktop,
     title: 'Cloud.ru — лидер <br/>на рынке облачных и AI-сервисов',
     subtitle: 'Цифровая среда для работы с GenAI',
+    description:
+      'Решение вашей проблемы — всегда в приоритете. Ответим на все вопросы, объясним, как легко и быстро настроить продукты.',
     showButtons: true,
     showSecondaryButton: true,
     showAnchors: true,

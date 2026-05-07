@@ -17,6 +17,8 @@ type HeroBlockProps = WithSupportProps<{
   title: string;
   /** Подзаголовок */
   subtitle: string;
+  /** Описание */
+  description?: string;
   /** ClassName для фоновой картинки */
   classNameImage?: string;
   /** Настройки кнопкок */
@@ -57,9 +59,14 @@ export function HeroCentral({
   classNameImage,
   tooltipText,
   tooltipPlacement,
+  description,
   backgroundImage = DEFAULT_BG_IMAGES,
 }: HeroBlockProps) {
-  const { title: titleTypography, subtitle: subtitleTypography } = TYPOGRAPHY_BY_LAYOUT[layoutType];
+  const {
+    title: titleTypography,
+    subtitle: subtitleTypography,
+    description: descriptionTypography,
+  } = TYPOGRAPHY_BY_LAYOUT[layoutType];
 
   return (
     <section className={cn(styles.root, className)}>
@@ -77,6 +84,11 @@ export function HeroCentral({
             data-layout-type={layoutType}
           >
             <div className={styles.titles} data-layout-type={layoutType}>
+              {description && (
+                <Typography family='sans' {...descriptionTypography} className={styles.description} tag='h2'>
+                  {description}
+                </Typography>
+              )}
               <Typography family='sans' {...titleTypography} className={styles.title} tag='h1'>
                 <span dangerouslySetInnerHTML={{ __html: title }} />
                 <HeroTooltip tooltipText={tooltipText} tooltipPlacement={tooltipPlacement} layoutType={layoutType} />
