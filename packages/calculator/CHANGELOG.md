@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.8.0 (2026-05-14)
+
+
+### Features
+
+* **SITE-11176:** add new calculator fireWall ([a79023f](https://github.com/cloud-ru-tech/uikit-product/commit/a79023fe9100e927f5c89b248ad590b8c49fd39f))
+
+
+
+
+
 # 1.7.0 (2026-05-07)
 
 
