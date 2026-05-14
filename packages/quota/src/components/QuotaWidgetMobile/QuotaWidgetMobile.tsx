@@ -37,7 +37,7 @@ export function QuotaWidgetMobile({
       closeButtonEnabled
       open={isOpen}
       onClose={onClose}
-      title={t('quotas')}
+      title={t('widgetTitle.withoutProject')}
       subtitle={projectName}
       cancelButton={
         isError || !canEditQuota || hideIncreaseQuotaButton

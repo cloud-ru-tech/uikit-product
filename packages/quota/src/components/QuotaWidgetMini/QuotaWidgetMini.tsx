@@ -56,7 +56,7 @@ export function QuotaWidgetMini({
           <>
             <div className={styles.title}>
               <Typography.SansTitleM>
-                <TruncateString maxLines={1} text={t('quotas')} />
+                <TruncateString maxLines={1} text={t('widgetTitle.withoutProject')} />
               </Typography.SansTitleM>
 
               {exhaustedCount > 0 && <Counter value={exhaustedCount} size='s' appearance='red' />}

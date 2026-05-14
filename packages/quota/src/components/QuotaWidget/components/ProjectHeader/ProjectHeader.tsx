@@ -1,4 +1,4 @@
-import { CloudFolderSVG } from '@cloud-ru/uikit-product-icons';
+import { QuotaSVG } from '@cloud-ru/uikit-product-icons';
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { TitleClickable } from '@cloud-ru/uikit-product-title-clickable';
 import { ButtonOutline } from '@snack-uikit/button';
@@ -15,6 +15,8 @@ type ProjectHeaderProps = Pick<
   onQuotasUrlClick?: () => void;
 };
 
+const RUSSIAN_CHARS_REGEXP = /[А-Яа-яЁё]/;
+
 export function ProjectHeader({
   projectName,
   quotasUrl,
@@ -26,14 +28,16 @@ export function ProjectHeader({
 }: ProjectHeaderProps) {
   const { t } = useLocale('Quota');
 
+  const widgetTitle = RUSSIAN_CHARS_REGEXP.test(projectName) ? 'widgetTitle.quotes' : 'widgetTitle.noQuotes';
+
   return (
     <div className={styles.header}>
       <div className={styles.projectWrapper}>
         <TitleClickable
-          title={projectName}
+          title={t(widgetTitle, { project: projectName })}
           href={quotasUrl}
           target='_blank'
-          icon={CloudFolderSVG}
+          icon={QuotaSVG}
           onClick={onQuotasUrlClick}
         />
 

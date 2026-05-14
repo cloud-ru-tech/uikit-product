@@ -1,7 +1,7 @@
 @use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
 
 .tooltip {
-  display: block;
+  display: flex;
 }
 
 .card {
@@ -11,7 +11,8 @@
   padding: 8px;
   background-color: var.$sys-neutral-background-opacity;
   border-radius: 4px;
-  height: stretch;
+  flex: 1;
+  min-width: 0;
 
   &[data-exhausted='true'] {
     background-color: var.$sys-red-background;
