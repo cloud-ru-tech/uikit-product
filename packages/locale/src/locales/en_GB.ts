@@ -372,7 +372,12 @@ export const en_GB = {
   },
   Quota: {
     quotas: 'Quotas',
-    widgetSubtitle: 'Current quota balance',
+    widgetTitle: {
+      withoutProject: 'Project quotas',
+      quotes: 'Project quotas «{{project}}»',
+      noQuotes: 'Project quotas {{project}}',
+    },
+    widgetSubtitle: 'Current balance',
     increaseQuota: 'Increase quota',
     cardAvailable: 'Available',
     cardRemaining: 'Remaining',

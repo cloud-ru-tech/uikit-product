@@ -373,7 +373,12 @@ export const ru_RU: typeof en_GB = {
   },
   Quota: {
     quotas: 'Квоты',
-    widgetSubtitle: 'Остаток по квотам на текущий момент',
+    widgetTitle: {
+      withoutProject: 'Квоты проекта',
+      quotes: 'Квоты проекта «{{project}}»',
+      noQuotes: 'Квоты проекта {{project}}',
+    },
+    widgetSubtitle: 'Остаток на текущий момент',
     increaseQuota: 'Увеличить квоту',
     cardAvailable: 'Доступно',
     cardRemaining: 'Остаток',
