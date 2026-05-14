@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.7.0 (2026-05-14)
+
+
+### Features
+
+* **SITE-11035:** add desc im HeroCentral ([398d4a4](https://github.com/cloud-ru-tech/uikit-product/commit/398d4a4def388e09ab649eddfe594a0e309e2dba))
+
+
+
+
+
 ## 1.6.2 (2026-04-30)
 
 ### Only dependencies have been changed
