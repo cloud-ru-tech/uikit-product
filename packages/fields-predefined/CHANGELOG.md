@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2026-05-14)
+
+
+### BREAKING CHANGES
+
+
+* **LK-7388:** remove FieldAi ([95b0317](https://github.com/cloud-ru-tech/uikit-product/commit/95b03178739bd283313142b5cc352681cdf68ba7))
+
+
+
+
 ## 2.4.7 (2026-04-30)
 
 ### Only dependencies have been changed
