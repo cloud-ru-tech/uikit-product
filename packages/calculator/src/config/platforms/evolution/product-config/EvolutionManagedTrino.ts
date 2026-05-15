@@ -45,7 +45,7 @@ export const EVOLUTION_MANAGED_TRINO_CONFIG: FormConfig = {
       },
       uiProps: {
         min: 2,
-        max: 10,
+        max: 20,
         postfix: 'Шт',
       },
     },
