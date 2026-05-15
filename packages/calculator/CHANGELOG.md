@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.8.1 (2026-05-15)
+
+
+### Bug Fixes
+
+* **SITE-11279:** fast remove EvolutionCloudServer only from view ([2636560](https://github.com/cloud-ru-tech/uikit-product/commit/2636560ecbf5a437a8baae751095a282f1263b45))
+
+
+
+
+
 # 1.8.0 (2026-05-14)
 
 
