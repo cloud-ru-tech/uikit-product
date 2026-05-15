@@ -13,7 +13,6 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       dataTestId: 'popular',
       visibleProducts: [
         EVOLUTION_PRODUCT.EvolutionCloudServer,
-        EVOLUTION_PRODUCT.EvolutionCloudServerFreeTier,
         EVOLUTION_PRODUCT.EvolutionKubernetes,
         EVOLUTION_PRODUCT.EvolutionStorageS3FreeTier,
         EVOLUTION_PRODUCT.EvolutionStorageS3,
@@ -24,7 +23,6 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       label: 'Free Tier',
       dataTestId: 'free-tier',
       visibleProducts: [
-        EVOLUTION_PRODUCT.EvolutionCloudServerFreeTier,
         EVOLUTION_PRODUCT.EvolutionStorageS3FreeTier,
         EVOLUTION_PRODUCT.EvolutionContainerAppsFreeTier,
         EVOLUTION_PRODUCT.EvolutionManagedBI,
@@ -55,11 +53,7 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       id: CATEGORY.Computations,
       label: 'Инфраструктура',
       dataTestId: 'computations',
-      visibleProducts: [
-        EVOLUTION_PRODUCT.EvolutionCloudServer,
-        EVOLUTION_PRODUCT.EvolutionCloudServerFreeTier,
-        EVOLUTION_PRODUCT.EvolutionBareMetal,
-      ],
+      visibleProducts: [EVOLUTION_PRODUCT.EvolutionCloudServer, EVOLUTION_PRODUCT.EvolutionBareMetal],
     },
     {
       id: CATEGORY.Network,
