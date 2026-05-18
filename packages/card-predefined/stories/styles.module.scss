@@ -21,6 +21,12 @@
   width: 334px
 }
 
+.cardServiceLight {
+  @include wrapperStyles;
+
+  width: 256px;
+}
+
 .wrapper {
   @include wrapperStyles;
 

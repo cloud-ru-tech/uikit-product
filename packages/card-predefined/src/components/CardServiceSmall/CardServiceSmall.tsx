@@ -32,6 +32,7 @@ function isIconProps(
   return Boolean(props && 'icon' in props);
 }
 
+/** @deprecated use CardServiceLight instead */
 export function CardServiceSmall({
   href,
   promoBadge,

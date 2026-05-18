@@ -1,0 +1,108 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ste;
+
+$side: ste.$icon-s;
+
+.favoriteWrapper {
+  position: relative;
+  flex-shrink: 0;
+  height: $side;
+  width: $side;
+  border-radius: 2px;
+  background-color: ste.$sys-neutral-background1-level;
+  box-shadow: ste.$box-shadow-elevation-level2;
+
+  &[data-visibility-strategy='hover'] {
+    visibility: hidden;
+
+    &:not(&[data-checked]) {
+      position: absolute;
+      right: 4px;
+    }
+  }
+
+  &[data-visibility-strategy='always'] {
+    visibility: visible;
+  }
+}
+
+.card {
+  display: flex;
+  flex: 1 0 0;
+  min-width: 228px;
+  width: 100%;
+  align-items: center;
+  position: relative;
+
+  padding: 0;
+  border: none;
+
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  &:focus-visible {
+    @include ste.outline-var(ste.$container-focused-s);
+
+    border-color: ste.$sys-available-complementary;
+    border-radius: 4px;
+  }
+
+  &:hover,
+  &:focus-within {
+    &:before {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      border-radius: 4px;
+      opacity: 0.08;
+      background-color: ste.$sys-neutral-accent-default;
+    }
+
+    .favoriteWrapper {
+      visibility: visible;
+    }
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  padding: 4px;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  min-height: 24px;
+  align-items: center;
+  gap: 4px;
+  max-width: 100%;
+  min-width: 0;
+  flex-grow: 1;
+}
+
+.icon {
+  height: $side;
+  width: $side;
+
+  flex-shrink: 0;
+
+  & > svg {
+    height: $side;
+    width: $side;
+  }
+}
+
+.title {
+  color: ste.$sys-neutral-text-main;
+  min-width: 0; // Fixes sluggish truncate behavior
+}
