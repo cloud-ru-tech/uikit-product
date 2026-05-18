@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.9.0 (2026-05-18)
+
+
+### Features
+
+* **EVODP-9380:** update node_max from 10 to 20 in flavors ([91685e8](https://github.com/cloud-ru-tech/uikit-product/commit/91685e8ee1957e2cb4179d0e41dd470ac2cc95f2))
+
+
+
+
+
 ## 1.8.1 (2026-05-15)
 
 
