@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.7.2 (2026-05-18)
+
+
+### Bug Fixes
+
+* **LK-4117:** update quota locales ([bfbdec5](https://github.com/cloud-ru-tech/uikit-product/commit/bfbdec58340396c8c722ae4c62493e95f7d2209d))
+
+
+
+
+
 ## 2.7.1 (2026-04-23)
 
 

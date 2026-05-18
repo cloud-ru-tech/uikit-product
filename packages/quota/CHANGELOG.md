@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.3 (2026-05-18)
+
+
+### Bug Fixes
+
+* **LK-4117:** changed widget icon and title ([014c432](https://github.com/cloud-ru-tech/uikit-product/commit/014c432a3f00c5987f18370eb2906620a696d102))
+
+
+
+
+
 ## 2.1.2 (2026-04-28)
 
 
