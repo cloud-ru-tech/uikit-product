@@ -1,19 +1,21 @@
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { MobileDrawerCustom } from '@cloud-ru/uikit-product-mobile-drawer';
-import { isBaseItemProps, List } from '@snack-uikit/list';
+import { List } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';
 import { useValueControl } from '@snack-uikit/utils';
 
+import { useMenuItems } from '../../hooks/useMenuItems';
+import { MainMenuProps } from '../../types';
+import { mapInnerLinksToListItems } from '../../utils';
 import { Content } from '../Content';
-import { useMenuItems } from '../hooks';
 import { SearchMobile } from '../Search';
-import { MainMenuProps } from '../types';
 import styles from './styles.module.scss';
 
 export function MenuMobile({
   open: openProp,
   setOpen: setOpenProp,
   settingItems,
+  platformsGroups,
   leftTop,
   rightTop,
   serviceGroups,
@@ -31,6 +33,8 @@ export function MenuMobile({
     serviceGroups,
     search,
     favorite,
+    settingItems,
+    platformsGroups,
   });
 
   return (
@@ -48,7 +52,7 @@ export function MenuMobile({
 
       <Scroll barHideStrategy='never'>
         <div className={styles.scrollMobile}>
-          {top && <div className={styles.rightContent}>{leftTop}</div>}
+          {leftTop && <div className={styles.rightContent}>{leftTop}</div>}
 
           {!isInitialEmptyCards && (
             <Content
@@ -68,10 +72,10 @@ export function MenuMobile({
 
           {isInitialEmptyCards && rightTop && <div className={styles.bannersWrap}>{rightTop}</div>}
 
-          {settingItems.length > 0 && (
+          {settingItems.items.length > 0 && (
             <List
               className={styles.settings}
-              items={[{ type: 'group', items: [], divider: true }, ...settingItems.filter(isBaseItemProps)]}
+              items={[{ type: 'group', items: [], divider: true }, ...mapInnerLinksToListItems(settingItems.items)]}
               size='m'
               barHideStrategy='never'
             />

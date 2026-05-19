@@ -2,14 +2,15 @@ import { MainMenuSVG } from '@cloud-ru/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 import { useValueControl } from '@snack-uikit/utils';
 
-import { MenuDesktop } from './MenuDesktop';
-import { MenuMobile } from './MenuMobile';
+import { MenuDesktop } from './helperComponents/MenuDesktop';
+import { MenuMobile } from './helperComponents/MenuMobile';
 import { MainMenuProps } from './types';
 
 export function MainMenu({
   open: openProp,
   setOpen: setOpenProp,
   settingItems,
+  platformsGroups,
   leftTop,
   rightTop,
   serviceGroups,
@@ -39,6 +40,7 @@ export function MainMenu({
         onLinkChange={onLinkChange}
         settingItems={settingItems}
         serviceGroups={serviceGroups}
+        platformsGroups={platformsGroups}
         search={search}
         leftTop={leftTop}
         rightTop={rightTop}

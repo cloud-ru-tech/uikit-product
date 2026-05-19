@@ -3,7 +3,24 @@ import { Page } from '@playwright/test';
 import { dataTestIdSelector } from '../../../../playwright/utils';
 import { HEADER_TEST_ID } from './constants';
 
-export function getSelectors(page: Page) {
+export type GetSelectorsOptions = {
+  isMobile?: boolean;
+};
+
+export function getSelectors(page: Page, options: GetSelectorsOptions = {}) {
+  // Mobile: scope к drawer. Desktop: контент drawer в portal — локаторы на `page` (как до рефакторинга).
+  const drawer = options.isMobile ? page.locator(dataTestIdSelector('header__drawer-menu-mobile')) : page;
+
+  const drawerSearch = drawer.locator(dataTestIdSelector('header__drawer-menu__search'));
+
+  const drawerSearchSettingsFuzzyOption = options.isMobile
+    ? page.locator(dataTestIdSelector('list__base-item_fuzzy'))
+    : page.locator(dataTestIdSelector('header__drawer-menu__search-option-fuzzy'));
+
+  const drawerSearchSettingsPreciseOption = options.isMobile
+    ? page.locator(dataTestIdSelector('list__base-item_precise'))
+    : page.locator(dataTestIdSelector('header__drawer-menu__search-option-precise'));
+
   const selectors = {
     header: page.locator(dataTestIdSelector(HEADER_TEST_ID)),
 
@@ -23,20 +40,18 @@ export function getSelectors(page: Page) {
     headerDrawerMenuSelect: page.locator(dataTestIdSelector('header__drawer-menu__select-platform')),
     selectPlatformValue: page.locator(dataTestIdSelector('header__drawer-menu__select-platform__name')),
 
-    drawerSearchInput: page.locator(dataTestIdSelector('header__drawer-menu__search')).locator('input'),
-    drawerSearchClearButton: page
-      .locator(dataTestIdSelector('header__drawer-menu__search'))
-      .locator(dataTestIdSelector('button-clear-value')),
-    drawerSearchSettingsButton: page
-      .locator(dataTestIdSelector('header__drawer-menu__search'))
-      .locator(dataTestIdSelector('header__drawer-menu__search-config-button')),
-    drawerSearchSettingsFuzzyOption: page.locator(dataTestIdSelector('header__drawer-menu__search-option-fuzzy')),
-    drawerSearchSettingsPreciseOption: page.locator(dataTestIdSelector('header__drawer-menu__search-option-precise')),
-    mobileSearchTriggerButton: page.locator(dataTestIdSelector('header__drawer-menu__close-search-icon')),
+    drawer,
+    drawerSearch,
+    drawerSearchInput: drawerSearch.locator('input'),
+    drawerSearchClearButton: drawerSearch.locator(dataTestIdSelector('button-clear-value')),
+    drawerSearchSettingsButton: drawerSearch.locator(dataTestIdSelector('header__drawer-menu__search-config-button')),
+    drawerSearchSettingsFuzzyOption,
+    drawerSearchSettingsPreciseOption,
+    mobileSearchTriggerButton: drawer.locator(dataTestIdSelector('header__drawer-menu__close-search-icon')),
     drawerMenuButton: page.locator(dataTestIdSelector('header__drawer-menu-button')),
-    drawerCardsList: page.locator(dataTestIdSelector('header__drawer-menu__group-cards-list')),
-    drawerMenuNoItemsResults: page.locator(dataTestIdSelector('header__drawer-menu__no-data')),
-    drawerMenuNoFoundResults: page.locator(dataTestIdSelector('header__drawer-menu__no-data-found')),
+    drawerCardsList: drawer.locator(dataTestIdSelector('header__drawer-menu__group-cards-list')),
+    drawerMenuNoItemsResults: drawer.locator(dataTestIdSelector('header__drawer-menu__no-data')),
+    drawerMenuNoFoundResults: drawer.locator(dataTestIdSelector('header__drawer-menu__no-data-found')),
   };
 
   return {
@@ -51,20 +66,28 @@ export function getSelectors(page: Page) {
       page
         .locator(dataTestIdSelector(`header__select-group-platform__item-${id}`))
         .locator(dataTestIdSelector('list__base-item-option')),
-    getDrawerMenuCard: (id: string) => page.locator(dataTestIdSelector(`header__drawer-menu__group-card-${id}`)),
-    getDrawerMenuItem: (id: string) => page.locator(dataTestIdSelector(`header__drawer-menu__link-${id}`)),
+    getDrawerMenuCard: (id: string) => drawer.locator(dataTestIdSelector(`header__drawer-menu__group-card-${id}`)),
+    getDrawerMenuItem: (id: string) => drawer.locator(dataTestIdSelector(`header__drawer-menu__link-${id}`)),
+    getDrawerMenuItemInGroup: (groupId: string, itemId: string) =>
+      drawer
+        .locator(dataTestIdSelector(`header__drawer-menu__group-card-${groupId}`))
+        .locator(dataTestIdSelector(`header__drawer-menu__link-${itemId}`)),
     getDrawerMenuFavouriteItem: (id: string) =>
-      page
+      drawer
         .locator(dataTestIdSelector('header__drawer-menu__group-card-favorite'))
         .locator(dataTestIdSelector(`header__drawer-menu__link-${id}`)),
     getFavouriteButton: (id: string) =>
-      page
+      drawer
         .locator(dataTestIdSelector(`header__drawer-menu__link-${id}`))
         .locator(dataTestIdSelector('card-service-small__favorite-native-input')),
     getDrawerMenuSearchResultGroupByText: (text: string) =>
-      page.locator('[data-test-id^="header__drawer-menu__group-card-"]').filter({ hasText: text }),
-    getDrawerMenuSearchResultLinkByText: (text: string) =>
-      page.locator('[data-test-id^="header__drawer-menu__link-"]').filter({ hasText: text }),
+      drawer.locator('[data-test-id^="header__drawer-menu__group-card-"]').filter({ hasText: text }),
+    getDrawerMenuSearchResultLinkInGroup: (groupLabel: string, linkLabel: string) =>
+      drawer
+        .locator('[data-test-id^="header__drawer-menu__group-card-"]')
+        .filter({ hasText: groupLabel })
+        .locator('[data-test-id^="header__drawer-menu__link-"]')
+        .filter({ hasText: linkLabel }),
     getSortItem: (id: string) => page.locator(dataTestIdSelector(`list__base-item_${id}`)),
   };
 }

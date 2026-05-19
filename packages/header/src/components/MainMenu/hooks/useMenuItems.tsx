@@ -1,47 +1,19 @@
-import debounce from 'lodash.debounce';
 import { useEffect, useMemo, useRef } from 'react';
 
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { BaseItemProps } from '@snack-uikit/list';
 
-import { SearchHandler } from './Search/types';
-import styles from './styles.module.scss';
-import { InnerLink, LinksGroup, MainMenuProps } from './types';
+import styles from '../styles.module.scss';
+import { InnerLink, LinksGroup, MainMenuProps, SearchHandler } from '../types';
+import { pinAdminGroupToBottom } from '../utils';
+import { useHighlight } from './useHighlight';
 
-export function useHighlight(className: string) {
-  const element = useRef<HTMLElement>();
+type UseMenuItemsProps = Pick<
+  MainMenuProps,
+  'favorite' | 'serviceGroups' | 'search' | 'settingItems' | 'platformsGroups'
+>;
 
-  const highlight = useMemo(
-    () => {
-      const scheduleHighlight = debounce(() => {
-        element.current?.classList.add(className);
-        setTimeout(
-          () => {
-            element.current?.classList.remove(className);
-            element.current = undefined;
-          },
-          300,
-          { trailing: false },
-        );
-      }, 80);
-
-      return (elementToHighlight?: HTMLElement | null) => {
-        if (elementToHighlight) {
-          element.current = elementToHighlight;
-        }
-        scheduleHighlight();
-      };
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
-  );
-
-  return highlight;
-}
-
-type UseMenuItemsProps = Pick<MainMenuProps, 'favorite' | 'serviceGroups' | 'search'>;
-
-export function useMenuItems({ search, serviceGroups, favorite }: UseMenuItemsProps) {
+export function useMenuItems({ search, serviceGroups, favorite, settingItems, platformsGroups }: UseMenuItemsProps) {
   const { t } = useLocale('Header');
 
   const { searchValue = '', searchFn, searchFunctions, onSearchValueChange, onSearchNoResult } = search || {};
@@ -124,9 +96,36 @@ export function useMenuItems({ search, serviceGroups, favorite }: UseMenuItemsPr
 
   const itemsWithoutEmptyGroups = groupWithFavorites.filter(group => group.items.length > 0);
 
-  const resultItems =
-    (searchFn ? searchFnMap?.[searchFn] : searchFunctions?.[0]?.handler)?.(searchValue, itemsWithoutEmptyGroups) ||
-    itemsWithoutEmptyGroups;
+  const hasPlatformsGroups = platformsGroups.length > 0;
+  const hasAdministrativeItems = settingItems.items.length > 0;
+
+  const resultItems = useMemo(() => {
+    if (!searchValue) {
+      return itemsWithoutEmptyGroups;
+    }
+
+    const handler = searchFn ? searchFnMap?.[searchFn] : searchFunctions?.[0]?.handler;
+
+    const serviceResults = handler?.(searchValue, itemsWithoutEmptyGroups) ?? itemsWithoutEmptyGroups;
+
+    const platformResults = hasPlatformsGroups ? (handler?.(searchValue, platformsGroups) ?? []) : [];
+
+    const adminResults = hasAdministrativeItems ? (handler?.(searchValue, [settingItems]) ?? []) : [];
+
+    const combined = [...serviceResults, ...platformResults, ...adminResults];
+
+    return pinAdminGroupToBottom(combined, settingItems.id);
+  }, [
+    searchFn,
+    searchFnMap,
+    searchFunctions,
+    searchValue,
+    itemsWithoutEmptyGroups,
+    platformsGroups,
+    hasPlatformsGroups,
+    settingItems,
+    hasAdministrativeItems,
+  ]);
 
   useEffect(() => {
     if (searchValue && !resultItems.length) {

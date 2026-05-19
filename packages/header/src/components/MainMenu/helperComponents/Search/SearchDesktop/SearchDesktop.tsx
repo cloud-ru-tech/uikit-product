@@ -4,8 +4,8 @@ import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { ChipToggle } from '@snack-uikit/chips';
 import { Search } from '@snack-uikit/search';
 
+import { SearchProps } from '../../../types';
 import { SearchSettingsButton } from '../SearchSettingsButton';
-import { SearchProps } from '../types';
 import styles from './styles.module.scss';
 
 export const SearchDesktop = forwardRef<HTMLDivElement, SearchProps>(

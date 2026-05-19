@@ -6,7 +6,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { MainMenu, useSearch } from '../src';
-import { SERVICE_GROUPS, SETTING_ITEMS } from './constants';
+import { ADMINISTRATIVE_SECTION, PLATFORMS_GROUPS, SERVICE_GROUPS } from './constants';
 import { Banners, ProductSelect, ProjectSelectMobile } from './PlugElement';
 
 const meta: Meta = {
@@ -65,8 +65,9 @@ function Template({
       }
       favorite={showFavorite ? { value: favoriteItems, onChange: onFavoriteChange } : undefined}
       search={showSearch ? search : undefined}
-      settingItems={SETTING_ITEMS}
+      settingItems={ADMINISTRATIVE_SECTION}
       serviceGroups={showServiceGroups ? SERVICE_GROUPS : []}
+      platformsGroups={PLATFORMS_GROUPS}
     />
   );
 }

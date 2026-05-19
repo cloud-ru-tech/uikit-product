@@ -2,20 +2,22 @@ import cn from 'classnames';
 import { useCallback, useMemo } from 'react';
 
 import { DrawerCustom } from '@snack-uikit/drawer';
-import { isBaseItemProps, List } from '@snack-uikit/list';
+import { List } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';
 import { useValueControl } from '@snack-uikit/utils';
 
+import { useMenuItems } from '../../hooks/useMenuItems';
+import { MainMenuProps } from '../../types';
+import { mapInnerLinksToListItems } from '../../utils';
 import { Content } from '../Content';
-import { useMenuItems } from '../hooks';
 import { SearchDesktop } from '../Search';
-import { MainMenuProps } from '../types';
 import styles from './styles.module.scss';
 
 export function MenuDesktop({
   open: openProp,
   setOpen: setOpenProp,
   settingItems,
+  platformsGroups,
   leftTop,
   rightTop,
   serviceGroups,
@@ -29,6 +31,8 @@ export function MenuDesktop({
     serviceGroups,
     search,
     favorite,
+    settingItems,
+    platformsGroups,
   });
 
   const isInitialEmptyCards = serviceGroups?.length === 0;
@@ -36,11 +40,11 @@ export function MenuDesktop({
 
   const settingItemsWithClassName = useMemo(
     () =>
-      settingItems.filter(isBaseItemProps).map(item => ({
+      mapInnerLinksToListItems(settingItems.items).map(item => ({
         ...item,
         className: styles.item,
       })),
-    [settingItems],
+    [settingItems.items],
   );
 
   const groupItemsWithClass = useMemo(

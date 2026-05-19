@@ -4,7 +4,8 @@ import { CardServiceSmall } from '@cloud-ru/uikit-product-card-predefined';
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { TitleClickable } from '@cloud-ru/uikit-product-title-clickable';
 
-import { LinksGroup } from '../types';
+import { LinksGroup } from '../../types';
+import { getLinkEmblem } from '../../utils';
 import styles from './styles.module.scss';
 
 export type ContentProps = {
@@ -72,7 +73,7 @@ export function Content({
 
   const cards = useMemo(
     () =>
-      serviceGroups?.map(({ id, label, items }) => (
+      serviceGroups?.map(({ id, label, items, favoritesEnabled = true }) => (
         <div key={String(id)} className={styles.card} id={id} data-test-id={`header__drawer-menu__group-card-${id}`}>
           {!label.onClick ? (
             <span className={styles.cardTitle}>{label.text}</span>
@@ -85,16 +86,16 @@ export function Content({
               <CardServiceSmall
                 key={String(id) + service.id}
                 title={service.label}
-                emblem={{ icon: service.icon }}
+                emblem={getLinkEmblem(service)}
                 data-test-id={`header__drawer-menu__link-${service.id}`}
                 outline
                 href={service.href}
                 onClick={wrappedClick(service, () => onLinkChange?.(service.id))}
                 favorite={
-                  favorite
+                  favorite && favoritesEnabled
                     ? {
-                        checked: favorite?.value.includes(service.id),
-                        onChange: favorite?.onChange(service.id),
+                        checked: favorite.value.includes(service.id),
+                        onChange: favorite.onChange(service.id),
                         visibilityStrategy: isMobile ? 'always' : 'hover',
                         enabled: !service.disabled,
                       }

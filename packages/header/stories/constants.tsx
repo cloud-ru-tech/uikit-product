@@ -531,16 +531,88 @@ export const SERVICE_GROUPS: LinksGroup[] = [
   },
 ];
 
-export const SETTING_ITEMS = [
-  'Мониторинг',
-  'Контроль затрат',
-  'Администрирование',
-  'Пользователи',
-  'Поддержка',
-  'Документация',
-].map(label => ({
+export const ADMINISTRATIVE_SECTION: LinksGroup = {
+  label: { text: 'Административные сервисы' },
+  id: 'adminServices',
+  favoritesEnabled: false,
+  items: [
+    { id: 'monitoring', label: 'Мониторинг', aliases: [] },
+    { id: 'costControl', label: 'Контроль затрат', aliases: ['биллинг', 'billing'] },
+    { id: 'administration', label: 'Администрирование', aliases: [] },
+    { id: 'users', label: 'Пользователи', aliases: [] },
+    { id: 'support', label: 'Поддержка', aliases: ['helpdesk', 'помощь'] },
+    { id: 'documentation', label: 'Документация', aliases: [] },
+  ].map(item => ({
+    ...item,
+    icon: PlaceholderSVG,
+    onClick: EMPTY_ON_CLICK,
+    href: EMPTY_HREF,
+  })),
+};
+
+export const SETTING_ITEMS = ADMINISTRATIVE_SECTION.items.map(({ id, label }) => ({
+  id,
   content: {
     option: label,
   },
   beforeContent: <PlaceholderSVG />,
+  onClick: EMPTY_ON_CLICK,
+  href: EMPTY_HREF,
 }));
+
+export const PLATFORMS_GROUPS: LinksGroup[] = [
+  {
+    label: { text: 'Облачные продукты' },
+    id: 'cloudProductsPlatforms',
+    aliases: ['платформы'],
+    favoritesEnabled: false,
+    items: [
+      {
+        id: 'evolutionPlatform',
+        label: 'Evolution',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        icon: PlaceholderSVG,
+        aliases: ['эволюшн'],
+      },
+      {
+        id: 'advancedPlatform',
+        label: 'Advanced',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        icon: PlaceholderSVG,
+        aliases: ['адвансд'],
+      },
+      {
+        id: 'vmWarePlatform',
+        label: 'Облако VMware',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        icon: PlaceholderSVG,
+        aliases: ['варя', 'вмваре'],
+      },
+    ],
+  },
+  {
+    label: { text: 'Другие продукты' },
+    id: 'otherProductsPlatforms',
+    aliases: ['прочие', 'платформы'],
+    favoritesEnabled: false,
+    items: [
+      {
+        id: 'partnerPlatform',
+        label: 'Партнерский кабинет',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        aliases: [],
+      },
+      {
+        id: 'marketplacePlatform',
+        label: 'Маркетплейс',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        aliases: ['appstore', 'магазин'],
+      },
+    ],
+  },
+];

@@ -8,8 +8,8 @@ import { List } from '@snack-uikit/list';
 import { Search } from '@snack-uikit/search';
 import { Typography } from '@snack-uikit/typography';
 
+import { SearchProps } from '../../../types';
 import { SearchSettingsButton } from '../SearchSettingsButton';
-import { SearchProps } from '../types';
 import { SEARCH_TRANSITION_TIMEOUT } from './constants';
 import { useSearchAnimation } from './hooks';
 import styles from './styles.module.scss';
