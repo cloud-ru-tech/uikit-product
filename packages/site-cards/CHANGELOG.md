@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2026-05-21)
+
+
+### Features
+
+* **SITE-10945:** upd cardBasic for section benefits ([6834fda](https://github.com/cloud-ru-tech/uikit-product/commit/6834fdaf23d07ad0e998c314be0eec6865be059d))
+
+
+
+
+
 ## 1.1.11 (2026-04-27)
 
 ### Only dependencies have been changed
