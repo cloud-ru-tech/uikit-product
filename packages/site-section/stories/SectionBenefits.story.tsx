@@ -2,7 +2,7 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useMemo } from 'react';
 
 import { PlaceholderSVG } from '@cloud-ru/uikit-product-icons';
-import { CardInfoProps, CardProductProps } from '@cloud-ru/uikit-product-site-cards';
+import { CardBasicProps, CardInfoProps, CardProductProps } from '@cloud-ru/uikit-product-site-cards';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -15,13 +15,17 @@ export default meta;
 
 const TABS = Array.from({ length: 3 }, (_, i) => ({ value: i.toString(), label: `Title ${i + 1}` }));
 
-const CARD_BASIC_ITEMS = Array.from({ length: 8 }, (_, i) => ({
+type CardBasicItem = Omit<CardBasicProps, 'layoutType'>;
+type IconPosition = NonNullable<CardBasicProps['icon']>['position'];
+
+const getCardBasicIcon = (position?: IconPosition): CardBasicItem['icon'] =>
+  Object.assign(PlaceholderSVG, { position });
+
+const CARD_BASIC_ITEMS: CardBasicItem[] = Array.from({ length: 8 }, (_, i) => ({
   title: `Title ${i + 1}`,
   description: `description ${i + 1}`,
   icon: PlaceholderSVG,
 }));
-
-const CONTENT_BASIC = Array.from({ length: 3 }, (_, i) => ({ tabValue: i.toString(), cards: CARD_BASIC_ITEMS }));
 
 const CARD_INFO_ITEMS = Array.from({ length: 8 }, (_, i) => ({
   title: `Title ${i + 1}`,
@@ -47,7 +51,11 @@ const CARD_PRODUCT_ITEMS = Array.from({ length: 8 }, (_, i) => ({
 const CONTENT_INFO = Array.from({ length: 3 }, (_, i) => ({ tabValue: i.toString(), cards: CARD_INFO_ITEMS }));
 const CONTENT_PRODUCT = Array.from({ length: 3 }, (_, i) => ({ tabValue: i.toString(), cards: CARD_PRODUCT_ITEMS }));
 
-type StoryProps = SectionBenefitsProps & { withTabs: boolean; buttonsExample?: 'buttons' | 'links' };
+type StoryProps = SectionBenefitsProps & {
+  withTabs: boolean;
+  iconPosition?: IconPosition;
+  buttonsExample?: 'buttons' | 'links';
+};
 
 const Template: StoryFn<StoryProps> = ({
   id,
@@ -60,14 +68,26 @@ const Template: StoryFn<StoryProps> = ({
   description,
   columnsConfig,
   withTabs,
+  iconPosition,
   buttonsExample,
   backgroundColor,
   buttonsAlign = 'left',
   note,
   ...rest
 }) => {
-  const contentBasicWithTabs = { tabBarItems: TABS, content: CONTENT_BASIC };
-  const contentBasicWithoutTabs = { content: CARD_BASIC_ITEMS };
+  const cardBasicItems = useMemo<CardBasicItem[]>(
+    () =>
+      CARD_BASIC_ITEMS.map(item => ({
+        ...item,
+        icon: getCardBasicIcon(iconPosition),
+      })),
+    [iconPosition],
+  );
+  const contentBasicWithTabs = {
+    tabBarItems: TABS,
+    content: TABS.map(({ value }) => ({ tabValue: value, cards: cardBasicItems })),
+  };
+  const contentBasicWithoutTabs = { content: cardBasicItems };
 
   const contentInfoWithTabs = { tabBarItems: TABS, content: CONTENT_INFO };
   const contentInfoWithoutTabs = { content: CARD_INFO_ITEMS };
@@ -167,6 +187,7 @@ export const benefits: StoryObj<StoryProps> = {
     type: 'basic',
     layoutType: 'desktop',
     backgroundColor: 'neutral-background',
+    iconPosition: 'left',
     columnsConfig: {
       desktop: { amount: 4, minWidth: 298 },
       desktopSmall: { amount: 3, minWidth: 298 },
@@ -179,6 +200,11 @@ export const benefits: StoryObj<StoryProps> = {
   argTypes: {
     outline: { if: { arg: 'type', eq: 'info' } },
     withTabs: { name: '[Story]: With tabs' },
+    iconPosition: {
+      if: { arg: 'type', eq: 'basic' },
+      options: ['left', 'top'],
+      control: { type: 'select' },
+    },
     buttonsExample: {
       name: '[Story]: Footer button or link example',
       options: ['buttons', 'links', undefined],

@@ -16,7 +16,7 @@ export type CardBasicProps = WithSupportProps<
     /** Описание карточки */
     description?: string;
     /** Слот под иконку/картинку/кастомную ноду */
-    icon?: IconProps['icon'] | null;
+    icon?: (IconProps['icon'] & { position?: 'left' | 'top' }) | null;
     /** CSS-класс */
     className?: string;
   }>
@@ -37,6 +37,7 @@ export function CardBasic({
       data-layout-type={layoutType}
       className={cn(styles.wrapper, className)}
       data-test-id={dataTestId}
+      data-direction-column={icon?.position || undefined}
     >
       {icon && <Icon icon={icon} size={getIconSize(layoutType)} data-test-id={`${dataTestId}__icon`} />}
 

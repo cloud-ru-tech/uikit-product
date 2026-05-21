@@ -42,4 +42,9 @@
       justify-content: normal;
     }
   }
+
+  &[data-direction-column='top'] {
+    flex-direction: column;
+    gap: ste.$dimension-1m;
+  }
 }
