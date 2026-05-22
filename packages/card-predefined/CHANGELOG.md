@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2026-05-22)
+
+
+### Features
+
+* **FF-8339:** new CardServiceLight, deprecated CardServiceSmall ([2a0fdbf](https://github.com/cloud-ru-tech/uikit-product/commit/2a0fdbf21e02a5569b2545e5f67cf583843af202))
+
+
+
+
+
 ## 1.1.12 (2026-04-27)
 
 ### Only dependencies have been changed
