@@ -1,6 +1,6 @@
 import { type InputMask } from 'imask';
 import mergeRefs from 'merge-refs';
-import { forwardRef } from 'react';
+import { forwardRef, useEffect } from 'react';
 import { useIMask } from 'react-imask';
 
 import { AdaptiveFieldText, FieldTextProps } from '@cloud-ru/uikit-product-mobile-fields';
@@ -32,6 +32,13 @@ export const FieldMask = forwardRef<HTMLInputElement, FieldMaskProps>(
         onAccept: onChange,
       },
     );
+
+    useEffect(() => {
+      if (valueProp !== undefined && valueProp !== value) {
+        setValue(valueProp);
+      }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [valueProp]);
 
     return (
       <AdaptiveFieldText
