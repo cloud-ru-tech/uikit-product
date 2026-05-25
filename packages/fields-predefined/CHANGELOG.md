@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.1 (2026-05-25)
+
+
+### Bug Fixes
+
+* **UIIAAS-1993:** fix field mask setValue ([8439f4d](https://github.com/cloud-ru-tech/uikit-product/commit/8439f4d152cf76c2e2da8d9adc46a8e48b911015))
+
+
+
+
+
 # 3.0.0 (2026-05-14)
 
 
