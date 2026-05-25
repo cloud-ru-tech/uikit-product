@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.1 (2026-05-25)
+
+
+### Bug Fixes
+
+* **FF-8339:** CardServiceLight icon color ([6369158](https://github.com/cloud-ru-tech/uikit-product/commit/63691583ad9ea1f443037d08b066c1e12db56a35))
+
+
+
+
+
 # 1.2.0 (2026-05-22)
 
 
