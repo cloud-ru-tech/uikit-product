@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.9.1 (2026-05-26)
+
+
+### Bug Fixes
+
+* **SITE-11331:** fix link calc ([867f543](https://github.com/cloud-ru-tech/uikit-product/commit/867f5430c55378211ea73ac4709a0170deff7ffe))
+
+
+
+
+
 # 1.9.0 (2026-05-18)
 
 
