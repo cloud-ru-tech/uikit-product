@@ -170,6 +170,7 @@ export const serviceLight: StoryObj<StoryProps> = {
     favoriteControlled: true,
     favoriteChecked: false,
     truncateTitle: 1,
+    layoutType: 'desktop',
   },
 
   argTypes: {

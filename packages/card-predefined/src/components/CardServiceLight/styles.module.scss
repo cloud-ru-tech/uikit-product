@@ -80,6 +80,7 @@ $side: ste.$icon-s;
   gap: 8px;
   flex: 1;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .content {
@@ -90,6 +91,10 @@ $side: ste.$icon-s;
   max-width: 100%;
   min-width: 0;
   flex-grow: 1;
+
+  &[data-layout-type='mobile'] {
+    min-height: 32px;
+  }
 }
 
 .icon {

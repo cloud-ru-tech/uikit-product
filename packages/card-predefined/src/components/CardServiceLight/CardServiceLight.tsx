@@ -14,10 +14,10 @@ import {
 import { useUncontrolledProp } from 'uncontrollable';
 
 import { PromoTagPredefined, PromoTagPredefinedProps } from '@cloud-ru/uikit-product-promo-tag-predefined';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Favorite } from '@snack-uikit/toggles';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';
-import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
 import { TEST_IDS, TRIGGER_CLICK_KEY_CODES, VISIBILITY_STRATEGY } from './constants';
 import styles from './styles.module.scss';
@@ -25,43 +25,45 @@ import { VisibilityStrategy } from './types';
 
 type CardElement = HTMLAnchorElement | HTMLButtonElement;
 
-export type CardServiceLightProps = WithSupportProps<{
-  /** Иконка сервиса */
-  icon: ReactElement;
-  /** Заголовок карточки */
-  title: string;
-  /** Ссылка, открываемая при клике по карточке */
-  href?: string;
-  /** Тип кнопки */
-  type?: 'button' | 'submit' | 'reset';
-  /** Настройки promo tag. При отсутствии не отображается */
-  promoTag?: Omit<PromoTagPredefinedProps, 'trigger'>;
-  /** Колбек на клик по карточке */
-  onClick?(event: MouseEvent<CardElement>): void;
-  /** Колбек нажатия клавиши клавиатуры на карточке */
-  onKeyDown?: KeyboardEventHandler<CardElement>;
-  /** Настройки обрезки текста заголовка */
-  truncate?: {
-    /** Максимальное количество строк заголовка */
-    title?: number;
-  };
-  /** Настройки кнопки «Избранное» */
-  favorite?: {
-    /** Включить отображение кнопки избранного */
-    enabled: boolean;
-    /**
-     * Формат отображения: всегда или при наведении и фокусе
-     * @default 'hover'
-     */
-    visibilityStrategy?: VisibilityStrategy;
-    /** Состояние избранного. При передаче вместе с `onChange` компонент работает в controlled-режиме */
-    checked?: boolean;
-    /** Колбек изменения состояния избранного. При передаче вместе с `checked` компонент работает в controlled-режиме */
-    onChange?(value: boolean): void;
-  };
-  /** CSS-класс корневого элемента */
-  className?: string;
-}>;
+export type CardServiceLightProps = WithLayoutType<
+  WithSupportProps<{
+    /** Иконка сервиса */
+    icon: ReactElement;
+    /** Заголовок карточки */
+    title: string;
+    /** Ссылка, открываемая при клике по карточке */
+    href?: string;
+    /** Тип кнопки */
+    type?: 'button' | 'submit' | 'reset';
+    /** Настройки promo tag. При отсутствии не отображается */
+    promoTag?: Omit<PromoTagPredefinedProps, 'trigger'>;
+    /** Колбек на клик по карточке */
+    onClick?(event: MouseEvent<CardElement>): void;
+    /** Колбек нажатия клавиши клавиатуры на карточке */
+    onKeyDown?: KeyboardEventHandler<CardElement>;
+    /** Настройки обрезки текста заголовка */
+    truncate?: {
+      /** Максимальное количество строк заголовка */
+      title?: number;
+    };
+    /** Настройки кнопки «Избранное» */
+    favorite?: {
+      /** Включить отображение кнопки избранного */
+      enabled: boolean;
+      /**
+       * Формат отображения: всегда или при наведении и фокусе
+       * @default 'hover'
+       */
+      visibilityStrategy?: VisibilityStrategy;
+      /** Состояние избранного. При передаче вместе с `onChange` компонент работает в controlled-режиме */
+      checked?: boolean;
+      /** Колбек изменения состояния избранного. При передаче вместе с `checked` компонент работает в controlled-режиме */
+      onChange?(value: boolean): void;
+    };
+    /** CSS-класс корневого элемента */
+    className?: string;
+  }>
+>;
 
 export const CardServiceLight = forwardRef<CardElement, CardServiceLightProps>(
   (
@@ -76,6 +78,7 @@ export const CardServiceLight = forwardRef<CardElement, CardServiceLightProps>(
       className,
       truncate,
       favorite,
+      layoutType,
       ...rest
     },
     ref,
@@ -163,7 +166,7 @@ export const CardServiceLight = forwardRef<CardElement, CardServiceLightProps>(
         <div className={styles.container}>
           <div className={styles.icon}>{icon}</div>
 
-          <div className={styles.content}>
+          <div className={styles.content} data-layout-type={layoutType}>
             <Typography.SansBodyM className={styles.title} data-test-id={TEST_IDS.title}>
               <TruncateString text={title} maxLines={truncate?.title} variant='end' />
             </Typography.SansBodyM>
