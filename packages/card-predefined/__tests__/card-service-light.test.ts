@@ -216,12 +216,13 @@ test.describe('Card Service Light', () => {
 
           await expect(wrapper).toHaveAttribute('data-visibility-strategy', VISIBILITY_STRATEGY.hover);
           await expect(wrapper).toHaveAttribute('data-checked', 'true');
-          await expect(wrapper).not.toHaveCSS('position', 'absolute');
+          await expect(wrapper).toHaveCSS('position', 'absolute');
           await expect(favorite).toBeHidden();
 
           await card.hover();
 
           await expect(favorite).toBeVisible();
+          await expect(wrapper).not.toHaveCSS('position', 'absolute');
         });
 
         addFavoriteInteractionTests(favoriteControlled, VISIBILITY_STRATEGY.hover);
@@ -313,7 +314,7 @@ test.describe('Card Service Light', () => {
 
           await expect(wrapper).toHaveAttribute('data-visibility-strategy', VISIBILITY_STRATEGY.hover);
           await expect(wrapper).toHaveAttribute('data-checked', 'true');
-          await expect(wrapper).not.toHaveCSS('position', 'absolute');
+          await expect(wrapper).toHaveCSS('position', 'absolute');
           await expect(favorite).toBeHidden();
 
           await card.hover();

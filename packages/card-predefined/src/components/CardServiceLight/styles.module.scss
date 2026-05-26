@@ -13,11 +13,8 @@ $side: ste.$icon-s;
 
   &[data-visibility-strategy='hover'] {
     visibility: hidden;
-
-    &:not(&[data-checked]) {
-      position: absolute;
-      right: 4px;
-    }
+    position: absolute;
+    right: 4px;
   }
 
   &[data-visibility-strategy='always'] {
@@ -66,6 +63,11 @@ $side: ste.$icon-s;
 
     .favoriteWrapper {
       visibility: visible;
+
+      &[data-checked] {
+        position: relative;
+        right: 0;
+      }
     }
   }
 }
