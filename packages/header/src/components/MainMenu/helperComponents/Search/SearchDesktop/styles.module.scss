@@ -7,11 +7,15 @@
   top: 0;
   background-color: ste.$sys-neutral-background;
   padding: 4px;
-  padding-bottom: ste.$dimension-1m;
 
   display: flex;
   flex-direction: column;
   gap: ste.$dimension-1m;
+
+  + div {
+    // компенсация "двойного" отступа
+    padding-top: 0;
+  }
 }
 
 .searchSettingsChips {

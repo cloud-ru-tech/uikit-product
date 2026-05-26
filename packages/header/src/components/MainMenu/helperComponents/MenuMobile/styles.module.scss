@@ -3,7 +3,7 @@
 .rightContent {
   display: flex;
   flex-direction: column;
-  gap: ste.$dimension-1m;
+  gap: ste.$dimension-050m;
   padding-top: 4px;
 }
 
@@ -18,9 +18,5 @@
 }
 
 .bannersWrap {
-  margin-top: ste.$dimension-1m;
-}
-
-.settings {
-  margin-top: ste.$dimension-1m;
+  margin-top: ste.$dimension-050m;
 }

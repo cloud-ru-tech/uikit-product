@@ -1,6 +1,6 @@
 import { createElement, JSXElementConstructor, ReactNode } from 'react';
 
-import { CardServiceSmallProps } from '@cloud-ru/uikit-product-card-predefined';
+import { CardServiceLightProps } from '@cloud-ru/uikit-product-card-predefined';
 import { Avatar } from '@snack-uikit/avatar';
 
 import { InnerLink } from '../types';
@@ -19,12 +19,12 @@ function createAvatarIcon(displayName: string): IconComponent {
   };
 }
 
-export function getLinkEmblem(link: InnerLink): CardServiceSmallProps['emblem'] {
+export function getLinkEmblem(link: InnerLink): CardServiceLightProps['icon'] {
   if (!link.icon) {
-    return { icon: createAvatarIcon(getAvatarNameFromLabel(link.label)) };
+    return createElement(createAvatarIcon(getAvatarNameFromLabel(link.label)));
   }
 
-  return { icon: link.icon };
+  return createElement(link.icon);
 }
 
 export function renderLinkBeforeContent(link: InnerLink): ReactNode {

@@ -1,6 +1,6 @@
 import { JSXElementConstructor, MouseEvent, ReactNode } from 'react';
 
-import { CardServiceSmallProps } from '@cloud-ru/uikit-product-card-predefined';
+import { CardServiceLightProps } from '@cloud-ru/uikit-product-card-predefined';
 import { SearchProps as SearchPropsSnack } from '@snack-uikit/search';
 
 /**
@@ -27,7 +27,7 @@ export type InnerLink = {
   href?: string;
   disabled?: boolean;
   hidden?: boolean;
-  badge?: CardServiceSmallProps['promoBadge'];
+  badge?: CardServiceLightProps['promoTag'];
   /**
    * Синонимы для режима поиска «С синонимами» (fuzzy).
    *

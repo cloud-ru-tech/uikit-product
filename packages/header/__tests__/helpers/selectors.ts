@@ -79,7 +79,7 @@ export function getSelectors(page: Page, options: GetSelectorsOptions = {}) {
     getFavouriteButton: (id: string) =>
       drawer
         .locator(dataTestIdSelector(`header__drawer-menu__link-${id}`))
-        .locator(dataTestIdSelector('card-service-small__favorite-native-input')),
+        .locator(dataTestIdSelector('card-service-light__favorite-native-input')),
     getDrawerMenuSearchResultGroupByText: (text: string) =>
       drawer.locator('[data-test-id^="header__drawer-menu__group-card-"]').filter({ hasText: text }),
     getDrawerMenuSearchResultLinkInGroup: (groupLabel: string, linkLabel: string) =>

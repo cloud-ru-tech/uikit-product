@@ -94,7 +94,7 @@ export const SERVICE_GROUPS: LinksGroup[] = [
         onClick: EMPTY_ON_CLICK,
         href: EMPTY_HREF,
         icon: PlaceholderSVG,
-        badge: 'Preview',
+        badge: { variant: 'preview' },
         aliases: ['snat', 'шлюзы', 'gateways', 'гейтвей'],
       },
       {
@@ -111,7 +111,7 @@ export const SERVICE_GROUPS: LinksGroup[] = [
         onClick: EMPTY_ON_CLICK,
         href: EMPTY_HREF,
         icon: PlaceholderSVG,
-        badge: { text: 'New', appearance: 'pink' },
+        badge: { variant: 'connecting' },
         aliases: ['балансировщик', 'load balancer', 'балансировка'],
       },
       {

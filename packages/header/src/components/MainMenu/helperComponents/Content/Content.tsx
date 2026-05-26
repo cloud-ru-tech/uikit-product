@@ -1,6 +1,6 @@
 import { MouseEvent, ReactElement, ReactNode, useCallback, useMemo } from 'react';
 
-import { CardServiceSmall } from '@cloud-ru/uikit-product-card-predefined';
+import { CardServiceLight } from '@cloud-ru/uikit-product-card-predefined';
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { TitleClickable } from '@cloud-ru/uikit-product-title-clickable';
 
@@ -74,21 +74,20 @@ export function Content({
   const cards = useMemo(
     () =>
       serviceGroups?.map(({ id, label, items, favoritesEnabled = true }) => (
-        <div key={String(id)} className={styles.card} id={id} data-test-id={`header__drawer-menu__group-card-${id}`}>
+        <div key={String(id)} className={styles.group} id={id} data-test-id={`header__drawer-menu__group-card-${id}`}>
           {!label.onClick ? (
-            <span className={styles.cardTitle}>{label.text}</span>
+            <span className={styles.groupTitle}>{label.text}</span>
           ) : (
             <TitleClickable title={label.text} href='#' onClick={label.onClick} />
           )}
 
-          <div className={styles.cardBody} data-mobile={isMobile || undefined}>
+          <div className={styles.groupBody} data-mobile={isMobile || undefined}>
             {items.map(service => (
-              <CardServiceSmall
+              <CardServiceLight
                 key={String(id) + service.id}
                 title={service.label}
-                emblem={getLinkEmblem(service)}
+                icon={getLinkEmblem(service)}
                 data-test-id={`header__drawer-menu__link-${service.id}`}
-                outline
                 href={service.href}
                 onClick={wrappedClick(service, () => onLinkChange?.(service.id))}
                 favorite={
@@ -101,7 +100,9 @@ export function Content({
                       }
                     : undefined
                 }
-                promoBadge={service.badge}
+                promoTag={service.badge}
+                className={styles.card}
+                layoutType={isMobile ? 'mobile' : 'desktop'}
               />
             ))}
           </div>

@@ -12,9 +12,13 @@
   gap: ste.$dimension-1m;
 
   padding: 0;
-  padding-bottom: ste.$dimension-1m;
-  padding-top: 1px;
-  margin-top: 7px;
+  padding-bottom: ste.$dimension-050m;
+  margin-top: 4px;
+
+  + div {
+    // компенсация "двойного" отступа
+    padding-top: 0;
+  }
 }
 
 .searchWrap {

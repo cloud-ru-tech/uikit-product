@@ -1,28 +1,40 @@
 @use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
 
-.card {
+.group {
   background-color: var.$sys-neutral-background1-level;
   display: flex;
   flex-direction: column;
-  padding: var.$dimension-2m;
+  padding: 12px;
   gap: var.$dimension-1m;
-  border-radius: var.$dimension-1m;
+  border-radius: var.$dimension-050m;
 }
 
-.cardTitle {
+.groupTitle {
   @include var.composite-var(var.$sans-title-m);
 
   color: var.$sys-neutral-text-main;
 }
 
-.cardBody {
+.groupBody {
   display: grid;
-  grid-template-columns: repeat(2, minmax(150px, 1fr));
-  gap: var.$dimension-1m;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+  gap: var.$dimension-050m;
+
+  &:not(&[data-mobile]) {
+    // Карточки не умещаются в 2 колонки на "сжатом" десктопе
+    // не на что завязаться в переменных, поэтому хардкод 1024px
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, minmax(auto, 1fr));
+    }
+  }
 
   &[data-mobile] {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+}
+
+.card {
+  min-width: 0;
 }
 
 .noData {

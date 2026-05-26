@@ -74,7 +74,6 @@ export function MenuMobile({
 
           {settingItems.items.length > 0 && (
             <List
-              className={styles.settings}
               items={[{ type: 'group', items: [], divider: true }, ...mapInnerLinksToListItems(settingItems.items)]}
               size='m'
               barHideStrategy='never'
