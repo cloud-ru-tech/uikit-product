@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.20 (2026-05-27)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-card-predefined@1.2.3]($PUBLIC_PROJECT_URL/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@2.1.14]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+
+
+
+
+
 ## 2.2.19 (2026-05-27)
 
 ### Only dependencies have been changed

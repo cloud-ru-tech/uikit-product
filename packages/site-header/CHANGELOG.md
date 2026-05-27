@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.6.1 (2026-05-27)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-button-predefined@1.1.17]($PUBLIC_PROJECT_URL/blob/master/packages/button-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@2.1.4]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-modal/CHANGELOG.md)
+
+
+
+
+
 # 1.6.0 (2026-05-06)
 
 

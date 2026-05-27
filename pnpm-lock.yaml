@@ -299,7 +299,7 @@ importers:
         specifier: 17.3.0
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.1.13
+        specifier: 2.1.14
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
@@ -338,13 +338,13 @@ importers:
         specifier: 1.1.12
         version: link:../mobile-accordion
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.1.13
+        specifier: 2.1.14
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 2.1.2
+        specifier: 2.1.3
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.1.3
+        specifier: 2.1.4
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
@@ -553,10 +553,10 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.1.13
+        specifier: 2.1.14
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 2.1.2
+        specifier: 2.1.3
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-mobile-tooltip':
         specifier: 1.1.12
@@ -667,7 +667,7 @@ importers:
   packages/entities-table:
     dependencies:
       '@cloud-ru/uikit-product-mobile-table':
-        specifier: 2.3.0
+        specifier: 2.3.1
         version: link:../mobile-table
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
@@ -715,13 +715,13 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.1.13
+        specifier: 2.1.14
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 2.1.2
+        specifier: 2.1.3
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.1.3
+        specifier: 2.1.4
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
@@ -779,7 +779,7 @@ importers:
   packages/header:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 1.2.2
+        specifier: 1.2.3
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 17.3.0
@@ -788,10 +788,10 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-drawer':
-        specifier: 2.0.13
+        specifier: 2.0.14
         version: link:../mobile-drawer
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.1.3
+        specifier: 2.1.4
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-title-clickable':
         specifier: 1.2.10
@@ -1096,7 +1096,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.1.13
+        specifier: 2.1.14
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-tooltip':
         specifier: 1.1.12
@@ -1185,7 +1185,7 @@ importers:
   packages/mobile-dropdown:
     dependencies:
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.1.3
+        specifier: 2.1.4
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
@@ -1212,10 +1212,10 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.1.13
+        specifier: 2.1.14
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.1.3
+        specifier: 2.1.4
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
@@ -1303,7 +1303,7 @@ importers:
   packages/mobile-layout:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 1.2.2
+        specifier: 1.2.3
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 17.3.0
@@ -1315,19 +1315,19 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.1.13
+        specifier: 2.1.14
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.1.3
+        specifier: 2.1.4
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-mobile-tooltip':
         specifier: 1.1.12
         version: link:../mobile-tooltip
       '@cloud-ru/uikit-product-page-layout':
-        specifier: 2.1.6
+        specifier: 2.1.7
         version: link:../page-layout
       '@cloud-ru/uikit-product-quota':
-        specifier: 2.1.3
+        specifier: 2.1.4
         version: link:../quota
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
@@ -1357,7 +1357,7 @@ importers:
   packages/mobile-modal:
     dependencies:
       '@cloud-ru/uikit-product-mobile-drawer':
-        specifier: 2.0.13
+        specifier: 2.0.14
         version: link:../mobile-drawer
       '@cloud-ru/uikit-product-mobile-tooltip':
         specifier: 1.1.12
@@ -1429,13 +1429,13 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-chips':
-        specifier: 2.0.16
+        specifier: 2.0.17
         version: link:../mobile-chips
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.1.13
+        specifier: 2.1.14
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-toolbar':
-        specifier: 2.0.17
+        specifier: 2.0.18
         version: link:../mobile-toolbar
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
@@ -1544,10 +1544,10 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-chips':
-        specifier: 2.0.16
+        specifier: 2.0.17
         version: link:../mobile-chips
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.1.13
+        specifier: 2.1.14
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-tooltip':
         specifier: 1.1.12
@@ -1622,16 +1622,16 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-markdown':
-        specifier: 1.1.4
+        specifier: 1.1.5
         version: link:../markdown
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.1.3
+        specifier: 2.1.4
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-switch-row':
         specifier: 1.1.5
         version: link:../switch-row
       '@cloud-ru/uikit-product-toggles-predefined':
-        specifier: 2.0.5
+        specifier: 2.0.6
         version: link:../toggles-predefined
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
@@ -1730,7 +1730,7 @@ importers:
         specifier: 1.0.1
         version: 1.0.1
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 1.1.16
+        specifier: 1.1.17
         version: link:../button-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 17.3.0
@@ -1805,7 +1805,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.1.3
+        specifier: 2.1.4
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-title-clickable':
         specifier: 1.2.10
@@ -1889,7 +1889,7 @@ importers:
   packages/site-banner:
     dependencies:
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 1.1.16
+        specifier: 1.1.17
         version: link:../button-predefined
       '@cloud-ru/uikit-product-site-rich-text':
         specifier: 1.1.3
@@ -1916,7 +1916,7 @@ importers:
   packages/site-banner-predefined:
     dependencies:
       '@cloud-ru/uikit-product-site-banner':
-        specifier: 2.0.16
+        specifier: 2.0.17
         version: link:../site-banner
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
@@ -2000,7 +2000,7 @@ importers:
         specifier: 17.3.0
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.1.3
+        specifier: 2.1.4
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
@@ -2048,7 +2048,7 @@ importers:
         specifier: '*'
         version: 19.0.4
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 1.1.16
+        specifier: 1.1.17
         version: link:../button-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 17.3.0
@@ -2057,7 +2057,7 @@ importers:
         specifier: 1.1.11
         version: link:../mobile-alert
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.1.3
+        specifier: 2.1.4
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-site-layout':
         specifier: 1.1.3
@@ -2093,7 +2093,7 @@ importers:
   packages/site-hero:
     dependencies:
       '@cloud-ru/uikit-product-button-predefined':
-        specifier: 1.1.16
+        specifier: 1.1.17
         version: link:../button-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 17.3.0
@@ -2219,13 +2219,13 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 2.1.2
+        specifier: 2.1.3
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-site-cards':
-        specifier: 1.2.0
+        specifier: 1.2.1
         version: link:../site-cards
       '@cloud-ru/uikit-product-site-case-card':
-        specifier: 1.2.2
+        specifier: 1.2.3
         version: link:../site-case-card
       '@cloud-ru/uikit-product-site-grid':
         specifier: 1.1.3
@@ -2240,7 +2240,7 @@ importers:
         specifier: 1.1.3
         version: link:../site-rich-text
       '@cloud-ru/uikit-product-site-table':
-        specifier: 1.1.4
+        specifier: 1.1.5
         version: link:../site-table
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
@@ -2295,10 +2295,10 @@ importers:
         specifier: 17.3.0
         version: link:../icons
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.1.13
+        specifier: 2.1.14
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-modal':
-        specifier: 2.1.3
+        specifier: 2.1.4
         version: link:../mobile-modal
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
@@ -2473,7 +2473,7 @@ importers:
   packages/widget:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 1.2.2
+        specifier: 1.2.3
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 17.3.0
@@ -2485,7 +2485,7 @@ importers:
         specifier: 1.1.4
         version: link:../mobile-carousel
       '@cloud-ru/uikit-product-mobile-dropdown':
-        specifier: 2.1.13
+        specifier: 2.1.14
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-tooltip':
         specifier: 1.1.12
