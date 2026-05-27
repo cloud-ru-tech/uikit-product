@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.1.1 (2026-05-27)
+
+
+### Bug Fixes
+
+* **FF-8356:** header updates: renamed platformsGroups to platformGroups, made platformGroups and settingsItems optional, removed search by id in precise mode ([14c1ef9](https://github.com/cloud-ru-tech/uikit-product/commit/14c1ef92286259c0fc4b4227906bd4e55b875153))
+
+
+
+
+
 # 7.1.0 (2026-05-27)
 
 
