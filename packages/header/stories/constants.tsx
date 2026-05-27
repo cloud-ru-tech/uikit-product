@@ -560,7 +560,7 @@ export const SETTING_ITEMS = ADMINISTRATIVE_SECTION.items.map(({ id, label }) =>
   href: EMPTY_HREF,
 }));
 
-export const PLATFORMS_GROUPS: LinksGroup[] = [
+export const PLATFORM_GROUPS: LinksGroup[] = [
   {
     label: { text: 'Облачные продукты' },
     id: 'cloudProductsPlatforms',

@@ -17,7 +17,7 @@ export function MenuDesktop({
   open: openProp,
   setOpen: setOpenProp,
   settingItems,
-  platformsGroups,
+  platformGroups,
   leftTop,
   rightTop,
   serviceGroups,
@@ -32,20 +32,22 @@ export function MenuDesktop({
     search,
     favorite,
     settingItems,
-    platformsGroups,
+    platformGroups,
   });
 
   const isInitialEmptyCards = serviceGroups?.length === 0;
   const isNeedRightBlock = rightTop || !isInitialEmptyCards;
 
-  const settingItemsWithClassName = useMemo(
-    () =>
-      mapInnerLinksToListItems(settingItems.items).map(item => ({
-        ...item,
-        className: styles.item,
-      })),
-    [settingItems.items],
-  );
+  const settingItemsWithClassName = useMemo(() => {
+    if (!settingItems?.items.length) {
+      return [];
+    }
+
+    return mapInnerLinksToListItems(settingItems.items).map(item => ({
+      ...item,
+      className: styles.item,
+    }));
+  }, [settingItems?.items]);
 
   const groupItemsWithClass = useMemo(
     () =>

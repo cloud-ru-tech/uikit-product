@@ -10,10 +10,16 @@ import { useHighlight } from './useHighlight';
 
 type UseMenuItemsProps = Pick<
   MainMenuProps,
-  'favorite' | 'serviceGroups' | 'search' | 'settingItems' | 'platformsGroups'
+  'favorite' | 'serviceGroups' | 'search' | 'settingItems' | 'platformGroups'
 >;
 
-export function useMenuItems({ search, serviceGroups, favorite, settingItems, platformsGroups }: UseMenuItemsProps) {
+export function useMenuItems({
+  search,
+  serviceGroups,
+  favorite,
+  settingItems,
+  platformGroups = [],
+}: UseMenuItemsProps) {
   const { t } = useLocale('Header');
 
   const { searchValue = '', searchFn, searchFunctions, onSearchValueChange, onSearchNoResult } = search || {};
@@ -96,8 +102,7 @@ export function useMenuItems({ search, serviceGroups, favorite, settingItems, pl
 
   const itemsWithoutEmptyGroups = groupWithFavorites.filter(group => group.items.length > 0);
 
-  const hasPlatformsGroups = platformsGroups.length > 0;
-  const hasAdministrativeItems = settingItems.items.length > 0;
+  const hasPlatformGroups = platformGroups.length > 0;
 
   const resultItems = useMemo(() => {
     if (!searchValue) {
@@ -108,23 +113,22 @@ export function useMenuItems({ search, serviceGroups, favorite, settingItems, pl
 
     const serviceResults = handler?.(searchValue, itemsWithoutEmptyGroups) ?? itemsWithoutEmptyGroups;
 
-    const platformResults = hasPlatformsGroups ? (handler?.(searchValue, platformsGroups) ?? []) : [];
+    const platformResults = hasPlatformGroups ? (handler?.(searchValue, platformGroups) ?? []) : [];
 
-    const adminResults = hasAdministrativeItems ? (handler?.(searchValue, [settingItems]) ?? []) : [];
+    const adminResults = settingItems?.items.length ? (handler?.(searchValue, [settingItems]) ?? []) : [];
 
     const combined = [...serviceResults, ...platformResults, ...adminResults];
 
-    return pinAdminGroupToBottom(combined, settingItems.id);
+    return settingItems ? pinAdminGroupToBottom(combined, settingItems.id) : combined;
   }, [
     searchFn,
     searchFnMap,
     searchFunctions,
     searchValue,
     itemsWithoutEmptyGroups,
-    platformsGroups,
-    hasPlatformsGroups,
+    platformGroups,
+    hasPlatformGroups,
     settingItems,
-    hasAdministrativeItems,
   ]);
 
   useEffect(() => {

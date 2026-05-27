@@ -6,7 +6,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { MainMenu, useSearch } from '../src';
-import { ADMINISTRATIVE_SECTION, PLATFORMS_GROUPS, SERVICE_GROUPS } from './constants';
+import { ADMINISTRATIVE_SECTION, PLATFORM_GROUPS, SERVICE_GROUPS } from './constants';
 import { Banners, ProductSelect, ProjectSelectMobile } from './PlugElement';
 
 const meta: Meta = {
@@ -67,7 +67,7 @@ function Template({
       search={showSearch ? search : undefined}
       settingItems={ADMINISTRATIVE_SECTION}
       serviceGroups={showServiceGroups ? SERVICE_GROUPS : []}
-      platformsGroups={PLATFORMS_GROUPS}
+      platformGroups={PLATFORM_GROUPS}
     />
   );
 }

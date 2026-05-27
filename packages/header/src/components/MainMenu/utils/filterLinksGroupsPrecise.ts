@@ -2,13 +2,11 @@ import { InnerLink, LinksGroup } from '../types';
 import { matchSearchString } from './search';
 
 function matchesGroup(group: LinksGroup, searchValue: string): boolean {
-  return (
-    Boolean(group.label && matchSearchString(group.label.text, searchValue)) || matchSearchString(group.id, searchValue)
-  );
+  return Boolean(group.label && matchSearchString(group.label.text, searchValue));
 }
 
 function matchesItem(item: InnerLink, searchValue: string): boolean {
-  return matchSearchString(item.label, searchValue) || matchSearchString(item.id, searchValue);
+  return matchSearchString(item.label, searchValue);
 }
 
 export function filterLinksGroupsPrecise(searchValue: string, links: LinksGroup[]): LinksGroup[] {

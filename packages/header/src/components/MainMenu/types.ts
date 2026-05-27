@@ -51,7 +51,7 @@ export type LinksGroupTitle = TitleStatic | TitleClickable;
 /**
  * Группа карточек MainMenu с общим заголовком.
  *
- * Используется в `serviceGroups`, `platformsGroups` и `settingItems`.
+ * Используется в `serviceGroups`, `platformGroups` и `settingItems`.
  * При активном поиске группа может отображаться целиком или с отфильтрованным списком `items`.
  */
 export type LinksGroup = {
@@ -111,9 +111,9 @@ export type MainMenuProps = {
    *
    * Без поиска: пункты в нижней части левой колонки (desktop) или списка (mobile), не в сетке карточек.
    * С поиском: группа попадает в результаты только при совпадении; отображается **последней**
-   * (ниже `serviceGroups` и `platformsGroups`). Обычно `favoritesEnabled: false`.
+   * (ниже `serviceGroups` и `platformGroups`). Обычно `favoritesEnabled: false`.
    */
-  settingItems: LinksGroup;
+  settingItems?: LinksGroup;
   /**
    * Основные группы облачных сервисов (инфраструктура, сеть, хранилище и т.п.).
    *
@@ -128,7 +128,7 @@ export type MainMenuProps = {
    * С поиском: попадают в результаты при совпадении; порядок — **после** `serviceGroups`,
    * **перед** `settingItems`. Обычно `favoritesEnabled: false`; карточки могут быть без `icon` (Avatar по `label`).
    */
-  platformsGroups: LinksGroup[];
+  platformGroups?: LinksGroup[];
 
   onLinkChange?(value: string): void;
 

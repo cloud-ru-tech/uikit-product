@@ -15,7 +15,7 @@ export function MenuMobile({
   open: openProp,
   setOpen: setOpenProp,
   settingItems,
-  platformsGroups,
+  platformGroups,
   leftTop,
   rightTop,
   serviceGroups,
@@ -34,7 +34,7 @@ export function MenuMobile({
     search,
     favorite,
     settingItems,
-    platformsGroups,
+    platformGroups,
   });
 
   return (
@@ -72,7 +72,7 @@ export function MenuMobile({
 
           {isInitialEmptyCards && rightTop && <div className={styles.bannersWrap}>{rightTop}</div>}
 
-          {settingItems.items.length > 0 && (
+          {settingItems?.items && settingItems?.items.length > 0 && (
             <List
               items={[{ type: 'group', items: [], divider: true }, ...mapInnerLinksToListItems(settingItems.items)]}
               size='m'

@@ -539,7 +539,7 @@ const PLATFORM_CARDS = [
   { id: 'marketplacePlatform', label: 'Маркетплейс' },
 ] as const;
 
-async function validatePlatformsGroupsHidden(page: Page, options?: SearchTestsOptions) {
+async function validatePlatformGroupsHidden(page: Page, options?: SearchTestsOptions) {
   const { getDrawerMenuCard, getDrawerMenuItem } = getSelectors(page, getSelectorOptions(options));
 
   await expect(getDrawerMenuCard(CLOUD_PRODUCTS_PLATFORMS_GROUP_ID)).not.toBeVisible();
@@ -653,7 +653,7 @@ export function platformSearchTests(options: SearchTestsOptions = {}) {
     await openMenuSearch(page, options);
 
     await expect(getSelectors(page, getSelectorOptions(options)).selectors.drawerSearchInput).toHaveValue('');
-    await validatePlatformsGroupsHidden(page, options);
+    await validatePlatformGroupsHidden(page, options);
   });
 
   test('drawer menu > platforms search should work by card label (precise)', async ({ page }) => {
@@ -664,17 +664,6 @@ export function platformSearchTests(options: SearchTestsOptions = {}) {
       groupId: OTHER_PRODUCTS_PLATFORMS_GROUP_ID,
       groupLabel: 'Другие продукты',
       presentCardIds: ['marketplacePlatform'],
-    });
-  });
-
-  test('drawer menu > platforms search should work by card id (precise)', async ({ page }) => {
-    await validatePlatformSearchWithMode(page, {
-      ...options,
-      searchValue: 'vmWare',
-      mode: 'precise',
-      groupId: CLOUD_PRODUCTS_PLATFORMS_GROUP_ID,
-      groupLabel: CLOUD_PRODUCTS_PLATFORMS_GROUP_LABEL,
-      presentCardIds: ['vmWarePlatform'],
     });
   });
 
@@ -734,15 +723,6 @@ export function adminSearchTests(options: SearchTestsOptions = {}) {
     });
   });
 
-  test('drawer menu > admin services search should work by card id (precise)', async ({ page }) => {
-    await validateAdminSearchWithMode(page, {
-      ...options,
-      searchValue: 'monit',
-      mode: 'precise',
-      presentCardIds: ['monitoring'],
-    });
-  });
-
   test('drawer menu > admin services search should work by card label (fuzzy)', async ({ page }) => {
     await validateAdminSearchWithMode(page, {
       ...options,
@@ -756,15 +736,6 @@ export function adminSearchTests(options: SearchTestsOptions = {}) {
     await validateAdminSearchWithMode(page, {
       ...options,
       searchValue: 'админ',
-      mode: 'precise',
-      presentCardIds: ALL_ADMIN_CARD_IDS,
-    });
-  });
-
-  test('drawer menu > admin services search should work by group id (precise)', async ({ page }) => {
-    await validateAdminSearchWithMode(page, {
-      ...options,
-      searchValue: 'admin',
       mode: 'precise',
       presentCardIds: ALL_ADMIN_CARD_IDS,
     });

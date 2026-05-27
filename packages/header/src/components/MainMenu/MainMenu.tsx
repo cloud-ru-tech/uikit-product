@@ -10,7 +10,7 @@ export function MainMenu({
   open: openProp,
   setOpen: setOpenProp,
   settingItems,
-  platformsGroups,
+  platformGroups,
   leftTop,
   rightTop,
   serviceGroups,
@@ -40,7 +40,7 @@ export function MainMenu({
         onLinkChange={onLinkChange}
         settingItems={settingItems}
         serviceGroups={serviceGroups}
-        platformsGroups={platformsGroups}
+        platformGroups={platformGroups}
         search={search}
         leftTop={leftTop}
         rightTop={rightTop}
