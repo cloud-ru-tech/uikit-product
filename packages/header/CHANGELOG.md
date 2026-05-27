@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 7.1.0 (2026-05-27)
+
+
+### Features
+
+* **FF-8340:** CardServiceLight in header drawer menu ([c39ccd0](https://github.com/cloud-ru-tech/uikit-product/commit/c39ccd0f8de7f7b899560d0e197a3c825e419563))
+
+
+
+
+
 # 7.0.0 (2026-05-27)
 
 

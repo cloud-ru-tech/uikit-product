@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.2 (2026-05-27)
+
+
+### Bug Fixes
+
+* **FF-8340:** add mobile size for CardServiceLight ([530d226](https://github.com/cloud-ru-tech/uikit-product/commit/530d226a45873884eb21d87284eb331446efbe84))
+* **FF-8340:** move favorite button only on hover ([ffdf1d7](https://github.com/cloud-ru-tech/uikit-product/commit/ffdf1d77a282bac474848bfcf486a7a6946b4628))
+
+
+
+
+
 ## 1.2.1 (2026-05-25)
 
 

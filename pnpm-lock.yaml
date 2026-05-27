@@ -779,7 +779,7 @@ importers:
   packages/header:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 1.2.1
+        specifier: 1.2.2
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 17.3.0
@@ -1303,7 +1303,7 @@ importers:
   packages/mobile-layout:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 1.2.1
+        specifier: 1.2.2
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 17.3.0
@@ -2473,7 +2473,7 @@ importers:
   packages/widget:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 1.2.1
+        specifier: 1.2.2
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 17.3.0
