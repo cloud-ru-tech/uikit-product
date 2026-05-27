@@ -41,7 +41,7 @@
     "@cloud-ru/uikit-product-utils": "9.1.0",
     "@snack-uikit/button": "0.19.13",
     "@snack-uikit/icon-predefined": "0.7.3",
-    "@snack-uikit/list": "0.32.17",
+    "@snack-uikit/list": "0.33.1",
     "@snack-uikit/loaders": "0.9.4",
     "@snack-uikit/popover": "0.10.5",
     "@snack-uikit/search": "0.12.27",
