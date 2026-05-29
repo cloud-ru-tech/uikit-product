@@ -30,7 +30,6 @@
 
   box-sizing: border-box;
   max-width: fit-content;
-  padding: 0 styles-theme-variables.$dimension-050m;
   color: styles-tokens-element.$sys-neutral-text-main;
 
   &[data-full-width] {
@@ -52,5 +51,3 @@
     background-color: styles-theme-variables.$sys-neutral-decor-disabled;
   }
 }
-
-

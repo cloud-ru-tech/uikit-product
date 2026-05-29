@@ -5,23 +5,29 @@
   gap: styles-theme-variables.$dimension-1m;
   align-items: center;
   max-width: 100%;
+  min-width: 0;
 
   &[data-full-width] {
-
     width: 100%;
   }
 }
 
+.titleWrapper {
+  display: flex;
+  min-width: 0;
+}
+
 .iconTitleWrapper {
   display: flex;
-  gap: styles-theme-variables.$dimension-1m;
-  align-items: center;
+  flex-shrink: 0;
+  color: styles-theme-variables.$sys-neutral-text-light;
 }
 
 .avatarWrapper {
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  min-width: 0;
 }
 
 .subtitle {

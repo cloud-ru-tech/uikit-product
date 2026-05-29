@@ -1,5 +1,4 @@
 import { Avatar } from '@snack-uikit/avatar';
-import { IconPredefined } from '@snack-uikit/icon-predefined';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';
 
@@ -12,14 +11,24 @@ type TitleClickableContent = Pick<
   'title' | 'icon' | 'children' | 'titleTag' | 'avatar' | 'fullWidth'
 >;
 
-export function TitleClickableContent({ title, icon, children, titleTag, avatar, fullWidth }: TitleClickableContent) {
+export function TitleClickableContent({
+  title,
+  icon: Icon,
+  children,
+  titleTag,
+  avatar,
+  fullWidth,
+}: TitleClickableContent) {
   return (
     <div data-test-id={TEST_IDS.content} className={styles.contentWrapper} data-full-width={fullWidth || undefined}>
-      {icon && <IconPredefined data-test-id={TEST_IDS.icon} icon={icon} appearance='neutral' decor={false} size='s' />}
+      {Icon && <Icon data-test-id={TEST_IDS.icon} size={24} className={styles.iconTitleWrapper} />}
+
       {title && (
-        <Typography.SansTitleM tag={titleTag} data-test-id={TEST_IDS.title}>
-          <TruncateString text={title} maxLines={1} variant='end' />
-        </Typography.SansTitleM>
+        <div className={styles.titleWrapper}>
+          <Typography.SansTitleM tag={titleTag} data-test-id={TEST_IDS.title}>
+            <TruncateString text={title} maxLines={1} variant='end' />
+          </Typography.SansTitleM>
+        </div>
       )}
 
       {avatar && (
