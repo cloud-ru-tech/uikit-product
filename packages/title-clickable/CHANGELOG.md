@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.11 (2026-05-29)
+
+
+### Bug Fixes
+
+* **LK-7759:** fix TitleClickable truncate and height ([c1dc032](https://github.com/cloud-ru-tech/uikit-product/commit/c1dc03208ca7b322f9c4afc2755dd2748ffb735d))
+
+
+
+
+
 ## 1.2.10 (2026-04-27)
 
 ### Only dependencies have been changed

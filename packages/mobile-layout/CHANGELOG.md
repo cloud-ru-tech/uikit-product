@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.9 (2026-05-29)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-quota@2.1.5]($PUBLIC_PROJECT_URL/blob/master/packages/quota/CHANGELOG.md)
+
+
+
+
+
 ## 2.1.8 (2026-05-27)
 
 
