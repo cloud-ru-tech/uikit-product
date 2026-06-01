@@ -115,9 +115,9 @@ const CPU_BY_MODEL_AND_GPU: { [model: string]: { [gpu: string]: number[] } } = {
 
 const RAN_BY_MODEL_AND_GPU: { [model: string]: { [gpu: string]: number[] } } = {
   [NVIDIA_A100_40GB.value]: {
-    '1': [240],
-    '2': [480],
-    '4': [960],
+    '1': [220],
+    '2': [440],
+    '4': [880],
   },
   [NVIDIA_A100_80GB.value]: {
     '1': [125],
