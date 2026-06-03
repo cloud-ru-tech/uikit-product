@@ -41,16 +41,22 @@ export function ProductCard({ id, idx, label, selectedProduct, onProductClick, o
         key={id + '_' + idx}
         data-test-id={dataTestAttribute}
       >
-        <>
-          <div className={styles.wrapper}>
-            <Card.Header
-              truncate={{
-                title: 10,
-                description: 20,
-              }}
-              title={label}
-              description={`${formatNumber(getPrice({ price, pricePeriod, partners: isPartners }))} ₽ ${PRICE_NAME[pricePeriod]}`}
-            />
+        <div className={styles.wrapper}>
+          <Card.Header
+            truncate={{
+              title: 10,
+              description: 20,
+            }}
+            title={label}
+            description={`${formatNumber(getPrice({ price, pricePeriod, partners: isPartners }))} ₽ ${PRICE_NAME[pricePeriod]}`}
+          />
+          <div
+            role='button'
+            tabIndex={0}
+            onClick={e => {
+              e.stopPropagation();
+            }}
+          >
             <AdaptiveDroplist
               layoutType={layoutType}
               placement='bottom-end'
@@ -62,23 +68,16 @@ export function ProductCard({ id, idx, label, selectedProduct, onProductClick, o
                   content: {
                     option: 'Удалить',
                   },
-                  onClick: e => {
-                    e.stopPropagation();
+                  onClick: () => {
                     onProductDelete(id, idx);
                   },
                 },
               ]}
             >
-              <ButtonFunction
-                icon={<KebabSVG />}
-                size='m'
-                onClick={e => {
-                  e.stopPropagation();
-                }}
-              />
+              <ButtonFunction icon={<KebabSVG />} size='m' />
             </AdaptiveDroplist>
           </div>
-        </>
+        </div>
       </Card>
     </>
   );
