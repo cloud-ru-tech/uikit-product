@@ -1,5 +1,15 @@
 # Contribution Guide
 
+## Нейминг файлов
+- Interface Icons System (packages/icons/svgs/inherit/interface-icons-system) хранятся в **kebab-case**, при этом папки – **camelCase**.
+- Interface Icons Product (packages/icons/svgs/inherit/interface-icons-product) хранятся в **camelCase**.
+- Все остальные – хранятся в **PascalCase**:
+    - Service (packages/icons/svgs/service-icons).
+    - Color (packages/icons/svgs/color).
+    - Extension (packages/icons/svgs/inherit/extension).
+    - Interface old (packages/icons/svgs/inherit/interface-old).
+    - Services old (packages/icons/svgs/inherit/services-old).
+
 ## Interface Icons System (Sprite)
 Относится только к `./svgs/inherit/interface-icons-system`.
 
