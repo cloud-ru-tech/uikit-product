@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.5 (2026-06-05)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-copy-line@2.1.11]($PUBLIC_PROJECT_URL/blob/master/packages/copy-line/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@17.4.0]($PUBLIC_PROJECT_URL/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@2.1.5]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-modal/CHANGELOG.md)
+
+
+
+
+
 ## 2.2.4 (2026-05-27)
 
 

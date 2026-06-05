@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 17.4.0 (2026-06-05)
+
+
+### Bug Fixes
+
+* **FF-8575:** adaptive color icons saniting to fix build ([6b82293](https://github.com/cloud-ru-tech/uikit-product/commit/6b82293c8f2c7ce529d38e1e3edc3344e2e27907))
+
+
+### Features
+
+* **FF-8575:** icons updates – logos, service, interface product ([b1279c4](https://github.com/cloud-ru-tech/uikit-product/commit/b1279c4037af0bc62ccae59f5aca77e5852b9916))
+
+
+
+
+
 # 17.3.0 (2026-04-27)
 
 

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.12 (2026-06-05)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-icons@17.4.0]($PUBLIC_PROJECT_URL/blob/master/packages/icons/CHANGELOG.md)
+
+
+
+
+
 ## 1.2.11 (2026-05-29)
 
 
