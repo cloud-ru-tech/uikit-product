@@ -9,6 +9,14 @@ type IconsDict = Record<string, { light: string; dark: string }>;
 type OptimizedIconsDict = Record<string, { light: string; dark?: string }>;
 
 /**
+ * Figma exports backdrop blur via foreignObject + HTML div with xmlns.
+ * SVGR turns this into invalid JSX for React types, so we drop these nodes.
+ */
+function sanitizeSvgContent(content: string): string {
+  return content.replace(/<foreignObject[^>]*>[\s\S]*?<\/foreignObject>/g, '');
+}
+
+/**
  * Строит мапу иконок, в ключе название иконки а в полях light и dark пути до файлов.
  */
 async function getIconsDictionary(): Promise<IconsDict> {
@@ -59,11 +67,12 @@ async function optimise(dict: IconsDict): Promise<OptimizedIconsDict> {
   return Promise.all(
     Object.keys(dict).map(icon =>
       Promise.all([fs.readFile(dict[icon].light, 'utf8'), fs.readFile(dict[icon].dark, 'utf8')])
-        .then(([lightFileContent, darkFileContent]) =>
-          lightFileContent === darkFileContent
-            ? { [icon]: { light: lightFileContent } }
-            : { [icon]: { light: lightFileContent, dark: darkFileContent } },
-        )
+        .then(([lightFileContent, darkFileContent]) => {
+          const light = sanitizeSvgContent(lightFileContent);
+          const dark = sanitizeSvgContent(darkFileContent);
+
+          return light === dark ? { [icon]: { light } } : { [icon]: { light, dark } };
+        })
         .catch(err => {
           console.log(`Error during reading files of '${icon}' files.`);
           throw err;
