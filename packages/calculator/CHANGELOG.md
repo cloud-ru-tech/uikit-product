@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.9.4 (2026-06-08)
+
+
+### Bug Fixes
+
+* **SITE-11400:** update and delete vcpu evo compute calc ([856c118](https://github.com/cloud-ru-tech/uikit-product/commit/856c11816c41a44bb3f3dfbd243646f564424cdb))
+
+
+
+
+
 ## 1.9.3 (2026-06-05)
 
 ### Only dependencies have been changed
