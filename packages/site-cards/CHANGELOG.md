@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2026-06-08)
+
+
+### Features
+
+* **SITE-11443:** fix card basic ([60a7688](https://github.com/cloud-ru-tech/uikit-product/commit/60a7688d204f398c92cb7df88f51c91adca2fda5))
+
+
+
+
+
 ## 1.2.2 (2026-06-05)
 
 ### Only dependencies have been changed
