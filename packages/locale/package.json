@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-locale",
   "title": "Locale",
-  "version": "2.7.2",
+  "version": "2.8.0",
   "sideEffects": [
     "*.css",
     "*.woff",

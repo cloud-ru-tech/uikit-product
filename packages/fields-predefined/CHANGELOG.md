@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2026-06-08)
+
+
+### Features
+
+* **PDS-3568:** field code ([7d8374e](https://github.com/cloud-ru-tech/uikit-product/commit/7d8374e3ff9545c204ffd1a3d54624fa98baccc1))
+
+
+
+
+
 ## 3.0.3 (2026-06-05)
 
 ### Only dependencies have been changed
