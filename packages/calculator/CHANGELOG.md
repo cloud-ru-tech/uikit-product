@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.9.5 (2026-06-08)
+
+
+### Bug Fixes
+
+* **SITE-11329:** fix flavor eco compute ([53e99f8](https://github.com/cloud-ru-tech/uikit-product/commit/53e99f83985a5752cbf67355d86a904acdf1924d))
+
+
+
+
+
 ## 1.9.4 (2026-06-08)
 
 
