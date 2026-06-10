@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2026-06-10)
+
+
+### Features
+
+* **PDS-3606:** add configurable current time button ([46da31e](https://github.com/cloud-ru-tech/uikit-product/commit/46da31ea15c2d80ed795d7ef33055b019e27311d))
+
+
+
+
+
 ## 2.1.4 (2026-06-05)
 
 ### Only dependencies have been changed

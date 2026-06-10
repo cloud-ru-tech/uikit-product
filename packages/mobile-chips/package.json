@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-mobile-chips",
   "title": "Mobile Chips",
-  "version": "2.0.18",
+  "version": "2.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
