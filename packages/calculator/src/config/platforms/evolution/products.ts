@@ -1,4 +1,5 @@
 import {
+  AirflowSVG,
   ArenadataDbSVG,
   ArtifactRegistrySVG,
   BareMetalSVG,
@@ -36,6 +37,7 @@ import {
   EVOLUTION_DNS_CONFIG,
   EVOLUTION_KUBERNETES_FORM_CONFIG,
   EVOLUTION_LOAD_BALANCER_CONFIG,
+  EVOLUTION_MANAGED_AIRFLOW_CONFIG,
   EVOLUTION_MANAGED_BI,
   EVOLUTION_MANAGED_CLICKHOUSE_CONFIG,
   EVOLUTION_MANAGED_KAFKA_CONFIG,
@@ -303,6 +305,17 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     dataTestId: EVOLUTION_PRODUCT.EvolutionManagedBI,
     enableChangeProductQuantity: false,
     freeTier: true,
+    enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionManagedAirflow]: {
+    id: EVOLUTION_PRODUCT.EvolutionManagedAirflow,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution Managed Airflow',
+    caption: 'Инструмент для оркестрации процессов',
+    icon: AirflowSVG,
+    formConfig: EVOLUTION_MANAGED_AIRFLOW_CONFIG,
+    dataTestId: EVOLUTION_PRODUCT.EvolutionManagedAirflow,
+    enableChangeProductQuantity: false,
     enableConnectToConsole: true,
   },
   [EVOLUTION_PRODUCT.EvolutionNotebooks]: {

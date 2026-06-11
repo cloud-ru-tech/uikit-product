@@ -17,6 +17,9 @@ export function generateBaseItems(arr: (string | number)[], labelReplacerFn?: (v
   }));
 }
 
+export const fillArrayWithNumbers = (from: number, to: number) =>
+  Array.from({ length: to - from + 1 }, (_, i) => from + i);
+
 export * from './disk';
 export * from './eip';
 export * from './obs';

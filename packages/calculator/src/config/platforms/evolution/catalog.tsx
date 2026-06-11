@@ -95,6 +95,7 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
         EVOLUTION_PRODUCT.EvolutionManagedRedis,
         EVOLUTION_PRODUCT.EvolutionManagedSpark,
         EVOLUTION_PRODUCT.EvolutionManagedBI,
+        EVOLUTION_PRODUCT.EvolutionManagedAirflow,
       ],
     },
     {

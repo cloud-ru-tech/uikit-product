@@ -22,3 +22,4 @@ export * from './EvolutionManagedRedis';
 export * from './EvolutionManagedClickHouse';
 export * from './EvolutionManagedSpark';
 export * from './EvolutionManagedKafka';
+export * from './EvolutionManagedAirflow';

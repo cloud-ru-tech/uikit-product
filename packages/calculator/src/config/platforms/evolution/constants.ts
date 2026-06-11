@@ -17,6 +17,7 @@ export const EVOLUTION_PRODUCT = {
   EvolutionArtifactRegistry: 'evolutionArtifactRegistry',
   EvolutionManagedTrino: 'evolutionManagedTrino',
   EvolutionManagedBI: 'evolutionManagedBI',
+  EvolutionManagedAirflow: 'evolutionManagedAirflow',
   EvolutionManagedRedis: 'evolutionManagedRedis',
   EvolutionManagedClickHouse: 'evolutionManagedClickHouse',
   EvolutionManagedSpark: 'evolutionManagedSpark',
