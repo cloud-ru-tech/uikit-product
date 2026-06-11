@@ -38,7 +38,7 @@
 .text {
   display: flex;
   flex-direction: column;
-  gap: calc(#{var.$dimension-1m + var.$dimension-050m});
+  gap: var.$dimension-2m;
   max-width: 800px;
   text-align: left;
 

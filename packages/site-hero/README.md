@@ -16,6 +16,7 @@ Hero blocks for Site
 | subtitle* | `string` | - | Подзаголовок |
 | title* | `string` | - | Заголовок |
 | className | `string` | - | CSS - класснейм |
+| description | `string` | - | Описание |
 | classNameImage | `string` | - | ClassName для фоновой картинки |
 | buttons | `HeroCentralButton[]` | - | Настройки кнопкок |
 | anchors | `AnchorTypeProps[]` | - | Якорное меню |
