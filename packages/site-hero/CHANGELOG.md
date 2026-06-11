@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.8.0 (2026-06-11)
+
+
+### Features
+
+* **SITE-11095:** edit gap ([108ae07](https://github.com/cloud-ru-tech/uikit-product/commit/108ae0727a63a390206424254afaae7b49d7e28a))
+
+
+
+
+
 ## 1.7.2 (2026-06-05)
 
 ### Only dependencies have been changed
