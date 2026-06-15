@@ -12,7 +12,10 @@ import { calculateAmountOfItemsPerPage } from './utils';
 
 export type SectionLeadingProps = WithSupportProps<
   WithLayoutType<
-    Pick<SectionBasicProps, 'title' | 'description' | 'titleSectionSize' | 'titleTag' | 'backgroundColor'> &
+    Pick<
+      SectionBasicProps,
+      'title' | 'subtitle' | 'description' | 'titleSectionSize' | 'titleTag' | 'backgroundColor' | 'moreButton'
+    > &
       Pick<CarouselProps, 'autoSwipe'> & {
         /** id секции */
         id?: string;
@@ -31,12 +34,14 @@ const MOBILE_LAYOUTS = ['tablet', 'mobile'];
 export function SectionLeading({
   id,
   title,
+  subtitle,
   description,
   titleSectionSize = 'm',
   titleTag,
   items,
   footerDescription,
   backgroundColor,
+  moreButton,
   className,
   layoutType,
   autoSwipe = 9,
@@ -82,9 +87,11 @@ export function SectionLeading({
       className={className}
       backgroundColor={backgroundColor}
       title={title}
+      subtitle={subtitle}
       description={description}
       titleSectionSize={titleSectionSize}
       titleTag={titleTag}
+      moreButton={moreButton}
       {...extractSupportProps(rest)}
     >
       <div ref={wrapperRef} className={styles.leadingSection} data-layout-type={layoutType}>

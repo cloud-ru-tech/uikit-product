@@ -23,6 +23,7 @@ export default meta;
 type StoryProps = SectionLeadingProps &
   WithLayoutType<{
     expertsAmount: number;
+    showMoreButton?: boolean;
   }>;
 
 const items: SectionLeadingProps['items'] = [
@@ -46,7 +47,15 @@ const items: SectionLeadingProps['items'] = [
   },
 ];
 
-const Template: StoryFn<StoryProps> = ({ id, title, description, footerDescription, layoutType, backgroundColor }) => (
+const Template: StoryFn<StoryProps> = ({
+  id,
+  title,
+  description,
+  footerDescription,
+  layoutType,
+  backgroundColor,
+  showMoreButton,
+}) => (
   <div className={styles.resizeWrapper}>
     <SectionLeading
       id={id}
@@ -56,6 +65,13 @@ const Template: StoryFn<StoryProps> = ({ id, title, description, footerDescripti
       footerDescription={footerDescription}
       layoutType={layoutType}
       backgroundColor={backgroundColor}
+      moreButton={
+        showMoreButton
+          ? {
+              onClick() {},
+            }
+          : undefined
+      }
     />
   </div>
 );
@@ -78,6 +94,15 @@ export const leading: StoryObj<StoryProps> = {
       options: Object.values(LAYOUT_TYPE),
       control: {
         type: 'radio',
+      },
+    },
+    showMoreButton: {
+      name: '[Story]: Show more button in section footer',
+      control: { type: 'boolean' },
+    },
+    moreButton: {
+      table: {
+        disable: true,
       },
     },
   },

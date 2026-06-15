@@ -221,10 +221,12 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CardLeadingItem[]` | - | Массив айтемов |
 | title | `string` | - | Название секции |
+| subtitle | `string` | - | Подзаголовок секции |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | m | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
+| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 | autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | id | `string` | - | id секции |
 | footerDescription | `string` | - | Описание секции |
