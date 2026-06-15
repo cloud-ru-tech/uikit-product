@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2026-06-15)
+
+
+### Features
+
+* **SITE-11474:** add show more button for section leading ([405df9c](https://github.com/cloud-ru-tech/uikit-product/commit/405df9ca5bb7c47c9c35b01325a7a0d01f9e67cb))
+
+
+
+
+
 ## 1.5.4 (2026-06-10)
 
 ### Only dependencies have been changed
