@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 17.5.0 (2026-06-15)
+
+
+### Features
+
+* **PDS-3881:** add EPP icon ([6119854](https://github.com/cloud-ru-tech/uikit-product/commit/61198541deb1b864a95b9290dad980b3ab79eff7))
+
+
+
+
+
 # 17.4.0 (2026-06-05)
 
 
