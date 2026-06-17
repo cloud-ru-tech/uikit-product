@@ -5,11 +5,11 @@ import { Grid, GridProps } from '@cloud-ru/uikit-product-site-grid';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
-import { SectionButton, SectionTitleProps } from '../../helperComponents';
+import { SectionTitleProps } from '../../helperComponents';
 import { SectionButtonProps } from '../../helperComponents/SectionButton/types';
 import { SectionColor } from '../../types';
 import { SectionBasic } from '../SectionBasic';
-import { CardNumeric } from './components';
+import { BenefitsButton, CardNumeric } from './components';
 import styles from './styles.module.scss';
 import { ContentBasic, ContentInfo, ContentNumeric, ContentProduct } from './types';
 
@@ -155,7 +155,7 @@ export function SectionBenefits({
 
       {buttons && (
         <div className={styles.buttons} data-buttons-align={buttonsAlign}>
-          {buttons.map(button => SectionButton(button))}
+          {buttons.map(button => BenefitsButton(button))}
         </div>
       )}
     </SectionBasic>
