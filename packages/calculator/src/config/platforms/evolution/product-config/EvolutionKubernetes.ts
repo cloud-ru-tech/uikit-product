@@ -37,6 +37,17 @@ const NVIDIA_V100 = {
 
 const MODEL_ITEMS = [NVIDIA_A100_80GB, NVIDIA_H100_NVLINK_ITEM, NVIDIA_H100_NVLINK_ITEM_PCIe, NVIDIA_V100];
 
+const DISK_TYPE_ITEMS = [
+  {
+    value: 'SSD',
+    label: 'SSD',
+  },
+  {
+    value: 'HDD',
+    label: 'HDD',
+  },
+];
+
 const guaranteedPartCards = [
   {
     value: GuaranteedPartItem[10],
@@ -176,7 +187,7 @@ export const EVOLUTION_KUBERNETES_FORM_CONFIG: FormConfig = {
   ui: ['masterNode', 'workerNode', 'bindingPublicIpAddress'],
   controls: {
     masterNode: {
-      ui: [['masterNodeConfig', 'masterNodeCount']],
+      ui: [['masterNodeConfig', 'masterNodeCount'], 'masterNodeGuaranteedPart'],
       type: CONTROL.Object,
       decoratorProps: {
         label: 'Мастер-узел',
@@ -200,6 +211,17 @@ export const EVOLUTION_KUBERNETES_FORM_CONFIG: FormConfig = {
             label: 'Количество мастер-узлов',
           },
         },
+        masterNodeGuaranteedPart: {
+          type: CONTROL.Carousel,
+          accessorKey: 'masterNode.guaranteedPart',
+          defaultValue: guaranteedPartCards[0].value,
+          items: guaranteedPartCards,
+          decoratorProps: {
+            label: 'Гарантированная доля vCPU',
+            labelTooltip:
+              'Гарантированная доля vCPU определяет долю использования процессора, выделенную для виртуальной машины. Этот параметр известен также как переподписка vCPU (vCPU Overcommitment). При 100% гарантируется использование полной мощности виртуальных ядер процессора хоста виртуализации, выделенных виртуальной машине.',
+          },
+        },
       },
     },
     workerNode: {
@@ -217,6 +239,7 @@ export const EVOLUTION_KUBERNETES_FORM_CONFIG: FormConfig = {
           'guaranteedPart',
           ['vCpuCount', 'ramAmount'],
           ['nodeCount'],
+          ['diskType'],
           ['diskSize'],
         ],
         decoratorProps: {
@@ -358,16 +381,29 @@ export const EVOLUTION_KUBERNETES_FORM_CONFIG: FormConfig = {
               postfix: 'Шт',
             },
           },
+          diskType: {
+            type: CONTROL.SelectSingle,
+            accessorKey: 'workerNode.systemDisk.specification',
+            defaultValue: 'SSD',
+            items: DISK_TYPE_ITEMS,
+            decoratorProps: {
+              label: 'Тип диска',
+            },
+            uiProps: {
+              showClearButton: false,
+              searchable: false,
+            },
+          },
           diskSize: {
             type: CONTROL.Stepper,
-            accessorKey: 'workerNode.diskSize',
+            accessorKey: 'workerNode.systemDisk.diskSpace',
             defaultValue: 10,
             decoratorProps: {
               label: 'Диск',
             },
             uiProps: {
               min: 10,
-              max: 64,
+              max: 16384,
               postfix: 'ГБ',
             },
           },
