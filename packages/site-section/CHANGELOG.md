@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.7.0 (2026-06-18)
+
+
+### Features
+
+* **SITE-11464:** section benefits buttons with href ([e86742a](https://github.com/cloud-ru-tech/uikit-product/commit/e86742a257645e1fec5f58babbf2b9c0cca4629a))
+
+
+
+
+
 ## 1.6.1 (2026-06-15)
 
 ### Only dependencies have been changed
