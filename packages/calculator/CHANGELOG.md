@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.11.0 (2026-06-18)
+
+
+### Features
+
+* **SITE-11186:** Update mk8s calculator ([5ec4597](https://github.com/cloud-ru-tech/uikit-product/commit/5ec4597964efd3813c70e65e9025a667aedfa3ae))
+
+
+
+
+
 # 1.10.0 (2026-06-15)
 
 
