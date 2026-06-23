@@ -1,7 +1,7 @@
 import { CONTROL, FormConfig } from '../../../../components';
 import { generateInstanceConfigItems } from '../../../utils';
 
-const configItems = generateInstanceConfigItems([[120, 480]]);
+const configItems = generateInstanceConfigItems([[25, 50]]);
 
 export const EVOLUTION_CONTAINER_APPS_FREE_TIER_CONFIG: FormConfig = {
   ui: ['serviceAlert', ['config']],
@@ -17,7 +17,7 @@ export const EVOLUTION_CONTAINER_APPS_FREE_TIER_CONFIG: FormConfig = {
       type: CONTROL.SelectSingle,
       accessorKey: 'config',
       items: configItems,
-      defaultValue: '120 480',
+      defaultValue: '25 50',
       uiProps: {
         disabled: true,
       },

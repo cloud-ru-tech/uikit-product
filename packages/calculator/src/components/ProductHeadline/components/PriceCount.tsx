@@ -27,10 +27,8 @@ export function BasePriceCount({ price, pricePeriod, freeTier, mobile }: PriceCo
 
   if (freeTier && !total)
     return (
-      <div className={styles.price} data-mobile={mobile || undefined}>
+      <div className={styles.price} data-free data-mobile={mobile || undefined}>
         Бесплатно
-        <br />
-        навсегда
       </div>
     );
 

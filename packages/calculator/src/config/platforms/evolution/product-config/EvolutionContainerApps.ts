@@ -18,7 +18,7 @@ export const EVOLUTION_CONTAINER_APPS_CONFIG: FormConfig = {
     serviceAlert: {
       type: CONTROL.Alert,
       uiProps: {
-        description: 'Первые 120 vCPU и 480 ГБ RAM не тарифицируется каждый месяц в рамках free tier',
+        description: 'Первые 25 vCPU и 50 ГБ RAM не тарифицируется каждый месяц в рамках free tier',
       },
       accessorKey: 'tarification',
     },
