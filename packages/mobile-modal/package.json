@@ -43,7 +43,7 @@
     "@snack-uikit/drawer": "0.14.0",
     "@snack-uikit/link": "0.17.20",
     "@snack-uikit/loaders": "0.9.8",
-    "@snack-uikit/modal": "0.19.12",
+    "@snack-uikit/modal": "0.20.1",
     "@snack-uikit/typography": "0.8.10",
     "@snack-uikit/utils": "3.10.1",
     "classnames": "2.5.1"

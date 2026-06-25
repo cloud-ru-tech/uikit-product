@@ -12,11 +12,19 @@ export type AdaptiveModalProps = WithLayoutType<
   }
 >;
 
-export function AdaptiveModal({ layoutType, size, ...props }: AdaptiveModalProps) {
+export function AdaptiveModal({
+  layoutType,
+  size,
+  animationDuration,
+  animationDurationPercent,
+  ...props
+}: AdaptiveModalProps) {
   const isMobile = layoutType === 'mobile';
   const mobileSize = size && Object.values<string>(SIZE).includes(size) ? (size as Size) : undefined;
   const desktopProps = {
     ...props,
+    animationDuration,
+    animationDurationPercent,
     size: size && ['s', 'm', 'l'].includes(size) ? size : undefined,
   } as ModalProps;
 
