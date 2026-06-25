@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.11.1 (2026-06-25)
+
+
+### Bug Fixes
+
+* **SITE-11384:** fix troubles next 16 and calculator ([8de5e7e](https://github.com/cloud-ru-tech/uikit-product/commit/8de5e7ecc487de4d681e511332d7b1ea6b7f6a38))
+
+
+
+
+
 # 1.11.0 (2026-06-18)
 
 
