@@ -4,7 +4,6 @@ import { fillArrayWithNumbers } from '../../../utils';
 const flavorsConfig = [
   { label: '2vCPU, 4ГБ RAM', value: '2 4' },
   { label: '4vCPU, 8ГБ RAM', value: '4 8' },
-  { label: '4vCPU, 8ГБ RAM', value: '4 8' },
   { label: '4vCPU, 16ГБ RAM', value: '4 16' },
   { label: '4vCPU, 32ГБ RAM', value: '4 32' },
   { label: '4vCPU, 64ГБ RAM', value: '4 64' },
