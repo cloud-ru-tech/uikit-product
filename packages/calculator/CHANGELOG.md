@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.11.3 (2026-06-26)
+
+
+### Bug Fixes
+
+* **SITE-11165:** remove dublicated flavor ([693e2b1](https://github.com/cloud-ru-tech/uikit-product/commit/693e2b160e54deaabaf53b6b83965e0d62a7a2fb))
+
+
+
+
+
 ## 1.11.2 (2026-06-26)
 
 ### Only dependencies have been changed
