@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.12 (2026-06-26)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-icons@17.5.1]($PUBLIC_PROJECT_URL/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@2.2.0]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-modal/CHANGELOG.md)
+
+
+
+
+
 ## 1.2.11 (2026-06-15)
 
 ### Only dependencies have been changed

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2026-06-26)
+
+
+### Features
+
+* **SITE-11454:** update modal ([50a4b14](https://github.com/cloud-ru-tech/uikit-product/commit/50a4b1475f4a6624f9c922848349839e2ffad353))
+
+
+
+
+
 ## 2.1.6 (2026-06-15)
 
 ### Only dependencies have been changed

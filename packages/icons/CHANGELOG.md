@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 17.5.1 (2026-06-26)
+
+
+### Bug Fixes
+
+* **FF-8690:** upd fast-xml-parser ([af1a724](https://github.com/cloud-ru-tech/uikit-product/commit/af1a7245a62e375db68bc1f91522682fc9e0e36e))
+
+
+
+
+
 # 17.5.0 (2026-06-15)
 
 
