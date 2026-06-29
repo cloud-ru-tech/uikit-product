@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { MouseEventHandler } from 'react';
 
 import { Typography } from '@snack-uikit/typography';
 
@@ -11,7 +12,7 @@ type LinkItemHeaderProps = {
   label: string;
   withoutHover?: boolean;
   active?: boolean;
-  onClick?: () => void;
+  onClick?: MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>;
   icon?: IconProps['icon'] | null;
 };
 

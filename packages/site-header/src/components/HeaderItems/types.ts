@@ -1,3 +1,5 @@
+import { MouseEventHandler } from 'react';
+
 import { IconProps } from '../../helperComponents/Icon';
 
 export type LinkItem = {
@@ -6,7 +8,7 @@ export type LinkItem = {
   /** Текст элемента */
   label: string;
   /** Хэндлер клика элемента */
-  onClick?: () => void;
+  onClick?: MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>;
   /** Ссылка элемента */
   href?: string;
   /** target для ссылки элемента */

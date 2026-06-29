@@ -44,8 +44,8 @@ export function MoreButton({ linkItemsArray, activeItemId }: MoreButtonProps) {
             >
               <LinkItemHeader
                 label={item.label}
-                onClick={() => {
-                  item.onClick && item.onClick();
+                onClick={e => {
+                  item.onClick && item.onClick(e);
                   onClickOpen();
                 }}
                 href={item.href}
