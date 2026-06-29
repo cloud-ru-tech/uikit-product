@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.12.0 (2026-06-29)
+
+
+### Features
+
+* **SITE-11498:** update calculator container apps ([5c0fe73](https://github.com/cloud-ru-tech/uikit-product/commit/5c0fe737149ffddc3a170fc3f21aefd5384461cb))
+
+
+
+
+
 ## 1.11.3 (2026-06-26)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-calculator",
   "title": "Calculator",
-  "version": "1.11.3",
+  "version": "1.12.0",
   "sideEffects": [
     "*.css",
     "*.woff",
