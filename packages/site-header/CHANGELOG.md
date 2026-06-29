@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.7.0 (2026-06-29)
+
+
+### Features
+
+* **SITE-11512:** change site header item click handler type to MouseEventHandler ([babc89b](https://github.com/cloud-ru-tech/uikit-product/commit/babc89b3847ac55af3673bb5e13de07be709e179))
+
+
+
+
+
 ## 1.6.4 (2026-06-26)
 
 ### Only dependencies have been changed
