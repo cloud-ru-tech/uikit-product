@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 17.6.0 (2026-07-07)
+
+
+### Features
+
+* **PDS-3964:** add new service icons - giga, gemini, iot ([fcf3413](https://github.com/cloud-ru-tech/uikit-product/commit/fcf341316c6c672d56e835ca5ce7efed24844a2e))
+* **PDS-3969:** add new logo icons - keda, reloader, spegel, agent-sandbox, core-dns ([4951792](https://github.com/cloud-ru-tech/uikit-product/commit/49517924fbfb6468e6863501510118dbd2db1479))
+* **PDS-3974:** add new interface icons - calendar, document, flag, panel-settings, promo-code and more ([865834e](https://github.com/cloud-ru-tech/uikit-product/commit/865834ea20a02e24c362bea1e5d686f4a74b19a1))
+
+
+
+
+
 ## 17.5.1 (2026-06-26)
 
 
