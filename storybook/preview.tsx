@@ -4,6 +4,7 @@ import { GlobalTypes, Parameters } from '@storybook/csf';
 import { Preview } from '@storybook/react';
 import { themes, ThemeVars } from '@storybook/theming';
 import { FormProvider, useForm } from 'react-hook-form';
+import { useDarkMode } from 'storybook-dark-mode';
 
 import {
   PARAM_CAN_ADD_CUSTOM_BRAND_KEY,
@@ -26,6 +27,18 @@ const url = process.env.DEPS_URL && new URL(process.env.DEPS_URL);
 
 const decorators: Preview['decorators'] = [
   withBrand,
+  // Связывает переключатель темы аддона storybook-dark-mode (иконка солнца в тулбаре)
+  // с продуктовой темой: без этого моста useTheme() всегда возвращал светлую тему,
+  // и themed-иконки (например, логотипы) не переключались.
+  Story => {
+    const isDark = useDarkMode();
+
+    return (
+      <ConfigProvider theme={isDark ? ConfigProvider.themes.GreenDark : ConfigProvider.themes.Green}>
+        <Story />
+      </ConfigProvider>
+    );
+  },
   (Story, { globals: { locale }, parameters: { badges, snackUiLink } }) => {
     const languageCode = locale || LanguageCodeType.ruRU;
 
