@@ -327,7 +327,7 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | title | `string` | - | Название секции |
 | subtitle | `string` | - | Подзаголовок секции |
-| titleLink | `PickLinkProps<(<T extends ElementType = "a">({ text, className, textMode, size, purpose, appearance, insideText, truncateVariant, as, ...rest }: LinkProps<T>) => Element), "onClick" \| "appearance" \| "href" \| "target" \| "textMode">` | - | Ссылка в названии |
+| titleLink | `PickLinkProps<(<T extends ElementType = "a">({ text, className, textMode, size, purpose, appearance, insideText, truncateVariant, truncateMaxLines, as, ...rest }: LinkProps<T>) => Element), "onClick" \| "appearance" \| "href" \| "target" \| "textMode">` | - | Ссылка в названии |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
