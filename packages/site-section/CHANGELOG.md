@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.7.3 (2026-07-08)
+
+
+### Bug Fixes
+
+* **MKP-3724:** add color invertion for client carousel section cards ([c72beb2](https://github.com/cloud-ru-tech/uikit-product/commit/c72beb2557513f9ac9205739b8321f70c33b6e01))
+
+
+
+
+
 ## 1.7.2 (2026-07-07)
 
 ### Only dependencies have been changed
