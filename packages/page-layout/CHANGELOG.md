@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2026-07-09)
+
+
+### Features
+
+* **FF-8766:** add stickyFooter prop to PageForm ([2074571](https://github.com/cloud-ru-tech/uikit-product/commit/2074571df26fa07d2cfec2b85bccba415de17c73))
+
+
+
+
+
 ## 2.1.11 (2026-07-07)
 
 ### Only dependencies have been changed
