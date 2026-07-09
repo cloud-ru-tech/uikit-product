@@ -23,6 +23,7 @@ $prefix-height: styles-theme-variables.simple-var(styles-theme-variables.$sans-h
   border-radius: 16px;
   min-height: 100%;
   box-sizing: border-box;
+  position: relative;
 }
 
 .headline {
@@ -33,6 +34,54 @@ $prefix-height: styles-theme-variables.simple-var(styles-theme-variables.$sans-h
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.footerSticky {
+  position: sticky;
+  bottom: 0;
+
+  box-sizing: border-box;
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+  border-radius: 16px;
+  padding: 24px 56px;
+  margin: -24px -56px -56px;
+
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  transition: border-radius 0.15s ease;
+
+  /* Тень из токена, но обрезаем всё ниже верхней кромки — остаётся только тень сверху. */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: styles-theme-variables.$box-shadow-elevation-level3;
+
+    /* оставляем полосу над верхней кромкой + зону скруглённых углов (до высоты радиуса),
+       по бокам чуть выходим наружу, чтобы поймать тень на скруглении */
+    clip-path: inset(-24px -8px calc(100% - 16px) -8px);
+    opacity: 0;
+    pointer-events: none;
+
+    /* stylelint-disable-next-line declaration-property-value-allowed-list */
+    transition: opacity 0.15s ease;
+  }
+}
+
+.footerStuck {
+  border-radius: 16px 16px 0 0;
+
+  &::before {
+    opacity: 1;
+  }
+}
+
+.footerSentinel {
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 1px;
+  pointer-events: none;
 }
 
 .mainActions {

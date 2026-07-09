@@ -13,7 +13,7 @@ import {
 import { TooltipProps } from '@snack-uikit/tooltip';
 
 import { Headline, HeadlineProps } from '../Headline';
-import { useButtonWithTooltip, useGetButtonLabel } from './hooks';
+import { useButtonWithTooltip, useGetButtonLabel, useStickyFooterShadow } from './hooks';
 import styles from './styles.module.scss';
 import { ButtonPrimaryVariant, ButtonSecondaryVariant } from './types';
 
@@ -21,6 +21,9 @@ export type PageFormProps = WithSupportProps<
   PropsWithChildren<
     Pick<HeadlineProps, 'title' | 'subHeader'> & {
       className?: string;
+
+      /** Закрепляет футер внизу формы при прокрутке контента */
+      stickyFooter?: boolean;
 
       stepper?: ReactNode;
 
@@ -74,9 +77,12 @@ export function PageForm({
   footer,
   sideBlock,
   priceSummary,
+  stickyFooter,
   ...rest
 }: PageFormProps) {
   const getButtonLabel = useGetButtonLabel();
+
+  const { sentinelRef, atBottom } = useStickyFooterShadow(stickyFooter);
 
   const moreItems = useMemo(
     () => [priceSummary?.content].concat(sideBlock?.map(item => item.content)).filter(Boolean),
@@ -89,7 +95,7 @@ export function PageForm({
 
   return (
     <div className={cn(styles.container, className)} {...extractSupportProps(rest)}>
-      <div className={styles.form}>
+      <div className={cn(styles.form, { [styles.formStickyFooter]: stickyFooter && footer })}>
         <div className={styles.headline}>
           <Headline title={title} subHeader={subHeader} />
         </div>
@@ -99,34 +105,49 @@ export function PageForm({
         <div className={styles.body}>{children}</div>
 
         {footer && (
-          <div className={styles.footer}>
-            {footer.buttonSecondary && (
-              <SecondaryButton
-                {...footer.buttonSecondary}
-                size='m'
-                appearance='neutral'
-                label={
-                  footer.buttonSecondary.variant === 'custom'
-                    ? footer.buttonSecondary.label
-                    : getButtonLabel(footer.buttonSecondary.variant)
-                }
-              />
-            )}
+          <>
+            <div
+              className={cn(styles.footer, {
+                [styles.footerSticky]: stickyFooter,
+                [styles.footerStuck]: stickyFooter && !atBottom,
+              })}
+            >
+              {footer.buttonSecondary && (
+                <SecondaryButton
+                  {...footer.buttonSecondary}
+                  size='m'
+                  appearance='neutral'
+                  label={
+                    footer.buttonSecondary.variant === 'custom'
+                      ? footer.buttonSecondary.label
+                      : getButtonLabel(footer.buttonSecondary.variant)
+                  }
+                />
+              )}
 
-            <div className={styles.mainActions}>
-              {footer.buttonAdditional && <AdditionalButton {...footer.buttonAdditional} size='m' />}
+              <div className={styles.mainActions}>
+                {footer.buttonAdditional && <AdditionalButton {...footer.buttonAdditional} size='m' />}
 
-              <PrimaryButton
-                {...footer.buttonPrimary}
-                size='m'
-                label={
-                  footer.buttonPrimary.variant === 'custom'
-                    ? footer.buttonPrimary.label
-                    : getButtonLabel(footer.buttonPrimary.variant)
-                }
-              />
+                <PrimaryButton
+                  {...footer.buttonPrimary}
+                  size='m'
+                  label={
+                    footer.buttonPrimary.variant === 'custom'
+                      ? footer.buttonPrimary.label
+                      : getButtonLabel(footer.buttonPrimary.variant)
+                  }
+                />
+              </div>
             </div>
-          </div>
+
+            {stickyFooter && (
+              <>
+                <div ref={sentinelRef} className={styles.footerSentinel} aria-hidden />
+                {/* Нужно для правильного отступа снизу */}
+                <div />
+              </>
+            )}
+          </>
         )}
       </div>
 

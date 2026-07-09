@@ -144,6 +144,7 @@ export const pageForm = {
     showStepper: true,
     showPriceSummary: true,
     showSideBlock: true,
+    stickyFooter: false,
 
     priceSummary: {
       total: '5 076 ₽ в месяц',
@@ -179,6 +180,7 @@ export const pageForm = {
     showSecondaryButton: { name: '[Stories]: show footer -> button secondary', if: { arg: 'showFooter', eq: true } },
     showAdditionalButton: { name: '[Stories]: show footer -> button additional', if: { arg: 'showFooter', eq: true } },
     showButtonTooltip: { name: '[Stories]: show button tooltips', if: { arg: 'showFooter', eq: true } },
+    stickyFooter: { name: '[Stories]: sticky footer', if: { arg: 'showFooter', eq: true } },
     showSubheader: { name: '[Stories]: show subheader' },
     subHeader: { table: { disable: true } },
 
