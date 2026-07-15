@@ -1,8 +1,10 @@
+import cn from 'classnames';
 import { MouseEvent, ReactElement, ReactNode, useCallback, useMemo } from 'react';
 
 import { CardServiceLight } from '@cloud-ru/uikit-product-card-predefined';
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { TitleClickable } from '@cloud-ru/uikit-product-title-clickable';
+import { useForThemeMode } from '@cloud-ru/uikit-product-utils';
 
 import { LinksGroup } from '../../types';
 import { getLinkEmblem } from '../../utils';
@@ -50,6 +52,10 @@ export function Content({
   onLinkChange,
 }: ContentProps) {
   const { t } = useLocale('Header');
+  const highlightedGroupClassName = useForThemeMode({
+    light: styles.lightHighlightedGroup,
+    dark: styles.darkHighlightedGroup,
+  });
 
   const wrappedClick = useCallback(
     ({ disabled, onClick }: { disabled?: boolean; onClick?(e?: MouseEvent<HTMLElement>): void }, cb?: () => void) =>
@@ -73,8 +79,13 @@ export function Content({
 
   const cards = useMemo(
     () =>
-      serviceGroups?.map(({ id, label, items, favoritesEnabled = true }) => (
-        <div key={String(id)} className={styles.group} id={id} data-test-id={`header__drawer-menu__group-card-${id}`}>
+      serviceGroups?.map(({ id, label, items, favoritesEnabled = true, highlight }) => (
+        <div
+          key={String(id)}
+          className={cn(styles.group, { [highlightedGroupClassName]: highlight })}
+          id={id}
+          data-test-id={`header__drawer-menu__group-card-${id}`}
+        >
           {!label.onClick ? (
             <span className={styles.groupTitle}>{label.text}</span>
           ) : (
@@ -108,7 +119,7 @@ export function Content({
           </div>
         </div>
       )),
-    [favorite, isMobile, onLinkChange, serviceGroups, wrappedClick],
+    [favorite, highlightedGroupClassName, isMobile, onLinkChange, serviceGroups, wrappedClick],
   );
 
   return (

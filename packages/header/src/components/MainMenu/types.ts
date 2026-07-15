@@ -75,6 +75,8 @@ export type LinksGroup = {
   favoritesEnabled?: boolean;
   /** Карточки сервисов или ссылок внутри группы. */
   items: InnerLink[];
+  /** Визуальное выделение группы */
+  highlight?: boolean;
 };
 
 export type SearchHandler = (searchValue: string, items: LinksGroup[]) => LinksGroup[] | undefined;

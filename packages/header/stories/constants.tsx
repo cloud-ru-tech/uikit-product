@@ -7,6 +7,69 @@ const EMPTY_HREF = '#';
 
 export const SERVICE_GROUPS: LinksGroup[] = [
   {
+    label: { text: 'AI Factory' },
+    id: 'aiFactory',
+    highlight: true,
+    items: [
+      {
+        id: 'aiagents',
+        label: 'AI Agents',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        icon: PlaceholderSVG,
+        aliases: ['ai agents', 'ai', 'agents'],
+      },
+      {
+        id: 'foundationModels',
+        label: 'Foundation Models',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        icon: PlaceholderSVG,
+        aliases: ['foundation models', 'foundation', 'models'],
+      },
+      {
+        id: 'mlInference',
+        label: 'ML Inference',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        icon: PlaceholderSVG,
+        aliases: ['ml inference', 'inference', 'ml'],
+      },
+      {
+        id: 'notebooks',
+        label: 'Notebooks',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        icon: PlaceholderSVG,
+        aliases: ['notebooks', 'notebook'],
+      },
+      {
+        id: 'mlFinetuning',
+        label: 'ML Finetuning',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        icon: PlaceholderSVG,
+        aliases: ['ml finetuning', 'finetuning', 'fine tuning'],
+      },
+      {
+        id: 'managedRag',
+        label: 'Managed RAG',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        icon: PlaceholderSVG,
+        aliases: ['managed rag', 'rag'],
+      },
+      {
+        id: 'distributedTrain',
+        label: 'Distributed Train',
+        onClick: EMPTY_ON_CLICK,
+        href: EMPTY_HREF,
+        icon: PlaceholderSVG,
+        aliases: ['distributed train', 'distributed training', 'train'],
+      },
+    ],
+  },
+  {
     label: { text: 'Инфраструктура' },
     id: 'svpInfrastructure',
     items: [

@@ -3,10 +3,58 @@
 .group {
   background-color: var.$sys-neutral-background1-level;
   display: flex;
+  position: relative;
   flex-direction: column;
   padding: 12px;
   gap: var.$dimension-1m;
   border-radius: var.$dimension-050m;
+}
+
+.lightHighlightedGroup, .darkHighlightedGroup {
+  background-color: transparent;
+  --highlight-border-width: 1px;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: -1; /* stylelint-disable-line declaration-property-value-allowed-list */
+  }
+
+  &::before {
+    opacity: 0.64;
+    background-image: linear-gradient(90deg, var(--highlight-border-color-from) 0%, var(--highlight-border-color-to) 50%, var(--highlight-border-color-from) 100%);
+  }
+
+  &::after {
+    top: var(--highlight-border-width);
+    left: var(--highlight-border-width);
+    bottom: var(--highlight-border-width);
+    right: var(--highlight-border-width);
+    border-radius: calc(var.$dimension-050m - var(--highlight-border-width));
+    background: linear-gradient(90deg, var(--highlight-background-color-from) 2.29%, var(--highlight-background-color-to) 97.84%), var(--highlight-background-color);
+  }
+}
+
+.lightHighlightedGroup {
+  --highlight-border-color-from: hsla(155, 48%, 42%, 1);
+  --highlight-border-color-to: hsla(155, 48%, 42%, 0.32);
+  --highlight-background-color-from: hsla(0, 0%, 99%, 0.2);
+  --highlight-background-color-to: hsla(152, 39%, 79%, 0.12);
+  --highlight-background-color: hsla(0, 0%, 99%, 1);
+}
+
+.darkHighlightedGroup {
+  --highlight-border-color-from: hsla(153, 30%, 55%, 1);
+  --highlight-border-color-to: hsla(157, 51%, 19%, 1);
+  --highlight-background-color-from: hsla(240, 14%, 16%, 1);
+  --highlight-background-color-to: hsla(157, 51%, 19%, 0.2);
+  --highlight-background-color: hsla(240, 14%, 16%, 1);
 }
 
 .groupTitle {
