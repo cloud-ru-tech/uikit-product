@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.7 (2026-07-15)
+
+
+### Dependencies
+
+* **FF-8766:** up deps card ([d2f6112](https://github.com/cloud-ru-tech/uikit-product/commit/d2f6112623fc7fc7b442e25f538a6393e2df81d9))
+
+
+
+
+
 ## 2.0.6 (2026-05-27)
 
 

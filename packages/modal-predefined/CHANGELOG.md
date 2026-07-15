@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.9 (2026-07-15)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-toggles-predefined@2.0.7]($PUBLIC_PROJECT_URL/blob/master/packages/toggles-predefined/CHANGELOG.md)
+
+
+
+
+
 ## 2.2.8 (2026-07-07)
 
 ### Only dependencies have been changed
