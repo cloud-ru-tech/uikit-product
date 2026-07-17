@@ -62,6 +62,7 @@ export type PageFormProps = WithSupportProps<
         } & Omit<ButtonOutlineProps, 'label'>;
         buttonAdditional?: ButtonSimpleProps & {
           tooltip?: TooltipProps;
+          view?: 'simple' | 'outline';
         };
       };
     }
@@ -91,7 +92,10 @@ export function PageForm({
 
   const PrimaryButton = useButtonWithTooltip({ Button: ButtonFilled, tooltip: footer?.buttonPrimary.tooltip });
   const SecondaryButton = useButtonWithTooltip({ Button: ButtonOutline, tooltip: footer?.buttonSecondary?.tooltip });
-  const AdditionalButton = useButtonWithTooltip({ Button: ButtonSimple, tooltip: footer?.buttonAdditional?.tooltip });
+  const AdditionalButton = useButtonWithTooltip({
+    Button: footer?.buttonAdditional?.view === 'outline' ? ButtonOutline : ButtonSimple,
+    tooltip: footer?.buttonAdditional?.tooltip,
+  });
 
   return (
     <div className={cn(styles.container, className)} {...extractSupportProps(rest)}>
