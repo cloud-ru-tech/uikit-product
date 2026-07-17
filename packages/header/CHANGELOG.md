@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 7.2.0 (2026-07-17)
+
+
+### Features
+
+* **FF-8778:** add group highlight prop ([22700aa](https://github.com/cloud-ru-tech/uikit-product/commit/22700aa824d7a219b28fdda546011f645eb1d7f8))
+
+
+
+
+
 ## 7.1.7 (2026-07-07)
 
 ### Only dependencies have been changed
