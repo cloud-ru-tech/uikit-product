@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2026-07-17)
+
+
+### Features
+
+* **FF-8766:** add view for additional button on PageForm ([2b06914](https://github.com/cloud-ru-tech/uikit-product/commit/2b069144004d50625bd520b694bbfa05a294413c))
+
+
+
+
+
 ## 2.1.14 (2026-07-09)
 
 ### Only dependencies have been changed
