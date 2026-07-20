@@ -50,6 +50,7 @@ export const header: StoryObj<HeaderProps> = {
       logoLink: '/',
       onClick: () => {},
     },
+    afterHeaderContent: <div>Контент под хэдером</div>,
     mobileMenuContent: <div>Меню мобильной версии</div>,
     rightContent: <div>Правый контент</div>,
     layoutType: LAYOUT_TYPE.Desktop,
