@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 17.7.0 (2026-07-21)
+
+
+### Features
+
+* **FF-8780:** add grpc and http icons ([494de2e](https://github.com/cloud-ru-tech/uikit-product/commit/494de2ed9779ea84505f1c9faab3b6ecae5e9589))
+* **PDS-4061:** add giga logo ([c969e8c](https://github.com/cloud-ru-tech/uikit-product/commit/c969e8cfe1af346dbe588f6a34b3c012c99d3103))
+
+
+
+
+
 # 17.6.0 (2026-07-07)
 
 

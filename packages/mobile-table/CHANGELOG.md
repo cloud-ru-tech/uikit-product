@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.3.7 (2026-07-21)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-icons@17.7.0]($PUBLIC_PROJECT_URL/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-chips@2.1.4]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@2.1.19]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-toolbar@2.0.24]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-toolbar/CHANGELOG.md)
+
+
+
+
+
 ## 2.3.6 (2026-07-07)
 
 ### Only dependencies have been changed

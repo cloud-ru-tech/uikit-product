@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.18 (2026-07-21)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-mobile-tooltip@1.1.17]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+
+
+
+
+
 ## 1.1.17 (2026-07-07)
 
 ### Only dependencies have been changed

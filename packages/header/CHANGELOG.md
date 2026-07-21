@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.2.1 (2026-07-21)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-card-predefined@1.2.8]($PUBLIC_PROJECT_URL/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@17.7.0]($PUBLIC_PROJECT_URL/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-drawer@2.0.19]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@2.2.2]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-title-clickable@1.2.16]($PUBLIC_PROJECT_URL/blob/master/packages/title-clickable/CHANGELOG.md)
+
+
+
+
+
 # 7.2.0 (2026-07-17)
 
 

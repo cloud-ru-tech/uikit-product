@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-title-clickable",
   "title": "Title Clickable",
-  "version": "1.2.15",
+  "version": "1.2.16",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "17.6.0",
+    "@cloud-ru/uikit-product-icons": "17.7.0",
     "@snack-uikit/avatar": "0.8.25",
     "@snack-uikit/truncate-string": "0.7.11",
     "@snack-uikit/typography": "0.8.4",
