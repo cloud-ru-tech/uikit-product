@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.8.0 (2026-07-21)
+
+
+### Features
+
+* **SITE-11618:** update site header ([319ff5a](https://github.com/cloud-ru-tech/uikit-product/commit/319ff5a73baeb7081c6f02ca0f54c8a7755c570f))
+
+
+
+
+
 ## 1.7.2 (2026-07-21)
 
 ### Only dependencies have been changed
