@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.11.0 (2026-07-21)
+
+
+### Features
+
+* **SITE-11480:** update heroCentral ([f554b7c](https://github.com/cloud-ru-tech/uikit-product/commit/f554b7cf869fff88eee90b52a4f652a04b04afd0))
+
+
+
+
+
 # 1.10.0 (2026-07-21)
 
 
