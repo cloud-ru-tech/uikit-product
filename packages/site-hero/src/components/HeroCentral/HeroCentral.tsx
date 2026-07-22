@@ -25,10 +25,10 @@ type HeroBlockProps = WithSupportProps<{
   buttons?: HeroCentralButton[];
   /** Якорное меню  */
   anchors?: AnchorTypeProps[];
-  /** Хлебные крошки */
-  breadcrumbs: Item[];
   /** Текст подсказки */
   tooltipText?: string;
+  /** Хлебные крошки */
+  breadcrumbs: Item[];
   /** Расположение подсказки */
   tooltipPlacement?: TooltipProps['placement'];
   /** Фоновое изображение */
