@@ -1,7 +1,7 @@
-import { MouseEvent, useMemo } from 'react';
+import { MouseEvent } from 'react';
 
 import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
-import { Typography, TypographyProps } from '@snack-uikit/typography';
+import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';
 
@@ -18,27 +18,9 @@ export type ArticleLinksProps = WithLayoutType<{
 export function ArticleLinks(props: ArticleLinksProps) {
   const { layoutType, links } = props;
 
-  const typographyProps: TypographyProps = useMemo(() => {
-    if (layoutType === 'mobile') {
-      return {
-        family: 'sans',
-        purpose: 'title',
-        size: 'm',
-      };
-    }
-
-    return {
-      family: 'sans',
-      purpose: 'title',
-      size: 'l',
-    };
-  }, [layoutType]);
-
   return (
     <div className={styles.articleLinks} data-layout-type={layoutType}>
-      <Typography className={styles.title} {...typographyProps} tag='div'>
-        Содержание
-      </Typography>
+      <div className={styles.title}>Содержание</div>
       <ul className={styles.list} data-test-id='article-links'>
         {links.map(link => (
           <li className={styles.listItem} key={link.id}>

@@ -12,8 +12,14 @@
 }
 
 .title {
+  @include var.composite-var(var.$sans-title-l);
+
   color: var.$sys-neutral-text-main;
   margin-bottom: 16px;
+
+  .articleLinks[data-layout-type='mobile'] & {
+    @include var.composite-var(var.$sans-title-m);
+  }
 }
 
 .list {
