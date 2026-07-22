@@ -17,9 +17,9 @@ type BannerInfo = {
 };
 
 const APPEARANCE_ALERT: Record<BannerInfo['color'], AlertTopProps['appearance']> = {
+  blue: 'info',
   green: 'success',
   yellow: 'warning',
-  blue: 'info',
 };
 
 type SubHeaderProps = WithLayoutType<{
