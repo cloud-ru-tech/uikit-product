@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.12 (2026-07-22)
+
+**Note:** Version bump only for package @cloud-ru/uikit-product-site-article
+
+
+
+
+
 ## 1.2.11 (2026-07-21)
 
 ### Only dependencies have been changed
