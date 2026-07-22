@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.12.0 (2026-07-22)
+
+
+### Features
+
+* **SITE-11695:** update for new package ([62b4c56](https://github.com/cloud-ru-tech/uikit-product/commit/62b4c56b3772dbe243f0761a2ef40e9b3e3991c2))
+
+
+
+
+
 # 1.11.0 (2026-07-21)
 
 
