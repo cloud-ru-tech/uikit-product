@@ -37,9 +37,24 @@ $scale: 1.05;
 }
 
 .imgWrapper {
+  position: relative;
   overflow: hidden;
   height: auto;
   border-radius: 4px;
+}
+
+.blackout {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: ste.$sys-blackout;
+  pointer-events: none;
+}
+
+.tagRead {
+  position: absolute;
+  top: 2px;
+  right: 2px;
 }
 
 .header {

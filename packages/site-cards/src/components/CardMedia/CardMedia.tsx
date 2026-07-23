@@ -40,6 +40,10 @@ export type CardMediaProps = WithSupportProps<
      * @default false
      */
     disabled?: boolean;
+    /** Карточка прочитана — затемняет картинку и показывает лейбл */
+    isRead?: boolean;
+    /** Текст лейбла при isRead @default 'Прочитано' */
+    readLabel?: string;
   }>
 >;
 
@@ -58,6 +62,8 @@ export function CardMedia({
   onClick,
   'data-test-id': dataTestId = 'card-media',
   layoutType,
+  isRead = false,
+  readLabel = 'Прочитано',
   ...rest
 }: CardMediaProps) {
   const { anchorRef, handleLinkClick, handleCardKeyDown } = useCardInteractions({
@@ -81,6 +87,13 @@ export function CardMedia({
     >
       <div className={styles.imgWrapper}>
         <img className={styles.img} src={img} alt={imgAlt ?? 'card-media-img'} />
+
+        {isRead && (
+          <>
+            <div className={styles.blackout} />
+            <Tag size='xs' label={readLabel} className={styles.tagRead} />
+          </>
+        )}
       </div>
 
       <div className={styles.header}>

@@ -45,6 +45,8 @@ export const cardMedia: StoryObj<StoryProps> = {
     size: 's',
     href: '#',
     disabled: false,
+    isRead: false,
+    readLabel: 'Прочитано',
     layoutType: 'desktop',
     onClick: () => alert('router push'),
     target: '_self',
@@ -57,6 +59,13 @@ export const cardMedia: StoryObj<StoryProps> = {
       name: '[Story] Tag appearance',
       options: Object.values(APPEARANCE),
       control: 'select',
+    },
+    isRead: {
+      control: 'boolean',
+    },
+    readLabel: {
+      control: 'text',
+      if: { arg: 'isRead' },
     },
     target: {
       control: 'select',
