@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.7.5 (2026-07-23)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-site-cards@1.4.0]($PUBLIC_PROJECT_URL/blob/master/packages/site-cards/CHANGELOG.md)
+
+
+
+
+
 ## 1.7.4 (2026-07-21)
 
 ### Only dependencies have been changed

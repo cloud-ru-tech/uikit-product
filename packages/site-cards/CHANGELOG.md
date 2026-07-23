@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2026-07-23)
+
+
+### Features
+
+* **SITE-11518:** add isRead&readLabel props for card media ([9879c86](https://github.com/cloud-ru-tech/uikit-product/commit/9879c86c2af6d9cbb850dddcb3ab0fa37c3adc64))
+
+
+
+
+
 ## 1.3.4 (2026-07-21)
 
 ### Only dependencies have been changed
