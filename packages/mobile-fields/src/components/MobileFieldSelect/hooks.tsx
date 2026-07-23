@@ -55,6 +55,7 @@ type UseCopyButtonProps = {
   valueToCopy: string;
   size: Size;
   onValueRequest?(): AsyncValueRequest;
+  onCopyButtonClick?(): void;
   disabled?: boolean;
   prefix?: string;
   postfix?: string;
@@ -66,6 +67,7 @@ export function useCopyButton({
   size,
   valueToCopy,
   onValueRequest,
+  onCopyButtonClick,
   disabled,
   prefix = '',
   postfix = '',
@@ -82,11 +84,12 @@ export function useCopyButton({
           size={BUTTON_SIZE_MAP[size]}
           valueToCopy={(prefix ?? '') + valueToCopy + (postfix ?? '')}
           onValueRequest={onValueRequest}
+          onClick={onCopyButtonClick}
           disabled={disabled}
         />
       ),
     }),
-    [copyButtonRef, disabled, onValueRequest, showCopyButton, size, valueToCopy, prefix, postfix],
+    [copyButtonRef, disabled, onCopyButtonClick, onValueRequest, showCopyButton, size, valueToCopy, prefix, postfix],
   );
 }
 
@@ -96,6 +99,7 @@ type UseButtonsProps = {
   showCopyButton: boolean;
   size: 's' | 'm' | 'l';
   onClear(): void;
+  onCopyButtonClick?(): void;
   inputRef: RefObject<HTMLInputElement>;
   valueToCopy?: string;
 };
@@ -106,6 +110,7 @@ export function useButtons({
   showCopyButton,
   size,
   onClear,
+  onCopyButtonClick,
   inputRef,
   valueToCopy = '',
 }: UseButtonsProps) {
@@ -125,6 +130,7 @@ export function useButtons({
     showCopyButton: readonly && showCopyButton,
     size,
     valueToCopy,
+    onCopyButtonClick,
   });
   const { onInputKeyDown: inputKeyDownNavigationHandler, postfixButtons } = useButtonNavigation({
     inputRef,
@@ -142,8 +148,9 @@ export function useSearchInput({
   onChange,
   defaultValue,
   selectedOptionFormatter,
-}: SearchState & { selectedOptionFormatter: SelectedOptionFormatter }) {
-  const [inputValue = '', setInputValue] = useValueControl<string>({ value, onChange, defaultValue });
+  resetSearchOnOptionSelection = true,
+}: SearchState & { selectedOptionFormatter: SelectedOptionFormatter; resetSearchOnOptionSelection?: boolean }) {
+  const [inputValue = '', setInputValueState] = useValueControl<string>({ value, onChange, defaultValue });
 
   const prevInputValue = useRef<string>(inputValue);
 
@@ -151,13 +158,25 @@ export function useSearchInput({
     (selectedItem?: ItemWithId) => {
       const newInputValue = selectedOptionFormatter(selectedItem);
 
-      if (inputValue !== newInputValue || prevInputValue.current !== newInputValue) {
-        setInputValue(newInputValue);
+      if (resetSearchOnOptionSelection && (inputValue !== newInputValue || prevInputValue.current !== newInputValue)) {
+        setInputValueState(newInputValue);
 
         prevInputValue.current = newInputValue;
       }
     },
-    [inputValue, selectedOptionFormatter, setInputValue],
+    [inputValue, resetSearchOnOptionSelection, selectedOptionFormatter, setInputValueState],
+  );
+
+  const setInputValue = useCallback(
+    (value: string) => {
+      const updatedValue =
+        prevInputValue.current && value.includes(prevInputValue.current)
+          ? value.replace(prevInputValue.current, '')
+          : value;
+
+      setInputValueState(updatedValue);
+    },
+    [setInputValueState],
   );
 
   return { inputValue, setInputValue, prevInputValue, onInputValueChange: setInputValue, updateInputValue };

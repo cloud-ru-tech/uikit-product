@@ -94,6 +94,8 @@ type FiledSelectCommonProps = WithSupportProps<{
   searchable?: boolean;
   /** Отображение кнопки Копировать для поля (актуально только для `readonly = true`) */
   showCopyButton?: boolean;
+  /** Колбек клика по кнопке Копировать для поля */
+  onCopyButtonClick?(): void;
   /**
    * Отображение кнопки очистки поля
    * @default true
@@ -129,12 +131,29 @@ type FiledSelectCommonProps = WithSupportProps<{
 
   open?: boolean;
 
+  /** Поведение строки поиска при выборе опции из списка, false необходимо при асинхронной подгрузке значений с бэка, в случае если надо поиск оставить как значение при отсутствии данных
+   * @default true
+   */
+  resetSearchOnOptionSelection?: boolean;
+
   onOpenChange?(open: boolean): void;
 
   selectedOptionFormatter?: SelectedOptionFormatter;
 }> &
   Pick<FieldSelectProps, 'addOptionByEnter'> &
-  Pick<DroplistProps, 'dataError' | 'noDataState' | 'noResultsState' | 'errorDataState' | 'dataFiltered'>;
+  Pick<
+    DroplistProps,
+    | 'dataError'
+    | 'noDataState'
+    | 'noResultsState'
+    | 'errorDataState'
+    | 'dataFiltered'
+    | 'untouchableScrollbars'
+    | 'scrollToSelectedItem'
+    | 'scrollRef'
+    | 'scrollContainerRef'
+    | 'onScroll'
+  >;
 
 export type MobileFieldSelectSingleProps = FieldSelectPrivateProps &
   Omit<SelectionSingleState, 'mode'> &
@@ -145,7 +164,7 @@ export type MobileFieldSelectSingleProps = FieldSelectPrivateProps &
 export type MobileFieldSelectMultipleProps = FieldSelectPrivateProps & {
   removeByBackspace?: boolean;
 } & Omit<SelectionMultipleState, 'mode'> &
-  Omit<FiledSelectCommonProps, 'showCopyButton'> &
+  Omit<FiledSelectCommonProps, 'showCopyButton' | 'onCopyButtonClick'> &
   Pick<FieldSelectMultipleProps, 'addCustomOptionTriggers'>;
 
 export type MobileFieldSelectProps =

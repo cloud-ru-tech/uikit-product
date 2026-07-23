@@ -1,19 +1,22 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 
 import { DaySVG } from '@cloud-ru/uikit-product-icons';
 import { Avatar } from '@snack-uikit/avatar';
-import {
-  FieldSelectMultipleAddCustomOptionTrigger,
-  FieldSelectSingleAddCustomOptionTrigger,
-} from '@snack-uikit/fields';
 import { SelectionSingleValueType } from '@snack-uikit/list';
 import { Tag } from '@snack-uikit/tag';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { BaseOptionProps, MobileFieldSelect, MobileFieldSelectProps, OptionProps } from '../src/components';
+import {
+  BaseOptionProps,
+  FieldSelectMultipleAddCustomOptionTrigger,
+  FieldSelectSingleAddCustomOptionTrigger,
+  MobileFieldSelect,
+  MobileFieldSelectProps,
+  OptionProps,
+} from '../src/components';
 import { COMMON_ARG_TYPES } from './constants';
 import styles from './styles.module.scss';
 
@@ -82,6 +85,10 @@ type StoryProps = MobileFieldSelectProps & {
   showMoreOptions: boolean;
   singleAddCustomOptionTriggers?: FieldSelectSingleAddCustomOptionTrigger[];
   multipleAddCustomOptionTriggers?: FieldSelectMultipleAddCustomOptionTrigger[];
+  logCopyButtonClick?: boolean;
+  logScroll?: boolean;
+  /** Есть только в режиме single, явно добавлен для story template */
+  onCopyButtonClick?(): void;
 };
 
 const Template = ({
@@ -91,9 +98,14 @@ const Template = ({
   size,
   singleAddCustomOptionTriggers,
   multipleAddCustomOptionTriggers,
+  logCopyButtonClick,
+  logScroll,
+  onCopyButtonClick,
+  onScroll,
   ...args
 }: StoryProps) => {
   const [singleValue, setSingleValue] = useState<SelectionSingleValueType>();
+  const scrollContainerRef = useRef<HTMLElement>(null);
 
   const [multipleValue, setMultipleValue] = useState<SelectionSingleValueType[]>([]);
 
@@ -109,6 +121,22 @@ const Template = ({
     }
   }, [selection, value]);
 
+  const handleCopyButtonClick = logCopyButtonClick
+    ? () => {
+        onCopyButtonClick?.();
+        // eslint-disable-next-line no-console
+        console.log('Copy button clicked');
+      }
+    : onCopyButtonClick;
+
+  const handleScroll: StoryProps['onScroll'] = logScroll
+    ? (...scrollArgs) => {
+        onScroll?.(...scrollArgs);
+        // eslint-disable-next-line no-console
+        console.log('List scrolled', scrollArgs);
+      }
+    : onScroll;
+
   return (
     <div className={styles.wrapper} data-size={size || 's'}>
       {selection === 'single' && (
@@ -121,6 +149,9 @@ const Template = ({
           selection='single'
           options={options}
           size={size}
+          onCopyButtonClick={handleCopyButtonClick}
+          onScroll={handleScroll}
+          scrollContainerRef={logScroll ? scrollContainerRef : undefined}
         />
       )}
 
@@ -134,6 +165,8 @@ const Template = ({
           selection='multiple'
           options={options}
           size={size}
+          onScroll={handleScroll}
+          scrollContainerRef={logScroll ? scrollContainerRef : undefined}
         />
       )}
     </div>
@@ -165,6 +198,9 @@ export const fieldSelect: StoryObj<StoryProps> = {
     showClearButton: true,
     showMoreOptions: false,
     addOptionByEnter: false,
+    resetSearchOnOptionSelection: true,
+    logCopyButtonClick: false,
+    logScroll: false,
     singleAddCustomOptionTriggers: undefined,
     multipleAddCustomOptionTriggers: undefined,
   },
@@ -195,6 +231,20 @@ export const fieldSelect: StoryObj<StoryProps> = {
     addOptionByEnter: {
       name: 'addOptionByEnter (deprecated)',
       description: 'Используйте addCustomOptionTriggers. Сохраняется для обратной совместимости.',
+      type: 'boolean',
+    },
+    resetSearchOnOptionSelection: {
+      name: 'resetSearchOnOptionSelection',
+      description: 'Сбрасывать строку поиска при выборе опции. Отключите для асинхронной подгрузки.',
+      type: 'boolean',
+    },
+    logCopyButtonClick: {
+      name: '[Stories] log onCopyButtonClick',
+      type: 'boolean',
+      if: { arg: 'selection', eq: 'single' },
+    },
+    logScroll: {
+      name: '[Stories] log onScroll and attach scrollContainerRef',
       type: 'boolean',
     },
   },

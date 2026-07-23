@@ -11,6 +11,11 @@ export function extractListProps({
   loading,
   footer,
   widthStrategy,
+  scrollToSelectedItem,
+  scrollRef,
+  scrollContainerRef,
+  onScroll,
+  untouchableScrollbars,
 }: Partial<MobileFieldSelectProps>): Partial<DroplistProps> {
   return {
     dataError,
@@ -21,6 +26,11 @@ export function extractListProps({
     loading,
     footer,
     widthStrategy,
+    scrollToSelectedItem,
+    scrollRef,
+    scrollContainerRef,
+    onScroll,
+    untouchableScrollbars,
     trigger: 'clickAndFocusVisible',
     placement: 'bottom',
     'data-test-id': 'field-select__list',

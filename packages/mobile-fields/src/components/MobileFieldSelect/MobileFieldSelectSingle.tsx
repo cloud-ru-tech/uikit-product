@@ -68,6 +68,8 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       open: openProp,
       onOpenChange,
       selectedOptionFormatter = defaultSelectedOptionFormatter,
+      resetSearchOnOptionSelection = true,
+      onCopyButtonClick,
       ...rest
     },
     ref,
@@ -89,6 +91,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
     const { inputValue, setInputValue, prevInputValue } = useSearchInput({
       ...search,
       selectedOptionFormatter,
+      resetSearchOnOptionSelection,
     });
 
     const prevSelectedItem = useRef<ItemWithId | undefined>(selectedItem);
@@ -117,10 +120,13 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       }
 
       prevSelectedItem.current = selectedItem;
-      setInputValue('');
+
+      if (resetSearchOnOptionSelection) {
+        setInputValue('');
+      }
 
       // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [selectedItem, prevSelectedItem]);
+    }, [selectedItem, prevSelectedItem, resetSearchOnOptionSelection]);
 
     const onClear = useCallback(() => {
       setValue(undefined);
@@ -139,6 +145,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       showCopyButton,
       inputRef: localRef,
       onClear,
+      onCopyButtonClick,
       valueToCopy: selectedOptionFormatter(selectedItem),
     });
 

@@ -74,6 +74,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
       open: openProp,
       onOpenChange,
       selectedOptionFormatter = defaultSelectedOptionFormatter,
+      resetSearchOnOptionSelection = true,
       ...rest
     },
     ref,
@@ -102,6 +103,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
       ...search,
       defaultValue: '',
       selectedOptionFormatter,
+      resetSearchOnOptionSelection,
     });
 
     const { resolvedAddCustomOptionTriggers, tryCommitCustomOptionFromInput } = useFieldSelectMultipleCustomOption({

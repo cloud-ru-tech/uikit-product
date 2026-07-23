@@ -11,3 +11,15 @@ export type {
   GroupOptionProps,
   SelectedOptionFormatter,
 } from './types';
+
+export type {
+  FieldSelectMultipleAddCustomOptionTrigger,
+  FieldSelectSingleAddCustomOptionTrigger,
+} from '@snack-uikit/fields';
+
+export {
+  getCustomOptionTriggerByCode,
+  shouldHandleCustomOptionTrigger,
+  useFieldSelectMultipleCustomOption,
+  useFieldSelectSingleCustomOption,
+} from '@snack-uikit/fields';
