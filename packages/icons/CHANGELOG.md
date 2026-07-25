@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 17.8.0 (2026-07-25)
+
+
+### Features
+
+* **PDS-4139:** added new logos ([24c84df](https://github.com/cloud-ru-tech/uikit-product/commit/24c84df8f08aa9454d10cb31e5cb2840faec125f))
+
+
+
+
+
 # 17.7.0 (2026-07-21)
 
 

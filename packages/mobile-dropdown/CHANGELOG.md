@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.20 (2026-07-25)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-mobile-modal@2.2.3]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-modal/CHANGELOG.md)
+
+
+
+
+
 ## 2.1.19 (2026-07-21)
 
 ### Only dependencies have been changed
