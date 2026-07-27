@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 17.9.0 (2026-07-27)
+
+
+### Features
+
+* **PDS-4145:** added AgentsSpaceSVG service icon ([d34b6e9](https://github.com/cloud-ru-tech/uikit-product/commit/d34b6e9e8de6a7560331cef4038e69b07f3f50eb))
+
+
+
+
+
 ## 17.8.1 (2026-07-27)
 
 
