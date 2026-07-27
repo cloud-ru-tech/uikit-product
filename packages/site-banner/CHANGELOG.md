@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.24 (2026-07-27)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-button-predefined@1.1.24]($PUBLIC_PROJECT_URL/blob/master/packages/button-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-site-tag@1.2.0]($PUBLIC_PROJECT_URL/blob/master/packages/site-tag/CHANGELOG.md)
+
+
+
+
+
 ## 2.0.23 (2026-07-25)
 
 ### Only dependencies have been changed

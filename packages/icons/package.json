@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-icons",
   "title": "React Icons package",
-  "version": "17.8.0",
+  "version": "17.8.1",
   "sideEffects": [
     "*.svg",
     "*.css",

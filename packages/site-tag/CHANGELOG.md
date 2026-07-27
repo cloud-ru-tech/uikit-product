@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2026-07-27)
+
+
+### Features
+
+* **SITE-11714:** update type site-tag ([ae64aa2](https://github.com/cloud-ru-tech/uikit-product/commit/ae64aa270cd23803ed681e81105611d0e52e9495))
+
+
+
+
+
 ## 1.1.5 (2026-03-31)
 
 

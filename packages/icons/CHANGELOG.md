@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 17.8.1 (2026-07-27)
+
+
+### Bug Fixes
+
+* **FF-8833:** updated dependencies to resolve vulnerabilities ([28af1e9](https://github.com/cloud-ru-tech/uikit-product/commit/28af1e93586fd9d459d673ee9cef74ea38645376))
+
+
+
+
+
 # 17.8.0 (2026-07-25)
 
 
