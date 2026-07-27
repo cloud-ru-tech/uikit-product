@@ -72,11 +72,11 @@
     "@types/lodash.kebabcase": "4.1.9",
     "@types/svg-sprite": "0.0.39",
     "@types/yargs": "17.0.33",
-    "fast-xml-parser": "5.9.3",
+    "fast-xml-parser": "5.10.1",
     "lodash.camelcase": "4.3.0",
     "oslllo-svg-fixer": "5.0.0",
     "svg-sprite": "2.0.4",
-    "svgo": "3.3.2",
+    "svgo": "3.3.4",
     "yargs": "17.7.2"
   }
 }
