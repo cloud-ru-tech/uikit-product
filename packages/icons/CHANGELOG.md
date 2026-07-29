@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 17.10.1 (2026-07-29)
+
+
+### Bug Fixes
+
+* **PDS-4188:** update agents space logos ([dab26b1](https://github.com/cloud-ru-tech/uikit-product/commit/dab26b11df0cb9c25027d3a89dbea481f5c1e475))
+
+
+
+
+
 # 17.10.0 (2026-07-28)
 
 
