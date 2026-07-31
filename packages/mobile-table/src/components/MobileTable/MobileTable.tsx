@@ -1,4 +1,5 @@
 import {
+  ColumnPinningState,
   getCoreRowModel,
   getFilteredRowModel,
   getPaginationRowModel,
@@ -41,6 +42,7 @@ import styles from './styles.module.scss';
 import { MobileTableProps } from './types';
 import {
   fuzzyFilter,
+  getColumnIdentifier,
   getPersistedStateValidator,
   mapPaginationToRequestPayload,
   mapPaginationToTableState,
@@ -117,6 +119,23 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
 
   const pinnedGroups = useMemo(() => getPinnedGroups(columnDefinitions), [columnDefinitions]);
 
+  // columnOrder не содержит закреплённых колонок, поэтому без columnPinning они уезжают в конец карточки
+  const columnPinning = useMemo<Required<ColumnPinningState>>(() => {
+    const getColumnIds = (columnDefinitions: MobileTableProps<TData, TFilters>['columnDefinitions']) =>
+      columnDefinitions.reduce((accArr: string[], colDef) => {
+        const id = getColumnIdentifier(colDef);
+        if (id) {
+          accArr.push(id);
+        }
+        return accArr;
+      }, []);
+
+    return {
+      left: getColumnIds(pinnedGroups.left),
+      right: getColumnIds(pinnedGroups.right),
+    };
+  }, [pinnedGroups]);
+
   const {
     enabledColumns,
     setEnabledColumns,
@@ -148,12 +167,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
 
     const hidden = new Set<string>();
     columnDefinitions.forEach(colDef => {
-      let columnId: string | undefined;
-      if ('id' in colDef && colDef.id) {
-        columnId = colDef.id;
-      } else if ('accessorKey' in colDef && colDef.accessorKey) {
-        columnId = String(colDef.accessorKey);
-      }
+      const columnId = getColumnIdentifier(colDef);
 
       if (columnId) {
         const colDefWithSettings = colDef as typeof colDef & {
@@ -197,6 +211,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
       globalFilter,
       sorting,
       rowSelection,
+      columnPinning,
       columnOrder: enableColumnsOrderSortByDrag ? columnOrder : undefined,
     },
     pageCount,
@@ -228,6 +243,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
   const { loadingTable } = useLoadingTable<TData, TFilters>({
     pageSize: DEFAULT_PAGE_SIZE,
     columnDefinitions: enabledColumnsDefinitions,
+    columnPinning,
   });
 
   const tableRows = table.getRowModel().rows;

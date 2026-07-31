@@ -1,4 +1,4 @@
-import { getCoreRowModel, useReactTable } from '@tanstack/react-table';
+import { ColumnPinningState, getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import { useMemo } from 'react';
 
 import { FiltersState } from '@cloud-ru/uikit-product-mobile-chips';
@@ -10,11 +10,13 @@ import { ROW_ACTIONS_COLUMN_ID } from '../../../constants';
 type UseLoadingTableProps<TData extends object, TFilters extends FiltersState> = {
   columnDefinitions: TableProps<TData, TFilters>['columnDefinitions'];
   pageSize: number;
+  columnPinning: ColumnPinningState;
 };
 
 export function useLoadingTable<TData extends object, TFilters extends FiltersState>({
   pageSize,
   columnDefinitions,
+  columnPinning,
 }: UseLoadingTableProps<TData, TFilters>) {
   const data = useMemo(() => (Array.from({ length: pageSize }).map(() => ({})) || []) as TData[], [pageSize]);
   const columns = useMemo(
@@ -31,6 +33,10 @@ export function useLoadingTable<TData extends object, TFilters extends FiltersSt
   const loadingTable = useReactTable<TData>({
     data,
     columns,
+
+    state: {
+      columnPinning,
+    },
 
     getCoreRowModel: getCoreRowModel(),
   });
