@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.3.13 (2026-08-03)
+
+
+### Bug Fixes
+
+* **FF-8845:** pass columnPinning to MobileTable to keep pinned columns order ([8aa9471](https://github.com/cloud-ru-tech/uikit-product/commit/8aa9471f30e9fc2d1c059452142c11a4dd806f7f))
+
+
+
+
+
 ## 2.3.12 (2026-07-29)
 
 ### Only dependencies have been changed
