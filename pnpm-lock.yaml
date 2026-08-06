@@ -2237,7 +2237,7 @@ importers:
         specifier: 1.4.5
         version: link:../site-cards
       '@cloud-ru/uikit-product-site-case-card':
-        specifier: 1.2.3
+        specifier: 1.2.4
         version: link:../site-case-card
       '@cloud-ru/uikit-product-site-grid':
         specifier: 1.1.3

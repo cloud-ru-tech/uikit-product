@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.4 (2026-08-06)
+
+
+### Bug Fixes
+
+* **SITE-11738:** correct background color for case card ([4621701](https://github.com/cloud-ru-tech/uikit-product/commit/4621701e39cd88bc866d0d52729dae4431d21942))
+
+
+
+
+
 ## 1.2.3 (2026-05-27)
 
 
