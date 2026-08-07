@@ -54,11 +54,9 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       label: 'Платформы данных',
       dataTestId: 'database',
       visibleProducts: [
-        EVOLUTION_PRODUCT.EvolutionManagedPostgreSQL,
         EVOLUTION_PRODUCT.EvolutionArenadataDb,
         EVOLUTION_PRODUCT.EvolutionManagedTrino,
         EVOLUTION_PRODUCT.EvolutionManagedMetastore,
-        EVOLUTION_PRODUCT.EvolutionManagedRedis,
         EVOLUTION_PRODUCT.EvolutionManagedSpark,
         EVOLUTION_PRODUCT.EvolutionManagedBI,
         EVOLUTION_PRODUCT.EvolutionManagedAirflow,
@@ -68,7 +66,11 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       id: CATEGORY.Dataset,
       label: 'Базы данных',
       dataTestId: 'dataset',
-      visibleProducts: [EVOLUTION_PRODUCT.EvolutionManagedClickHouse],
+      visibleProducts: [
+        EVOLUTION_PRODUCT.EvolutionManagedClickHouse,
+        EVOLUTION_PRODUCT.EvolutionManagedRedis,
+        EVOLUTION_PRODUCT.EvolutionManagedPostgreSQL,
+      ],
     },
     {
       id: CATEGORY.Brokers,
