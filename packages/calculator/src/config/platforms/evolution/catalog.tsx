@@ -1,6 +1,3 @@
-import { Alert } from '@snack-uikit/alert';
-import { Link } from '@snack-uikit/link';
-
 import { CATEGORY, PLATFORM } from '../../../constants';
 import { CatalogConfig } from '../../../types';
 import { EVOLUTION_PRODUCT } from './constants';
@@ -17,37 +14,6 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
         EVOLUTION_PRODUCT.EvolutionStorageS3FreeTier,
         EVOLUTION_PRODUCT.EvolutionStorageS3,
       ],
-    },
-    {
-      id: CATEGORY.FreeTier,
-      label: 'Free Tier',
-      dataTestId: 'free-tier',
-      visibleProducts: [
-        EVOLUTION_PRODUCT.EvolutionStorageS3FreeTier,
-        EVOLUTION_PRODUCT.EvolutionContainerAppsFreeTier,
-        EVOLUTION_PRODUCT.EvolutionManagedBI,
-      ],
-      banner: (
-        <Alert
-          appearance='info'
-          outline
-          description={
-            <>
-              Free tier&nbsp;&mdash; это облачные ресурсы, за&nbsp;которые не&nbsp;надо платить. После активации сервис
-              останется навсегда бесплатным. Подробнее в&nbsp;
-              <Link
-                size='m'
-                appearance='primary'
-                textMode='accent'
-                insideText
-                target='_blank'
-                href='https://cloud.ru/docs/evolution/overview/topics/free-tier'
-                text='документации'
-              />
-            </>
-          }
-        />
-      ),
     },
     {
       id: CATEGORY.Computations,
@@ -112,7 +78,7 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
     },
     {
       id: CATEGORY.ML,
-      label: 'ML/AI Инструменты',
+      label: 'AI Factory',
       dataTestId: 'ml',
       visibleProducts: [EVOLUTION_PRODUCT.EvolutionMlInference, EVOLUTION_PRODUCT.EvolutionNotebooks],
     },
