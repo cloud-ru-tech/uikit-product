@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.13.0 (2026-08-11)
+
+
+### Features
+
+* **SITE-11774:** update categories calculator ([6847dca](https://github.com/cloud-ru-tech/uikit-product/commit/6847dca5df52fb9471bd955f4cc56fe0045c56d8))
+
+
+
+
+
 ## 1.12.8 (2026-08-11)
 
 ### Only dependencies have been changed
