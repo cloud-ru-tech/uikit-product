@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.8 (2026-08-11)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-mobile-drawer@2.0.25]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@1.1.23]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+
+
+
+
+
 ## 2.2.7 (2026-07-29)
 
 ### Only dependencies have been changed

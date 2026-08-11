@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 17.11.0 (2026-08-11)
+
+
+### Features
+
+* **PDS-4213:** experiment tracking icon ([a51d0f0](https://github.com/cloud-ru-tech/uikit-product/commit/a51d0f034f18acdec5126a5b425120a5f6bd5c70))
+
+
+
+
+
 ## 17.10.1 (2026-07-29)
 
 

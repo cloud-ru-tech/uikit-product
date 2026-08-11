@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.5 (2026-08-11)
+
+
+### Bug Fixes
+
+* **SITE-11779:** case card image max-width ([88e5f3d](https://github.com/cloud-ru-tech/uikit-product/commit/88e5f3d37ba3e31eeea9284eb3b3710ef91dd7b0))
+
+
+
+
+
 ## 1.2.4 (2026-08-06)
 
 
