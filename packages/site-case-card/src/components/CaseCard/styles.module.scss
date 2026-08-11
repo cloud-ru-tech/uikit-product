@@ -25,6 +25,8 @@
 .image {
   height: 46px;
 
+  max-width: 100%;
+
   &[data-layout-type='mobile'] {
     height: 42px;
   }
