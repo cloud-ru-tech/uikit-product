@@ -65,7 +65,7 @@ export type HeaderProps = WithSupportProps<
   }>
 >;
 
-const HEIGHT_SUBHEADER = 25;
+const HEIGHT_SUBHEADER = 56;
 const HEIGHT_AFTER_HEADER_CONTENT = 32;
 
 export function SiteHeaderBasic({
