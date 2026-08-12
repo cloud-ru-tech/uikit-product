@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.14.0 (2026-08-12)
+
+
+### Features
+
+* **EVODBAAS-8670:** move calculator category Redis & Postgres ([ea36af8](https://github.com/cloud-ru-tech/uikit-product/commit/ea36af803d75d6347c683d394e8c2d628ddef79a))
+
+
+
+
+
 # 1.13.0 (2026-08-11)
 
 
