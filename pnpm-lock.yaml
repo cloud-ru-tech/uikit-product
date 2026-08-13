@@ -350,7 +350,7 @@ importers:
         specifier: 2.1.25
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 2.2.10
+        specifier: 2.2.11
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-mobile-modal':
         specifier: 2.2.8
@@ -565,7 +565,7 @@ importers:
         specifier: 2.1.25
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 2.2.10
+        specifier: 2.2.11
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-mobile-tooltip':
         specifier: 1.1.23
@@ -727,7 +727,7 @@ importers:
         specifier: 2.1.25
         version: link:../mobile-dropdown
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 2.2.10
+        specifier: 2.2.11
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-mobile-modal':
         specifier: 2.2.8
@@ -2237,7 +2237,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@cloud-ru/uikit-product-mobile-fields':
-        specifier: 2.2.10
+        specifier: 2.2.11
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-site-cards':
         specifier: 1.4.6

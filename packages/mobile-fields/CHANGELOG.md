@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.11 (2026-08-13)
+
+**Note:** Version bump only for package @cloud-ru/uikit-product-mobile-fields
+
+
+
+
+
 ## 2.2.10 (2026-08-11)
 
 ### Only dependencies have been changed
