@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 17.13.0 (2026-08-18)
+
+
+### Features
+
+* **CP-20360:** add icon name type ([f974026](https://github.com/cloud-ru-tech/uikit-product/commit/f974026f2082a4fadb3b1bb243972ef0264d3bc5))
+
+
+
+
+
 # 17.12.0 (2026-08-14)
 
 
