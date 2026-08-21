@@ -5,31 +5,14 @@ const valueSingleNode = 'Single-node';
 const valueSingleShard = 'Single-shard';
 const valueMultiShard = 'Multi-shard';
 
-const CPU = [4, 8];
-const RAM = [16, 32];
+const CPU = [2, 4, 8, 16];
+const RAM = [16, 32, 64, 128];
 
 const cpuToRamMap: Record<string, number[]> = {
-  '4': [16],
-  '8': [32],
-};
-
-const cpuConfigItems: {
-  [key: string]: {
-    value: string;
-    label: string;
-  }[];
-} = {
-  [valueSingleNode]: generateCpuItems(CPU),
-  [valueSingleShard]: generateCpuItems(CPU),
-  [valueMultiShard]: generateCpuItems([CPU[0]]),
-};
-
-const ramConfigItems: {
-  [key: string]: number[];
-} = {
-  [valueSingleNode]: RAM,
-  [valueSingleShard]: RAM,
-  [valueMultiShard]: [RAM[0]],
+  '2': [16],
+  '4': [16, 32],
+  '8': [16, 32, 64],
+  '16': [32, 64, 128],
 };
 
 const instanceTypePartCards = [
@@ -104,13 +87,6 @@ export const EVOLUTION_MANAGED_CLICKHOUSE_CONFIG: FormConfig = {
       decoratorProps: {
         label: 'Количество ядер vCPU',
       },
-      relateFn: ({ instanceType }) => {
-        const items = cpuConfigItems[instanceType];
-
-        if (items?.length > 0) {
-          return { items };
-        }
-      },
     },
 
     ramAmount: {
@@ -122,14 +98,12 @@ export const EVOLUTION_MANAGED_CLICKHOUSE_CONFIG: FormConfig = {
       decoratorProps: {
         label: 'Количество оперативной памяти (RAM)',
       },
-      relateFn: ({ instanceType, vCpuCoreCount }) => {
-        const itemsByInstanceType = ramConfigItems[instanceType];
-        const itemsByCpu = new Set(cpuToRamMap[vCpuCoreCount as string]);
+      relateFn: ({ vCpuCoreCount }) => {
+        const itemsByCpu = cpuToRamMap[vCpuCoreCount as string];
 
-        if (itemsByInstanceType?.length > 0) {
-          const resolvedItems = itemsByInstanceType.filter(item => itemsByCpu.has(item));
+        if (itemsByCpu?.length > 0) {
           return {
-            items: generateRamItems(resolvedItems),
+            items: generateRamItems(itemsByCpu),
           };
         }
       },
