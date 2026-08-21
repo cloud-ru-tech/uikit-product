@@ -1,13 +1,14 @@
 import { CONTROL, FormConfig } from '../../../../components';
 import { generateCpuItems, generateRamItems, getDisk } from '../../../utils';
 
-const CPU = [2, 4, 8];
-const RAM = [4, 8, 16, 32];
+const CPU = [2, 4, 8, 16];
+const RAM = [4, 8, 16, 32, 64, 128];
 
 const cpuToRamMap: Record<string, number[]> = {
-  '2': [4],
-  '4': [8, 16],
-  '8': [32],
+  '2': [4, 8, 16],
+  '4': [8, 16, 32],
+  '8': [32, 64],
+  '16': [64, 128],
 };
 
 const brokerQuantity = [1, 3, 5, 7];
