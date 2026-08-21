@@ -1,0 +1,38 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.root {
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+
+  padding-right: 25px;
+
+  &[data-layout-type='tablet'] {
+    padding-right: 40px;
+  }
+
+  &[data-layout-type='mobile'] {
+    padding-right: 24px;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &[data-layout-type='mobile'] {
+    gap: 16px;
+  }
+}
+
+.title {
+  color: ste.$sys-neutral-text-main;
+}
+
+.text {
+  color: ste.$sys-neutral-text-support;
+}

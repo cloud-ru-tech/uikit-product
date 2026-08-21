@@ -1,0 +1,72 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.divider {
+  &[data-layout-type='tablet'] {
+    width: calc(100% - 40px);
+  }
+
+  &[data-layout-type='mobile'] {
+    width: calc(100% - 24px);
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 45px;
+  align-items: center;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    grid-template-columns: 100%;
+    gap: 16px;
+  }
+}
+
+.copyright {
+  color: ste.$sys-neutral-text-support;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    order: 2;
+  }
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    order: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+.links {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.linkItem {
+  list-style-type: none;
+
+  &[data-layout-type='mobile']:nth-child(n + 4) {
+    flex-basis: 100%;
+  }
+}

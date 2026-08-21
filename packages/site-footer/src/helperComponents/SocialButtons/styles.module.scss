@@ -1,0 +1,14 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.root {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  color: ste.$sys-neutral-accent-default;
+
+  &:hover {
+    color: ste.$sys-neutral-text-main;
+  }
+}

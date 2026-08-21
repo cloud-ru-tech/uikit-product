@@ -1,0 +1,28 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.title {
+  color: ste.$sys-neutral-text-main;
+}
+
+.titleLink {
+  color: ste.$sys-neutral-text-main;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.titleIcon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-inline-start: 2px;
+
+  color: ste.$sys-neutral-text-light;
+
+  transition:
+    color 0.15s ease-in-out,
+    transform 0.15s ease-in-out;
+}
+
+.titleLink:hover .titleIcon {
+  color: ste.$sys-neutral-text-main;
+  transform: translateX(2px);
+}

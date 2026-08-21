@@ -1,0 +1,20 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    gap: 24px;
+  }
+}
+
+.logoLink {
+  height: 24px;
+}
+
+.logo {
+  width: 129px;
+  height: 24px;
+}

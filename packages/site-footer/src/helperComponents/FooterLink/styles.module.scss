@@ -1,0 +1,29 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.root {
+  display: inline-flex;
+  align-items: center;
+
+  color: ste.$sys-neutral-text-support;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: color 0.15s ease-in-out;
+
+  &:hover {
+    color: ste.$sys-neutral-text-main;
+  }
+}
+
+.button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  text-align: start;
+}
+
+.text {
+  color: inherit;
+}
