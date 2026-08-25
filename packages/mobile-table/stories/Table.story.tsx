@@ -12,6 +12,7 @@ import componentReadme from '../README.md';
 import { MobileTable, MobileTableProps } from '../src';
 import { STORY_TEST_IDS } from './constants';
 import { generateRows, numberFormatter, STATUS_APPEARANCES } from './helpers';
+import { useInfiniteLoading } from './hooks';
 import { Filters, StubData } from './types';
 
 const meta: Meta = {
@@ -219,6 +220,7 @@ function Template({
   rowSelectionMode,
   showColumnsSettings,
   enablePersist,
+  infiniteLoading,
   ...args
 }: StoryProps) {
   const data = useMemo(() => generateRows(rowsAmount, showStatusColumn), [rowsAmount, showStatusColumn]);
@@ -228,6 +230,15 @@ function Template({
   useEffect(() => {
     setFilteredData(data);
   }, [data]);
+
+  const { loading, scrollRef } = useInfiniteLoading({
+    rowsAmount,
+    infiniteLoading,
+    filteredData,
+    setFilteredData,
+    includeStatus: showStatusColumn,
+    dataError: args.dataError,
+  });
 
   const columns = useMemo(() => {
     const colDefs = [...columnDefinitions];
@@ -316,9 +327,31 @@ function Template({
     setSelectedState({});
   }, [rowSelectionMode]);
 
+  const props = useMemo(() => {
+    if (infiniteLoading) {
+      return {
+        ...args,
+        infiniteLoading,
+        pagination: undefined,
+        manualPagination: undefined,
+        suppressPagination: undefined,
+        pageCount: undefined,
+        autoResetPageIndex: undefined,
+        toolbarCheckBoxMode: undefined,
+      };
+    }
+
+    return {
+      ...args,
+      infiniteLoading: undefined,
+    };
+  }, [args, infiniteLoading]);
+
   return (
     <MobileTable
-      {...args}
+      {...props}
+      loading={args.loading || loading}
+      scrollRef={scrollRef}
       columnDefinitions={columns}
       data={filteredData}
       className={className}
@@ -406,6 +439,45 @@ export const table: StoryObj<StoryProps> = {
     initialColumnFiltersOpen: {
       name: '[Stories]: Initial show column filters state value',
       controls: { type: 'boolean' },
+    },
+    pagination: {
+      control: {
+        disable: true,
+      },
+      if: {
+        arg: 'infiniteLoading',
+        neq: true,
+      },
+    },
+    manualPagination: {
+      if: {
+        arg: 'infiniteLoading',
+        neq: true,
+      },
+    },
+    suppressPagination: {
+      if: {
+        arg: 'infiniteLoading',
+        neq: true,
+      },
+    },
+    pageCount: {
+      if: {
+        arg: 'infiniteLoading',
+        neq: true,
+      },
+    },
+    autoResetPageIndex: {
+      if: {
+        arg: 'infiniteLoading',
+        neq: true,
+      },
+    },
+    toolbarCheckBoxMode: {
+      if: {
+        arg: 'infiniteLoading',
+        neq: true,
+      },
     },
     rowSelection: {
       name: 'rowSelection',

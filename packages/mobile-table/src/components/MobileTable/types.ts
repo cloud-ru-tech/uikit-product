@@ -1,9 +1,8 @@
 import { FiltersState, MobileChipChoiceRowProps } from '@cloud-ru/uikit-product-mobile-chips';
 import { WithSupportProps } from '@cloud-ru/uikit-product-utils';
-import { TableProps } from '@snack-uikit/table';
+import { ClientTableProps, InfiniteTableProps } from '@snack-uikit/table';
 
-export type MobileTableProps<TData extends object, TFilters extends FiltersState = Record<string, unknown>> = Pick<
-  TableProps<TData, TFilters>,
+type MobileTablePropsKeys =
   | 'data'
   | 'columnDefinitions'
   | 'suppressHeader'
@@ -35,7 +34,17 @@ export type MobileTableProps<TData extends object, TFilters extends FiltersState
   | 'autoResetPageIndex'
   | 'toolbarAfter'
   | 'toolbarCheckBoxMode'
-> &
+  | 'infiniteLoading'
+  | 'scrollRef';
+
+type TablePropsForMobile<TData extends object, TFilters extends FiltersState> =
+  | Pick<InfiniteTableProps<TData, TFilters>, MobileTablePropsKeys>
+  | Pick<ClientTableProps<TData, TFilters>, MobileTablePropsKeys>;
+
+export type MobileTableProps<
+  TData extends object,
+  TFilters extends FiltersState = Record<string, unknown>,
+> = TablePropsForMobile<TData, TFilters> &
   WithSupportProps<{
     headlineId?: string;
     headerBackground?: 'default' | '1-level' | '2-level';

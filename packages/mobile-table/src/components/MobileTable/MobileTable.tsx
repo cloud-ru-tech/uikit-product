@@ -10,7 +10,7 @@ import {
   useReactTable,
 } from '@tanstack/react-table';
 import cn from 'classnames';
-import { useCallback, useEffect, useMemo } from 'react';
+import { RefObject, useCallback, useEffect, useMemo } from 'react';
 
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { FiltersState } from '@cloud-ru/uikit-product-mobile-chips';
@@ -70,15 +70,17 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
   noResultsState,
   errorDataState,
   loading,
+  infiniteLoading = false,
   dataError,
   dataFiltered,
   pagination: paginationProp,
   pageCount,
   sorting: sortingProp,
   manualSorting = false,
-  manualPagination = false,
+  manualPagination: manualPaginationProp = false,
   manualFiltering = false,
   autoResetPageIndex = false,
+  scrollRef,
   getRowId,
   rowSelection: rowSelectionProp,
   bulkActions: bulkActionsProp,
@@ -116,6 +118,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
   );
 
   const enableSelection = Boolean(rowSelectionProp?.enable);
+  const manualPagination = infiniteLoading || manualPaginationProp;
 
   const pinnedGroups = useMemo(() => getPinnedGroups(columnDefinitions), [columnDefinitions]);
 
@@ -395,7 +398,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
       )}
 
       <div className={styles.table}>
-        {loading ? (
+        {(!infiniteLoading || !data.length) && loading ? (
           <SkeletonContextProvider loading>
             {loadingTableRows.map((row, index) => (
               <TableCard
@@ -422,6 +425,21 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
               />
             ))}
 
+            {data.length > 0 && infiniteLoading && loading && !dataError && (
+              <SkeletonContextProvider loading>
+                {loadingTableRows.slice(0, 3).map((row, index) => (
+                  <TableCard
+                    key={index}
+                    headlineId={headlineId}
+                    row={row}
+                    table={loadingTable}
+                    selection='none'
+                    suppressHeader={suppressHeader}
+                  />
+                ))}
+              </SkeletonContextProvider>
+            )}
+
             <TableEmptyState
               emptyStates={emptyStates}
               dataError={dataError}
@@ -430,9 +448,11 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
             />
           </>
         )}
+
+        <div ref={scrollRef as RefObject<HTMLDivElement>} />
       </div>
 
-      {!suppressPagination && <TablePagination table={table} />}
+      {!infiniteLoading && !suppressPagination && <TablePagination table={table} />}
     </div>
   );
 }
