@@ -797,7 +797,7 @@ importers:
   packages/header:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 1.2.16
+        specifier: 1.2.17
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 17.13.0
@@ -1321,7 +1321,7 @@ importers:
   packages/mobile-layout:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 1.2.16
+        specifier: 1.2.17
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 17.13.0
@@ -2524,7 +2524,7 @@ importers:
   packages/widget:
     dependencies:
       '@cloud-ru/uikit-product-card-predefined':
-        specifier: 1.2.16
+        specifier: 1.2.17
         version: link:../card-predefined
       '@cloud-ru/uikit-product-icons':
         specifier: 17.13.0
@@ -8262,6 +8262,7 @@ packages:
   eslint@9.39.4:
     resolution: {integrity: sha512-XoMjdBOwe/esVgEvLmNsD3IRHkm7fbKIUGvrleloJXUZgDHig2IPWNniv+GwjyJXzuNqVjlr5+4yVUZjycJwfQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'

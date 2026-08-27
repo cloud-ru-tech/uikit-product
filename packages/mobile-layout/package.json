@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-mobile-layout",
   "title": "Mobile Layout",
-  "version": "2.2.9",
+  "version": "2.2.10",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-card-predefined": "1.2.16",
+    "@cloud-ru/uikit-product-card-predefined": "1.2.17",
     "@cloud-ru/uikit-product-icons": "17.13.0",
     "@cloud-ru/uikit-product-layout": "2.0.25",
     "@cloud-ru/uikit-product-mobile-dropdown": "2.1.27",

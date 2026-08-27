@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.17 (2026-08-27)
+
+
+### Bug Fixes
+
+* **FF-8955:** remove flex from CardServiceLight ([8896c07](https://github.com/cloud-ru-tech/uikit-product/commit/8896c074467127e568ad905a05d6b3bf2192b7ff))
+
+
+
+
+
 ## 1.2.16 (2026-08-18)
 
 ### Only dependencies have been changed
