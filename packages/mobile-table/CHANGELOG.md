@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.4.0 (2026-08-28)
+
+
+### Features
+
+* **GIGAID-1032:** mobile table infinity scroll ([c78054b](https://github.com/cloud-ru-tech/uikit-product/commit/c78054b8afa8532bf04d7291f8a621bc57800677))
+
+
+
+
+
 ## 2.3.16 (2026-08-18)
 
 ### Only dependencies have been changed

@@ -676,7 +676,7 @@ importers:
   packages/entities-table:
     dependencies:
       '@cloud-ru/uikit-product-mobile-table':
-        specifier: 2.3.16
+        specifier: 2.4.0
         version: link:../mobile-table
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0
