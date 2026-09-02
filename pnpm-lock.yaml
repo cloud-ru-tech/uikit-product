@@ -110,8 +110,8 @@ importers:
         specifier: 0.15.18
         version: 0.15.18(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/toaster':
-        specifier: 0.11.28
-        version: 0.11.28(@snack-uikit/locale@0.16.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 0.11.32
+        version: 0.11.32(@snack-uikit/locale@0.16.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/toggles':
         specifier: 0.13.26
         version: 0.13.26(@types/react@18.2.79)(react@18.2.0)
@@ -1535,8 +1535,8 @@ importers:
         specifier: 0.9.8
         version: 0.9.8(react@18.2.0)
       '@snack-uikit/toaster':
-        specifier: 0.11.28
-        version: 0.11.28(@snack-uikit/locale@0.16.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 0.11.32
+        version: 0.11.32(@snack-uikit/locale@0.16.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/truncate-string':
         specifier: 0.7.11
         version: 0.7.11(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -5038,6 +5038,9 @@ packages:
   '@snack-uikit/link@0.18.2':
     resolution: {integrity: sha512-kbglJFX9SUnQ3ah1qfhtp26EKTuY/2hNmwJMYaaXqI8/fkOEzsHkHxsAc7Flk20MOftA61LGqkRlvF8bMzchbA==}
 
+  '@snack-uikit/link@0.18.4':
+    resolution: {integrity: sha512-AzSPhb41wWGW76erGwhOGEy/s6iucEKc0t5Lp2t5DN0UuqkhvhwIj4KnED9eg8Xp6SYpbEKhO3wnvN8dvKE6mQ==}
+
   '@snack-uikit/list@0.32.12':
     resolution: {integrity: sha512-PedVdpnFoL2x5hrnjK6q1SO0ix9bq7X8Le0TQOOc0u+Jx6w19hPOubjh4Thcu9HUaCqA/OMclLnoSViMg5FT9A==}
     peerDependencies:
@@ -5263,8 +5266,8 @@ packages:
   '@snack-uikit/tag@0.15.23':
     resolution: {integrity: sha512-RUaTsnwbzcGzE95TmaMKmx2gFoDojK4MX/SfGURL9410kaxq9IJ5AGIBZ/Oi2cVytqJplutfuQfCrwCVexARwQ==}
 
-  '@snack-uikit/toaster@0.11.28':
-    resolution: {integrity: sha512-scBgOGbM5J69LQRgcqOKbv5LAuvrz2tblaiUsUDGM9Y9MahpcTjMSCVykPxKGwW1EraFCU31u0SRCVLZ1W7uRA==}
+  '@snack-uikit/toaster@0.11.32':
+    resolution: {integrity: sha512-7WeMIzcn7dk+Mn6tIoy9pqvPFVjeZSFi7LXillvSdG/sxH6LUmQ60KZR0td+lbfUr61iKGRNGBwSAyGIjJWxTA==}
     peerDependencies:
       '@snack-uikit/locale': '*'
 
@@ -16806,6 +16809,15 @@ snapshots:
       - react
       - react-dom
 
+  '@snack-uikit/link@0.18.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/truncate-string': 0.7.15(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 4.0.2(react@18.2.0)
+      classnames: 2.5.1
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
   '@snack-uikit/list@0.32.12(@snack-uikit/locale@0.16.0)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@snack-uikit/button': 0.19.17(react@18.2.0)
@@ -17599,15 +17611,15 @@ snapshots:
       - react
       - react-dom
 
-  '@snack-uikit/toaster@0.11.28(@snack-uikit/locale@0.16.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@snack-uikit/toaster@0.11.32(@snack-uikit/locale@0.16.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@snack-uikit/icons': 0.27.7
-      '@snack-uikit/link': 0.18.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/icons': 0.27.8
+      '@snack-uikit/link': 0.18.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/loaders': 0.9.11(react@18.2.0)
       '@snack-uikit/locale': 0.16.0
       '@snack-uikit/progress-bar': 0.1.12(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/scroll': 0.11.0(react@18.2.0)
-      '@snack-uikit/truncate-string': 0.7.12(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/truncate-string': 0.7.15(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/utils': 4.0.2(react@18.2.0)
       classnames: 2.5.1
       react-draggable: 4.4.6(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
