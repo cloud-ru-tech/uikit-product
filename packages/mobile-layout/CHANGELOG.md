@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.11 (2026-09-03)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-card-predefined@1.2.18]($PUBLIC_PROJECT_URL/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@18.0.0]($PUBLIC_PROJECT_URL/blob/master/packages/icons/CHANGELOG.md)
+* [@cloud-ru/uikit-product-layout@2.0.26]($PUBLIC_PROJECT_URL/blob/master/packages/layout/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-dropdown@2.1.28]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-modal@2.2.11]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@cloud-ru/uikit-product-mobile-tooltip@1.1.26]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@cloud-ru/uikit-product-page-layout@2.3.10]($PUBLIC_PROJECT_URL/blob/master/packages/page-layout/CHANGELOG.md)
+* [@cloud-ru/uikit-product-quota@2.1.19]($PUBLIC_PROJECT_URL/blob/master/packages/quota/CHANGELOG.md)
+
+
+
+
+
 ## 2.2.10 (2026-08-27)
 
 ### Only dependencies have been changed

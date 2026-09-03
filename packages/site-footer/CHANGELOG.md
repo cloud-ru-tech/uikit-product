@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2026-09-03)
+
+
+### Features
+
+* **SITE-11922:** edit icon max size ([467d446](https://github.com/cloud-ru-tech/uikit-product/commit/467d44615073f1a2c245dd5964761badc3fcf684))
+
+
+
+
+
 # 1.1.0 (2026-08-25)
 
 

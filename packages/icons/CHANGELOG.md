@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 18.0.0 (2026-09-03)
+
+
+### BREAKING CHANGES
+
+
+* **FF-8938:** remove duplicate icon, ServicesSvg renamed to VmwareServicesSvg ([d369a7e](https://github.com/cloud-ru-tech/uikit-product/commit/d369a7e191fda00fe064a004edbcb6b08ab45c6d))
+* **FF-8938:** add logos, remove EvolutionAiAssistant, use Evolution EvolutionAiAgents instead ([0db03fe](https://github.com/cloud-ru-tech/uikit-product/commit/0db03fe8b513b040f7f67dab5c8673753cf3127b))
+
+
+
+
 # 17.13.0 (2026-08-18)
 
 

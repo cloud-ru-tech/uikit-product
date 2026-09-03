@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.26 (2026-09-03)
+
+
+### Bug Fixes
+
+* **PDS-4415:** tooltip under toaster ([7cff7ef](https://github.com/cloud-ru-tech/uikit-product/commit/7cff7ef03ec1da4b25b30a208a73126f6ecabdaa))
+
+
+
+
+
 ## 1.1.25 (2026-08-18)
 
 ### Only dependencies have been changed
