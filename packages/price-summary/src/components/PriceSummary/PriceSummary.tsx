@@ -1,14 +1,17 @@
 import cn from 'classnames';
+import { useMemo } from 'react';
 
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Link, LinkProps } from '@snack-uikit/link';
 
-import { DiscountDetails, InvoiceDetails } from '../../types';
+import { splitInvoiceByAvailability } from '../../helpers';
+import { CalculatePriceData, DiscountDetails, InvoiceDetails, PriceChangeDetails } from '../../types';
 import { ContentBlock, ContentBlockProps } from '../ContentBlock';
 import { DiscountBlock } from './components/DiscountBlock';
 import { HeaderBlock, HeaderBlockProps } from './components/HeaderBlock';
 import { InvoiceBlock } from './components/InvoiceBlock';
+import { PriceDetailsBlock } from './components/PriceChangeBlock';
 import { TotalValueBlock, TotalValueBlockProps } from './components/TotalValueBlock';
 import styles from './styles.module.scss';
 
@@ -17,8 +20,11 @@ export type PriceSummaryProps = WithLayoutType<
     TotalValueBlockProps &
       HeaderBlockProps &
       ContentBlockProps & {
+        basePrice?: number;
         discount?: DiscountDetails;
+        priceChange?: PriceChangeDetails;
         invoice?: InvoiceDetails[];
+        calculatePriceData?: CalculatePriceData;
         invoiceExpandedDefault?: boolean;
         docsLink?: {
           href?: LinkProps['href'];
@@ -42,6 +48,7 @@ export function PriceSummary({
   onRetry,
   discount,
   invoice,
+  calculatePriceData,
   invoiceExpandedDefault = true,
   docsLink,
   className,
@@ -52,9 +59,16 @@ export function PriceSummary({
   hintLink,
   showHintLink,
   valueDelta,
+  priceChange,
+  basePrice,
   ...rest
 }: PriceSummaryProps) {
   const { t } = useLocale('PriceSummary');
+  const { invoice: enrichedInvoice, unavailableItems } = useMemo(
+    () => splitInvoiceByAvailability(invoice, calculatePriceData),
+    [invoice, calculatePriceData],
+  );
+
   return (
     <div className={cn(styles.priceSummary, className)} {...extractSupportProps(rest)}>
       <HeaderBlock
@@ -68,6 +82,8 @@ export function PriceSummary({
       <ContentBlock loading={loading} dataError={dataError} onRetry={onRetry}>
         {discount && <DiscountBlock value={discount} layoutType={layoutType} />}
 
+        {(basePrice || priceChange) && <PriceDetailsBlock priceChange={priceChange} basePrice={basePrice} />}
+
         <TotalValueBlock
           value={value}
           totalSumType={totalSumType}
@@ -80,8 +96,13 @@ export function PriceSummary({
           valueDelta={valueDelta}
         />
 
-        {invoice?.length && (
-          <InvoiceBlock invoice={invoice} invoiceExpandedDefault={invoiceExpandedDefault} layoutType={layoutType} />
+        {(enrichedInvoice?.length || unavailableItems?.length) && (
+          <InvoiceBlock
+            invoice={enrichedInvoice}
+            unavailableItems={unavailableItems}
+            invoiceExpandedDefault={invoiceExpandedDefault}
+            layoutType={layoutType}
+          />
         )}
 
         {docsLink?.href && (

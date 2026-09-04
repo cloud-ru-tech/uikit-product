@@ -1,5 +1,6 @@
 import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
+import { PromoTag } from '@snack-uikit/promo-tag';
 import { Typography } from '@snack-uikit/typography';
 
 import { formatCurrency, formatQuantity } from '../../../../helpers';
@@ -11,17 +12,24 @@ import styles from './styles.module.scss';
 
 export type InvoiceDetailsBlockProps = WithLayoutType<{
   invoice: InvoiceDetails;
+  showCoveredByGrantLabels?: boolean;
+  titleAsRedTag?: boolean;
 }>;
 
-export function InvoiceDetailsBlock({ invoice, layoutType }: InvoiceDetailsBlockProps) {
+export function InvoiceDetailsBlock({
+  invoice,
+  layoutType,
+  showCoveredByGrantLabels = true,
+  titleAsRedTag = false,
+}: InvoiceDetailsBlockProps) {
   const { t } = useLocale('PriceSummary');
 
   const primaryItems = invoice.items.filter(item => item.primary);
   const firstValue = primaryItems[0]?.coveredByGrant;
   const allSameValue = primaryItems.length > 0 && primaryItems.every(item => item.coveredByGrant === firstValue);
 
-  const showBlockLabel = allSameValue && firstValue !== undefined;
-  const showItemLabels = !showBlockLabel;
+  const showBlockLabel = showCoveredByGrantLabels && allSameValue && firstValue !== undefined;
+  const showItemLabels = showCoveredByGrantLabels && !showBlockLabel;
 
   return (
     <div className={styles.main}>
@@ -30,7 +38,11 @@ export function InvoiceDetailsBlock({ invoice, layoutType }: InvoiceDetailsBlock
       {invoice.title && (
         <>
           <div className={styles.header}>
-            <Typography.SansLabelM>{invoice.title}</Typography.SansLabelM>
+            {titleAsRedTag ? (
+              <PromoTag appearance='red' color='decor' size='xxs' text={invoice.title} />
+            ) : (
+              <Typography.SansLabelM>{invoice.title}</Typography.SansLabelM>
+            )}
             {invoice.quantity && <Typography.SansLabelM>{formatQuantity(invoice.quantity)}</Typography.SansLabelM>}
           </div>
 

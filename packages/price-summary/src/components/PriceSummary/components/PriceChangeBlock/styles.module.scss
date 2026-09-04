@@ -1,0 +1,23 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.priceDetailsValue {
+  overflow-wrap: anywhere;
+  text-align: end;
+}
+
+.priceDetailsRow {
+  display: flex;
+  gap: styles-theme-variables.$dimension-1m;
+  color: styles-theme-variables.$sys-neutral-text-support;
+
+  > * {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}
+
+.priceChangeRow {
+  &[data-appearance='increased'] {
+    color: styles-theme-variables.$sys-red-text-main;
+  }
+}

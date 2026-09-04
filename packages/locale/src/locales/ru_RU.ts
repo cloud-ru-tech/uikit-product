@@ -345,6 +345,7 @@ export const ru_RU: typeof en_GB = {
   PriceSummary: {
     total: 'Итого',
     totalSumFromPrefix: 'от',
+    totalSumToPrefix: 'до',
     vat: 'с учетом НДС',
     pricePeriodYear: 'в год',
     pricePeriodMonth: 'в месяц',
@@ -355,6 +356,7 @@ export const ru_RU: typeof en_GB = {
     basePrice: 'Базовая цена',
     discount: 'Скидка',
     orderDetails: 'Детализация заказа',
+    unavailableByContract: 'Недоступно по договору',
     docsLink: 'Подробнее о тарифах и ценах',
     dataError: 'Ошибка загрузки',
     costLink: 'Подробнее о стоимости',
@@ -366,6 +368,8 @@ export const ru_RU: typeof en_GB = {
       'В заказе есть сервисы, которые нельзя оплатить грантом. Оплата за эти сервисы будет списываться в рублях.',
     increasedPrice: 'увеличилась на',
     decreasedPrice: 'снизилась на',
+    priceChange: 'Изменение',
+    preliminaryHint: 'Предварительный расчёт. Фактическая стоимость зависит от потребления',
   },
   PromoTagPredefined: {
     connecting: 'Подключается',

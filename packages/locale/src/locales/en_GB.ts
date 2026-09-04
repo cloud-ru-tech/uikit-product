@@ -344,6 +344,7 @@ export const en_GB = {
   PriceSummary: {
     total: 'Total',
     totalSumFromPrefix: 'from',
+    totalSumToPrefix: 'up to',
     vat: 'including VAT',
     pricePeriodYear: 'per year',
     pricePeriodMonth: 'per month',
@@ -354,6 +355,7 @@ export const en_GB = {
     basePrice: 'Base price',
     discount: 'Discount',
     orderDetails: 'Order details',
+    unavailableByContract: 'Unavailable under the contract',
     docsLink: 'More about tariffs and prices',
     dataError: 'Loading error',
     costLink: 'More about the cost',
@@ -365,6 +367,8 @@ export const en_GB = {
       'The order contains services that cannot be paid with a grant. Payment will be debited in rubles.',
     increasedPrice: 'increased by',
     decreasedPrice: 'decreased by',
+    priceChange: 'Change',
+    preliminaryHint: 'Preliminary calculation. The actual cost depends on consumption.',
   },
   PromoTagPredefined: {
     connecting: 'Connecting',

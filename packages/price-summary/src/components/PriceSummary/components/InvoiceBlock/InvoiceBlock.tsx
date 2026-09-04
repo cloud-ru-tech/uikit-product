@@ -5,16 +5,17 @@ import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { AccordionSecondary } from '@snack-uikit/accordion';
 import { Typography } from '@snack-uikit/typography';
 
-import { InvoiceDetails } from '../../../../types';
+import { InvoiceDetails, InvoiceItem } from '../../../../types';
 import { InvoiceDetailsBlock } from '../InvoiceDetailsBlock';
 import styles from './styles.module.scss';
 
 export type InvoiceBlockProps = WithLayoutType<{
-  invoice: InvoiceDetails[];
+  invoice?: InvoiceDetails[];
+  unavailableItems?: InvoiceItem[];
   invoiceExpandedDefault?: boolean;
 }>;
 
-export function InvoiceBlock({ invoice, invoiceExpandedDefault, layoutType }: InvoiceBlockProps) {
+export function InvoiceBlock({ invoice, unavailableItems, invoiceExpandedDefault, layoutType }: InvoiceBlockProps) {
   const { t } = useLocale('PriceSummary');
 
   const invoiceBlockId = useId();
@@ -31,7 +32,16 @@ export function InvoiceBlock({ invoice, invoiceExpandedDefault, layoutType }: In
         }
       >
         <div className={styles.accordionContent}>
-          {invoice.map((invoice, index) => (
+          {unavailableItems?.length && (
+            <InvoiceDetailsBlock
+              invoice={{ title: t('unavailableByContract'), items: unavailableItems }}
+              layoutType={layoutType}
+              showCoveredByGrantLabels={false}
+              titleAsRedTag
+            />
+          )}
+
+          {invoice?.map((invoice, index) => (
             <InvoiceDetailsBlock key={index} invoice={invoice} layoutType={layoutType} />
           ))}
         </div>

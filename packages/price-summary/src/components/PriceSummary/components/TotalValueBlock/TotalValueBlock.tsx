@@ -8,8 +8,8 @@ import { Tooltip } from '@snack-uikit/tooltip';
 import { Typography } from '@snack-uikit/typography';
 import { ValueOf } from '@snack-uikit/utils';
 
-import { formatCurrency } from '../../../../helpers';
-import { PriceDeltaDetails, TotalSumType } from '../../../../types';
+import { formatCurrency, formatCurrencyValue } from '../../../../helpers';
+import { PriceDeltaDetails, TotalSumType, TotalValueRange } from '../../../../types';
 import styles from './styles.module.scss';
 
 export const APPEARANCE_STATE = {
@@ -22,7 +22,7 @@ export const APPEARANCE_STATE = {
 export type AppearanceState = ValueOf<typeof APPEARANCE_STATE>;
 
 export type TotalValueBlockProps = {
-  value?: number;
+  value?: number | TotalValueRange;
   valueDelta?: PriceDeltaDetails;
   totalSumType?: TotalSumType;
   hint?: string;
@@ -58,6 +58,43 @@ function getAppearanceIcon(appearance: string) {
   return <Component size={16} data-appearance={appearance} className={styles.hintIcon} />;
 }
 
+function getTotalSumPrefix(totalSumType: TotalSumType, fromPrefix: string, toPrefix: string) {
+  if (totalSumType === 'from') {
+    return `${fromPrefix} `;
+  }
+
+  if (totalSumType === 'to') {
+    return `${toPrefix} `;
+  }
+
+  return '';
+}
+
+function isTotalValueRange(value: TotalValueBlockProps['value']): value is TotalValueRange {
+  return typeof value === 'object' && value !== null;
+}
+
+function formatTotalValueRange(value: TotalValueRange) {
+  return `${formatCurrencyValue(value.min)} — ${formatCurrencyValue(value.max)} ₽`;
+}
+
+function formatTotalValue(
+  value: TotalValueBlockProps['value'],
+  totalSumType: TotalSumType,
+  fromPrefix: string,
+  toPrefix: string,
+) {
+  if (isTotalValueRange(value)) {
+    return formatTotalValueRange(value);
+  }
+
+  if (value === undefined) {
+    return 'N/A';
+  }
+
+  return `${getTotalSumPrefix(totalSumType, fromPrefix, toPrefix)}${formatCurrency(value)}`;
+}
+
 export function TotalValueBlock({
   value,
   totalSumType = 'equal',
@@ -70,13 +107,14 @@ export function TotalValueBlock({
   valueDelta,
 }: TotalValueBlockProps) {
   const { t } = useLocale('PriceSummary');
-
-  const totalSumPrefix = totalSumType === 'from' ? `${t('totalSumFromPrefix')} ` : '';
+  const displayedAppearance = hintAppearance ?? APPEARANCE_STATE.Default;
+  const displayedHint = hint ?? t('preliminaryHint');
+  const totalValue = formatTotalValue(value, totalSumType, t('totalSumFromPrefix'), t('totalSumToPrefix'));
 
   return (
-    <div className={styles.content} data-appearance={hintAppearance}>
-      <Typography.LightHeadlineS>
-        {value !== undefined ? `${totalSumPrefix}${formatCurrency(Number(value))}` : 'N/A'}
+    <div className={styles.content} data-appearance={displayedAppearance}>
+      <Typography.LightHeadlineS className={isTotalValueRange(value) ? styles.rangeValue : undefined}>
+        {totalValue}
       </Typography.LightHeadlineS>
 
       {valueDelta && (
@@ -90,10 +128,10 @@ export function TotalValueBlock({
         tip={hintTooltipText}
         placement='left-start'
       >
-        {hint && (
-          <div className={styles.hint} data-appearance={hintAppearance}>
-            {getAppearanceIcon(hintAppearance)}
-            <Typography.SansBodyS>{hint}</Typography.SansBodyS>
+        {displayedHint && (
+          <div className={styles.hint} data-appearance={displayedAppearance}>
+            {getAppearanceIcon(displayedAppearance)}
+            <Typography.SansBodyS>{displayedHint}</Typography.SansBodyS>
           </div>
         )}
       </Tooltip>

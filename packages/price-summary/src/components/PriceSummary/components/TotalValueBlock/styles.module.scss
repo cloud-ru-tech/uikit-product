@@ -1,6 +1,7 @@
 @use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .content {
+  container-type: inline-size;
   display: flex;
   flex-direction: column;
   text-align: start;
@@ -16,6 +17,13 @@
   &[data-appearance='systemError'] {
     color: styles-theme-variables.$sys-neutral-text-disabled;
   }
+}
+
+.rangeValue {
+  max-width: 100%;
+  font-size: clamp(18px, 8cqi, 24px);
+  line-height: 30px;
+  overflow-wrap: anywhere;
 }
 
 .hint {

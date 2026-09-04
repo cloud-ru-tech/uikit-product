@@ -8,7 +8,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { PriceSummary, PriceSummaryProps } from '../src/components';
-import { InvoiceDetails } from '../src/types';
+import { CalculatePriceData, InvoiceDetails, SkuPriceResult } from '../src/types';
 
 const meta: Meta = {
   title: 'Console/Price Summary/Price Summary',
@@ -19,9 +19,15 @@ export default meta;
 type StoryProps = PriceSummaryProps & {
   showSingleGroup: boolean;
   showCoveredByGrantLabel: boolean;
+  useCalculatePriceData: boolean;
   showChangedPrice: boolean;
+  showPriceChange: boolean;
   deltaType: 'increased' | 'decreased';
   deltaValue: number;
+  priceChangeValue: number;
+  priceChangePercentage?: number;
+  totalValueRangeMin?: number;
+  totalValueRangeMax: number;
 };
 
 const INVOICE_SAMPLE: InvoiceDetails[] = [
@@ -162,12 +168,159 @@ const INVOICE_SAMPLE: InvoiceDetails[] = [
   },
 ];
 
+const CALCULATE_PRICE_SKU_IDS = {
+  coveredByGrant: 'sku-covered-by-grant',
+  notCoveredByGrant: 'sku-not-covered-by-grant',
+  unavailableByContract: 'sku-unavailable-by-contract',
+  allCoveredFirst: 'sku-all-covered-first',
+  allCoveredSecond: 'sku-all-covered-second',
+} as const;
+
+const CALCULATE_PRICE_SKU_RESULTS_SAMPLE: SkuPriceResult[] = [
+  {
+    skuCode: CALCULATE_PRICE_SKU_IDS.coveredByGrant,
+    skuAvailability: true,
+    coveredByGrants: true,
+  },
+  {
+    skuCode: CALCULATE_PRICE_SKU_IDS.notCoveredByGrant,
+    skuAvailability: true,
+    coveredByGrants: false,
+  },
+  {
+    skuCode: CALCULATE_PRICE_SKU_IDS.unavailableByContract,
+    skuAvailability: false,
+    coveredByGrants: true,
+  },
+  {
+    skuCode: CALCULATE_PRICE_SKU_IDS.allCoveredFirst,
+    skuAvailability: true,
+    coveredByGrants: true,
+  },
+  {
+    skuCode: CALCULATE_PRICE_SKU_IDS.allCoveredSecond,
+    skuAvailability: true,
+    coveredByGrants: true,
+  },
+];
+
+const CALCULATE_PRICE_DATA_SAMPLE: CalculatePriceData = {
+  skuResults: CALCULATE_PRICE_SKU_RESULTS_SAMPLE,
+};
+
+const CALCULATE_PRICE_INVOICE_SAMPLE: InvoiceDetails[] = [
+  {
+    title: 'Есть покрытые и непокрытые грантом сервисы',
+    quantity: 3,
+    price: 3000,
+    items: [
+      {
+        id: CALCULATE_PRICE_SKU_IDS.coveredByGrant,
+        label: 'Доступно и покрывается грантом',
+        quantity: 1,
+        price: 1000,
+        primary: true,
+      },
+      {
+        id: CALCULATE_PRICE_SKU_IDS.notCoveredByGrant,
+        label: 'Доступно и не покрывается грантом',
+        quantity: 1,
+        price: 1000,
+        primary: true,
+      },
+      {
+        id: CALCULATE_PRICE_SKU_IDS.unavailableByContract,
+        label: 'Недоступно по договору',
+        quantity: 1,
+        price: 1000,
+        primary: true,
+      },
+    ],
+  },
+  {
+    title: 'Все покрыто',
+    quantity: 2,
+    price: 2000,
+    items: [
+      {
+        id: CALCULATE_PRICE_SKU_IDS.allCoveredFirst,
+        label: 'Первый сервис покрывается грантом',
+        quantity: 1,
+        price: 1000,
+        primary: true,
+      },
+      {
+        id: CALCULATE_PRICE_SKU_IDS.allCoveredSecond,
+        label: 'Второй сервис покрывается грантом',
+        quantity: 1,
+        price: 1000,
+        primary: true,
+      },
+    ],
+  },
+  {
+    title: 'Все не покрыто',
+    quantity: 1,
+    price: 1000,
+    items: [
+      {
+        id: CALCULATE_PRICE_SKU_IDS.notCoveredByGrant,
+        label: 'Первый сервис не покрывается грантом',
+        quantity: 1,
+        price: 1000,
+        primary: true,
+      },
+      {
+        id: CALCULATE_PRICE_SKU_IDS.notCoveredByGrant,
+        label: 'Второй сервис не покрывается грантом',
+        quantity: 1,
+        price: 1000,
+        primary: true,
+      },
+    ],
+  },
+];
+
+function getStoryTotalValue(
+  useCalculatePriceData: boolean,
+  showSingleGroup: boolean,
+  defaultValue: PriceSummaryProps['value'],
+): number | undefined {
+  if (!useCalculatePriceData) {
+    return typeof defaultValue === 'number' ? defaultValue : defaultValue?.min;
+  }
+
+  if (showSingleGroup) {
+    return 2000;
+  }
+
+  return 4000;
+}
+
+function getStoryValue(
+  numericValue: number | undefined,
+  rangeMin: number | undefined,
+  rangeMax: number,
+): PriceSummaryProps['value'] {
+  if (!rangeMin || !rangeMax) {
+    return numericValue;
+  }
+
+  return { min: rangeMin, max: rangeMax };
+}
+
 const Template: StoryFn<StoryProps> = ({
   showSingleGroup,
   showCoveredByGrantLabel,
+  useCalculatePriceData,
   showChangedPrice,
+  showPriceChange,
   deltaType,
   deltaValue,
+  priceChangeValue,
+  priceChangePercentage,
+  totalValueRangeMin,
+  totalValueRangeMax,
   ...args
 }) => {
   const [_, setArgs] = useArgs();
@@ -179,8 +332,33 @@ const Template: StoryFn<StoryProps> = ({
     return { value: deltaValue, type: deltaType };
   }, [showChangedPrice, deltaValue, deltaType]);
 
+  const priceChange = useMemo(() => {
+    if (!showPriceChange) {
+      return undefined;
+    }
+
+    return { value: priceChangeValue, percentage: priceChangePercentage };
+  }, [showPriceChange, priceChangeValue, priceChangePercentage]);
+
+  const calculatePriceData = useMemo<CalculatePriceData | undefined>(() => {
+    if (!useCalculatePriceData) {
+      return undefined;
+    }
+
+    if (showCoveredByGrantLabel) {
+      return CALCULATE_PRICE_DATA_SAMPLE;
+    }
+
+    return {
+      skuResults: CALCULATE_PRICE_SKU_RESULTS_SAMPLE.map(skuResult => ({
+        ...skuResult,
+        coveredByGrants: undefined,
+      })),
+    };
+  }, [showCoveredByGrantLabel, useCalculatePriceData]);
+
   const invoice = useMemo(() => {
-    let _invoice = INVOICE_SAMPLE;
+    let _invoice = useCalculatePriceData ? CALCULATE_PRICE_INVOICE_SAMPLE : INVOICE_SAMPLE;
 
     if (!showCoveredByGrantLabel) {
       _invoice = _invoice.map(invoice => ({
@@ -207,15 +385,22 @@ const Template: StoryFn<StoryProps> = ({
     }
 
     return [_invoice[0]];
-  }, [showSingleGroup, showCoveredByGrantLabel, showChangedPrice]);
+  }, [showSingleGroup, showCoveredByGrantLabel, useCalculatePriceData, showChangedPrice]);
 
   return (
     <div style={{ maxWidth: 304 }}>
       <PriceSummary
         {...args}
         onPeriodChanged={period => setArgs({ ...args, period })}
+        value={getStoryValue(
+          getStoryTotalValue(useCalculatePriceData, showSingleGroup, args.value),
+          totalValueRangeMin,
+          totalValueRangeMax,
+        )}
         invoice={invoice}
+        calculatePriceData={calculatePriceData}
         valueDelta={valueDelta}
+        priceChange={priceChange}
       />
     </div>
   );
@@ -245,9 +430,16 @@ export const priceSummary: StoryObj<StoryProps> = {
     },
     showHintLink: true,
     showCoveredByGrantLabel: true,
+    useCalculatePriceData: false,
     showChangedPrice: false,
+    showPriceChange: false,
     deltaType: 'increased',
     deltaValue: 1000,
+    priceChangeValue: 5000,
+    priceChangePercentage: 10,
+    totalValueRangeMin: 0,
+    totalValueRangeMax: 0,
+    basePrice: 10000,
   },
   argTypes: {
     showSingleGroup: {
@@ -274,8 +466,25 @@ export const priceSummary: StoryObj<StoryProps> = {
         },
       },
     },
+    useCalculatePriceData: {
+      name: '[Stories]: use calculatePriceData example',
+      control: {
+        type: 'boolean',
+      },
+      table: {
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+    },
     showChangedPrice: {
       name: '[Stories]: showChangedPrice',
+      control: {
+        type: 'boolean',
+      },
+    },
+    showPriceChange: {
+      name: '[Stories]: show significant price change',
       control: {
         type: 'boolean',
       },
@@ -289,6 +498,30 @@ export const priceSummary: StoryObj<StoryProps> = {
     },
     deltaValue: {
       name: '[Stories]: deltaValue',
+      control: {
+        type: 'number',
+      },
+    },
+    priceChangeValue: {
+      name: '[Stories]: signed price change value',
+      control: {
+        type: 'number',
+      },
+    },
+    priceChangePercentage: {
+      name: '[Stories]: price change percentage',
+      control: {
+        type: 'text',
+      },
+    },
+    totalValueRangeMin: {
+      name: '[Stories]: total value range min',
+      control: {
+        type: 'number',
+      },
+    },
+    totalValueRangeMax: {
+      name: '[Stories]: total value range max',
       control: {
         type: 'number',
       },
