@@ -54,8 +54,6 @@ export type HeaderProps = WithSupportProps<
     rightContent?: ReactNode;
     /** Контент сверху над хэдером, для инфостроки */
     subHeader?: ReactNode;
-    /** Контент снизу под хэдером */
-    afterHeaderContent?: ReactNode;
     /** Контент мобильной версии меню */
     mobileMenuContent?: ReactNode;
     /** Нижний контент кнопок мобильной версии меню */
@@ -66,7 +64,6 @@ export type HeaderProps = WithSupportProps<
 >;
 
 const HEIGHT_SUBHEADER = 56;
-const HEIGHT_AFTER_HEADER_CONTENT = 32;
 
 export function SiteHeaderBasic({
   className,
@@ -76,7 +73,6 @@ export function SiteHeaderBasic({
   rightContent,
   mobileMenuContent,
   subHeader,
-  afterHeaderContent,
   fullWidthContent,
   layoutType,
   mobileConsultationButton,
@@ -97,7 +93,7 @@ export function SiteHeaderBasic({
   return (
     <Layout.Header
       style={{
-        transform: `translateY(-${!showHeader ? headerHeight + HEIGHT_SUBHEADER + HEIGHT_AFTER_HEADER_CONTENT : 0}px)`,
+        transform: `translateY(-${!showHeader ? headerHeight + HEIGHT_SUBHEADER : 0}px)`,
       }}
       className={cn(styles.root, className)}
       data-attr='layout-header'
@@ -145,7 +141,6 @@ export function SiteHeaderBasic({
           )}
         </div>
       </div>
-      {afterHeaderContent && <div className={styles.afterHeaderContentContainer}>{afterHeaderContent}</div>}
     </Layout.Header>
   );
 }
