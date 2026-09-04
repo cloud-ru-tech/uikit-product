@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-hero",
   "title": "Site Hero",
-  "version": "1.12.9",
+  "version": "1.13.0",
   "sideEffects": [
     "*.css",
     "*.woff",

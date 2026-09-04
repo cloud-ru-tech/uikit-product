@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.13.0 (2026-09-04)
+
+
+### Features
+
+* **SITE-11944:** herozero buttons gap ([54dc8ed](https://github.com/cloud-ru-tech/uikit-product/commit/54dc8ed5cb9ce6e85c8a54201f513af2298ac6d9))
+
+
+
+
+
 ## 1.12.9 (2026-09-03)
 
 ### Only dependencies have been changed
