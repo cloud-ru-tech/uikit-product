@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-09-04)
+
+
+### BREAKING CHANGES
+
+
+* **SITE-11943:** remove unused code ([22125db](https://github.com/cloud-ru-tech/uikit-product/commit/22125db521dc308c6beee596b9ba5dfc373d1cfd))
+
+
+
+
 ## 1.10.3 (2026-09-03)
 
 ### Only dependencies have been changed
