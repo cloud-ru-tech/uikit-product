@@ -65,12 +65,11 @@
 .buttons {
   display: flex;
   flex-direction: row;
-  gap: var.$dimension-025m;
+  gap: var.$dimension-1m;
 
   &[data-layout-type='tablet'],
   &[data-layout-type='mobile'] {
     flex-direction: column;
-    gap: var.$dimension-1m;
   }
 
   &[data-align='center'] {
