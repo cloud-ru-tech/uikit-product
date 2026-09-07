@@ -79,6 +79,7 @@ export const heroEvent: StoryObj<StoryProps> = {
     placeTitle: 'Лужники',
     showPlaceLink: true,
     heroButtonType: 'watch',
+    participantCount: 25,
     image: 'https://cdn.cloud.ru/backend/webinars-images/education.png',
   },
   argTypes: {
@@ -106,6 +107,7 @@ export const heroEvent: StoryObj<StoryProps> = {
       control: { type: 'select' },
       options: Object.values(HERO_EVENT_BUTTONS),
     },
+    participantCount: { control: { type: 'number', min: 0 } },
     place: { table: { disable: true } },
     button: { table: { disable: true } },
   },

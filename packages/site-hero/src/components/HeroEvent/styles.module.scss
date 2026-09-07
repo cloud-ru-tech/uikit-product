@@ -112,6 +112,35 @@
   }
 }
 
+.buttonRow {
+  display: flex;
+  align-items: center;
+  gap: ds.$dimension-2m;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: calc(#{ds.$dimension-1m} + #{ds.$dimension-050m});
+  }
+}
+
+.participantCount {
+  display: flex;
+  align-items: center;
+  gap: ds.$dimension-050m;
+
+  color: ds.$sys-neutral-text-light;
+}
+
+.participantCountIcon {
+  flex-shrink: 0;
+}
+
+.participantCountLabel {
+  @include ds.composite-var(ds.$sans-body-m);
+}
+
 .imageWrapper {
   position: relative;
 

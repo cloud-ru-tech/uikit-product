@@ -21,3 +21,9 @@ export const AUDIENCE_LABELS = {
   [AUDIENCES.Students]: 'Для студентов',
   [AUDIENCES.Business]: 'Для бизнеса',
 };
+
+export const PARTICIPANT_COUNT_FORMS = {
+  One: 'регистрация',
+  Few: 'регистрации',
+  Many: 'регистраций',
+} as const;

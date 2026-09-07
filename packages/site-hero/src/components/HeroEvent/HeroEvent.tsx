@@ -1,5 +1,6 @@
 import cn from 'classnames';
 
+import { UsersSVG } from '@cloud-ru/uikit-product-icons';
 import { Layout } from '@cloud-ru/uikit-product-site-layout';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
@@ -11,6 +12,7 @@ import { HeroColor } from '../../types';
 import { AUDIENCE_LABELS, FORMAT_LABELS } from './constants';
 import styles from './styles.module.scss';
 import { Audience, Format } from './types';
+import { getParticipantCountLabel } from './utils';
 
 export type HeroEventProps = WithSupportProps<{
   /** CSS - класснейм */
@@ -35,6 +37,8 @@ export type HeroEventProps = WithSupportProps<{
   breadcrumbs: BreadcrumbsProps['items'];
   /** Настройки кнопки */
   button: HeroButtonProps;
+  /** Количество регистраций */
+  participantCount?: number;
 }> &
   WithLayoutType;
 
@@ -50,6 +54,7 @@ export function HeroEvent({
   place,
   image,
   button,
+  participantCount,
   layoutType,
   ...rest
 }: HeroEventProps) {
@@ -110,7 +115,19 @@ export function HeroEvent({
                 </div>
               </div>
 
-              <HeroEventButton {...button} layoutType={layoutType} className={styles.button} />
+              <div className={styles.buttonRow} data-layout-type={layoutType}>
+                <HeroEventButton {...button} layoutType={layoutType} className={styles.button} />
+
+                {participantCount ? (
+                  <div className={styles.participantCount} data-test-id='hero-event__participant-count'>
+                    <UsersSVG size={24} className={styles.participantCountIcon} />
+
+                    <span className={styles.participantCountLabel}>
+                      {participantCount} {getParticipantCountLabel(participantCount)}
+                    </span>
+                  </div>
+                ) : null}
+              </div>
             </div>
 
             <div className={styles.imageWrapper} data-layout-type={layoutType}>
