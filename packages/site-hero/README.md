@@ -39,6 +39,7 @@ Hero blocks for Site
 | category | `PromoTagProps` | - | Категория события |
 | format | enum Format: `"online"`, `"offline"`, `"hybrid"` | - | Формат проведения события |
 | audience | enum Audience: `"it"`, `"students"`, `"business"` | - | Аудитория, для которой проводится событие |
+| participantCount | `number` | - | Количество регистраций |
 ## HeroZero
 ### Props
 | name | type | default value | description |
