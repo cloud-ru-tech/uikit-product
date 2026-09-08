@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.14.0 (2026-09-08)
+
+
+### Features
+
+* **SITE-11688:** add participantCount to HeroEvent ([5cd90bb](https://github.com/cloud-ru-tech/uikit-product/commit/5cd90bb31a3bfcd1dbae468854b61a9b6031b153))
+
+
+
+
+
 # 1.13.0 (2026-09-04)
 
 
