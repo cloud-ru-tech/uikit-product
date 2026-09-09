@@ -26,6 +26,43 @@ id у элементов менять нельзя, нужны для анали
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+## onClick
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| type* | `string` | - |  |
+| timeStamp* | `number` | - |  |
+| persist* | `() => void` | - |  |
+| isPropagationStopped* | `() => boolean` | - |  |
+| stopPropagation* | `() => void` | - |  |
+| isDefaultPrevented* | `() => boolean` | - |  |
+| preventDefault* | `() => void` | - |  |
+| isTrusted* | `boolean` | - |  |
+| eventPhase* | `number` | - |  |
+| defaultPrevented* | `boolean` | - |  |
+| cancelable* | `boolean` | - |  |
+| bubbles* | `boolean` | - |  |
+| target* | `EventTarget` | - |  |
+| currentTarget* | `EventTarget & HTMLElement` | - |  |
+| nativeEvent* | `MouseEvent` | - |  |
+| view* | `AbstractView` | - |  |
+| detail* | `number` | - |  |
+| shiftKey* | `boolean` | - |  |
+| screenY* | `number` | - |  |
+| screenX* | `number` | - |  |
+| relatedTarget* | `EventTarget` | - |  |
+| pageY* | `number` | - |  |
+| pageX* | `number` | - |  |
+| movementY* | `number` | - |  |
+| movementX* | `number` | - |  |
+| metaKey* | `boolean` | - |  |
+| getModifierState* | `(key: ModifierKey) => boolean` | - | See [DOM Level 3 Events spec](https://www.w3.org/TR/uievents-key/#keys-modifier). for a list of valid (case-sensitive) arguments to this method. |
+| ctrlKey* | `boolean` | - |  |
+| clientY* | `number` | - |  |
+| clientX* | `number` | - |  |
+| buttons* | `number` | - |  |
+| button* | `number` | - |  |
+| altKey* | `boolean` | - |  |
 
 
 [//]: DOCUMENTATION_SECTION_END

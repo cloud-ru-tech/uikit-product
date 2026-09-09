@@ -1,4 +1,10 @@
-import { type FooterColumn, type FooterContent, type FooterLinkItem, type FooterSocialItem } from './types';
+import {
+  type FooterColumn,
+  type FooterContent,
+  type FooterCsatItem,
+  type FooterLinkItem,
+  type FooterSocialItem,
+} from './types';
 
 /**
  * id у элементов менять нельзя, нужны для аналитики. Раньше они вычислялись,
@@ -12,6 +18,7 @@ export const FOOTER_ELEMENT = {
   Subscribe: 'subscribe',
   Social: 'social',
   Locale: 'locale',
+  Csat: 'csat',
 } as const;
 
 const CONTACTS_COLUMN: FooterColumn = {
@@ -231,6 +238,13 @@ const SOCIALS: FooterSocialItem[] = [
   { name: 'vk', url: 'https://vk.com/cloudru', label: 'ВКонтакте' },
 ];
 
+export const FOOTER_CSAT: FooterCsatItem = {
+  id: 'site-footer-csat',
+  title: 'Оцените сайт Cloud.ru',
+  description: '6 вопросов · 2 мин',
+  url: '?ux=opros',
+};
+
 export const FOOTER_CONTENT: FooterContent = {
   logoUrl: '/',
   locales: [
@@ -247,4 +261,9 @@ export const FOOTER_CONTENT: FooterContent = {
   bottomLinks: BOTTOM_LINKS,
   socials: SOCIALS,
   copyrightOwner: 'Cloud.ru',
+};
+
+export const FOOTER_CONTENT_WITH_CSAT: FooterContent = {
+  ...FOOTER_CONTENT,
+  columns: [{ ...CONTACTS_COLUMN, csat: FOOTER_CSAT }, PRODUCTS_COLUMN, BUSINESS_COLUMN, COMMUNITY_COLUMN],
 };

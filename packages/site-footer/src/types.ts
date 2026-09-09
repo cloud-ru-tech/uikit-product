@@ -36,6 +36,15 @@ export type FooterLinkItem = {
   onClick?: MouseEventHandler<HTMLElement>;
 };
 
+export type FooterCsatItem = {
+  title: string;
+  description: string;
+  url: string;
+  target?: FooterLinkTarget;
+  id?: string;
+  onClick?: MouseEventHandler<HTMLElement>;
+};
+
 export type FooterSectionItem = {
   title: string;
   titleUrl?: string;
@@ -46,6 +55,8 @@ export type FooterSectionItem = {
 
 export type FooterColumn = {
   sections: FooterSectionItem[];
+  /** CSAT-блок. Только для сайта */
+  csat?: FooterCsatItem;
 };
 
 export type FooterSubscribeContent = {

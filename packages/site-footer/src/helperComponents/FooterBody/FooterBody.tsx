@@ -3,6 +3,7 @@ import cn from 'classnames';
 import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 
 import { type FooterColumn, type FooterHandlers } from '../../types';
+import { FooterCsat } from '../FooterCsat';
 import { FooterSection } from '../FooterSection';
 import styles from './styles.module.scss';
 
@@ -26,6 +27,7 @@ export function FooterBody({ className, layoutType, columns, onElementClick, onN
               onNavigate={onNavigate}
             />
           ))}
+          {column.csat && <FooterCsat {...column.csat} onElementClick={onElementClick} onNavigate={onNavigate} />}
         </div>
       ))}
     </div>

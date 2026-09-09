@@ -6,7 +6,7 @@ import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { FOOTER_CONTENT, SiteFooter, SiteFooterProps } from '../src';
+import { FOOTER_CONTENT_WITH_CSAT, SiteFooter, SiteFooterProps } from '../src';
 
 const meta: Meta = {
   title: 'Site/Footer',
@@ -35,7 +35,7 @@ const Template: StoryFn<SiteFooterProps> = ({ currentLocaleId: currentLocaleIdPr
 export const footer: StoryObj<SiteFooterProps> = {
   render: Template,
   args: {
-    content: FOOTER_CONTENT,
+    content: FOOTER_CONTENT_WITH_CSAT,
     layoutType: LAYOUT_TYPE.Desktop,
     disableSubscribe: false,
     currentLocaleId: 'ru',
