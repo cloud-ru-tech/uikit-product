@@ -146,7 +146,7 @@
       "less": "4.8.1",
       "nx": "22.7.8",
       "@nx/devkit": "22.7.8",
-      "@xmldom/xmldom": "0.8.15"
+      "@xmldom/xmldom": "0.9.12"
     }
   }
 }
