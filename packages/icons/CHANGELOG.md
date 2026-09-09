@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 18.1.0 (2026-09-09)
+
+
+### Features
+
+* **PDS-4453:** add confluence logo ([97b7a0e](https://github.com/cloud-ru-tech/uikit-product/commit/97b7a0e70e8543842f5a4c725b77575ec46927ed))
+
+
+
+
+
 # 18.0.0 (2026-09-03)
 
 

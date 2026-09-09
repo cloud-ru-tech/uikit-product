@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.3.11 (2026-09-09)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-copy-line@2.1.25]($PUBLIC_PROJECT_URL/blob/master/packages/copy-line/CHANGELOG.md)
+* [@cloud-ru/uikit-product-icons@18.1.0]($PUBLIC_PROJECT_URL/blob/master/packages/icons/CHANGELOG.md)
+
+
+
+
+
 ## 2.3.10 (2026-09-03)
 
 ### Only dependencies have been changed
