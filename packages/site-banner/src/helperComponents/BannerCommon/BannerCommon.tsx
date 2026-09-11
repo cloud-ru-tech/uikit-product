@@ -41,6 +41,8 @@ export type BannerCommonProps = WithSupportProps<
         image: [number, number];
         /** Отступ между текстом и кнопками */
         mainGap: number;
+        /** Отступ вокруг картинки */
+        imagePadding?: number;
       };
     } & ColorWrapperProps
   >
@@ -59,6 +61,7 @@ export function BannerCommon({
   sizes: {
     image: [maxImageWith, maxImageHeight],
     mainGap,
+    imagePadding = 0,
   },
   ...rest
 }: BannerCommonProps) {
@@ -71,6 +74,7 @@ export function BannerCommon({
         '--site-banner-main-gap': `${mainGap}px`,
         '--site-banner-image-max-width': `${maxImageWith}px`,
         '--site-banner-image-max-height': `${maxImageHeight}px`,
+        '--site-banner-image-padding': `${imagePadding}px`,
       }}
       {...rest}
     >

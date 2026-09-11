@@ -22,13 +22,14 @@
 
   flex-shrink: 0;
 
-  border-radius: 4px;
-
   &Wrapper {
+    box-sizing: border-box;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: var(--site-banner-image-padding);
   }
 }
 
@@ -57,7 +58,7 @@
 
   display: grid;
 
-  grid-template-columns: 1fr var(--site-banner-image-max-width);
+  grid-template-columns: 1fr calc(var(--site-banner-image-max-width) + var(--site-banner-image-padding) * 2);
 
   &[data-layout-type='tablet'] {
     display: flex;
