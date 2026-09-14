@@ -1936,7 +1936,7 @@ importers:
   packages/site-banner-predefined:
     dependencies:
       '@cloud-ru/uikit-product-site-banner':
-        specifier: 2.0.32
+        specifier: 2.1.0
         version: link:../site-banner
       '@cloud-ru/uikit-product-utils':
         specifier: 9.1.0

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-09-14)
+
+
+### Features
+
+* **SITE-11997:** add BannerSecondary image padding ([ad0dbaa](https://github.com/cloud-ru-tech/uikit-product/commit/ad0dbaa0a80d2294be9034bd71e54a5148506889))
+
+
+
+
+
 ## 2.0.32 (2026-09-09)
 
 ### Only dependencies have been changed
