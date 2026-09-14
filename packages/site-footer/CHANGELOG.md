@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2026-09-14)
+
+
+### Features
+
+* **SITE-11948:** add csat link for site-footer ([267efe5](https://github.com/cloud-ru-tech/uikit-product/commit/267efe53a976af1c7361e6b0d33dbebf000fd041))
+
+
+
+
+
 ## 1.2.1 (2026-09-09)
 
 ### Only dependencies have been changed
