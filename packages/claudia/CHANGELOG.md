@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.20.0 (2026-09-17)
+
+
+### Features
+
+* **LK-8161:** title centered ([67505c8](https://github.com/cloud-ru-tech/uikit-product/commit/67505c84b653bb22e3e525d7eca66dbce8442e6b))
+
+
+
+
+
 ## 1.19.26 (2026-09-09)
 
 ### Only dependencies have been changed
