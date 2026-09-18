@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.24 (2026-09-18)
+
+### Only dependencies have been changed
+* [@cloud-ru/uikit-product-mobile-table@2.4.3]($PUBLIC_PROJECT_URL/blob/master/packages/mobile-table/CHANGELOG.md)
+
+
+
+
+
 ## 0.1.23 (2026-09-09)
 
 ### Only dependencies have been changed

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 18.2.0 (2026-09-18)
+
+
+### Features
+
+* **FF-9022:** add new icons ([a1bb7f4](https://github.com/cloud-ru-tech/uikit-product/commit/a1bb7f447aa296d3877a66ef2783a4ffea310349))
+
+
+
+
+
 # 18.1.0 (2026-09-09)
 
 
