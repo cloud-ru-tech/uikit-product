@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.16.0 (2026-09-18)
+
+
+### Features
+
+* **EVODBAAS-8813:** added vCPU RAM for Kafka ([f38ebe7](https://github.com/cloud-ru-tech/uikit-product/commit/f38ebe7737de8ef34044673bdfebc1d6f32ed92b))
+
+
+
+
+
 # 1.15.0 (2026-09-18)
 
 
