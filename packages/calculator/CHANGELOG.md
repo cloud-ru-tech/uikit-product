@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.15.0 (2026-09-18)
+
+
+### Features
+
+* **EVODBAAS-8814:** added vCPU RAM for ClickHouse ([f20b8b0](https://github.com/cloud-ru-tech/uikit-product/commit/f20b8b0e4b71f6302255f90bbc60a7d2f3b94152))
+
+
+
+
+
 ## 1.14.5 (2026-09-09)
 
 ### Only dependencies have been changed
