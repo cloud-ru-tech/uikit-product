@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-mobile-info-row",
   "title": "Mobile Info Row",
-  "version": "1.1.29",
+  "version": "2.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",

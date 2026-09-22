@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-load-status",
   "title": "Load Status",
-  "version": "1.2.16",
+  "version": "2.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",

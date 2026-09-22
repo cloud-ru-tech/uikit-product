@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 19.0.0 (2026-09-22)
+
+
+### Bug Fixes
+
+* **FF-9159:** icons preview building ([e359e50](https://github.com/cloud-ru-tech/uikit-product/commit/e359e502b8f9131cd71a5ad6ff65a59f734d0561))
+* **FF-9159:** sprite building ([6fe3cef](https://github.com/cloud-ru-tech/uikit-product/commit/6fe3cef9ead219e36afda9680c3feecba991b140))
+
+
+### BREAKING CHANGES
+
+
+* **FF-8693:** adopt workspace and catalog protocols for package deps ([a6ef2f3](https://github.com/cloud-ru-tech/uikit-product/commit/a6ef2f373b946dcb613a477776df9478085a64da))
+
+
+
+
 # 18.2.0 (2026-09-18)
 
 

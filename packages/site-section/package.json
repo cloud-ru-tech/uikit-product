@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-section",
   "title": "Site Section",
-  "version": "1.7.18",
+  "version": "2.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",

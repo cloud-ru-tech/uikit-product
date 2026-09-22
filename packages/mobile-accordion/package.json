@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-mobile-accordion",
   "title": "Mobile Accordion",
-  "version": "1.1.28",
+  "version": "2.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",

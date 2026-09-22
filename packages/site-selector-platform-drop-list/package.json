@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-selector-platform-drop-list",
   "title": "Site Selector Platform DropList",
-  "version": "1.4.23",
+  "version": "2.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2026-09-22)
+
+
+### Features
+
+* **EVODBAAS-7563:** calculate hostsQuantity for Redis ([fead790](https://github.com/cloud-ru-tech/uikit-product/commit/fead790917457a29ece8158d658a6fe6a53bad7a))
+
+
+### BREAKING CHANGES
+
+
+* **FF-8693:** adopt workspace and catalog protocols for package deps ([a6ef2f3](https://github.com/cloud-ru-tech/uikit-product/commit/a6ef2f373b946dcb613a477776df9478085a64da))
+
+
+
+
 ## 1.1.3 (2026-03-04)
 
 ### Only dependencies have been changed
