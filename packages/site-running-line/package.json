@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-running-line",
   "title": "Site Running Line",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
   "license": "Apache-2.0",
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/figma-tokens-web": "19.0.2",
-    "classnames": "2.5.1"
+    "@cloud-ru/figma-tokens-web": "^19.0.2",
+    "classnames": "catalog:"
   }
 }
