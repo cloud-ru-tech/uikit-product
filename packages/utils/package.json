@@ -59,11 +59,11 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/ft-debug-mode": "1.0.1",
-    "@snack-uikit/utils": "3.5.0",
-    "apca-w3": "0.1.9",
-    "chroma-js": "3.1.1",
-    "ua-parser-js": "1.0.39"
+    "@cloud-ru/ft-debug-mode": "^1.0.1",
+    "@snack-uikit/utils": "catalog:",
+    "apca-w3": "^0.1.9",
+    "chroma-js": "^3.1.1",
+    "ua-parser-js": "^1.0.39"
   },
   "devDependencies": {
     "@types/apca-w3": "0.1.3",

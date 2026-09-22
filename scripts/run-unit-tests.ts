@@ -1,12 +1,12 @@
-import { exec, ExecCallback, exit } from 'shelljs';
+import shell from 'shelljs';
 
-import { installIconsPackage } from './utils/installIconsPackage';
+import { logError } from './utils/console';
+import { prepareIconsPackage } from './utils/prepareIconsPackage';
 
-const revertIconsPackage = installIconsPackage();
-
-const execCallback: ExecCallback = code => {
-  revertIconsPackage?.();
-  exit(code);
-};
-
-exec('vitest run', execCallback);
+prepareIconsPackage()
+  .then(() => shell.exit(shell.exec('vitest run').code))
+  .catch(error => {
+    logError('Failed to prepare icons package');
+    console.info((error as { stdout?: string }).stdout);
+    shell.exit(1);
+  });

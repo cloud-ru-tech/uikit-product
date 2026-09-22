@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-site-rich-text": "1.1.3",
-    "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/scroll": "0.11.0",
-    "classnames": "2.5.1"
+    "@cloud-ru/uikit-product-site-rich-text": "workspace:^",
+    "@cloud-ru/uikit-product-utils": "workspace:^",
+    "@snack-uikit/scroll": "catalog:",
+    "classnames": "catalog:"
   }
 }

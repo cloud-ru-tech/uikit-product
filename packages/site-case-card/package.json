@@ -36,10 +36,10 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/card": "0.20.20",
-    "@snack-uikit/skeleton": "0.6.9",
-    "@snack-uikit/typography": "0.8.10"
+    "@cloud-ru/uikit-product-utils": "workspace:^",
+    "@snack-uikit/card": "catalog:",
+    "@snack-uikit/skeleton": "catalog:",
+    "@snack-uikit/typography": "catalog:"
   },
   "peerDependencies": {
     "@cloud-ru/figma-tokens-cloud-platform": "*"

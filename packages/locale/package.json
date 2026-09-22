@@ -36,11 +36,11 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/common-translations": "1.3.2",
-    "@snack-uikit/locale": "0.16.0",
-    "lodash": "4.18.1"
+    "@cloud-ru/common-translations": "^1.3.2",
+    "@snack-uikit/locale": "catalog:",
+    "lodash": "catalog:"
   },
   "devDependencies": {
-    "@types/lodash": "4.17.24"
+    "@types/lodash": "catalog:"
   }
 }

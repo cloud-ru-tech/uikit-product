@@ -36,9 +36,9 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "18.2.0",
-    "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/icon-predefined": "0.7.5",
-    "classnames": "2.5.1"
+    "@cloud-ru/uikit-product-icons": "workspace:^",
+    "@cloud-ru/uikit-product-utils": "workspace:^",
+    "@snack-uikit/icon-predefined": "catalog:",
+    "classnames": "catalog:"
   }
 }

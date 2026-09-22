@@ -1,7 +1,76 @@
 shamefullyHoist: true
 sideEffectsCache: false
 linkWorkspacePackages: true
-saveWorkspaceProtocol: false
+saveWorkspaceProtocol: rolling
+catalog:
+  '@cloud-ru/ft-copy-to-clipboard': ^0.1.0
+  '@cloud-ru/ft-formatters': ^1.0.1
+  '@cloud-ru/ft-request-payload-transform': ^0.3.0
+  '@snack-uikit/accordion': ^1.0.1
+  '@snack-uikit/alert': ^1.0.1
+  '@snack-uikit/attachment': ^1.0.1
+  '@snack-uikit/avatar': ^1.0.1
+  '@snack-uikit/breadcrumbs': ^1.0.1
+  '@snack-uikit/button': ^1.0.1
+  '@snack-uikit/calendar': ^1.0.1
+  '@snack-uikit/card': ^1.0.1
+  '@snack-uikit/carousel': ^1.0.1
+  '@snack-uikit/chips': ^1.0.1
+  '@snack-uikit/code-editor': ^1.0.1
+  '@snack-uikit/counter': ^1.0.1
+  '@snack-uikit/divider': ^4.0.0
+  '@snack-uikit/drawer': ^1.0.1
+  '@snack-uikit/drop-zone': ^1.0.1
+  '@snack-uikit/dropdown': ^1.0.1
+  '@snack-uikit/fields': ^1.0.1
+  '@snack-uikit/icon-predefined': ^1.0.1
+  '@snack-uikit/icons': ^1.0.1
+  '@snack-uikit/info-block': ^1.0.1
+  '@snack-uikit/input-private': ^5.0.0
+  '@snack-uikit/link': ^1.0.1
+  '@snack-uikit/list': ^1.0.1
+  '@snack-uikit/loaders': ^1.0.1
+  '@snack-uikit/locale': ^1.0.1
+  '@snack-uikit/markdown': ^1.0.1
+  '@snack-uikit/modal': ^1.0.1
+  '@snack-uikit/pagination': ^1.0.1
+  '@snack-uikit/popover': ^1.0.1
+  '@snack-uikit/popover-private': ^1.0.1
+  '@snack-uikit/progress-bar': ^1.0.1
+  '@snack-uikit/promo-tag': ^1.0.1
+  '@snack-uikit/scroll': ^1.0.1
+  '@snack-uikit/search': ^1.0.1
+  '@snack-uikit/search-private': ^1.0.1
+  '@snack-uikit/skeleton': ^1.0.1
+  '@snack-uikit/status': ^1.0.1
+  '@snack-uikit/stepper': ^1.0.1
+  '@snack-uikit/table': ^1.0.1
+  '@snack-uikit/tabs': ^1.0.1
+  '@snack-uikit/tag': ^1.0.1
+  '@snack-uikit/toaster': ^1.0.1
+  '@snack-uikit/toggles': ^1.0.1
+  '@snack-uikit/toolbar': ^1.0.1
+  '@snack-uikit/tooltip': ^1.0.1
+  '@snack-uikit/tree': ^1.0.1
+  '@snack-uikit/truncate-string': ^1.0.1
+  '@snack-uikit/typography': ^1.0.1
+  '@snack-uikit/utils': ^5.0.0
+  'classnames': ^2.5.1
+  'fuzzy-search': ^3.2.1
+  'lodash': ^4.18.1
+  'lodash.debounce': ^4.0.8
+  'merge-refs': ^1.3.0
+  'uncontrollable': ^8.0.4
+
+  '@types/fuzzy-search': 2.1.5
+  '@types/lodash': 4.17.24
+  '@types/lodash.debounce': 4.0.9
+  '@types/merge-refs': 1.0.3
+  '@types/react': 18.2.79
+  '@types/react-dom': 18.2.25
+  'react': 18.2.0
+  'react-dom': 18.2.0
+
 packages:
   - "packages/*"
 onlyBuiltDependencies:

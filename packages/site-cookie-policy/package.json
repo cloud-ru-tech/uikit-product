@@ -36,10 +36,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/button": "0.19.7",
-    "@snack-uikit/link": "0.17.20",
-    "@snack-uikit/typography": "0.8.7",
-    "classnames": "2.5.1"
+    "@cloud-ru/uikit-product-utils": "workspace:^",
+    "@snack-uikit/button": "catalog:",
+    "@snack-uikit/link": "catalog:",
+    "@snack-uikit/typography": "catalog:",
+    "classnames": "catalog:"
   }
 }

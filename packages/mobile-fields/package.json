@@ -36,28 +36,28 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "18.2.0",
-    "@cloud-ru/uikit-product-mobile-dropdown": "2.1.30",
-    "@cloud-ru/uikit-product-mobile-modal": "2.2.13",
-    "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/button": "0.19.15",
-    "@snack-uikit/calendar": "0.14.0",
-    "@snack-uikit/fields": "0.57.4",
-    "@snack-uikit/input-private": "4.8.8",
-    "@snack-uikit/list": "0.33.0",
-    "@snack-uikit/scroll": "0.11.0",
-    "@snack-uikit/tag": "0.15.18",
-    "@snack-uikit/utils": "3.10.1",
-    "classnames": "2.5.1",
-    "copy-to-clipboard": "3.3.3",
-    "fuzzy-search": "3.2.1",
-    "lodash": "4.18.1",
-    "merge-refs": "1.3.0",
-    "uncontrollable": "8.0.4"
+    "@cloud-ru/uikit-product-icons": "workspace:^",
+    "@cloud-ru/uikit-product-mobile-dropdown": "workspace:^",
+    "@cloud-ru/uikit-product-mobile-modal": "workspace:^",
+    "@cloud-ru/uikit-product-utils": "workspace:^",
+    "@snack-uikit/button": "catalog:",
+    "@snack-uikit/calendar": "catalog:",
+    "@snack-uikit/fields": "catalog:",
+    "@snack-uikit/input-private": "catalog:",
+    "@snack-uikit/list": "catalog:",
+    "@snack-uikit/scroll": "catalog:",
+    "@snack-uikit/tag": "catalog:",
+    "@snack-uikit/utils": "catalog:",
+    "classnames": "catalog:",
+    "copy-to-clipboard": "^3.3.3",
+    "fuzzy-search": "catalog:",
+    "lodash": "catalog:",
+    "merge-refs": "catalog:",
+    "uncontrollable": "catalog:"
   },
   "devDependencies": {
-    "@types/fuzzy-search": "2.1.5",
-    "@types/merge-refs": "1.0.3"
+    "@types/fuzzy-search": "catalog:",
+    "@types/merge-refs": "catalog:"
   },
   "peerDependencies": {
     "@cloud-ru/uikit-product-locale": "*"

@@ -36,13 +36,13 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/carousel": "0.6.11",
-    "@snack-uikit/pagination": "0.10.24",
-    "classnames": "2.5.1",
-    "lodash.debounce": "4.0.8"
+    "@cloud-ru/uikit-product-utils": "workspace:^",
+    "@snack-uikit/carousel": "catalog:",
+    "@snack-uikit/pagination": "catalog:",
+    "classnames": "catalog:",
+    "lodash.debounce": "catalog:"
   },
   "devDependencies": {
-    "@types/lodash.debounce": "4.0.9"
+    "@types/lodash.debounce": "catalog:"
   }
 }

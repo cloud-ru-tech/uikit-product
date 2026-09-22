@@ -36,15 +36,15 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "18.2.0",
-    "@cloud-ru/uikit-product-mobile-dropdown": "2.1.30",
-    "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/button": "0.19.16",
-    "@snack-uikit/dropdown": "0.5.5",
-    "@snack-uikit/list": "0.33.1",
-    "@snack-uikit/loaders": "0.9.4",
-    "@snack-uikit/utils": "4.0.0",
-    "classnames": "2.5.1",
-    "uncontrollable": "8.0.4"
+    "@cloud-ru/uikit-product-icons": "workspace:^",
+    "@cloud-ru/uikit-product-mobile-dropdown": "workspace:^",
+    "@cloud-ru/uikit-product-utils": "workspace:^",
+    "@snack-uikit/button": "catalog:",
+    "@snack-uikit/dropdown": "catalog:",
+    "@snack-uikit/list": "catalog:",
+    "@snack-uikit/loaders": "catalog:",
+    "@snack-uikit/utils": "catalog:",
+    "classnames": "catalog:",
+    "uncontrollable": "catalog:"
   }
 }

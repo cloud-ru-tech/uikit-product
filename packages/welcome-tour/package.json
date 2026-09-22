@@ -36,11 +36,11 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "18.2.0",
-    "@snack-uikit/button": "0.19.7",
-    "@snack-uikit/pagination": "0.10.24",
-    "@snack-uikit/typography": "0.8.4",
-    "react-joyride": "2.5.3"
+    "@cloud-ru/uikit-product-icons": "workspace:^",
+    "@snack-uikit/button": "catalog:",
+    "@snack-uikit/pagination": "catalog:",
+    "@snack-uikit/typography": "catalog:",
+    "react-joyride": "^2.5.3"
   },
   "peerDependencies": {
     "@snack-uikit/figma-tokens": "*"

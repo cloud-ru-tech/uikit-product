@@ -36,17 +36,17 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "18.2.0",
-    "@cloud-ru/uikit-product-mobile-tooltip": "1.1.28",
-    "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/accordion": "0.11.23",
-    "@snack-uikit/button": "0.19.15",
-    "@snack-uikit/toggles": "0.13.26",
-    "@snack-uikit/typography": "0.8.10",
-    "classnames": "2.5.1",
-    "lodash.debounce": "4.0.8"
+    "@cloud-ru/uikit-product-icons": "workspace:^",
+    "@cloud-ru/uikit-product-mobile-tooltip": "workspace:^",
+    "@cloud-ru/uikit-product-utils": "workspace:^",
+    "@snack-uikit/accordion": "catalog:",
+    "@snack-uikit/button": "catalog:",
+    "@snack-uikit/toggles": "catalog:",
+    "@snack-uikit/typography": "catalog:",
+    "classnames": "catalog:",
+    "lodash.debounce": "catalog:"
   },
   "devDependencies": {
-    "@types/lodash.debounce": "4.0.9"
+    "@types/lodash.debounce": "catalog:"
   }
 }

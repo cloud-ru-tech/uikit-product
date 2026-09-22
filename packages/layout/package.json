@@ -36,10 +36,10 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "18.2.0",
-    "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/info-block": "0.6.40",
-    "classnames": "2.5.1"
+    "@cloud-ru/uikit-product-icons": "workspace:^",
+    "@cloud-ru/uikit-product-utils": "workspace:^",
+    "@snack-uikit/info-block": "catalog:",
+    "classnames": "catalog:"
   },
   "peerDependencies": {
     "@cloud-ru/uikit-product-locale": "*"

@@ -111,8 +111,12 @@ export function SectionBasic({
           <div className={styles.sectionTabs}>
             <Tabs value={currentTab} onChange={setCurrentTab}>
               <Tabs.TabBar>
-                {tabBarItems.map(tabProps => (
-                  <Tabs.Tab key={tabProps.value} {...tabProps} />
+                {tabBarItems.map(({ counter, ...tabProps }) => (
+                  <Tabs.Tab
+                    key={tabProps.value}
+                    {...tabProps}
+                    counter={counter === undefined ? undefined : { label: counter }}
+                  />
                 ))}
               </Tabs.TabBar>
             </Tabs>

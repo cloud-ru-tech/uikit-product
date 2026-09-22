@@ -36,7 +36,7 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-utils": "9.1.0",
-    "classnames": "2.5.1"
+    "@cloud-ru/uikit-product-utils": "workspace:^",
+    "classnames": "catalog:"
   }
 }

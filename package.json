@@ -85,8 +85,8 @@
     "@types/inquirer": "8.2.10",
     "@types/node": "22.8.1",
     "@types/normalize-path": "3.0.2",
-    "@types/react": "18.2.79",
-    "@types/react-dom": "18.2.25",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
     "@types/react-syntax-highlighter": "15.5.13",
     "@types/rimraf": "4.0.5",
     "@types/shelljs": "0.8.15",
@@ -104,13 +104,14 @@
     "lerna": "8.1.2",
     "minimist": "1.2.8",
     "mkdirp": "3.0.1",
+    "monaco-editor": "0.55.1",
     "normalize-path": "3.0.0",
     "nyc": "18.0.0",
     "postcss": "8.5.15",
     "postcss-discard-comments": "7.0.3",
-    "react": "18.2.0",
+    "react": "catalog:",
     "react-docgen-typescript": "2.4.0",
-    "react-dom": "18.2.0",
+    "react-dom": "catalog:",
     "react-hook-form": "7.53.1",
     "react-markdown": "9.0.1",
     "react-minimal-pie-chart": "8.4.0",
@@ -134,8 +135,8 @@
   ],
   "pnpm": {
     "overrides": {
-      "react": "18.2.0",
-      "react-dom": "18.2.0",
+      "react": "catalog:",
+      "react-dom": "catalog:",
       "uuid": "11.1.1",
       "piscina": "4.9.3",
       "qs": "6.15.2",
@@ -146,7 +147,9 @@
       "less": "4.8.1",
       "nx": "22.7.8",
       "@nx/devkit": "22.7.8",
-      "smol-toml": "1.7.1"
+      "smol-toml": "1.7.1",
+      "@types/react": "catalog:",
+      "@types/react-dom": "catalog:"
     }
   }
 }

@@ -36,18 +36,18 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "18.2.0",
-    "@cloud-ru/uikit-product-mobile-modal": "2.2.13",
-    "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/button": "0.19.15",
-    "@snack-uikit/chips": "0.29.0",
-    "@snack-uikit/fields": "0.56.1",
-    "@snack-uikit/icons": "0.27.7",
-    "@snack-uikit/loaders": "0.9.9",
-    "@snack-uikit/popover": "0.10.5",
-    "@snack-uikit/toggles": "0.13.26",
-    "@snack-uikit/typography": "0.8.11",
-    "classnames": "2.5.1"
+    "@cloud-ru/uikit-product-icons": "workspace:^",
+    "@cloud-ru/uikit-product-mobile-modal": "workspace:^",
+    "@cloud-ru/uikit-product-utils": "workspace:^",
+    "@snack-uikit/button": "catalog:",
+    "@snack-uikit/chips": "catalog:",
+    "@snack-uikit/fields": "catalog:",
+    "@snack-uikit/icons": "catalog:",
+    "@snack-uikit/loaders": "catalog:",
+    "@snack-uikit/popover": "catalog:",
+    "@snack-uikit/toggles": "catalog:",
+    "@snack-uikit/typography": "catalog:",
+    "classnames": "catalog:"
   },
   "peerDependencies": {
     "@cloud-ru/figma-tokens-cloud-platform": "*"

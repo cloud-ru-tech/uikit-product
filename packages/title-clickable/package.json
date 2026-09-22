@@ -36,11 +36,11 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "18.2.0",
-    "@snack-uikit/avatar": "0.8.25",
-    "@snack-uikit/truncate-string": "0.7.11",
-    "@snack-uikit/typography": "0.8.4",
-    "@snack-uikit/utils": "3.7.0",
-    "classnames": "2.5.1"
+    "@cloud-ru/uikit-product-icons": "workspace:^",
+    "@snack-uikit/avatar": "catalog:",
+    "@snack-uikit/truncate-string": "catalog:",
+    "@snack-uikit/typography": "catalog:",
+    "@snack-uikit/utils": "catalog:",
+    "classnames": "catalog:"
   }
 }

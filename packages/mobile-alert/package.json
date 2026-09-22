@@ -36,12 +36,12 @@
   },
   "scripts": {},
   "dependencies": {
-    "@cloud-ru/uikit-product-icons": "18.2.0",
-    "@cloud-ru/uikit-product-utils": "9.1.0",
-    "@snack-uikit/alert": "0.16.28",
-    "@snack-uikit/link": "0.17.20",
-    "@snack-uikit/loaders": "0.9.8",
-    "@snack-uikit/utils": "3.10.1",
-    "classnames": "2.5.1"
+    "@cloud-ru/uikit-product-icons": "workspace:^",
+    "@cloud-ru/uikit-product-utils": "workspace:^",
+    "@snack-uikit/alert": "catalog:",
+    "@snack-uikit/link": "catalog:",
+    "@snack-uikit/loaders": "catalog:",
+    "@snack-uikit/utils": "catalog:",
+    "classnames": "catalog:"
   }
 }

@@ -15,7 +15,7 @@ export type SectionTitleProps = WithLayoutType<{
   /** Подзаголовок секции */
   subtitle?: string;
   /** Ссылка в названии */
-  titleLink?: PickLinkProps<typeof Link, 'href' | 'onClick' | 'target' | 'appearance' | 'textMode'>;
+  titleLink?: PickLinkProps<'a', 'href' | 'onClick' | 'target' | 'appearance' | 'textMode'>;
   /** Описание секции */
   description?: string;
   /** Размер шрифтов заголовка и подзаголовка */
