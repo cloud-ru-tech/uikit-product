@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2026-09-23)
+
+
+### Features
+
+* **RM-4547:** new price summary api ([1a8ac74](https://github.com/cloud-ru-tech/uikit-product/commit/1a8ac74d7bb759f73b9cac483268417fb160d9dc))
+
+
+
+
+
 # 3.0.0 (2026-09-22)
 
 
