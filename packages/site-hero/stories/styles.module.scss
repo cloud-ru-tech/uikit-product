@@ -23,8 +23,17 @@
   padding: 16px;
 }
 
+.stickyDemo {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var.$dimension-2m;
+  box-sizing: border-box;
+  background: var.$sys-neutral-background2-level;
+}
+
 .longContent {
-  margin: 16px;
+  margin-top: 16px;
   padding: 16px;
   border: 1px solid var.$sys-neutral-accent-default;
   height: 2000px;

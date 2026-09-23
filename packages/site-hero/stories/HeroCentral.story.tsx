@@ -1,5 +1,4 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import cn from 'classnames';
 import { ComponentProps, useMemo } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -74,20 +73,19 @@ const Template: StoryFn<StoryProps> = ({ showButtons, showSecondaryButton, showA
   }, [showSecondaryButton]);
 
   return (
-    <div className={cn(styles.body, styles.fullPageHeight)}>
-      <div className={styles.wrapper}>
-        <HeroCentral
-          {...args}
-          breadcrumbs={BREADCRUMBS}
-          buttons={showButtons ? buttons : undefined}
-          anchors={showAnchors ? ANCHORS : undefined}
-          tooltipText={
-            showTooltip
-              ? 'Пример подсказки: По объему выручки AI-сервисов за 2025 год (по данным CNews Analytics), рейтинг игроков PaaS за 2025 год по выручке (по данным iKS-Consulting), рейтинг игроков IaaS по выручке за 2025 год (по данным iKS-Consulting).'
-              : undefined
-          }
-        />
-      </div>
+    <div className={styles.stickyDemo}>
+      <HeroCentral
+        {...args}
+        breadcrumbs={BREADCRUMBS}
+        buttons={showButtons ? buttons : undefined}
+        anchors={showAnchors ? ANCHORS : undefined}
+        tooltipText={
+          showTooltip
+            ? 'Пример подсказки: По объему выручки AI-сервисов за 2025 год (по данным CNews Analytics), рейтинг игроков PaaS за 2025 год по выручке (по данным iKS-Consulting), рейтинг игроков IaaS по выручке за 2025 год (по данным iKS-Consulting).'
+            : undefined
+        }
+      />
+      <div className={styles.longContent}>Какой-то очень длинный контент</div>
     </div>
   );
 };
@@ -137,6 +135,7 @@ export const heroCentral: StoryObj<StoryProps> = {
     tooltipText: { table: { disable: true } },
   },
   parameters: {
+    layout: 'fullscreen',
     readme: {
       sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
     },

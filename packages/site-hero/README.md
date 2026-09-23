@@ -20,6 +20,7 @@ Hero blocks for Site
 | classNameImage | `string` | - | ClassName для фоновой картинки |
 | buttons | `HeroCentralButton[]` | - | Настройки кнопкок |
 | anchors | `AnchorTypeProps[]` | - | Якорное меню |
+| anchorsTopPosition | `number` | - | Отступ плавающего меню от верха viewport |
 | tooltipText | `string` | - | Текст подсказки |
 | tooltipPlacement | enum Placement: `"left"`, `"left-start"`, `"left-end"`, `"right"`, `"right-start"`, `"right-end"`, `"top"`, `"top-start"`, `"top-end"`, `"bottom"`, `"bottom-start"`, `"bottom-end"` | - | Расположение подсказки |
 | backgroundImage | `{ desktop: string; desktopSmall: string; tablet: string; mobile: string; }` | {   desktop: 'https://cdn.cloud.ru/backend/images/solutions/hero_preview_bg_desktop.webp',   desktopSmall: 'https://cdn.cloud.ru/backend/images/solutions/hero_preview_bg_desktop.webp',   tablet: 'https://cdn.cloud.ru/backend/images/solutions/hero_preview_bg_tablet.webp',   mobile: 'https://cdn.cloud.ru/backend/images/solutions/hero_preview_bg_mobile.webp', } | Фоновое изображение |

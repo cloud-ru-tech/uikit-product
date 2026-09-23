@@ -96,7 +96,7 @@
 
   &[data-layout-type='desktop'],
   &[data-layout-type='desktopSmall'] {
-    &.withoutAnchors {
+    &[data-without-anchors] {
       margin-bottom: 56px;
     }
   }
