@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-09-24)
+
+
+### Features
+
+* **SITE-11987:** sticky navbar for herocentral ([b326daa](https://github.com/cloud-ru-tech/uikit-product/commit/b326daa94c1decb390695fad136b110104ae8ac7))
+
+
+
+
+
 # 2.0.0 (2026-09-22)
 
 
