@@ -12,7 +12,7 @@ type UserInfoProps = {
 };
 
 export function UserInfo({ userName, lastName, className }: UserInfoProps) {
-  const fullName = `${lastName} ${userName}`;
+  const fullName = `${userName} ${lastName}`;
 
   return (
     <div className={cn(styles.root, className)}>
