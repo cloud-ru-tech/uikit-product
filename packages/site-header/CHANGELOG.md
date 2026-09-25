@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2026-09-25)
+
+
+### Features
+
+* **SITE-12116:** update Avatar view in site-header ([1022640](https://github.com/cloud-ru-tech/uikit-product/commit/102264064b495b1ae93f2bb5d797322f01fc6e5d))
+
+
+
+
+
 # 3.0.0 (2026-09-22)
 
 
