@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.1 (2026-09-25)
+
+
+### Bug Fixes
+
+* **SITE-12070:** svg namespace ([01be491](https://github.com/cloud-ru-tech/uikit-product/commit/01be4916b42ba8e677e05792fdae4a1f8ee02699))
+
+
+
+
+
 # 2.0.0 (2026-09-22)
 
 

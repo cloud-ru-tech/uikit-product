@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-09-25)
+
+
+### Features
+
+* **SITE-12113:** add new sku for calculator ([a7bf412](https://github.com/cloud-ru-tech/uikit-product/commit/a7bf41270a3b30d6d9063a59b3fe563ddec9bf1e))
+
+
+
+
+
 # 2.0.0 (2026-09-22)
 
 
