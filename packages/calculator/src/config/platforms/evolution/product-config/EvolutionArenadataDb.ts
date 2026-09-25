@@ -8,6 +8,8 @@ const StorageSizeItem = {
   Size5TB: '5',
   Size10TB: '10',
   Size20TB: '20',
+  Size30TB: '30',
+  Size40TB: '40',
   Size50TB: '50',
 };
 
@@ -31,6 +33,14 @@ const storageSizeItems = [
   {
     label: '20 ТБ',
     value: StorageSizeItem.Size20TB,
+  },
+  {
+    label: '30 ТБ',
+    value: StorageSizeItem.Size30TB,
+  },
+  {
+    label: '40 ТБ',
+    value: StorageSizeItem.Size40TB,
   },
   {
     label: '50 ТБ',
