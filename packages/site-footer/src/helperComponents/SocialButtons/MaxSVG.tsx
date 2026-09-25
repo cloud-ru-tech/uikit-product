@@ -4,11 +4,19 @@ type MaxSVGProps = SVGProps<SVGSVGElement> & {
   size?: number;
 };
 
+// TODO: перенести в пакет icons
 export function MaxSVG({ size = 24, ...props }: MaxSVGProps) {
   const style: CSSProperties = { width: size, height: size, ...props.style };
 
   return (
-    <svg xmlns='http://w3.org' viewBox='0 0 24 24' fill='none' data-test-id='icon-max-v3' {...props} style={style}>
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      viewBox='0 0 24 24'
+      fill='none'
+      data-test-id='icon-max-v3'
+      {...props}
+      style={style}
+    >
       <path
         fillRule='evenodd'
         clipRule='evenodd'
