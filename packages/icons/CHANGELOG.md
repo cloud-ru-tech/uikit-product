@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 19.1.0 (2026-09-29)
+
+
+### Features
+
+* **PDS-4563:** add new icons ([2aae605](https://github.com/cloud-ru-tech/uikit-product/commit/2aae6058d554030f1aeafb293db64fdfaeaaeea1))
+
+
+
+
+
 # 19.0.0 (2026-09-22)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-entities-table",
   "title": "Entities Table",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "sideEffects": [
     "*.css",
     "*.woff",

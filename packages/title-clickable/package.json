@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-title-clickable",
   "title": "Title Clickable",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "sideEffects": [
     "*.css",
     "*.woff",
