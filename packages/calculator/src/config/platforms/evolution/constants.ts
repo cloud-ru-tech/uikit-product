@@ -24,6 +24,7 @@ export const EVOLUTION_PRODUCT = {
   EvolutionManagedKafka: 'evolutionManagedKafka',
   EvolutionLoadBalancer: 'evolutionLoadBalancer',
   EvolutionNotebooks: 'evolutionNotebooks',
+  EvolutionWorkflowStudio: 'evolutionWorkflowStudio',
 } as const;
 
 const GuaranteedPartItem = {

@@ -23,3 +23,4 @@ export * from './EvolutionManagedClickHouse';
 export * from './EvolutionManagedSpark';
 export * from './EvolutionManagedKafka';
 export * from './EvolutionManagedAirflow';
+export * from './EvolutionWorkflowStudio';

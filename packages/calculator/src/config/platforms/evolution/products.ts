@@ -7,6 +7,7 @@ import {
   EvoDnsSVG,
   EvolutionBiSVG,
   EvolutionComputeSVG,
+  EvolutionPipelineSVG,
   JupyterServersSVG,
   LoadBalancerSVG,
   ManagedClickHouseSVG,
@@ -52,6 +53,7 @@ import {
   EVOLUTION_SNAT_GATEWAY_FORM_CONFIG,
   EVOLUTION_STORAGE_S3_FORM_CONFIG,
   EVOLUTION_STORAGE_S3_FREE_TIER_FORM_CONFIG,
+  EVOLUTION_WORKFLOW_STUDIO_FORM_CONFIG,
 } from './product-config';
 
 export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
@@ -327,6 +329,17 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     formConfig: EVOLUTION_NOTEBOOKS_CONFIG,
     dataTestId: EVOLUTION_PRODUCT.EvolutionNotebooks,
     enableChangeProductQuantity: true,
+    enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionWorkflowStudio]: {
+    id: EVOLUTION_PRODUCT.EvolutionWorkflowStudio,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution Workflow Studio',
+    caption: 'Платформа для создания инженерных сценариев в облаке',
+    icon: EvolutionPipelineSVG,
+    formConfig: EVOLUTION_WORKFLOW_STUDIO_FORM_CONFIG,
+    dataTestId: EVOLUTION_PRODUCT.EvolutionWorkflowStudio,
+    enableChangeProductQuantity: false,
     enableConnectToConsole: true,
   },
 };

@@ -50,6 +50,12 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       ],
     },
     {
+      id: CATEGORY.Development,
+      label: 'Разработка',
+      dataTestId: 'development',
+      visibleProducts: [EVOLUTION_PRODUCT.EvolutionWorkflowStudio],
+    },
+    {
       id: CATEGORY.Database,
       label: 'Платформы данных',
       dataTestId: 'database',
