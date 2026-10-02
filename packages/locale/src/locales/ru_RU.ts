@@ -406,6 +406,25 @@ export const ru_RU: typeof en_GB = {
     errorButton: 'Обновить',
   },
   SiteHero: { Main: { platforms: 'Платформы' } },
+  SiteMedia: {
+    Video: {
+      player: 'Видеоплеер',
+      embedTitle: 'Видео',
+      play: 'Воспроизвести',
+      pause: 'Пауза',
+      mute: 'Выключить звук',
+      unmute: 'Включить звук',
+      rewind: 'На 10 секунд назад',
+      forward: 'На 10 секунд вперед',
+      restart: 'Перезапустить',
+      seek: 'Перемотка',
+      speed: 'Скорость воспроизведения',
+      enterFullscreen: 'На весь экран',
+      exitFullscreen: 'Выйти из полноэкранного режима',
+      errorTitle: 'Ой, что-то сломалось =(',
+      errorDescription: 'Плеер недоступен, попробуйте зайти позже',
+    },
+  },
   SiteSection: {
     Basic: { showMore: 'Показать еще' },
     PersonalManager: {

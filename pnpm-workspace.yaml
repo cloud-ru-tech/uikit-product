@@ -42,6 +42,7 @@ catalog:
   '@snack-uikit/search': ^1.0.1
   '@snack-uikit/search-private': ^1.0.1
   '@snack-uikit/skeleton': ^1.0.1
+  '@snack-uikit/slider': ^1.0.1
   '@snack-uikit/status': ^1.0.1
   '@snack-uikit/stepper': ^1.0.1
   '@snack-uikit/table': ^1.0.1

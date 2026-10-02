@@ -1,13 +1,13 @@
 import cn from 'classnames';
-import { isValidElement, useCallback, useRef, useState } from 'react';
+import { isValidElement, useMemo } from 'react';
 
-import { PlaySVG } from '@cloud-ru/uikit-product-icons';
 import { extractSupportProps } from '@cloud-ru/uikit-product-utils';
-import { IconPredefined } from '@snack-uikit/icon-predefined';
 
+import { EmbedPlayer } from './helperComponents/EmbedPlayer';
+import { NativePlayer } from './helperComponents/NativePlayer';
 import styles from './styles.module.scss';
 import { SiteVideoProps } from './types';
-import { isVideoPlayerContent, preventDefault } from './utils';
+import { getEmbedSource, isVideoPlayerContent } from './utils';
 
 export function SiteVideo({
   video,
@@ -18,56 +18,43 @@ export function SiteVideo({
   layoutType,
   ...rest
 }: SiteVideoProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isVideoPlayed, setIsVideoPlayed] = useState(false);
+  const playerContent = isVideoPlayerContent(video) ? video : undefined;
+  const src = playerContent?.src;
 
-  const handleVideoPlay = useCallback(() => {
-    setIsVideoPlayed(true);
-    videoRef.current?.play();
-    onPlay?.();
-  }, [onPlay]);
+  const embedSource = useMemo(() => (src ? getEmbedSource(src) : undefined), [src]);
 
-  const isCustomVideoPlayer = isValidElement(video);
+  const renderPlayer = () => {
+    if (!playerContent) {
+      return null;
+    }
+
+    if (embedSource) {
+      return <EmbedPlayer source={embedSource} onFirstPlay={onPlay} data-test-id={`${dataTestId}__embed`} />;
+    }
+
+    const { controls = false, autoPlay = false, muted = false, loop = false } = playerContent;
+
+    return (
+      <NativePlayer
+        key={playerContent.src}
+        src={playerContent.src}
+        poster={playerContent.poster}
+        controls={controls}
+        autoPlay={autoPlay}
+        muted={muted}
+        loop={loop}
+        layoutType={layoutType}
+        onFirstPlay={onPlay}
+        onError={onError}
+        data-test-id={dataTestId}
+      />
+    );
+  };
 
   return (
     <div className={cn(styles.videoWrapper, className)} data-test-id={dataTestId} {...extractSupportProps(rest)}>
-      {isCustomVideoPlayer && video}
-
-      {isVideoPlayerContent(video) && (
-        <>
-          {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-          <video
-            src={video.src}
-            poster={video.poster}
-            ref={videoRef}
-            data-test-id={`${dataTestId}__video`}
-            preload='auto'
-            disablePictureInPicture
-            controlsList='nodownload noplaybackrate'
-            controls={isVideoPlayed && video.controls}
-            autoPlay={video.autoPlay}
-            playsInline
-            onContextMenu={preventDefault}
-            muted={video.muted || video.autoPlay}
-            loop={video.loop}
-            onError={onError}
-          />
-
-          {!isVideoPlayed && video.controls && (
-            // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-            <div className={styles.videoOverlay} onClick={handleVideoPlay}>
-              <IconPredefined
-                size={layoutType === 'mobile' ? 'm' : 'l'}
-                shape='square'
-                appearance='neutral'
-                icon={PlaySVG}
-                className={styles.playButton}
-                data-test-id={`${dataTestId}__play-button`}
-              />
-            </div>
-          )}
-        </>
-      )}
+      {isValidElement(video) && video}
+      {renderPlayer()}
     </div>
   );
 }

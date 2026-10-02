@@ -1,0 +1,149 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/styles-theme-variables' as ste;
+
+.root {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: ste.$dimension-1m;
+
+  padding: 0 ste.$dimension-1m ste.$dimension-1m;
+
+  opacity: 0;
+  background: ste.$sys-neutral-background;
+  transition: opacity 0.15s ease-in-out;
+
+  &::before {
+    pointer-events: none;
+    content: '';
+
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+
+    width: 100%;
+    height: ste.$dimension-10m;
+
+    background: linear-gradient(to bottom, transparent, ste.$sys-neutral-background);
+  }
+
+  &[data-visible='true'] {
+    opacity: 1;
+  }
+
+  &[data-visible='false'] {
+    pointer-events: none;
+  }
+}
+
+.timeline {
+  cursor: pointer;
+  touch-action: none;
+
+  display: flex;
+  align-items: center;
+
+  height: ste.$dimension-2m;
+  margin: 0 (-(ste.$dimension-1m));
+  padding: 0 ste.$dimension-1m;
+}
+
+.track {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: ste.$dimension-050m;
+
+  background-color: ste.$sys-neutral-decor-activated;
+  transition: height 0.1s ease-in-out;
+}
+
+.timeline:hover .track {
+  height: ste.$dimension-1m;
+}
+
+.buffered,
+.viewed {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.buffered {
+  background-color: ste.$sys-neutral-accent-default;
+}
+
+.viewed {
+  left: 0;
+  background-color: ste.$sys-primary-accent-default;
+}
+
+.tip {
+  pointer-events: none;
+
+  position: absolute;
+  bottom: calc(100% + #{ste.$dimension-1m});
+
+  display: flex;
+  flex-direction: column;
+  gap: ste.$dimension-050m;
+  align-items: center;
+}
+
+.tipImage {
+  border-radius: ste.$dimension-1m;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.tipTime {
+  padding: 0 ste.$dimension-050m;
+  color: ste.$sys-neutral-text-main;
+  border-radius: ste.$dimension-050m;
+  background-color: ste.$sys-neutral-background;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.root[data-layout-type='mobile'] .controls {
+  gap: ste.$dimension-1m;
+}
+
+.group {
+  display: flex;
+  gap: ste.$dimension-1m;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.button svg {
+  width: ste.$dimension-3m !important;
+  height: ste.$dimension-3m !important;
+  fill: ste.$sys-neutral-accent-default;
+}
+
+.volume {
+  flex-shrink: 0;
+  width: 128px;
+}
+
+.time {
+  white-space: nowrap;
+  color: ste.$sys-neutral-accent-default;
+}
+
+.currentTime {
+  color: ste.$sys-neutral-text-main;
+}

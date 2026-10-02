@@ -1,0 +1,47 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/styles-theme-variables' as ste;
+
+.root {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: ste.$dimension-2m;
+  align-items: center;
+  justify-content: center;
+
+  padding: ste.$dimension-3m;
+
+  text-align: center;
+
+  background-color: ste.$sys-invert-neutral-background;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    gap: 12px;
+  }
+}
+
+.title {
+  @include ste.composite-var(ste.$sans-headline-l);
+
+  color: ste.$sys-invert-neutral-text-main;
+}
+
+.root[data-layout-type='tablet'] .title {
+  @include ste.composite-var(ste.$sans-headline-m);
+}
+
+.root[data-layout-type='mobile'] .title {
+  @include ste.composite-var(ste.$sans-headline-s);
+}
+
+.description {
+  @include ste.composite-var(ste.$sans-body-l);
+
+  color: ste.$sys-invert-neutral-text-support;
+}
+
+.root[data-layout-type='mobile'] .description {
+  @include ste.composite-var(ste.$sans-body-m);
+}

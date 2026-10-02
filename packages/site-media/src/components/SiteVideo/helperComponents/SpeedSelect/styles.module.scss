@@ -1,0 +1,21 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/styles-theme-variables' as ste;
+
+.root {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  bottom: calc(100% + #{ste.$dimension-1m});
+  right: 0;
+
+  overflow-y: auto;
+
+  border-radius: ste.$dimension-050m;
+  background-color: ste.$sys-neutral-background2-level;
+  box-shadow: ste.$box-shadow-elevation-level3;
+}
+
+.root[data-layout-type='mobile'] .menu {
+  max-height: calc(#{ste.$dimension-5m} * 4);
+}

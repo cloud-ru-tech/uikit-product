@@ -1,10 +1,9 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
-import { useEffect, useMemo } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { isVideoPlayerContent, SiteVideo, SiteVideoProps } from '../src';
+import { SiteVideo, SiteVideoProps, VideoPlayerProps } from '../src';
 
 const meta: Meta = {
   title: 'Site/Media/Video',
@@ -12,79 +11,45 @@ const meta: Meta = {
 };
 export default meta;
 
-type StoryProps = SiteVideoProps & {
-  customVideoPlayer: boolean;
-  showControls: boolean;
+const SOURCES = {
+  mp4: 'https://cdn.cloud.ru/backend/video/evolution-bare-metal/lk.mp4',
+  youtube: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  rutube: 'https://rutube.ru/play/embed/372b4a7349d5fe32dd249b8e901b8eb7/',
 };
 
-const RUTUBE_URL = 'https://rutube.ru';
-const SAMPLE_RUTUBE_VIDEO = `${RUTUBE_URL}/play/embed/372b4a7349d5fe32dd249b8e901b8eb7/`;
+const NATIVE_PLAYER_ARG_TYPE = { if: { arg: 'source', eq: 'mp4' } };
 
-const Template: StoryFn<StoryProps> = ({ video: videoProp, showControls, customVideoPlayer, ...args }) => {
-  const video = useMemo(() => {
-    if (customVideoPlayer) {
-      return (
-        <iframe
-          title={SAMPLE_RUTUBE_VIDEO}
-          src={SAMPLE_RUTUBE_VIDEO}
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          allowFullScreen
-        />
-      );
-    }
+type StoryProps = Omit<SiteVideoProps, 'video'> &
+  Omit<VideoPlayerProps, 'src'> & {
+    source: keyof typeof SOURCES;
+  };
 
-    if (isVideoPlayerContent(videoProp)) {
-      return {
-        ...videoProp,
-        controls: showControls,
-      };
-    }
-
-    return videoProp;
-  }, [customVideoPlayer, showControls, videoProp]);
-
-  useEffect(() => {
-    if (!customVideoPlayer) return;
-
-    const handleEvent = (event: MessageEvent) => {
-      if (event.origin && event.origin === RUTUBE_URL) {
-        const message = JSON.parse(event.data);
-        if (message.type === 'player:changeState' && message.data.state === 'playing') {
-          window.removeEventListener('message', handleEvent);
-        }
-      }
-    };
-
-    window.addEventListener('message', handleEvent);
-  }, [customVideoPlayer]);
-
-  return <SiteVideo {...args} video={video} />;
-};
+const Template: StoryFn<StoryProps> = ({ source, poster, controls, autoPlay, muted, loop, ...args }) => (
+  <SiteVideo {...args} video={{ src: SOURCES[source], poster, controls, autoPlay, muted, loop }} />
+);
 
 export const video: StoryObj<StoryProps> = {
   render: Template,
   args: {
-    customVideoPlayer: false,
-    video: {
-      src: 'https://cdn.cloud.ru/backend/video/evolution-bare-metal/lk.mp4',
-      poster: 'https://cdn.cloud.ru/backend/images/video-player/preview_default.png',
-    },
-    showControls: true,
+    source: 'mp4',
+    poster: 'https://cdn.cloud.ru/backend/images/video-player/preview_default.png',
+    controls: true,
+    autoPlay: false,
+    muted: false,
+    loop: false,
     layoutType: 'desktop',
   },
   argTypes: {
-    customVideoPlayer: {
-      name: '[Story]: Custom video player',
-      type: 'boolean',
+    source: {
+      name: '[Story]: Source',
+      options: Object.keys(SOURCES),
+      control: { type: 'radio' },
     },
-    video: {
-      if: { arg: 'customVideoPlayer', neq: true },
-    },
-    showControls: {
-      name: '[Story]: Show controls',
-      type: 'boolean',
-      if: { arg: 'customVideoPlayer', neq: true },
-    },
+    poster: NATIVE_PLAYER_ARG_TYPE,
+    controls: NATIVE_PLAYER_ARG_TYPE,
+    autoPlay: NATIVE_PLAYER_ARG_TYPE,
+    muted: NATIVE_PLAYER_ARG_TYPE,
+    loop: NATIVE_PLAYER_ARG_TYPE,
   },
   parameters: {
     readme: {

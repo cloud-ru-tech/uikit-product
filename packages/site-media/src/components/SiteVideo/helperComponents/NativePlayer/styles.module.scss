@@ -1,0 +1,57 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/styles-theme-variables' as ste;
+
+.root {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+
+  &:fullscreen {
+    border-radius: 0;
+  }
+}
+
+.mount {
+  position: absolute;
+  inset: 0;
+
+  isolation: isolate;
+
+  background-position: center;
+  background-size: cover;
+}
+
+.surface {
+  cursor: pointer;
+
+  position: absolute;
+  inset: 0;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  &:focus-visible {
+    outline: ste.$border-width-general-s ste.$border-styles-solid ste.$sys-primary-accent-default;
+    outline-offset: calc(#{ste.$border-width-general-s} * -1);
+  }
+}
+
+.overlay {
+  cursor: pointer;
+
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  background-color: ste.$sys-blackout;
+}

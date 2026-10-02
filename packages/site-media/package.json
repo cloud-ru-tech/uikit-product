@@ -38,7 +38,18 @@
   "dependencies": {
     "@cloud-ru/uikit-product-icons": "workspace:^",
     "@cloud-ru/uikit-product-utils": "workspace:^",
+    "@snack-uikit/button": "catalog:",
     "@snack-uikit/icon-predefined": "catalog:",
-    "classnames": "catalog:"
+    "@snack-uikit/list": "catalog:",
+    "@snack-uikit/skeleton": "catalog:",
+    "@snack-uikit/slider": "catalog:",
+    "@snack-uikit/tooltip": "catalog:",
+    "@snack-uikit/typography": "catalog:",
+    "@snack-uikit/utils": "catalog:",
+    "classnames": "catalog:",
+    "video.js": "8.23.3"
+  },
+  "peerDependencies": {
+    "@cloud-ru/uikit-product-locale": "*"
   }
 }

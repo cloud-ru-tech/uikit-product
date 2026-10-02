@@ -1,4 +1,4 @@
-import { ReactEventHandler, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 import { WithLayoutType, WithSupportProps } from '@cloud-ru/uikit-product-utils';
 
@@ -15,7 +15,16 @@ export type SiteVideoProps = WithLayoutType<
   WithSupportProps<{
     video: VideoPlayerProps | ReactNode;
     onPlay?(): void;
-    onError?: ReactEventHandler<HTMLVideoElement>;
+    onError?(): void;
     className?: string;
   }>
 >;
+
+export type SpriteFrame = {
+  start: number;
+  imageUrl: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+};

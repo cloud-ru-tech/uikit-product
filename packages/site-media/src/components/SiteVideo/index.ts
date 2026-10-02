@@ -1,3 +1,3 @@
 export * from './SiteVideo';
-export * from './types';
+export type { SiteVideoProps, VideoPlayerProps } from './types';
 export { isVideoPlayerContent } from './utils';

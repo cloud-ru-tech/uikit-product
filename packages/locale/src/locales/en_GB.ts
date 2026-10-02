@@ -405,6 +405,25 @@ export const en_GB = {
     errorButton: 'Refresh',
   },
   SiteHero: { Main: { platforms: 'Platforms' } },
+  SiteMedia: {
+    Video: {
+      player: 'Video player',
+      embedTitle: 'Video',
+      play: 'Play',
+      pause: 'Pause',
+      mute: 'Mute',
+      unmute: 'Unmute',
+      rewind: 'Back 10 seconds',
+      forward: 'Forward 10 seconds',
+      restart: 'Restart',
+      seek: 'Seek',
+      speed: 'Playback speed',
+      enterFullscreen: 'Full screen',
+      exitFullscreen: 'Exit full screen',
+      errorTitle: 'Oops, something went wrong =(',
+      errorDescription: 'The player is unavailable, please try again later',
+    },
+  },
   SiteSection: {
     Basic: { showMore: 'Show More' },
     PersonalManager: {
