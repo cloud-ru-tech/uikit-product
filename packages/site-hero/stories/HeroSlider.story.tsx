@@ -8,6 +8,7 @@ import componentReadme from '../README.md';
 import { HeroSlider, HeroSliderProps } from '../src';
 import slideImage from './assets/slideImage.webp';
 import slideImageMobile from './assets/slideImageMobile.webp';
+import { LAYOUT_TYPE } from './constants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
@@ -23,6 +24,9 @@ const stubClick = (e: MouseEvent) => {
   window.alert('Clicked!');
 };
 
+const DEMO_VIDEO_SRC = 'https://cdn.cloud.ru/backend/images/test/512x352.mp4';
+const POSTER_VIDEO_SRC = 'https://cdn.cloud.ru/backend/images/test/512x352.webp';
+
 const DEMO_SLIDES: HeroSliderProps['items'] = [
   {
     title: 'AI DevTools Conf',
@@ -35,12 +39,9 @@ const DEMO_SLIDES: HeroSliderProps['items'] = [
       href: '#',
     },
     media: {
-      type: 'image',
-      source: {
-        desktop: slideImage,
-        tablet: slideImage,
-        mobile: slideImageMobile,
-      },
+      type: 'video',
+      videoSrc: DEMO_VIDEO_SRC,
+      poster: POSTER_VIDEO_SRC,
     },
     erid: {
       tip: 'ERID demo content. Connect local Title demo content. Connect local Title demo content. Connect local Title demo ',
@@ -136,7 +137,7 @@ const DEMO_SLIDES: HeroSliderProps['items'] = [
 ];
 
 const DEMO_TABS = [
-  { title: 'AI DevTools Conf' },
+  { title: 'AI DevTools Conf · видео' },
   { title: 'Умное облако с ИИ-помощником' },
   { title: 'Дарим до 20 000 бонусов' },
   { title: 'Реферальная программа' },
@@ -153,6 +154,18 @@ const Template: StoryFn<StoryProps> = ({ ...args }) => (
 
 export const heroSlider: StoryObj<StoryProps> = {
   render: Template,
+  args: {
+    layoutType: LAYOUT_TYPE.Desktop,
+  },
+  argTypes: {
+    layoutType: {
+      name: '[Story]: Layout type',
+      options: Object.values(LAYOUT_TYPE),
+      control: {
+        type: 'radio',
+      },
+    },
+  },
   parameters: {
     readme: {
       sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
