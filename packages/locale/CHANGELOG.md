@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2026-10-08)
+
+
+### Features
+
+* **SITE-12090:** update SiteVideo ([411a710](https://github.com/cloud-ru-tech/uikit-product/commit/411a710a8d37c1da499ea7b561f7a9284e9ebcd1))
+
+
+
+
+
 # 3.1.0 (2026-09-23)
 
 
