@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2026-10-09)
+
+
+### Features
+
+* **SITE-12246:** replace sitevideo to default video ([28b0d32](https://github.com/cloud-ru-tech/uikit-product/commit/28b0d3233408f547188f93d4e8203669f108aa66))
+
+
+
+
+
 ## 2.2.2 (2026-10-09)
 
 **Note:** Version bump only for package @cloud-ru/uikit-product-site-hero
