@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-card-predefined",
   "title": "Card Predefined",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "sideEffects": [
     "*.css",
     "*.woff",

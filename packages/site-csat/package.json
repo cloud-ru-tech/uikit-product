@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-csat",
   "title": "Site Csat",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "sideEffects": [
     "*.css",
     "*.woff",

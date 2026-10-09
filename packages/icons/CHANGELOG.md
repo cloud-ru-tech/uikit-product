@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 19.2.0 (2026-10-09)
+
+
+### Features
+
+* **FF-9256:** add new icons ([48d4dbe](https://github.com/cloud-ru-tech/uikit-product/commit/48d4dbef3edeb927d73a8ab1b64ceff4b5558f24))
+
+
+
+
+
 # 19.1.0 (2026-09-29)
 
 
