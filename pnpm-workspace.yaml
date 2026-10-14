@@ -5,7 +5,7 @@ saveWorkspaceProtocol: rolling
 catalog:
   '@cloud-ru/ft-copy-to-clipboard': ^0.1.0
   '@cloud-ru/ft-formatters': ^1.0.1
-  '@cloud-ru/ft-request-payload-transform': ^0.3.0
+  '@cloud-ru/ft-request-payload-transform': ^0.5.0
   '@snack-uikit/accordion': ^1.0.1
   '@snack-uikit/alert': ^1.0.1
   '@snack-uikit/attachment': ^1.0.1
@@ -73,14 +73,14 @@ catalog:
   'react-dom': 18.2.0
 
 packages:
-  - "packages/*"
+  - 'packages/*'
 onlyBuiltDependencies:
-  - "@cloud-ru/ft-config-husky"
-  - "@parcel/watcher"
-  - "core-js"
-  - "core-js-pure"
-  - "ejs"
-  - "esbuild"
-  - "nx"
+  - '@cloud-ru/ft-config-husky'
+  - '@parcel/watcher'
+  - 'core-js'
+  - 'core-js-pure'
+  - 'ejs'
+  - 'esbuild'
+  - 'nx'
 ignoredBuiltDependencies:
-  - "unrs-resolver"
+  - 'unrs-resolver'

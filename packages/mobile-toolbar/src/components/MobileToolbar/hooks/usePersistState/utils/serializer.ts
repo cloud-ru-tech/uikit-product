@@ -49,5 +49,6 @@ export const formatFilterStateToRequestPayload = <T extends FiltersState>(value?
     filter: mapFilterToPayload(value?.filter),
   });
 
+/** Возвращает сырую строку: URL-кодированием занимается `URLSearchParams.set` в источнике query-параметров */
 export const defaultSerializer = <T extends FiltersState>(value: PersistedFilterState<T>) =>
-  formatFilterStateToRequestPayload(value).toString();
+  formatFilterStateToRequestPayload(value).toString({ encode: false });
