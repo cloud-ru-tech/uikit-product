@@ -34,9 +34,10 @@ type GetDiskProps = {
   > & {
     defaultValue?: DiskSpecification;
   };
+  props?: Pick<Partial<ObjectControl>, 'watchedControls' | 'relateFn'>;
 };
 
-export function getDisk({ space, specification }: GetDiskProps): ObjectControl {
+export function getDisk({ space, specification, props }: GetDiskProps): ObjectControl {
   const {
     accessorKey: spaceKey = 'systemDisk.diskSpace',
     label: spaceLabel = 'Объем диска',
@@ -57,6 +58,7 @@ export function getDisk({ space, specification }: GetDiskProps): ObjectControl {
   return {
     type: 'object',
     ui: [{ controls: ['space', 'specification'] }],
+    ...props,
     controls: {
       space: {
         type: CONTROL.Stepper,

@@ -5,6 +5,7 @@ export const EVOLUTION_PRODUCT = {
   EvolutionStorageS3FreeTier: 'evolutionStorageS3FreeTier',
   EvolutionStorageS3: 'evolutionStorageS3',
   EvolutionManagedPostgreSQL: 'evolutionPostgreSql',
+  EvolutionManagedOpenSearch: 'evolutionManagedOpensearch',
   EvolutionBareMetal: 'evolutionBareMetal',
   EvolutionContainerApps: 'evolutionContainerApps',
   EvolutionContainerAppsFreeTier: 'evolutionContainerAppsFreeTier',

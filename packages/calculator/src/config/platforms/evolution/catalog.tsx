@@ -76,6 +76,7 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
         EVOLUTION_PRODUCT.EvolutionManagedClickHouse,
         EVOLUTION_PRODUCT.EvolutionManagedRedis,
         EVOLUTION_PRODUCT.EvolutionManagedPostgreSQL,
+        EVOLUTION_PRODUCT.EvolutionManagedOpenSearch,
       ],
     },
     {
