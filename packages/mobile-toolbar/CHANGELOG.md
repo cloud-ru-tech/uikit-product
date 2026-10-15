@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0 (2026-10-15)
+
+
+### BREAKING CHANGES
+
+
+* **CORESERV-12174:** remove double url-encoding of mobile toolbar persisted state ([cb69518](https://github.com/cloud-ru-tech/uikit-product/commit/cb69518dbf30bf30c553beec5a350828c8133420))
+
+
+
+
 ## 3.0.2 (2026-10-09)
 
 **Note:** Version bump only for package @cloud-ru/uikit-product-mobile-toolbar

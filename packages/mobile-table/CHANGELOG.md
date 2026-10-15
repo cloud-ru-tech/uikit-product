@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0 (2026-10-15)
+
+
+### BREAKING CHANGES
+
+
+* **CORESERV-12174:** bump snack-uikit table and toolbar to 2.0.0 ([bcb8821](https://github.com/cloud-ru-tech/uikit-product/commit/bcb88214560f893af576d2d82c790dc5d0606a94))
+
+
+
+
 ## 3.0.2 (2026-10-09)
 
 **Note:** Version bump only for package @cloud-ru/uikit-product-mobile-table
