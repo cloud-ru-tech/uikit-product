@@ -11,6 +11,7 @@ import {
 
 import { MobileTable, MobileTableProps } from '../MobileTable';
 
+/** На десктопе рендерит Table из @snack-uikit/table: значение savedState.filterQueryKey записывается в URL с однократным кодированием */
 export type AdaptiveTableProps<TData extends object, TFilters extends FiltersState> = TableProps<TData, TFilters> &
   MobileTableProps<TData, TFilters>;
 

@@ -45,12 +45,12 @@ catalog:
   '@snack-uikit/slider': ^1.0.1
   '@snack-uikit/status': ^1.0.1
   '@snack-uikit/stepper': ^1.0.1
-  '@snack-uikit/table': ^1.0.1
+  '@snack-uikit/table': ^2.0.0
   '@snack-uikit/tabs': ^1.0.1
   '@snack-uikit/tag': ^1.0.1
   '@snack-uikit/toaster': ^1.0.1
   '@snack-uikit/toggles': ^1.0.1
-  '@snack-uikit/toolbar': ^1.0.1
+  '@snack-uikit/toolbar': ^2.0.0
   '@snack-uikit/tooltip': ^1.0.1
   '@snack-uikit/tree': ^1.0.1
   '@snack-uikit/truncate-string': ^1.0.1
