@@ -1,23 +1,20 @@
-import { useCalculatorContext } from '../contexts';
-import { FormValues } from '../types';
+import { ProductsState, useCalculatorContext } from '../contexts';
 import { filterNonEmptyArrays } from '../utils/filterNonEmptyArrays';
 
-const deleteItem = (productId: string, idx: number) => (oldValue: FormValues) => {
-  const oldArrayValue = oldValue[productId ?? 0];
+const deleteItem =
+  (productId: string, idx: number) =>
+  (oldValue: ProductsState): ProductsState => {
+    const oldArrayValue = oldValue[productId];
 
-  if (!oldArrayValue) {
-    return oldValue;
-  }
+    if (!oldArrayValue) {
+      return oldValue;
+    }
 
-  oldArrayValue.splice(idx ?? 0, 1);
-
-  const newValue = {
-    ...oldValue,
-    [productId]: oldArrayValue,
+    return filterNonEmptyArrays({
+      ...oldValue,
+      [productId]: oldArrayValue.filter((_, itemIdx) => itemIdx !== idx),
+    });
   };
-
-  return { ...filterNonEmptyArrays(newValue) };
-};
 
 export function useProductDelete() {
   const {
@@ -29,18 +26,25 @@ export function useProductDelete() {
   } = useCalculatorContext();
 
   return (productId: string, idx: number) => {
+    const nextProducts = deleteItem(productId, idx)(products);
+
     setProducts(deleteItem(productId, idx));
 
     onProductDelete?.(productId);
 
-    if (selectedProduct?.id === productId && selectedProduct?.idx === idx) {
-      const newProductId = Object.keys(products).find(productId => products[productId].length > 0);
+    if (selectedProduct?.id !== productId) {
+      return;
+    }
 
-      if (newProductId) {
-        setSelectedProduct({ id: newProductId, idx: 0 });
-      } else {
-        setSelectedProduct(null);
-      }
+    if (selectedProduct.idx > idx) {
+      setSelectedProduct({ id: productId, idx: selectedProduct.idx - 1 });
+      return;
+    }
+
+    if (selectedProduct.idx === idx) {
+      const newProductId = Object.keys(nextProducts).find(id => nextProducts[id].length > 0);
+
+      setSelectedProduct(newProductId ? { id: newProductId, idx: 0 } : null);
     }
   };
 }
