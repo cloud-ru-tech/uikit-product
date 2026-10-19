@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2026-10-19)
+
+
+### Features
+
+* **SITE-12146:** add EvolutionWorkflowStudio product to calculator ([73f4987](https://github.com/cloud-ru-tech/uikit-product/commit/73f4987e88f056e37cd27d0e672b9a9ebb4f28d8))
+
+
+
+
+
 ## 2.1.2 (2026-10-09)
 
 **Note:** Version bump only for package @cloud-ru/uikit-product-calculator
