@@ -31,7 +31,6 @@ export function QuotaWidget({
   projectName,
   quotasUrl,
   canEditQuota,
-  hideIncreaseQuotaButton,
   onIncreaseQuotaClick,
   onWidgetOpen,
   onQuotasUrlClick,
@@ -64,7 +63,6 @@ export function QuotaWidget({
             canEditQuota={canEditQuota}
             isError={isError}
             onIncreaseQuotaClick={onIncreaseQuotaClick}
-            hideIncreaseQuotaButton={hideIncreaseQuotaButton}
             onQuotasUrlClick={onQuotasUrlClick}
           />
 

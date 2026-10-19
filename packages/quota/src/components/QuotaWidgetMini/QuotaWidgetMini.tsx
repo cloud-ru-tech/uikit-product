@@ -28,7 +28,6 @@ export function QuotaWidgetMini({
   projectName,
   canEditQuota,
   isExpandedDefault,
-  hideIncreaseQuotaButton,
   onIncreaseQuotaClick,
   onWidgetOpen,
   ...props
@@ -77,7 +76,7 @@ export function QuotaWidgetMini({
           onRefresh={onRefresh}
         />
 
-        {!isError && canEditQuota && !hideIncreaseQuotaButton && (
+        {!isError && canEditQuota && (
           <ButtonOutline
             className={styles.button}
             fullWidth

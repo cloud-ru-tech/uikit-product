@@ -50,7 +50,6 @@ export const quotaWidgetMini: StoryObj<QuotaWidgetMiniProps> = {
     projectName: 'my-project',
     canEditQuota: true,
     isExpandedDefault: true,
-    hideIncreaseQuotaButton: false,
   },
 
   parameters: {

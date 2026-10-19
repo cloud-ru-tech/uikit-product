@@ -64,7 +64,6 @@ export const quotaWidgetMobile: StoryObj<StoryProps> = {
     isError: false,
     projectName: 'my-project',
     canEditQuota: true,
-    hideIncreaseQuotaButton: false,
   },
 
   parameters: {

@@ -55,7 +55,6 @@ export const quotaWidget: StoryObj<QuotaWidgetProps> = {
     projectName: 'my-project',
     quotasUrl: '#',
     canEditQuota: true,
-    hideIncreaseQuotaButton: false,
   },
 
   parameters: {

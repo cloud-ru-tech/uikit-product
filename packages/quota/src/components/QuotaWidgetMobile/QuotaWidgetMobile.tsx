@@ -25,7 +25,6 @@ export function QuotaWidgetMobile({
   isOpen,
   onClose,
   onIncreaseQuotaClick,
-  hideIncreaseQuotaButton,
   ...props
 }: QuotaWidgetMobileProps) {
   const { t } = useLocale('Quota');
@@ -40,7 +39,7 @@ export function QuotaWidgetMobile({
       title={t('widgetTitle.withoutProject')}
       subtitle={projectName}
       cancelButton={
-        isError || !canEditQuota || hideIncreaseQuotaButton
+        isError || !canEditQuota
           ? undefined
           : {
               appearance: 'neutral',
