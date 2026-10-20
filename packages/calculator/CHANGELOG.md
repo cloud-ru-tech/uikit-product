@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2026-10-20)
+
+
+### Features
+
+* **SITE-12293:** update calculator menu ([ea3b498](https://github.com/cloud-ru-tech/uikit-product/commit/ea3b49829332998065599ea4e712ffca5bf6a51c))
+
+
+
+
+
 # 2.2.0 (2026-10-19)
 
 
