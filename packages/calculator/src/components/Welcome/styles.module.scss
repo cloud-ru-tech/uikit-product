@@ -4,6 +4,8 @@
   display: flex;
   gap: 2px;
 
+  color: stv.$sys-neutral-text-main;
+
   &[data-desktop-small] {
     flex-direction: column;
   }
