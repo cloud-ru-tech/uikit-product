@@ -2,6 +2,12 @@
 
 $decor-padding: 8px;
 
+.iconNode {
+  display: flex;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
 .icon {
   flex-shrink: 0;
   color: ste.$sys-graphite-text-main;

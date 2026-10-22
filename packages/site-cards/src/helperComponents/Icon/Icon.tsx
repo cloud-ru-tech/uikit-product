@@ -27,5 +27,9 @@ export function Icon({ icon: Icon, size = 'm', 'data-test-id': dataTestId, decor
     );
   }
 
-  return Icon as ReactNode;
+  return (
+    <div className={styles.iconNode} data-test-id={dataTestId}>
+      {Icon as ReactNode}
+    </div>
+  );
 }
