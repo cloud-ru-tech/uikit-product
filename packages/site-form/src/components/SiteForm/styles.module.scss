@@ -1,0 +1,21 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/styles-theme-variables' as ste;
+
+.form {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 680px;
+
+  &[data-layout-type='mobile'] {
+    max-width: 100%;
+  }
+}
+
+.header {
+  box-sizing: border-box;
+  margin-bottom: ste.$dimension-3m;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: ste.$sys-neutral-text-main;
+}

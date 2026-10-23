@@ -1,0 +1,23 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.root {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: ste.$dimension-2m;
+  margin-bottom: ste.$dimension-3m;
+
+  a {
+    color: ste.$sys-neutral-accent-default;
+
+    &:hover {
+      color: ste.$sys-neutral-text-main;
+    }
+
+    &:focus-visible {
+      @include ste.outline-var(ste.$container-focused-s);
+
+      color: ste.$sys-neutral-text-main;
+      outline-color: ste.$sys-available-complementary;
+    }
+  }
+}

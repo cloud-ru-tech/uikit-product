@@ -1,0 +1,20 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.fieldWrapper {
+  display: flex;
+
+  gap: ste.$dimension-2m;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+
+  gap: ste.$dimension-1m;
+}
+
+.text {
+  @include ste.composite-var(ste.$sans-body-l);
+
+  color: ste.$sys-neutral-text-main;
+}

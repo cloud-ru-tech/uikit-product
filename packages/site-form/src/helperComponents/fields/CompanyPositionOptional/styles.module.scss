@@ -1,0 +1,13 @@
+.double {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.checkbox {
+  margin-bottom: 16px;
+}
+
+.field {
+  grid-column: span 1;
+}

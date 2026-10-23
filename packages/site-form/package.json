@@ -1,0 +1,55 @@
+{
+  "name": "@cloud-ru/uikit-product-site-form",
+  "title": "Site Form",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "Site form built from a registry of predefined fields",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md",
+    "./LICENSE"
+  ],
+  "homepage": "https://github.com/cloud-ru-tech/uikit-product/tree/master/packages/site-form",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloud-ru-tech/uikit-product.git",
+    "directory": "packages/site-form"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "daparfirov <daparfirov@cloud.ru>",
+  "contributors": [
+    "daparfirov <daparfirov@cloud.ru>"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {},
+  "dependencies": {
+    "@cloud-ru/uikit-product-mobile-fields": "workspace:^",
+    "@cloud-ru/uikit-product-utils": "workspace:*",
+    "@snack-uikit/button": "catalog:",
+    "@snack-uikit/fields": "catalog:",
+    "@snack-uikit/list": "catalog:",
+    "@snack-uikit/toggles": "catalog:",
+    "@snack-uikit/typography": "catalog:",
+    "@snack-uikit/utils": "catalog:",
+    "classnames": "catalog:"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "@cloud-ru/figma-tokens-web": "*",
+    "@cloud-ru/uikit-product-locale": "*",
+    "react-hook-form": ">=7.51.0"
+  }
+}

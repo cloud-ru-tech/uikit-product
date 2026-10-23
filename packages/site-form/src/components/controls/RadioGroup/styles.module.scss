@@ -1,0 +1,41 @@
+@use '@cloud-ru/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.label {
+  cursor: pointer;
+
+  position: relative;
+
+  display: flex;
+  gap: ste.$dimension-1m;
+  align-items: flex-start;
+
+  width: fit-content;
+
+  outline-offset: 1px;
+}
+
+.text {
+  @include ste.composite-var(ste.$sans-body-l);
+
+  color: ste.$sys-neutral-text-main;
+
+  a {
+    color: ste.$sys-neutral-accent-default;
+
+    &:hover {
+      color: ste.$sys-neutral-text-main;
+      text-decoration: none;
+    }
+  }
+}
+
+.toggleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: start;
+}
+
+.decorator {
+  margin-bottom: 16px;
+}

@@ -5,7 +5,7 @@ import { FilterSVG } from '@cloud-ru/uikit-product-icons';
 import { MobileDroplist } from '@cloud-ru/uikit-product-mobile-dropdown';
 import { AdaptiveFieldSelect } from '@cloud-ru/uikit-product-mobile-fields';
 import { MobileModalCustom } from '@cloud-ru/uikit-product-mobile-modal';
-import { LAYOUT_TYPE, LayoutType } from '@cloud-ru/uikit-product-utils';
+import { LAYOUT_TYPE } from '@cloud-ru/uikit-product-utils';
 import { ButtonFilled } from '@snack-uikit/button';
 import { Card } from '@snack-uikit/card';
 import { Divider } from '@snack-uikit/divider';
@@ -16,7 +16,7 @@ import { Tooltip } from '@snack-uikit/tooltip';
 
 import { useCalculatorContext } from '../../contexts';
 import { useCatalogCardClick, useCatalogLockBodyScroll } from '../../hooks';
-import { CatalogConfig, PlatformType } from '../../types';
+import { PlatformType } from '../../types';
 import { parseKeyToDataTest } from '../../utils';
 import { PrivateCardHeader } from './components';
 import styles from './styles.module.scss';
@@ -25,14 +25,6 @@ const bannerText = {
   public: 'Доступна всем',
   request: 'Для всех, по заявке',
   legal: 'Только для юрлиц',
-};
-
-export type CatalogProps = {
-  layoutType?: LayoutType;
-  config: CatalogConfig;
-  open: boolean;
-  setOpen(open: boolean): void;
-  onCardClick?(productId: string): void;
 };
 
 export function Catalog() {

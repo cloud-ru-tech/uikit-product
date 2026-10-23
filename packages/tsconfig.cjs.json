@@ -170,6 +170,9 @@
       "path": "./site-footer/tsconfig.cjs.json"
     },
     {
+      "path": "./site-form/tsconfig.cjs.json"
+    },
+    {
       "path": "./site-grid/tsconfig.cjs.json"
     },
     {

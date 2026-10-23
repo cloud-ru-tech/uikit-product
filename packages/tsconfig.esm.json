@@ -170,6 +170,9 @@
       "path": "./site-footer/tsconfig.esm.json"
     },
     {
+      "path": "./site-form/tsconfig.esm.json"
+    },
+    {
       "path": "./site-grid/tsconfig.esm.json"
     },
     {
