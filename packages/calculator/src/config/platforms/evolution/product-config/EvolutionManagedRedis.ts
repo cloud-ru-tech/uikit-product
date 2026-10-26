@@ -1,23 +1,34 @@
 import { CONTROL, FormConfig } from '../../../../components';
-import { generateCpuItems, generateInstanceConfigItems, getDisk } from '../../../utils';
+import { generateCpuItems, generateRamItems, getDisk } from '../../../utils';
 import { DeploymentMode, deploymentModes } from '../constants';
 
-const nodeConfigItems = generateInstanceConfigItems([
-  [2, 4],
-  [4, 16],
-  [8, 32],
-]);
+const CPU = [2, 4, 8, 16];
+const RAM = [4, 8, 16, 32, 64, 128];
+
+const DISK_CAPACITY_MIN = 10;
+const DISK_CAPACITY_MAX = 16384;
+
+const cpuToRamMap: Record<string, number[]> = {
+  '2': [4, 8, 16],
+  '4': [16, 32, 64],
+  '8': [32, 64, 128],
+  '16': [64, 128],
+};
+
+const ramToMinDisk: Record<string, number> = {
+  '4': DISK_CAPACITY_MIN,
+  '8': 40,
+  '16': 40,
+  '32': 64,
+  '64': 128,
+  '128': 256,
+};
 
 const valueMasterReplica = 'Master/Replica';
 const valueStandalone = 'Standalone';
 
 const hostsByStandalone = [1];
 const hostsByMasterReplica = [3];
-
-const shardQuantityItemsByInstantType: { [key: string]: number[] } = {
-  [valueStandalone]: [1],
-  [valueMasterReplica]: [1],
-};
 
 const hostsByInstantType: { [key: string]: number[] } = {
   [valueStandalone]: hostsByStandalone,
@@ -28,7 +39,7 @@ const instanceTypePartCards = [
   {
     value: valueStandalone,
     label: valueStandalone,
-    description: 'Одноузловая конфигурация',
+    description: 'Конфигурация с одним хостом',
   },
   {
     value: valueMasterReplica,
@@ -37,8 +48,15 @@ const instanceTypePartCards = [
   },
 ];
 
+const getMinMaxDiskSize = ({ ramAmount }: { ramAmount: string }) => ({
+  uiProps: {
+    min: ramToMinDisk[ramAmount] || DISK_CAPACITY_MIN,
+    max: DISK_CAPACITY_MAX,
+  },
+});
+
 export const EVOLUTION_MANAGED_REDIS_CONFIG: FormConfig = {
-  ui: ['deploymentMode', 'instanceType', 'masterNodeConfig', ['hostsQuantity', 'shardQuantity'], ['systemDisk']],
+  ui: ['deploymentMode', 'instanceType', ['vCpuCoreCount', 'ramAmount'], 'hostQuantity', ['systemDisk']],
   controls: {
     deploymentMode: {
       type: CONTROL.Carousel,
@@ -65,47 +83,48 @@ export const EVOLUTION_MANAGED_REDIS_CONFIG: FormConfig = {
         if (value === valueStandalone) {
           setValue([
             ['instanceType', value],
-            ['hostsQuantity', hostsByStandalone[0].toString()],
+            ['hostQuantity', hostsByStandalone[0].toString()],
           ]);
         } else {
           setValue([
             ['instanceType', value],
-            ['hostsQuantity', hostsByMasterReplica[0].toString()],
+            ['hostQuantity', hostsByMasterReplica[0].toString()],
           ]);
         }
       },
     },
-    masterNodeConfig: {
-      type: CONTROL.SelectSingle,
-      accessorKey: 'masterNode.nodeConfig',
-      items: nodeConfigItems,
-      decoratorProps: {
-        label: 'Конфигурация',
-      },
-      defaultValue: '2 4',
-    },
-    shardQuantity: {
+    vCpuCoreCount: {
       type: CONTROL.Segmented,
-      accessorKey: 'shardQuantity',
-      defaultValue: '1',
+      accessorKey: 'vCpuCoreCount',
+      defaultValue: '2',
+      items: generateCpuItems(CPU),
       decoratorProps: {
-        label: 'Количество шардов',
+        label: 'Количество ядер vCPU',
       },
-      items: generateCpuItems([1]),
-      watchedControls: { instanceType: 'instanceType' },
-      relateFn: ({ instanceType }) => {
-        const items = shardQuantityItemsByInstantType[instanceType];
+    },
 
-        if (items?.length > 0) {
+    ramAmount: {
+      type: CONTROL.Segmented,
+      accessorKey: 'ramAmount',
+      watchedControls: { vCpuCoreCount: 'vCpuCoreCount' },
+      defaultValue: '4',
+      items: generateRamItems(RAM),
+      decoratorProps: {
+        label: 'Количество оперативной памяти (RAM)',
+      },
+      relateFn: ({ vCpuCoreCount }: { vCpuCoreCount: string }) => {
+        const itemsByCpu = cpuToRamMap[vCpuCoreCount];
+
+        if (itemsByCpu?.length > 0) {
           return {
-            items: generateCpuItems(items),
+            items: generateRamItems(itemsByCpu),
           };
         }
       },
     },
-    hostsQuantity: {
+    hostQuantity: {
       type: CONTROL.Segmented,
-      accessorKey: 'hostsQuantity',
+      accessorKey: 'hostQuantity',
       defaultValue: '1',
       decoratorProps: {
         label: 'Количество хостов',
@@ -126,14 +145,16 @@ export const EVOLUTION_MANAGED_REDIS_CONFIG: FormConfig = {
       space: {
         label: 'Диск',
         accessorKey: 'diskCapacity',
-        defaultValue: 40,
+        defaultValue: DISK_CAPACITY_MIN,
         uiProps: {
-          min: 40,
-          max: 16_384,
+          min: DISK_CAPACITY_MIN,
+          max: DISK_CAPACITY_MAX,
         },
+        watchedControls: { ramAmount: 'ramAmount' },
+        relateFn: getMinMaxDiskSize,
       },
       specification: {
-        accessorKey: 'specification',
+        accessorKey: 'diskType',
         defaultValue: 'SSD',
         uiProps: {
           disabled: true,
