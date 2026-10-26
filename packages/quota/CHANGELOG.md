@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0 (2026-10-26)
+
+
+### BREAKING CHANGES
+
+
+* **LK-8763:** removed hideIncreaseQuotaButton prop ([ad126e0](https://github.com/cloud-ru-tech/uikit-product/commit/ad126e0c8c6c23e4c9f5619c39c1d4ab8c235bdb))
+
+
+
+
 ## 3.0.2 (2026-10-09)
 
 **Note:** Version bump only for package @cloud-ru/uikit-product-quota
