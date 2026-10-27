@@ -108,7 +108,7 @@ export function TotalValueBlock({
 }: TotalValueBlockProps) {
   const { t } = useLocale('PriceSummary');
   const displayedAppearance = hintAppearance ?? APPEARANCE_STATE.Default;
-  const displayedHint = hint ?? t('preliminaryHint');
+  const displayedHint = hint || t('preliminaryHint');
   const totalValue = formatTotalValue(value, totalSumType, t('totalSumFromPrefix'), t('totalSumToPrefix'));
 
   return (
