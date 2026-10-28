@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-10-28)
+
+
+### Features
+
+* **SITE-12267:** section benefits icon ([e997708](https://github.com/cloud-ru-tech/uikit-product/commit/e9977084768c9777cf6bddef910f01da63816bc6))
+
+
+
+
+
 ## 2.0.2 (2026-10-09)
 
 **Note:** Version bump only for package @cloud-ru/uikit-product-site-cards
