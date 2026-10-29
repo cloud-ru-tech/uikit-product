@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.5.0 (2026-10-29)
+
+
+### Features
+
+* **EVODBAAS-8815:** resolve fields and new flavors for calculator Redis ([4e87c2d](https://github.com/cloud-ru-tech/uikit-product/commit/4e87c2d9ccd79bb7664798ac965c8b73c9709fda))
+
+
+
+
+
 # 2.4.0 (2026-10-28)
 
 
