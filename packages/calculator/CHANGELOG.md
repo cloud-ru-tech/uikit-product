@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.6.0 (2026-10-29)
+
+
+### Features
+
+* **SITE-11900:** add calculator for OpenSearch ([045def9](https://github.com/cloud-ru-tech/uikit-product/commit/045def932f404e45eb4a0aeefa9bca1d52db3cb8))
+
+
+
+
+
 # 2.5.0 (2026-10-29)
 
 
