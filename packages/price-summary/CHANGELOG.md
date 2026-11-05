@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.1.3 (2026-11-05)
+
+
+### Bug Fixes
+
+* **RM-4547:** price summary price hint fix ([4ac680d](https://github.com/cloud-ru-tech/uikit-product/commit/4ac680d1c1cb41f7fb6ab47419e9d2c2e0438dc3))
+
+
+
+
+
 ## 3.1.2 (2026-10-09)
 
 **Note:** Version bump only for package @cloud-ru/uikit-product-price-summary
