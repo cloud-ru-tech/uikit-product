@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-form",
   "title": "Site Form",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -46,7 +46,6 @@
     "@snack-uikit/utils": "catalog:",
     "classnames": "catalog:"
   },
-  "devDependencies": {},
   "peerDependencies": {
     "@cloud-ru/figma-tokens-web": "*",
     "@cloud-ru/uikit-product-locale": "*",
