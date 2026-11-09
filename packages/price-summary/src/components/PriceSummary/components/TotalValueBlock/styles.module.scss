@@ -29,6 +29,10 @@
 .hint {
   display: flex;
   align-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: start;
   gap: styles-theme-variables.$dimension-025m;
   color: styles-theme-variables.$sys-neutral-text-light;
 
@@ -67,7 +71,7 @@
 }
 
 .link {
-  margin-left: 18px;
+  align-self: flex-start;
 }
 
 .valueDelta {

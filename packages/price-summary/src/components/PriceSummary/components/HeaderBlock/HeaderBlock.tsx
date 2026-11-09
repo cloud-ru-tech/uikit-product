@@ -1,34 +1,43 @@
 import { useLocale } from '@cloud-ru/uikit-product-locale';
-import { PromoTag, PromoTagProps } from '@snack-uikit/promo-tag';
+import { QuestionTooltipProps } from '@cloud-ru/uikit-product-mobile-tooltip';
 import { Typography } from '@snack-uikit/typography';
 
-import { PeriodDropdown, PeriodDropdownProps } from '../PeriodDropdown';
+import { PeriodControl, PeriodControlProps } from '../PeriodControl';
+import { SummaryTags, SummaryTagsProps } from '../SummaryTags';
+import { SummaryTooltip } from '../SummaryTooltip';
 import styles from './styles.module.scss';
 
-export type HeaderBlockProps = PeriodDropdownProps & {
-  promoBadge?: Pick<PromoTagProps, 'text' | 'appearance'> | string;
-};
+export type HeaderBlockProps = PeriodControlProps &
+  SummaryTagsProps & {
+    titleTooltip?: QuestionTooltipProps['tip'];
+  };
 
-export function HeaderBlock({ period, onPeriodChanged, periodOptions, promoBadge, layoutType }: HeaderBlockProps) {
+export function HeaderBlock({
+  period,
+  onPeriodChanged,
+  periodOptions,
+  layoutType,
+  titleTooltip,
+  ...tags
+}: HeaderBlockProps) {
   const { t } = useLocale('PriceSummary');
 
   return (
     <>
-      {promoBadge && (
-        <div className={styles.promoBadge}>
-          <PromoTag {...(typeof promoBadge === 'string' ? { text: promoBadge } : promoBadge)} />
-        </div>
-      )}
-
+      <SummaryTags {...tags} layoutType={layoutType} />
       <div className={styles.headline}>
-        <PeriodDropdown
-          period={period}
-          onPeriodChanged={onPeriodChanged}
-          periodOptions={periodOptions}
-          layoutType={layoutType}
-        />
-
-        <Typography.SansBodyM className={styles.vat}>{t('vat')}</Typography.SansBodyM>
+        <div className={styles.titleStack}>
+          <div className={styles.title}>
+            <Typography.SansBodyM>{t('costEstimate')}</Typography.SansBodyM>
+            <SummaryTooltip
+              tip={titleTooltip ?? t('costEstimateTooltip')}
+              label={t('costEstimate')}
+              layoutType={layoutType}
+            />
+          </div>
+          <Typography.SansBodyS className={styles.vat}>{t('vat')}</Typography.SansBodyS>
+        </div>
+        <PeriodControl period={period} onPeriodChanged={onPeriodChanged} periodOptions={periodOptions} />
       </div>
     </>
   );

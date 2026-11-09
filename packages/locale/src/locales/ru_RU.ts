@@ -343,10 +343,28 @@ export const ru_RU: typeof en_GB = {
     },
   },
   PriceSummary: {
+    costEstimate: 'Расчёт стоимости',
+    costEstimateTooltip:
+      'Предварительный расчёт. Фактическая стоимость зависит от потребления. Деньги списываются по условиям тарифа сервиса.',
+    costDetails: 'Расшифровка стоимости',
+    timePayment: 'Оплата за время',
+    timePaymentTooltip: 'Стоимость ресурсов за выбранный период. Эти позиции включены в расчёт стоимости.',
+    usagePayment: 'Оплата за объём',
+    usagePaymentTooltip:
+      'Цены указаны за единицу потребления. Оплата зависит от фактического объёма и не включена в расчёт стоимости.',
+    excludingUsage: 'Без учёта оплаты за объём',
+    priceChangeTooltip: 'Изменение стоимости относительно конфигурации по умолчанию.',
+    defaultConfiguration: 'Конфигурация по умолчанию',
+    periodLabel: 'Период расчёта',
+    periodMinute: 'Минута',
+    periodHour: 'Час',
+    periodDay: 'День',
+    periodMonth: 'Месяц',
+    periodYear: 'Год',
     total: 'Итого',
     totalSumFromPrefix: 'от',
     totalSumToPrefix: 'до',
-    vat: 'с учетом НДС',
+    vat: 'с учётом НДС',
     pricePeriodYear: 'в год',
     pricePeriodMonth: 'в месяц',
     pricePeriodDay: 'в день',
@@ -368,17 +386,19 @@ export const ru_RU: typeof en_GB = {
       'В заказе есть сервисы, которые нельзя оплатить грантом. Оплата за эти сервисы будет списываться в рублях.',
     increasedPrice: 'увеличилась на',
     decreasedPrice: 'снизилась на',
-    priceChange: 'Изменение',
+    priceChange: 'Изменение стоимости',
     preliminaryHint: 'Предварительный расчёт. Фактическая стоимость зависит от потребления',
   },
   PromoTagPredefined: {
     connecting: 'Подключается',
     partner: 'Partner',
+    freeTier: 'Free tier',
     preview: 'Preview',
     tooltipConnecting:
       'Сервис подключается и скоро будет доступен. Если это происходит слишком долго, обратитесь в поддержку.',
     tooltipPartner:
       'Сервис вендора-партнера. Для него действуют уникальные условия тарификации, партнер определяет SLA сервиса и поддержки.',
+    tooltipFreeTier: 'Бесплатный тариф с фиксированными объемами ресурсов.',
     tooltipPreviewService:
       'Сервис находится в стадии Preview. Для него недоступно увеличение квоты и не действуют условия тарификации, SLA сервиса и поддержки.',
     tooltipPreviewFunctional:

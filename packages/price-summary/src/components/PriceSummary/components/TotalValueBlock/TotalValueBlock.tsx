@@ -22,6 +22,7 @@ export const APPEARANCE_STATE = {
 export type AppearanceState = ValueOf<typeof APPEARANCE_STATE>;
 
 export type TotalValueBlockProps = {
+  scalingHint?: string;
   value?: number | TotalValueRange;
   valueDelta?: PriceDeltaDetails;
   totalSumType?: TotalSumType;
@@ -96,6 +97,7 @@ function formatTotalValue(
 }
 
 export function TotalValueBlock({
+  scalingHint,
   value,
   totalSumType = 'equal',
   hint,
@@ -108,8 +110,14 @@ export function TotalValueBlock({
 }: TotalValueBlockProps) {
   const { t } = useLocale('PriceSummary');
   const displayedAppearance = hintAppearance ?? APPEARANCE_STATE.Default;
-  const displayedHint = hint || t('preliminaryHint');
   const totalValue = formatTotalValue(value, totalSumType, t('totalSumFromPrefix'), t('totalSumToPrefix'));
+  const hasHintTooltip = Boolean(showHintTooltip && hintTooltipText);
+  const hintContent = (
+    <>
+      {displayedAppearance !== APPEARANCE_STATE.Default && getAppearanceIcon(displayedAppearance)}
+      <Typography.SansBodyS>{hint}</Typography.SansBodyS>
+    </>
+  );
 
   return (
     <div className={styles.content} data-appearance={displayedAppearance}>
@@ -117,24 +125,24 @@ export function TotalValueBlock({
         {totalValue}
       </Typography.LightHeadlineS>
 
-      {valueDelta && (
+      {(scalingHint || valueDelta) && (
         <Typography.SansBodyS className={styles.valueDelta}>
-          {`${t(`${valueDelta.type}Price`)} ${formatCurrency(valueDelta.value)}`}
+          {scalingHint ?? (valueDelta && `${t(`${valueDelta.type}Price`)} ${formatCurrency(valueDelta.value)}`)}
         </Typography.SansBodyS>
       )}
 
-      <Tooltip
-        open={showHintTooltip && hintTooltipText ? undefined : false}
-        tip={hintTooltipText}
-        placement='left-start'
-      >
-        {displayedHint && (
+      {hint &&
+        (hasHintTooltip ? (
+          <Tooltip tip={hintTooltipText} placement='left-start' trigger='hoverAndFocus'>
+            <button type='button' className={styles.hint} data-appearance={displayedAppearance}>
+              {hintContent}
+            </button>
+          </Tooltip>
+        ) : (
           <div className={styles.hint} data-appearance={displayedAppearance}>
-            {getAppearanceIcon(displayedAppearance)}
-            <Typography.SansBodyS>{displayedHint}</Typography.SansBodyS>
+            {hintContent}
           </div>
-        )}
-      </Tooltip>
+        ))}
       {showHintLink && (
         <Link
           textMode='accent'

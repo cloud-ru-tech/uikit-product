@@ -1,17 +1,21 @@
 @use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
+.discounts {
+  display: flex;
+  flex-direction: column;
+}
+
 .discountGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: styles-theme-variables.$dimension-1m;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: styles-theme-variables.$dimension-1m;
   color: styles-theme-variables.$sys-neutral-text-support;
 }
 
-.priceCell {
-  justify-self: end;
-}
-
 .discountCell {
-  justify-self: end;
+  flex-shrink: 0;
+  text-align: end;
+  white-space: nowrap;
   color: styles-theme-variables.$sys-red-text-support;
 }

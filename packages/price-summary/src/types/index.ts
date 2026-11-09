@@ -18,11 +18,14 @@ export type TotalValueRange = {
 export type DiscountItem = {
   value: number;
   percent?: number;
+  label?: string;
+  valueFormat?: 'amount' | 'percent';
   tooltip?: QuestionTooltipProps['tip'];
 };
 
 export type DiscountDetails = {
-  price: number;
+  /** @deprecated Pass the base price through `PriceSummary.basePrice`. */
+  price?: number;
   discounts: DiscountItem[];
 };
 
@@ -35,36 +38,58 @@ export type DiscountInvoiceItem = {
   discount: DiscountItem;
 };
 
-export type BaseInvoiceItem = (PriceInvoiceItem | DiscountInvoiceItem) & {
+type InvoiceRowProps = {
+  unit?: string;
   labelTooltip?: QuestionTooltipProps['tip'];
   price?: number;
   priceColor?: 'default' | 'changed';
   hidePrice?: boolean;
   labelMaxLines?: number;
   quantity?: string | number;
-  topDivider?: boolean;
-  bottomDivider?: boolean;
 };
 
+export type BaseInvoiceItem = (PriceInvoiceItem | DiscountInvoiceItem) &
+  InvoiceRowProps & {
+    kind?: 'entity' | 'parameter' | 'limit' | 'discount';
+  };
+
+export type EntityInvoiceItem = PriceInvoiceItem &
+  InvoiceRowProps & {
+    kind: 'entity';
+    id?: string;
+    coveredByGrants?: boolean;
+    parameters?: InvoiceParameterItem[];
+  };
+
+export type InvoiceParameterItem =
+  | (PriceInvoiceItem & InvoiceRowProps & { kind: 'parameter' | 'limit' })
+  | (DiscountInvoiceItem & InvoiceRowProps & { kind: 'discount' });
+
+/** @deprecated Use `EntityInvoiceItem` with `kind: 'entity'` and an `id` matched to `calculatePriceData`. */
 export type PrimaryInvoiceItem = BaseInvoiceItem & {
+  kind?: never;
   primary: true;
   id?: string;
   coveredByGrant?: boolean;
+  parameters?: Array<InvoiceParameterItem | SecondaryInvoiceItem>;
 };
 
+/** @deprecated Use `InvoiceParameterItem` with an explicit `kind`. */
 export type SecondaryInvoiceItem = BaseInvoiceItem & {
+  kind?: never;
   primary?: false;
   id?: never;
   coveredByGrant?: never;
 };
 
-export type InvoiceItem = PrimaryInvoiceItem | SecondaryInvoiceItem;
+export type InvoiceEntityInputItem = EntityInvoiceItem;
+
+export type InvoiceItem = InvoiceEntityInputItem | InvoiceParameterItem;
 
 export type InvoiceDetails = {
-  title?: string;
-  quantity?: string | number;
-  price?: number;
-  items: InvoiceItem[];
+  title: string;
+  subtitle?: string;
+  items: EntityInvoiceItem[];
 };
 
 export type PriceDeltaDetails = {
@@ -79,6 +104,7 @@ export type PriceChangeDetails = {
    */
   value: number;
   percentage?: number;
+  tooltip?: QuestionTooltipProps['tip'];
 };
 
 export type SkuPriceResult = {
@@ -94,6 +120,3 @@ export type CalculatePriceData = {
   skuResults: SkuPriceResult[];
   allow?: boolean;
 };
-
-/** @deprecated Use CalculatePriceData instead. */
-export type CalculatePriceResponse = CalculatePriceData;

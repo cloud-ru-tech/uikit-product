@@ -1,0 +1,8 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: styles-theme-variables.$dimension-050m;
+}

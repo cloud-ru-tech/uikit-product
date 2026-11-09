@@ -1,14 +1,16 @@
+@use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
 .labelCell {
   display: flex;
-  gap: 2px;
+  align-items: flex-start;
+  gap: styles-theme-variables.$dimension-025m;
 }
 
 .label {
-  flex: 0 1 auto;
   min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .quantity {
-  flex: 0 0 auto;
   white-space: nowrap;
 }

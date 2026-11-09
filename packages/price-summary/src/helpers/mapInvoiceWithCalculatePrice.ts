@@ -1,4 +1,4 @@
-import { CalculatePriceData, InvoiceDetails, InvoiceItem } from '../types';
+import { CalculatePriceData, EntityInvoiceItem, InvoiceDetails } from '../types';
 
 type SkuFlags = {
   available?: boolean;
@@ -7,12 +7,12 @@ type SkuFlags = {
 
 export type InvoiceAvailabilitySplit = {
   invoice: InvoiceDetails[] | undefined;
-  unavailableItems: InvoiceItem[] | undefined;
+  unavailableItems: EntityInvoiceItem[] | undefined;
 };
 
 type InvoiceDetailsAvailabilitySplit = {
   availableDetails?: InvoiceDetails;
-  unavailableItems: InvoiceItem[];
+  unavailableItems: EntityInvoiceItem[];
 };
 
 function setSkuFlags(skuFlagsById: Map<string, SkuFlags>, key: string | undefined, flags: SkuFlags) {
@@ -41,28 +41,24 @@ function getSkuFlagsById(calculatePriceData: CalculatePriceData) {
   return skuFlagsById;
 }
 
-function isUnavailableInvoiceItem(item: InvoiceItem, skuFlagsById: Map<string, SkuFlags>) {
-  if (!item.primary || !item.id) {
-    return false;
-  }
-
-  return skuFlagsById.get(item.id)?.available === false;
+function getSkuFlagsForEntity(item: EntityInvoiceItem, skuFlagsById: Map<string, SkuFlags>) {
+  return item.id ? skuFlagsById.get(item.id) : undefined;
 }
 
-function mapInvoiceItemWithSkuFlags(item: InvoiceItem, skuFlagsById: Map<string, SkuFlags>) {
-  if (!item.primary || !item.id) {
-    return item;
+function mapInvoiceEntityWithSkuFlags(item: EntityInvoiceItem, skuFlagsById: Map<string, SkuFlags>): EntityInvoiceItem {
+  const skuFlags = getSkuFlagsForEntity(item, skuFlagsById);
+
+  if (skuFlags?.available === false) {
+    return { ...item, coveredByGrants: undefined };
   }
 
-  const skuFlags = skuFlagsById.get(item.id);
-
-  if (!skuFlags || skuFlags.available === false) {
+  if (skuFlags?.covered === undefined) {
     return item;
   }
 
   return {
     ...item,
-    coveredByGrant: skuFlags.covered,
+    coveredByGrants: skuFlags.covered,
   };
 }
 
@@ -70,14 +66,19 @@ function splitInvoiceDetailsByAvailability(
   details: InvoiceDetails,
   skuFlagsById: Map<string, SkuFlags>,
 ): InvoiceDetailsAvailabilitySplit {
-  const unavailableItems = details.items.filter(item => isUnavailableInvoiceItem(item, skuFlagsById));
-  const availableItems = details.items
-    .filter(item => !isUnavailableInvoiceItem(item, skuFlagsById))
-    .map(item => mapInvoiceItemWithSkuFlags(item, skuFlagsById));
+  const availableItems: EntityInvoiceItem[] = [];
+  const unavailableItems: EntityInvoiceItem[] = [];
 
-  if (!availableItems.length) {
-    return { unavailableItems };
-  }
+  details.items.forEach(item => {
+    const mappedItem = mapInvoiceEntityWithSkuFlags(item, skuFlagsById);
+
+    if (getSkuFlagsForEntity(item, skuFlagsById)?.available === false) {
+      unavailableItems.push(mappedItem);
+      return;
+    }
+
+    availableItems.push(mappedItem);
+  });
 
   if (!unavailableItems.length) {
     return {
@@ -89,12 +90,14 @@ function splitInvoiceDetailsByAvailability(
     };
   }
 
+  if (!availableItems.length) {
+    return { unavailableItems };
+  }
+
   return {
     availableDetails: {
-      ...details,
+      title: details.title,
       items: availableItems,
-      price: undefined,
-      quantity: undefined,
     },
     unavailableItems,
   };
@@ -103,7 +106,7 @@ function splitInvoiceDetailsByAvailability(
 export function mapInvoiceWithCalculatePrice(
   invoice: InvoiceDetails[] | undefined,
   calculatePriceData: CalculatePriceData | undefined,
-) {
+): InvoiceDetails[] | undefined {
   if (!invoice?.length || !calculatePriceData?.skuResults.length) {
     return invoice;
   }
@@ -112,7 +115,7 @@ export function mapInvoiceWithCalculatePrice(
 
   return invoice.map(details => ({
     ...details,
-    items: details.items.map(item => mapInvoiceItemWithSkuFlags(item, skuFlagsById)),
+    items: details.items.map(item => mapInvoiceEntityWithSkuFlags(item, skuFlagsById)),
   }));
 }
 
@@ -120,12 +123,15 @@ export function splitInvoiceByAvailability(
   invoice: InvoiceDetails[] | undefined,
   calculatePriceData: CalculatePriceData | undefined,
 ): InvoiceAvailabilitySplit {
-  if (!invoice?.length || !calculatePriceData?.skuResults.length) {
-    return { invoice, unavailableItems: undefined };
+  const nonEmptyInvoice = invoice?.filter(details => details.items.length > 0);
+  const invoiceWithItems = nonEmptyInvoice?.length === invoice?.length ? invoice : nonEmptyInvoice;
+
+  if (!invoiceWithItems?.length || !calculatePriceData?.skuResults.length) {
+    return { invoice: invoiceWithItems, unavailableItems: undefined };
   }
 
   const skuFlagsById = getSkuFlagsById(calculatePriceData);
-  const detailsSplits = invoice.map(details => splitInvoiceDetailsByAvailability(details, skuFlagsById));
+  const detailsSplits = invoiceWithItems.map(details => splitInvoiceDetailsByAvailability(details, skuFlagsById));
   const availableInvoice = detailsSplits.flatMap(({ availableDetails }) =>
     availableDetails ? [availableDetails] : [],
   );

@@ -37,9 +37,9 @@
   "scripts": {},
   "dependencies": {
     "@cloud-ru/ft-formatters": "catalog:",
-    "@cloud-ru/uikit-product-button-predefined": "workspace:^",
     "@cloud-ru/uikit-product-icons": "workspace:^",
     "@cloud-ru/uikit-product-mobile-tooltip": "workspace:^",
+    "@cloud-ru/uikit-product-promo-tag-predefined": "workspace:^",
     "@cloud-ru/uikit-product-utils": "workspace:^",
     "@snack-uikit/accordion": "catalog:",
     "@snack-uikit/button": "catalog:",
@@ -47,11 +47,13 @@
     "@snack-uikit/link": "catalog:",
     "@snack-uikit/loaders": "catalog:",
     "@snack-uikit/promo-tag": "catalog:",
+    "@snack-uikit/segmented-control": "catalog:",
     "@snack-uikit/tooltip": "catalog:",
     "@snack-uikit/truncate-string": "catalog:",
     "@snack-uikit/typography": "catalog:",
     "@snack-uikit/utils": "catalog:",
-    "classnames": "catalog:"
+    "classnames": "catalog:",
+    "@snack-uikit/scroll": "catalog:"
   },
   "peerDependencies": {
     "@cloud-ru/uikit-product-locale": "*"

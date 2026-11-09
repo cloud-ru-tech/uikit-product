@@ -1,9 +1,8 @@
-import { useLocale } from '@cloud-ru/uikit-product-locale';
 import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { PromoTag } from '@snack-uikit/promo-tag';
 import { Typography } from '@snack-uikit/typography';
 
-import { formatCurrency, formatQuantity } from '../../../../helpers';
+import { getInvoiceCoverage } from '../../../../helpers';
 import { InvoiceDetails } from '../../../../types';
 import { CoveredByGrantLabel } from '../CoveredByGrantLabel';
 import { Divider } from '../Divider';
@@ -22,55 +21,35 @@ export function InvoiceDetailsBlock({
   showCoveredByGrantLabels = true,
   titleAsRedTag = false,
 }: InvoiceDetailsBlockProps) {
-  const { t } = useLocale('PriceSummary');
-
-  const primaryItems = invoice.items.filter(item => item.primary);
-  const firstValue = primaryItems[0]?.coveredByGrant;
-  const allSameValue = primaryItems.length > 0 && primaryItems.every(item => item.coveredByGrant === firstValue);
-
-  const showBlockLabel = showCoveredByGrantLabels && allSameValue && firstValue !== undefined;
-  const showItemLabels = showCoveredByGrantLabels && !showBlockLabel;
+  const coverage = getInvoiceCoverage([invoice]);
 
   return (
-    <div className={styles.main}>
-      {showBlockLabel && <CoveredByGrantLabel covered={firstValue} />}
-
+    <div className={styles.main} data-unavailable={titleAsRedTag || undefined}>
+      {showCoveredByGrantLabels ? (
+        <div className={styles.coveredByGrantLabel}>
+          <CoveredByGrantLabel covered={coverage ?? false} layoutType={layoutType} />
+        </div>
+      ) : undefined}
       {invoice.title && (
         <>
-          <div className={styles.header}>
+          <div>
             {titleAsRedTag ? (
               <PromoTag appearance='red' color='decor' size='xxs' text={invoice.title} />
             ) : (
               <Typography.SansLabelM>{invoice.title}</Typography.SansLabelM>
             )}
-            {invoice.quantity && <Typography.SansLabelM>{formatQuantity(invoice.quantity)}</Typography.SansLabelM>}
+            {invoice.subtitle && (
+              <Typography.SansBodyS tag='div' className={styles.subtitle}>
+                {invoice.subtitle}
+              </Typography.SansBodyS>
+            )}
           </div>
-
           <Divider />
         </>
       )}
-
       {invoice.items.map((item, index) => (
-        <InvoiceItemBlock
-          key={index}
-          item={item}
-          index={index}
-          layoutType={layoutType}
-          showCoveredByGrantLabel={showItemLabels}
-        />
+        <InvoiceItemBlock key={index} item={item} layoutType={layoutType} unavailable={titleAsRedTag} />
       ))}
-
-      {invoice.price !== undefined && (
-        <>
-          <Divider />
-
-          <div className={styles.footer}>
-            <Typography.SansLabelM>
-              {t('price')}: {formatCurrency(invoice.price)}
-            </Typography.SansLabelM>
-          </div>
-        </>
-      )}
     </div>
   );
 }

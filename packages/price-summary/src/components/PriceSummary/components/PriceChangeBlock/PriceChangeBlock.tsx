@@ -1,34 +1,37 @@
 import cn from 'classnames';
 
 import { useLocale } from '@cloud-ru/uikit-product-locale';
+import { WithLayoutType } from '@cloud-ru/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import { formatCurrency, formatPriceChange, getPriceChangeAppearance } from '../../../../helpers';
 import { PriceChangeDetails } from '../../../../types';
+import { SummaryTooltip } from '../SummaryTooltip';
 import styles from './styles.module.scss';
 
-export type PriceDetailsBlockProps = {
+export type PriceDetailsBlockProps = WithLayoutType<{
   basePrice?: number;
+  basePriceLabel?: string;
   priceChange?: PriceChangeDetails;
-};
+}>;
 
-export function PriceDetailsBlock({ basePrice, priceChange }: PriceDetailsBlockProps) {
+export function PriceDetailsBlock({ basePrice, basePriceLabel, priceChange, layoutType }: PriceDetailsBlockProps) {
   const { t } = useLocale('PriceSummary');
-  const formattedValue = priceChange ? formatPriceChange(priceChange) : undefined;
 
-  if (!basePrice && !priceChange) {
+  if (basePrice === undefined && !priceChange) {
     return null;
   }
 
   return (
-    <div className={styles.priceDetails}>
-      {basePrice && (
+    <div>
+      {basePrice !== undefined && (
         <div className={styles.priceDetailsRow}>
-          <Typography.SansBodyS tag='div'>{t('basePrice')}</Typography.SansBodyS>
-
-          <div className={styles.priceDetailsValue}>
-            <Typography.SansLabelM tag='div'>{formatCurrency(basePrice)}</Typography.SansLabelM>
-          </div>
+          <Typography.SansBodyS tag='div'>
+            {basePriceLabel ?? t(priceChange ? 'defaultConfiguration' : 'basePrice')}
+          </Typography.SansBodyS>
+          <Typography.SansLabelM tag='div' className={styles.priceDetailsValue}>
+            {formatCurrency(basePrice)}
+          </Typography.SansLabelM>
         </div>
       )}
       {priceChange && (
@@ -36,11 +39,17 @@ export function PriceDetailsBlock({ basePrice, priceChange }: PriceDetailsBlockP
           className={cn(styles.priceDetailsRow, styles.priceChangeRow)}
           data-appearance={getPriceChangeAppearance(priceChange.value)}
         >
-          <Typography.SansBodyS tag='div'>{t('priceChange')}</Typography.SansBodyS>
-
-          <div className={styles.priceDetailsValue} title={formattedValue}>
-            <Typography.SansLabelM tag='div'>{formattedValue}</Typography.SansLabelM>
+          <div className={styles.label}>
+            <Typography.SansBodyS tag='div'>{t('priceChange')}</Typography.SansBodyS>
+            <SummaryTooltip
+              tip={priceChange.tooltip ?? t('priceChangeTooltip')}
+              label={t('priceChange')}
+              layoutType={layoutType}
+            />
           </div>
+          <Typography.SansLabelM tag='div' className={styles.priceDetailsValue}>
+            {formatPriceChange(priceChange)}
+          </Typography.SansLabelM>
         </div>
       )}
     </div>

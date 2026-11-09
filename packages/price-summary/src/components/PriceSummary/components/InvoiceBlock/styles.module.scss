@@ -1,16 +1,59 @@
 @use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: styles-theme-variables.$dimension-050m;
+}
+
 .accordion {
   --space-accordion-collapse-block-secondary-horizontal-padding: 0;
-  --space-accordion-collapse-block-secondary-vertical-padding: #{styles-theme-variables.$dimension-1m};
+  --space-accordion-collapse-block-secondary-vertical-padding: 0;
   --space-accordion-collapse-block-secondary-gap: #{styles-theme-variables.$dimension-1m};
   --border-width-accordion-collapse-block-secondary: 0;
   --accordion-header-padding-vertical: 0;
+
+  // The library toggle has no accessible-name prop. The named header button controls the same accordion.
+  [data-test-id='accordion__collapse-block__chevron'] {
+    display: none;
+  }
+
+  [data-test-id='accordion__collapse-block__header'] {
+    gap: 0;
+
+    > :first-child {
+      flex: 1;
+      min-width: 0;
+      max-width: 100%;
+    }
+  }
 }
 
-.accordionHeaderTitle {
-  color: styles-theme-variables.$sys-neutral-text-support;
-  padding: 2px 0;
+.chevron {
+  flex-shrink: 0;
+  margin-left: auto;
+  color: styles-theme-variables.$sys-neutral-text-light;
+}
+
+.heading {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: styles-theme-variables.$dimension-050m;
+  min-height: 24px;
+
+  &[data-expanded] .chevron {
+    transform: rotate(180deg);
+  }
+}
+
+.toggle {
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-align: start;
 }
 
 .accordionContent {

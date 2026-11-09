@@ -2,17 +2,19 @@
 
 .main {
   border-radius: styles-theme-variables.$dimension-050m;
-  padding: styles-theme-variables.$dimension-050m styles-theme-variables.$dimension-1m;
+  padding: styles-theme-variables.$dimension-1m styles-theme-variables.$dimension-1m  styles-theme-variables.$dimension-050m;
   border: 1px dashed styles-theme-variables.$sys-neutral-decor-default;
+
+  &[data-unavailable] {
+    border-color: styles-theme-variables.$sys-red-decor-activated;
+    background-color: styles-theme-variables.$sys-red-background1-level;
+  }
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
+.coveredByGrantLabel {
+  margin-bottom: styles-theme-variables.$dimension-050m;
 }
 
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.subtitle {
+  color: styles-theme-variables.$sys-neutral-text-light
 }

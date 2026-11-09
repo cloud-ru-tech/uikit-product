@@ -41,6 +41,7 @@ catalog:
   '@snack-uikit/scroll': ^1.0.1
   '@snack-uikit/search': ^1.0.1
   '@snack-uikit/search-private': ^1.0.1
+  '@snack-uikit/segmented-control': ^1.0.1
   '@snack-uikit/skeleton': ^1.0.1
   '@snack-uikit/slider': ^1.0.1
   '@snack-uikit/status': ^1.0.1

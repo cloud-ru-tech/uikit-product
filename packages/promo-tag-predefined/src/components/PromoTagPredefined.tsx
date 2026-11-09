@@ -47,6 +47,12 @@ export function PromoTagPredefined({
           tip: t('tooltipPartner'),
           appearance: 'orange',
         };
+      case 'freeTier':
+        return {
+          text: t('freeTier'),
+          tip: t('tooltipFreeTier'),
+          appearance: 'blue',
+        };
       case 'preview':
       default: {
         return {

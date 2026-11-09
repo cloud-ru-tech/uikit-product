@@ -12,7 +12,7 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| variant* | enum Variant: `"preview"`, `"connecting"`, `"partner"` | - | Вариант промо-тега |
+| variant* | enum Variant: `"preview"`, `"connecting"`, `"partner"`, `"freeTier"` | - | Вариант промо-тега |
 | context | enum PreviewContext: `"service"`, `"functional"` | service | Контекст тега с вариантом "preview" |
 | tooltip | `Pick<TooltipProps, "trigger" \| "placement">` | - | Настройки тултипа |
 | onClick | `(e: MouseEvent<HTMLDivElement, MouseEvent>) => void` | - | Колбэк для обработки клика на тег |

@@ -7,4 +7,5 @@ export const VARIANTS = {
   Preview: 'preview',
   Connecting: 'connecting',
   Partner: 'partner',
+  FreeTier: 'freeTier',
 } as const;

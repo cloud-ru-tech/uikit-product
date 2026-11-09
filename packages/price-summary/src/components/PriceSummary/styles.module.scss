@@ -1,18 +1,73 @@
 @use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .priceSummary {
+  --price-summary-max-height: 640px;
+  --price-summary-details-reserved-height: 160px;
+
   box-sizing: border-box;
-  width: 100%;
-  min-width: 280px;
   display: flex;
   flex-direction: column;
-  gap: styles-theme-variables.$dimension-050m;
-  padding: styles-theme-variables.$dimension-2m;
+  width: 100%;
+  min-width: 280px;
+  max-height: var(--price-summary-max-height);
+  overflow: hidden;
   border-radius: styles-theme-variables.$dimension-1m;
   background-color: styles-theme-variables.$sys-neutral-background1-level;
   color: styles-theme-variables.$sys-neutral-text-main;
 }
 
-.headerSlot {
-  margin-bottom: styles-theme-variables.$dimension-1m;
+.header {
+  display: flex;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: styles-theme-variables.$dimension-050m;
+  max-height: calc(var(--price-summary-max-height) - var(--price-summary-details-reserved-height));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: styles-theme-variables.$dimension-2m;
+  scrollbar-width: thin;
+
+  &:focus-visible {
+    outline: 2px solid styles-theme-variables.$sys-primary-accent-default;
+    outline-offset: -2px;
+  }
+
+  &[data-content] {
+    padding-bottom: styles-theme-variables.$dimension-050m;
+  }
+}
+
+.scrollContent {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+
+  &:focus-visible {
+    outline: 2px solid styles-theme-variables.$sys-primary-accent-default;
+    outline-offset: -2px;
+  }
+}
+
+.breakdown {
+  padding: 0 styles-theme-variables.$dimension-2m styles-theme-variables.$dimension-1m;
+}
+
+.timeSection {
+  padding: 0 styles-theme-variables.$dimension-2m styles-theme-variables.$dimension-2m;
+}
+
+.usageSection {
+  padding: styles-theme-variables.$dimension-2m;
+  border-top: 1px solid styles-theme-variables.$sys-neutral-decor-default;
+}
+
+.state {
+  padding: styles-theme-variables.$dimension-2m;
+}
+
+.footer {
+  padding: 0 styles-theme-variables.$dimension-2m styles-theme-variables.$dimension-2m;
 }

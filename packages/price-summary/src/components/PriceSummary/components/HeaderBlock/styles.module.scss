@@ -2,15 +2,24 @@
 
 .headline {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: styles-theme-variables.$dimension-050m;
+}
+
+.titleStack {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.title {
+  display: flex;
   align-items: center;
   gap: styles-theme-variables.$dimension-050m;
 }
 
 .vat {
   color: styles-theme-variables.$sys-neutral-text-light;
-}
-
-.promoBadge {
-  display: flex;
 }

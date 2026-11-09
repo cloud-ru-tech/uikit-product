@@ -342,6 +342,23 @@ export const en_GB = {
     },
   },
   PriceSummary: {
+    costEstimate: 'Cost estimate',
+    costEstimateTooltip: 'Preliminary estimate. Actual cost depends on usage. Charges follow the service tariff.',
+    costDetails: 'Cost breakdown',
+    timePayment: 'Time-based charges',
+    timePaymentTooltip: 'Resource costs for the selected period. These items are included in the cost estimate.',
+    usagePayment: 'Usage-based charges',
+    usagePaymentTooltip:
+      'Prices are per unit of usage. Charges depend on actual consumption and are excluded from the cost estimate.',
+    excludingUsage: 'Excluding usage-based charges',
+    priceChangeTooltip: 'Cost change compared with the default configuration.',
+    defaultConfiguration: 'Default configuration',
+    periodLabel: 'Billing period',
+    periodMinute: 'Minute',
+    periodHour: 'Hour',
+    periodDay: 'Day',
+    periodMonth: 'Month',
+    periodYear: 'Year',
     total: 'Total',
     totalSumFromPrefix: 'from',
     totalSumToPrefix: 'up to',
@@ -367,17 +384,19 @@ export const en_GB = {
       'The order contains services that cannot be paid with a grant. Payment will be debited in rubles.',
     increasedPrice: 'increased by',
     decreasedPrice: 'decreased by',
-    priceChange: 'Change',
+    priceChange: 'Cost change',
     preliminaryHint: 'Preliminary calculation. The actual cost depends on consumption.',
   },
   PromoTagPredefined: {
     connecting: 'Connecting',
     partner: 'Partner',
+    freeTier: 'Free tier',
     preview: 'Preview',
     tooltipConnecting:
       'The service is connecting and will be available soon. If it takes too long, please contact support.',
     tooltipPartner:
       'A vendor partner service. It is subject to unique pricing conditions, the partner defines the service and support SLA.',
+    tooltipFreeTier: 'A free tariff with fixed resource amounts.',
     tooltipPreviewService:
       'The service is in the Preview stage. It cannot be increased by quota and the pricing conditions, service and support SLA do not apply.',
     tooltipPreviewFunctional:

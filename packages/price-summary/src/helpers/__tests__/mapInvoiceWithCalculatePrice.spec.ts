@@ -1,24 +1,48 @@
 import { describe, expect, it } from 'vitest';
 
 import { CalculatePriceData, InvoiceDetails } from '../../types';
-import { mapInvoiceWithCalculatePrice } from '../mapInvoiceWithCalculatePrice';
+import { mapInvoiceWithCalculatePrice, splitInvoiceByAvailability } from '../mapInvoiceWithCalculatePrice';
 
 const coveredSkuId = 'd4d5b1d9-7318-44c2-830b-5be7650f760f';
 const uncoveredSkuId = 'ee5a2062-fdb3-43f9-a93e-2ae6224a35d6';
 const unavailableSkuId = 'adb93523-71f8-4010-a469-3eb06079d4a5';
-const resourceSpecCode = 'cpu.1c';
 
 const invoice: InvoiceDetails[] = [
   {
-    quantity: 1,
     title: 'Compute',
-    price: 100,
     items: [
-      { id: coveredSkuId, quantity: 1, primary: true, label: 'Covered SKU', price: 40 },
-      { id: uncoveredSkuId, quantity: 1, primary: true, label: 'Uncovered SKU', price: 30 },
-      { id: unavailableSkuId, quantity: 1, primary: true, label: 'Unavailable SKU', price: 20 },
-      { quantity: 1, primary: false, label: 'Secondary SKU', price: 10 },
-      { quantity: 1, primary: true, label: 'SKU without id', price: 10 },
+      {
+        id: coveredSkuId,
+        kind: 'entity',
+        quantity: 1,
+        label: 'Covered SKU',
+        price: 40,
+        coveredByGrants: false,
+        parameters: [{ kind: 'parameter', label: '2 vCPU', price: 40 }],
+      },
+      {
+        id: uncoveredSkuId,
+        kind: 'entity',
+        quantity: 1,
+        label: 'Uncovered SKU',
+        price: 30,
+        coveredByGrants: true,
+      },
+      {
+        id: unavailableSkuId,
+        kind: 'entity',
+        quantity: 1,
+        label: 'Unavailable SKU',
+        price: 20,
+        coveredByGrants: true,
+        discount: { value: 5, percent: 20 },
+        parameters: [
+          { kind: 'parameter', label: '4 vCPU', price: 20 },
+          { kind: 'limit', label: 'Free up to 1 hour' },
+          { kind: 'discount', discount: { value: 5, percent: 20 } },
+        ],
+      },
+      { kind: 'entity', quantity: 1, label: 'SKU without id', price: 10, coveredByGrants: false },
     ],
   },
 ];
@@ -40,11 +64,6 @@ const calculatePriceData: CalculatePriceData = {
       skuAvailability: false,
       coveredByGrants: true,
     },
-    {
-      resourceSpecCode,
-      skuAvailability: true,
-      coveredByGrants: true,
-    },
   ],
 };
 
@@ -57,36 +76,109 @@ describe('mapInvoiceWithCalculatePrice', () => {
     expect(mapInvoiceWithCalculatePrice(invoice, { skuResults: [] })).toBe(invoice);
   });
 
-  it('should set coveredByGrant for available SKUs matched by resourceSpecCodeId', () => {
+  it('should overwrite manual coverage with calculated coverage without changing the input', () => {
     const result = mapInvoiceWithCalculatePrice(invoice, calculatePriceData);
 
-    expect(result?.[0].items[0]).toMatchObject({ id: coveredSkuId, coveredByGrant: true });
-    expect(result?.[0].items[1]).toMatchObject({ id: uncoveredSkuId, coveredByGrant: false });
+    expect(result?.[0].items[0]).toEqual({ ...invoice[0].items[0], coveredByGrants: true });
+    expect(result?.[0].items[1]).toEqual({ ...invoice[0].items[1], coveredByGrants: false });
+    expect(invoice[0].items[0].coveredByGrants).toBe(false);
+    expect(invoice[0].items[1].coveredByGrants).toBe(true);
   });
 
-  it('should not set coveredByGrant when skuAvailability is false', () => {
+  it('should clear coverage for unavailable SKUs without changing the input', () => {
     const result = mapInvoiceWithCalculatePrice(invoice, calculatePriceData);
 
-    expect(result?.[0].items[2]).toEqual(invoice[0].items[2]);
-    expect(result?.[0].items[2]).not.toHaveProperty('coveredByGrant');
+    expect(result?.[0].items[2]).toEqual({ ...invoice[0].items[2], coveredByGrants: undefined });
+    expect(invoice[0].items[2].coveredByGrants).toBe(true);
   });
 
-  it('should not set coveredByGrant for secondary items or items without id', () => {
+  it('should preserve manual coverage for entities without id', () => {
     const result = mapInvoiceWithCalculatePrice(invoice, calculatePriceData);
 
-    expect(result?.[0].items[3]).toEqual(invoice[0].items[3]);
-    expect(result?.[0].items[4]).toEqual(invoice[0].items[4]);
+    expect(result?.[0].items[3]).toBe(invoice[0].items[3]);
   });
 
-  it('should match SKUs by resourceSpecCode', () => {
-    const invoiceWithResourceSpecCode: InvoiceDetails[] = [
+  it.each(['skuId', 'skuCode', 'resourceSpecCode', 'resourceSpecCodeId'] as const)(
+    'should match SKUs by %s',
+    identifier => {
+      const result = mapInvoiceWithCalculatePrice(invoice, {
+        skuResults: [{ [identifier]: coveredSkuId, skuAvailability: true, coveredByGrants: true }],
+      });
+
+      expect(result?.[0].items[0].coveredByGrants).toBe(true);
+    },
+  );
+
+  it('should preserve manual coverage for unmatched SKUs and results without coverage', () => {
+    const result = mapInvoiceWithCalculatePrice(invoice, {
+      skuResults: [{ skuId: coveredSkuId, skuAvailability: true }],
+    });
+
+    expect(result?.[0].items[0]).toBe(invoice[0].items[0]);
+    expect(result?.[0].items[1]).toBe(invoice[0].items[1]);
+  });
+});
+
+describe('splitInvoiceByAvailability', () => {
+  it.each([undefined, { skuResults: [] }])('should preserve the invoice without SKU results: %j', data => {
+    const result = splitInvoiceByAvailability(invoice, data);
+
+    expect(result.invoice).toBe(invoice);
+    expect(result.unavailableItems).toBeUndefined();
+  });
+
+  it('should move an unavailable entity with all its parameters and map coverage of available entities', () => {
+    const result = splitInvoiceByAvailability(invoice, calculatePriceData);
+
+    expect(result.invoice).toEqual([
       {
-        items: [{ id: resourceSpecCode, quantity: 1, primary: true, label: 'CPU', price: 100 }],
+        title: 'Compute',
+        price: undefined,
+        quantity: undefined,
+        items: [
+          { ...invoice[0].items[0], coveredByGrants: true },
+          { ...invoice[0].items[1], coveredByGrants: false },
+          invoice[0].items[3],
+        ],
       },
-    ];
+    ]);
+    expect(result.unavailableItems).toEqual([{ ...invoice[0].items[2], coveredByGrants: undefined }]);
+    expect(invoice[0].items).toHaveLength(4);
+    expect(invoice[0].items[2].coveredByGrants).toBe(true);
+  });
 
-    const result = mapInvoiceWithCalculatePrice(invoiceWithResourceSpecCode, calculatePriceData);
+  it('should combine unavailable entities from different categories and remove empty categories', () => {
+    const firstEntity = invoice[0].items[0];
+    const secondEntity = invoice[0].items[2];
+    const result = splitInvoiceByAvailability(
+      [
+        { title: 'First category', items: [firstEntity] },
+        { title: 'Second category', items: [secondEntity] },
+      ],
+      {
+        skuResults: [
+          { skuId: firstEntity.id, skuAvailability: false },
+          { skuId: secondEntity.id, skuAvailability: false },
+        ],
+      },
+    );
 
-    expect(result?.[0].items[0]).toMatchObject({ id: resourceSpecCode, coveredByGrant: true });
+    expect(result.invoice).toEqual([]);
+    expect(result.unavailableItems).toEqual([
+      { ...firstEntity, coveredByGrants: undefined },
+      { ...secondEntity, coveredByGrants: undefined },
+    ]);
+  });
+
+  it('should preserve category totals when no entities are unavailable', () => {
+    const result = splitInvoiceByAvailability(invoice, {
+      skuResults: [{ skuId: coveredSkuId, skuAvailability: true, coveredByGrants: true }],
+    });
+
+    expect(result.invoice?.[0]).toEqual({
+      ...invoice[0],
+      items: [{ ...invoice[0].items[0], coveredByGrants: true }, ...invoice[0].items.slice(1)],
+    });
+    expect(result.unavailableItems).toBeUndefined();
   });
 });

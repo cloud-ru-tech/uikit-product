@@ -1,23 +1,32 @@
 @use '@cloud-ru/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
-.priceDetailsValue {
-  overflow-wrap: anywhere;
-  text-align: end;
-}
-
 .priceDetailsRow {
   display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
   gap: styles-theme-variables.$dimension-1m;
   color: styles-theme-variables.$sys-neutral-text-support;
+}
 
-  > * {
-    flex: 1 1 0;
-    min-width: 0;
-  }
+.priceDetailsValue {
+  flex-shrink: 0;
+  text-align: end;
+  white-space: nowrap;
+}
+
+.label {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: styles-theme-variables.$dimension-050m;
 }
 
 .priceChangeRow {
   &[data-appearance='increased'] {
-    color: styles-theme-variables.$sys-red-text-main;
+    color: styles-theme-variables.$sys-red-text-support;
+  }
+
+  &[data-appearance='decreased'] .priceDetailsValue {
+    color: styles-theme-variables.$sys-red-text-support;
   }
 }

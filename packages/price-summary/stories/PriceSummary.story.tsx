@@ -33,8 +33,7 @@ type StoryProps = PriceSummaryProps & {
 const INVOICE_SAMPLE: InvoiceDetails[] = [
   {
     title: 'Label',
-    quantity: 5,
-    price: 9999999.99,
+    subtitle: 'Subtitle',
     items: [
       {
         label: 'Label',
@@ -42,134 +41,116 @@ const INVOICE_SAMPLE: InvoiceDetails[] = [
         quantity: 1,
         price: 9999999.99,
         discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
-        primary: true,
-        coveredByGrant: false,
+        kind: 'entity',
+        id: 'sample-uncovered',
+        parameters: [
+          {
+            kind: 'parameter',
+            label: 'Label',
+            quantity: 1,
+            price: 9999999.99,
+            discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+          },
+          {
+            label: 'Label',
+            labelTooltip: 'label tooltip',
+            quantity: 1,
+            price: 9999999.99,
+            priceColor: 'changed',
+            kind: 'parameter',
+          },
+        ],
       },
       {
         label: 'Label',
         quantity: 1,
         price: 9999999.99,
         discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+        kind: 'entity',
+        id: 'sample-covered',
       },
       {
         label: 'Label',
-        labelTooltip: 'label tooltip',
         quantity: 1,
         price: 9999999.99,
         priceColor: 'changed',
-        primary: false,
-        bottomDivider: true,
+        kind: 'entity',
+        id: 'sample-covered',
+        parameters: [
+          {
+            label: 'Text describing the characteristic text describing the characteristic',
+            labelMaxLines: 1,
+            kind: 'parameter',
+          },
+          {
+            kind: 'discount',
+            discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+          },
+        ],
       },
       {
         label: 'Label',
-        quantity: 1,
-        price: 9999999.99,
-        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
-        primary: true,
-        coveredByGrant: true,
-      },
-      {
-        label: 'Label',
-        labelMaxLines: 1,
         quantity: 1,
         price: 9999999.99,
         priceColor: 'changed',
-        primary: true,
-        coveredByGrant: true,
-        topDivider: true,
-      },
-      {
-        label: 'Text describing the characteristic text describing the characteristic',
-        labelMaxLines: 1,
-        primary: false,
-      },
-      {
-        primary: true,
-        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
-      },
-      {
-        label: 'Label',
-        labelMaxLines: 1,
-        quantity: 1,
-        price: 9999999.99,
-        priceColor: 'changed',
-        primary: true,
-        coveredByGrant: false,
+        kind: 'entity',
+        id: 'sample-uncovered',
       },
     ],
   },
   {
     title: 'Covered by grant block',
-    quantity: 5,
-    price: 9999999.99,
     items: [
       {
         label: 'Label',
         quantity: 1,
         price: 9999999.99,
-        primary: true,
-        coveredByGrant: true,
+        kind: 'entity',
+        id: 'sample-covered',
         discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
       },
       {
         label: 'Label',
         quantity: 1,
         price: 9999999.99,
-        primary: true,
-        coveredByGrant: true,
+        kind: 'entity',
+        id: 'sample-covered',
         discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
       },
     ],
   },
   {
     title: 'Not covered by grant block',
-    quantity: 5,
-    price: 9999999.99,
     items: [
       {
         label: 'Label',
         quantity: 1,
         price: 9999999.99,
-        primary: true,
-        coveredByGrant: false,
+        kind: 'entity',
+        id: 'sample-uncovered',
         discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
       },
       {
         label: 'Label',
         quantity: 1,
         price: 9999999.99,
-        primary: true,
-        coveredByGrant: false,
+        kind: 'entity',
+        id: 'sample-uncovered',
         discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
-      },
-    ],
-  },
-  {
-    items: [
-      {
-        label: 'Label',
-        quantity: 1,
-        price: 9999999.99,
-        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
-      },
-      {
-        label: 'Label',
-        quantity: 1,
-        price: 9999999.99,
-        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
-      },
-      {
-        label: 'Label',
-        quantity: 1,
-        price: 9999999.99,
-        primary: false,
       },
     ],
   },
 ];
 
+const INVOICE_CALCULATE_PRICE_DATA: CalculatePriceData = {
+  skuResults: [
+    { skuId: 'sample-covered', skuAvailability: true, coveredByGrants: true },
+    { skuId: 'sample-uncovered', skuAvailability: true, coveredByGrants: false },
+  ],
+};
+
 const CALCULATE_PRICE_SKU_IDS = {
-  coveredByGrant: 'sku-covered-by-grant',
+  coveredByGrants: 'sku-covered-by-grant',
   notCoveredByGrant: 'sku-not-covered-by-grant',
   unavailableByContract: 'sku-unavailable-by-contract',
   allCoveredFirst: 'sku-all-covered-first',
@@ -178,7 +159,7 @@ const CALCULATE_PRICE_SKU_IDS = {
 
 const CALCULATE_PRICE_SKU_RESULTS_SAMPLE: SkuPriceResult[] = [
   {
-    skuCode: CALCULATE_PRICE_SKU_IDS.coveredByGrant,
+    skuCode: CALCULATE_PRICE_SKU_IDS.coveredByGrants,
     skuAvailability: true,
     coveredByGrants: true,
   },
@@ -211,71 +192,65 @@ const CALCULATE_PRICE_DATA_SAMPLE: CalculatePriceData = {
 const CALCULATE_PRICE_INVOICE_SAMPLE: InvoiceDetails[] = [
   {
     title: 'Есть покрытые и непокрытые грантом сервисы',
-    quantity: 3,
-    price: 3000,
     items: [
       {
-        id: CALCULATE_PRICE_SKU_IDS.coveredByGrant,
+        id: CALCULATE_PRICE_SKU_IDS.coveredByGrants,
         label: 'Доступно и покрывается грантом',
         quantity: 1,
         price: 1000,
-        primary: true,
+        kind: 'entity',
       },
       {
         id: CALCULATE_PRICE_SKU_IDS.notCoveredByGrant,
         label: 'Доступно и не покрывается грантом',
         quantity: 1,
         price: 1000,
-        primary: true,
+        kind: 'entity',
       },
       {
         id: CALCULATE_PRICE_SKU_IDS.unavailableByContract,
         label: 'Недоступно по договору',
         quantity: 1,
         price: 1000,
-        primary: true,
+        kind: 'entity',
       },
     ],
   },
   {
     title: 'Все покрыто',
-    quantity: 2,
-    price: 2000,
     items: [
       {
         id: CALCULATE_PRICE_SKU_IDS.allCoveredFirst,
         label: 'Первый сервис покрывается грантом',
         quantity: 1,
         price: 1000,
-        primary: true,
+        kind: 'entity',
       },
       {
         id: CALCULATE_PRICE_SKU_IDS.allCoveredSecond,
         label: 'Второй сервис покрывается грантом',
         quantity: 1,
         price: 1000,
-        primary: true,
+        kind: 'entity',
       },
     ],
   },
   {
     title: 'Все не покрыто',
-    quantity: 1,
-    price: 1000,
     items: [
       {
         id: CALCULATE_PRICE_SKU_IDS.notCoveredByGrant,
         label: 'Первый сервис не покрывается грантом',
         quantity: 1,
         price: 1000,
-        primary: true,
+        kind: 'entity',
       },
       {
         id: CALCULATE_PRICE_SKU_IDS.notCoveredByGrant,
         label: 'Второй сервис не покрывается грантом',
         quantity: 1,
         price: 1000,
-        primary: true,
+        kind: 'entity',
       },
     ],
   },
@@ -340,17 +315,15 @@ const Template: StoryFn<StoryProps> = ({
     return { value: priceChangeValue, percentage: priceChangePercentage };
   }, [showPriceChange, priceChangeValue, priceChangePercentage]);
 
-  const calculatePriceData = useMemo<CalculatePriceData | undefined>(() => {
-    if (!useCalculatePriceData) {
-      return undefined;
-    }
+  const calculatePriceData = useMemo<CalculatePriceData>(() => {
+    const data = useCalculatePriceData ? CALCULATE_PRICE_DATA_SAMPLE : INVOICE_CALCULATE_PRICE_DATA;
 
     if (showCoveredByGrantLabel) {
-      return CALCULATE_PRICE_DATA_SAMPLE;
+      return data;
     }
 
     return {
-      skuResults: CALCULATE_PRICE_SKU_RESULTS_SAMPLE.map(skuResult => ({
+      skuResults: data.skuResults.map(skuResult => ({
         ...skuResult,
         coveredByGrants: undefined,
       })),
@@ -360,22 +333,13 @@ const Template: StoryFn<StoryProps> = ({
   const invoice = useMemo(() => {
     let _invoice = useCalculatePriceData ? CALCULATE_PRICE_INVOICE_SAMPLE : INVOICE_SAMPLE;
 
-    if (!showCoveredByGrantLabel) {
-      _invoice = _invoice.map(invoice => ({
-        ...invoice,
-        items: invoice.items.map(item => ({
-          ...item,
-          coveredByGrant: undefined,
-        })),
-      }));
-    }
-
     if (!showChangedPrice) {
       _invoice = _invoice.map(invoice => ({
         ...invoice,
         items: invoice.items.map(item => ({
           ...item,
           priceColor: undefined,
+          parameters: item.parameters?.map(parameter => ({ ...parameter, priceColor: undefined })),
         })),
       }));
     }
@@ -385,7 +349,7 @@ const Template: StoryFn<StoryProps> = ({
     }
 
     return [_invoice[0]];
-  }, [showSingleGroup, showCoveredByGrantLabel, useCalculatePriceData, showChangedPrice]);
+  }, [showSingleGroup, useCalculatePriceData, showChangedPrice]);
 
   return (
     <div style={{ maxWidth: 304 }}>
@@ -412,12 +376,9 @@ export const priceSummary: StoryObj<StoryProps> = {
     showSingleGroup: false,
     value: 9999999.99,
     totalSumType: 'equal',
-    hint: 'Стоимость зависит от потребления',
+    hint: undefined,
     period: PricePeriod.Month,
-    periodOptions: [PricePeriod.Year, PricePeriod.Month, PricePeriod.Day, PricePeriod.Hour, PricePeriod.Minute],
-    promoBadge: {
-      text: 'Promo Label',
-    },
+    periodOptions: [PricePeriod.Hour, PricePeriod.Month],
     docsLink: {
       href: 'https://cloud.ru/documents/tariffs/index.html',
     },
@@ -428,7 +389,7 @@ export const priceSummary: StoryObj<StoryProps> = {
       text: 'hint link',
       href: '',
     },
-    showHintLink: true,
+    showHintLink: false,
     showCoveredByGrantLabel: true,
     useCalculatePriceData: false,
     showChangedPrice: false,
@@ -440,8 +401,13 @@ export const priceSummary: StoryObj<StoryProps> = {
     totalValueRangeMin: 0,
     totalValueRangeMax: 0,
     basePrice: 10000,
+    freeTier: true,
   },
   argTypes: {
+    periodOptions: {
+      control: 'multi-select',
+      options: Object.values(PricePeriod),
+    },
     showSingleGroup: {
       name: '[Stories]: show single group',
       control: {
