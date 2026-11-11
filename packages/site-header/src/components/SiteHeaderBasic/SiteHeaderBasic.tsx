@@ -40,6 +40,8 @@ export type HeaderProps = WithSupportProps<
     maxWidth?: number;
     /** Флаг открытия мобильного меню */
     mobileMenuOpen: boolean;
+    /** Управляемая видимость. Если не задана, хедер скрывается и появляется при прокрутке. */
+    visible?: boolean;
     /** Внешний вид */
     appearance?: Appearance;
     /** Настройки Логотипа */
@@ -77,6 +79,7 @@ export function SiteHeaderBasic({
   layoutType,
   mobileConsultationButton,
   mobileMenuOpen,
+  visible,
   onSetMobileMenuOpen,
   mainHeaderClassName,
   appearance = 'none',
@@ -86,14 +89,15 @@ export function SiteHeaderBasic({
   ...rest
 }: HeaderProps) {
   const refHeader = useRef<HTMLDivElement>(null);
-  const { showHeader, headerHeight } = useHeaderPosition(mobileMenuOpen, refHeader);
+  const { showHeader, headerHeight } = useHeaderPosition(mobileMenuOpen, refHeader, visible === undefined);
+  const headerVisible = visible ?? showHeader;
   const isMobileTabletView = layoutType === 'mobile' || layoutType === 'tablet';
   const isMobile = layoutType === 'mobile';
 
   return (
     <Layout.Header
       style={{
-        transform: `translateY(-${!showHeader ? headerHeight + HEIGHT_SUBHEADER : 0}px)`,
+        transform: `translateY(-${!headerVisible ? headerHeight + HEIGHT_SUBHEADER : 0}px)`,
       }}
       className={cn(styles.root, className)}
       data-attr='layout-header'

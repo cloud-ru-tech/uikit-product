@@ -1,6 +1,10 @@
 import { RefObject, useEffect, useState } from 'react';
 
-export const useHeaderPosition = (isModalMenuOpen?: boolean, refHeader?: RefObject<HTMLDivElement>) => {
+export const useHeaderPosition = (
+  isModalMenuOpen?: boolean,
+  refHeader?: RefObject<HTMLDivElement>,
+  autoHide = true,
+) => {
   const [showHeader, setShowHeader] = useState(true);
   const [headerPosition, setHeaderPosition] = useState(0);
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -33,16 +37,17 @@ export const useHeaderPosition = (isModalMenuOpen?: boolean, refHeader?: RefObje
     };
 
     updateHeaderHeight();
-    targetScroll();
-
-    window.addEventListener('scroll', targetScroll);
+    if (autoHide) {
+      targetScroll();
+      window.addEventListener('scroll', targetScroll);
+    }
     window.addEventListener('scroll', handleResize);
 
     return () => {
       window.removeEventListener('scroll', targetScroll);
       window.removeEventListener('scroll', handleResize);
     };
-  }, [showHeader, headerPosition, isModalMenuOpen, refHeader]);
+  }, [showHeader, headerPosition, isModalMenuOpen, refHeader, autoHide]);
 
   return {
     showHeader,
