@@ -1,0 +1,41 @@
+{
+  "name": "@cloud-ru/uikit-product-site-reveal-section",
+  "title": "Site Reveal Section",
+  "version": "1.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "Configurable scroll reveal animation for individual sections and groups",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md",
+    "./LICENSE"
+  ],
+  "homepage": "https://cloud-ru-tech.github.io/uikit-product/packages/site-reveal-section",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloud-ru-tech/uikit-product/tree/master",
+    "directory": "packages/site-reveal-section"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Vladislav Stepanenko <vastepanenko@cloud.ru>",
+  "contributors": [
+    "Vladislav Stepanenko <vastepanenko@cloud.ru>"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {}
+}

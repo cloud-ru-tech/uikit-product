@@ -204,6 +204,9 @@
     },
     {
       "path": "./widget/tsconfig.cjs.json"
+    },
+    {
+      "path": "./site-reveal-section/tsconfig.cjs.json"
     }
   ],
   "compilerOptions": {

@@ -1,0 +1,358 @@
+# Site Reveal Section
+
+## Installation
+
+```sh
+pnpm add @cloud-ru/uikit-product-site-reveal-section
+```
+
+[Changelog](./CHANGELOG.md)
+
+Компоненты для однократного появления контента при прокрутке: opacity от 0 до 1 и сдвиг снизу.
+Не зависят от роутинга, query-параметров, контекстов приложения или конкретных типов секций.
+
+## RevealSection
+
+Анимирует один блок, добавляя `div` вокруг `children`.
+
+```tsx
+import { RevealSection } from '@cloud-ru/uikit-product-site-reveal-section';
+
+export function Features() {
+  return (
+    <RevealSection duration={800} offset={40} threshold={0.2}>
+      <section>Features</section>
+    </RevealSection>
+  );
+}
+```
+
+## RevealSections
+
+Анимирует каждый дочерний элемент отдельно. Первый элемент по умолчанию пропускается —
+например, чтобы hero сразу был виден. Общего DOM-контейнера у группы нет.
+
+```tsx
+import { RevealSections } from '@cloud-ru/uikit-product-site-reveal-section';
+
+export function Landing() {
+  return (
+    <RevealSections duration={650} offset={28}>
+      <header>Hero: visible immediately</header>
+      <section>Features: revealed on scroll</section>
+      <section>Contacts: revealed on scroll</section>
+    </RevealSections>
+  );
+}
+```
+
+Передайте `skipFirst={false}`, чтобы анимировать все элементы. Для выборочного пропуска
+используйте `shouldSkip`: пропущенные элементы рендерятся без дополнительной обёртки.
+Проверки типов компонентов и другая логика приложения остаются в потребителе.
+
+```tsx
+'use client';
+
+import { RevealSections } from '@cloud-ru/uikit-product-site-reveal-section';
+
+export function Landing() {
+  return (
+    <RevealSections shouldSkip={(_child, index) => index === 2}>
+      <header>Hero: skipped by skipFirst</header>
+      <section>Animated section</section>
+      <section>Skipped by shouldSkip</section>
+    </RevealSections>
+  );
+}
+```
+
+## Animation options
+
+Общие настройки `RevealSection` и `RevealSections`:
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `disabled` | `boolean` | `false` | Сразу показывает контент без анимации. Обёртки сохраняются. |
+| `duration` | `number` | `650` | Длительность в миллисекундах, неотрицательная. |
+| `delay` | `number` | `0` | Задержка после достижения порога видимости, в миллисекундах. |
+| `offset` | `number` | `28` | Начальный сдвиг по вертикали в пикселях. `0` оставляет только opacity. |
+| `easing` | `CSSProperties['transitionTimingFunction']` | `'ease'` | CSS timing function. |
+| `rootMargin` | `string` | `'0px 0px -40px 0px'` | Отступы области наблюдения относительно viewport по правилам `IntersectionObserver`. |
+| `threshold` | `number \| number[]` | `0` | Доля пересечения от 0 до 1. Для массива используется наименьший порог; пустой массив означает `0`. |
+| `className` | `string` | — | Класс обёртки. У группы применяется к каждой анимируемой секции. |
+| `style` | `CSSProperties` | — | Стили обёртки. У группы применяются к каждой анимируемой секции. |
+
+Дополнительно `RevealSection` принимает стандартные HTML-атрибуты `div`.
+
+Настройки группы:
+
+| Prop | Type | Default | Description |
+| --- | --- | --- | --- |
+| `skipFirst` | `boolean` | `true` | Пропускает первый элемент после обработки `children` через `Children.toArray`. |
+| `shouldSkip` | `(child: ReactNode, index: number) => boolean` | — | Пропускает элемент, если callback возвращает `true`. Индекс начинается с 0. |
+
+`null`, `undefined` и boolean-значения не учитываются в индексах. Вложенные массивы обрабатываются
+по правилам `Children.toArray`; содержимое React Fragment и внутренних компонентов не раскрывается.
+Чтобы анимировать секции отдельно, передавайте их отдельными дочерними элементами.
+
+`className` и `style` не применяются к пропущенным секциям. `disabled` отключает анимацию всех
+оставшихся секций, сохраняя их DOM-обёртки. Задержка общая для всех секций и отсчитывается
+от пересечения каждой секцией порога, а не от её индекса.
+
+## Behavior and accessibility
+
+- Анимация выполняется один раз за mount. После появления observer отключается.
+- Показанный или отключённый блок не скрывается повторно при изменении настроек.
+- `prefers-reduced-motion: reduce` сразу показывает контент без сдвига, перехода и задержки.
+- Если `IntersectionObserver` недоступен, контент показывается без анимации после mount.
+- До выполнения клиентского JavaScript анимируемые блоки скрыты CSS, как в исходном компоненте.
+  Для контента, который должен быть виден сразу, используйте `skipFirst`, `shouldSkip` или `disabled`.
+- Большой `threshold` может оказаться недостижимым для секции выше viewport. Для таких секций оставляйте `0`.
+
+## Next.js
+
+Публичная точка входа содержит `'use client'`. Компоненты можно использовать в App Router,
+передавая серверный контент через `children`. `shouldSkip` — функция, поэтому задавайте её
+в Client Component; через границу Server → Client можно передавать сериализуемые настройки,
+например `skipFirst`, `disabled`, `duration` и `rootMargin`.
+
+[//]: DOCUMENTATION_SECTION_START
+[//]: THIS_SECTION_IS_AUTOGENERATED_PLEASE_DONT_EDIT_IT
+## RevealSection
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| defaultChecked | `boolean` | - |  |
+| defaultValue | `string \| number \| readonly string[]` | - |  |
+| suppressContentEditableWarning | `boolean` | - |  |
+| suppressHydrationWarning | `boolean` | - |  |
+| accessKey | `string` | - |  |
+| autoFocus | `boolean` | - |  |
+| className | `string` | - | CSS-класс |
+| contentEditable | `Booleanish \| "inherit" \| "plaintext-only"` | - |  |
+| contextMenu | `string` | - |  |
+| dir | `string` | - |  |
+| draggable | `Booleanish` | - |  |
+| hidden | `boolean` | - |  |
+| id | `string` | - |  |
+| lang | `string` | - |  |
+| nonce | `string` | - |  |
+| slot | `string` | - |  |
+| spellCheck | `Booleanish` | - |  |
+| style | `CSSProperties` | - |  |
+| tabIndex | `number` | - |  |
+| title | `string` | - |  |
+| translate | "yes" \| "no" | - |  |
+| radioGroup | `string` | - |  |
+| role | `AriaRole` | - |  |
+| about | `string` | - |  |
+| content | `string` | - |  |
+| datatype | `string` | - |  |
+| inlist | `any` | - |  |
+| prefix | `string` | - |  |
+| property | `string` | - |  |
+| rel | `string` | - |  |
+| resource | `string` | - |  |
+| rev | `string` | - |  |
+| typeof | `string` | - |  |
+| vocab | `string` | - |  |
+| autoCapitalize | `string` | - |  |
+| autoCorrect | `string` | - |  |
+| autoSave | `string` | - |  |
+| color | `string` | - |  |
+| itemProp | `string` | - |  |
+| itemScope | `boolean` | - |  |
+| itemType | `string` | - |  |
+| itemID | `string` | - |  |
+| itemRef | `string` | - |  |
+| results | `number` | - |  |
+| security | `string` | - |  |
+| unselectable | "on" \| "off" | - |  |
+| inputMode | "none" \| "search" \| "text" \| "tel" \| "url" \| "email" \| "numeric" \| "decimal" | - | Hints at the type of data that might be entered by the user while editing the element or its contents @see {@link https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-inputmode-attribute} |
+| is | `string` | - | Specify that a standard HTML element should behave like a defined custom built-in element @see {@link https://html.spec.whatwg.org/multipage/custom-elements.html#attr-is} |
+| dangerouslySetInnerHTML | `{ __html: string \| TrustedHTML; }` | - |  |
+| onCopy | `ClipboardEventHandler<HTMLDivElement>` | - |  |
+| onCopyCapture | `ClipboardEventHandler<HTMLDivElement>` | - |  |
+| onCut | `ClipboardEventHandler<HTMLDivElement>` | - |  |
+| onCutCapture | `ClipboardEventHandler<HTMLDivElement>` | - |  |
+| onPaste | `ClipboardEventHandler<HTMLDivElement>` | - |  |
+| onPasteCapture | `ClipboardEventHandler<HTMLDivElement>` | - |  |
+| onCompositionEnd | `CompositionEventHandler<HTMLDivElement>` | - |  |
+| onCompositionEndCapture | `CompositionEventHandler<HTMLDivElement>` | - |  |
+| onCompositionStart | `CompositionEventHandler<HTMLDivElement>` | - |  |
+| onCompositionStartCapture | `CompositionEventHandler<HTMLDivElement>` | - |  |
+| onCompositionUpdate | `CompositionEventHandler<HTMLDivElement>` | - |  |
+| onCompositionUpdateCapture | `CompositionEventHandler<HTMLDivElement>` | - |  |
+| onFocus | `FocusEventHandler<HTMLDivElement>` | - |  |
+| onFocusCapture | `FocusEventHandler<HTMLDivElement>` | - |  |
+| onBlur | `FocusEventHandler<HTMLDivElement>` | - |  |
+| onBlurCapture | `FocusEventHandler<HTMLDivElement>` | - |  |
+| onChange | `FormEventHandler<HTMLDivElement>` | - |  |
+| onChangeCapture | `FormEventHandler<HTMLDivElement>` | - |  |
+| onBeforeInput | `FormEventHandler<HTMLDivElement>` | - |  |
+| onBeforeInputCapture | `FormEventHandler<HTMLDivElement>` | - |  |
+| onInput | `FormEventHandler<HTMLDivElement>` | - |  |
+| onInputCapture | `FormEventHandler<HTMLDivElement>` | - |  |
+| onReset | `FormEventHandler<HTMLDivElement>` | - |  |
+| onResetCapture | `FormEventHandler<HTMLDivElement>` | - |  |
+| onSubmit | `FormEventHandler<HTMLDivElement>` | - |  |
+| onSubmitCapture | `FormEventHandler<HTMLDivElement>` | - |  |
+| onInvalid | `FormEventHandler<HTMLDivElement>` | - |  |
+| onInvalidCapture | `FormEventHandler<HTMLDivElement>` | - |  |
+| onLoad | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onLoadCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onError | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onErrorCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onKeyDown | `KeyboardEventHandler<HTMLDivElement>` | - |  |
+| onKeyDownCapture | `KeyboardEventHandler<HTMLDivElement>` | - |  |
+| onKeyPress | `KeyboardEventHandler<HTMLDivElement>` | - | @deprecated |
+| onKeyPressCapture | `KeyboardEventHandler<HTMLDivElement>` | - | @deprecated |
+| onKeyUp | `KeyboardEventHandler<HTMLDivElement>` | - |  |
+| onKeyUpCapture | `KeyboardEventHandler<HTMLDivElement>` | - |  |
+| onAbort | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onAbortCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onCanPlay | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onCanPlayCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onCanPlayThrough | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onCanPlayThroughCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onDurationChange | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onDurationChangeCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onEmptied | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onEmptiedCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onEncrypted | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onEncryptedCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onEnded | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onEndedCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onLoadedData | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onLoadedDataCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onLoadedMetadata | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onLoadedMetadataCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onLoadStart | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onLoadStartCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onPause | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onPauseCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onPlay | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onPlayCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onPlaying | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onPlayingCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onProgress | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onProgressCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onRateChange | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onRateChangeCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onResize | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onResizeCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onSeeked | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onSeekedCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onSeeking | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onSeekingCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onStalled | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onStalledCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onSuspend | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onSuspendCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onTimeUpdate | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onTimeUpdateCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onVolumeChange | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onVolumeChangeCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onWaiting | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onWaitingCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onAuxClick | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onAuxClickCapture | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onClick | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onClickCapture | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onContextMenu | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onContextMenuCapture | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onDoubleClick | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onDoubleClickCapture | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onDrag | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDragCapture | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDragEnd | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDragEndCapture | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDragEnter | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDragEnterCapture | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDragExit | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDragExitCapture | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDragLeave | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDragLeaveCapture | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDragOver | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDragOverCapture | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDragStart | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDragStartCapture | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDrop | `DragEventHandler<HTMLDivElement>` | - |  |
+| onDropCapture | `DragEventHandler<HTMLDivElement>` | - |  |
+| onMouseDown | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onMouseDownCapture | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onMouseEnter | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onMouseLeave | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onMouseMove | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onMouseMoveCapture | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onMouseOut | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onMouseOutCapture | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onMouseOver | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onMouseOverCapture | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onMouseUp | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onMouseUpCapture | `MouseEventHandler<HTMLDivElement>` | - |  |
+| onSelect | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onSelectCapture | `ReactEventHandler<HTMLDivElement>` | - |  |
+| onTouchCancel | `TouchEventHandler<HTMLDivElement>` | - |  |
+| onTouchCancelCapture | `TouchEventHandler<HTMLDivElement>` | - |  |
+| onTouchEnd | `TouchEventHandler<HTMLDivElement>` | - |  |
+| onTouchEndCapture | `TouchEventHandler<HTMLDivElement>` | - |  |
+| onTouchMove | `TouchEventHandler<HTMLDivElement>` | - |  |
+| onTouchMoveCapture | `TouchEventHandler<HTMLDivElement>` | - |  |
+| onTouchStart | `TouchEventHandler<HTMLDivElement>` | - |  |
+| onTouchStartCapture | `TouchEventHandler<HTMLDivElement>` | - |  |
+| onPointerDown | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onPointerDownCapture | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onPointerMove | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onPointerMoveCapture | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onPointerUp | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onPointerUpCapture | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onPointerCancel | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onPointerCancelCapture | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onPointerEnter | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onPointerLeave | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onPointerOver | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onPointerOverCapture | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onPointerOut | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onPointerOutCapture | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onGotPointerCapture | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onGotPointerCaptureCapture | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onLostPointerCapture | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onLostPointerCaptureCapture | `PointerEventHandler<HTMLDivElement>` | - |  |
+| onScroll | `UIEventHandler<HTMLDivElement>` | - |  |
+| onScrollCapture | `UIEventHandler<HTMLDivElement>` | - |  |
+| onWheel | `WheelEventHandler<HTMLDivElement>` | - |  |
+| onWheelCapture | `WheelEventHandler<HTMLDivElement>` | - |  |
+| onAnimationStart | `AnimationEventHandler<HTMLDivElement>` | - |  |
+| onAnimationStartCapture | `AnimationEventHandler<HTMLDivElement>` | - |  |
+| onAnimationEnd | `AnimationEventHandler<HTMLDivElement>` | - |  |
+| onAnimationEndCapture | `AnimationEventHandler<HTMLDivElement>` | - |  |
+| onAnimationIteration | `AnimationEventHandler<HTMLDivElement>` | - |  |
+| onAnimationIterationCapture | `AnimationEventHandler<HTMLDivElement>` | - |  |
+| onTransitionEnd | `TransitionEventHandler<HTMLDivElement>` | - |  |
+| onTransitionEndCapture | `TransitionEventHandler<HTMLDivElement>` | - |  |
+| disabled | `boolean` | - |  |
+| duration | `number` | 650 |  |
+| delay | `number` | - |  |
+| offset | `number` | 28 |  |
+| easing | `TransitionTimingFunction` | ease |  |
+| rootMargin | `string` | 0px 0px -40px 0px |  |
+| threshold | `number \| number[]` | - |  |
+## RevealSections
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| disabled | `boolean` | - |  |
+| duration | `number` | - |  |
+| delay | `number` | - |  |
+| offset | `number` | - |  |
+| easing | `TransitionTimingFunction` | - |  |
+| rootMargin | `string` | - |  |
+| threshold | `number \| number[]` | - |  |
+| className | `string` | - | CSS-класс |
+| style | `CSSProperties` | - |  |
+| skipFirst | `boolean` | true |  |
+| shouldSkip | `(child: ReactNode, index: number) => boolean` | - |  |
+
+
+[//]: DOCUMENTATION_SECTION_END
