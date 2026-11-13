@@ -2309,7 +2309,7 @@ importers:
         specifier: workspace:^
         version: link:../mobile-fields
       '@cloud-ru/uikit-product-utils':
-        specifier: workspace:*
+        specifier: workspace:^
         version: link:../utils
       '@snack-uikit/button':
         specifier: 'catalog:'
