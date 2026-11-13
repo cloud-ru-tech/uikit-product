@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0 (2026-11-13)
+
+
+### BREAKING CHANGES
+
+
+* **RM-4945:** price summary redesign ([0099d90](https://github.com/cloud-ru-tech/uikit-product/commit/0099d90f0d1e566fc1785619c2de1ee1a6f87182))
+
+
+
+
 # 3.2.0 (2026-10-08)
 
 
