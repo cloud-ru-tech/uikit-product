@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2026-11-16)
+
+
+### Features
+
+* **SITE-10176:** update Site-header ([edc8df2](https://github.com/cloud-ru-tech/uikit-product/commit/edc8df21324b30e3c6c097a7b94c45745444abfc))
+
+
+
+
+
 ## 3.1.2 (2026-10-09)
 
 **Note:** Version bump only for package @cloud-ru/uikit-product-site-header
