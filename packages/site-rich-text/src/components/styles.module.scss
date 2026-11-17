@@ -1,6 +1,23 @@
 @use '@cloud-ru/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
 
 .richText {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: ste.$sys-neutral-text-main;
+  }
+
+  h3 {
+    @include ste.composite-var(ste.$sans-headline-m);
+  }
+
+  h4 {
+    @include ste.composite-var(ste.$sans-headline-s);
+  }
+
   p {
     margin: 0;
   }
