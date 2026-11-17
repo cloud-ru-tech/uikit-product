@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2026-11-17)
+
+
+### Features
+
+* **SITE-12327:** styles for h tags in site-rich-text ([bcd7c0e](https://github.com/cloud-ru-tech/uikit-product/commit/bcd7c0efaf362a5ea9e9a27c1434688424f88f9b))
+
+
+
+
+
 # 2.0.0 (2026-09-22)
 
 
