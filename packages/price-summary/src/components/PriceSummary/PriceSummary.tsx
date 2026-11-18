@@ -79,8 +79,6 @@ export function PriceSummary({
   ...rest
 }: PriceSummaryProps) {
   const { t } = useLocale('PriceSummary');
-  const summaryCoverage = useMemo(() => getInvoiceCoverage(invoice), [invoice]);
-
   const timeDetails = useMemo(
     () => splitInvoiceByAvailability(invoice, calculatePriceData),
     [invoice, calculatePriceData],
@@ -89,11 +87,18 @@ export function PriceSummary({
     () => splitInvoiceByAvailability(usageInvoice, calculatePriceData),
     [usageInvoice, calculatePriceData],
   );
+  const summaryCoverage = useMemo(
+    () => getInvoiceCoverage([...(timeDetails.invoice ?? []), ...(usageDetails.invoice ?? [])]),
+    [timeDetails, usageDetails],
+  );
+
   const hasTime = Boolean(timeDetails.invoice?.length || timeDetails.unavailableItems?.length);
   const hasUsage = Boolean(usageDetails.invoice?.length || usageDetails.unavailableItems?.length);
   const hasBreakdown = Boolean(hasTime && (basePrice !== undefined || priceChange || discount));
   const hasContent = hasBreakdown || hasTime || hasUsage || Boolean(docsLink?.href);
   const isReady = !loading && !dataError;
+
+  const hideInnerCoverage = !calculatePriceData || summaryCoverage !== undefined;
 
   return (
     <div className={cn(styles.priceSummary, className)} {...extractSupportProps(rest)}>
@@ -158,7 +163,7 @@ export function PriceSummary({
                 invoiceExpandedDefault={invoiceExpandedDefault}
                 title={t('timePayment')}
                 tooltip={invoiceTooltip ?? t('timePaymentTooltip')}
-                hideCoverage={summaryCoverage !== undefined}
+                hideCoverage={hideInnerCoverage}
                 layoutType={layoutType}
               />
             </div>
@@ -171,7 +176,7 @@ export function PriceSummary({
                 invoiceExpandedDefault={usageExpandedDefault}
                 title={t('usagePayment')}
                 tooltip={usageTooltip ?? t('usagePaymentTooltip')}
-                hideCoverage={summaryCoverage !== undefined}
+                hideCoverage={hideInnerCoverage}
                 layoutType={layoutType}
               />
             </div>

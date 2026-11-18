@@ -25,7 +25,7 @@ export function InvoiceDetailsBlock({
 
   return (
     <div className={styles.main} data-unavailable={titleAsRedTag || undefined}>
-      {showCoveredByGrantLabels ? (
+      {showCoveredByGrantLabels && coverage !== undefined ? (
         <div className={styles.coveredByGrantLabel}>
           <CoveredByGrantLabel covered={coverage ?? false} layoutType={layoutType} />
         </div>
