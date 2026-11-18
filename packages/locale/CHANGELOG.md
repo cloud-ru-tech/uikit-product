@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.0.1 (2026-11-18)
+
+
+### Bug Fixes
+
+* **RM-4945:** fix pricesummary grants coverage displaying ([7bfcde9](https://github.com/cloud-ru-tech/uikit-product/commit/7bfcde99475ea1dde3c61497ff2b9ef3aae5cfa5))
+
+
+
+
+
 # 4.0.0 (2026-11-13)
 
 
