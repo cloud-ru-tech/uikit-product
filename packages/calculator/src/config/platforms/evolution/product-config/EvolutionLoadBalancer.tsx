@@ -1,7 +1,18 @@
 import { CONTROL, FormConfig } from '../../../../components';
+import { FormValues } from '../../../../types';
+
+function transformEvolutionLoadBalancerValues(values: FormValues): FormValues {
+  const { availabilityZone, replicasInAZ, ...restValues } = values;
+
+  return {
+    ...restValues,
+    replicasInAZs: Number(availabilityZone) * Number(replicasInAZ),
+  };
+}
 
 export const EVOLUTION_LOAD_BALANCER_CONFIG: FormConfig = {
-  ui: [['availabilityZone'], ['outcomingTraffic'], ['incomingTraffic'], 'hasPublicIP'],
+  ui: [['availabilityZone'], ['replicasInAZ'], ['outcomingTraffic'], ['incomingTraffic'], 'hasPublicIP'],
+  transformValues: transformEvolutionLoadBalancerValues,
   controls: {
     availabilityZone: {
       type: CONTROL.Stepper,
@@ -9,7 +20,6 @@ export const EVOLUTION_LOAD_BALANCER_CONFIG: FormConfig = {
       accessorKey: 'availabilityZone',
       decoratorProps: {
         label: 'Зоны доступности',
-        labelTooltip: 'В каждой зоне доступности по две ресурсные единицы',
       },
       uiProps: {
         min: 1,
@@ -17,6 +27,17 @@ export const EVOLUTION_LOAD_BALANCER_CONFIG: FormConfig = {
         showHint: false,
         postfix: 'Шт',
       },
+    },
+    replicasInAZ: {
+      type: CONTROL.Slider,
+      defaultValue: '2',
+      accessorKey: 'replicasInAZ',
+      decoratorProps: {
+        label: 'Ресурсных единиц в зонах доступности',
+        labelTooltip:
+          'Ресурсная единица — компонент балансировщика, обрабатывающий трафик в выбранной зоне доступности.',
+      },
+      items: [1, 2, 3, 4, 5, 6, 7, 8],
     },
     outcomingTraffic: {
       type: CONTROL.Stepper,
