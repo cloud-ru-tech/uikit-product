@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2026-11-19)
+
+
+### Features
+
+* **FF-8687:** synchronize MobileFieldSelect and FieldSelect props ([9febac3](https://github.com/cloud-ru-tech/uikit-product/commit/9febac35e795fe2a4fdb238a224f865a3e7b370d))
+
+
+
+
+
 ## 3.0.2 (2026-10-09)
 
 **Note:** Version bump only for package @cloud-ru/uikit-product-mobile-fields

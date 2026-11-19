@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.8.0 (2026-11-19)
+
+
+### Features
+
+* **SITE-12494:** update calc ([ccbd7ae](https://github.com/cloud-ru-tech/uikit-product/commit/ccbd7aee94725e900d71a406d90f4c46f4c7a340))
+
+
+
+
+
 # 2.7.0 (2026-11-05)
 
 
