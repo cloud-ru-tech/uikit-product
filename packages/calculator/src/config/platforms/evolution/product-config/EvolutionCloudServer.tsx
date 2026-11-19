@@ -170,24 +170,8 @@ export const specificationItemsDisk = [
 ];
 
 export const EVOLUTION_CLOUD_SERVER_FORM_CONFIG: FormConfig = {
-  ui: ['alertStart', 'vmSection', 'backupStorageSection', 'userImagesSection'],
+  ui: ['vmSection', 'backupStorageSection', 'userImagesSection'],
   controls: {
-    alertStart: {
-      type: CONTROL.Alert,
-      uiProps: {
-        appearance: 'info',
-        outline: true,
-        description: (
-          <>
-            Начните работать с&nbsp;сервисами бесплатно с&nbsp;бонусной программой Cloud.ru
-            <br />
-            Получить 4000 бонусов для оплаты сервисов можно за&nbsp;первую привязку карты.
-          </>
-        ),
-      },
-      accessorKey: 'start',
-    },
-
     vmSection: {
       type: CONTROL.Object,
       ui: ['vm'],
