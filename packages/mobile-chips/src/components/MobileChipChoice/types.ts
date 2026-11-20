@@ -22,11 +22,7 @@ export type AnyType = any;
 export type ContentRenderProps = Omit<ItemContentProps, 'option' | 'disabled'>;
 
 export type FilterOption<T extends ContentRenderProps = ContentRenderProps> =
-  | BaseOption<T>
-  | AccordionOption<T>
-  | GroupOption<T>
-  | GroupSelectOption<T>
-  | NestListOption<T>;
+  BaseOption<T> | AccordionOption<T> | GroupOption<T> | GroupSelectOption<T> | NestListOption<T>;
 
 export type BaseOption<T extends ContentRenderProps = ContentRenderProps> = Omit<BaseItemProps, 'content' | 'id'> & {
   value: ItemId;

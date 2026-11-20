@@ -18,8 +18,7 @@ import styles from './styles.module.scss';
 
 type RowActionButton = {
   tip?:
-    | Pick<MobileTooltipProps, 'trigger' | 'tip' | 'placement' | 'disableMaxWidth' | 'open' | 'onOpenChange'>
-    | string;
+    Pick<MobileTooltipProps, 'trigger' | 'tip' | 'placement' | 'disableMaxWidth' | 'open' | 'onOpenChange'> | string;
 } & Omit<ButtonTonalProps, 'size' | 'appearance' | 'label'>;
 
 export type MobileInfoRowPropsBase = {

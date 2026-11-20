@@ -18,8 +18,7 @@ export type InfoRowPropsBase = {
   label: string;
   labelTruncate?: number;
   labelTooltip?:
-    | Pick<QuestionTooltipProps, 'trigger' | 'tip' | 'placement' | 'disableMaxWidth' | 'open' | 'onOpenChange'>
-    | string;
+    Pick<QuestionTooltipProps, 'trigger' | 'tip' | 'placement' | 'disableMaxWidth' | 'open' | 'onOpenChange'> | string;
   topDivider?: boolean;
   bottomDivider?: boolean;
   className?: string;

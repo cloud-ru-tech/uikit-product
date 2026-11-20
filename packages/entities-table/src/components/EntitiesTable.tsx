@@ -68,23 +68,20 @@ function EntitiesTableComponent<T extends object, P extends FiltersState>(
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSuccess]);
 
-  useImperativeHandle(
-    ref,
-    (): EntitiesTableHandle<T> => ({
-      getParams() {
-        return paginationParams;
-      },
-      getData() {
-        return data.data;
-      },
-      refetchData() {
-        refetch();
-      },
-      resetState() {
-        onReset();
-      },
-    }),
-  );
+  useImperativeHandle(ref, (): EntitiesTableHandle<T> => ({
+    getParams() {
+      return paginationParams;
+    },
+    getData() {
+      return data.data;
+    },
+    refetchData() {
+      refetch();
+    },
+    resetState() {
+      onReset();
+    },
+  }));
 
   return (
     <AdaptiveServerTable<T, P>

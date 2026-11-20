@@ -161,7 +161,7 @@
 | contentPosition | "left" \| "right" | left | Местоположение контента в секции |
 | video | `ReactNode \| VideoPlayerProps` | - |  |
 | onPlay | `() => void` | - |  |
-| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
+| onError | `() => void` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 ## SectionContentList
@@ -178,7 +178,7 @@
 | contentPosition | "left" \| "right" | left | Местоположение контента в секции |
 | video | `ReactNode \| VideoPlayerProps` | - |  |
 | onPlay | `() => void` | - |  |
-| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
+| onError | `() => void` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 ## SectionContentTabs
@@ -263,7 +263,7 @@
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"`, `"graphite-accent-default"` | - | Цвет фона |
 | video | `ReactNode \| VideoPlayerProps` | - |  |
 | onPlay | `() => void` | - |  |
-| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
+| onError | `() => void` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 ## SectionPersonalManager
 ### Props
@@ -327,7 +327,7 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | title | `string` | - | Название секции |
 | subtitle | `string` | - | Подзаголовок секции |
-| titleLink | `PickLinkProps<(<T extends ElementType = "a">({ text, className, textMode, size, purpose, appearance, insideText, truncateVariant, truncateMaxLines, as, ...rest }: LinkProps<T>) => Element), "onClick" \| "appearance" \| "href" \| "target" \| "textMode">` | - | Ссылка в названии |
+| titleLink | `PickLinkProps<"a", "onClick" \| "appearance" \| "href" \| "target" \| "textMode">` | - | Ссылка в названии |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |

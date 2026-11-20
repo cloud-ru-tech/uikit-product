@@ -25,7 +25,7 @@ export const stylesLoaderConfig = {
           cssLoader,
           {
             loader: 'sass-loader',
-            options: { implementation: require.resolve('sass') },
+            options: { implementation: 'sass' },
           },
         ],
       },

@@ -75,10 +75,7 @@ export type Option = {
 };
 
 export type AgreementName =
-  | 'site_services_consent'
-  | 'online_event_consent'
-  | 'education_consent'
-  | 'partnership_services_consent';
+  'site_services_consent' | 'online_event_consent' | 'education_consent' | 'partnership_services_consent';
 
 export type AgreementLabels = {
   /** Текст чекбокса согласия на обработку персональных данных. Поддерживается HTML */
