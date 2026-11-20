@@ -1,18 +1,14 @@
 import { CONTROL, FormConfig } from '../../../../components';
-import { FormValues } from '../../../../types';
-
-function transformEvolutionLoadBalancerValues(values: FormValues): FormValues {
-  const { availabilityZone, replicasInAZ, ...restValues } = values;
-
-  return {
-    ...restValues,
-    replicasInAZs: Number(availabilityZone) * Number(replicasInAZ),
-  };
-}
 
 export const EVOLUTION_LOAD_BALANCER_CONFIG: FormConfig = {
-  ui: [['availabilityZone'], ['replicasInAZ'], ['outcomingTraffic'], ['incomingTraffic'], 'hasPublicIP'],
-  transformValues: transformEvolutionLoadBalancerValues,
+  ui: [
+    ['availabilityZone'],
+    ['replicasInAZ'],
+    ['outcomingTraffic'],
+    ['incomingTraffic'],
+    'hasPublicIP',
+    'replicasInAZs',
+  ],
   controls: {
     availabilityZone: {
       type: CONTROL.Stepper,
@@ -38,6 +34,24 @@ export const EVOLUTION_LOAD_BALANCER_CONFIG: FormConfig = {
           'Ресурсная единица — компонент балансировщика, обрабатывающий трафик в выбранной зоне доступности.',
       },
       items: [1, 2, 3, 4, 5, 6, 7, 8],
+    },
+    replicasInAZs: {
+      type: CONTROL.Stepper,
+      accessorKey: 'replicasInAZs',
+      defaultValue: 2,
+      decoratorProps: {},
+      uiProps: {
+        visible: false,
+      },
+      watchedControls: {
+        availabilityZone: 'availabilityZone',
+        replicasInAZ: 'replicasInAZ',
+      },
+      relateFn: ({ availabilityZone, replicasInAZ }) => {
+        const total = Number(availabilityZone) * Number(replicasInAZ);
+
+        return { uiProps: { visible: false, min: total, max: total } };
+      },
     },
     outcomingTraffic: {
       type: CONTROL.Stepper,

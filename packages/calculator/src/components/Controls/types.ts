@@ -178,6 +178,4 @@ export type FormControl =
   | SliderControl
   | TableControl;
 
-export type FormConfig = Omit<ObjectControl, 'type'> & {
-  transformValues?(values: FormValues): FormValues;
-};
+export type FormConfig = Omit<ObjectControl, 'type'>;

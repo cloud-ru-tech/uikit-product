@@ -43,8 +43,7 @@ export function ProductPage({ className, selectedProduct }: ProductPageProps) {
     },
   });
 
-  const transformValues = config.products[selectedProduct.id].formConfig?.transformValues;
-  const deferredFormData = useDeferredValue(JSON.stringify(transformValues?.(formData) ?? formData));
+  const deferredFormData = useDeferredValue(JSON.stringify(formData));
   const deferredSelectedProductId = useDeferredValue(selectedProduct.id);
 
   const { data } = useSWR(
