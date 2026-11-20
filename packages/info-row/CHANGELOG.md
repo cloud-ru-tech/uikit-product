@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.1 (2026-11-20)
+
+
+### Bug Fixes
+
+* **DOCDEV-5126:** fixed lock file ([9710f11](https://github.com/cloud-ru-tech/uikit-product/commit/9710f11680fa131f43e8b15eb42b067efe6d1ade))
+
+
+
+
+
 # 2.0.0 (2026-09-22)
 
 

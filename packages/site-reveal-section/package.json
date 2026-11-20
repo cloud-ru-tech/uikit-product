@@ -1,7 +1,7 @@
 {
   "name": "@cloud-ru/uikit-product-site-reveal-section",
   "title": "Site Reveal Section",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -34,8 +34,5 @@
     "Vladislav Stepanenko <vastepanenko@cloud.ru>"
   ],
   "license": "Apache-2.0",
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {},
-  "peerDependencies": {}
+  "scripts": {}
 }

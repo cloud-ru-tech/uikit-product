@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.3 (2026-11-20)
+
+
+### Bug Fixes
+
+* **DOCDEV-5126:** fixed lock file ([9710f11](https://github.com/cloud-ru-tech/uikit-product/commit/9710f11680fa131f43e8b15eb42b067efe6d1ade))
+
+
+
+
+
 ## 3.0.2 (2026-10-09)
 
 **Note:** Version bump only for package @cloud-ru/uikit-product-mobile-chips
