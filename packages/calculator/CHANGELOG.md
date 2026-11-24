@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.9.0 (2026-11-24)
+
+
+### Features
+
+* **EVOLBAAS-2866:** add resource units selection to LBaaS calculator ([993bab8](https://github.com/cloud-ru-tech/uikit-product/commit/993bab86e91a9671bcdddfc310b78d4dbe076fd3))
+
+
+
+
+
 ## 2.8.1 (2026-11-20)
 
 
