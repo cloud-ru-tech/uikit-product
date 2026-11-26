@@ -351,7 +351,7 @@ export const ru_RU: typeof en_GB = {
     timePaymentTooltip: 'Стоимость ресурсов за выбранный период. Эти позиции включены в расчет стоимости.',
     usagePayment: 'Оплата за объем',
     usagePaymentTooltip:
-      'Цены указаны за единицу потребления. Оплата зависит от фактического объёма и не включена в расчет стоимости.',
+      'Цены указаны за единицу потребления. Оплата зависит от фактического объема и не включена в расчет стоимости.',
     excludingUsage: 'Без учета оплаты за объем',
     priceChangeTooltip: 'Изменение стоимости относительно конфигурации по умолчанию.',
     defaultConfiguration: 'Конфигурация по умолчанию',
@@ -364,7 +364,7 @@ export const ru_RU: typeof en_GB = {
     total: 'Итого',
     totalSumFromPrefix: 'от',
     totalSumToPrefix: 'до',
-    vat: 'с учётом НДС',
+    vat: 'с учетом НДС',
     pricePeriodYear: 'в год',
     pricePeriodMonth: 'в месяц',
     pricePeriodDay: 'в день',
@@ -387,7 +387,7 @@ export const ru_RU: typeof en_GB = {
     increasedPrice: 'увеличилась на',
     decreasedPrice: 'снизилась на',
     priceChange: 'Изменение стоимости',
-    preliminaryHint: 'Предварительный расчёт. Фактическая стоимость зависит от потребления',
+    preliminaryHint: 'Предварительный расчет. Фактическая стоимость зависит от потребления',
   },
   PromoTagPredefined: {
     connecting: 'Подключается',
