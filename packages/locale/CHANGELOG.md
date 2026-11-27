@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.0.2 (2026-11-27)
+
+
+### Bug Fixes
+
+* **PDS-4748:** price summary ё typo ([2e6db07](https://github.com/cloud-ru-tech/uikit-product/commit/2e6db07f678feaca577ad9257634bb8d4c4d3da6))
+
+
+
+
+
 ## 4.0.1 (2026-11-18)
 
 
